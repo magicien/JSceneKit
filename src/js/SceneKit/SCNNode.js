@@ -728,7 +728,6 @@ export default class SCNNode extends NSObject {
   }
   set transform(newValue) {
     this._transform = newValue
-    // TODO: update position, rotation, scale
     this._position = this._transform.getTranslation()
     this._rotation = this._transform.getRotation()
     this._scale = this._transform.getScale()
@@ -965,6 +964,26 @@ export default class SCNNode extends NSObject {
    */
   get _worldTranslation() {
     return this.worldTransform.getTranslation()
+  }
+
+  get worldPosition() {
+    return this.worldTransform.getTranslation()
+  }
+  set worldPosition(newValue) {
+    let parentTransform = null
+    if(this._parent === null){
+      parentTransform = SCNMatrix4MakeTranslation(0, 0, 0)
+    }else{
+      parentTransform = this._parent.worldTransform
+    }
+    const transform = SCNMatrix4MakeTranslation(newValue.x, newValue.y, newValue.z)
+    const inv = parentTransform.invert()
+    const newTransform = transform.transform(inv)
+
+    this._transform.m41 = newTransform.m41
+    this._transform.m42 = newTransform.m42
+    this._transform.m43 = newTransform.m43
+    this.transform = this._transform
   }
 
   /**

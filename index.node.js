@@ -211,7 +211,43 @@ module.exports =
 
 	var _GCMicroGamepad2 = _interopRequireDefault(_GCMicroGamepad);
 
-	var _MTLTessellationPartitionMode = __webpack_require__(50);
+	var _GKAgent = __webpack_require__(50);
+
+	var _GKAgent2 = _interopRequireDefault(_GKAgent);
+
+	var _GKAgent2D = __webpack_require__(56);
+
+	var _GKAgent2D2 = _interopRequireDefault(_GKAgent2D);
+
+	var _GKAgentDelegate = __webpack_require__(55);
+
+	var _GKAgentDelegate2 = _interopRequireDefault(_GKAgentDelegate);
+
+	var _GKBehavior = __webpack_require__(53);
+
+	var _GKBehavior2 = _interopRequireDefault(_GKBehavior);
+
+	var _GKComponent = __webpack_require__(51);
+
+	var _GKComponent2 = _interopRequireDefault(_GKComponent);
+
+	var _GKEntity = __webpack_require__(52);
+
+	var _GKEntity2 = _interopRequireDefault(_GKEntity);
+
+	var _GKGoal = __webpack_require__(54);
+
+	var _GKGoal2 = _interopRequireDefault(_GKGoal);
+
+	var _GKPath = __webpack_require__(57);
+
+	var _GKPath2 = _interopRequireDefault(_GKPath);
+
+	var _GKSCNNodeComponent = __webpack_require__(58);
+
+	var _GKSCNNodeComponent2 = _interopRequireDefault(_GKSCNNodeComponent);
+
+	var _MTLTessellationPartitionMode = __webpack_require__(59);
 
 	var _MTLTessellationPartitionMode2 = _interopRequireDefault(_MTLTessellationPartitionMode);
 
@@ -219,731 +255,731 @@ module.exports =
 
 	var _NSObject2 = _interopRequireDefault(_NSObject);
 
-	var _CAAction = __webpack_require__(51);
+	var _CAAction = __webpack_require__(60);
 
 	var _CAAction2 = _interopRequireDefault(_CAAction);
 
-	var _CAAnimation = __webpack_require__(52);
+	var _CAAnimation = __webpack_require__(61);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
-	var _CAAnimationDelegate = __webpack_require__(54);
+	var _CAAnimationDelegate = __webpack_require__(63);
 
 	var _CAAnimationDelegate2 = _interopRequireDefault(_CAAnimationDelegate);
 
-	var _CAAnimationGroup = __webpack_require__(55);
+	var _CAAnimationGroup = __webpack_require__(64);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
-	var _CABasicAnimation = __webpack_require__(56);
+	var _CABasicAnimation = __webpack_require__(65);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
-	var _CACurrentMediaTime = __webpack_require__(61);
+	var _CACurrentMediaTime = __webpack_require__(70);
 
 	var _CACurrentMediaTime2 = _interopRequireDefault(_CACurrentMediaTime);
 
-	var _CAKeyframeAnimation = __webpack_require__(62);
+	var _CAKeyframeAnimation = __webpack_require__(71);
 
 	var _CAKeyframeAnimation2 = _interopRequireDefault(_CAKeyframeAnimation);
 
-	var _CAMediaTiming = __webpack_require__(63);
+	var _CAMediaTiming = __webpack_require__(72);
 
 	var _CAMediaTiming2 = _interopRequireDefault(_CAMediaTiming);
 
-	var _CAMediaTimingFunction = __webpack_require__(64);
+	var _CAMediaTimingFunction = __webpack_require__(73);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAPropertyAnimation = __webpack_require__(57);
+	var _CAPropertyAnimation = __webpack_require__(66);
 
 	var _CAPropertyAnimation2 = _interopRequireDefault(_CAPropertyAnimation);
 
-	var _CATransform3D = __webpack_require__(65);
+	var _CATransform3D = __webpack_require__(74);
 
 	var _CATransform3D2 = _interopRequireDefault(_CATransform3D);
 
-	var _SCNAction = __webpack_require__(66);
+	var _SCNAction = __webpack_require__(75);
 
 	var _SCNAction2 = _interopRequireDefault(_SCNAction);
 
-	var _SCNActionable = __webpack_require__(68);
+	var _SCNActionable = __webpack_require__(77);
 
 	var _SCNActionable2 = _interopRequireDefault(_SCNActionable);
 
-	var _SCNActionCustom = __webpack_require__(69);
+	var _SCNActionCustom = __webpack_require__(78);
 
 	var _SCNActionCustom2 = _interopRequireDefault(_SCNActionCustom);
 
-	var _SCNActionFade = __webpack_require__(70);
+	var _SCNActionFade = __webpack_require__(79);
 
 	var _SCNActionFade2 = _interopRequireDefault(_SCNActionFade);
 
-	var _SCNActionGroup = __webpack_require__(76);
+	var _SCNActionGroup = __webpack_require__(85);
 
 	var _SCNActionGroup2 = _interopRequireDefault(_SCNActionGroup);
 
-	var _SCNActionHide = __webpack_require__(77);
+	var _SCNActionHide = __webpack_require__(86);
 
 	var _SCNActionHide2 = _interopRequireDefault(_SCNActionHide);
 
-	var _SCNActionJavaScript = __webpack_require__(78);
+	var _SCNActionJavaScript = __webpack_require__(87);
 
 	var _SCNActionJavaScript2 = _interopRequireDefault(_SCNActionJavaScript);
 
-	var _SCNActionMove = __webpack_require__(79);
+	var _SCNActionMove = __webpack_require__(88);
 
 	var _SCNActionMove2 = _interopRequireDefault(_SCNActionMove);
 
-	var _SCNActionPerformSelector = __webpack_require__(80);
+	var _SCNActionPerformSelector = __webpack_require__(89);
 
 	var _SCNActionPerformSelector2 = _interopRequireDefault(_SCNActionPerformSelector);
 
-	var _SCNActionPlaySound = __webpack_require__(81);
+	var _SCNActionPlaySound = __webpack_require__(90);
 
 	var _SCNActionPlaySound2 = _interopRequireDefault(_SCNActionPlaySound);
 
-	var _SCNActionReference = __webpack_require__(82);
+	var _SCNActionReference = __webpack_require__(91);
 
 	var _SCNActionReference2 = _interopRequireDefault(_SCNActionReference);
 
-	var _SCNActionRemove = __webpack_require__(83);
+	var _SCNActionRemove = __webpack_require__(92);
 
 	var _SCNActionRemove2 = _interopRequireDefault(_SCNActionRemove);
 
-	var _SCNActionRepeat = __webpack_require__(84);
+	var _SCNActionRepeat = __webpack_require__(93);
 
 	var _SCNActionRepeat2 = _interopRequireDefault(_SCNActionRepeat);
 
-	var _SCNActionRotate = __webpack_require__(85);
+	var _SCNActionRotate = __webpack_require__(94);
 
 	var _SCNActionRotate2 = _interopRequireDefault(_SCNActionRotate);
 
-	var _SCNActionRunAction = __webpack_require__(86);
+	var _SCNActionRunAction = __webpack_require__(95);
 
 	var _SCNActionRunAction2 = _interopRequireDefault(_SCNActionRunAction);
 
-	var _SCNActionRunBlock = __webpack_require__(87);
+	var _SCNActionRunBlock = __webpack_require__(96);
 
 	var _SCNActionRunBlock2 = _interopRequireDefault(_SCNActionRunBlock);
 
-	var _SCNActionScale = __webpack_require__(88);
+	var _SCNActionScale = __webpack_require__(97);
 
 	var _SCNActionScale2 = _interopRequireDefault(_SCNActionScale);
 
-	var _SCNActionSequence = __webpack_require__(89);
+	var _SCNActionSequence = __webpack_require__(98);
 
 	var _SCNActionSequence2 = _interopRequireDefault(_SCNActionSequence);
 
-	var _SCNActionTimingFunction = __webpack_require__(90);
+	var _SCNActionTimingFunction = __webpack_require__(99);
 
 	var _SCNActionTimingFunction2 = _interopRequireDefault(_SCNActionTimingFunction);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNActionWait = __webpack_require__(91);
+	var _SCNActionWait = __webpack_require__(100);
 
 	var _SCNActionWait2 = _interopRequireDefault(_SCNActionWait);
 
-	var _SCNAnimatable = __webpack_require__(92);
+	var _SCNAnimatable = __webpack_require__(101);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNAnimation = __webpack_require__(93);
+	var _SCNAnimation = __webpack_require__(102);
 
 	var _SCNAnimation2 = _interopRequireDefault(_SCNAnimation);
 
-	var _SCNAnimationEvent = __webpack_require__(94);
+	var _SCNAnimationEvent = __webpack_require__(103);
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
-	var _SCNAnimationEventBlock = __webpack_require__(95);
+	var _SCNAnimationEventBlock = __webpack_require__(104);
 
 	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
 
-	var _SCNAnimationPlayer = __webpack_require__(96);
+	var _SCNAnimationPlayer = __webpack_require__(105);
 
 	var _SCNAnimationPlayer2 = _interopRequireDefault(_SCNAnimationPlayer);
 
-	var _SCNAntialiasingMode = __webpack_require__(97);
+	var _SCNAntialiasingMode = __webpack_require__(106);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNAudioPlayer = __webpack_require__(98);
+	var _SCNAudioPlayer = __webpack_require__(107);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNAudioSource = __webpack_require__(99);
+	var _SCNAudioSource = __webpack_require__(108);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNBillboardAxis = __webpack_require__(101);
+	var _SCNBillboardAxis = __webpack_require__(110);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
-	var _SCNBillboardConstraint = __webpack_require__(102);
+	var _SCNBillboardConstraint = __webpack_require__(111);
 
 	var _SCNBillboardConstraint2 = _interopRequireDefault(_SCNBillboardConstraint);
 
-	var _SCNBindingBlock = __webpack_require__(104);
+	var _SCNBindingBlock = __webpack_require__(113);
 
 	var _SCNBindingBlock2 = _interopRequireDefault(_SCNBindingBlock);
 
-	var _SCNBlendMode = __webpack_require__(105);
+	var _SCNBlendMode = __webpack_require__(114);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNBoundingVolume = __webpack_require__(106);
+	var _SCNBoundingVolume = __webpack_require__(115);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNBox = __webpack_require__(107);
+	var _SCNBox = __webpack_require__(116);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNBufferBindingBlock = __webpack_require__(120);
+	var _SCNBufferBindingBlock = __webpack_require__(129);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
-	var _SCNBufferFrequency = __webpack_require__(121);
+	var _SCNBufferFrequency = __webpack_require__(130);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferStream = __webpack_require__(122);
+	var _SCNBufferStream = __webpack_require__(131);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
-	var _SCNCamera = __webpack_require__(123);
+	var _SCNCamera = __webpack_require__(132);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNCameraProjectionDirection = __webpack_require__(124);
+	var _SCNCameraProjectionDirection = __webpack_require__(133);
 
 	var _SCNCameraProjectionDirection2 = _interopRequireDefault(_SCNCameraProjectionDirection);
 
-	var _SCNCapsule = __webpack_require__(125);
+	var _SCNCapsule = __webpack_require__(134);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNChamferMode = __webpack_require__(126);
+	var _SCNChamferMode = __webpack_require__(135);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
-	var _SCNColorMask = __webpack_require__(109);
+	var _SCNColorMask = __webpack_require__(118);
 
 	var _SCNColorMask2 = _interopRequireDefault(_SCNColorMask);
 
-	var _SCNCone = __webpack_require__(127);
+	var _SCNCone = __webpack_require__(136);
 
 	var _SCNCone2 = _interopRequireDefault(_SCNCone);
 
-	var _SCNConstraint = __webpack_require__(103);
+	var _SCNConstraint = __webpack_require__(112);
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNCullMode = __webpack_require__(110);
+	var _SCNCullMode = __webpack_require__(119);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNCylinder = __webpack_require__(128);
+	var _SCNCylinder = __webpack_require__(137);
 
 	var _SCNCylinder2 = _interopRequireDefault(_SCNCylinder);
 
-	var _SCNDebugOptions = __webpack_require__(129);
+	var _SCNDebugOptions = __webpack_require__(138);
 
 	var _SCNDebugOptions2 = _interopRequireDefault(_SCNDebugOptions);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(130);
+	var _SCNFieldForceEvaluator = __webpack_require__(139);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNFillMode = __webpack_require__(111);
+	var _SCNFillMode = __webpack_require__(120);
 
 	var _SCNFillMode2 = _interopRequireDefault(_SCNFillMode);
 
-	var _SCNFilterMode = __webpack_require__(113);
+	var _SCNFilterMode = __webpack_require__(122);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNFloor = __webpack_require__(131);
+	var _SCNFloor = __webpack_require__(140);
 
 	var _SCNFloor2 = _interopRequireDefault(_SCNFloor);
 
-	var _SCNGeometry = __webpack_require__(116);
+	var _SCNGeometry = __webpack_require__(125);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryTessellator = __webpack_require__(132);
+	var _SCNGeometryTessellator = __webpack_require__(141);
 
 	var _SCNGeometryTessellator2 = _interopRequireDefault(_SCNGeometryTessellator);
 
-	var _SCNHitTestOption = __webpack_require__(134);
+	var _SCNHitTestOption = __webpack_require__(143);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(135);
+	var _SCNHitTestResult = __webpack_require__(144);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNIKConstraint = __webpack_require__(136);
+	var _SCNIKConstraint = __webpack_require__(145);
 
 	var _SCNIKConstraint2 = _interopRequireDefault(_SCNIKConstraint);
 
-	var _SCNLayer = __webpack_require__(137);
+	var _SCNLayer = __webpack_require__(146);
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
-	var _SCNLevelOfDetail = __webpack_require__(138);
+	var _SCNLevelOfDetail = __webpack_require__(147);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNLight = __webpack_require__(139);
+	var _SCNLight = __webpack_require__(148);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNLookAtConstraint = __webpack_require__(140);
+	var _SCNLookAtConstraint = __webpack_require__(149);
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMaterialProperty = __webpack_require__(112);
+	var _SCNMaterialProperty = __webpack_require__(121);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4EqualToMatrix = __webpack_require__(141);
+	var _SCNMatrix4EqualToMatrix = __webpack_require__(150);
 
 	var _SCNMatrix4EqualToMatrix2 = _interopRequireDefault(_SCNMatrix4EqualToMatrix);
 
-	var _SCNMatrix4FromGLKMatrix = __webpack_require__(142);
+	var _SCNMatrix4FromGLKMatrix = __webpack_require__(151);
 
 	var _SCNMatrix4FromGLKMatrix2 = _interopRequireDefault(_SCNMatrix4FromGLKMatrix);
 
-	var _SCNMatrix4FromMat = __webpack_require__(143);
+	var _SCNMatrix4FromMat = __webpack_require__(152);
 
 	var _SCNMatrix4FromMat2 = _interopRequireDefault(_SCNMatrix4FromMat);
 
-	var _SCNMatrix4Invert = __webpack_require__(144);
+	var _SCNMatrix4Invert = __webpack_require__(153);
 
 	var _SCNMatrix4Invert2 = _interopRequireDefault(_SCNMatrix4Invert);
 
-	var _SCNMatrix4IsIdentity = __webpack_require__(145);
+	var _SCNMatrix4IsIdentity = __webpack_require__(154);
 
 	var _SCNMatrix4IsIdentity2 = _interopRequireDefault(_SCNMatrix4IsIdentity);
 
-	var _SCNMatrix4MakeRotation = __webpack_require__(146);
+	var _SCNMatrix4MakeRotation = __webpack_require__(155);
 
 	var _SCNMatrix4MakeRotation2 = _interopRequireDefault(_SCNMatrix4MakeRotation);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(147);
+	var _SCNMatrix4MakeScale = __webpack_require__(156);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(72);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(81);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNMatrix4Mult = __webpack_require__(148);
+	var _SCNMatrix4Mult = __webpack_require__(157);
 
 	var _SCNMatrix4Mult2 = _interopRequireDefault(_SCNMatrix4Mult);
 
-	var _SCNMatrix4Rotate = __webpack_require__(149);
+	var _SCNMatrix4Rotate = __webpack_require__(158);
 
 	var _SCNMatrix4Rotate2 = _interopRequireDefault(_SCNMatrix4Rotate);
 
-	var _SCNMatrix4Scale = __webpack_require__(150);
+	var _SCNMatrix4Scale = __webpack_require__(159);
 
 	var _SCNMatrix4Scale2 = _interopRequireDefault(_SCNMatrix4Scale);
 
-	var _SCNMatrix4ToGLKMatrix = __webpack_require__(151);
+	var _SCNMatrix4ToGLKMatrix = __webpack_require__(160);
 
 	var _SCNMatrix4ToGLKMatrix2 = _interopRequireDefault(_SCNMatrix4ToGLKMatrix);
 
-	var _SCNMatrix4ToMat = __webpack_require__(152);
+	var _SCNMatrix4ToMat = __webpack_require__(161);
 
 	var _SCNMatrix4ToMat2 = _interopRequireDefault(_SCNMatrix4ToMat);
 
-	var _SCNMatrix4Translate = __webpack_require__(153);
+	var _SCNMatrix4Translate = __webpack_require__(162);
 
 	var _SCNMatrix4Translate2 = _interopRequireDefault(_SCNMatrix4Translate);
 
-	var _SCNMorpher = __webpack_require__(154);
+	var _SCNMorpher = __webpack_require__(163);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(155);
+	var _SCNMorpherCalculationMode = __webpack_require__(164);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
-	var _SCNMovabilityHint = __webpack_require__(73);
+	var _SCNMovabilityHint = __webpack_require__(82);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(156);
+	var _SCNNodeRendererDelegate = __webpack_require__(165);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
-	var _SCNOrderedDictionary = __webpack_require__(74);
+	var _SCNOrderedDictionary = __webpack_require__(83);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNParticleBirthDirection = __webpack_require__(157);
+	var _SCNParticleBirthDirection = __webpack_require__(166);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
-	var _SCNParticleBirthLocation = __webpack_require__(158);
+	var _SCNParticleBirthLocation = __webpack_require__(167);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBlendMode = __webpack_require__(159);
+	var _SCNParticleBlendMode = __webpack_require__(168);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleEvent = __webpack_require__(160);
+	var _SCNParticleEvent = __webpack_require__(169);
 
 	var _SCNParticleEvent2 = _interopRequireDefault(_SCNParticleEvent);
 
-	var _SCNParticleEventBlock = __webpack_require__(161);
+	var _SCNParticleEventBlock = __webpack_require__(170);
 
 	var _SCNParticleEventBlock2 = _interopRequireDefault(_SCNParticleEventBlock);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(162);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(171);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNParticleInputMode = __webpack_require__(163);
+	var _SCNParticleInputMode = __webpack_require__(172);
 
 	var _SCNParticleInputMode2 = _interopRequireDefault(_SCNParticleInputMode);
 
-	var _SCNParticleModifierBlock = __webpack_require__(164);
+	var _SCNParticleModifierBlock = __webpack_require__(173);
 
 	var _SCNParticleModifierBlock2 = _interopRequireDefault(_SCNParticleModifierBlock);
 
-	var _SCNParticleModifierStage = __webpack_require__(165);
+	var _SCNParticleModifierStage = __webpack_require__(174);
 
 	var _SCNParticleModifierStage2 = _interopRequireDefault(_SCNParticleModifierStage);
 
-	var _SCNParticleOrientationMode = __webpack_require__(166);
+	var _SCNParticleOrientationMode = __webpack_require__(175);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticlePropertyController = __webpack_require__(167);
+	var _SCNParticlePropertyController = __webpack_require__(176);
 
 	var _SCNParticlePropertyController2 = _interopRequireDefault(_SCNParticlePropertyController);
 
-	var _SCNParticleSortingMode = __webpack_require__(168);
+	var _SCNParticleSortingMode = __webpack_require__(177);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNParticleSystem = __webpack_require__(169);
+	var _SCNParticleSystem = __webpack_require__(178);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNPhysicsBallSocketJoint = __webpack_require__(171);
+	var _SCNPhysicsBallSocketJoint = __webpack_require__(180);
 
 	var _SCNPhysicsBallSocketJoint2 = _interopRequireDefault(_SCNPhysicsBallSocketJoint);
 
-	var _SCNPhysicsBehavior = __webpack_require__(172);
+	var _SCNPhysicsBehavior = __webpack_require__(181);
 
 	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
 
-	var _SCNPhysicsBody = __webpack_require__(173);
+	var _SCNPhysicsBody = __webpack_require__(182);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsBodyType = __webpack_require__(174);
+	var _SCNPhysicsBodyType = __webpack_require__(183);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsCollisionCategory = __webpack_require__(177);
+	var _SCNPhysicsCollisionCategory = __webpack_require__(186);
 
 	var _SCNPhysicsCollisionCategory2 = _interopRequireDefault(_SCNPhysicsCollisionCategory);
 
-	var _SCNPhysicsContact = __webpack_require__(178);
+	var _SCNPhysicsContact = __webpack_require__(187);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsContactDelegate = __webpack_require__(179);
+	var _SCNPhysicsContactDelegate = __webpack_require__(188);
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
-	var _SCNPhysicsField = __webpack_require__(180);
+	var _SCNPhysicsField = __webpack_require__(189);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(181);
+	var _SCNPhysicsFieldScope = __webpack_require__(190);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
-	var _SCNPhysicsHingeJoint = __webpack_require__(182);
+	var _SCNPhysicsHingeJoint = __webpack_require__(191);
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
-	var _SCNPhysicsNoiseField = __webpack_require__(183);
+	var _SCNPhysicsNoiseField = __webpack_require__(192);
 
 	var _SCNPhysicsNoiseField2 = _interopRequireDefault(_SCNPhysicsNoiseField);
 
-	var _SCNPhysicsShape = __webpack_require__(175);
+	var _SCNPhysicsShape = __webpack_require__(184);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNPhysicsSliderJoint = __webpack_require__(184);
+	var _SCNPhysicsSliderJoint = __webpack_require__(193);
 
 	var _SCNPhysicsSliderJoint2 = _interopRequireDefault(_SCNPhysicsSliderJoint);
 
-	var _SCNPhysicsTurbulenceField = __webpack_require__(185);
+	var _SCNPhysicsTurbulenceField = __webpack_require__(194);
 
 	var _SCNPhysicsTurbulenceField2 = _interopRequireDefault(_SCNPhysicsTurbulenceField);
 
-	var _SCNPhysicsVehicle = __webpack_require__(186);
+	var _SCNPhysicsVehicle = __webpack_require__(195);
 
 	var _SCNPhysicsVehicle2 = _interopRequireDefault(_SCNPhysicsVehicle);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(187);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(196);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
-	var _SCNPhysicsWorld = __webpack_require__(188);
+	var _SCNPhysicsWorld = __webpack_require__(197);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPlane = __webpack_require__(189);
+	var _SCNPlane = __webpack_require__(198);
 
 	var _SCNPlane2 = _interopRequireDefault(_SCNPlane);
 
-	var _SCNProgram = __webpack_require__(190);
+	var _SCNProgram = __webpack_require__(199);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNProgramDelegate = __webpack_require__(191);
+	var _SCNProgramDelegate = __webpack_require__(200);
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNPyramid = __webpack_require__(192);
+	var _SCNPyramid = __webpack_require__(201);
 
 	var _SCNPyramid2 = _interopRequireDefault(_SCNPyramid);
 
-	var _SCNQuaternion = __webpack_require__(193);
+	var _SCNQuaternion = __webpack_require__(202);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(194);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(203);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNReferenceNode = __webpack_require__(195);
+	var _SCNReferenceNode = __webpack_require__(204);
 
 	var _SCNReferenceNode2 = _interopRequireDefault(_SCNReferenceNode);
 
-	var _SCNRenderer = __webpack_require__(198);
+	var _SCNRenderer = __webpack_require__(207);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
-	var _SCNRenderingAPI = __webpack_require__(204);
+	var _SCNRenderingAPI = __webpack_require__(213);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNScene = __webpack_require__(196);
+	var _SCNScene = __webpack_require__(205);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNSceneExportDelegate = __webpack_require__(205);
+	var _SCNSceneExportDelegate = __webpack_require__(214);
 
 	var _SCNSceneExportDelegate2 = _interopRequireDefault(_SCNSceneExportDelegate);
 
-	var _SCNSceneExportProgressHandler = __webpack_require__(206);
+	var _SCNSceneExportProgressHandler = __webpack_require__(215);
 
 	var _SCNSceneExportProgressHandler2 = _interopRequireDefault(_SCNSceneExportProgressHandler);
 
-	var _SCNSceneRenderer = __webpack_require__(207);
+	var _SCNSceneRenderer = __webpack_require__(216);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNSceneRendererDelegate = __webpack_require__(208);
+	var _SCNSceneRendererDelegate = __webpack_require__(217);
 
 	var _SCNSceneRendererDelegate2 = _interopRequireDefault(_SCNSceneRendererDelegate);
 
-	var _SCNSceneSource = __webpack_require__(197);
+	var _SCNSceneSource = __webpack_require__(206);
 
 	var _SCNSceneSource2 = _interopRequireDefault(_SCNSceneSource);
 
-	var _SCNSceneSourceStatus = __webpack_require__(209);
+	var _SCNSceneSourceStatus = __webpack_require__(218);
 
 	var _SCNSceneSourceStatus2 = _interopRequireDefault(_SCNSceneSourceStatus);
 
-	var _SCNSceneSourceStatusHandler = __webpack_require__(210);
+	var _SCNSceneSourceStatusHandler = __webpack_require__(219);
 
 	var _SCNSceneSourceStatusHandler2 = _interopRequireDefault(_SCNSceneSourceStatusHandler);
 
-	var _SCNShadable = __webpack_require__(211);
+	var _SCNShadable = __webpack_require__(220);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNShadableHelper = __webpack_require__(212);
+	var _SCNShadableHelper = __webpack_require__(221);
 
 	var _SCNShadableHelper2 = _interopRequireDefault(_SCNShadableHelper);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(213);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(222);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
-	var _SCNShadowMode = __webpack_require__(214);
+	var _SCNShadowMode = __webpack_require__(223);
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
-	var _SCNShape = __webpack_require__(215);
+	var _SCNShape = __webpack_require__(224);
 
 	var _SCNShape2 = _interopRequireDefault(_SCNShape);
 
-	var _SCNSkinner = __webpack_require__(216);
+	var _SCNSkinner = __webpack_require__(225);
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNSphere = __webpack_require__(176);
+	var _SCNSphere = __webpack_require__(185);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
-	var _SCNTechnique = __webpack_require__(217);
+	var _SCNTechnique = __webpack_require__(226);
 
 	var _SCNTechnique2 = _interopRequireDefault(_SCNTechnique);
 
-	var _SCNTechniqueSupport = __webpack_require__(218);
+	var _SCNTechniqueSupport = __webpack_require__(227);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNTessellationSmoothingMode = __webpack_require__(133);
+	var _SCNTessellationSmoothingMode = __webpack_require__(142);
 
 	var _SCNTessellationSmoothingMode2 = _interopRequireDefault(_SCNTessellationSmoothingMode);
 
-	var _SCNText = __webpack_require__(219);
+	var _SCNText = __webpack_require__(228);
 
 	var _SCNText2 = _interopRequireDefault(_SCNText);
 
-	var _SCNTimingFunction = __webpack_require__(220);
+	var _SCNTimingFunction = __webpack_require__(229);
 
 	var _SCNTimingFunction2 = _interopRequireDefault(_SCNTimingFunction);
 
-	var _SCNTorus = __webpack_require__(221);
+	var _SCNTorus = __webpack_require__(230);
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
-	var _SCNTransaction = __webpack_require__(75);
+	var _SCNTransaction = __webpack_require__(84);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNTransformConstraint = __webpack_require__(222);
+	var _SCNTransformConstraint = __webpack_require__(231);
 
 	var _SCNTransformConstraint2 = _interopRequireDefault(_SCNTransformConstraint);
 
-	var _SCNTransparencyMode = __webpack_require__(115);
+	var _SCNTransparencyMode = __webpack_require__(124);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNTube = __webpack_require__(223);
+	var _SCNTube = __webpack_require__(232);
 
 	var _SCNTube2 = _interopRequireDefault(_SCNTube);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3EqualToVector = __webpack_require__(224);
+	var _SCNVector3EqualToVector = __webpack_require__(233);
 
 	var _SCNVector3EqualToVector2 = _interopRequireDefault(_SCNVector3EqualToVector);
 
-	var _SCNVector3FromFloat = __webpack_require__(225);
+	var _SCNVector3FromFloat = __webpack_require__(234);
 
 	var _SCNVector3FromFloat2 = _interopRequireDefault(_SCNVector3FromFloat);
 
-	var _SCNVector3FromGLKVector = __webpack_require__(226);
+	var _SCNVector3FromGLKVector = __webpack_require__(235);
 
 	var _SCNVector3FromGLKVector2 = _interopRequireDefault(_SCNVector3FromGLKVector);
 
-	var _SCNVector3Make = __webpack_require__(227);
+	var _SCNVector3Make = __webpack_require__(236);
 
 	var _SCNVector3Make2 = _interopRequireDefault(_SCNVector3Make);
 
-	var _SCNVector3ToFloat = __webpack_require__(228);
+	var _SCNVector3ToFloat = __webpack_require__(237);
 
 	var _SCNVector3ToFloat2 = _interopRequireDefault(_SCNVector3ToFloat);
 
-	var _SCNVector3ToGLKVector = __webpack_require__(229);
+	var _SCNVector3ToGLKVector = __webpack_require__(238);
 
 	var _SCNVector3ToGLKVector2 = _interopRequireDefault(_SCNVector3ToGLKVector);
 
-	var _SCNVector3Zero = __webpack_require__(230);
+	var _SCNVector3Zero = __webpack_require__(239);
 
 	var _SCNVector3Zero2 = _interopRequireDefault(_SCNVector3Zero);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNVector4EqualToVector = __webpack_require__(231);
+	var _SCNVector4EqualToVector = __webpack_require__(240);
 
 	var _SCNVector4EqualToVector2 = _interopRequireDefault(_SCNVector4EqualToVector);
 
-	var _SCNVector4FromFloat = __webpack_require__(232);
+	var _SCNVector4FromFloat = __webpack_require__(241);
 
 	var _SCNVector4FromFloat2 = _interopRequireDefault(_SCNVector4FromFloat);
 
-	var _SCNVector4FromGLKVector = __webpack_require__(233);
+	var _SCNVector4FromGLKVector = __webpack_require__(242);
 
 	var _SCNVector4FromGLKVector2 = _interopRequireDefault(_SCNVector4FromGLKVector);
 
-	var _SCNVector4Make = __webpack_require__(234);
+	var _SCNVector4Make = __webpack_require__(243);
 
 	var _SCNVector4Make2 = _interopRequireDefault(_SCNVector4Make);
 
-	var _SCNVector4ToFloat = __webpack_require__(235);
+	var _SCNVector4ToFloat = __webpack_require__(244);
 
 	var _SCNVector4ToFloat2 = _interopRequireDefault(_SCNVector4ToFloat);
 
-	var _SCNVector4ToGLKVector = __webpack_require__(236);
+	var _SCNVector4ToGLKVector = __webpack_require__(245);
 
 	var _SCNVector4ToGLKVector2 = _interopRequireDefault(_SCNVector4ToGLKVector);
 
-	var _SCNView = __webpack_require__(237);
+	var _SCNView = __webpack_require__(246);
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
-	var _SCNWrapMode = __webpack_require__(114);
+	var _SCNWrapMode = __webpack_require__(123);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
-	var _SKAction = __webpack_require__(238);
+	var _SKAction = __webpack_require__(247);
 
 	var _SKAction2 = _interopRequireDefault(_SKAction);
 
-	var _SKActionTimingMode = __webpack_require__(239);
+	var _SKActionTimingMode = __webpack_require__(248);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKBlendMode = __webpack_require__(200);
+	var _SKBlendMode = __webpack_require__(209);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -951,75 +987,75 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode = __webpack_require__(240);
+	var _SKEffectNode = __webpack_require__(249);
 
 	var _SKEffectNode2 = _interopRequireDefault(_SKEffectNode);
 
-	var _SKFade = __webpack_require__(241);
+	var _SKFade = __webpack_require__(250);
 
 	var _SKFade2 = _interopRequireDefault(_SKFade);
 
-	var _SKGroup = __webpack_require__(242);
+	var _SKGroup = __webpack_require__(251);
 
 	var _SKGroup2 = _interopRequireDefault(_SKGroup);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(243);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(252);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKLabelNode = __webpack_require__(244);
+	var _SKLabelNode = __webpack_require__(253);
 
 	var _SKLabelNode2 = _interopRequireDefault(_SKLabelNode);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(245);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(254);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKNode = __webpack_require__(201);
+	var _SKNode = __webpack_require__(210);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
-	var _SKRepeat = __webpack_require__(246);
+	var _SKRepeat = __webpack_require__(255);
 
 	var _SKRepeat2 = _interopRequireDefault(_SKRepeat);
 
-	var _SKScale = __webpack_require__(247);
+	var _SKScale = __webpack_require__(256);
 
 	var _SKScale2 = _interopRequireDefault(_SKScale);
 
-	var _SKScene = __webpack_require__(248);
+	var _SKScene = __webpack_require__(257);
 
 	var _SKScene2 = _interopRequireDefault(_SKScene);
 
-	var _SKSceneScaleMode = __webpack_require__(249);
+	var _SKSceneScaleMode = __webpack_require__(258);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
-	var _SKSequence = __webpack_require__(250);
+	var _SKSequence = __webpack_require__(259);
 
 	var _SKSequence2 = _interopRequireDefault(_SKSequence);
 
-	var _SKShapeNode = __webpack_require__(251);
+	var _SKShapeNode = __webpack_require__(260);
 
 	var _SKShapeNode2 = _interopRequireDefault(_SKShapeNode);
 
-	var _SKSpriteNode = __webpack_require__(199);
+	var _SKSpriteNode = __webpack_require__(208);
 
 	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
 
-	var _SKTexture = __webpack_require__(202);
+	var _SKTexture = __webpack_require__(211);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
-	var _SKTextureFilteringMode = __webpack_require__(203);
+	var _SKTextureFilteringMode = __webpack_require__(212);
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
-	var _SKWait = __webpack_require__(252);
+	var _SKWait = __webpack_require__(261);
 
 	var _SKWait2 = _interopRequireDefault(_SKWait);
 
-	var _AjaxRequest2 = __webpack_require__(100);
+	var _AjaxRequest2 = __webpack_require__(109);
 
 	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
 
@@ -1027,11 +1063,11 @@ module.exports =
 
 	var _BinaryReader3 = _interopRequireDefault(_BinaryReader2);
 
-	var _BinaryRequest2 = __webpack_require__(170);
+	var _BinaryRequest2 = __webpack_require__(179);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _Buffer2 = __webpack_require__(253);
+	var _Buffer2 = __webpack_require__(262);
 
 	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
@@ -1047,11 +1083,11 @@ module.exports =
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
-	var _HTMLCanvasElement2 = __webpack_require__(255);
+	var _HTMLCanvasElement2 = __webpack_require__(264);
 
 	var _HTMLCanvasElement3 = _interopRequireDefault(_HTMLCanvasElement2);
 
-	var _TGAImage2 = __webpack_require__(256);
+	var _TGAImage2 = __webpack_require__(265);
 
 	var _TGAImage3 = _interopRequireDefault(_TGAImage2);
 
@@ -1098,6 +1134,15 @@ module.exports =
 	_ClassList3.default.registerClass(_GCExtendedGamepad2.default);
 	_ClassList3.default.registerClass(_GCGamepad2.default);
 	_ClassList3.default.registerClass(_GCMicroGamepad2.default);
+	_ClassList3.default.registerClass(_GKAgent2.default);
+	_ClassList3.default.registerClass(_GKAgent2D2.default);
+	_ClassList3.default.registerClass(_GKAgentDelegate2.default);
+	_ClassList3.default.registerClass(_GKBehavior2.default);
+	_ClassList3.default.registerClass(_GKComponent2.default);
+	_ClassList3.default.registerClass(_GKEntity2.default);
+	_ClassList3.default.registerClass(_GKGoal2.default);
+	_ClassList3.default.registerClass(_GKPath2.default);
+	_ClassList3.default.registerClass(_GKSCNNodeComponent2.default);
 	_ClassList3.default.registerClass(_MTLTessellationPartitionMode2.default);
 	_ClassList3.default.registerClass(_NSObject2.default);
 	_ClassList3.default.registerClass(_CAAction2.default);
@@ -1343,6 +1388,15 @@ module.exports =
 	exports.GCExtendedGamepad = _GCExtendedGamepad2.default;
 	exports.GCGamepad = _GCGamepad2.default;
 	exports.GCMicroGamepad = _GCMicroGamepad2.default;
+	exports.GKAgent = _GKAgent2.default;
+	exports.GKAgent2D = _GKAgent2D2.default;
+	exports.GKAgentDelegate = _GKAgentDelegate2.default;
+	exports.GKBehavior = _GKBehavior2.default;
+	exports.GKComponent = _GKComponent2.default;
+	exports.GKEntity = _GKEntity2.default;
+	exports.GKGoal = _GKGoal2.default;
+	exports.GKPath = _GKPath2.default;
+	exports.GKSCNNodeComponent = _GKSCNNodeComponent2.default;
 	exports.MTLTessellationPartitionMode = _MTLTessellationPartitionMode2.default;
 	exports.NSObject = _NSObject2.default;
 	exports.CAAction = _CAAction2.default;
@@ -16898,6 +16952,1403 @@ module.exports =
 
 /***/ },
 /* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _GKComponent2 = __webpack_require__(51);
+
+	var _GKComponent3 = _interopRequireDefault(_GKComponent2);
+
+	var _GKBehavior = __webpack_require__(53);
+
+	var _GKBehavior2 = _interopRequireDefault(_GKBehavior);
+
+	var _GKAgentDelegate = __webpack_require__(55);
+
+	var _GKAgentDelegate2 = _interopRequireDefault(_GKAgentDelegate);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * A component that moves a game entity according to a set of goals and realistic constraints.
+	 * @access public
+	 * @extends {GKComponent}
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkagent
+	 */
+	var GKAgent = function (_GKComponent) {
+	  _inherits(GKAgent, _GKComponent);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function GKAgent() {
+	    _classCallCheck(this, GKAgent);
+
+	    // Defining an Agent’s Behavior
+
+	    /**
+	     * A weighted collection of goals that influence the agent’s movement.
+	     * @type {?GKBehavior}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent/1501272-behavior
+	     */
+	    var _this = _possibleConstructorReturn(this, (GKAgent.__proto__ || Object.getPrototypeOf(GKAgent)).call(this));
+
+	    _this.behavior = null;
+
+	    // Constraining an Agent’s Movement
+
+	    /**
+	     * The resistance of the agent to changes in speed or direction.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent/1501080-mass
+	     */
+	    _this.mass = 0;
+
+	    /**
+	     * The upper limit to changes in the agent’s speed or direction.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent/1501224-maxacceleration
+	     */
+	    _this.maxAcceleration = 0;
+
+	    /**
+	     * The agent’s maximum forward speed, in units per second.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent/1501323-maxspeed
+	     */
+	    _this.maxSpeed = 0;
+
+	    /**
+	     * The agent’s radius.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent/1501066-radius
+	     */
+	    _this.radius = 0;
+
+	    // Synchronizing an Agent’s Visual Representation
+
+	    /**
+	     * An object that prepares for or responds to updates in the agent simulation.
+	     * @type {?GKAgentDelegate}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent/1501215-delegate
+	     */
+	    _this.delegate = null;
+
+	    // Managing an Agent’s Attributes
+
+	    /**
+	     * The agent’s current forward speed, in units per second.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent/1501038-speed
+	     */
+	    _this.speed = 0;
+	    return _this;
+	  }
+
+	  // GKAgentDelegate
+
+	  /**
+	   * Tells the delegate that an agent is about to perform its next simulation step.
+	   * @access public
+	   * @param {GKAgent} agent - The agent object that will perform its next simulation step.
+	   * @returns {void}
+	   * @desc Implement this method when you want to update the agent simulation with data from an external source, such as node position and orientation information updated by the SceneKit or SpriteKit physics engine. Set the position and rotation properties of the agent (as a GKAgent2D or GKAgent3D object) so that the next simulation step will take your changes to those properties into account.
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkagentdelegate/1501232-agentwillupdate
+	   */
+
+
+	  _createClass(GKAgent, [{
+	    key: 'agentWillUpdate',
+	    value: function agentWillUpdate(agent) {}
+
+	    /**
+	     * Tells the delegate that an agent has just performed a simulation step.
+	     * @access public
+	     * @param {GKAgent} agent - The agent object that has just performed a simulation step.
+	     * @returns {void}
+	     * @desc Implement this method when you want to update a display based on the latest data from the agent simulation. Read the position and rotation properties of the agent (as a GKAgent2D or GKAgent3D object), then set the corresponding attributes of the object that provides the agent’s visual representation.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagentdelegate/1501131-agentdidupdate
+	     */
+
+	  }, {
+	    key: 'agentDidUpdate',
+	    value: function agentDidUpdate(agent) {}
+	  }]);
+
+	  return GKAgent;
+	}(_GKComponent3.default);
+
+	exports.default = GKAgent;
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _GKEntity = __webpack_require__(52);
+
+	var _GKEntity2 = _interopRequireDefault(_GKEntity);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * The abstract superclass for creating objects that add specific gameplay functionality to an entity.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkcomponent
+	 */
+	var GKComponent = function (_NSObject) {
+	  _inherits(GKComponent, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function GKComponent() {
+	    _classCallCheck(this, GKComponent);
+
+	    // Working with Entities
+
+	    /**
+	     * @access private
+	     * @type {GKEntity}
+	     */
+	    var _this = _possibleConstructorReturn(this, (GKComponent.__proto__ || Object.getPrototypeOf(GKComponent)).call(this));
+
+	    _this._entity = null;
+	    return _this;
+	  }
+
+	  // Performing Periodic Updates
+
+	  /**
+	   * Performs any custom periodic actions defined by the component subclass.
+	   * @access public
+	   * @param {number} seconds - The time step to use for any time-dependent actions performed by this method (typically, the elapsed time since the previous call to this method).
+	   * @returns {void}
+	   * @desc Override this method to implement per-frame logic specific to your component class. GameplayKit calls this method when you call the update(deltaTime:) method of the entity owning a component, or when you call the update(deltaTime:) method of a GKComponentSystem object that manages all components of a specific GKComponent subclass. Typically, you call one of those methods in response to a per-frame game loop method such as update(_:) (SpriteKit) or renderer(_:updateAtTime:) (SceneKit).
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkcomponent/1501218-update
+	   */
+
+
+	  _createClass(GKComponent, [{
+	    key: 'updateDeltaTime',
+	    value: function updateDeltaTime(seconds) {}
+
+	    // Working with Entities
+
+	    /**
+	     * Notifies the component that it has been assigned to an entity.
+	     * @access public
+	     * @returns {void}
+	     * @desc Override this method in a component subclass if you need to perform game logic when the component is added to an entity. For example, if one component’s behavior depends on the presence of other components in the same entity, you can examine the entity’s components array in this method and take action accordingly.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkcomponent/1687601-didaddtoentity
+	     */
+
+	  }, {
+	    key: 'didAddToEntity',
+	    value: function didAddToEntity() {}
+
+	    /**
+	     * Notifies the component that it has been removed from an entity.
+	     * @access public
+	     * @returns {void}
+	     * @desc Override this method in a component subclass if you need to perform game logic when the component is removed from to an entity. For example, if one component’s behavior depends on the presence of other components in the same entity, you can examine the entity’s components array in this method and take action accordingly.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkcomponent/1640914-willremovefromentity
+	     */
+
+	  }, {
+	    key: 'willRemoveFromEntity',
+	    value: function willRemoveFromEntity() {}
+
+	    /**
+	     * The entity that owns this component.
+	     * @type {?GKEntity}
+	     * @desc Use this property in a component subclass to refer back to the owning entity and its attributes. An entity may be an instance either of the GKEntity class or of a custom subclass. In the latter case, a custom entity class can provide storage for state or resources accessed by multiple components.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkcomponent/1501250-entity
+	     */
+
+	  }, {
+	    key: 'entity',
+	    get: function get() {
+	      return this._entity;
+	    }
+	  }]);
+
+	  return GKComponent;
+	}(_NSObject3.default);
+
+	exports.default = GKComponent;
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _GKComponent = __webpack_require__(51);
+
+	var _GKComponent2 = _interopRequireDefault(_GKComponent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * An object relevant to gameplay, with functionality entirely provided by a collection of component objects. 
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkentity
+	 */
+	var GKEntity = function (_NSObject) {
+	  _inherits(GKEntity, _NSObject);
+
+	  // Creating an Entity
+
+	  /**
+	   * Initializes a new entity object.
+	   * @access public
+	   * @constructor
+	   * @desc If you create a GKEntity subclass and define any additional initializers, you must delegate to this initializer. You do not need to subclass GKEntity to use Entity-Component architecture—generally, you should create a custom entity class only when you need a place to store state or resources that are shared by multiple components.
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkentity/1501143-init
+	   */
+	  function GKEntity() {
+	    _classCallCheck(this, GKEntity);
+
+	    // Managing an Entity’s List of Components
+
+	    var _this = _possibleConstructorReturn(this, (GKEntity.__proto__ || Object.getPrototypeOf(GKEntity)).call(this));
+
+	    _this._components = [];
+	    return _this;
+	  }
+
+	  // Managing an Entity’s List of Components
+
+	  /**
+	   * Adds a component to the entity.
+	   * @access public
+	   * @param {GKComponent} component - An instance of a GKComponent subclass.
+	   * @returns {void}
+	   * @desc You create components by subclassing GKEntity to implement reusable behavior. Then, use this method to incorporate the behavior of a component class into that entity. An entity’s components list never has more than one instance of any component class—if the entity already contains a component of the same class as the component parameter, calling this method will replace that component.
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkentity/1501312-addcomponent
+	   */
+
+
+	  _createClass(GKEntity, [{
+	    key: 'addComponent',
+	    value: function addComponent(component) {
+	      if (this._components.indexOf(component) < 0) {
+	        this._components.push(component);
+	        component._entity = this;
+	        component.didAddToEntity();
+	      }
+	    }
+
+	    /**
+	     * The entity’s list of components.
+	     * @type {GKComponent[]}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkentity/1501182-components
+	     */
+
+	  }, {
+	    key: 'updateDeltaTime',
+
+
+	    // Performing Periodic Updates
+
+	    /**
+	     * Performs periodic updates for each of the entity’s components.
+	     * @access public
+	     * @param {number} seconds - The time step to use for any time-dependent actions performed by this method (typically, the elapsed time since the previous call to this method).
+	     * @returns {void}
+	     * @desc At runtime, an entity/component-based game needs to dispatch periodic logic—from an update/render loop method such as update(_:) (SpriteKit) or renderer(_:updateAtTime:) (SceneKit), or a CADisplayLink (iOS) or CVDisplayLink (macOS) timer in a custom rendering engine—to each of its components, so that each can perform component-specific update logic.The GKEntity update(deltaTime:) method is one of the two options GameplayKit provides for dispatching updates—this option is easy to implement in games with small numbers of entities and components. Call this method for each entity in your game, and each entity will in turn call the update(deltaTime:) method for each of its components.The other option is to dispatch updates per-component, rather than per-entity, using a GKComponentSystem object. Using a component system allows you to update all components of a specific component class in a deterministic order, without needing to traverse your game’s object graph and update each entity.NoteIf a component owned by an entity is a member of a component system, calling the entity’s update(deltaTime:) method will not update that component.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkentity/1501228-update
+	     */
+	    value: function updateDeltaTime(seconds) {}
+
+	    // Instance Methods
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {ComponentType.Type} componentClass - 
+	     * @returns {GKComponent} - 
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkentity/2300466-component
+	     */
+
+	  }, {
+	    key: 'componentOfType',
+	    value: function componentOfType(componentClass) {
+	      return this._components.find(function (component) {
+	        return component instanceof componentClass;
+	      });
+	    }
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {ComponentType.Type} componentClass - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkentity/2300467-removecomponent
+	     */
+
+	  }, {
+	    key: 'removeComponentOfType',
+	    value: function removeComponentOfType(componentClass) {
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._components[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var component = _step.value;
+
+	          if (component instanceof componentClass) {
+	            component.willRemoveFromEntity();
+
+	            var index = this._components.indexOf(component);
+	            if (index >= 0) {
+	              this._components.splice(index);
+	              component._entity = null;
+	            }
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'components',
+	    get: function get() {
+	      return this._components.slice();
+	    }
+	  }]);
+
+	  return GKEntity;
+	}(_NSObject3.default);
+
+	exports.default = GKEntity;
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _GKGoal = __webpack_require__(54);
+
+	var _GKGoal2 = _interopRequireDefault(_GKGoal);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * A set of goals that together influence the movement of an agent.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior
+	 */
+	var GKBehavior = function (_NSObject) {
+	  _inherits(GKBehavior, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function GKBehavior() {
+	    _classCallCheck(this, GKBehavior);
+
+	    // Managing a Behavior’s Set of Goals
+
+	    /**
+	     * @access private
+	     * @type {GKGoal[]}
+	     */
+	    var _this = _possibleConstructorReturn(this, (GKBehavior.__proto__ || Object.getPrototypeOf(GKBehavior)).call(this));
+
+	    _this._goals = [];
+
+	    /**
+	     * @access private
+	     * @type {number[]}
+	     */
+	    _this._weights = [];
+	    return _this;
+	  }
+
+	  // Creating a Behavior
+
+	  /**
+	   * Creates a behavior with a single goal.
+	   * @access public
+	   * @param {GKGoal} goal - A goal object.
+	   * @param {number} weight - A weight to be applied to the goal’s influence on an agent’s speed and direction.
+	   * @returns {GKBehavior}
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388733-init
+	   */
+
+
+	  _createClass(GKBehavior, [{
+	    key: 'behaviorWithGoalsAndWeights',
+
+
+	    /**
+	     * Creates a behavior with the specified goals and weights.
+	     * @access public
+	     * @param {GKGoal[]} goals - An array of goal objects.
+	     * @param {number[]} weights - An array of numbers, each the weight to be applied to the goal at the corresponding index in the goals array.
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388727-init
+	     */
+	    value: function behaviorWithGoalsAndWeights(goals, weights) {
+	      var _behavior$_goals, _behavior$_weights;
+
+	      var behavior = new GKBehavior();
+	      (_behavior$_goals = behavior._goals).push.apply(_behavior$_goals, _toConsumableArray(goals));
+	      (_behavior$_weights = behavior._weights).push.apply(_behavior$_weights, _toConsumableArray(weights));
+	      return behavior;
+	    }
+
+	    // Managing a Behavior’s Set of Goals
+
+	    /**
+	     * Sets the weight for the specified goal’s influence on agents, adding that goal to the behavior if not already present.
+	     * @access public
+	     * @param {number} weight - A weight to be applied to the goal’s influence on an agent’s speed and direction.
+	     * @param {GKGoal} goal - A goal object.
+	     * @returns {void}
+	     * @desc When an agent evaluates its behavior, it examines each goal and calculates the change in direction and speed necessary to move toward fulfilling that goal (within the limits of the current time step and the agent’s maximum speed and turn rate). The agent then combines these influences to determine the total change in direction and speed for the current time step. To modulate the effects of multiple goals in a behavior, use this method to increase or decrease the relative influence of each.You can use this method to vary the behaviors in your game in response to player actions or other events. For example, an enemy agent’s behavior may combine pursuing the player (init(toInterceptAgent:maxPredictionTime:)) with a bit of wandering (init(toWander:)) to make its movement appear natural. When the enemy has not yet sighted the player, you might reduce the weight of the pursue goal to zero; when the player attacks the enemy, you might increase the weight of the wander goal for a short time to make the enemy act dazed.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388731-setweight
+	     */
+
+	  }, {
+	    key: 'setWeightFor',
+	    value: function setWeightFor(weight, goal) {
+	      var index = this._goals.indexOf(goal);
+	      if (index >= 0) {
+	        this._weights[index] = weight;
+	      }
+	    }
+
+	    /**
+	     * Returns the weight for the specified goal’s influence on agents.
+	     * @access public
+	     * @param {GKGoal} goal - A goal already included in the behavior’s set of goals.
+	     * @returns {number} - 
+	     * @desc When an agent evaluates its behavior, it examines each goal and calculates the change in direction and speed necessary to move toward fulfilling that goal (within the limits of the current time step and the agent’s maximum speed and turn rate). The agent then combines these influences to determine the total change in direction and speed for the current time step. Weights modulate the effects of multiple goals in a behavior.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388729-weight
+	     */
+
+	  }, {
+	    key: 'weightFor',
+	    value: function weightFor(goal) {
+	      var index = this._goals.indexOf(goal);
+	      if (index >= 0) {
+	        return this._weights[index];
+	      }
+	      return 0;
+	    }
+
+	    /**
+	     * Removes the specified goal from the behavior.
+	     * @access public
+	     * @param {GKGoal} goal - A goal object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388714-remove
+	     */
+
+	  }, {
+	    key: 'remove',
+	    value: function remove(goal) {
+	      var index = this._goals.indexOf(goal);
+	      if (index >= 0) {
+	        this._goals.splice(index, 1);
+	        this._weights.splice(index, 1);
+	      }
+	    }
+
+	    /**
+	     * Removes all goals from the behavior.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388716-removeallgoals
+	     */
+
+	  }, {
+	    key: 'removeAllGoals',
+	    value: function removeAllGoals() {
+	      this._goals = [];
+	      this._weights = [];
+	    }
+
+	    /**
+	     * The number of goals in the behavior.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388721-goalcount
+	     */
+
+	  }, {
+	    key: 'subscript',
+
+
+	    // Working with Goals Using Subscript Syntax
+
+	    /**
+	     * Returns the weight associated with the goal specified by subscript syntax.
+	     * @access public
+	     * @param {GKGoal} goal - A goal already included in the behavior’s set of goals.
+	     * @returns {NSNumber! { get set }} - 
+	     * @desc This method is equivalent to the weight(for:) method, but allows access using subscript syntax.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388723-subscript
+	     */
+	    value: function subscript(goal) {
+	      return null;
+	    }
+	  }, {
+	    key: 'goalCount',
+	    get: function get() {
+	      return this._goals.length;
+	    }
+	  }], [{
+	    key: 'behaviorWithGoalWeight',
+	    value: function behaviorWithGoalWeight(goal, weight) {
+	      var behavior = new GKBehavior();
+	      behavior._goals.push(goal);
+	      behavior._weights.push(weight);
+	      return behavior;
+	    }
+	  }]);
+
+	  return GKBehavior;
+	}(_NSObject3.default);
+
+	exports.default = GKBehavior;
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import GKAgent from './GKAgent'
+	//import GKObstacle from './GKObstacle'
+	//import GKPath from './GKPath'
+
+	// TODO: check values from NSKeyedArchiver output.
+	var _GKGoalType = {
+	  none: 0,
+	  seekAgent: 1,
+	  flee: 2,
+	  reach: 3,
+	  wander: 4,
+	  avoid: 5,
+	  intercept: 6,
+	  separate: 7,
+	  align: 8,
+	  cohere: 9,
+	  stayOn: 10,
+	  follow: 11
+
+	  /**
+	   * An influence that motivates the movement of one or more agents.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkgoal
+	   */
+	};
+	var GKGoal = function (_NSObject) {
+	  _inherits(GKGoal, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function GKGoal() {
+	    _classCallCheck(this, GKGoal);
+
+	    /**
+	     * @access private
+	     * @type {_GKGoalType}
+	     */
+	    var _this = _possibleConstructorReturn(this, (GKGoal.__proto__ || Object.getPrototypeOf(GKGoal)).call(this));
+
+	    _this._type = 0;
+
+	    /**
+	     * @access private
+	     * @type {GKPath}
+	     */
+	    _this._path = null;
+
+	    /**
+	     * @access private
+	     * @type {GKObstacle[]}
+	     */
+	    _this._obstacles = [];
+
+	    /**
+	     * @access private
+	     * @type {GKAgent[]}
+	     */
+	    _this._agents = [];
+
+	    /**
+	     * @access pricate
+	     * @type {number}
+	     */
+	    _this._time = 0;
+
+	    /**
+	     * @access pricate
+	     * @type {number}
+	     */
+	    _this._angle = 0;
+
+	    /**
+	     * @access pricate
+	     * @type {number}
+	     */
+	    _this._distance = 0;
+
+	    /**
+	     * @access pricate
+	     * @type {number}
+	     */
+	    _this._speed = 0;
+
+	    /**
+	     * @access pricate
+	     * @type {boolean}
+	     */
+	    _this._forward = true;
+	    return _this;
+	  }
+
+	  // Creating Goals for General Movement Behavior
+
+	  /**
+	   * Creates a goal whose effect is to move an agent toward the current position of the specified other agent.
+	   * @access public
+	   * @param {GKAgent} agent - An agent whose position affected agents will attempt to move toward.
+	   * @returns {void}
+	   * @desc This goal is similar to one produced by the init(toInterceptAgent:maxPredictionTime:) method with a maxPredictionTime parameter of zero. Affected agents will attempt to move toward the target agent, but without taking the target’s movement into account.You can also use this goal when you want an agent to move toward a target point, such as the current mouse or touch location. Create another agent that remains stationary at the target point (that is, has no velocity and no goals), and use that agent as the parameter when creating a goal with this method.
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501217-init
+	   */
+
+
+	  _createClass(GKGoal, null, [{
+	    key: 'goalToSeekAgent',
+	    value: function goalToSeekAgent(agent) {}
+
+	    /**
+	     * Creates a goal whose effect is to move an agent away from the current position of the specified other agent.
+	     * @access public
+	     * @param {GKAgent} agent - An agent whose position affected agents will attempt to move away from.
+	     * @returns {void}
+	     * @desc This goal is similar to one produced by the init(toAvoid:maxPredictionTime:) method with a single agent and a maxPredictionTime parameter of zero. Affected agents will attempt to move away from the target agent, but without taking the target’s movement into account.You can also use this goal when you want an agent to move away from a target point, such as the current mouse or touch location. Create another agent that remains stationary at the target point (that is, has no velocity and no goals), and use that agent as the parameter when creating a goal with this method.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501248-init
+	     */
+
+	  }, {
+	    key: 'goalToFleeAgent',
+	    value: function goalToFleeAgent(agent) {}
+
+	    /**
+	     * Creates a goal whose effect is to accelerate or decelerate an agent until it reaches the specified speed.
+	     * @access public
+	     * @param {number} targetSpeed - The speed for affected agents to reach.
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501070-init
+	     */
+
+	  }, {
+	    key: 'goalToReachTargetSpeed',
+	    value: function goalToReachTargetSpeed(targetSpeed) {}
+
+	    /**
+	     * Creates a goal whose effect is to make an agent wander aimlessly, moving forward and turning at random.
+	     * @access public
+	     * @param {number} speed - The forward speed for affected agents to maintain while turning at random.
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501052-init
+	     */
+
+	  }, {
+	    key: 'goalToWander',
+	    value: function goalToWander(speed) {}
+
+	    // Creating Goals for Avoidance and Interception Behavior
+
+	    /**
+	     * Creates a goal whose effect is to make an agent avoid colliding with the specified static obstacles.
+	     * @access public
+	     * @param {GKObstacle[]} obstacles - The static obstacles with which to avoid collisions.
+	     * @param {number} maxPredictionTime - The amount of time during which to predict collisions.
+	     * @returns {void}
+	     * @desc The maxPredictionTime parameter controls how far in the future a predicted collision must be in order for the agent to take action to avoid it. For example, if this parameter has a low value, an agents speeding toward an obstacle will not swerve or slow until a collision is imminent (and depending on the properties of that agent, it might not be able to move quickly enough to avoid colliding). If this parameter has a high value, the agent will change course leisurely, well before colliding.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501098-init
+	     */
+
+	  }, {
+	    key: 'goalToAvoid',
+	    value: function goalToAvoid(obstacles, maxPredictionTime) {}
+
+	    /**
+	     * Creates a goal whose effect is to make an agent pursue the specified other agent, taking into account the target’s movement.
+	     * @access public
+	     * @param {GKAgent} target - An agent whose position affected agents will attempt to move toward.
+	     * @param {number} maxPredictionTime - The amount of time for which to predict the target agent’s movement.
+	     * @returns {void}
+	     * @desc The maxPredictionTime parameter controls how far in the future the agent will plan to intercept its target. A larger value causes an affected agent to pursue its quarry more efficently, catching up with the target’s motion using fewer course corrections. A smaller value causes an affected agent to more closely follow the target’s current position despite the target’s current speed (and depending on the properties of the affected agent, it might not be able to move quickly enough to catch its target).
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501219-init
+	     */
+
+	  }, {
+	    key: 'goalToInterceptAgent',
+	    value: function goalToInterceptAgent(target, maxPredictionTime) {}
+
+	    // Creating Goals for Flocking Behavior
+
+	    /**
+	     * Creates a goal whose effect is to make an agent maintain the specified distance from other agents in a specified group.
+	     * @access public
+	     * @param {GKAgent[]} agents - The agents from whom to maintain distance.
+	     * @param {number} maxDistance - The maximum distance from other agents required for this goal to take effect.
+	     * @param {number} maxAngle - The maximum angle, in radians, between an affected agent’s velocity and the direction toward the other agents required for this goal to take effect.
+	     * @returns {void}
+	     * @desc The agents array can safely include the agent(s) affected by the goal—an agent pursuing this goal will ignore itself in the array. Therefore, you can use a single goal created with this method to cause an entire group of agents to mutually avoid one another.Changing the maxDistance parameter determines the minimum distance between agents in the group. Changing the maxAngle parameter determines how tightly an agent will turn to maintain separation from the group.You can combine separation, alignment, and cohesion goals to produce “flocking” behaviors in which a group of agents move together.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501049-init
+	     */
+
+	  }, {
+	    key: 'goalToSeparateFrom',
+	    value: function goalToSeparateFrom(agents, maxDistance, maxAngle) {}
+
+	    /**
+	     * Creates a goal whose effect is to make an agent align its orientation with that of other agents in a specified group.
+	     * @access public
+	     * @param {GKAgent[]} agents - The agents with whom to maintain alignment.
+	     * @param {number} maxDistance - The maximum distance from other agents required for this goal to take effect.
+	     * @param {number} maxAngle - The maximum angle, in radians, between an affected agent’s velocity and the direction toward the other agents required for this goal to take effect.
+	     * @returns {void}
+	     * @desc The agents array can safely include the agent(s) affected by the goal—an agent pursuing this goal will ignore itself in the array. Therefore, you can use a single goal created with this method to cause an entire group of agents to mutually align with one another.Changing the maxDistance parameter determines the minimum distance between agents in the group. Changing the maxAngle parameter determines how tightly an agent will turn to maintain alignment with the group.You can combine separation, alignment, and cohesion goals to produce “flocking” behaviors in which a group of agents move together.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501134-init
+	     */
+
+	  }, {
+	    key: 'goalToAlignWith',
+	    value: function goalToAlignWith(agents, maxDistance, maxAngle) {}
+
+	    /**
+	     * Creates a goal whose effect is to make an agent stay near the other agents in a specified group.
+	     * @access public
+	     * @param {GKAgent[]} agents - The agents with whom to stay close.
+	     * @param {number} maxDistance - The maximum distance from other agents required for this goal to take effect.
+	     * @param {number} maxAngle - The maximum angle, in radians, between an affected agent’s velocity and the direction toward the other agents required for this goal to take effect.
+	     * @returns {void}
+	     * @desc The agents array can safely include the agent(s) affected by the goal—an agent pursuing this goal will ignore itself in the array. Therefore, you can use a single goal created with this method to cause an entire group of agents to mutually stay near one another.Changing the maxDistance parameter determines how close to one another agents need to be in order for them to form a group. Changing the maxAngle parameter determines how tightly an agent will turn to maintain cohesion in the group.You can combine separation, alignment, and cohesion goals to produce “flocking” behaviors in which a group of agents move together.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501170-init
+	     */
+
+	  }, {
+	    key: 'goalToCohereWith',
+	    value: function goalToCohereWith(agents, maxDistance, maxAngle) {}
+
+	    // Creating Goals for Path-Following Behavior
+
+	    /**
+	     * Creates a goal whose effect is to maintain an agent’s position within the specified path.
+	     * @access public
+	     * @param {GKPath} path - A path object.
+	     * @param {number} maxPredictionTime - The amount of time for which to predict an affected agent’s movement.
+	     * @returns {void}
+	     * @desc This goal uses the shape and the radius property of the specified path to define the boundaries of an area for the agent to stay in. If an affected agent is outside that area, the agent will move into that area; if the agent is already in that area, this goal will not motivate the agent to move further.The maxPredictionTime parameter determines how far ahead of time the agent will predict its own movement to fulfill this goal. For example, with a larger value, an agent moving toward the path will begin to slow gradually so as to stop gently within the path’s radius. With a smaller value, the agent will attempt to stop more abruptly as it reaches the path (and depending on its properties, it might not be able to stop quickly enough to avoid overshooting).
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501166-init
+	     */
+
+	  }, {
+	    key: 'goalToStayOn',
+	    value: function goalToStayOn(path, maxPredictionTime) {}
+
+	    /**
+	     * Creates a goal whose effect is to both maintain position on and traverse the specified path.
+	     * @access public
+	     * @param {GKPath} path - A path object.
+	     * @param {number} maxPredictionTime - The amount of time for which to predict an affected agent’s movement.
+	     * @param {boolean} forward - true to traverse in the order the path’s verties are defined; false to traverse the path in the opposite order.
+	     * @returns {void}
+	     * @desc This goal uses the shape and the radius property of the specified path to define the agent’s desired movement. The agent first attempts to reach a location near the path’s start point (or end point if the forward parameter is false), to a tolerance determined by the path’s radius. Then, the agent attemps to move toward the next point in the path, again with a tolerance determined by the path’s radius. This sequence continues until the path terminates, or repeats indefinitely if the path’s isCyclical property is true.The maxPredictionTime parameter determines how far ahead of time the agent will predict its own movement to fulfill this goal. For example, with a larger value, an agent moving toward the path will begin to slow gradually so as to stop gently within the path’s radius. With a smaller value, the agent will attempt to stop more abruptly as it reaches the path (and depending on its properties, it might not be able to stop quickly enough to avoid overshooting).
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkgoal/1501095-init
+	     */
+
+	  }, {
+	    key: 'goalToFollow',
+	    value: function goalToFollow(path, maxPredictionTime, forward) {}
+	  }]);
+
+	  return GKGoal;
+	}(_NSObject3.default);
+
+	exports.default = GKGoal;
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _GKAgent = __webpack_require__(50);
+
+	var _GKAgent2 = _interopRequireDefault(_GKAgent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/**
+	 * Implement this protocol to synchronize the state of an agent with its visual representation in your game.
+	 * @interface
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkagentdelegate
+	 */
+	var GKAgentDelegate = function () {
+	  function GKAgentDelegate() {
+	    _classCallCheck(this, GKAgentDelegate);
+	  }
+
+	  _createClass(GKAgentDelegate, [{
+	    key: 'agentWillUpdate',
+
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+	    //constructor() {
+	    //}
+
+	    // Synchronizing with Agents
+
+	    /**
+	     * Tells the delegate that an agent is about to perform its next simulation step.
+	     * @access public
+	     * @param {GKAgent} agent - The agent object that will perform its next simulation step.
+	     * @returns {void}
+	     * @desc Implement this method when you want to update the agent simulation with data from an external source, such as node position and orientation information updated by the SceneKit or SpriteKit physics engine. Set the position and rotation properties of the agent (as a GKAgent2D or GKAgent3D object) so that the next simulation step will take your changes to those properties into account.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagentdelegate/1501232-agentwillupdate
+	     */
+	    value: function agentWillUpdate(agent) {}
+
+	    /**
+	     * Tells the delegate that an agent has just performed a simulation step.
+	     * @access public
+	     * @param {GKAgent} agent - The agent object that has just performed a simulation step.
+	     * @returns {void}
+	     * @desc Implement this method when you want to update a display based on the latest data from the agent simulation. Read the position and rotation properties of the agent (as a GKAgent2D or GKAgent3D object), then set the corresponding attributes of the object that provides the agent’s visual representation.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagentdelegate/1501131-agentdidupdate
+	     */
+
+	  }, {
+	    key: 'agentDidUpdate',
+	    value: function agentDidUpdate(agent) {}
+	  }]);
+
+	  return GKAgentDelegate;
+	}();
+
+	exports.default = GKAgentDelegate;
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _GKAgent2 = __webpack_require__(50);
+
+	var _GKAgent3 = _interopRequireDefault(_GKAgent2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * An agent that operates in a two-dimensional space. 
+	 * @access public
+	 * @extends {GKAgent}
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d
+	 */
+	var GKAgent2D = function (_GKAgent) {
+	  _inherits(GKAgent2D, _GKAgent);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function GKAgent2D() {
+	    _classCallCheck(this, GKAgent2D);
+
+	    // Managing an Agent’s Position and Orientation
+
+	    /**
+	     * The current position of the agent in 2D space.
+	     * @type {number[]}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501043-position
+	     */
+	    var _this = _possibleConstructorReturn(this, (GKAgent2D.__proto__ || Object.getPrototypeOf(GKAgent2D)).call(this));
+
+	    _this.position = null;
+
+	    /**
+	     * The rotation of the agent around the z-axis.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501045-rotation
+	     */
+	    _this.rotation = 0;
+
+	    // Running the Agent Simulation
+
+	    /**
+	     * @access private
+	     * @type {number[]}
+	     */
+	    _this._velocity = null;
+	    return _this;
+	  }
+
+	  // Running the Agent Simulation
+
+	  /**
+	   * Causes the agent to evaluate its goals and update its position, rotation, and velocity accordingly.
+	   * @access public
+	   * @param {number} seconds - 
+	   * @returns {void}
+	   * @desc You call this method directly on an individual agent, or on all the agents in your game through a GKComponentSystem object, whenever you want to run a step of the agent simulation. Typically, a game updates its agent simulation whenever it prepares to draw a new frame—for example, in the update(_:) method of a SpriteKit SKScene object.
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501242-update
+	   */
+
+
+	  _createClass(GKAgent2D, [{
+	    key: 'updateDeltaTime',
+	    value: function updateDeltaTime(seconds) {}
+
+	    /**
+	     * The current velocity of the agent in 2D space.
+	     * @type {number[]}
+	     * @desc An agent’s velocity is a calculated property—the velocity vector is determined by an agent’s facing direction (its rotation property) and its speed property.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501186-velocity
+	     */
+
+	  }, {
+	    key: 'velocity',
+	    get: function get() {
+	      return this._velocity;
+	    }
+	  }]);
+
+	  return GKAgent2D;
+	}(_GKAgent3.default);
+
+	exports.default = GKAgent2D;
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * A polygonal path that can be followed by an agent.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkpath
+	 */
+	var GKPath = function (_NSObject) {
+	  _inherits(GKPath, _NSObject);
+
+	  /**
+	   * @access public
+	   * @constructor
+	   */
+	  function GKPath() {
+	    _classCallCheck(this, GKPath);
+
+	    // Managing a Path’s Attributes
+
+	    /**
+	     * The radius of the path.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501281-radius
+	     */
+	    var _this = _possibleConstructorReturn(this, (GKPath.__proto__ || Object.getPrototypeOf(GKPath)).call(this));
+
+	    _this.radius = 0;
+
+	    /**
+	     * A Boolean value that determines whether the path loops around on itself (that is, the path’s end point connects to its start point).
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501244-iscyclical
+	     */
+	    _this.isCyclical = false;
+
+	    // Inspecting a Path’s Shape
+
+	    _this._numPoints = 0;
+	    return _this;
+	  }
+
+	  // Creating a Path
+
+	  /**
+	   * Initializes a path with the specified array of 2D points.
+	   * @access public
+	   * @param {UnsafeMutablePointer<vector_float2>} points - An array of 2D points representing the vertices in the path. The order of points in this array determines the order in which an agent follows the path.
+	   * @param {number} count - The number of elements in the pointsarray.
+	   * @param {number} radius - The radius of the path.
+	   * @param {boolean} cyclical - true if the path’s end point should connect to its start point; otherwise false.
+	   * @return {GKPath}
+	   * @desc The radius parameter defines the space occupied by the path—think of this space as the area created by sweeping a circle of the specified radius along the path from vertex to vertex. Agents with path-related goals will attempt to move to or stay within this area.The cyclical parameter determines whether the path loops around on itself. If the path is cyclical, an agent with a follow-path goal will proceed around the path indefinitely. If the path is not cyclical, an agent following the path will stop at the last point in the path.To use the newly created path to constrain an agent’s behavior, create a goal with the init(toStayOn:maxPredictionTime:) or init(toFollow:maxPredictionTime:forward:) method.
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501048-init
+	   */
+
+
+	  _createClass(GKPath, [{
+	    key: 'float2At',
+
+
+	    // Inspecting a Path’s Shape
+
+	    /**
+	     * Returns the 2D point at the specified index in the path’s list of vertices.
+	     * @access public
+	     * @param {number} index - The index of the vertex to return, between 0 and the numPoints value.
+	     * @returns {number[]} - 
+	     * @desc You define a path’s vertices when creating it, either directly with the init(__float3Points:count:radius:cyclical:) initializer or indirectly with the init(graphNodes:radius:) initializer.If the path is a 3D path, this method is still functional but returns only 2D vectors, ignoring the z-component of each point on the path.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1778285-float2
+	     */
+	    value: function float2At(index) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns the 3D point at the specified index in the path’s list of vertices.
+	     * @access public
+	     * @param {number} index - The index of the vertex to return, between 0 and the numPoints value.
+	     * @returns {number[]} - 
+	     * @desc You define a path’s vertices when creating it, either directly with the init(__float3Points:count:radius:cyclical:) initializer or indirectly with the init(graphNodes:radius:) initializer.If the path is a 2D path, this method is still functional, but returns 3D vectors whose z-component is always zero.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1778310-float3
+	     */
+
+	  }, {
+	    key: 'float3At',
+	    value: function float3At(index) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns the 2D point at the specified index in the path’s list of vertices.
+	     * @access public
+	     * @param {number} index - The index of the vertex to return, between 0 and the numPoints value.
+	     * @returns {number[]} - 
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501172-point
+	     */
+
+	  }, {
+	    key: 'pointAt',
+	    value: function pointAt(index) {
+	      return null;
+	    }
+	    /**
+	     * The number of vertices in the path.
+	     * @type {number}
+	     * @desc You define a path’s vertices when creating it, either directly with the init(__points:count:radius:cyclical:) initializer or indirectly with the init(graphNodes:radius:) initializer.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501071-numpoints
+	     */
+
+	  }, {
+	    key: 'numPoints',
+	    get: function get() {
+	      return this._numPoints;
+	    }
+	  }], [{
+	    key: 'pathWithPointsCountRadiusCyclical',
+	    value: function pathWithPointsCountRadiusCyclical(points, count, radius, cyclical) {
+	      var path = new GKPath();
+	      // TODO: implement
+	      return path;
+	    }
+
+	    /**
+	     * Initializes a path with the specified array of 3D points.
+	     * @access public
+	     * @param {UnsafeMutablePointer<vector_float3>} points - An array of points representing the vertices in the path. The order of points in this array determines the order in which an agent follows the path.
+	     * @param {number} count - The number of elements in the pointsarray.
+	     * @param {number} radius - The radius of the path.
+	     * @param {boolean} cyclical - true if the path’s end point (the last element of the points array) should connect to its start point (the first element in the points array); otherwise false.
+	     * @returns {GKPath}
+	     * @desc The radius parameter defines the space occupied by the path—think of this space as the volume created by sweeping a sphere of the specified radius along the path from vertex to vertex. Agents with path-related goals will attempt to move to or stay within this volume.The cyclical parameter determines whether the path loops around on itself. If the path is cyclical, an agent with a follow-path goal will proceed around the path indefinitely. If the path is not cyclical, an agent following the path will stop at the last point in the path.To use the newly created path to constrain an agent’s behavior, create a goal with the init(toStayOn:maxPredictionTime:) or init(toFollow:maxPredictionTime:forward:) method.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1778297-init
+	     */
+
+	  }, {
+	    key: 'pathWithFloat3PointsCountRadiusCyclical',
+	    value: function pathWithFloat3PointsCountRadiusCyclical(points, count, radius, cyclical) {
+	      var path = new GKPath();
+	      // TODO: implement
+	      return path;
+	    }
+
+	    /**
+	     * Initializes a path using the positions of the specified graph nodes.
+	     * @access public
+	     * @param {GKGraphNode[]} graphNodes - An array of graph node objects containing 2D points.
+	     * @param {number} radius - The radius of the path.
+	     * @returns {GKPath}
+	     * @desc Use this initializer to turn a list of nodes from a navigation graph (as returned by the GKGraphfindPath(from:to:) method) into a path-following goal for an agent. If the nodes are GKGraphNode2D objects, this initializer creates a 2D path; if the nodes are GKGraphNode3D objects, this initializer creates a 3D path.The radius parameter defines the space occupied by the path—think of this space as the area created by sweeping a circle (or sphere, for 3D paths) of the specified radius along the path from vertex to vertex. Agents with path-related goals will attempt to move to or stay within this area.To use the newly created path to constrain an agent’s behavior, create a goal with the init(toStayOn:maxPredictionTime:) or init(toFollow:maxPredictionTime:forward:) method.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501138-init
+	     */
+
+	  }, {
+	    key: 'pathWithGraphNodesRadius',
+	    value: function pathWithGraphNodesRadius(graphNodes, radius) {
+	      var path = new GKPath();
+	      // TODO: implement
+	      return path;
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @param {float2[]|float3[]} points -
+	     * @param {number} radius -
+	     * @param {boolean} cyclical -
+	     * @returns {GKPath}
+	     */
+
+	  }, {
+	    key: 'pathWithPointsRadiusCyclical',
+	    value: function pathWithPointsRadiusCyclical(points, radius, cyclical) {
+	      var path = new GKPath();
+	      // TODO: implement
+	      return path;
+	    }
+	  }]);
+
+	  return GKPath;
+	}(_NSObject3.default);
+
+	exports.default = GKPath;
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _GKComponent2 = __webpack_require__(51);
+
+	var _GKComponent3 = _interopRequireDefault(_GKComponent2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * 
+	 * @access public
+	 * @extends {GKComponent}
+	 * @see https://developer.apple.com/documentation/gameplaykit/gkscnnodecomponent
+	 */
+	var GKSCNNodeComponent = function (_GKComponent) {
+	  _inherits(GKSCNNodeComponent, _GKComponent);
+
+	  // Initializers
+
+	  /**
+	   * 
+	   * @access public
+	   * @constructor
+	   * @param {SCNNode} node - 
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkscnnodecomponent/2873248-init
+	   */
+	  function GKSCNNodeComponent(node) {
+	    _classCallCheck(this, GKSCNNodeComponent);
+
+	    // Instance Properties
+
+	    var _this = _possibleConstructorReturn(this, (GKSCNNodeComponent.__proto__ || Object.getPrototypeOf(GKSCNNodeComponent)).call(this));
+
+	    _this._node = node;
+	    return _this;
+	  }
+
+	  // Instance Properties
+
+	  /**
+	   * 
+	   * @type {SCNNode}
+	   * @desc 
+	   * @see https://developer.apple.com/documentation/gameplaykit/gkscnnodecomponent/2873245-node
+	   */
+
+
+	  _createClass(GKSCNNodeComponent, [{
+	    key: 'node',
+	    get: function get() {
+	      return this._node;
+	    }
+	  }]);
+
+	  return GKSCNNodeComponent;
+	}(_GKComponent3.default);
+
+	exports.default = GKSCNNodeComponent;
+
+/***/ },
+/* 59 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16925,7 +18376,7 @@ module.exports =
 	exports.default = MTLTessellationPartitionMode;
 
 /***/ },
-/* 51 */
+/* 60 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16981,7 +18432,7 @@ module.exports =
 	exports.default = CAAction;
 
 /***/ },
-/* 52 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16994,7 +18445,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _constants = __webpack_require__(53);
+	var _constants = __webpack_require__(62);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -17413,7 +18864,7 @@ module.exports =
 	exports.default = CAAnimation;
 
 /***/ },
-/* 53 */
+/* 62 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17445,7 +18896,7 @@ module.exports =
 	exports.kCAAnimationRotateAutoReverse = 'autoReverse';
 
 /***/ },
-/* 54 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17456,7 +18907,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimation = __webpack_require__(52);
+	var _CAAnimation = __webpack_require__(61);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -17518,7 +18969,7 @@ module.exports =
 	exports.default = CAAnimationDelegate;
 
 /***/ },
-/* 55 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17531,7 +18982,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAAnimation2 = __webpack_require__(52);
+	var _CAAnimation2 = __webpack_require__(61);
 
 	var _CAAnimation3 = _interopRequireDefault(_CAAnimation2);
 
@@ -17636,7 +19087,7 @@ module.exports =
 	exports.default = CAAnimationGroup;
 
 /***/ },
-/* 56 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17649,7 +19100,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(57);
+	var _CAPropertyAnimation2 = __webpack_require__(66);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
@@ -17870,7 +19321,7 @@ module.exports =
 	exports.default = CABasicAnimation;
 
 /***/ },
-/* 57 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17883,7 +19334,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAAnimation2 = __webpack_require__(52);
+	var _CAAnimation2 = __webpack_require__(61);
 
 	var _CAAnimation3 = _interopRequireDefault(_CAAnimation2);
 
@@ -17899,15 +19350,15 @@ module.exports =
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNVector = __webpack_require__(60);
+	var _SCNVector = __webpack_require__(69);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(59);
+	var _SCNVector3 = __webpack_require__(68);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -18120,7 +19571,7 @@ module.exports =
 	exports.default = CAPropertyAnimation;
 
 /***/ },
-/* 58 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18131,11 +19582,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -19135,6 +20586,11 @@ module.exports =
 	      return m;
 	    }
 	  }, {
+	    key: 'matrixWithOrientation',
+	    value: function matrixWithOrientation(orientation) {
+	      return SCNMatrix4.matrixWithRotation(orientation.quatToRotation());
+	    }
+	  }, {
 	    key: 'matrixWithTranslation',
 	    value: function matrixWithTranslation(x, y, z) {
 	      var _x = x;
@@ -19167,7 +20623,7 @@ module.exports =
 	exports.default = SCNMatrix4;
 
 /***/ },
-/* 59 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19178,7 +20634,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNVector = __webpack_require__(60);
+	var _SCNVector = __webpack_require__(69);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -19552,7 +21008,7 @@ module.exports =
 	exports.default = SCNVector3;
 
 /***/ },
-/* 60 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19563,11 +21019,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -20034,14 +21490,14 @@ module.exports =
 	    value: function quatToEulerAngles() {
 	      return this.quatToRotation().rotationToEulerAngles();
 	    }
+	  }, {
+	    key: 'floatArray',
+
 
 	    /**
 	     * @access public
 	     * @returns {number[]} -
 	     */
-
-	  }, {
-	    key: 'floatArray',
 	    value: function floatArray() {
 	      return [this.x, this.y, this.z, this.w];
 	    }
@@ -20080,6 +21536,11 @@ module.exports =
 	    value: function _createBtQuaternion() {
 	      //return new Ammo.btQuaternion(this.x, this.y, this.z, this.w)
 	    }
+	  }, {
+	    key: 'angle',
+	    get: function get() {
+	      return this.quatToRotation().w;
+	    }
 	  }], [{
 	    key: '_initWithData',
 	    value: function _initWithData(data) {
@@ -20108,7 +21569,7 @@ module.exports =
 	exports.default = SCNVector4;
 
 /***/ },
-/* 61 */
+/* 70 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20130,7 +21591,7 @@ module.exports =
 	exports.default = CACurrentMediaTime;
 
 /***/ },
-/* 62 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20143,11 +21604,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(57);
+	var _CAPropertyAnimation2 = __webpack_require__(66);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
-	var _constants = __webpack_require__(53);
+	var _constants = __webpack_require__(62);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -20397,7 +21858,7 @@ module.exports =
 	exports.default = CAKeyframeAnimation;
 
 /***/ },
-/* 63 */
+/* 72 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20492,7 +21953,7 @@ module.exports =
 	exports.default = CAMediaTiming;
 
 /***/ },
-/* 64 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20507,7 +21968,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _constants = __webpack_require__(53);
+	var _constants = __webpack_require__(62);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -20653,7 +22114,7 @@ module.exports =
 	exports.default = CAMediaTimingFunction;
 
 /***/ },
-/* 65 */
+/* 74 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20710,7 +22171,7 @@ module.exports =
 	exports.default = CATransform3D;
 
 /***/ },
-/* 66 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20727,7 +22188,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CAMediaTimingFunction = __webpack_require__(64);
+	var _CAMediaTimingFunction = __webpack_require__(73);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
@@ -20743,15 +22204,15 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -20759,7 +22220,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _constants = __webpack_require__(53);
+	var _constants = __webpack_require__(62);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -21603,7 +23064,7 @@ module.exports =
 	exports.default = SCNAction;
 
 /***/ },
-/* 67 */
+/* 76 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21631,7 +23092,7 @@ module.exports =
 	exports.default = SCNActionTimingMode;
 
 /***/ },
-/* 68 */
+/* 77 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21806,7 +23267,7 @@ module.exports =
 	exports.default = SCNActionable;
 
 /***/ },
-/* 69 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21817,11 +23278,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -21879,7 +23340,7 @@ module.exports =
 	exports.default = SCNActionCustom;
 
 /***/ },
-/* 70 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21892,15 +23353,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -22103,7 +23564,7 @@ module.exports =
 	_SCNAction3.default.fadeOpacityToDuration = SCNActionFade.fadeOpacityToDuration;
 
 /***/ },
-/* 71 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22116,19 +23577,19 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimationGroup = __webpack_require__(55);
+	var _CAAnimationGroup = __webpack_require__(64);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
-	var _CABasicAnimation = __webpack_require__(56);
+	var _CABasicAnimation = __webpack_require__(65);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
-	var _CAMediaTimingFunction = __webpack_require__(64);
+	var _CAMediaTimingFunction = __webpack_require__(73);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAKeyframeAnimation = __webpack_require__(62);
+	var _CAKeyframeAnimation = __webpack_require__(71);
 
 	var _CAKeyframeAnimation2 = _interopRequireDefault(_CAKeyframeAnimation);
 
@@ -22136,31 +23597,31 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(72);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(81);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNMovabilityHint = __webpack_require__(73);
+	var _SCNMovabilityHint = __webpack_require__(82);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNOrderedDictionary = __webpack_require__(74);
+	var _SCNOrderedDictionary = __webpack_require__(83);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNTransaction = __webpack_require__(75);
+	var _SCNTransaction = __webpack_require__(84);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
@@ -22168,7 +23629,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _constants = __webpack_require__(53);
+	var _constants = __webpack_require__(62);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -24308,7 +25769,6 @@ module.exports =
 	    },
 	    set: function set(newValue) {
 	      this._transform = newValue;
-	      // TODO: update position, rotation, scale
 	      this._position = this._transform.getTranslation();
 	      this._rotation = this._transform.getRotation();
 	      this._scale = this._transform.getScale();
@@ -24511,6 +25971,27 @@ module.exports =
 	    key: '_worldTranslation',
 	    get: function get() {
 	      return this.worldTransform.getTranslation();
+	    }
+	  }, {
+	    key: 'worldPosition',
+	    get: function get() {
+	      return this.worldTransform.getTranslation();
+	    },
+	    set: function set(newValue) {
+	      var parentTransform = null;
+	      if (this._parent === null) {
+	        parentTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
+	      } else {
+	        parentTransform = this._parent.worldTransform;
+	      }
+	      var transform = (0, _SCNMatrix4MakeTranslation2.default)(newValue.x, newValue.y, newValue.z);
+	      var inv = parentTransform.invert();
+	      var newTransform = transform.transform(inv);
+
+	      this._transform.m41 = newTransform.m41;
+	      this._transform.m42 = newTransform.m42;
+	      this._transform.m43 = newTransform.m43;
+	      this.transform = this._transform;
 	    }
 
 	    /**
@@ -25042,7 +26523,7 @@ module.exports =
 	exports.default = SCNNode;
 
 /***/ },
-/* 72 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25051,7 +26532,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -25073,7 +26554,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeTranslation;
 
 /***/ },
-/* 73 */
+/* 82 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25097,7 +26578,7 @@ module.exports =
 	exports.default = SCNMovabilityHint;
 
 /***/ },
-/* 74 */
+/* 83 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25299,7 +26780,7 @@ module.exports =
 	exports.default = SCNOrderedDictionary;
 
 /***/ },
-/* 75 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25314,7 +26795,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CABasicAnimation = __webpack_require__(56);
+	var _CABasicAnimation = __webpack_require__(65);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
@@ -25743,7 +27224,7 @@ module.exports =
 	exports.default = SCNTransaction;
 
 /***/ },
-/* 76 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25756,7 +27237,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
@@ -25905,7 +27386,7 @@ module.exports =
 	_SCNAction3.default.group = SCNActionGroup.group;
 
 /***/ },
-/* 77 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25916,11 +27397,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -25980,7 +27461,7 @@ module.exports =
 	exports.default = SCNActionHide;
 
 /***/ },
-/* 78 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25991,11 +27472,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -26053,7 +27534,7 @@ module.exports =
 	exports.default = SCNActionJavaScript;
 
 /***/ },
-/* 79 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26064,11 +27545,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -26126,7 +27607,7 @@ module.exports =
 	exports.default = SCNActionMove;
 
 /***/ },
-/* 80 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26137,11 +27618,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -26199,7 +27680,7 @@ module.exports =
 	exports.default = SCNActionPerformSelector;
 
 /***/ },
-/* 81 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26212,11 +27693,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -26351,7 +27832,7 @@ module.exports =
 	_SCNAction3.default.playAudioWaitForCompletion = SCNActionPlaySound.playAudioWaitForCompletion;
 
 /***/ },
-/* 82 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26362,11 +27843,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -26424,7 +27905,7 @@ module.exports =
 	exports.default = SCNActionReference;
 
 /***/ },
-/* 83 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26437,15 +27918,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -26556,7 +28037,7 @@ module.exports =
 	_SCNAction3.default.removeFromParentNode = SCNActionRemove.removeFromParentNode;
 
 /***/ },
-/* 84 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26569,11 +28050,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -26760,7 +28241,7 @@ module.exports =
 	_SCNAction3.default.repeatForever = SCNActionRepeat.repeatForever;
 
 /***/ },
-/* 85 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26773,23 +28254,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -27097,7 +28578,7 @@ module.exports =
 	_SCNAction3.default.rotateToAxisAngle = SCNActionRotate.rotateToAxisAngle;
 
 /***/ },
-/* 86 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27108,11 +28589,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -27170,7 +28651,7 @@ module.exports =
 	exports.default = SCNActionRunAction;
 
 /***/ },
-/* 87 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27183,11 +28664,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -27302,7 +28783,7 @@ module.exports =
 	_SCNAction3.default.run = SCNActionRunBlock.run;
 
 /***/ },
-/* 88 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27313,11 +28794,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -27375,7 +28856,7 @@ module.exports =
 	exports.default = SCNActionScale;
 
 /***/ },
-/* 89 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27388,11 +28869,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -27573,7 +29054,7 @@ module.exports =
 	_SCNAction3.default.sequence = SCNActionSequence.sequence;
 
 /***/ },
-/* 90 */
+/* 99 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27595,7 +29076,7 @@ module.exports =
 	exports.default = SCNActionTimingFunction;
 
 /***/ },
-/* 91 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27606,11 +29087,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(66);
+	var _SCNAction2 = __webpack_require__(75);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(67);
+	var _SCNActionTimingMode = __webpack_require__(76);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -27712,7 +29193,7 @@ module.exports =
 	_SCNAction3.default.waitDurationWithRange = SCNActionWait.waitDurationWithRange;
 
 /***/ },
-/* 92 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27723,7 +29204,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimation = __webpack_require__(52);
+	var _CAAnimation = __webpack_require__(61);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -27901,7 +29382,7 @@ module.exports =
 	exports.default = SCNAnimatable;
 
 /***/ },
-/* 93 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28130,7 +29611,7 @@ module.exports =
 	exports.default = SCNAnimation;
 
 /***/ },
-/* 94 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28198,7 +29679,7 @@ module.exports =
 	exports.default = SCNAnimationEvent;
 
 /***/ },
-/* 95 */
+/* 104 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28223,7 +29704,7 @@ module.exports =
 	exports.default = SCNAnimationEventBlock;
 
 /***/ },
-/* 96 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28238,7 +29719,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimation = __webpack_require__(93);
+	var _SCNAnimation = __webpack_require__(102);
 
 	var _SCNAnimation2 = _interopRequireDefault(_SCNAnimation);
 
@@ -28382,7 +29863,7 @@ module.exports =
 	exports.default = SCNAnimationPlayer;
 
 /***/ },
-/* 97 */
+/* 106 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28412,7 +29893,7 @@ module.exports =
 	exports.default = SCNAntialiasingMode;
 
 /***/ },
-/* 98 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28596,7 +30077,7 @@ module.exports =
 	exports.default = SCNAudioPlayer;
 
 /***/ },
-/* 99 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28607,7 +30088,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _AjaxRequest2 = __webpack_require__(100);
+	var _AjaxRequest2 = __webpack_require__(109);
 
 	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
 
@@ -28878,7 +30359,7 @@ module.exports =
 	exports.default = SCNAudioSource;
 
 /***/ },
-/* 100 */
+/* 109 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29080,7 +30561,7 @@ module.exports =
 	exports.default = new AjaxRequest();
 
 /***/ },
-/* 101 */
+/* 110 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29184,7 +30665,7 @@ module.exports =
 	exports.default = SCNBillboardAxis;
 
 /***/ },
-/* 102 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29193,7 +30674,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNConstraint2 = __webpack_require__(103);
+	var _SCNConstraint2 = __webpack_require__(112);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
@@ -29244,7 +30725,7 @@ module.exports =
 	exports.default = SCNBillboardConstraint;
 
 /***/ },
-/* 103 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29305,7 +30786,7 @@ module.exports =
 	exports.default = SCNConstraint;
 
 /***/ },
-/* 104 */
+/* 113 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29333,7 +30814,7 @@ module.exports =
 	exports.default = SCNBindingBlock;
 
 /***/ },
-/* 105 */
+/* 114 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29365,7 +30846,7 @@ module.exports =
 	exports.default = SCNBlendMode;
 
 /***/ },
-/* 106 */
+/* 115 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29431,7 +30912,7 @@ module.exports =
 	exports.default = SCNBoundingVolume;
 
 /***/ },
-/* 107 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29444,27 +30925,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -29835,7 +31316,7 @@ module.exports =
 	exports.default = SCNBox;
 
 /***/ },
-/* 108 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29852,31 +31333,31 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNBlendMode = __webpack_require__(105);
+	var _SCNBlendMode = __webpack_require__(114);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNColorMask = __webpack_require__(109);
+	var _SCNColorMask = __webpack_require__(118);
 
 	var _SCNColorMask2 = _interopRequireDefault(_SCNColorMask);
 
-	var _SCNCullMode = __webpack_require__(110);
+	var _SCNCullMode = __webpack_require__(119);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNFillMode = __webpack_require__(111);
+	var _SCNFillMode = __webpack_require__(120);
 
 	var _SCNFillMode2 = _interopRequireDefault(_SCNFillMode);
 
-	var _SCNMaterialProperty = __webpack_require__(112);
+	var _SCNMaterialProperty = __webpack_require__(121);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNOrderedDictionary = __webpack_require__(74);
+	var _SCNOrderedDictionary = __webpack_require__(83);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNTransparencyMode = __webpack_require__(115);
+	var _SCNTransparencyMode = __webpack_require__(124);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
@@ -30727,7 +32208,7 @@ module.exports =
 	exports.default = SCNMaterial;
 
 /***/ },
-/* 109 */
+/* 118 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30758,7 +32239,7 @@ module.exports =
 	exports.default = SCNColorMask;
 
 /***/ },
-/* 110 */
+/* 119 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30782,7 +32263,7 @@ module.exports =
 	exports.default = SCNCullMode;
 
 /***/ },
-/* 111 */
+/* 120 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30806,7 +32287,7 @@ module.exports =
 	exports.default = SCNFillMode;
 
 /***/ },
-/* 112 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30823,23 +32304,23 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNFilterMode = __webpack_require__(113);
+	var _SCNFilterMode = __webpack_require__(122);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(72);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(81);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNOrderedDictionary = __webpack_require__(74);
+	var _SCNOrderedDictionary = __webpack_require__(83);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNTransaction = __webpack_require__(75);
+	var _SCNTransaction = __webpack_require__(84);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNWrapMode = __webpack_require__(114);
+	var _SCNWrapMode = __webpack_require__(123);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
@@ -31512,7 +32993,7 @@ module.exports =
 	exports.default = SCNMaterialProperty;
 
 /***/ },
-/* 113 */
+/* 122 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31538,7 +33019,7 @@ module.exports =
 	exports.default = SCNFilterMode;
 
 /***/ },
-/* 114 */
+/* 123 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31566,7 +33047,7 @@ module.exports =
 	exports.default = SCNWrapMode;
 
 /***/ },
-/* 115 */
+/* 124 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31590,7 +33071,7 @@ module.exports =
 	exports.default = SCNTransparencyMode;
 
 /***/ },
-/* 116 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31605,23 +33086,23 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNCullMode = __webpack_require__(110);
+	var _SCNCullMode = __webpack_require__(119);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNOrderedDictionary = __webpack_require__(74);
+	var _SCNOrderedDictionary = __webpack_require__(83);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -33078,7 +34559,7 @@ module.exports =
 	exports.default = SCNGeometry;
 
 /***/ },
-/* 117 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33093,15 +34574,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(72);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(81);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -33765,7 +35246,7 @@ module.exports =
 	exports.default = SCNGeometrySource;
 
 /***/ },
-/* 118 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33780,7 +35261,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -34060,7 +35541,7 @@ module.exports =
 	exports.default = SCNGeometryElement;
 
 /***/ },
-/* 119 */
+/* 128 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34090,7 +35571,7 @@ module.exports =
 	exports.default = SCNGeometryPrimitiveType;
 
 /***/ },
-/* 120 */
+/* 129 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34119,7 +35600,7 @@ module.exports =
 	exports.default = SCNBufferBindingBlock;
 
 /***/ },
-/* 121 */
+/* 130 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34145,7 +35626,7 @@ module.exports =
 	exports.default = SCNBufferFrequency;
 
 /***/ },
-/* 122 */
+/* 131 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34200,7 +35681,7 @@ module.exports =
 	exports.default = SCNBufferStream;
 
 /***/ },
-/* 123 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34215,15 +35696,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNCameraProjectionDirection = __webpack_require__(124);
+	var _SCNCameraProjectionDirection = __webpack_require__(133);
 
 	var _SCNCameraProjectionDirection2 = _interopRequireDefault(_SCNCameraProjectionDirection);
 
-	var _SCNMaterialProperty = __webpack_require__(112);
+	var _SCNMaterialProperty = __webpack_require__(121);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -34802,7 +36283,7 @@ module.exports =
 	exports.default = SCNCamera;
 
 /***/ },
-/* 124 */
+/* 133 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34826,7 +36307,7 @@ module.exports =
 	exports.default = SCNCameraProjectionDirection;
 
 /***/ },
-/* 125 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34839,27 +36320,27 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -35121,7 +36602,7 @@ module.exports =
 	exports.default = SCNCapsule;
 
 /***/ },
-/* 126 */
+/* 135 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35147,7 +36628,7 @@ module.exports =
 	exports.default = SCNChamferMode;
 
 /***/ },
-/* 127 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35158,27 +36639,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -35375,7 +36856,7 @@ module.exports =
 	exports.default = SCNCone;
 
 /***/ },
-/* 128 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35388,27 +36869,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -35652,7 +37133,7 @@ module.exports =
 	exports.default = SCNCylinder;
 
 /***/ },
-/* 129 */
+/* 138 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35782,7 +37263,7 @@ module.exports =
 	exports.default = SCNDebugOptions;
 
 /***/ },
-/* 130 */
+/* 139 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35810,7 +37291,7 @@ module.exports =
 	exports.default = SCNFieldForceEvaluator;
 
 /***/ },
-/* 131 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35821,27 +37302,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -36022,7 +37503,7 @@ module.exports =
 	exports.default = SCNFloor;
 
 /***/ },
-/* 132 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36035,11 +37516,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNTessellationSmoothingMode = __webpack_require__(133);
+	var _SCNTessellationSmoothingMode = __webpack_require__(142);
 
 	var _SCNTessellationSmoothingMode2 = _interopRequireDefault(_SCNTessellationSmoothingMode);
 
-	var _MTLTessellationPartitionMode = __webpack_require__(50);
+	var _MTLTessellationPartitionMode = __webpack_require__(59);
 
 	var _MTLTessellationPartitionMode2 = _interopRequireDefault(_MTLTessellationPartitionMode);
 
@@ -36137,7 +37618,7 @@ module.exports =
 	exports.default = SCNGeometryTessellator;
 
 /***/ },
-/* 133 */
+/* 142 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36163,7 +37644,7 @@ module.exports =
 	exports.default = SCNTessellationSmoothingMode;
 
 /***/ },
-/* 134 */
+/* 143 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36201,7 +37682,7 @@ module.exports =
 	exports.default = SCNHitTestOption;
 
 /***/ },
-/* 135 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36409,7 +37890,7 @@ module.exports =
 	exports.default = SCNHitTestResult;
 
 /***/ },
-/* 136 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36420,7 +37901,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(103);
+	var _SCNConstraint2 = __webpack_require__(112);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
@@ -36546,7 +38027,7 @@ module.exports =
 	exports.default = SCNIKConstraint;
 
 /***/ },
-/* 137 */
+/* 146 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36588,7 +38069,7 @@ module.exports =
 	exports.default = SCNLayer;
 
 /***/ },
-/* 138 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36603,7 +38084,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(116);
+	var _SCNGeometry = __webpack_require__(125);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -36732,7 +38213,7 @@ module.exports =
 	exports.default = SCNLevelOfDetail;
 
 /***/ },
-/* 139 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36747,11 +38228,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNMaterialProperty = __webpack_require__(112);
+	var _SCNMaterialProperty = __webpack_require__(121);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -37302,7 +38783,7 @@ module.exports =
 	exports.default = SCNLight;
 
 /***/ },
-/* 140 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37311,7 +38792,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNConstraint2 = __webpack_require__(103);
+	var _SCNConstraint2 = __webpack_require__(112);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
@@ -37375,7 +38856,7 @@ module.exports =
 	exports.default = SCNLookAtConstraint;
 
 /***/ },
-/* 141 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37384,7 +38865,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -37409,7 +38890,7 @@ module.exports =
 	exports.default = SCNMatrix4EqualToMatrix4;
 
 /***/ },
-/* 142 */
+/* 151 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37435,7 +38916,7 @@ module.exports =
 	exports.default = SCNMatrix4FromGLKMatrix4;
 
 /***/ },
-/* 143 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37444,7 +38925,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -37464,7 +38945,7 @@ module.exports =
 	exports.default = SCNMatrix4FromMat4;
 
 /***/ },
-/* 144 */
+/* 153 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37489,7 +38970,7 @@ module.exports =
 	exports.default = SCNMatrix4Invert;
 
 /***/ },
-/* 145 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37498,7 +38979,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -37522,7 +39003,7 @@ module.exports =
 	exports.default = SCNMatrix4IsIdentity;
 
 /***/ },
-/* 146 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37531,11 +39012,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -37584,7 +39065,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeRotation;
 
 /***/ },
-/* 147 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37593,7 +39074,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -37615,7 +39096,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeScale;
 
 /***/ },
-/* 148 */
+/* 157 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37642,7 +39123,7 @@ module.exports =
 	exports.default = SCNMatrix4Mult;
 
 /***/ },
-/* 149 */
+/* 158 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37672,7 +39153,7 @@ module.exports =
 	exports.default = SCNMatrix4Rotate;
 
 /***/ },
-/* 150 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37683,7 +39164,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix4MakeScale = __webpack_require__(147);
+	var _SCNMatrix4MakeScale = __webpack_require__(156);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
@@ -37705,7 +39186,7 @@ module.exports =
 	};exports.default = SCNMatrix4Scale;
 
 /***/ },
-/* 151 */
+/* 160 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37731,7 +39212,7 @@ module.exports =
 	exports.default = SCNMatrix4ToGLKMatrix4;
 
 /***/ },
-/* 152 */
+/* 161 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37756,7 +39237,7 @@ module.exports =
 	exports.default = SCNMatrix4ToMat4;
 
 /***/ },
-/* 153 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37767,7 +39248,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(72);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(81);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -37789,7 +39270,7 @@ module.exports =
 	};exports.default = SCNMatrix4Translate;
 
 /***/ },
-/* 154 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37806,7 +39287,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(155);
+	var _SCNMorpherCalculationMode = __webpack_require__(164);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
@@ -38068,7 +39549,7 @@ module.exports =
 	exports.default = SCNMorpher;
 
 /***/ },
-/* 155 */
+/* 164 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38092,7 +39573,7 @@ module.exports =
 	exports.default = SCNMorpherCalculationMode;
 
 /***/ },
-/* 156 */
+/* 165 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38152,7 +39633,7 @@ module.exports =
 	exports.default = SCNNodeRendererDelegate;
 
 /***/ },
-/* 157 */
+/* 166 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38178,7 +39659,7 @@ module.exports =
 	exports.default = SCNParticleBirthDirection;
 
 /***/ },
-/* 158 */
+/* 167 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38204,7 +39685,7 @@ module.exports =
 	exports.default = SCNParticleBirthLocation;
 
 /***/ },
-/* 159 */
+/* 168 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38236,7 +39717,7 @@ module.exports =
 	exports.default = SCNParticleBlendMode;
 
 /***/ },
-/* 160 */
+/* 169 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38262,7 +39743,7 @@ module.exports =
 	exports.default = SCNParticleEvent;
 
 /***/ },
-/* 161 */
+/* 170 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38310,7 +39791,7 @@ module.exports =
 	exports.default = SCNParticleEventBlock;
 
 /***/ },
-/* 162 */
+/* 171 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38336,7 +39817,7 @@ module.exports =
 	exports.default = SCNParticleImageSequenceAnimationMode;
 
 /***/ },
-/* 163 */
+/* 172 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38362,7 +39843,7 @@ module.exports =
 	exports.default = SCNParticleInputMode;
 
 /***/ },
-/* 164 */
+/* 173 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38406,7 +39887,7 @@ module.exports =
 	exports.default = SCNParticleModifierBlock;
 
 /***/ },
-/* 165 */
+/* 174 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38434,7 +39915,7 @@ module.exports =
 	exports.default = SCNParticleModifierStage;
 
 /***/ },
-/* 166 */
+/* 175 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38462,7 +39943,7 @@ module.exports =
 	exports.default = SCNParticleOrientationMode;
 
 /***/ },
-/* 167 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38477,7 +39958,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -38601,7 +40082,7 @@ module.exports =
 	exports.default = SCNParticlePropertyController;
 
 /***/ },
-/* 168 */
+/* 177 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38631,7 +40112,7 @@ module.exports =
 	exports.default = SCNParticleSortingMode;
 
 /***/ },
-/* 169 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38644,7 +40125,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _BinaryRequest2 = __webpack_require__(170);
+	var _BinaryRequest2 = __webpack_require__(179);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
@@ -38656,47 +40137,47 @@ module.exports =
 
 	var _NSObject4 = _interopRequireDefault(_NSObject3);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNParticleBirthLocation = __webpack_require__(158);
+	var _SCNParticleBirthLocation = __webpack_require__(167);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBirthDirection = __webpack_require__(157);
+	var _SCNParticleBirthDirection = __webpack_require__(166);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNOrderedDictionary = __webpack_require__(74);
+	var _SCNOrderedDictionary = __webpack_require__(83);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(162);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(171);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNParticleBlendMode = __webpack_require__(159);
+	var _SCNParticleBlendMode = __webpack_require__(168);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleOrientationMode = __webpack_require__(166);
+	var _SCNParticleOrientationMode = __webpack_require__(175);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticleSortingMode = __webpack_require__(168);
+	var _SCNParticleSortingMode = __webpack_require__(177);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNTransaction = __webpack_require__(75);
+	var _SCNTransaction = __webpack_require__(84);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
@@ -40699,7 +42180,7 @@ module.exports =
 	exports.default = SCNParticleSystem;
 
 /***/ },
-/* 170 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40709,7 +42190,7 @@ module.exports =
 	});
 	exports.BinaryRequest = undefined;
 
-	var _AjaxRequest2 = __webpack_require__(100);
+	var _AjaxRequest2 = __webpack_require__(109);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -40744,7 +42225,7 @@ module.exports =
 	exports.default = new BinaryRequest();
 
 /***/ },
-/* 171 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40755,7 +42236,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(172);
+	var _SCNPhysicsBehavior2 = __webpack_require__(181);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -40854,7 +42335,7 @@ module.exports =
 	exports.default = SCNPhysicsBallSocketJoint;
 
 /***/ },
-/* 172 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40896,7 +42377,7 @@ module.exports =
 	exports.default = SCNPhysicsBehavior;
 
 /***/ },
-/* 173 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40911,19 +42392,19 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNPhysicsBodyType = __webpack_require__(174);
+	var _SCNPhysicsBodyType = __webpack_require__(183);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsShape = __webpack_require__(175);
+	var _SCNPhysicsShape = __webpack_require__(184);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -41422,7 +42903,7 @@ module.exports =
 	exports.default = SCNPhysicsBody;
 
 /***/ },
-/* 174 */
+/* 183 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41448,7 +42929,7 @@ module.exports =
 	exports.default = SCNPhysicsBodyType;
 
 /***/ },
-/* 175 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41463,27 +42944,27 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNBox = __webpack_require__(107);
+	var _SCNBox = __webpack_require__(116);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNCapsule = __webpack_require__(125);
+	var _SCNCapsule = __webpack_require__(134);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNGeometry = __webpack_require__(116);
+	var _SCNGeometry = __webpack_require__(125);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNSphere = __webpack_require__(176);
+	var _SCNSphere = __webpack_require__(185);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -41791,7 +43272,7 @@ module.exports =
 	exports.default = SCNPhysicsShape;
 
 /***/ },
-/* 176 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41804,27 +43285,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -42041,7 +43522,7 @@ module.exports =
 	exports.default = SCNSphere;
 
 /***/ },
-/* 177 */
+/* 186 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42132,7 +43613,7 @@ module.exports =
 	exports.default = SCNPhysicsCollisionCategory;
 
 /***/ },
-/* 178 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42276,7 +43757,7 @@ module.exports =
 	exports.default = SCNPhysicsContact;
 
 /***/ },
-/* 179 */
+/* 188 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42361,7 +43842,7 @@ module.exports =
 	exports.default = SCNPhysicsContactDelegate;
 
 /***/ },
-/* 180 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42650,7 +44131,7 @@ module.exports =
 	exports.default = SCNPhysicsField;
 
 /***/ },
-/* 181 */
+/* 190 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42674,7 +44155,7 @@ module.exports =
 	exports.default = SCNPhysicsFieldScope;
 
 /***/ },
-/* 182 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42685,7 +44166,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(172);
+	var _SCNPhysicsBehavior2 = __webpack_require__(181);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -42800,7 +44281,7 @@ module.exports =
 	exports.default = SCNPhysicsHingeJoint;
 
 /***/ },
-/* 183 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42809,7 +44290,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNPhysicsField2 = __webpack_require__(180);
+	var _SCNPhysicsField2 = __webpack_require__(189);
 
 	var _SCNPhysicsField3 = _interopRequireDefault(_SCNPhysicsField2);
 
@@ -42851,7 +44332,7 @@ module.exports =
 	exports.default = SCNPhysicsNoiseField;
 
 /***/ },
-/* 184 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42862,7 +44343,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(172);
+	var _SCNPhysicsBehavior2 = __webpack_require__(181);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -43038,7 +44519,7 @@ module.exports =
 	exports.default = SCNPhysicsSliderJoint;
 
 /***/ },
-/* 185 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43049,7 +44530,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsNoiseField2 = __webpack_require__(183);
+	var _SCNPhysicsNoiseField2 = __webpack_require__(192);
 
 	var _SCNPhysicsNoiseField3 = _interopRequireDefault(_SCNPhysicsNoiseField2);
 
@@ -43113,7 +44594,7 @@ module.exports =
 	exports.default = SCNPhysicsTurbulenceField;
 
 /***/ },
-/* 186 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43124,7 +44605,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(172);
+	var _SCNPhysicsBehavior2 = __webpack_require__(181);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -43271,7 +44752,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicle;
 
 /***/ },
-/* 187 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43435,7 +44916,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicleWheel;
 
 /***/ },
-/* 188 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43450,43 +44931,43 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNBox = __webpack_require__(107);
+	var _SCNBox = __webpack_require__(116);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNCapsule = __webpack_require__(125);
+	var _SCNCapsule = __webpack_require__(134);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNPhysicsBodyType = __webpack_require__(174);
+	var _SCNPhysicsBodyType = __webpack_require__(183);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsContact = __webpack_require__(178);
+	var _SCNPhysicsContact = __webpack_require__(187);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsShape = __webpack_require__(175);
+	var _SCNPhysicsShape = __webpack_require__(184);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNSphere = __webpack_require__(176);
+	var _SCNSphere = __webpack_require__(185);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -44932,7 +46413,7 @@ module.exports =
 	exports.default = SCNPhysicsWorld;
 
 /***/ },
-/* 189 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44943,27 +46424,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -45158,7 +46639,7 @@ module.exports =
 	exports.default = SCNPlane;
 
 /***/ },
-/* 190 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45432,7 +46913,7 @@ module.exports =
 	exports.default = SCNProgram;
 
 /***/ },
-/* 191 */
+/* 200 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45548,7 +47029,7 @@ module.exports =
 	exports.default = SCNProgramDelegate;
 
 /***/ },
-/* 192 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45559,27 +47040,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -45831,7 +47312,7 @@ module.exports =
 	exports.default = SCNPyramid;
 
 /***/ },
-/* 193 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45840,7 +47321,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(60);
+	var _SCNVector = __webpack_require__(69);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -45857,7 +47338,7 @@ module.exports =
 	exports.default = SCNQuaternion;
 
 /***/ },
-/* 194 */
+/* 203 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45881,7 +47362,7 @@ module.exports =
 	exports.default = SCNReferenceLoadingPolicy;
 
 /***/ },
-/* 195 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45894,15 +47375,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNNode2 = __webpack_require__(71);
+	var _SCNNode2 = __webpack_require__(80);
 
 	var _SCNNode3 = _interopRequireDefault(_SCNNode2);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(194);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(203);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNScene = __webpack_require__(196);
+	var _SCNScene = __webpack_require__(205);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -46166,7 +47647,7 @@ module.exports =
 	exports.default = SCNReferenceNode;
 
 /***/ },
-/* 196 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46185,31 +47666,31 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNBox = __webpack_require__(107);
+	var _SCNBox = __webpack_require__(116);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNSceneSource = __webpack_require__(197);
+	var _SCNSceneSource = __webpack_require__(206);
 
 	var _SCNSceneSource2 = _interopRequireDefault(_SCNSceneSource);
 
-	var _SCNPhysicsWorld = __webpack_require__(188);
+	var _SCNPhysicsWorld = __webpack_require__(197);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _BinaryRequest2 = __webpack_require__(170);
+	var _BinaryRequest2 = __webpack_require__(179);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
@@ -46811,7 +48292,7 @@ module.exports =
 	exports.default = SCNScene;
 
 /***/ },
-/* 197 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46830,7 +48311,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _BinaryRequest2 = __webpack_require__(170);
+	var _BinaryRequest2 = __webpack_require__(179);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
@@ -47139,7 +48620,7 @@ module.exports =
 	exports.default = SCNSceneSource;
 
 /***/ },
-/* 198 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47166,59 +48647,59 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMatrix = __webpack_require__(58);
+	var _SCNMatrix = __webpack_require__(67);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(72);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(81);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNNode = __webpack_require__(71);
+	var _SCNNode = __webpack_require__(80);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNProgram = __webpack_require__(190);
+	var _SCNProgram = __webpack_require__(199);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNPhysicsWorld = __webpack_require__(188);
+	var _SCNPhysicsWorld = __webpack_require__(197);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNCamera = __webpack_require__(123);
+	var _SCNCamera = __webpack_require__(132);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNLight = __webpack_require__(139);
+	var _SCNLight = __webpack_require__(148);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(60);
+	var _SCNVector3 = __webpack_require__(69);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNHitTestOption = __webpack_require__(134);
+	var _SCNHitTestOption = __webpack_require__(143);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(135);
+	var _SCNHitTestResult = __webpack_require__(144);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -47226,11 +48707,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKSpriteNode = __webpack_require__(199);
+	var _SKSpriteNode = __webpack_require__(208);
 
 	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
 
-	var _SKTexture = __webpack_require__(202);
+	var _SKTexture = __webpack_require__(211);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
@@ -50939,7 +52420,7 @@ module.exports =
 	exports.default = SCNRenderer;
 
 /***/ },
-/* 199 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50964,7 +52445,7 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SKBlendMode = __webpack_require__(200);
+	var _SKBlendMode = __webpack_require__(209);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -50972,11 +52453,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(201);
+	var _SKNode2 = __webpack_require__(210);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKTexture = __webpack_require__(202);
+	var _SKTexture = __webpack_require__(211);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
@@ -51492,7 +52973,7 @@ module.exports =
 	exports.default = SKSpriteNode;
 
 /***/ },
-/* 200 */
+/* 209 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -51526,7 +53007,7 @@ module.exports =
 	exports.default = SKBlendMode;
 
 /***/ },
-/* 201 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52815,7 +54296,7 @@ module.exports =
 	exports.default = SKNode;
 
 /***/ },
-/* 202 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52834,7 +54315,7 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SKTextureFilteringMode = __webpack_require__(203);
+	var _SKTextureFilteringMode = __webpack_require__(212);
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
@@ -53333,7 +54814,7 @@ module.exports =
 	exports.default = SKTexture;
 
 /***/ },
-/* 203 */
+/* 212 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53357,7 +54838,7 @@ module.exports =
 	exports.default = SKTextureFilteringMode;
 
 /***/ },
-/* 204 */
+/* 213 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53389,7 +54870,7 @@ module.exports =
 	exports.default = SCNRenderingAPI;
 
 /***/ },
-/* 205 */
+/* 214 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53448,7 +54929,7 @@ module.exports =
 	exports.default = SCNSceneExportDelegate;
 
 /***/ },
-/* 206 */
+/* 215 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53472,7 +54953,7 @@ module.exports =
 	exports.default = SCNSceneExportProgressHandler;
 
 /***/ },
-/* 207 */
+/* 216 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53914,7 +55395,7 @@ module.exports =
 	exports.default = SCNSceneRenderer;
 
 /***/ },
-/* 208 */
+/* 217 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54034,7 +55515,7 @@ module.exports =
 	exports.default = SCNSceneRendererDelegate;
 
 /***/ },
-/* 209 */
+/* 218 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54064,7 +55545,7 @@ module.exports =
 	exports.default = SCNSceneSourceStatus;
 
 /***/ },
-/* 210 */
+/* 219 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54090,7 +55571,7 @@ module.exports =
 	exports.default = SCNSceneSourceStatusHandler;
 
 /***/ },
-/* 211 */
+/* 220 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54199,7 +55680,7 @@ module.exports =
 	exports.default = SCNShadable;
 
 /***/ },
-/* 212 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54251,7 +55732,7 @@ module.exports =
 	exports.default = SCNShadableHelper;
 
 /***/ },
-/* 213 */
+/* 222 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54279,7 +55760,7 @@ module.exports =
 	exports.default = SCNShaderModifierEntryPoint;
 
 /***/ },
-/* 214 */
+/* 223 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54305,7 +55786,7 @@ module.exports =
 	exports.default = SCNShadowMode;
 
 /***/ },
-/* 215 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54314,7 +55795,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -54400,7 +55881,7 @@ module.exports =
 	exports.default = SCNShape;
 
 /***/ },
-/* 216 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54415,15 +55896,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(72);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(81);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -54802,7 +56283,7 @@ module.exports =
 	exports.default = SCNSkinner;
 
 /***/ },
-/* 217 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54933,7 +56414,7 @@ module.exports =
 	exports.default = SCNTechnique;
 
 /***/ },
-/* 218 */
+/* 227 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54975,7 +56456,7 @@ module.exports =
 	exports.default = SCNTechniqueSupport;
 
 /***/ },
-/* 219 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54986,7 +56467,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -55129,7 +56610,7 @@ module.exports =
 	exports.default = SCNText;
 
 /***/ },
-/* 220 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55201,7 +56682,7 @@ module.exports =
 	exports.default = SCNTimingFunction;
 
 /***/ },
-/* 221 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55212,27 +56693,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -55403,7 +56884,7 @@ module.exports =
 	exports.default = SCNTorus;
 
 /***/ },
-/* 222 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55414,7 +56895,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(103);
+	var _SCNConstraint2 = __webpack_require__(112);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
@@ -55476,7 +56957,7 @@ module.exports =
 	exports.default = SCNTransformConstraint;
 
 /***/ },
-/* 223 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55489,27 +56970,27 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SCNGeometry2 = __webpack_require__(116);
+	var _SCNGeometry2 = __webpack_require__(125);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(118);
+	var _SCNGeometryElement = __webpack_require__(127);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(119);
+	var _SCNGeometryPrimitiveType = __webpack_require__(128);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(117);
+	var _SCNGeometrySource = __webpack_require__(126);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(108);
+	var _SCNMaterial = __webpack_require__(117);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -55731,7 +57212,7 @@ module.exports =
 	exports.default = SCNTube;
 
 /***/ },
-/* 224 */
+/* 233 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55759,7 +57240,7 @@ module.exports =
 	exports.default = SCNVector3EqualToVector3;
 
 /***/ },
-/* 225 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55768,7 +57249,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -55788,7 +57269,7 @@ module.exports =
 	exports.default = SCNVector3FromFloat3;
 
 /***/ },
-/* 226 */
+/* 235 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55814,7 +57295,7 @@ module.exports =
 	exports.default = SCNVector3FromGLKVector3;
 
 /***/ },
-/* 227 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55823,7 +57304,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -55845,7 +57326,7 @@ module.exports =
 	exports.default = SCNVector3Make;
 
 /***/ },
-/* 228 */
+/* 237 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55870,7 +57351,7 @@ module.exports =
 	exports.default = SCNVector3ToFloat3;
 
 /***/ },
-/* 229 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55881,7 +57362,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -55899,7 +57380,7 @@ module.exports =
 	};exports.default = SCNVector3ToGLKVector3;
 
 /***/ },
-/* 230 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55908,7 +57389,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(59);
+	var _SCNVector = __webpack_require__(68);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -55919,7 +57400,7 @@ module.exports =
 	exports.default = SCNVector3Zero;
 
 /***/ },
-/* 231 */
+/* 240 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55947,7 +57428,7 @@ module.exports =
 	exports.default = SCNVector4EqualToVector4;
 
 /***/ },
-/* 232 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55956,7 +57437,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(60);
+	var _SCNVector = __webpack_require__(69);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -55976,7 +57457,7 @@ module.exports =
 	exports.default = SCNVector4FromFloat4;
 
 /***/ },
-/* 233 */
+/* 242 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -56002,7 +57483,7 @@ module.exports =
 	exports.default = SCNVector4FromGLKVector4;
 
 /***/ },
-/* 234 */
+/* 243 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -56030,7 +57511,7 @@ module.exports =
 	exports.default = SCNVector4Make;
 
 /***/ },
-/* 235 */
+/* 244 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -56055,7 +57536,7 @@ module.exports =
 	exports.default = SCNVector4ToFloat4;
 
 /***/ },
-/* 236 */
+/* 245 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -56081,7 +57562,7 @@ module.exports =
 	exports.default = SCNVector4ToGLKVector4;
 
 /***/ },
-/* 237 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56118,19 +57599,19 @@ module.exports =
 
 	var _GCController2 = _interopRequireDefault(_GCController);
 
-	var _SCNRenderer = __webpack_require__(198);
+	var _SCNRenderer = __webpack_require__(207);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
-	var _SCNRenderingAPI = __webpack_require__(204);
+	var _SCNRenderingAPI = __webpack_require__(213);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNAntialiasingMode = __webpack_require__(97);
+	var _SCNAntialiasingMode = __webpack_require__(106);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNVector = __webpack_require__(60);
+	var _SCNVector = __webpack_require__(69);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -58009,7 +59490,7 @@ module.exports =
 	exports.default = SCNView;
 
 /***/ },
-/* 238 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58026,7 +59507,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SKActionTimingMode = __webpack_require__(239);
+	var _SKActionTimingMode = __webpack_require__(248);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -59719,7 +61200,7 @@ module.exports =
 	exports.default = SKAction;
 
 /***/ },
-/* 239 */
+/* 248 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -59747,7 +61228,7 @@ module.exports =
 	exports.default = SKActionTimingMode;
 
 /***/ },
-/* 240 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59756,11 +61237,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SKNode2 = __webpack_require__(201);
+	var _SKNode2 = __webpack_require__(210);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKBlendMode = __webpack_require__(200);
+	var _SKBlendMode = __webpack_require__(209);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -59891,7 +61372,7 @@ module.exports =
 	exports.default = SKEffectNode;
 
 /***/ },
-/* 241 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59904,15 +61385,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(238);
+	var _SKAction2 = __webpack_require__(247);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(239);
+	var _SKActionTimingMode = __webpack_require__(248);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(201);
+	var _SKNode = __webpack_require__(210);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -60095,7 +61576,7 @@ module.exports =
 	_SKAction3.default.fadeAlphaToDuration = SKFade.fadeAlphaToDuration;
 
 /***/ },
-/* 242 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60108,7 +61589,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(238);
+	var _SKAction2 = __webpack_require__(247);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
@@ -60233,7 +61714,7 @@ module.exports =
 	_SKAction3.default.group = SKGroup.group;
 
 /***/ },
-/* 243 */
+/* 252 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -60259,7 +61740,7 @@ module.exports =
 	exports.default = SKLabelHorizontalAlignmentMode;
 
 /***/ },
-/* 244 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60276,19 +61757,19 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(201);
+	var _SKNode2 = __webpack_require__(210);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(245);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(254);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(243);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(252);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKBlendMode = __webpack_require__(200);
+	var _SKBlendMode = __webpack_require__(209);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -60762,7 +62243,7 @@ module.exports =
 	exports.default = SKLabelNode;
 
 /***/ },
-/* 245 */
+/* 254 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -60790,7 +62271,7 @@ module.exports =
 	exports.default = SKLabelVerticalAlignmentMode;
 
 /***/ },
-/* 246 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60803,7 +62284,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(238);
+	var _SKAction2 = __webpack_require__(247);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
@@ -60965,7 +62446,7 @@ module.exports =
 	_SKAction3.default.repeatForever = SKRepeat.repeatForever;
 
 /***/ },
-/* 247 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60978,15 +62459,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(238);
+	var _SKAction2 = __webpack_require__(247);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(239);
+	var _SKActionTimingMode = __webpack_require__(248);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(201);
+	var _SKNode = __webpack_require__(210);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -61259,7 +62740,7 @@ module.exports =
 	_SKAction3.default.scaleYToDuration = SKScale.scaleYToDuration;
 
 /***/ },
-/* 248 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61282,11 +62763,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode2 = __webpack_require__(240);
+	var _SKEffectNode2 = __webpack_require__(249);
 
 	var _SKEffectNode3 = _interopRequireDefault(_SKEffectNode2);
 
-	var _SKSceneScaleMode = __webpack_require__(249);
+	var _SKSceneScaleMode = __webpack_require__(258);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
@@ -61600,7 +63081,7 @@ module.exports =
 	exports.default = SKScene;
 
 /***/ },
-/* 249 */
+/* 258 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61628,7 +63109,7 @@ module.exports =
 	exports.default = SKSceneScaleMode;
 
 /***/ },
-/* 250 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61641,11 +63122,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(238);
+	var _SKAction2 = __webpack_require__(247);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(239);
+	var _SKActionTimingMode = __webpack_require__(248);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -61787,7 +63268,7 @@ module.exports =
 	_SKAction3.default.sequence = SKSequence.sequence;
 
 /***/ },
-/* 251 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61806,7 +63287,7 @@ module.exports =
 
 	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
 
-	var _SKBlendMode = __webpack_require__(200);
+	var _SKBlendMode = __webpack_require__(209);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -61814,7 +63295,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(201);
+	var _SKNode2 = __webpack_require__(210);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
@@ -62143,7 +63624,7 @@ module.exports =
 	exports.default = SKShapeNode;
 
 /***/ },
-/* 252 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62154,11 +63635,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SKAction2 = __webpack_require__(238);
+	var _SKAction2 = __webpack_require__(247);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(239);
+	var _SKActionTimingMode = __webpack_require__(248);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -62243,7 +63724,7 @@ module.exports =
 	_SKAction3.default.waitForDurationWithRange = SKWait.waitForDurationWithRange;
 
 /***/ },
-/* 253 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62254,7 +63735,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryParser = __webpack_require__(254);
+	var _BinaryParser = __webpack_require__(263);
 
 	var _BinaryParser2 = _interopRequireDefault(_BinaryParser);
 
@@ -62538,7 +64019,7 @@ module.exports =
 	exports.default = _Buffer;
 
 /***/ },
-/* 254 */
+/* 263 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -62706,7 +64187,7 @@ module.exports =
 	};
 
 /***/ },
-/* 255 */
+/* 264 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -62745,7 +64226,7 @@ module.exports =
 	exports.default = _HTMLCanvasElement;
 
 /***/ },
-/* 256 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62756,7 +64237,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryRequest2 = __webpack_require__(170);
+	var _BinaryRequest2 = __webpack_require__(179);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 

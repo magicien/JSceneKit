@@ -39,6 +39,15 @@ import GCControllerElement from './GameController/GCControllerElement'
 import GCExtendedGamepad from './GameController/GCExtendedGamepad'
 import GCGamepad from './GameController/GCGamepad'
 import GCMicroGamepad from './GameController/GCMicroGamepad'
+import GKAgent from './GameplayKit/GKAgent'
+import GKAgent2D from './GameplayKit/GKAgent2D'
+import GKAgentDelegate from './GameplayKit/GKAgentDelegate'
+import GKBehavior from './GameplayKit/GKBehavior'
+import GKComponent from './GameplayKit/GKComponent'
+import GKEntity from './GameplayKit/GKEntity'
+import GKGoal from './GameplayKit/GKGoal'
+import GKPath from './GameplayKit/GKPath'
+import GKSCNNodeComponent from './GameplayKit/GKSCNNodeComponent'
 import MTLTessellationPartitionMode from './Metal/MTLTessellationPartitionMode'
 import NSObject from './ObjectiveC/NSObject'
 import CAAction from './QuartzCore/CAAction'
@@ -292,6 +301,15 @@ _ClassList.registerClass(GCControllerElement)
 _ClassList.registerClass(GCExtendedGamepad)
 _ClassList.registerClass(GCGamepad)
 _ClassList.registerClass(GCMicroGamepad)
+_ClassList.registerClass(GKAgent)
+_ClassList.registerClass(GKAgent2D)
+_ClassList.registerClass(GKAgentDelegate)
+_ClassList.registerClass(GKBehavior)
+_ClassList.registerClass(GKComponent)
+_ClassList.registerClass(GKEntity)
+_ClassList.registerClass(GKGoal)
+_ClassList.registerClass(GKPath)
+_ClassList.registerClass(GKSCNNodeComponent)
 _ClassList.registerClass(MTLTessellationPartitionMode)
 _ClassList.registerClass(NSObject)
 _ClassList.registerClass(CAAction)
@@ -537,6 +555,15 @@ exports.GCControllerElement = GCControllerElement
 exports.GCExtendedGamepad = GCExtendedGamepad
 exports.GCGamepad = GCGamepad
 exports.GCMicroGamepad = GCMicroGamepad
+exports.GKAgent = GKAgent
+exports.GKAgent2D = GKAgent2D
+exports.GKAgentDelegate = GKAgentDelegate
+exports.GKBehavior = GKBehavior
+exports.GKComponent = GKComponent
+exports.GKEntity = GKEntity
+exports.GKGoal = GKGoal
+exports.GKPath = GKPath
+exports.GKSCNNodeComponent = GKSCNNodeComponent
 exports.MTLTessellationPartitionMode = MTLTessellationPartitionMode
 exports.NSObject = NSObject
 exports.CAAction = CAAction

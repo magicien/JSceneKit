@@ -413,6 +413,10 @@ export default class SCNVector4 {
     return this.quatToRotation().rotationToEulerAngles()
   }
 
+  get angle() {
+    return this.quatToRotation().w
+  }
+
   /**
    * @access public
    * @returns {number[]} -

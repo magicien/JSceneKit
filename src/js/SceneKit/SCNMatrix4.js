@@ -677,6 +677,10 @@ export default class SCNMatrix4 {
     return m
   }
 
+  static matrixWithOrientation(orientation) {
+    return SCNMatrix4.matrixWithRotation(orientation.quatToRotation())
+  }
+
   /**
    * @access public
    * @param {number} x -
