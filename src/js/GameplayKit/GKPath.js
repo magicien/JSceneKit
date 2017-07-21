@@ -1,6 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import SCNVector3 from '../SceneKit/SCNVector3'
+import CGPoint from '../CoreGraphics/CGPoint'
 
 /**
  * A polygonal path that can be followed by an agent.
@@ -32,10 +34,9 @@ export default class GKPath extends NSObject {
      */
     this.isCyclical = false
 
-
     // Inspecting a Path’s Shape
 
-    this._numPoints = 0
+    this._points = []
   }
 
   // Creating a Path
@@ -53,7 +54,11 @@ export default class GKPath extends NSObject {
    */
   static pathWithPointsCountRadiusCyclical(points, count, radius, cyclical) {
     const path = new GKPath()
-    // TODO: implement
+
+    path._points.push(...points.slice(0, count))
+    path.radius = radius
+    path.isCyclical = cyclical
+
     return path
   }
 
@@ -70,7 +75,11 @@ export default class GKPath extends NSObject {
    */
   static pathWithFloat3PointsCountRadiusCyclical(points, count, radius, cyclical) {
     const path = new GKPath()
-    // TODO: implement
+
+    path._points.push(...points.slice(0, count))
+    path.radius = radius
+    path.isCyclical = cyclical
+
     return path
   }
 
@@ -86,6 +95,8 @@ export default class GKPath extends NSObject {
   static pathWithGraphNodesRadius(graphNodes, radius) {
     const path = new GKPath()
     // TODO: implement
+    path.radius = radius
+
     return path
   }
 
@@ -99,7 +110,11 @@ export default class GKPath extends NSObject {
    */
   static pathWithPointsRadiusCyclical(points, radius, cyclical) {
     const path = new GKPath()
-    // TODO: implement
+
+    path._points.push(...points)
+    path.radius = radius
+    path.isCyclical = cyclical
+
     return path
   }
 
@@ -114,7 +129,7 @@ export default class GKPath extends NSObject {
    * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1778285-float2
    */
   float2At(index) {
-    return null
+    return this.pointAt(index)
   }
 
   /**
@@ -126,6 +141,10 @@ export default class GKPath extends NSObject {
    * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1778310-float3
    */
   float3At(index) {
+    const point = this._points[index]
+    if(point){
+      return new SCNVector3(point.x, point.y, point.z)
+    }
     return null
   }
 
@@ -137,8 +156,13 @@ export default class GKPath extends NSObject {
    * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501172-point
    */
   pointAt(index) {
+    const point = this._points[index]
+    if(point){
+      return new CGPoint(point.x, point.y)
+    }
     return null
   }
+
   /**
    * The number of vertices in the path.
    * @type {number}
@@ -146,6 +170,6 @@ export default class GKPath extends NSObject {
    * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501071-numpoints
    */
   get numPoints() {
-    return this._numPoints
+    return this._points.length()
   }
 }

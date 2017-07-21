@@ -61,6 +61,7 @@ import CAMediaTiming from './QuartzCore/CAMediaTiming'
 import CAMediaTimingFunction from './QuartzCore/CAMediaTimingFunction'
 import CAPropertyAnimation from './QuartzCore/CAPropertyAnimation'
 import CATransform3D from './QuartzCore/CATransform3D'
+import SCNAccelerationConstraint from './SceneKit/SCNAccelerationConstraint'
 import SCNAction from './SceneKit/SCNAction'
 import SCNActionable from './SceneKit/SCNActionable'
 import SCNActionCustom from './SceneKit/SCNActionCustom'
@@ -109,6 +110,7 @@ import SCNConstraint from './SceneKit/SCNConstraint'
 import SCNCullMode from './SceneKit/SCNCullMode'
 import SCNCylinder from './SceneKit/SCNCylinder'
 import SCNDebugOptions from './SceneKit/SCNDebugOptions'
+import SCNDistanceConstraint from './SceneKit/SCNDistanceConstraint'
 import SCNFieldForceEvaluator from './SceneKit/SCNFieldForceEvaluator'
 import SCNFillMode from './SceneKit/SCNFillMode'
 import SCNFilterMode from './SceneKit/SCNFilterMode'
@@ -323,6 +325,7 @@ _ClassList.registerClass(CAMediaTiming)
 _ClassList.registerClass(CAMediaTimingFunction)
 _ClassList.registerClass(CAPropertyAnimation)
 _ClassList.registerClass(CATransform3D)
+_ClassList.registerClass(SCNAccelerationConstraint)
 _ClassList.registerClass(SCNAction)
 _ClassList.registerClass(SCNActionable)
 _ClassList.registerClass(SCNActionCustom)
@@ -371,6 +374,7 @@ _ClassList.registerClass(SCNConstraint)
 _ClassList.registerClass(SCNCullMode)
 _ClassList.registerClass(SCNCylinder)
 _ClassList.registerClass(SCNDebugOptions)
+_ClassList.registerClass(SCNDistanceConstraint)
 _ClassList.registerClass(SCNFieldForceEvaluator)
 _ClassList.registerClass(SCNFillMode)
 _ClassList.registerClass(SCNFilterMode)
@@ -577,6 +581,7 @@ exports.CAMediaTiming = CAMediaTiming
 exports.CAMediaTimingFunction = CAMediaTimingFunction
 exports.CAPropertyAnimation = CAPropertyAnimation
 exports.CATransform3D = CATransform3D
+exports.SCNAccelerationConstraint = SCNAccelerationConstraint
 exports.SCNAction = SCNAction
 exports.SCNActionable = SCNActionable
 exports.SCNActionCustom = SCNActionCustom
@@ -625,6 +630,7 @@ exports.SCNConstraint = SCNConstraint
 exports.SCNCullMode = SCNCullMode
 exports.SCNCylinder = SCNCylinder
 exports.SCNDebugOptions = SCNDebugOptions
+exports.SCNDistanceConstraint = SCNDistanceConstraint
 exports.SCNFieldForceEvaluator = SCNFieldForceEvaluator
 exports.SCNFillMode = SCNFillMode
 exports.SCNFilterMode = SCNFilterMode
