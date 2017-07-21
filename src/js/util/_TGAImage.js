@@ -68,14 +68,13 @@ export default class _TGAImage {
       this._rejectFunc = reject
     })
 
-    if(url){
-    }
     if(data){
       this._parseData()
     }
   }
 
   static imageWithData(data) {
+    return new _TGAImage(data)
   }
 
   static imageWithURL(url) {
@@ -93,33 +92,35 @@ export default class _TGAImage {
     this._readImageID()
     this._initImage()
 
+    const data = this._getImageData()
+
     switch(this._imageType){
       case _ImageType.noImage: {
         // nothing to do
         break
       }
       case _ImageType.colorMapped: {
-        this._readColorMapData()
+        this._parseColorMapData(data)
         break
       }
       case _ImageType.RGB: {
-        this._readRGBData()
+        this._parseRGBData(data)
         break
       }
       case _ImageType.blackAndWhite: {
-        this._readBlackAndWhiteData()
+        this._parseBlackAndWhiteData(data)
         break
       }
       case _ImageType.runlengthColorMapped: {
-        console.error('parser for compressed TGA is not implemeneted')
+        this._parseColorMapData(data)
         break
       }
       case _ImageType.runlengthRGB: {
-        console.error('parser for compressed TGA is not implemeneted')
+        this._parseRGBData(data)
         break
       }
       case _ImageType.compressedBlackAndWhite: {
-        console.error('parser for compressed TGA is not implemeneted')
+        this._parseBlackAndWhiteData(data)
         break
       }
       case _ImageType.compressedColorMapped: {
@@ -162,7 +163,7 @@ export default class _TGAImage {
 
   _readImageID() {
     if(this._idLength > 0){
-      this._imageID = this.buffer.toString('binary', _headerLength, this._idLength)
+      this._imageID = this.buffer.subarray(_headerLength, this._idLength)
     }
   }
 
@@ -188,8 +189,8 @@ export default class _TGAImage {
     this._image.src = this._canvas.toDataURL()
   }
 
-  _readColorMapData() {
-    if(this._colorMapDepth === 24){
+  _parseColorMapData(buf) {
+    if(this._colorMapDepth === 24 || this._colorMapDepth === 16 || this._colorMapDepth === 15){
       this._hasAlpha = false
     }else if(this._colorMapDepth === 32){
       this._hasAlpha = true
@@ -198,49 +199,59 @@ export default class _TGAImage {
     }
 
     const colorMapDataPos = _headerLength + this._idLength
-    const colorMapDataSize = this._colorMapDepth / 8
+    const colorMapDataSize = Math.ceil(this._colorMapDepth / 8)
     const colorMapDataLen = colorMapDataSize * this._colorMapLength
-    const imageDataPos = colorMapDataPos + colorMapDataLen
+
     const imageDataSize = 1
-    const imageDataLen = imageDataSize * this._imageWidth * this._imageHeight
 
     const colorMap = []
     let pos = colorMapDataPos
-    if(this._hasAlpha){
-      for(let i=0; i<this._colorMapLength; i++){
-        const b = this.buffer.readUIntLE(pos, 1)
-        const g = this.buffer.readUIntLE(pos+1, 1)
-        const r = this.buffer.readUIntLE(pos+2, 1)
-        const a = this.buffer.readUIntLE(pos+3, 1)
-        colorMap.push([r, g, b, a])
-        pos += colorMapDataSize
-      }
-    }else{
-      for(let i=0; i<this._colorMapLength; i++){
-        const b = this.buffer.readUIntLE(pos, 1)
-        const g = this.buffer.readUIntLE(pos+1, 1)
-        const r = this.buffer.readUIntLE(pos+2, 1)
-        const a = 1
-        colorMap.push([r, g, b, a])
-        pos += colorMapDataSize
-      }
+    for(let i=0; i<this._colorMapLength; i++){
+      const rgba = this._getRGBA(this.buffer, pos, this._colorMapDepth)
+      colorMap.push(rgba)
+      pos += colorMapDataSize
     }
 
     const data = this._imageData.data
-    pos = imageDataPos
-    for(let y=0; y<this._imageHeight; y++){
-      for(let x=0; x<this._imageWidth; x++){
-        let color = 0xFFFFFFFF
-        const mapNo = this.buffer.readUIntLE(pos, imageDataSize) - this._colorMapOrigin
+    let initX = 0
+    let initY = 0
+    let xStep = 1
+    let yStep = 1
+    if(!this._leftToRight){
+      initX = this._imageWidth - 1
+      xStep = -1
+    }
+    if(!this._topToBottom){
+      initY = this._imageHeight - 1
+      yStep = -1
+    }
+
+    pos = 0
+    let y = initY
+    const defaultColor = [0xFF, 0xFF, 0xFF, 0xFF]
+    for(let iy=0; iy<this._imageHeight; iy++){
+      let x = initX
+      for(let ix=0; ix<this._imageWidth; ix++){
+        const index = (y * this._imageWidth + x) * 4
+        let color = defaultColor
+        const mapNo = buf[pos] - this._colorMapOrigin
         if(mapNo >= 0){
           color = colorMap[mapNo]
         }
+        data[index] = color[0]
+        data[index+1] = color[1]
+        data[index+2] = color[2]
+        data[index+3] = color[3]
+
+        x += xStep
+        pos += imageDataSize
       }
+      y += yStep
     }
   }
 
-  _readRGBData() {
-    if(this._imageDepth === 24){
+  _parseRGBData(buf) {
+    if(this._imageDepth === 24 || this._imageDepth === 16 || this._imageDepth === 15){
       this._hasAlpha = false
     }else if(this._imageDepth === 32){
       this._hasAlpha = true
@@ -248,7 +259,72 @@ export default class _TGAImage {
       throw new Error('unknown imageDepth: ' + this._imageDepth)
     }
 
-    const imageDataPos = _headerLength + this._idLength
+    const imageDataSize = Math.ceil(this._imageDepth / 8)
+
+    const data = this._imageData.data
+    let initX = 0
+    let initY = 0
+    let xStep = 1
+    let yStep = 1
+    if(!this._leftToRight){
+      initX = this._imageWidth - 1
+      xStep = -1
+    }
+    if(!this._topToBottom){
+      initY = this._imageHeight - 1
+      yStep = -1
+    }
+
+    let pos = 0
+    let y = initY
+    for(let iy=0; iy<this._imageHeight; iy++){
+      let x = initX
+      for(let ix=0; ix<this._imageWidth; ix++){
+        const index = (y * this._imageWidth + x) * 4
+        const rgba = this._getRGBA(buf, pos, this._imageDepth)
+        data[index] = rgba[0]
+        data[index+1] = rgba[1]
+        data[index+2] = rgba[2]
+        data[index+3] = rgba[3]
+
+        x += xStep
+        pos += imageDataSize
+      }
+      y += yStep
+    }
+  }
+
+  _getRGBA(buf, offset, depth) {
+    if(depth === 15){
+      const r = (buf[offset+1] & 0x7c) << 1
+      const g = ((buf[offset+1] & 0x03) << 6) | ((buf[offset] & 0xe0) >> 2)
+      const b = (buf[offset] & 0x1f) << 3
+      //const a = (buf[offset+1] & 0x80) > 0 ? 255 : 0
+      const a = 255
+      return [r, g, b, a]
+    }else if(depth === 16){
+      const r = (buf[offset+1] & 0x7c) << 1
+      const g = ((buf[offset+1] & 0x03) << 6) | ((buf[offset] & 0xe0) >> 2)
+      const b = (buf[offset] & 0x1f) << 3
+      const a = 255
+      return [r, g, b, a]
+    }else if(depth === 24){
+      return [buf[offset+2], buf[offset+1], buf[offset], 255]
+    }else if(depth === 32){
+      return [buf[offset+2], buf[offset+1], buf[offset], buf[offset+3]]
+    }
+    throw new Error('unsupported imageDepth: ' + depth)
+  }
+
+  _parseBlackAndWhiteData(buf) {
+    if(this._imageDepth == 8){
+      this._hasAlpha = false
+    }else if(this._imageDepth == 16){
+      this._hasAlpha = true
+    }else{
+      throw new Error('unknown imageDepth: ' + this._imageDepth)
+    }
+
     const imageDataSize = this._imageDepth / 8
 
     const data = this._imageData.data
@@ -265,20 +341,18 @@ export default class _TGAImage {
       yStep = -1
     }
 
-    let pos = imageDataPos
+    let pos = 0
     if(this._hasAlpha){
       let y = initY
       for(let iy=0; iy<this._imageHeight; iy++){
         let x = initX
         for(let ix=0; ix<this._imageWidth; ix++){
           const index = (y * this._imageWidth + x) * 4
-          const b = this.buffer.readUIntLE(pos, 1)
-          const g = this.buffer.readUIntLE(pos+1, 1)
-          const r = this.buffer.readUIntLE(pos+2, 1)
-          const a = this.buffer.readUIntLE(pos+3, 1)
-          data[index] = r
-          data[index+1] = g
-          data[index+2] = b
+          const c = buf[pos]
+          const a = buf[pos+1]
+          data[index] = c
+          data[index+1] = c
+          data[index+2] = c
           data[index+3] = a
 
           x += xStep
@@ -292,13 +366,11 @@ export default class _TGAImage {
         let x = initX
         for(let ix=0; ix<this._imageWidth; ix++){
           const index = (y * this._imageWidth + x) * 4
-          const b = this.buffer.readUIntLE(pos, 1)
-          const g = this.buffer.readUIntLE(pos+1, 1)
-          const r = this.buffer.readUIntLE(pos+2, 1)
+          const c = buf[pos]
           const a = 255
-          data[index] = r
-          data[index+1] = g
-          data[index+2] = b
+          data[index] = c
+          data[index+1] = c
+          data[index+2] = c
           data[index+3] = a
 
           x += xStep
@@ -309,12 +381,53 @@ export default class _TGAImage {
     }
   }
 
-  _readBlackAndWhiteData() {
-    // TODO: implement
+  _getImageData() {
+    let data = null
+    if(this._imageType !== _ImageType.none){
+      const colorMapDataLen = Math.ceil(this._colorMapDepth / 8) * this._colorMapLength
+      const start = _headerLength + this._idLength + colorMapDataLen
+      data = this.buffer.subarray(start)
+    }
+
+    if(this._imageType === _ImageType.runlengthColorMapped
+      || this._imageType === _ImageType.runlengthRGB){
+      data = this._decompressRunlengthData(data)
+    }else if(this._imageType === _ImageType.compressedBlackAndWhite){
+      data = this._decompressRunlengthData(data)
+    }else if(this._imageType === _ImageType.compressedColorMapped){
+      // TODO: implement
+      console.error('Compressed Color Mapped TGA Image data is not supported')
+    }else if(this._imageType === _ImageType.compressed4PassQTColorMapped){
+      // TODO: implement
+      console.error('Compressed Color Mapped TGA Image data is not supported')
+    }
+    return data
   }
 
-  _decompressRunLengthData(data) {
-    // TODO: implement
+  _decompressRunlengthData(data) {
+    const d = []
+    const elementCount = Math.ceil(this._imageDepth / 8)
+    const dataLength = elementCount * this._imageWidth * this._imageHeight
+    let pos = 0
+
+    while(d.length < dataLength){
+      const packet = data[pos]
+      pos += 1
+      if((packet & 0x80) !== 0){ // RLE
+        const elements = data.slice(pos, pos + elementCount)
+        pos += elementCount
+
+        const count = (packet & 0x7F) + 1
+        for(let i=0; i<count; i++){
+          d.push(...elements)
+        }
+      }else{ // RAW
+        const len = (packet + 1) * elementCount
+        d.push(...data.slice(pos, pos + len))
+        pos += len
+      }
+    }
+    return d
   }
 
   get image() {

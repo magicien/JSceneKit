@@ -64546,6 +64546,8 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	/*global Buffer*/
@@ -64619,7 +64621,6 @@ module.exports =
 	      _this._rejectFunc = reject;
 	    });
 
-	    if (url) {}
 	    if (data) {
 	      this._parseData();
 	    }
@@ -64632,6 +64633,8 @@ module.exports =
 	      this._readImageID();
 	      this._initImage();
 
+	      var data = this._getImageData();
+
 	      switch (this._imageType) {
 	        case _ImageType.noImage:
 	          {
@@ -64640,32 +64643,32 @@ module.exports =
 	          }
 	        case _ImageType.colorMapped:
 	          {
-	            this._readColorMapData();
+	            this._parseColorMapData(data);
 	            break;
 	          }
 	        case _ImageType.RGB:
 	          {
-	            this._readRGBData();
+	            this._parseRGBData(data);
 	            break;
 	          }
 	        case _ImageType.blackAndWhite:
 	          {
-	            this._readBlackAndWhiteData();
+	            this._parseBlackAndWhiteData(data);
 	            break;
 	          }
 	        case _ImageType.runlengthColorMapped:
 	          {
-	            console.error('parser for compressed TGA is not implemeneted');
+	            this._parseColorMapData(data);
 	            break;
 	          }
 	        case _ImageType.runlengthRGB:
 	          {
-	            console.error('parser for compressed TGA is not implemeneted');
+	            this._parseRGBData(data);
 	            break;
 	          }
 	        case _ImageType.compressedBlackAndWhite:
 	          {
-	            console.error('parser for compressed TGA is not implemeneted');
+	            this._parseBlackAndWhiteData(data);
 	            break;
 	          }
 	        case _ImageType.compressedColorMapped:
@@ -64713,7 +64716,7 @@ module.exports =
 	    key: '_readImageID',
 	    value: function _readImageID() {
 	      if (this._idLength > 0) {
-	        this._imageID = this.buffer.toString('binary', _headerLength, this._idLength);
+	        this._imageID = this.buffer.subarray(_headerLength, this._idLength);
 	      }
 	    }
 	  }, {
@@ -64741,9 +64744,9 @@ module.exports =
 	      this._image.src = this._canvas.toDataURL();
 	    }
 	  }, {
-	    key: '_readColorMapData',
-	    value: function _readColorMapData() {
-	      if (this._colorMapDepth === 24) {
+	    key: '_parseColorMapData',
+	    value: function _parseColorMapData(buf) {
+	      if (this._colorMapDepth === 24 || this._colorMapDepth === 16 || this._colorMapDepth === 15) {
 	        this._hasAlpha = false;
 	      } else if (this._colorMapDepth === 32) {
 	        this._hasAlpha = true;
@@ -64752,50 +64755,60 @@ module.exports =
 	      }
 
 	      var colorMapDataPos = _headerLength + this._idLength;
-	      var colorMapDataSize = this._colorMapDepth / 8;
+	      var colorMapDataSize = Math.ceil(this._colorMapDepth / 8);
 	      var colorMapDataLen = colorMapDataSize * this._colorMapLength;
-	      var imageDataPos = colorMapDataPos + colorMapDataLen;
+
 	      var imageDataSize = 1;
-	      var imageDataLen = imageDataSize * this._imageWidth * this._imageHeight;
 
 	      var colorMap = [];
 	      var pos = colorMapDataPos;
-	      if (this._hasAlpha) {
-	        for (var i = 0; i < this._colorMapLength; i++) {
-	          var b = this.buffer.readUIntLE(pos, 1);
-	          var g = this.buffer.readUIntLE(pos + 1, 1);
-	          var r = this.buffer.readUIntLE(pos + 2, 1);
-	          var a = this.buffer.readUIntLE(pos + 3, 1);
-	          colorMap.push([r, g, b, a]);
-	          pos += colorMapDataSize;
-	        }
-	      } else {
-	        for (var _i = 0; _i < this._colorMapLength; _i++) {
-	          var _b = this.buffer.readUIntLE(pos, 1);
-	          var _g = this.buffer.readUIntLE(pos + 1, 1);
-	          var _r = this.buffer.readUIntLE(pos + 2, 1);
-	          var _a = 1;
-	          colorMap.push([_r, _g, _b, _a]);
-	          pos += colorMapDataSize;
-	        }
+	      for (var i = 0; i < this._colorMapLength; i++) {
+	        var rgba = this._getRGBA(this.buffer, pos, this._colorMapDepth);
+	        colorMap.push(rgba);
+	        pos += colorMapDataSize;
 	      }
 
 	      var data = this._imageData.data;
-	      pos = imageDataPos;
-	      for (var y = 0; y < this._imageHeight; y++) {
-	        for (var x = 0; x < this._imageWidth; x++) {
-	          var color = 0xFFFFFFFF;
-	          var mapNo = this.buffer.readUIntLE(pos, imageDataSize) - this._colorMapOrigin;
+	      var initX = 0;
+	      var initY = 0;
+	      var xStep = 1;
+	      var yStep = 1;
+	      if (!this._leftToRight) {
+	        initX = this._imageWidth - 1;
+	        xStep = -1;
+	      }
+	      if (!this._topToBottom) {
+	        initY = this._imageHeight - 1;
+	        yStep = -1;
+	      }
+
+	      pos = 0;
+	      var y = initY;
+	      var defaultColor = [0xFF, 0xFF, 0xFF, 0xFF];
+	      for (var iy = 0; iy < this._imageHeight; iy++) {
+	        var x = initX;
+	        for (var ix = 0; ix < this._imageWidth; ix++) {
+	          var index = (y * this._imageWidth + x) * 4;
+	          var color = defaultColor;
+	          var mapNo = buf[pos] - this._colorMapOrigin;
 	          if (mapNo >= 0) {
 	            color = colorMap[mapNo];
 	          }
+	          data[index] = color[0];
+	          data[index + 1] = color[1];
+	          data[index + 2] = color[2];
+	          data[index + 3] = color[3];
+
+	          x += xStep;
+	          pos += imageDataSize;
 	        }
+	        y += yStep;
 	      }
 	    }
 	  }, {
-	    key: '_readRGBData',
-	    value: function _readRGBData() {
-	      if (this._imageDepth === 24) {
+	    key: '_parseRGBData',
+	    value: function _parseRGBData(buf) {
+	      if (this._imageDepth === 24 || this._imageDepth === 16 || this._imageDepth === 15) {
 	        this._hasAlpha = false;
 	      } else if (this._imageDepth === 32) {
 	        this._hasAlpha = true;
@@ -64803,7 +64816,74 @@ module.exports =
 	        throw new Error('unknown imageDepth: ' + this._imageDepth);
 	      }
 
-	      var imageDataPos = _headerLength + this._idLength;
+	      var imageDataSize = Math.ceil(this._imageDepth / 8);
+
+	      var data = this._imageData.data;
+	      var initX = 0;
+	      var initY = 0;
+	      var xStep = 1;
+	      var yStep = 1;
+	      if (!this._leftToRight) {
+	        initX = this._imageWidth - 1;
+	        xStep = -1;
+	      }
+	      if (!this._topToBottom) {
+	        initY = this._imageHeight - 1;
+	        yStep = -1;
+	      }
+
+	      var pos = 0;
+	      var y = initY;
+	      for (var iy = 0; iy < this._imageHeight; iy++) {
+	        var x = initX;
+	        for (var ix = 0; ix < this._imageWidth; ix++) {
+	          var index = (y * this._imageWidth + x) * 4;
+	          var rgba = this._getRGBA(buf, pos, this._imageDepth);
+	          data[index] = rgba[0];
+	          data[index + 1] = rgba[1];
+	          data[index + 2] = rgba[2];
+	          data[index + 3] = rgba[3];
+
+	          x += xStep;
+	          pos += imageDataSize;
+	        }
+	        y += yStep;
+	      }
+	    }
+	  }, {
+	    key: '_getRGBA',
+	    value: function _getRGBA(buf, offset, depth) {
+	      if (depth === 15) {
+	        var r = (buf[offset + 1] & 0x7c) << 1;
+	        var g = (buf[offset + 1] & 0x03) << 6 | (buf[offset] & 0xe0) >> 2;
+	        var b = (buf[offset] & 0x1f) << 3;
+	        //const a = (buf[offset+1] & 0x80) > 0 ? 255 : 0
+	        var a = 255;
+	        return [r, g, b, a];
+	      } else if (depth === 16) {
+	        var _r = (buf[offset + 1] & 0x7c) << 1;
+	        var _g = (buf[offset + 1] & 0x03) << 6 | (buf[offset] & 0xe0) >> 2;
+	        var _b = (buf[offset] & 0x1f) << 3;
+	        var _a = 255;
+	        return [_r, _g, _b, _a];
+	      } else if (depth === 24) {
+	        return [buf[offset + 2], buf[offset + 1], buf[offset], 255];
+	      } else if (depth === 32) {
+	        return [buf[offset + 2], buf[offset + 1], buf[offset], buf[offset + 3]];
+	      }
+	      throw new Error('unsupported imageDepth: ' + depth);
+	    }
+	  }, {
+	    key: '_parseBlackAndWhiteData',
+	    value: function _parseBlackAndWhiteData(buf) {
+	      if (this._imageDepth == 8) {
+	        this._hasAlpha = false;
+	      } else if (this._imageDepth == 16) {
+	        this._hasAlpha = true;
+	      } else {
+	        throw new Error('unknown imageDepth: ' + this._imageDepth);
+	      }
+
 	      var imageDataSize = this._imageDepth / 8;
 
 	      var data = this._imageData.data;
@@ -64820,20 +64900,18 @@ module.exports =
 	        yStep = -1;
 	      }
 
-	      var pos = imageDataPos;
+	      var pos = 0;
 	      if (this._hasAlpha) {
 	        var y = initY;
 	        for (var iy = 0; iy < this._imageHeight; iy++) {
 	          var x = initX;
 	          for (var ix = 0; ix < this._imageWidth; ix++) {
 	            var index = (y * this._imageWidth + x) * 4;
-	            var b = this.buffer.readUIntLE(pos, 1);
-	            var g = this.buffer.readUIntLE(pos + 1, 1);
-	            var r = this.buffer.readUIntLE(pos + 2, 1);
-	            var a = this.buffer.readUIntLE(pos + 3, 1);
-	            data[index] = r;
-	            data[index + 1] = g;
-	            data[index + 2] = b;
+	            var c = buf[pos];
+	            var a = buf[pos + 1];
+	            data[index] = c;
+	            data[index + 1] = c;
+	            data[index + 2] = c;
 	            data[index + 3] = a;
 
 	            x += xStep;
@@ -64847,13 +64925,11 @@ module.exports =
 	          var _x = initX;
 	          for (var _ix = 0; _ix < this._imageWidth; _ix++) {
 	            var _index = (_y * this._imageWidth + _x) * 4;
-	            var _b2 = this.buffer.readUIntLE(pos, 1);
-	            var _g2 = this.buffer.readUIntLE(pos + 1, 1);
-	            var _r2 = this.buffer.readUIntLE(pos + 2, 1);
+	            var _c = buf[pos];
 	            var _a2 = 255;
-	            data[_index] = _r2;
-	            data[_index + 1] = _g2;
-	            data[_index + 2] = _b2;
+	            data[_index] = _c;
+	            data[_index + 1] = _c;
+	            data[_index + 2] = _c;
 	            data[_index + 3] = _a2;
 
 	            _x += xStep;
@@ -64864,14 +64940,56 @@ module.exports =
 	      }
 	    }
 	  }, {
-	    key: '_readBlackAndWhiteData',
-	    value: function _readBlackAndWhiteData() {
-	      // TODO: implement
+	    key: '_getImageData',
+	    value: function _getImageData() {
+	      var data = null;
+	      if (this._imageType !== _ImageType.none) {
+	        var colorMapDataLen = Math.ceil(this._colorMapDepth / 8) * this._colorMapLength;
+	        var start = _headerLength + this._idLength + colorMapDataLen;
+	        data = this.buffer.subarray(start);
+	      }
+
+	      if (this._imageType === _ImageType.runlengthColorMapped || this._imageType === _ImageType.runlengthRGB) {
+	        data = this._decompressRunlengthData(data);
+	      } else if (this._imageType === _ImageType.compressedBlackAndWhite) {
+	        data = this._decompressRunlengthData(data);
+	      } else if (this._imageType === _ImageType.compressedColorMapped) {
+	        // TODO: implement
+	        console.error('Compressed Color Mapped TGA Image data is not supported');
+	      } else if (this._imageType === _ImageType.compressed4PassQTColorMapped) {
+	        // TODO: implement
+	        console.error('Compressed Color Mapped TGA Image data is not supported');
+	      }
+	      return data;
 	    }
 	  }, {
-	    key: '_decompressRunLengthData',
-	    value: function _decompressRunLengthData(data) {
-	      // TODO: implement
+	    key: '_decompressRunlengthData',
+	    value: function _decompressRunlengthData(data) {
+	      var d = [];
+	      var elementCount = Math.ceil(this._imageDepth / 8);
+	      var dataLength = elementCount * this._imageWidth * this._imageHeight;
+	      var pos = 0;
+
+	      while (d.length < dataLength) {
+	        var packet = data[pos];
+	        pos += 1;
+	        if ((packet & 0x80) !== 0) {
+	          // RLE
+	          var elements = data.slice(pos, pos + elementCount);
+	          pos += elementCount;
+
+	          var count = (packet & 0x7F) + 1;
+	          for (var i = 0; i < count; i++) {
+	            d.push.apply(d, _toConsumableArray(elements));
+	          }
+	        } else {
+	          // RAW
+	          var len = (packet + 1) * elementCount;
+	          d.push.apply(d, _toConsumableArray(data.slice(pos, pos + len)));
+	          pos += len;
+	        }
+	      }
+	      return d;
 	    }
 	  }, {
 	    key: 'image',
@@ -64890,7 +65008,9 @@ module.exports =
 	    }
 	  }], [{
 	    key: 'imageWithData',
-	    value: function imageWithData(data) {}
+	    value: function imageWithData(data) {
+	      return new _TGAImage(data);
+	    }
 	  }, {
 	    key: 'imageWithURL',
 	    value: function imageWithURL(url) {
