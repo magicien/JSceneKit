@@ -64688,6 +64688,7 @@ module.exports =
 	      }
 
 	      this._setImage();
+	      this._deleteBuffer();
 
 	      this._resolveFunc();
 	    }
@@ -64742,6 +64743,18 @@ module.exports =
 	      this._image.width = this._imageWidth;
 	      this._image.height = this._imageHeight;
 	      this._image.src = this._canvas.toDataURL();
+	    }
+	  }, {
+	    key: '_deleteBuffer',
+	    value: function _deleteBuffer() {
+	      if (this.buffer) {
+	        delete this.buffer;
+	        this.buffer = null;
+	      }
+	      if (this._imageData) {
+	        delete this._imageData;
+	        this._imageData = null;
+	      }
 	    }
 	  }, {
 	    key: '_parseColorMapData',

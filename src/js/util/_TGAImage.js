@@ -137,6 +137,7 @@ export default class _TGAImage {
     }
 
     this._setImage()
+    this._deleteBuffer()
 
     this._resolveFunc()
   }
@@ -187,6 +188,17 @@ export default class _TGAImage {
     this._image.width = this._imageWidth
     this._image.height = this._imageHeight
     this._image.src = this._canvas.toDataURL()
+  }
+
+  _deleteBuffer() {
+    if(this.buffer){
+      delete this.buffer
+      this.buffer = null
+    }
+    if(this._imageData){
+      delete this._imageData
+      this._imageData = null
+    }
   }
 
   _parseColorMapData(buf) {
