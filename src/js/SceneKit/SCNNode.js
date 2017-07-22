@@ -33,6 +33,10 @@ import SCNTransaction from './SCNTransaction'
 import SKColor from '../SpriteKit/SKColor'
 import * as Constants from '../constants'
 
+const _localFront = new SCNVector3(0, 0, 1)
+const _localRight = new SCNVector3(1, 0, 0)
+const _localUp = new SCNVector3(0, 1, 0)
+
 /**
  * A structural element of a scene graph, representing a position and transform in a 3D coordinate space, to which you can attach geometry, lights, cameras, or other displayable content.
  * @access public
@@ -357,6 +361,21 @@ export default class SCNNode extends NSObject {
     // Working With Positional Audio
 
     this._audioPlayers = []
+
+    /**
+     * 
+     * @type {?GKEntity}
+     * @see https://developer.apple.com/documentation/scenekit/scnnode/2873004-entity
+     */
+    this.entity = null
+
+    /**
+     * 
+     * @type {SCNNodeFocusBehavior}
+     * @see https://developer.apple.com/documentation/scenekit/scnnode/2881853-focusbehavior
+     */
+    this.focusBehavior = null
+
 
     ///////////////////
     // SCNActionable //
@@ -701,11 +720,42 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/documentation/scenekit/scnnode/1408030-presentation
    */
   get presentation() {
-    if(this._presentation === null){
-      return null
+    if(this._presentation === null && !this._isPresentationInstance){
+      this._createPresentation()
     }
 
     return this._presentation
+  }
+
+  _createPresentation() {
+    if(this._isPresentationInstance){
+      return
+    }else if(this._presentation){
+      return
+    }
+    let p = this.copy()
+    p._isPresentationInstance = true
+    if(this.geometry !== null){
+      p.geometry = this.geometry.copy()
+      p.geometry._isPresentationInstance = true
+      p.geometry._geometryElements = []
+      this.geometry._geometryElements.forEach((element) => {
+        p.geometry._geometryElements.push(element.copy())
+      })
+      p.geometry._geometrySources = []
+      this.geometry._geometrySources.forEach((source) => {
+        p.geometry._geometrySources.push(source.copy())
+      })
+      this.geometry._presentation = p.geometry
+    }
+    if(this._particleSystems){
+      p._particleSystems = []
+      for(const system of this._particleSystems){
+        const pSystem = system._createPresentation()
+        p._particleSystems.push(pSystem)
+      }
+    }
+    this._presentation = p
   }
 
   // Managing the Node’s Transformation
@@ -1518,6 +1568,159 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     return transform.mult(this._worldTransform).mult(node._worldTransform.invert())
   }
 
+  /**
+   * 
+   * @type {SCNVector3}
+   * @desc 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867392-worldfront
+   */
+  get worldFront() {
+    return _localFront.rotate(this.worldTransform)
+  }
+
+  /**
+   * 
+   * @type {SCNVector3}
+   * @desc 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867404-worldright
+   */
+  get worldRight() {
+    return _localRight.rotate(this.worldTransform)
+  }
+
+  /**
+   * 
+   * @type {SCNVector3}
+   * @desc 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867395-worldup
+   */
+  get worldUp() {
+    return _localUp.rotate(this.worldTransform)
+  }
+
+  /**
+   * 
+   * @type {SCNVector3}
+   * @desc 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867393-localfront
+   */
+  static get localFront() {
+    return _localFront
+  }
+
+  /**
+   * 
+   * @type {SCNVector3}
+   * @desc 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867400-localright
+   */
+  static get localRight() {
+    return _localRight
+  }
+
+  /**
+   * 
+   * @type {SCNVector3}
+   * @desc 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867386-localup
+   */
+  static get localUp() {
+    return _localUp
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNVector3} vector - 
+   * @param {?SCNNode} node - 
+   * @returns {SCNVector3} - 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867403-convertvector
+   */
+  convertVectorFrom(vector, node) {
+    // TODO: implement
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNVector3} vector - 
+   * @param {?SCNNode} node - 
+   * @returns {SCNVector3} - 
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867397-convertvector
+   */
+  convertVectorTo(vector, node) {
+    // TODO: implement
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNQuaternion} rotation - 
+   * @returns {void}
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867398-localrotate
+   */
+  localRotateBy(rotation) {
+    // TODO: implement
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNVector3} translation - 
+   * @returns {void}
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867383-localtranslate
+   */
+  localTranslateBy(translation) {
+    // TODO: implement
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNVector3} worldTarget - 
+   * @returns {void}
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867394-look
+   */
+  lookAt(worldTarget) {
+    // TODO: implement
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNVector3} worldTarget - 
+   * @param {SCNVector3} worldUp - 
+   * @param {SCNVector3} localFront - 
+   * @returns {void}
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867396-look
+   */
+  lookAtUp(worldTarget, worldUp, localFront) {
+    // TODO: implement
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNQuaternion} worldRotation - 
+   * @param {SCNVector3} worldTarget - 
+   * @returns {void}
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867399-rotate
+   */
+  rotateByAroundTarget(worldRotation, worldTarget) {
+    // TODO: implement
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {SCNMatrix4} worldTransform - 
+   * @returns {void}
+   * @see https://developer.apple.com/documentation/scenekit/scnnode/2867401-setworldtransform
+   */
+  setWorldTransform(worldTransform) {
+    // TODO: implement
+  }
+
   ///////////////////
   // SCNActionable //
   ///////////////////
@@ -1909,7 +2112,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   _updateBoundingBox() {
     // FIXME: use rotation of the node
     let box = this._geometryBoundingBox()
-    const p = this.presentation ? this.presentation : this
+    const p = this._presentation ? this._presentation : this
     if(p.geometry !== null){
       if(box === null){
         box = p.geometry._updateBoundingBox()
@@ -1972,7 +2175,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   _unionChildBoundingBox(box, cbox) {
-    const p = this.presentation ? this.presentation : this
+    const p = this._presentation ? this._presentation : this
     const pos = p._position
     const scale = p._scale
     const min = new SCNVector3(

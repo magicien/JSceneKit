@@ -188,6 +188,9 @@ export default class SKShapeNode extends SKNode {
    * @see https://developer.apple.com/documentation/spritekit/skshapenode/1519570-init
    */
   static nodeWithCircleOfRadius(radius) {
+    const node = new SKShapeNode()
+    // TODO: implement
+    return node
   }
 
   /**

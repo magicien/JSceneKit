@@ -16,6 +16,9 @@ export default class SCNReferenceNode extends SCNNode {
       paused: ['boolean', 'isPaused'],
       scale: ['SCNVector3', '_scale'],
       rotation: ['SCNVector4', '_rotation'],
+      orientation: ['SCNVector4', (obj, value) => {
+        obj.orientation = value
+      }],
       position: ['SCNVector3', '_position'],
       loadingPolicy: 'integer',
       referenceURL: ['NSURL', (obj, value) => {
@@ -28,7 +31,10 @@ export default class SCNReferenceNode extends SCNNode {
       hidden: ['boolean', 'isHidden'],
       name: 'string',
       renderingOrder: 'integer',
-      movabilityHint: 'integer'
+      movabilityHint: 'integer',
+
+      clientAttributes: ['NSMutableDictionary', null],
+      overrides: ['NSObject', null] // what is this?
     }
   }
 

@@ -30,7 +30,8 @@ export default class SCNAudioSource extends NSObject {
    * @desc This method looks in the system caches for an audio source with the specified name and returns that object if it exists. If a matching audio source is not already in the cache, this method locates the audio file with the specified name in the application’s main bundle, then creates a new audio source and caches it for reuse.
    * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524138-init
    */
-  initNamed(fileName) {
+  static sourceNamed(fileName) {
+    return new SCNAudioSource(fileName)
   }
 
   /**
@@ -41,7 +42,8 @@ export default class SCNAudioSource extends NSObject {
    * @desc Calling this method is equivalent to using the Bundle class to locate an audio file in the application’s main bundle and then passing the resulting URL to the init(url:) method.
    * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524225-init
    */
-  initFileNamed(name) {
+  static sourceWithFileNamed(name) {
+    return new SCNAudioSource(name)
   }
 
   /**

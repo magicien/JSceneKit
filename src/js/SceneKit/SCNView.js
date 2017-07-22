@@ -1059,34 +1059,9 @@ export default class SCNView {
     const arr = [this._scene.rootNode]
     while(arr.length > 0){
       const node = arr.shift()
-      let p = node._presentation
-      if(p === null){
-        p = node.copy()
-        p._isPresentationInstance = true
-        if(node.geometry !== null){
-          p.geometry = node.geometry.copy()
-          p.geometry._isPresentationInstance = true
-          p.geometry._geometryElements = []
-          node.geometry._geometryElements.forEach((element) => {
-            p.geometry._geometryElements.push(element.copy())
-          })
-          p.geometry._geometrySources = []
-          node.geometry._geometrySources.forEach((source) => {
-            p.geometry._geometrySources.push(source.copy())
-          })
-          node.geometry._presentation = p.geometry
-        }
-        if(node._particleSystems){
-          p._particleSystems = []
-          for(const system of node._particleSystems){
-            const pSystem = system._createPresentation()
-            p._particleSystems.push(pSystem)
-          }
-        }
-        node._presentation = p
+      if(!node._presentation){
+        node._createPresentation()
       }
-      //node._copyTransformToPresentation()
-      
       arr.push(...node.childNodes)
     }
   }

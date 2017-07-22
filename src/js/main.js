@@ -47,6 +47,7 @@ import GKComponent from './GameplayKit/GKComponent'
 import GKEntity from './GameplayKit/GKEntity'
 import GKGoal from './GameplayKit/GKGoal'
 import GKPath from './GameplayKit/GKPath'
+import GKScene from './GameplayKit/GKScene'
 import GKSCNNodeComponent from './GameplayKit/GKSCNNodeComponent'
 import MTLTessellationPartitionMode from './Metal/MTLTessellationPartitionMode'
 import NSObject from './ObjectiveC/NSObject'
@@ -311,6 +312,7 @@ _ClassList.registerClass(GKComponent)
 _ClassList.registerClass(GKEntity)
 _ClassList.registerClass(GKGoal)
 _ClassList.registerClass(GKPath)
+_ClassList.registerClass(GKScene)
 _ClassList.registerClass(GKSCNNodeComponent)
 _ClassList.registerClass(MTLTessellationPartitionMode)
 _ClassList.registerClass(NSObject)
@@ -567,6 +569,7 @@ exports.GKComponent = GKComponent
 exports.GKEntity = GKEntity
 exports.GKGoal = GKGoal
 exports.GKPath = GKPath
+exports.GKScene = GKScene
 exports.GKSCNNodeComponent = GKSCNNodeComponent
 exports.MTLTessellationPartitionMode = MTLTessellationPartitionMode
 exports.NSObject = NSObject

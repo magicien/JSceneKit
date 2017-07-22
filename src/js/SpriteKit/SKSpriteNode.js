@@ -244,14 +244,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
    * @see https://developer.apple.com/documentation/spritekit/skspritenode/1520391-init
    */
   static nodeWithImageNamed(name) {
-    const node = new SKSpriteNode(name)
-    if(!node._loadingImagePromise){
-      return null
-    }
-    const promise = node._loadingImagePromise.then(() => {
-      return Promise.resolve(node)
-    })
-    return promise
+    return new SKSpriteNode(name)
   }
 
   /**
@@ -264,6 +257,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
    * @see https://developer.apple.com/documentation/spritekit/skspritenode/1519721-init
    */
   static nodeWithImageNamedNormalMapped(name, generateNormalMap) {
+    return new SKSpriteNode(name, generateNormalMap)
   }
 
   // Inspecting Physical Properties
@@ -506,5 +500,16 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
     }else{
       this._loadingImagePromise = null
     }
+  }
+
+  _getLoadedPromise() {
+    if(this._loadingImagePromise){
+      return this._loadingImagePromise
+    }
+    return Promise.resolve()
+  }
+
+  get didLoad() {
+    return this._getLoadedPromise()
   }
 }
