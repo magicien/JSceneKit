@@ -1783,8 +1783,8 @@ export default class SCNRenderer extends NSObject {
             gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
             gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array())
           }else{
-            gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
-            gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+            gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0)
+            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
           }
         }else{
           gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0)

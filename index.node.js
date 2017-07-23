@@ -41155,6 +41155,10 @@ module.exports =
 
 	var _NSObject4 = _interopRequireDefault(_NSObject3);
 
+	var _SCNGeometrySource = __webpack_require__(128);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
 	var _SCNMatrix = __webpack_require__(60);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
@@ -42357,12 +42361,24 @@ module.exports =
 	            }
 	          case 'SCNGeometry':
 	            {
-	              // TODO: implement
-	              console.warn('surface emitter for SCNGeometry is not implemented. use boundingSphere instead');
-	              var _v = new _SCNVector2.default(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
-	              var _r2 = this.emitterShape.getBoundingSphere().radius;
-	              pVec = _v.mul(_r2);
-	              vVec = _v;
+	              var element = this.emitterShape.geometryElementAtIndex(0);
+	              var vertexSrc = this.emitterShape.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	              var normalSrc = this.emitterShape.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
+
+	              var elemIndex = Math.floor(Math.random() * element.primitiveCount);
+	              var indices = element._indexAt(elemIndex);
+	              var vertices = indices.map(function (index) {
+	                return vertexSrc._scnVectorAt(index);
+	              });
+	              var normals = indices.map(function (index) {
+	                return normalSrc._scnVectorAt(index);
+	              });
+
+	              var pos = vertices[0].add(vertices[1]).add(vertices[2]).mul(1 / 3);
+	              var nom = normals[0].add(normals[1]).add(normals[2]).normalize();
+
+	              pVec = pos;
+	              vVec = nom;
 	              break;
 	            }
 	          default:
@@ -42387,13 +42403,13 @@ module.exports =
 	            }
 	          case 'SCNSphere':
 	            {
-	              var _r3 = Math.random() * this.emitterShape.radius;
+	              var _r2 = Math.random() * this.emitterShape.radius;
 	              var s = Math.random() * Math.PI;
 	              var t = Math.random() * Math.PI * 2.0;
-	              var rsins = _r3 * Math.sin(s);
+	              var rsins = _r2 * Math.sin(s);
 	              var _x4 = rsins * Math.cos(t);
 	              var _y2 = rsins * Math.sin(t);
-	              var _z2 = _r3 * Math.cos(s);
+	              var _z2 = _r2 * Math.cos(s);
 	              _pVec = new _SCNVector2.default(_x4, _y2, _z2);
 	              break;
 	            }
@@ -50866,8 +50882,8 @@ module.exports =
 	              gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
 	              gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array());
 	            } else {
-	              gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0);
-	              gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
+	              gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0);
+	              gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
 	            }
 	          } else {
 	            gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0);
@@ -58708,15 +58724,42 @@ module.exports =
 	  preferLowPowerDevice: 'SCNPreferLowPowerDeviceKey',
 	  preferredDevice: 'SCNPreferredDeviceKey',
 	  preferredRenderingAPI: 'SCNPreferredRenderingAPIKey'
-
-	  /**
-	   * A view for displaying 3D SceneKit content.
-	   * @access public
-	   * @implements {SCNSceneRenderer}
-	   * @implements {SCNTechniqueSupport}
-	   * @see https://developer.apple.com/documentation/scenekit/scnview
-	   */
 	};
+
+	var _KeyCode = new Map([['KeyA', 0x00], ['KeyS', 0x01], ['KeyD', 0x02], ['KeyF', 0x03], ['KeyH', 0x04], ['KeyG', 0x05], ['KeyZ', 0x06], ['KeyX', 0x07], ['KeyC', 0x08], ['KeyV', 0x09], ['IntlBackslash', 0x0A], ['KeyB', 0x0B], ['KeyQ', 0x0C], ['KeyW', 0x0D], ['KeyE', 0x0E], ['KeyR', 0x0F], ['KeyY', 0x10], ['KeyT', 0x11], ['Digit1', 0x12], ['Digit2', 0x13], ['Digit3', 0x14], ['Digit4', 0x15], ['Digit6', 0x16], ['Digit5', 0x17], ['Equal', 0x18], // '^' in JIS keyboard
+	['Digit9', 0x19], ['Digit7', 0x1A], ['Minus', 0x1B], ['Digit8', 0x1C], ['Digit0', 0x1D], ['BracketRight', 0x1E], // '[' in JIS keyboard
+	['KeyO', 0x1F], ['KeyU', 0x20], ['BracietLeft', 0x21], // '@' in JIS keyboard
+	['KeyI', 0x22], ['KeyP', 0x23], ['Enter', 0x24], ['KeyL', 0x25], ['KeyJ', 0x26], ['Quote', 0x27], // ':' in JIS keyboard
+	['KeyK', 0x28], ['Semicolon', 0x29], ['Backslash', 0x2A], // ']' in JIS keyboard
+	['Comma', 0x2B], ['Slash', 0x2C], ['KeyN', 0x2D], ['KeyM', 0x2E], ['Period', 0x2F], ['Tab', 0x30], ['Space', 0x31], ['Backquote', 0x32], ['Delete', 0x33], ['NumpadEnter', 0x34], ['Escape', 0x35], ['OSRight', 0x36], ['MetaRight', 0x36], ['OSLeft', 0x37], ['MetaLeft', 0x37], ['ShiftLeft', 0x38], ['CapsLock', 0x39], ['AltLeft', 0x3A], ['ControlLeft', 0x3B], ['ShiftRight', 0x3C], ['AltRight', 0x3D], ['ControlRight', 0x3E], ['Fn', 0x3F], // impossible to catch the key event for function key
+	['F17', 0x40], ['NumpadDecimal', 0x41],
+	// 0x42: unknown
+	['NumpadMultiply', 0x43],
+	// 0x44: unknown
+	['NumpadAdd', 0x45],
+	// 0x46: unknown
+	['NumLock', 0x47], ['AudioVolumeUp', 0x48], ['AudioVolumeDown', 0x49], ['AudioVolumeMute', 0x4A], ['NumpadDivide', 0x4B], ['NumpadEnter', 0x4C],
+	// 0x4D: unknown
+	['NumpadSubtract', 0x4E], ['F18', 0x4F], ['F19', 0x50], ['NumpadEqual', 0x51], ['Numpad0', 0x52], ['Numpad1', 0x53], ['Numpad2', 0x54], ['Numpad3', 0x55], ['Numpad4', 0x56], ['Numpad5', 0x57], ['Numpad6', 0x58], ['Numpad7', 0x59], ['F20', 0x5A], ['Numpad8', 0x5B], ['Numpad9', 0x5C], ['IntlYen', 0x5D], // JIS_Yen
+	['IntlRo', 0x5E], // JIS_Underscore
+	['NumpadComma', 0x5F], ['F5', 0x60], ['F6', 0x61], ['F7', 0x62], ['F3', 0x63], ['F8', 0x64], ['F9', 0x65], ['Lang2', 0x66], // JIS_Eisu. It could be ''
+	['F11', 0x67], ['Lang1', 0x68], // JIS_Kana. It could be 'KanaMode'
+	['F13', 0x69], ['F16', 0x6A], ['F14', 0x6B],
+	// 0x6C: unknown
+	['F10', 0x6D],
+	// 0x6E: unknown
+	['F12', 0x6F],
+	// 0x70: unknown
+	['F15', 0x71], ['Help', 0x72], ['Insert', 0x72], ['Home', 0x73], ['PageUp', 0x74], ['Delete', 0x75], ['F4', 0x76], ['End', 0x77], ['F2', 0x78], ['PageDown', 0x79], ['F1', 0x7A], ['ArrowLeft', 0x7B], ['ArrowRight', 0x7C], ['ArrowDown', 0x7D], ['ArrowUp', 0x7E]]);
+
+	/**
+	 * A view for displaying 3D SceneKit content.
+	 * @access public
+	 * @implements {SCNSceneRenderer}
+	 * @implements {SCNTechniqueSupport}
+	 * @see https://developer.apple.com/documentation/scenekit/scnview
+	 */
+
 	var SCNView = function () {
 
 	  // Initializing a SceneKit View
@@ -59067,22 +59110,12 @@ module.exports =
 	        keyCode: 0,
 	        isARepeat: false
 	      };
-	      switch (e.code) {
-	        case 'ArrowDown':
-	          ev.keyCode = 125;
-	          break;
-	        case 'ArrowUp':
-	          ev.keyCode = 126;
-	          break;
-	        case 'ArrowLeft':
-	          ev.keyCode = 123;
-	          break;
-	        case 'ArrowRight':
-	          ev.keyCode = 124;
-	          break;
-	        default:
-	        // nothing to do
+	      if (_KeyCode.has(e.code)) {
+	        ev.keyCode = _KeyCode.get(e.code);
+	      } else {
+	        console.warn('unknown keycode: ' + e.code);
 	      }
+
 	      if (typeof e.repeat !== 'undefined') {
 	        ev.isARepeat = e.repeat;
 	      }
@@ -59095,22 +59128,12 @@ module.exports =
 	        keyCode: 0,
 	        isARepeat: false
 	      };
-	      switch (e.code) {
-	        case 'ArrowDown':
-	          ev.keyCode = 125;
-	          break;
-	        case 'ArrowUp':
-	          ev.keyCode = 126;
-	          break;
-	        case 'ArrowLeft':
-	          ev.keyCode = 123;
-	          break;
-	        case 'ArrowRight':
-	          ev.keyCode = 124;
-	          break;
-	        default:
-	        // nothing to do
+	      if (_KeyCode.has(e.code)) {
+	        ev.keyCode = _KeyCode.get(e.code);
+	      } else {
+	        console.warn('unknown keycode: ' + e.code);
 	      }
+
 	      _this.keyUpWith(ev);
 	    });
 	  }

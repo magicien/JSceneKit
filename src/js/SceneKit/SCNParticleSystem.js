@@ -5,6 +5,7 @@ import NSKeyedUnarchiver from '../Foundation/NSKeyedUnarchiver'
 import NSObject from '../ObjectiveC/NSObject'
 //import SCNAnimatable from './SCNAnimatable'
 //import SCNGeometry from './SCNGeometry'
+import SCNGeometrySource from './SCNGeometrySource'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNParticleBirthLocation from './SCNParticleBirthLocation'
 import SCNParticleBirthDirection from './SCNParticleBirthDirection'
@@ -1145,12 +1146,20 @@ export default class SCNParticleSystem extends NSObject {
           break
         }
         case 'SCNGeometry': {
-          // TODO: implement
-          console.warn('surface emitter for SCNGeometry is not implemented. use boundingSphere instead')
-          const v = (new SCNVector3(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)).normalize()
-          const r = this.emitterShape.getBoundingSphere().radius
-          pVec = v.mul(r)
-          vVec = v
+          const element = this.emitterShape.geometryElementAtIndex(0)
+          const vertexSrc = this.emitterShape.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+          const normalSrc = this.emitterShape.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+
+          const elemIndex = Math.floor(Math.random() * element.primitiveCount)
+          const indices = element._indexAt(elemIndex)
+          const vertices = indices.map((index) => vertexSrc._scnVectorAt(index))
+          const normals = indices.map((index) => normalSrc._scnVectorAt(index))
+
+          const pos = vertices[0].add(vertices[1]).add(vertices[2]).mul(1/3)
+          const nom = normals[0].add(normals[1]).add(normals[2]).normalize()
+
+          pVec = pos
+          vVec = nom
           break
         }
         default:
