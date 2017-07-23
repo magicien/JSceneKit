@@ -11549,7 +11549,7 @@ module.exports =
 	  }, {
 	    key: 'controllers',
 	    value: function controllers() {
-	      return null;
+	      return Array.from(_controllers.values());
 	    }
 	  }, {
 	    key: '_gamepadObjByIndexId',
@@ -16228,7 +16228,6 @@ module.exports =
 	      if (url.indexOf(':') < 0) {
 	        url = coder._directoryPath + url;
 	      }
-	      //console.error(`NSURL: ${url}`)
 
 	      return url;
 	    }
@@ -17485,25 +17484,8 @@ module.exports =
 
 
 	  _createClass(GKBehavior, [{
-	    key: 'behaviorWithGoalsAndWeights',
+	    key: 'setWeightFor',
 
-
-	    /**
-	     * Creates a behavior with the specified goals and weights.
-	     * @access public
-	     * @param {GKGoal[]} goals - An array of goal objects.
-	     * @param {number[]} weights - An array of numbers, each the weight to be applied to the goal at the corresponding index in the goals array.
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388727-init
-	     */
-	    value: function behaviorWithGoalsAndWeights(goals, weights) {
-	      var _behavior$_goals, _behavior$_weights;
-
-	      var behavior = new GKBehavior();
-	      (_behavior$_goals = behavior._goals).push.apply(_behavior$_goals, _toConsumableArray(goals));
-	      (_behavior$_weights = behavior._weights).push.apply(_behavior$_weights, _toConsumableArray(weights));
-	      return behavior;
-	    }
 
 	    // Managing a Behavior’s Set of Goals
 
@@ -17516,9 +17498,6 @@ module.exports =
 	     * @desc When an agent evaluates its behavior, it examines each goal and calculates the change in direction and speed necessary to move toward fulfilling that goal (within the limits of the current time step and the agent’s maximum speed and turn rate). The agent then combines these influences to determine the total change in direction and speed for the current time step. To modulate the effects of multiple goals in a behavior, use this method to increase or decrease the relative influence of each.You can use this method to vary the behaviors in your game in response to player actions or other events. For example, an enemy agent’s behavior may combine pursuing the player (init(toInterceptAgent:maxPredictionTime:)) with a bit of wandering (init(toWander:)) to make its movement appear natural. When the enemy has not yet sighted the player, you might reduce the weight of the pursue goal to zero; when the player attacks the enemy, you might increase the weight of the wander goal for a short time to make the enemy act dazed.
 	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388731-setweight
 	     */
-
-	  }, {
-	    key: 'setWeightFor',
 	    value: function setWeightFor(weight, goal) {
 	      var index = this._goals.indexOf(goal);
 	      if (index >= 0) {
@@ -17612,6 +17591,47 @@ module.exports =
 	      var behavior = new GKBehavior();
 	      behavior._goals.push(goal);
 	      behavior._weights.push(weight);
+	      return behavior;
+	    }
+
+	    /**
+	     * Creates a behavior with the specified goals.
+	     * @access public
+	     * @param {GKGoal[]} goals - An array of goal objects.
+	     * @returns {GKBehavior} - A new behavior object. To assign a set of goals to an agent, use its behavior property.
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388725-init
+	     */
+
+	  }, {
+	    key: 'behaviorWithGoals',
+	    value: function behaviorWithGoals(goals) {
+	      var _behavior$_goals;
+
+	      var behavior = new GKBehavior();
+	      (_behavior$_goals = behavior._goals).push.apply(_behavior$_goals, _toConsumableArray(goals));
+	      for (var i = 0; i < goals.length; i++) {
+	        behavior._weights.push(1);
+	      }
+	      return behavior;
+	    }
+
+	    /**
+	     * Creates a behavior with the specified goals and weights.
+	     * @access public
+	     * @param {GKGoal[]} goals - An array of goal objects.
+	     * @param {number[]} weights - An array of numbers, each the weight to be applied to the goal at the corresponding index in the goals array.
+	     * @returns {GKBehavior} -
+	     * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388727-init
+	     */
+
+	  }, {
+	    key: 'behaviorWithGoalsAndWeights',
+	    value: function behaviorWithGoalsAndWeights(goals, weights) {
+	      var _behavior$_goals2, _behavior$_weights;
+
+	      var behavior = new GKBehavior();
+	      (_behavior$_goals2 = behavior._goals).push.apply(_behavior$_goals2, _toConsumableArray(goals));
+	      (_behavior$_weights = behavior._weights).push.apply(_behavior$_weights, _toConsumableArray(weights));
 	      return behavior;
 	    }
 	  }]);
@@ -18092,6 +18112,10 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _CGPoint = __webpack_require__(15);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
 	var _GKAgent2 = __webpack_require__(50);
 
 	var _GKAgent3 = _interopRequireDefault(_GKAgent2);
@@ -18130,7 +18154,7 @@ module.exports =
 	     */
 	    var _this = _possibleConstructorReturn(this, (GKAgent2D.__proto__ || Object.getPrototypeOf(GKAgent2D)).call(this));
 
-	    _this.position = null;
+	    _this.position = new _CGPoint2.default();
 
 	    /**
 	     * The rotation of the agent around the z-axis.
@@ -18145,7 +18169,7 @@ module.exports =
 	     * @access private
 	     * @type {number[]}
 	     */
-	    _this._velocity = null;
+	    _this._velocity = new _CGPoint2.default();
 	    return _this;
 	  }
 
@@ -24206,35 +24230,16 @@ module.exports =
 	        }],
 	        physicsField: 'SCNPhysicsField',
 	        particleSystem: ['NSArray', '_particleSystems'],
-	        'animation-keys': ['NSArray', null],
 	        animations: ['NSMutableDictionary', function (obj, anims) {
 	          _this2._loadAnimationArray(obj, anims);
+	          obj._setAnimationsToPlayers();
+	        }],
+	        'animation-keys': ['NSMutableArray', function (obj, keys) {
+	          obj._animationPlayers._keys = keys;
 	        }],
 	        'animation-players': ['NSMutableArray', function (obj, players) {
-	          var _iteratorNormalCompletion = true;
-	          var _didIteratorError = false;
-	          var _iteratorError = undefined;
-
-	          try {
-	            for (var _iterator = players[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	              var player = _step.value;
-
-	              obj.addAnimationPlayerForKey(player, null);
-	            }
-	          } catch (err) {
-	            _didIteratorError = true;
-	            _iteratorError = err;
-	          } finally {
-	            try {
-	              if (!_iteratorNormalCompletion && _iterator.return) {
-	                _iterator.return();
-	              }
-	            } finally {
-	              if (_didIteratorError) {
-	                throw _iteratorError;
-	              }
-	            }
-	          }
+	          obj._animationPlayers._values = players;
+	          obj._setAnimationsToPlayers();
 	        }],
 	        'action-keys': ['NSArray', null],
 	        actions: ['NSMutableDictionary', function (obj, acts) {
@@ -24618,28 +24623,28 @@ module.exports =
 	      }
 	      if (this._particleSystems) {
 	        p._particleSystems = [];
-	        var _iteratorNormalCompletion2 = true;
-	        var _didIteratorError2 = false;
-	        var _iteratorError2 = undefined;
+	        var _iteratorNormalCompletion = true;
+	        var _didIteratorError = false;
+	        var _iteratorError = undefined;
 
 	        try {
-	          for (var _iterator2 = this._particleSystems[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	            var system = _step2.value;
+	          for (var _iterator = this._particleSystems[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	            var system = _step.value;
 
 	            var pSystem = system._createPresentation();
 	            p._particleSystems.push(pSystem);
 	          }
 	        } catch (err) {
-	          _didIteratorError2 = true;
-	          _iteratorError2 = err;
+	          _didIteratorError = true;
+	          _iteratorError = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	              _iterator2.return();
+	            if (!_iteratorNormalCompletion && _iterator.return) {
+	              _iterator.return();
 	            }
 	          } finally {
-	            if (_didIteratorError2) {
-	              throw _iteratorError2;
+	            if (_didIteratorError) {
+	              throw _iteratorError;
 	            }
 	          }
 	        }
@@ -25003,27 +25008,27 @@ module.exports =
 	      if (this._physicsBody) {
 	        this._physicsBody._resetTransform(updateWorldTransform);
 	      }
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
 
 	      try {
-	        for (var _iterator3 = this._childNodes[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var child = _step3.value;
+	        for (var _iterator2 = this._childNodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var child = _step2.value;
 
 	          child._resetPhysicsTransformRecursively(updateWorldTransform);
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
 	          }
 	        }
 	      }
@@ -25219,7 +25224,8 @@ module.exports =
 	    value: function hitTestWithSegmentFromTo(pointA, pointB) {
 	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
-	      return null;
+	      // TODO: implement
+	      return [];
 	    }
 
 	    // Converting Between Node Coordinate Spaces
@@ -25756,6 +25762,16 @@ module.exports =
 	  }, {
 	    key: 'setAnimationSpeedForKey',
 	    value: function setAnimationSpeedForKey(speed, key) {}
+	  }, {
+	    key: '_setAnimationsToPlayers',
+	    value: function _setAnimationsToPlayers() {
+	      var len = this._animationPlayers._values.length;
+	      if (len > 0 && this._animations._values.length > 0) {
+	        for (var i = 0; i < len; i++) {
+	          this._animationPlayers._values[i]._animation = this._animations._values[i];
+	        }
+	      }
+	    }
 
 	    /**
 	     *
@@ -25869,28 +25885,28 @@ module.exports =
 	        box.max.z *= scale.z;
 	      }
 
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
 
 	      try {
-	        for (var _iterator4 = this._childNodes[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var child = _step4.value;
+	        for (var _iterator3 = this._childNodes[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var child = _step3.value;
 
 	          var cbox = child._updateBoundingBox();
 	          box = this._unionChildBoundingBox(box, cbox);
 	        }
 	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
 	          }
 	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
 	          }
 	        }
 	      }
@@ -26008,27 +26024,27 @@ module.exports =
 	    value: function _copyMaterialPropertiesToPresentation() {
 	      var p = this._presentation;
 	      if (this._geometry) {
-	        var _iteratorNormalCompletion5 = true;
-	        var _didIteratorError5 = false;
-	        var _iteratorError5 = undefined;
+	        var _iteratorNormalCompletion4 = true;
+	        var _didIteratorError4 = false;
+	        var _iteratorError4 = undefined;
 
 	        try {
-	          for (var _iterator5 = this._geometry.materials[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-	            var material = _step5.value;
+	          for (var _iterator4 = this._geometry.materials[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	            var material = _step4.value;
 
 	            material._copyPresentationProperties();
 	          }
 	        } catch (err) {
-	          _didIteratorError5 = true;
-	          _iteratorError5 = err;
+	          _didIteratorError4 = true;
+	          _iteratorError4 = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion5 && _iterator5.return) {
-	              _iterator5.return();
+	            if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	              _iterator4.return();
 	            }
 	          } finally {
-	            if (_didIteratorError5) {
-	              throw _iteratorError5;
+	            if (_didIteratorError4) {
+	              throw _iteratorError4;
 	            }
 	          }
 	        }
@@ -26315,53 +26331,53 @@ module.exports =
 	      }
 
 	      var promises = [];
-	      var _iteratorNormalCompletion6 = true;
-	      var _didIteratorError6 = false;
-	      var _iteratorError6 = undefined;
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
 
 	      try {
-	        for (var _iterator6 = this._childNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-	          var child = _step6.value;
+	        for (var _iterator5 = this._childNodes[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var child = _step5.value;
 
 	          promises.push(child._getLoadedPromise());
 	        }
 	      } catch (err) {
-	        _didIteratorError6 = true;
-	        _iteratorError6 = err;
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
-	            _iterator6.return();
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
 	          }
 	        } finally {
-	          if (_didIteratorError6) {
-	            throw _iteratorError6;
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
 	          }
 	        }
 	      }
 
 	      if (this._particleSystems) {
-	        var _iteratorNormalCompletion7 = true;
-	        var _didIteratorError7 = false;
-	        var _iteratorError7 = undefined;
+	        var _iteratorNormalCompletion6 = true;
+	        var _didIteratorError6 = false;
+	        var _iteratorError6 = undefined;
 
 	        try {
-	          for (var _iterator7 = this._particleSystems[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-	            var system = _step7.value;
+	          for (var _iterator6 = this._particleSystems[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	            var system = _step6.value;
 
 	            promises.push(system._getLoadedPromise());
 	          }
 	        } catch (err) {
-	          _didIteratorError7 = true;
-	          _iteratorError7 = err;
+	          _didIteratorError6 = true;
+	          _iteratorError6 = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion7 && _iterator7.return) {
-	              _iterator7.return();
+	            if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	              _iterator6.return();
 	            }
 	          } finally {
-	            if (_didIteratorError7) {
-	              throw _iteratorError7;
+	            if (_didIteratorError6) {
+	              throw _iteratorError6;
 	            }
 	          }
 	        }
@@ -26369,27 +26385,27 @@ module.exports =
 	      if (this._geometry) {
 	        promises.push(this._geometry._getLoadedPromise());
 	      }
-	      var _iteratorNormalCompletion8 = true;
-	      var _didIteratorError8 = false;
-	      var _iteratorError8 = undefined;
+	      var _iteratorNormalCompletion7 = true;
+	      var _didIteratorError7 = false;
+	      var _iteratorError7 = undefined;
 
 	      try {
-	        for (var _iterator8 = this._audioPlayers[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-	          var player = _step8.value;
+	        for (var _iterator7 = this._audioPlayers[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+	          var player = _step7.value;
 
 	          promises.push(player._getLoadedPromise());
 	        }
 	      } catch (err) {
-	        _didIteratorError8 = true;
-	        _iteratorError8 = err;
+	        _didIteratorError7 = true;
+	        _iteratorError7 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
-	            _iterator8.return();
+	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
+	            _iterator7.return();
 	          }
 	        } finally {
-	          if (_didIteratorError8) {
-	            throw _iteratorError8;
+	          if (_didIteratorError7) {
+	            throw _iteratorError7;
 	          }
 	        }
 	      }
@@ -26666,7 +26682,7 @@ module.exports =
 	      }
 	      var transform = (0, _SCNMatrix4MakeTranslation2.default)(newValue.x, newValue.y, newValue.z);
 	      var inv = parentTransform.invert();
-	      var newTransform = transform.transform(inv);
+	      var newTransform = transform.mult(inv);
 
 	      this._transform.m41 = newTransform.m41;
 	      this._transform.m42 = newTransform.m42;
@@ -26741,8 +26757,10 @@ module.exports =
 	        this._physicsBody._node = null;
 	      }
 	      this._physicsBody = newValue;
-	      this._physicsBody._node = this;
-	      this._physicsBody.resetTransform();
+	      if (this._physicsBody) {
+	        this._physicsBody._node = this;
+	        this._physicsBody.resetTransform();
+	      }
 	    }
 	  }, {
 	    key: 'particleSystems',
@@ -26810,12 +26828,43 @@ module.exports =
 	    key: 'actionKeys',
 	    get: function get() {
 	      var keys = [];
+	      var _iteratorNormalCompletion8 = true;
+	      var _didIteratorError8 = false;
+	      var _iteratorError8 = undefined;
+
+	      try {
+	        for (var _iterator8 = this._actions.keys()[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+	          var key = _step8.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError8 = true;
+	        _iteratorError8 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
+	            _iterator8.return();
+	          }
+	        } finally {
+	          if (_didIteratorError8) {
+	            throw _iteratorError8;
+	          }
+	        }
+	      }
+
+	      return keys;
+	    }
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      var keys = [];
 	      var _iteratorNormalCompletion9 = true;
 	      var _didIteratorError9 = false;
 	      var _iteratorError9 = undefined;
 
 	      try {
-	        for (var _iterator9 = this._actions.keys()[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+	        for (var _iterator9 = this._animations.keys()[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
 	          var key = _step9.value;
 
 	          keys.push(key);
@@ -26831,37 +26880,6 @@ module.exports =
 	        } finally {
 	          if (_didIteratorError9) {
 	            throw _iteratorError9;
-	          }
-	        }
-	      }
-
-	      return keys;
-	    }
-	  }, {
-	    key: 'animationKeys',
-	    get: function get() {
-	      var keys = [];
-	      var _iteratorNormalCompletion10 = true;
-	      var _didIteratorError10 = false;
-	      var _iteratorError10 = undefined;
-
-	      try {
-	        for (var _iterator10 = this._animations.keys()[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
-	          var key = _step10.value;
-
-	          keys.push(key);
-	        }
-	      } catch (err) {
-	        _didIteratorError10 = true;
-	        _iteratorError10 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion10 && _iterator10.return) {
-	            _iterator10.return();
-	          }
-	        } finally {
-	          if (_didIteratorError10) {
-	            throw _iteratorError10;
 	          }
 	        }
 	      }
@@ -26947,13 +26965,13 @@ module.exports =
 	    key: '_loadAnimationArray',
 	    value: function _loadAnimationArray(node, animations) {
 	      //console.log('_loadAnimationArray start')
-	      var _iteratorNormalCompletion11 = true;
-	      var _didIteratorError11 = false;
-	      var _iteratorError11 = undefined;
+	      var _iteratorNormalCompletion10 = true;
+	      var _didIteratorError10 = false;
+	      var _iteratorError10 = undefined;
 
 	      try {
-	        for (var _iterator11 = Object.keys(animations)[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
-	          var animName = _step11.value;
+	        for (var _iterator10 = Object.keys(animations)[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+	          var animName = _step10.value;
 
 	          var data = animations[animName];
 	          var animation = this._loadAnimationData(data, animName);
@@ -26961,16 +26979,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError11 = true;
-	        _iteratorError11 = err;
+	        _didIteratorError10 = true;
+	        _iteratorError10 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion11 && _iterator11.return) {
-	            _iterator11.return();
+	          if (!_iteratorNormalCompletion10 && _iterator10.return) {
+	            _iterator10.return();
 	          }
 	        } finally {
-	          if (_didIteratorError11) {
-	            throw _iteratorError11;
+	          if (_didIteratorError10) {
+	            throw _iteratorError10;
 	          }
 	        }
 	      }
@@ -27113,13 +27131,13 @@ module.exports =
 	    key: '_loadActionArray',
 	    value: function _loadActionArray(node, actions) {
 	      //console.log('_loadActionArray start')
-	      var _iteratorNormalCompletion12 = true;
-	      var _didIteratorError12 = false;
-	      var _iteratorError12 = undefined;
+	      var _iteratorNormalCompletion11 = true;
+	      var _didIteratorError11 = false;
+	      var _iteratorError11 = undefined;
 
 	      try {
-	        for (var _iterator12 = Object.keys(actions)[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
-	          var actName = _step12.value;
+	        for (var _iterator11 = Object.keys(actions)[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+	          var actName = _step11.value;
 
 	          var data = actions[actName];
 	          //const action = this._loadActionData(data, actName)
@@ -27128,16 +27146,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError12 = true;
-	        _iteratorError12 = err;
+	        _didIteratorError11 = true;
+	        _iteratorError11 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion12 && _iterator12.return) {
-	            _iterator12.return();
+	          if (!_iteratorNormalCompletion11 && _iterator11.return) {
+	            _iterator11.return();
 	          }
 	        } finally {
-	          if (_didIteratorError12) {
-	            throw _iteratorError12;
+	          if (_didIteratorError11) {
+	            throw _iteratorError11;
 	          }
 	        }
 	      }
@@ -33725,7 +33743,6 @@ module.exports =
 
 	      this._loadedPromise = new Promise(function (resolve, reject) {
 	        var paths = __path.split('/');
-
 	        var pathCount = 1;
 	        var _path = dirPath + paths.slice(-pathCount).join('/');
 	        image.onload = function () {
@@ -33735,8 +33752,13 @@ module.exports =
 	        image.onerror = function () {
 	          pathCount += 1;
 	          if (pathCount > paths.length) {
-	            reject();
-	            throw new Error('image ' + path + ' load error.');
+	            // try the root path
+	            image.onerror = function () {
+	              // give up
+	              reject();
+	              throw new Error('image ' + path + ' load error.');
+	            };
+	            image.src = __path;
 	          } else {
 	            // retry
 	            _path = dirPath + paths.slice(-pathCount).join('/');
@@ -41399,7 +41421,7 @@ module.exports =
 	        particleImage: ['NSMutableDictionary', function (obj, dict, key, coder) {
 	          var path = '';
 	          if (typeof dict.path !== 'undefined') {
-	            path = coder._directoryPath + dict.path;
+	            path = dict.path;
 	          } else if (typeof dict.URL !== 'undefined') {
 	            path = dict.URL;
 	          }
@@ -42110,48 +42132,37 @@ module.exports =
 	      var _this3 = this;
 
 	      var image = new Image();
+	      var __path = path;
+	      if (__path.indexOf('file:///') === 0) {
+	        __path = __path.slice(8);
+	      }
+	      // TODO: load OpenEXR File
+	      __path = __path.replace(/\.exr$/, '.png');
+
 	      this._loadedPromise = new Promise(function (resolve, reject) {
-	        if (path.indexOf('file:///') === 0) {
-	          var paths = path.slice(8).split('/');
-	          var pathCount = 1;
-	          var _path = directoryPath + paths.slice(-pathCount).join('/');
-	          image.onload = function () {
-	            //console.info(`image ${_path} onload`)
-	            _this3.particleImage = image;
-	            resolve();
-	          };
-	          image.onerror = function () {
-	            pathCount += 1;
-	            if (pathCount > paths.length) {
-	              //console.info(`image ${path} load error. pathCount > paths.length`)
+	        var paths = __path.split('/');
+	        var pathCount = 1;
+	        var _path = directoryPath + paths.slice(-pathCount).join('/');
+	        image.onload = function () {
+	          _this3.particleImage = image;
+	          resolve();
+	        };
+	        image.onerror = function () {
+	          pathCount += 1;
+	          if (pathCount > paths.length) {
+	            // try the root path
+	            image.onerror = function () {
+	              // give up
 	              reject();
-	            } else {
-	              //console.info(`image ${_path} load error.`)
-	              _path = directoryPath + paths.slice(-pathCount).join('/'
-	              //console.info(`try ${_path}`)
-	              );image.src = _path;
-	            }
-	          };
-	          image.src = _path;
-	        } else {
-	          var _paths = path.split('/');
-	          var _pathCount = 0;
-	          image.onload = function () {
-	            //console.info(`image ${path} onload`)
-	            _this3.particleImage = image;
-	            resolve();
-	          };
-	          image.onerror = function () {
-	            _pathCount += 1;
-	            if (_pathCount > _paths.length) {
-	              // load error
-	              reject();
-	            } else {
-	              image.src = directoryPath + _paths.slice(-_pathCount).join('/');
-	            }
-	          };
-	          image.src = path;
-	        }
+	            };
+	            image.src = __path;
+	          } else {
+	            // retry
+	            _path = directoryPath + paths.slice(-pathCount).join('/');
+	            image.src = _path;
+	          }
+	        };
+	        image.src = _path;
 	      });
 	      return image;
 	    }
@@ -46675,7 +46686,8 @@ module.exports =
 	    value: function convexSweepTestWith(shape, from, to) {
 	      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
-	      return null;
+	      // TODO: implement
+	      return [];
 	    }
 
 	    // Structures
@@ -57112,7 +57124,8 @@ module.exports =
 	        // TODO: implement appropriate matrix multiplication.
 	        //       it doesn't consider the rotation of initial pose so far.
 	        //const mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
-	        var mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform
+	        //const mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform)
+	        var mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone.presentation._worldTransform
 	        //const mat = bone._presentation._worldTransform.mult(this._boneInverseBindTransforms[i])
 	        //mat = bone.presentation.transform.mult(mat)
 	        //if(bone._parent !== null){
@@ -57181,7 +57194,7 @@ module.exports =
 	      for (var i = 0; i < boneLen; i++) {
 	        var bone = this._bones[i];
 	        //transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform))
-	        transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform));
+	        transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone.presentation._worldTransform));
 	      }
 
 	      var baseGeometry = this.baseGeometry;
@@ -63844,7 +63857,7 @@ module.exports =
 	     * @type {CGSize}
 	     * @see https://developer.apple.com/documentation/spritekit/skscene/1519831-size
 	     */
-	    _this.size = size | new _CGSize2.default(1, 1);
+	    _this.size = size ? size : new _CGSize2.default(1, 1);
 
 	    /**
 	     * Defines how the scene is mapped to the view that presents it.
@@ -63893,19 +63906,32 @@ module.exports =
 	    return _this;
 	  }
 
-	  // Determining What Portion of the Scene Is Visible in the View
-
-	  /**
-	   * Called whenever the scene’s size changes.
-	   * @access public
-	   * @param {CGSize} oldSize - The old size of the scene, in points.
-	   * @returns {void}
-	   * @desc This method is intended to be overridden in a subclass. Typically, you use this method to adjust the positions of nodes in the scene.
-	   * @see https://developer.apple.com/documentation/spritekit/skscene/1519545-didchangesize
-	   */
-
-
 	  _createClass(SKScene, [{
+	    key: '_copyValue',
+	    value: function _copyValue(src) {
+	      this.camera = src.camera;
+	      this.anchorPoint = src.anchorPoint.copy();
+	      this.size = src.size.copy();
+	      this.scaleMode = src.scaleMode;
+	      this.backgroundColor = src.backgroundColor._copy();
+	      this._view = src._view;
+	      this.delegate = src.delegate;
+	      this._physicsWorld = src._physicsWorld;
+	      this.listener = src.listener;
+	    }
+
+	    // Determining What Portion of the Scene Is Visible in the View
+
+	    /**
+	     * Called whenever the scene’s size changes.
+	     * @access public
+	     * @param {CGSize} oldSize - The old size of the scene, in points.
+	     * @returns {void}
+	     * @desc This method is intended to be overridden in a subclass. Typically, you use this method to adjust the positions of nodes in the scene.
+	     * @see https://developer.apple.com/documentation/spritekit/skscene/1519545-didchangesize
+	     */
+
+	  }, {
 	    key: 'didChangeSize',
 	    value: function didChangeSize(oldSize) {}
 

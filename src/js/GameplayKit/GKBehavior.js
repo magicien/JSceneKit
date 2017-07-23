@@ -52,14 +52,30 @@ export default class GKBehavior extends NSObject {
   }
 
   /**
+   * Creates a behavior with the specified goals.
+   * @access public
+   * @param {GKGoal[]} goals - An array of goal objects.
+   * @returns {GKBehavior} - A new behavior object. To assign a set of goals to an agent, use its behavior property.
+   * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388725-init
+   */
+  static behaviorWithGoals(goals) {
+    const behavior = new GKBehavior()
+    behavior._goals.push(...goals)
+    for(let i=0; i<goals.length; i++){
+      behavior._weights.push(1)
+    }
+    return behavior
+  }
+
+  /**
    * Creates a behavior with the specified goals and weights.
    * @access public
    * @param {GKGoal[]} goals - An array of goal objects.
    * @param {number[]} weights - An array of numbers, each the weight to be applied to the goal at the corresponding index in the goals array.
-   * @returns {void}
+   * @returns {GKBehavior} -
    * @see https://developer.apple.com/documentation/gameplaykit/gkbehavior/1388727-init
    */
-  behaviorWithGoalsAndWeights(goals, weights) {
+  static behaviorWithGoalsAndWeights(goals, weights) {
     const behavior = new GKBehavior()
     behavior._goals.push(...goals)
     behavior._weights.push(...weights)

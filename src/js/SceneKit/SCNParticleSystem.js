@@ -210,7 +210,7 @@ export default class SCNParticleSystem extends NSObject {
       particleImage: ['NSMutableDictionary', (obj, dict, key, coder) => {
         let path = ''
         if(typeof dict.path !== 'undefined'){
-          path = coder._directoryPath + dict.path
+          path = dict.path
         }else if(typeof dict.URL !== 'undefined'){
           path = dict.URL
         }
@@ -926,48 +926,37 @@ export default class SCNParticleSystem extends NSObject {
    */
   _loadParticleImage(path, directoryPath) {
     const image = new Image()
+    let __path = path
+    if(__path.indexOf('file:///') === 0){
+      __path = __path.slice(8)
+    }
+    // TODO: load OpenEXR File
+    __path = __path.replace(/\.exr$/, '.png')
+
     this._loadedPromise = new Promise((resolve, reject) => {
-      if(path.indexOf('file:///') === 0){
-        const paths = path.slice(8).split('/')
-        let pathCount = 1
-        let _path = directoryPath + paths.slice(-pathCount).join('/')
-        image.onload = () => {
-          //console.info(`image ${_path} onload`)
-          this.particleImage = image
-          resolve()
-        }
-        image.onerror = () => {
-          pathCount += 1
-          if(pathCount > paths.length){
-            //console.info(`image ${path} load error. pathCount > paths.length`)
-            reject()
-          }else{
-            //console.info(`image ${_path} load error.`)
-            _path = directoryPath + paths.slice(-pathCount).join('/')
-            //console.info(`try ${_path}`)
-            image.src = _path
-          }
-        }
-        image.src = _path
-      }else{
-        const paths = path.split('/')
-        let pathCount = 0
-        image.onload = () => {
-          //console.info(`image ${path} onload`)
-          this.particleImage = image
-          resolve()
-        }
-        image.onerror = () => {
-          pathCount += 1
-          if(pathCount > paths.length){
-            // load error
-            reject()
-          }else{
-            image.src = directoryPath + paths.slice(-pathCount).join('/')
-          }
-        }
-        image.src = path
+      const paths = __path.split('/')
+      let pathCount = 1
+      let _path = directoryPath + paths.slice(-pathCount).join('/')
+      image.onload = () => {
+        this.particleImage = image
+        resolve()
       }
+      image.onerror = () => {
+        pathCount += 1
+        if(pathCount > paths.length){
+          // try the root path
+          image.onerror = () => {
+            // give up
+            reject()
+          }
+          image.src = __path
+        }else{
+          // retry
+          _path = directoryPath + paths.slice(-pathCount).join('/')
+          image.src = _path
+        }
+      }
+      image.src = _path
     })
     return image
   }

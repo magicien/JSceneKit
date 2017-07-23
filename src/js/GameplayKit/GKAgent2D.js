@@ -1,5 +1,6 @@
 'use strict'
 
+import CGPoint from '../CoreGraphics/CGPoint'
 import GKAgent from './GKAgent'
 
 /**
@@ -25,7 +26,7 @@ export default class GKAgent2D extends GKAgent {
      * @type {number[]}
      * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501043-position
      */
-    this.position = null
+    this.position = new CGPoint()
 
     /**
      * The rotation of the agent around the z-axis.
@@ -41,7 +42,7 @@ export default class GKAgent2D extends GKAgent {
      * @access private
      * @type {number[]}
      */
-    this._velocity = null
+    this._velocity = new CGPoint()
   }
 
   // Running the Agent Simulation

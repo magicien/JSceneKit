@@ -662,7 +662,8 @@ if (contacts.count == 0) {
    * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512859-convexsweeptest
    */
   convexSweepTestWith(shape, from, to, options = null) {
-    return null
+    // TODO: implement
+    return []
   }
 
   // Structures

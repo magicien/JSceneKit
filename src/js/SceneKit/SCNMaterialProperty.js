@@ -503,7 +503,6 @@ export default class SCNMaterialProperty extends NSObject {
 
     this._loadedPromise = new Promise((resolve, reject) => {
       const paths = __path.split('/')
-
       let pathCount = 1
       let _path = dirPath + paths.slice(-pathCount).join('/')
       image.onload = () => {
@@ -513,8 +512,13 @@ export default class SCNMaterialProperty extends NSObject {
       image.onerror = () => {
         pathCount += 1
         if(pathCount > paths.length){
-          reject()
-          throw new Error(`image ${path} load error.`)
+          // try the root path
+          image.onerror = () => {
+            // give up
+            reject()
+            throw new Error(`image ${path} load error.`)
+          }
+          image.src = __path
         }else{
           // retry
           _path = dirPath + paths.slice(-pathCount).join('/')

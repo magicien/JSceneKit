@@ -54,7 +54,7 @@ export default class SKScene extends SKEffectNode {
      * @type {CGSize}
      * @see https://developer.apple.com/documentation/spritekit/skscene/1519831-size
      */
-    this.size = size | new CGSize(1, 1)
+    this.size = size ? size : new CGSize(1, 1)
 
     /**
      * Defines how the scene is mapped to the view that presents it.
@@ -103,6 +103,18 @@ export default class SKScene extends SKEffectNode {
     this.listener = null
 
     //this._audioEngine = null
+  }
+
+  _copyValue(src) {
+    this.camera = src.camera
+    this.anchorPoint = src.anchorPoint.copy()
+    this.size = src.size.copy()
+    this.scaleMode = src.scaleMode
+    this.backgroundColor = src.backgroundColor._copy()
+    this._view = src._view
+    this.delegate = src.delegate
+    this._physicsWorld = src._physicsWorld
+    this.listener = src.listener
   }
 
   // Determining What Portion of the Scene Is Visible in the View

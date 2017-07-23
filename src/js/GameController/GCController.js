@@ -218,7 +218,7 @@ export default class GCController extends NSObject {
    * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458871-controllers
    */
   static controllers() {
-    return null
+    return Array.from(_controllers.values())
   }
 
   // Determining Which Profiles Are Supported by a Controller

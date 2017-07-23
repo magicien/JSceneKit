@@ -228,7 +228,8 @@ export default class SCNSkinner extends NSObject {
       // TODO: implement appropriate matrix multiplication.
       //       it doesn't consider the rotation of initial pose so far.
       //const mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
-      const mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform)
+      //const mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform)
+      const mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone.presentation._worldTransform)
       //const mat = bone._presentation._worldTransform.mult(this._boneInverseBindTransforms[i])
       //mat = bone.presentation.transform.mult(mat)
       //if(bone._parent !== null){
@@ -294,7 +295,7 @@ export default class SCNSkinner extends NSObject {
     for(let i=0; i<boneLen; i++){
       const bone = this._bones[i]
       //transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform))
-      transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform))
+      transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone.presentation._worldTransform))
     }
 
     const baseGeometry = this.baseGeometry

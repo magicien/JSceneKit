@@ -80,14 +80,16 @@ export default class SCNNode extends NSObject {
       }],
       physicsField: 'SCNPhysicsField',
       particleSystem: ['NSArray', '_particleSystems'],
-      'animation-keys': ['NSArray', null],
       animations: ['NSMutableDictionary', (obj, anims) => {
         this._loadAnimationArray(obj, anims)
+        obj._setAnimationsToPlayers()
+      }],
+      'animation-keys': ['NSMutableArray', (obj, keys) => {
+        obj._animationPlayers._keys = keys
       }],
       'animation-players': ['NSMutableArray', (obj, players) => {
-        for(const player of players){
-          obj.addAnimationPlayerForKey(player, null)
-        }
+        obj._animationPlayers._values = players
+        obj._setAnimationsToPlayers()
       }],
       'action-keys': ['NSArray', null],
       actions: ['NSMutableDictionary', (obj, acts) => {
@@ -1028,7 +1030,7 @@ export default class SCNNode extends NSObject {
     }
     const transform = SCNMatrix4MakeTranslation(newValue.x, newValue.y, newValue.z)
     const inv = parentTransform.invert()
-    const newTransform = transform.transform(inv)
+    const newTransform = transform.mult(inv)
 
     this._transform.m41 = newTransform.m41
     this._transform.m42 = newTransform.m42
@@ -1324,8 +1326,10 @@ export default class SCNNode extends NSObject {
       this._physicsBody._node = null
     }
     this._physicsBody = newValue
-    this._physicsBody._node = this
-    this._physicsBody.resetTransform()
+    if(this._physicsBody){
+      this._physicsBody._node = this
+      this._physicsBody.resetTransform()
+    }
   }
 
   _resetPhysicsTransformRecursively(updateWorldTransform = false) {
@@ -1503,7 +1507,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/documentation/scenekit/scnnode/1407998-hittestwithsegment
    */
   hitTestWithSegmentFromTo(pointA, pointB, options = null) {
-    return null
+    // TODO: implement
+    return []
   }
 
   // Converting Between Node Coordinate Spaces
@@ -2022,6 +2027,15 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   setAnimationSpeedForKey(speed, key) {
   }
 
+
+  _setAnimationsToPlayers() {
+    const len = this._animationPlayers._values.length
+    if(len > 0 && this._animations._values.length > 0){
+      for(let i=0; i<len; i++){
+        this._animationPlayers._values[i]._animation = this._animations._values[i]
+      }
+    }
+  }
 
   /**
    *
