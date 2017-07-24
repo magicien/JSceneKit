@@ -2780,15 +2780,15 @@ export default class SCNRenderer extends NSObject {
    * @returns {SCNProgram} -
    */
   _getProgramForGeometry(geometry) {
-    if(geometry.program !== null){
+    if(geometry.program !== null && geometry.program._programCompiled){
       return geometry.program
     }
 
-    if(geometry._shadableHelper !== null){
+    if(geometry.program || geometry._shadableHelper !== null){
       this._compileProgramForObject(geometry)
     }
     for(const material of geometry.materials){
-      if(material._shadableHelper !== null && material.program === null){
+      if(material.program || material._shadableHelper !== null){
         this._compileProgramForObject(material)
       }
     }
@@ -2806,8 +2806,14 @@ export default class SCNRenderer extends NSObject {
    */
   _compileProgramForObject(obj) {
     const gl = this.context
-    const p = new SCNProgram()
-    //p._glProgram = gl.createProgram()
+    let p = obj.program
+    if(!p){
+      p = new SCNProgram()
+      obj.program = p
+    }else if(p._programCompiled){
+      return p
+    }
+
     const glProgram = p._getGLProgramForContext(gl)
 
     const vsText = this._vertexShaderForObject(obj)
@@ -2821,7 +2827,7 @@ export default class SCNRenderer extends NSObject {
       const info = gl.getShaderInfoLog(vertexShader)
       throw new Error(`vertex shader compile error: ${info}`)
     }
-    p.vertexShader = vertexShader
+    p._glVertexShader = vertexShader
 
     // initialize fragment shader
     const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
@@ -2831,7 +2837,7 @@ export default class SCNRenderer extends NSObject {
       const info = gl.getShaderInfoLog(fragmentShader)
       throw new Error(`fragment shader compile error: ${info}`)
     }
-    p.fragmentShader = fragmentShader
+    p._glFragmentShader = fragmentShader
 
     gl.attachShader(glProgram, vertexShader)
     gl.attachShader(glProgram, fragmentShader)
@@ -2844,7 +2850,7 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    obj.program = p
+    p._programCompiled = true
 
     return p
   }
@@ -2932,7 +2938,7 @@ export default class SCNRenderer extends NSObject {
       const info = gl.getShaderInfoLog(vertexShader)
       throw new Error(`vertex shader compile error: ${info}`)
     }
-    this.__defaultProgram.vertexShader = vertexShader
+    this.__defaultProgram._glVertexShader = vertexShader
 
     // initialize fragment shader
     const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
@@ -2942,7 +2948,7 @@ export default class SCNRenderer extends NSObject {
       const info = gl.getShaderInfoLog(fragmentShader)
       throw new Error(`fragment shader compile error: ${info}`)
     }
-    this.__defaultProgram.fragmentShader = fragmentShader
+    this.__defaultProgram._glFragmentShader = fragmentShader
 
     gl.attachShader(glProgram, vertexShader)
     gl.attachShader(glProgram, fragmentShader)
@@ -2992,11 +2998,16 @@ export default class SCNRenderer extends NSObject {
    * @returns {string} -
    */
   _vertexShaderForObject(obj) {
+    let txt = obj.program.vertexShader
+    if(!txt){
+      txt = _defaultVertexShader
+    }
+
     if(obj instanceof SCNMaterial && obj._valuesForUndefinedKeys){
       const keys = Object.keys(obj._valuesForUndefinedKeys)
-      return this._replaceTexts(_defaultVertexShader, obj._shadableHelper, keys)
+      return this._replaceTexts(txt, obj._shadableHelper, keys)
     }
-    return this._replaceTexts(_defaultVertexShader, obj._shadableHelper)
+    return this._replaceTexts(txt, obj._shadableHelper)
   }
 
   /**
@@ -3013,11 +3024,16 @@ export default class SCNRenderer extends NSObject {
    * @returns {string} -
    */
   _fragmentShaderForObject(obj) {
+    let txt = obj.program.fragmentShader
+    if(!txt){
+      txt = _defaultFragmentShader
+    }
+
     if(obj instanceof SCNMaterial && obj._valuesForUndefinedKeys){
       const keys = Object.keys(obj._valuesForUndefinedKeys)
-      return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper, keys)
+      return this._replaceTexts(txt, obj._shadableHelper, keys)
     }
-    return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper)
+    return this._replaceTexts(txt, obj._shadableHelper)
   }
 
   /**

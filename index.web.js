@@ -2837,7 +2837,8 @@ module.exports =
 	  }, {
 	    key: 'valueForUndefinedKey',
 	    value: function valueForUndefinedKey(key) {
-	      throw new Error('valueForKey: undefined key: ' + key);
+	      return undefined;
+	      //throw new Error(`valueForKey: undefined key: ${key}`)
 	    }
 
 	    /**
@@ -49571,6 +49572,12 @@ module.exports =
 	     */
 	    _this.library = null;
 
+	    /**
+	     * @access private
+	     * @type {boolean}
+	     */
+	    _this._programCompiled = false;
+
 	    _this._context = null;
 
 	    /**
@@ -49578,6 +49585,18 @@ module.exports =
 	     * @type {WebGLProgram}
 	     */
 	    _this._glProgram = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLShader}
+	     */
+	    _this._glVertexShader = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLShader}
+	     */
+	    _this._glFragmentShader = null;
 
 	    /**
 	     * @access private
@@ -53657,11 +53676,11 @@ module.exports =
 	     * @returns {SCNProgram} -
 	     */
 	    value: function _getProgramForGeometry(geometry) {
-	      if (geometry.program !== null) {
+	      if (geometry.program !== null && geometry.program._programCompiled) {
 	        return geometry.program;
 	      }
 
-	      if (geometry._shadableHelper !== null) {
+	      if (geometry.program || geometry._shadableHelper !== null) {
 	        this._compileProgramForObject(geometry);
 	      }
 	      var _iteratorNormalCompletion7 = true;
@@ -53672,7 +53691,7 @@ module.exports =
 	        for (var _iterator7 = geometry.materials[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
 	          var material = _step7.value;
 
-	          if (material._shadableHelper !== null && material.program === null) {
+	          if (material.program || material._shadableHelper !== null) {
 	            this._compileProgramForObject(material);
 	          }
 	        }
@@ -53707,8 +53726,14 @@ module.exports =
 	    key: '_compileProgramForObject',
 	    value: function _compileProgramForObject(obj) {
 	      var gl = this.context;
-	      var p = new _SCNProgram2.default();
-	      //p._glProgram = gl.createProgram()
+	      var p = obj.program;
+	      if (!p) {
+	        p = new _SCNProgram2.default();
+	        obj.program = p;
+	      } else if (p._programCompiled) {
+	        return p;
+	      }
+
 	      var glProgram = p._getGLProgramForContext(gl);
 
 	      var vsText = this._vertexShaderForObject(obj);
@@ -53722,7 +53747,7 @@ module.exports =
 	        var info = gl.getShaderInfoLog(vertexShader);
 	        throw new Error('vertex shader compile error: ' + info);
 	      }
-	      p.vertexShader = vertexShader;
+	      p._glVertexShader = vertexShader;
 
 	      // initialize fragment shader
 	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
@@ -53732,7 +53757,7 @@ module.exports =
 	        var _info = gl.getShaderInfoLog(fragmentShader);
 	        throw new Error('fragment shader compile error: ' + _info);
 	      }
-	      p.fragmentShader = fragmentShader;
+	      p._glFragmentShader = fragmentShader;
 
 	      gl.attachShader(glProgram, vertexShader);
 	      gl.attachShader(glProgram, fragmentShader
@@ -53744,7 +53769,7 @@ module.exports =
 	        throw new Error('program link error: ' + _info2);
 	      }
 
-	      obj.program = p;
+	      p._programCompiled = true;
 
 	      return p;
 	    }
@@ -53842,11 +53867,16 @@ module.exports =
 	     * @returns {string} -
 	     */
 	    value: function _vertexShaderForObject(obj) {
+	      var txt = obj.program.vertexShader;
+	      if (!txt) {
+	        txt = _defaultVertexShader;
+	      }
+
 	      if (obj instanceof _SCNMaterial2.default && obj._valuesForUndefinedKeys) {
 	        var keys = Object.keys(obj._valuesForUndefinedKeys);
-	        return this._replaceTexts(_defaultVertexShader, obj._shadableHelper, keys);
+	        return this._replaceTexts(txt, obj._shadableHelper, keys);
 	      }
-	      return this._replaceTexts(_defaultVertexShader, obj._shadableHelper);
+	      return this._replaceTexts(txt, obj._shadableHelper);
 	    }
 
 	    /**
@@ -53864,11 +53894,16 @@ module.exports =
 	     * @returns {string} -
 	     */
 	    value: function _fragmentShaderForObject(obj) {
+	      var txt = obj.program.fragmentShader;
+	      if (!txt) {
+	        txt = _defaultFragmentShader;
+	      }
+
 	      if (obj instanceof _SCNMaterial2.default && obj._valuesForUndefinedKeys) {
 	        var keys = Object.keys(obj._valuesForUndefinedKeys);
-	        return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper, keys);
+	        return this._replaceTexts(txt, obj._shadableHelper, keys);
 	      }
-	      return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper);
+	      return this._replaceTexts(txt, obj._shadableHelper);
 	    }
 
 	    /**
@@ -54988,7 +55023,7 @@ module.exports =
 	        var info = gl.getShaderInfoLog(vertexShader);
 	        throw new Error('vertex shader compile error: ' + info);
 	      }
-	      this.__defaultProgram.vertexShader = vertexShader;
+	      this.__defaultProgram._glVertexShader = vertexShader;
 
 	      // initialize fragment shader
 	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
@@ -54998,7 +55033,7 @@ module.exports =
 	        var _info3 = gl.getShaderInfoLog(fragmentShader);
 	        throw new Error('fragment shader compile error: ' + _info3);
 	      }
-	      this.__defaultProgram.fragmentShader = fragmentShader;
+	      this.__defaultProgram._glFragmentShader = fragmentShader;
 
 	      gl.attachShader(glProgram, vertexShader);
 	      gl.attachShader(glProgram, fragmentShader

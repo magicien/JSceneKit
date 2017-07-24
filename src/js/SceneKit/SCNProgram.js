@@ -103,6 +103,13 @@ export default class SCNProgram extends NSObject {
      */
     this.library = null
 
+
+    /**
+     * @access private
+     * @type {boolean}
+     */
+    this._programCompiled = false
+
     this._context = null
 
     /**
@@ -110,6 +117,18 @@ export default class SCNProgram extends NSObject {
      * @type {WebGLProgram}
      */
     this._glProgram = null
+
+    /**
+     * @access private
+     * @type {WebGLShader}
+     */
+    this._glVertexShader = null
+
+    /**
+     * @access private
+     * @type {WebGLShader}
+     */
+    this._glFragmentShader = null
 
     /**
      * @access private

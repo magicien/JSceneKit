@@ -1297,7 +1297,8 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1413457-value
    */
   valueForUndefinedKey(key) {
-    throw new Error(`valueForKey: undefined key: ${key}`)
+    return undefined
+    //throw new Error(`valueForKey: undefined key: ${key}`)
   }
 
   /**
