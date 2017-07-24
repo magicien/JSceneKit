@@ -1,6 +1,6 @@
 {
   "name": "jscenekit",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "Port of SceneKit framework to JavaScript",
   "main": "./index.node.js",
   "browser": {
