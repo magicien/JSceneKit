@@ -42,6 +42,10 @@ const _defaultVertexShader =
   #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
   #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
   #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
+
+  #define NUM_SHADOW_LIGHTS (NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS)
+  #define NUM_LIGHTS (NUM_AMBIENT_LIGHTS + NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS + NUM_IES_LIGHTS + NUM_PROBE_LIGHTS)
+
   #define USE_SHADER_MODIFIER_GEOMETRY __USE_SHADER_MODIFIER_GEOMETRY__
 
   layout (std140) uniform cameraUniform {
@@ -97,9 +101,38 @@ const _defaultVertexShader =
   };
 
   layout (std140) uniform lightUniform {
-    __LIGHT_DEFINITION__
+    #if NUM_AMBIENT_LIGHTS > 0
+      AmbientLight ambient[NUM_AMBIENT_LIGHTS];
+    #endif
+    #if NUM_DIRECTIONAL_LIGHTS > 0
+      DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];
+    #endif
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0
+      DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    #endif
+    #if NUM_OMNI_LIGHTS > 0
+      OmniLight omni[NUM_OMNI_LIGHTS];
+    #endif
+    #if NUM_SPOT_LIGHTS > 0
+      SpotLight spot[NUM_SPOT_LIGHTS];
+    #endif
+    #if NUM_IES_LIGHTS > 0
+      IESLight ies[NUM_IES_LIGHTS];
+    #endif
+    #if NUM_PROBE_LIGHTS > 0
+      ProbeLight probe[NUM_PROBE_LIGHTS];
+    #endif
+    #if NUM_LIGHTS == 0
+      vec4 dummy;
+    #endif
   } light;
-  __VS_LIGHT_VARS__
+  #if NUM_SHADOW_LIGHTS > 0
+    out vec3 v_light[NUM_SHADOW_LIGHTS];
+  #endif
+  #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0
+    out vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    out vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+  #endif
 
   layout (std140) uniform fogUniform {
     vec4 color;
@@ -201,9 +234,54 @@ const _defaultVertexShader =
     v_eye = viewVec;
 
     v_color = material.emission;
+
+    // Lighting
     int numLights = 0;
 
-    __VS_LIGHTING__
+    #if NUM_AMBIENT_LIGHTS > 0
+      for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){
+        v_color += light.ambient[i].color * material.ambient;
+      }
+    #endif
+
+    #if NUM_DIRECTIONAL_LIGHTS > 0
+      for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
+        v_light[numLights + i] = -light.directional[i].direction.xyz;
+      }
+      numLights += NUM_DIRECTIONAL_LIGHTS;
+    #endif
+
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0
+      for(int i=0; i<NUM_DIRECTIONAL_SHADOW_LIGHTS; i++){
+        v_light[numLights + i] = -light.directionalShadow[i].direction.xyz;
+        v_directionalShadowDepth[i] = light.directionalShadow[i].viewProjectionTransform * vec4(pos, 1.0);
+        v_directionalShadowTexcoord[i] = light.directionalShadow[i].shadowProjectionTransform * vec4(pos, 1.0);
+      }
+      numLights += NUM_DIRECTIONAL_SHADOW_LIGHTS;
+    #endif
+
+    #if NUM_OMNI_LIGHTS > 0
+      for(int i=0; i<NUM_OMNI_LIGHTS; i++){
+        v_light[numLights + i] = light.omni[i].position.xyz - pos;
+      }
+      numLights += NUM_OMNI_LIGHTS;
+    #endif
+
+    #if NUM_SPOT_LIGHTS > 0
+      for(int i=0; i<NUM_SPOT_LIGHTS; i++){
+        v_light[numLights + i] = light.spot[i].position.xyz - pos;
+      }
+      numLights += NUM_SPOT_LIGHTS;
+    #endif
+
+    #if NUM_IES_LIGHTS > 0
+      // TODO: implement
+    #endif
+
+    #if NUM_PROBE_LIGHTS > 0
+      // TODO: implement
+    #endif
+
 
     float distance = length(viewVec);
     v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);
@@ -213,47 +291,6 @@ const _defaultVertexShader =
     gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);
   }
 `
-
-
-const _vsAmbient = `
-  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){
-    v_color += light.ambient[i].color * material.ambient;
-  }
-`
-
-const _vsDirectional = `
-  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
-    v_light[numLights + i] = -light.directional[i].direction.xyz;
-  }
-  numLights += NUM_DIRECTIONAL_LIGHTS;
-`
-
-const _vsDirectionalShadow = `
-  for(int i=0; i<NUM_DIRECTIONAL_SHADOW_LIGHTS; i++){
-    v_light[numLights + i] = -light.directionalShadow[i].direction.xyz;
-    v_directionalShadowDepth[i] = light.directionalShadow[i].viewProjectionTransform * vec4(pos, 1.0);
-    v_directionalShadowTexcoord[i] = light.directionalShadow[i].shadowProjectionTransform * vec4(pos, 1.0);
-  }
-  numLights += NUM_DIRECTIONAL_SHADOW_LIGHTS;
-`
-
-
-const _vsOmni = `
-  for(int i=0; i<NUM_OMNI_LIGHTS; i++){
-    v_light[numLights + i] = light.omni[i].position.xyz - pos;
-  }
-  numLights += NUM_OMNI_LIGHTS;
-`
-
-const _vsSpot = `
-  for(int i=0; i<NUM_SPOT_LIGHTS; i++){
-    v_light[numLights + i] = light.spot[i].position.xyz - pos;
-  }
-  numLights += NUM_SPOT_LIGHTS;
-`
-
-const _vsIES = ''
-const _vsProbe = ''
 
 const _cameraLoc = 0
 const _materialLoc = 1
@@ -298,6 +335,10 @@ const _defaultFragmentShader =
   #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
   #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
   #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
+
+  #define NUM_SHADOW_LIGHTS (NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS)
+  #define NUM_LIGHTS (NUM_AMBIENT_LIGHTS + NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS + NUM_IES_LIGHTS + NUM_PROBE_LIGHTS)
+
   #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__
   #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__
 
@@ -343,9 +384,48 @@ const _defaultFragmentShader =
   };
 
   layout (std140) uniform lightUniform {
-    __LIGHT_DEFINITION__
+    #if NUM_AMBIENT_LIGHTS > 0
+      AmbientLight ambient[NUM_AMBIENT_LIGHTS];
+    #endif
+    #if NUM_DIRECTIONAL_LIGHTS > 0
+      DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];
+    #endif
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0
+      DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    #endif
+    #if NUM_OMNI_LIGHTS > 0
+      OmniLight omni[NUM_OMNI_LIGHTS];
+    #endif
+    #if NUM_SPOT_LIGHTS > 0
+      SpotLight spot[NUM_SPOT_LIGHTS];
+    #endif
+    #if NUM_IES_LIGHTS > 0
+      IESLight ies[NUM_IES_LIGHTS];
+    #endif
+    #if NUM_PROBE_LIGHTS > 0
+      ProbeLight probe[NUM_PROBE_LIGHTS];
+    #endif
+    #if NUM_LIGHTS == 0
+      vec4 dummy;
+    #endif
   } light;
-  __FS_LIGHT_VARS__
+  #if NUM_SHADOW_LIGHTS > 0
+    in vec3 v_light[NUM_SHADOW_LIGHTS];
+  #endif
+  #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0
+    in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    uniform sampler2D u_shadowMapTexture0;
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 1
+      uniform sampler2D u_shadowMapTexture1;
+    #endif
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 2
+      uniform sampler2D u_shadowMapTexture2;
+    #endif
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 3
+      uniform sampler2D u_shadowMapTexture3;
+    #endif
+  #endif
 
   layout (std140) uniform fogUniform {
     vec4 color;
@@ -467,8 +547,6 @@ const _defaultFragmentShader =
       }
     }
 
-    int numLights = 0;
-
     vec4 specularColor;
     if(textureFlags[TEXTURE_SPECULAR_INDEX]){
       vec4 color = texture(u_specularTexture, v_texcoord0);
@@ -478,8 +556,64 @@ const _defaultFragmentShader =
     }
       
     _output.color.a = material.diffuse.a;
+
+    // Lighting
+    int numLights = 0;
+
+    #if NUM_AMBIENT_LIGHTS > 0
+      // nothing to do for ambient lights
+    #endif
+
+    #if NUM_DIRECTIONAL_LIGHTS > 0
+      for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
+        // diffuse
+        vec3 lightVec = normalize(v_light[numLights + i]);
+        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+        _output.color.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
+
+        // specular
+        if(diffuse > 0.0f){
+          vec3 halfVec = normalize(lightVec + _surface.view);
+          float specular = pow(dot(halfVec, _surface.normal), material.shininess);
+          _output.color.rgb += specularColor.rgb * specular;
+        }
+      }
+      numLights += NUM_DIRECTIONAL_LIGHTS;
+    #endif
+
+    #if NUM_OMNI_LIGHTS > 0
+      for(int i=0; i<NUM_OMNI_LIGHTS; i++){
+        // diffuse
+        vec3 lightVec = normalize(v_light[numLights + i]);
+        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+        _output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
+
+        // specular
+        if(diffuse > 0.0f){
+          vec3 halfVec = normalize(lightVec + _surface.view);
+          float specular = pow(dot(halfVec, _surface.normal), material.shininess);
+          //outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
+          _output.color.rgb += specularColor.rgb * specular;
+        }
+      }
+      numLights += NUM_OMNI_LIGHTS;
+    #endif
+
+    #if NUM_SPOT_LIGHTS > 0
+      // TODO: implement
+    #endif
+
+    #if NUM_IES_LIGHTS > 0
+      // TODO: implement
+    #endif
+
+    #if NUM_PROBE_LIGHTS > 0
+      // TODO: implement
+    #endif
+
     __FS_LIGHTING__
     
+
     // diffuse texture
     if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
       vec4 color = texture(u_diffuseTexture, v_texcoord0);
@@ -507,27 +641,6 @@ const _defaultFragmentShader =
 
     outColor = _output.color;
   }
-`
-
-const _fsAmbient = `
-`
-
-const _fsDirectional = `
-  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
-    // diffuse
-    vec3 lightVec = normalize(v_light[numLights + i]);
-    float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
-    _output.color.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
-
-    // specular
-    if(diffuse > 0.0f){
-      vec3 halfVec = normalize(lightVec + _surface.view);
-      float specular = pow(dot(halfVec, _surface.normal), material.shininess);
-      //outColor.rgb += material.specular.rgb * specular;
-      _output.color.rgb += specularColor.rgb * specular;
-    }
-  }
-  numLights += NUM_DIRECTIONAL_LIGHTS;
 `
 
 const _fsDirectionalShadow = `
@@ -573,31 +686,6 @@ const _fsDirectionalShadow = `
 
   numLights += 1;
 `
-
-const _fsOmni = `
-  for(int i=0; i<NUM_OMNI_LIGHTS; i++){
-    // diffuse
-    vec3 lightVec = normalize(v_light[numLights + i]);
-    float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
-    _output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
-
-    // specular
-    if(diffuse > 0.0f){
-      vec3 halfVec = normalize(lightVec + _surface.view);
-      float specular = pow(dot(halfVec, _surface.normal), material.shininess);
-      //outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
-      _output.color.rgb += specularColor.rgb * specular;
-    }
-  }
-  numLights += NUM_OMNI_LIGHTS;
-`
-
-const _fsSpot = `
-  // TODO: implement
-`
-
-const _fsIES = ''
-const _fsProbe = ''
 
 const _defaultCameraDistance = 15
 
@@ -2478,16 +2566,19 @@ export default class SCNRenderer extends NSObject {
 
   /**
    * @access private
-   * @param {SCNMatrix4} viewProjectionTransform -
    * @param {SCNVector3} from -
    * @param {SCNVector3} to -
    * @param {Map} options -
    * @param {Object} _options -
    * @returns {SCNHitTestResult[]} -
    */
-  _physicsHitTestByGPU(viewProjectionTransform, from, to, options, _options) {
+  _physicsHitTestByGPU(from, to, options, _options) {
     const result = []
     const gl = this._context
+
+    const viewProjectionTransform = this._createViewProjectionTransformForRay(from, to)
+    const _from = from.transform(viewProjectionTransform)
+    const _to = to.transform(viewProjectionTransform)
 
     if(this._hitFrameBuffer === null){
       this._initializeHitFrameBuffer()
@@ -2507,8 +2598,8 @@ export default class SCNRenderer extends NSObject {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
     // screen position
-    const x = (from.x + 1.0) * 0.5 * this._viewRect.size.width
-    const y = (from.y + 1.0) * 0.5 * this._viewRect.size.height
+    const x = (_from.x + 1.0) * 0.5 * this._viewRect.size.width
+    const y = (_from.y + 1.0) * 0.5 * this._viewRect.size.height
     // left top of the scissor area
     const areaSize = 3
     let sx = x - 1
@@ -2582,7 +2673,7 @@ export default class SCNRenderer extends NSObject {
     //const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
     //const position = screenPos.transform(viewProjectionTransform.invert())
     const p = (((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0) + positionBuf[0]) / 255.0
-    const screenPos = from.lerp(to, p)
+    const screenPos = _from.lerp(_to, p)
     const position = screenPos.transform(viewProjectionTransform.invert())
 
     const normalBuf = new Uint8Array(4)
@@ -2624,6 +2715,56 @@ export default class SCNRenderer extends NSObject {
     return result
   }
 
+  /**
+   *
+   * @access private
+   * @param {SCNVector3} from -
+   * @param {SCNVector3} to -
+   * @returns {SCNMatrix4} -
+   */
+  _createViewProjectionTransformForRay(from, to) {
+    const vec = to.sub(from)
+    const len = vec.length()
+    const zNear = 1
+    const zFar = zNear + len
+    const proj = new SCNMatrix4()
+    proj.m11 = 1
+    proj.m22 = 1
+    proj.m33 = -(zFar + zNear) / len
+    proj.m34 = -1
+    proj.m43 = -2 * zFar * zNear / len
+    // TODO: use an orthographic projection
+    //proj.m33 = -2 / len
+    //proj.m43 = -(zFar + zNear) / len
+    //proj.m44 = 1
+
+    const view = new SCNMatrix4()
+    const up = new SCNVector3(0, 1, 0)
+    if(vec.x === 0 && vec.z === 0){
+      up.y = 0
+      up.z = 1
+    }
+    const f = vec.normalize()
+    const s = f.cross(up).normalize()
+    const u = s.cross(f).normalize()
+    view.m11 = s.x
+    view.m21 = s.y
+    view.m31 = s.z
+    view.m12 = u.x
+    view.m22 = u.y
+    view.m32 = u.z
+    view.m13 = -f.x
+    view.m23 = -f.y
+    view.m33 = -f.z
+    view.m44 = 1
+    const eye = from.sub(f.mul(zNear))
+    const t = eye.transform(view)
+    view.m41 = -t.x
+    view.m42 = -t.y
+    view.m43 = -t.z
+
+    return view.mult(proj)
+  }
 
   /**
    * Required. Returns a Boolean value indicating whether a node might be visible from a specified point of view.
@@ -3098,75 +3239,15 @@ export default class SCNRenderer extends NSObject {
       }
     }
 
-    let lightDefinition = ''
     let vsLighting = ''
     let fsLighting = ''
-    if(numAmbient > 0){
-      lightDefinition += 'AmbientLight ambient[NUM_AMBIENT_LIGHTS]; '
-      vsLighting += _vsAmbient
-      fsLighting += _fsAmbient
-    }
-    if(numDirectional > 0){
-      lightDefinition += 'DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS]; '
-      vsLighting += _vsDirectional
-      fsLighting += _fsDirectional
-    }
     if(numDirectionalShadow > 0){
-      lightDefinition += 'DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
-      vsLighting += _vsDirectionalShadow
       for(let i=0; i<numDirectionalShadow; i++){
         const fsDSText = _fsDirectionalShadow.replace(new RegExp('__I__', 'g'), i)
         fsLighting += fsDSText
       }
     }
-    if(numOmni > 0){
-      lightDefinition += 'OmniLight omni[NUM_OMNI_LIGHTS]; '
-      vsLighting += _vsOmni
-      fsLighting += _fsOmni
-    }
-    if(numSpot > 0){
-      lightDefinition += 'OmniLight spot[NUM_OMNI_LIGHTS]; '
-      vsLighting += _vsSpot
-      fsLighting += _fsSpot
-    }
-    if(numIES > 0){
-      lightDefinition += 'IESLight ies[NUM_IES_LIGHTS]; '
-      vsLighting += _vsIES
-      fsLighting += _fsIES
-    }
-    if(numProbe > 0){
-      lightDefinition += 'ProbeLight probe[NUM_PROBE_LIGHTS]; '
-      vsLighting += _vsProbe
-      fsLighting += _fsProbe
-    }
-    if(lightDefinition === ''){
-      lightDefinition = 'vec4 dummy;' // put something for avoiding error
-    }
-    vars.set('__LIGHT_DEFINITION__', lightDefinition)
-    vars.set('__VS_LIGHTING__', vsLighting)
     vars.set('__FS_LIGHTING__', fsLighting)
-
-    if(numDirectional + numDirectionalShadow + numOmni + numSpot > 0){
-      const v = 'vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS]; '
-      let vs = 'out ' + v
-      let fs = 'in ' + v
-      if(numDirectionalShadow > 0){
-        vs += 'out vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
-        vs += 'out vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
-        fs += 'in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
-        fs += 'in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
-        for(let i=0; i<numDirectionalShadow; i++){
-          //fs += 'uniform sampler2DShadow u_shadowMapTexture' + i + '; '
-          fs += 'uniform sampler2D u_shadowMapTexture' + i + '; '
-        }
-      }
-
-      vars.set('__VS_LIGHT_VARS__', vs)
-      vars.set('__FS_LIGHT_VARS__', fs)
-    }else{
-      vars.set('__VS_LIGHT_VARS__', '')
-      vars.set('__FS_LIGHT_VARS__', '')
-    }
 
     let result = text
     vars.forEach((value, key) => {

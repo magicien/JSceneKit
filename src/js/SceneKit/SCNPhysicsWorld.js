@@ -526,104 +526,7 @@ if (results.firstObject.node == player) {
       searchMode = opt.get(_TestOption.searchMode)
     }
     
-    //let originVec = origin._createBtVector3()
-    //let destVec = dest._createBtVector3()
-    //let rayCallback = null
-    //switch(searchMode){
-    //  case _TestSearchMode.all:
-    //    // TODO: implement
-    //    throw new Error('TestSearchMode.all not implemented')
-    //  case _TestSearchMode.any:
-    //    // TODO: implement
-    //    throw new Error('TestSearchMode.any not implemented')
-    //  case _TestSearchMode.closest:
-    //    rayCallback = new Ammo.ClosestRayResultCallback(originVec, destVec)
-    //    break
-    //  default:
-    //    throw new Error(`unknown search mode: ${searchMode}`)
-    //}
-
-    //this._world.rayTest(originVec, destVec, rayCallback)
-    //if(rayCallback.hasHit()){
-    //  const result = new SCNHitTestResult()
-    //  const body = Ammo.btRigidBody.prototype.upcast(rayCallback.get_m_collisionObject())
-    //  result._node = null
-    //  result._geometryIndex = 0
-    //  result._faceIndex = 0
-    //  result._worldCoordinates = new SCNVector3(rayCallback.get_m_hitPointWorld())
-    //  result._localCoordinates = null
-    //  result._worldNormal = new SCNVector3(rayCallback.get_m_hitNormalWorld())
-    //  result._localNormal = null
-    //  result._modelTransform = null
-    //  result._boneNode = null
-    //  results.push(result)
-    //}
-
-    //Ammo.destroy(originVec)
-    //Ammo.destroy(destVec)
-    //Ammo.destroy(rayCallback)
-
-    //return results
-    const viewProjectionTransform = this._createViewProjectionTransform(origin, dest)
-    const from = origin.transform(viewProjectionTransform)
-    const to = dest.transform(viewProjectionTransform)
-    //console.log('**** rayTestWithSegmentFromTo ****')
-    //console.log(`origin: ${origin.floatArray()}`)
-    //console.log(`dest: ${dest.floatArray()}`)
-    //console.log(`from: ${from.floatArray()}`)
-    //console.log(`to: ${to.floatArray()}`)
-    
-    return this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt)
-  }
-
-  /**
-   * @access private
-   * @param {SCNVector3} from -
-   * @param {SCNVector3} to -
-   * @returns {SCNMatrix4} -
-   */
-  _createViewProjectionTransform(from, to) {
-    const vec = to.sub(from)
-    const len = vec.length()
-    const zNear = 1
-    const zFar = zNear + len
-    const proj = new SCNMatrix4()
-    proj.m11 = 1
-    proj.m22 = 1
-    proj.m33 = -(zFar + zNear) / len
-    proj.m34 = -1
-    proj.m43 = -2 * zFar * zNear / len
-    // TODO: use an orthographic projection
-    //proj.m33 = -2 / len
-    //proj.m43 = -(zFar + zNear) / len
-    //proj.m44 = 1
-
-    const view = new SCNMatrix4()
-    const up = new SCNVector3(0, 1, 0)
-    if(vec.x === 0 && vec.z === 0){
-      up.y = 0
-      up.z = 1
-    }
-    const f = vec.normalize()
-    const s = f.cross(up).normalize()
-    const u = s.cross(f).normalize()
-    view.m11 = s.x
-    view.m21 = s.y
-    view.m31 = s.z
-    view.m12 = u.x
-    view.m22 = u.y
-    view.m32 = u.z
-    view.m13 = -f.x
-    view.m23 = -f.y
-    view.m33 = -f.z
-    view.m44 = 1
-    const eye = from.sub(f.mul(zNear))
-    const t = eye.transform(view)
-    view.m41 = -t.x
-    view.m42 = -t.y
-    view.m43 = -t.z
-
-    return view.mult(proj)
+    return this._renderer._physicsHitTestByGPU(origin, dest, opt)
   }
 
   /**
@@ -713,9 +616,6 @@ if (contacts.count == 0) {
     const staticType = SCNPhysicsBodyType.static
     for(let i=0; i<objects.length; i++){
       const bodyA = objects[i].presentation.physicsBody
-      //if(bodyA.type === staticType){
-      //  continue
-      //}
       if(bodyA.physicsShape._sourceGeometry instanceof SCNCapsule){
         contacts.push(...this._capsuleTestWithObjects(bodyA, objects))
       }
@@ -724,12 +624,6 @@ if (contacts.count == 0) {
           continue
         }
         const bodyB = objects[j].presentation.physicsBody
-        //if(bodyB.physicsShape._sourceGeometry instanceof SCNCapsule){
-        //  continue
-        //}
-        //if(i > j && bodyB.type !== staticType){
-        //  continue
-        //}
         contacts.push(...this.contactTestBetween(bodyA, bodyB))
       }
     }
@@ -740,6 +634,7 @@ if (contacts.count == 0) {
           this.contactDelegate.physicsWorldDidBegin(this, contact)
         }
       }
+      // TODO: callback
       // this.contactDelegate.physicsWorldDidUpdate
       // this.contactDelegate.physicsWorldDidEnd
     }
@@ -773,44 +668,12 @@ if (contacts.count == 0) {
       return result
     }
 
-    /*
     const bodyTransform = body._node._worldTransform
     const capsule = body.physicsShape._sourceGeometry
-    const origin = (new SCNVector3(0, capsule.height * 0.5, 0)).transform(bodyTransform)
-    const dest = (new SCNVector3(0, -capsule.height * 0.5, 0)).transform(bodyTransform)
-
-    const viewProjectionTransform = this._createViewProjectionTransform(origin, dest)
-    const from = origin.transform(viewProjectionTransform)
-    const to = dest.transform(viewProjectionTransform)
-    
-    const opt = new Map()
-    const opt2 = {
-      targets: objs,
-      rayRadius: capsule.capRadius
-    }
-
-    // TODO: calculate contacts
-    const hitResult = this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt, opt2)
-    for(const hit of hitResult){
-      const contact = new SCNPhysicsContact()
-      contact._nodeA = body._node
-      contact._nodeB = hit._node
-      contact._contactPoint = hit._worldCoordinates
-      contact._contactNormal = hit._worldNormal
-      contact._penetrationDistance = 1.0
-      result.push(contact)
-    }
-    return result
-    */
-    const bodyTransform = body._node._worldTransform
-    const capsule = body.physicsShape._sourceGeometry
-    //console.warn(`capsule ${body._node.name}`)
     for(const obj of objs){
       if(!this._intersectsBoundingBox(body._node, obj)){
         continue
       }
-
-      //console.warn(`  intersects with ${obj.name}`)
 
       const contacts = this._contactTestCapsuleAndConcave(body._node, obj)
       result.push(...contacts)
