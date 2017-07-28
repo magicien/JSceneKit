@@ -19306,31 +19306,14 @@ module.exports =
 	        euler.z = 2.0 * Math.atan2(z * Math.sin(this.w * 0.5), Math.cos(this.w * 0.5));
 	      } else {
 	        var m23 = x * sinW + y * z * cosWR;
-	        var m33 = cosW + z * z * cosWR;
 	        //const m33 = 1 - (y * y + x * x) * cosWR
+	        var m33 = cosW + z * z * cosWR;
 	        var m12 = z * sinW + x * y * cosWR;
-	        var m11 = cosW + x * x * cosWR;
 	        //const m11 = 1 - (z * z + y * y) * cosWR
-	        //euler.x = Math.atan2(x * sinW + y * z * cosWR, 1 - (y * y + x * x) * cosWR)
+	        var m11 = cosW + x * x * cosWR;
 	        euler.x = Math.atan2(m23, m33);
-	        euler.y = Math.asin(s
-	        //euler.z = Math.atan2(z * sinW + x * y * cosWR, 1 - (z * z + y * y) * cosWR)
-	        );euler.z = Math.atan2(m12, m11
-	        //console.log(`euler.x: ${euler.x}`)
-	        //if(m23 !== 0){
-	        //  console.log(`Math.sin(euler.x): ${Math.sin(euler.x)}`)
-	        //  console.log(`m23: ${m23}`)
-	        //  if(Math.sin(euler.x) * m23 < 0){
-	        //    euler.y = Math.PI - euler.y
-	        //  }
-	        //}else{
-	        //  console.log(`Math.cos(euler.x): ${Math.cos(euler.x)}`)
-	        //  console.log(`m33: ${m33}`)
-	        //  if(Math.cos(euler.x) * m33 < 0){
-	        //    euler.y = Math.PI - euler.y
-	        //  }
-	        //}
-	        );
+	        euler.y = Math.asin(s // How can I get euler.y > pi/2 ?
+	        );euler.z = Math.atan2(m12, m11);
 	      }
 
 	      return euler;
@@ -32412,11 +32395,11 @@ module.exports =
 	        colorBufferWriteMask: 'integer',
 	        fillMode: 'integer',
 	        valuesForUndefinedKeys: ['NSMutableDictionary', '_valuesForUndefinedKeys'],
+	        shadableHelper: ['SCNShadableHelper', '_shadableHelper'],
 
 	        avoidsOverLighting: ['boolean', null],
 	        entityID: ['string', '_entityID'],
 	        indexOfRefraction: ['integer', null],
-	        shadableHelper: ['SCNShadableHelper', '_shadableHelper'],
 	        selfIlluminationOcclusion: ['integer', null]
 	      };
 	    }
@@ -59375,37 +59358,13 @@ module.exports =
 	    });
 
 	    this._canvas.addEventListener('keydown', function (e) {
-	      //const ev = this._createEvent(e)
-	      var ev = {
-	        keyCode: 0,
-	        isARepeat: false,
-	        _doDefaultAction: false
-	      };
-	      if (_KeyCode.has(e.code)) {
-	        ev.keyCode = _KeyCode.get(e.code);
-	      } else {
-	        console.warn('unknown keycode: ' + e.code);
-	      }
-
-	      if (typeof e.repeat !== 'undefined') {
-	        ev.isARepeat = e.repeat;
-	      }
+	      var ev = _this._createEvent(e);
 
 	      _this.keyDownWith(ev);
 	      _this._preventDefault(ev);
 	    });
 	    this._canvas.addEventListener('keyup', function (e) {
-	      //const ev = this._createEvent(e)
-	      var ev = {
-	        keyCode: 0,
-	        isARepeat: false,
-	        _doDefaultAction: false
-	      };
-	      if (_KeyCode.has(e.code)) {
-	        ev.keyCode = _KeyCode.get(e.code);
-	      } else {
-	        console.warn('unknown keycode: ' + e.code);
-	      }
+	      var ev = _this._createEvent(e);
 
 	      _this.keyUpWith(ev);
 	      _this._preventDefault(ev);
@@ -60223,16 +60182,59 @@ module.exports =
 	  }, {
 	    key: '_createEvent',
 	    value: function _createEvent(e) {
-	      // TODO: implement
-	      e.locationInWindow = new _CGPoint2.default(e.clientX, e.clientY);
-	      e._doDefaultAction = false;
-	      return e;
+	      // TODO: implement NSEvent
+	      var ev = {};
+
+	      ev.locationInWindow = new _CGPoint2.default(e.clientX, e.clientY);
+
+	      ev.modifierFlags = 0; // TODO: implement
+	      ev.timestamp = e.timeStamp;
+	      // ev.type
+
+	      if (typeof window !== 'undefined') {
+	        ev.window = window;
+	      }
+	      ev.windowNumber = 0;
+	      ev.eventRef = e;
+	      ev.cgEvent = null;
+	      ev.characters = null; // TODO: implement
+	      ev.charactersIgnoringModifiers = null; // TODO: implement
+
+	      ev.isARepeat = false;
+	      if (typeof e.repeat !== 'undefined') {
+	        ev.isARepeat = e.repeat;
+	      }
+
+	      if (e.code && _KeyCode.has(e.code)) {
+	        ev.keyCode = _KeyCode.get(e.code);
+	      } else {
+	        ev.keyCode = 0;
+	      }
+
+	      ev.buttonNumber = 0;
+	      ev.clickCount = 0;
+	      ev.associatedEventsMask = null;
+	      ev.eventNumber = 0;
+	      ev.trackingNumber = 0;
+	      ev.trackingArea = 0;
+	      ev.userData = null;
+
+	      ev.data1 = 0;
+	      ev.data2 = 0;
+	      ev.sutype = null;
+
+	      ev.deltaX = e.deltaX;
+	      ev.deltaY = e.deltaY;
+	      ev.deltaZ = e.deltaZ;
+
+	      ev._doDefaultAction = false;
+	      return ev;
 	    }
 	  }, {
 	    key: '_preventDefault',
 	    value: function _preventDefault(e) {
 	      if (!e._doDefaultAction) {
-	        e.preventDefault();
+	        e.eventRef.preventDefault();
 	      }
 	    }
 

@@ -490,37 +490,13 @@ export default class SCNView {
     })
 
     this._canvas.addEventListener('keydown', (e) => {
-      //const ev = this._createEvent(e)
-      const ev = {
-        keyCode: 0,
-        isARepeat: false,
-        _doDefaultAction: false
-      }
-      if(_KeyCode.has(e.code)){
-        ev.keyCode = _KeyCode.get(e.code)
-      }else{
-        console.warn(`unknown keycode: ${e.code}`)
-      }
-
-      if(typeof e.repeat !== 'undefined'){
-        ev.isARepeat = e.repeat
-      }
+      const ev = this._createEvent(e)
 
       this.keyDownWith(ev)
       this._preventDefault(ev)
     })
     this._canvas.addEventListener('keyup', (e) => {
-      //const ev = this._createEvent(e)
-      const ev = {
-        keyCode: 0,
-        isARepeat: false,
-        _doDefaultAction: false
-      }
-      if(_KeyCode.has(e.code)){
-        ev.keyCode = _KeyCode.get(e.code)
-      }else{
-        console.warn(`unknown keycode: ${e.code}`)
-      }
+      const ev = this._createEvent(e)
 
       this.keyUpWith(ev)
       this._preventDefault(ev)
@@ -1469,15 +1445,58 @@ export default class SCNView {
    * @returns {NSEvent} -
    */
   _createEvent(e) {
-    // TODO: implement
-    e.locationInWindow = new CGPoint(e.clientX, e.clientY)
-    e._doDefaultAction = false
-    return e
+    // TODO: implement NSEvent
+    const ev = {}
+
+    ev.locationInWindow = new CGPoint(e.clientX, e.clientY)
+
+    ev.modifierFlags = 0 // TODO: implement
+    ev.timestamp = e.timeStamp
+    // ev.type
+
+    if(typeof window !== 'undefined'){
+      ev.window = window
+    }
+    ev.windowNumber = 0
+    ev.eventRef = e
+    ev.cgEvent = null
+    ev.characters = null // TODO: implement
+    ev.charactersIgnoringModifiers = null // TODO: implement
+
+    ev.isARepeat = false
+    if(typeof e.repeat !== 'undefined'){
+      ev.isARepeat = e.repeat
+    }
+
+    if(e.code && _KeyCode.has(e.code)){
+      ev.keyCode = _KeyCode.get(e.code)
+    }else{
+      ev.keyCode = 0
+    }
+
+    ev.buttonNumber = 0
+    ev.clickCount = 0
+    ev.associatedEventsMask = null
+    ev.eventNumber = 0
+    ev.trackingNumber = 0
+    ev.trackingArea = 0
+    ev.userData = null
+
+    ev.data1 = 0
+    ev.data2 = 0
+    ev.sutype = null
+
+    ev.deltaX = e.deltaX
+    ev.deltaY = e.deltaY
+    ev.deltaZ = e.deltaZ
+
+    ev._doDefaultAction = false
+    return ev
   }
 
   _preventDefault(e) {
     if(!e._doDefaultAction){
-      e.preventDefault()
+      e.eventRef.preventDefault()
     }
   }
 
