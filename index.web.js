@@ -21060,7 +21060,8 @@ module.exports =
 	    value: function rotationToEulerAngles() {
 	      var euler = new _SCNVector2.default();
 	      var sinW = Math.sin(this.w);
-	      var cosWR = 1.0 - Math.cos(this.w);
+	      var cosW = Math.cos(this.w);
+	      var cosWR = 1.0 - cosW;
 	      var len2 = this.x * this.x + this.y * this.y + this.z * this.z;
 	      if (len2 === 0) {
 	        return euler;
@@ -21085,9 +21086,32 @@ module.exports =
 	        euler.y = Math.PI * 0.5;
 	        euler.z = 2.0 * Math.atan2(z * Math.sin(this.w * 0.5), Math.cos(this.w * 0.5));
 	      } else {
-	        euler.x = Math.atan2(x * sinW + y * z * cosWR, 1 - (y * y + x * x) * cosWR);
-	        euler.y = Math.asin(s);
-	        euler.z = Math.atan2(z * sinW + x * y * cosWR, 1 - (z * z + y * y) * cosWR);
+	        var m23 = x * sinW + y * z * cosWR;
+	        var m33 = cosW + z * z * cosWR;
+	        //const m33 = 1 - (y * y + x * x) * cosWR
+	        var m12 = z * sinW + x * y * cosWR;
+	        var m11 = cosW + x * x * cosWR;
+	        //const m11 = 1 - (z * z + y * y) * cosWR
+	        //euler.x = Math.atan2(x * sinW + y * z * cosWR, 1 - (y * y + x * x) * cosWR)
+	        euler.x = Math.atan2(m23, m33);
+	        euler.y = Math.asin(s
+	        //euler.z = Math.atan2(z * sinW + x * y * cosWR, 1 - (z * z + y * y) * cosWR)
+	        );euler.z = Math.atan2(m12, m11
+	        //console.log(`euler.x: ${euler.x}`)
+	        //if(m23 !== 0){
+	        //  console.log(`Math.sin(euler.x): ${Math.sin(euler.x)}`)
+	        //  console.log(`m23: ${m23}`)
+	        //  if(Math.sin(euler.x) * m23 < 0){
+	        //    euler.y = Math.PI - euler.y
+	        //  }
+	        //}else{
+	        //  console.log(`Math.cos(euler.x): ${Math.cos(euler.x)}`)
+	        //  console.log(`m33: ${m33}`)
+	        //  if(Math.cos(euler.x) * m33 < 0){
+	        //    euler.y = Math.PI - euler.y
+	        //  }
+	        //}
+	        );
 	      }
 
 	      return euler;
@@ -28102,17 +28126,24 @@ module.exports =
 
 	    /**
 	     * @access private
-	     * @returns {Promise} -
+	     * @returns {void}
 	     */
 
 	  }, {
-	    key: '_getLoadedPromise',
-	    value: function _getLoadedPromise() {
-	      if (this._loadedPromise) {
-	        return this._loadedPromise;
-	      }
+	    key: '_resetPromise',
+	    value: function _resetPromise() {
+	      this._loadedPromise = null;
+	    }
 
-	      var promises = [];
+	    /**
+	     * @access private
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_resetPromiseRecursively',
+	    value: function _resetPromiseRecursively() {
+	      this._resetPromise();
 	      var _iteratorNormalCompletion5 = true;
 	      var _didIteratorError5 = false;
 	      var _iteratorError5 = undefined;
@@ -28121,7 +28152,7 @@ module.exports =
 	        for (var _iterator5 = this._childNodes[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
 	          var child = _step5.value;
 
-	          promises.push(child._getLoadedPromise());
+	          child._resetPromiseRecursively();
 	        }
 	      } catch (err) {
 	        _didIteratorError5 = true;
@@ -28137,63 +28168,103 @@ module.exports =
 	          }
 	        }
 	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+
+	  }, {
+	    key: '_getLoadedPromise',
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      var promises = [];
+	      var _iteratorNormalCompletion6 = true;
+	      var _didIteratorError6 = false;
+	      var _iteratorError6 = undefined;
+
+	      try {
+	        for (var _iterator6 = this._childNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	          var child = _step6.value;
+
+	          promises.push(child.didLoad);
+	        }
+	      } catch (err) {
+	        _didIteratorError6 = true;
+	        _iteratorError6 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	            _iterator6.return();
+	          }
+	        } finally {
+	          if (_didIteratorError6) {
+	            throw _iteratorError6;
+	          }
+	        }
+	      }
 
 	      if (this._particleSystems) {
-	        var _iteratorNormalCompletion6 = true;
-	        var _didIteratorError6 = false;
-	        var _iteratorError6 = undefined;
+	        var _iteratorNormalCompletion7 = true;
+	        var _didIteratorError7 = false;
+	        var _iteratorError7 = undefined;
 
 	        try {
-	          for (var _iterator6 = this._particleSystems[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-	            var system = _step6.value;
+	          for (var _iterator7 = this._particleSystems[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+	            var system = _step7.value;
 
-	            promises.push(system._getLoadedPromise());
+	            promises.push(system.didLoad);
 	          }
 	        } catch (err) {
-	          _didIteratorError6 = true;
-	          _iteratorError6 = err;
+	          _didIteratorError7 = true;
+	          _iteratorError7 = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion6 && _iterator6.return) {
-	              _iterator6.return();
+	            if (!_iteratorNormalCompletion7 && _iterator7.return) {
+	              _iterator7.return();
 	            }
 	          } finally {
-	            if (_didIteratorError6) {
-	              throw _iteratorError6;
+	            if (_didIteratorError7) {
+	              throw _iteratorError7;
 	            }
 	          }
 	        }
 	      }
 	      if (this._geometry) {
-	        promises.push(this._geometry._getLoadedPromise());
+	        promises.push(this._geometry.didLoad);
 	      }
-	      var _iteratorNormalCompletion7 = true;
-	      var _didIteratorError7 = false;
-	      var _iteratorError7 = undefined;
+	      var _iteratorNormalCompletion8 = true;
+	      var _didIteratorError8 = false;
+	      var _iteratorError8 = undefined;
 
 	      try {
-	        for (var _iterator7 = this._audioPlayers[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-	          var player = _step7.value;
+	        for (var _iterator8 = this._audioPlayers[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+	          var player = _step8.value;
 
-	          promises.push(player._getLoadedPromise());
+	          promises.push(player.didLoad);
 	        }
+	        //this._loadedPromise = Promise.all(promises)
+	        //return this._loadedPromise
 	      } catch (err) {
-	        _didIteratorError7 = true;
-	        _iteratorError7 = err;
+	        _didIteratorError8 = true;
+	        _iteratorError8 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
-	            _iterator7.return();
+	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
+	            _iterator8.return();
 	          }
 	        } finally {
-	          if (_didIteratorError7) {
-	            throw _iteratorError7;
+	          if (_didIteratorError8) {
+	            throw _iteratorError8;
 	          }
 	        }
 	      }
 
-	      this._loadedPromise = Promise.all(promises);
-	      return this._loadedPromise;
+	      return Promise.all(promises);
 	    }
 
 	    /**
@@ -28382,7 +28453,9 @@ module.exports =
 	      return this._rotation.rotationToQuat();
 	    },
 	    set: function set(newValue) {
-	      if (!(newValue instanceof _SCNVector4.default)) {
+	      //if(!(newValue instanceof SCNVector4)){
+	      if (newValue.constructor.name !== 'SCNVector4') {
+	        // FIXME: handle subclasses
 	        throw new Error('orientation must be SCNVector4');
 	      }
 
@@ -28610,43 +28683,12 @@ module.exports =
 	    key: 'actionKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion8 = true;
-	      var _didIteratorError8 = false;
-	      var _iteratorError8 = undefined;
-
-	      try {
-	        for (var _iterator8 = this._actions.keys()[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-	          var key = _step8.value;
-
-	          keys.push(key);
-	        }
-	      } catch (err) {
-	        _didIteratorError8 = true;
-	        _iteratorError8 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
-	            _iterator8.return();
-	          }
-	        } finally {
-	          if (_didIteratorError8) {
-	            throw _iteratorError8;
-	          }
-	        }
-	      }
-
-	      return keys;
-	    }
-	  }, {
-	    key: 'animationKeys',
-	    get: function get() {
-	      var keys = [];
 	      var _iteratorNormalCompletion9 = true;
 	      var _didIteratorError9 = false;
 	      var _iteratorError9 = undefined;
 
 	      try {
-	        for (var _iterator9 = this._animations.keys()[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+	        for (var _iterator9 = this._actions.keys()[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
 	          var key = _step9.value;
 
 	          keys.push(key);
@@ -28662,6 +28704,37 @@ module.exports =
 	        } finally {
 	          if (_didIteratorError9) {
 	            throw _iteratorError9;
+	          }
+	        }
+	      }
+
+	      return keys;
+	    }
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      var keys = [];
+	      var _iteratorNormalCompletion10 = true;
+	      var _didIteratorError10 = false;
+	      var _iteratorError10 = undefined;
+
+	      try {
+	        for (var _iterator10 = this._animations.keys()[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+	          var key = _step10.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError10 = true;
+	        _iteratorError10 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion10 && _iterator10.return) {
+	            _iterator10.return();
+	          }
+	        } finally {
+	          if (_didIteratorError10) {
+	            throw _iteratorError10;
 	          }
 	        }
 	      }
@@ -28747,13 +28820,13 @@ module.exports =
 	    key: '_loadAnimationArray',
 	    value: function _loadAnimationArray(node, animations) {
 	      //console.log('_loadAnimationArray start')
-	      var _iteratorNormalCompletion10 = true;
-	      var _didIteratorError10 = false;
-	      var _iteratorError10 = undefined;
+	      var _iteratorNormalCompletion11 = true;
+	      var _didIteratorError11 = false;
+	      var _iteratorError11 = undefined;
 
 	      try {
-	        for (var _iterator10 = Object.keys(animations)[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
-	          var animName = _step10.value;
+	        for (var _iterator11 = Object.keys(animations)[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+	          var animName = _step11.value;
 
 	          var data = animations[animName];
 	          var animation = this._loadAnimationData(data, animName);
@@ -28761,16 +28834,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError10 = true;
-	        _iteratorError10 = err;
+	        _didIteratorError11 = true;
+	        _iteratorError11 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion10 && _iterator10.return) {
-	            _iterator10.return();
+	          if (!_iteratorNormalCompletion11 && _iterator11.return) {
+	            _iterator11.return();
 	          }
 	        } finally {
-	          if (_didIteratorError10) {
-	            throw _iteratorError10;
+	          if (_didIteratorError11) {
+	            throw _iteratorError11;
 	          }
 	        }
 	      }
@@ -28913,13 +28986,13 @@ module.exports =
 	    key: '_loadActionArray',
 	    value: function _loadActionArray(node, actions) {
 	      //console.log('_loadActionArray start')
-	      var _iteratorNormalCompletion11 = true;
-	      var _didIteratorError11 = false;
-	      var _iteratorError11 = undefined;
+	      var _iteratorNormalCompletion12 = true;
+	      var _didIteratorError12 = false;
+	      var _iteratorError12 = undefined;
 
 	      try {
-	        for (var _iterator11 = Object.keys(actions)[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
-	          var actName = _step11.value;
+	        for (var _iterator12 = Object.keys(actions)[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+	          var actName = _step12.value;
 
 	          var data = actions[actName];
 	          //const action = this._loadActionData(data, actName)
@@ -28928,16 +29001,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError11 = true;
-	        _iteratorError11 = err;
+	        _didIteratorError12 = true;
+	        _iteratorError12 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion11 && _iterator11.return) {
-	            _iterator11.return();
+	          if (!_iteratorNormalCompletion12 && _iterator12.return) {
+	            _iterator12.return();
 	          }
 	        } finally {
-	          if (_didIteratorError11) {
-	            throw _iteratorError11;
+	          if (_didIteratorError12) {
+	            throw _iteratorError12;
 	          }
 	        }
 	      }
@@ -34292,6 +34365,24 @@ module.exports =
 	     */
 	    _this.shaderModifiers = null;
 
+	    /**
+	     * @access private
+	     * @type {Map<string, SCNBindingBlock>}
+	     */
+	    _this._bindingHandler = {};
+
+	    /**
+	     * @access private
+	     * @type {Map<string, SCNBindingBlock>}
+	     */
+	    _this._unbindingHandler = {};
+
+	    /**
+	     * @access private
+	     * @type {Object}
+	     */
+	    _this._valuesForUndefinedKeys = {};
+
 	    ///////////////////
 	    // SCNAnimatable //
 	    ///////////////////
@@ -34322,7 +34413,6 @@ module.exports =
 	     */
 	    _this._loadedPromise = null;
 
-	    _this._valuesForUndefinedKeys = {};
 	    return _this;
 	  }
 
@@ -34411,6 +34501,8 @@ module.exports =
 	     */
 	    value: function handleBindingOfSymbolHandler(symbol) {
 	      var block = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      this._bindingHandler[symbol] = block;
 	    }
 
 	    /**
@@ -34427,6 +34519,90 @@ module.exports =
 	    key: 'handleUnbindingOfSymbolHandler',
 	    value: function handleUnbindingOfSymbolHandler(symbol) {
 	      var block = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      this._unbindingHandler[symbol] = block;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {WebGLProgram} glProgram -
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {SCNRenderer} renderer -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_callBindingHandlerForNodeProgramContextRenderer',
+	    value: function _callBindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, renderer) {
+	      var bindingKeys = Object.keys(this._bindingHandler);
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = bindingKeys[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var key = _step.value;
+
+	          var handler = this._bindingHandler[key];
+	          var loc = gl.getUniformBlockIndex(glProgram, key);
+	          handler(glProgram, loc, node, renderer);
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {WebGLProgram} glProgram -
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {SCNRenderer} renderer -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_callUnindingHandlerForNodeProgramContextRenderer',
+	    value: function _callUnindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, renderer) {
+	      var bindingKeys = Object.keys(this._unbindingHandler);
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = bindingKeys[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var key = _step2.value;
+
+	          var handler = this._unbindingHandler[key];
+	          var loc = gl.getUniformBlockIndex(glProgram, key);
+	          handler(glProgram, loc, node, renderer);
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
 	    }
 
 	    ///////////////////
@@ -34596,35 +34772,36 @@ module.exports =
 
 	      var properties = [this._ambient, this._specular, this._normal, this._reflective, this._emission, this._transparent, this._multiply, this._ambientOcclusion, this._metalness, this._roughness];
 	      var promises = [];
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
 
 	      try {
-	        for (var _iterator = properties[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var p = _step.value;
+	        for (var _iterator3 = properties[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var p = _step3.value;
 
 	          if (p) {
-	            promises.push(p._getLoadedPromise());
+	            promises.push(p.didLoad);
 	          }
 	        }
+	        //this._loadedPromise = Promise.all(promises)
+	        //return this._loadedPromise
 	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
 	          }
 	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
 	          }
 	        }
 	      }
 
-	      this._loadedPromise = Promise.all(promises);
-	      return this._loadedPromise;
+	      return Promise.all(promises);
 	    }
 
 	    /**
@@ -34633,8 +34810,21 @@ module.exports =
 	     */
 
 	  }, {
-	    key: 'valueForUndefinedKey',
+	    key: 'setValueForUndefinedKey',
 
+
+	    /**
+	     * Invoked by setValue(_:forKey:) when it finds no property for a given key.
+	     * @access public
+	     * @param {?Object} value - The value for the key identified by key.
+	     * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
+	     * @returns {void}
+	     * @desc Subclasses can override this method to handle the request in some other way. The default implementation raises an NSUndefinedKeyException.
+	     * @see https://developer.apple.com/documentation/objectivec/nsobject/1413490-setvalue
+	     */
+	    value: function setValueForUndefinedKey(value, key) {
+	      this._valuesForUndefinedKeys[key] = value;
+	    }
 
 	    /**
 	     * Invoked by value(forKey:) when it finds no property corresponding to a given key.
@@ -34644,6 +34834,9 @@ module.exports =
 	     * @desc Subclasses can override this method to return an alternate value for undefined keys. The default implementation raises an NSUndefinedKeyException.
 	     * @see https://developer.apple.com/documentation/objectivec/nsobject/1413457-value
 	     */
+
+	  }, {
+	    key: 'valueForUndefinedKey',
 	    value: function valueForUndefinedKey(key) {
 	      if (typeof this._valuesForUndefinedKeys[key] !== 'undefined') {
 	        return this._valuesForUndefinedKeys[key];
@@ -34815,27 +35008,27 @@ module.exports =
 	    key: 'animationKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator2 = this._animations.keys()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var key = _step2.value;
+	        for (var _iterator4 = this._animations.keys()[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var key = _step4.value;
 
 	          keys.push(key);
 	        }
 	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -35736,6 +35929,8 @@ module.exports =
 	  value: true
 	});
 
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _NSObject2 = __webpack_require__(2);
@@ -35943,6 +36138,24 @@ module.exports =
 	     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523348-shadermodifiers
 	     */
 	    _this.shaderModifiers = null;
+
+	    /**
+	     * @access private
+	     * @type {Map<string, SCNBindingBlock>}
+	     */
+	    _this._bindingHandler = {};
+
+	    /**
+	     * @access private
+	     * @type {Map<string, SCNBindingBlock>}
+	     */
+	    _this._unbindingHandler = {};
+
+	    /**
+	     * @access private
+	     * @type {Object}
+	     */
+	    _this._valuesForUndefinedKeys = {};
 
 	    ///////////////////
 	    // SCNAnimatable //
@@ -36187,6 +36400,8 @@ module.exports =
 	    key: 'handleBindingOfSymbolHandler',
 	    value: function handleBindingOfSymbolHandler(symbol) {
 	      var block = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      this._bindingHandler[symbol] = block;
 	    }
 
 	    /**
@@ -36203,6 +36418,90 @@ module.exports =
 	    key: 'handleUnbindingOfSymbolHandler',
 	    value: function handleUnbindingOfSymbolHandler(symbol) {
 	      var block = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      this._unbindingHandler[symbol] = block;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {WebGLProgram} glProgram -
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {SCNRenderer} renderer -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_callBindingHandlerForNodeProgramContextRenderer',
+	    value: function _callBindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, renderer) {
+	      var bindingKeys = Object.keys(this._bindingHandler);
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = bindingKeys[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var key = _step.value;
+
+	          var handler = this._bindingHandler[key];
+	          var loc = gl.getUniformBlockIndex(glProgram, key);
+	          handler(glProgram, loc, node, renderer);
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {WebGLProgram} glProgram -
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {SCNRenderer} renderer -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_callUnindingHandlerForNodeProgramContextRenderer',
+	    value: function _callUnindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, renderer) {
+	      var bindingKeys = Object.keys(this._unbindingHandler);
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = bindingKeys[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var key = _step2.value;
+
+	          var handler = this._unbindingHandler[key];
+	          var loc = gl.getUniformBlockIndex(glProgram, key);
+	          handler(glProgram, loc, node, renderer);
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
 	    }
 
 	    ///////////////////
@@ -36785,13 +37084,13 @@ module.exports =
 	        tangent.push(new _SCNVector2.default(0, 0, 0));
 	      }
 
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
 
 	      try {
-	        for (var _iterator = elements[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var element = _step.value;
+	        for (var _iterator3 = elements[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var element = _step3.value;
 
 	          var len = element.primitiveCount;
 	          for (var _i3 = 0; _i3 < len; _i3++) {
@@ -36815,16 +37114,16 @@ module.exports =
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
 	          }
 	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
 	          }
 	        }
 	      }
@@ -37009,13 +37308,13 @@ module.exports =
 	      var sources = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex);
 	      var min = new _SCNVector2.default(Infinity, Infinity, Infinity);
 	      var max = new _SCNVector2.default(-Infinity, -Infinity, -Infinity);
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator2 = sources[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var src = _step2.value;
+	        for (var _iterator4 = sources[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var src = _step4.value;
 
 	          var result = src._createBoundingBox(transform);
 	          if (result.min.x < min.x) {
@@ -37038,16 +37337,16 @@ module.exports =
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -37093,33 +37392,34 @@ module.exports =
 	      }
 
 	      var promises = [];
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
 
 	      try {
-	        for (var _iterator3 = this.materials[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var m = _step3.value;
+	        for (var _iterator5 = this.materials[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var m = _step5.value;
 
-	          promises.push(m._getLoadedPromise());
+	          promises.push(m.didLoad);
 	        }
+	        //this._loadedPromise = Promise.all(promises)
+	        //return this._loadedPromise
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
 	          }
 	        }
 	      }
 
-	      this._loadedPromise = Promise.all(promises);
-	      return this._loadedPromise;
+	      return Promise.all(promises);
 	    }
 
 	    /**
@@ -37127,6 +37427,40 @@ module.exports =
 	     * @type {Promise} -
 	     */
 
+	  }, {
+	    key: 'setValueForUndefinedKey',
+
+
+	    /**
+	     * Invoked by setValue(_:forKey:) when it finds no property for a given key.
+	     * @access public
+	     * @param {?Object} value - The value for the key identified by key.
+	     * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
+	     * @returns {void}
+	     * @desc Subclasses can override this method to handle the request in some other way. The default implementation raises an NSUndefinedKeyException.
+	     * @see https://developer.apple.com/documentation/objectivec/nsobject/1413490-setvalue
+	     */
+	    value: function setValueForUndefinedKey(value, key) {
+	      this._valuesForUndefinedKeys[key] = value;
+	    }
+
+	    /**
+	     * Invoked by value(forKey:) when it finds no property corresponding to a given key.
+	     * @access public
+	     * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
+	     * @returns {?Object} - 
+	     * @desc Subclasses can override this method to return an alternate value for undefined keys. The default implementation raises an NSUndefinedKeyException.
+	     * @see https://developer.apple.com/documentation/objectivec/nsobject/1413457-value
+	     */
+
+	  }, {
+	    key: 'valueForUndefinedKey',
+	    value: function valueForUndefinedKey(key) {
+	      if (typeof this._valuesForUndefinedKeys[key] !== 'undefined') {
+	        return this._valuesForUndefinedKeys[key];
+	      }
+	      return _get(SCNGeometry.prototype.__proto__ || Object.getPrototypeOf(SCNGeometry.prototype), 'valueForUndefinedKey', this).call(this, key);
+	    }
 	  }, {
 	    key: 'firstMaterial',
 	    get: function get() {
@@ -37175,27 +37509,27 @@ module.exports =
 	    key: 'animationKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
+	      var _iteratorNormalCompletion6 = true;
+	      var _didIteratorError6 = false;
+	      var _iteratorError6 = undefined;
 
 	      try {
-	        for (var _iterator4 = this._animations.keys()[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var key = _step4.value;
+	        for (var _iterator6 = this._animations.keys()[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	          var key = _step6.value;
 
 	          keys.push(key);
 	        }
 	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
+	        _didIteratorError6 = true;
+	        _iteratorError6 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
+	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	            _iterator6.return();
 	          }
 	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
+	          if (_didIteratorError6) {
+	            throw _iteratorError6;
 	          }
 	        }
 	      }
@@ -49436,6 +49770,18 @@ module.exports =
 
 	    /**
 	     * @access private
+	     * @type {Map<string, NSObject}}
+	     */
+	    _this._semantics = new Map();
+
+	    /**
+	     * @access private
+	     * @type {Map<string, SCNBufferBindingBlock>[]}
+	     */
+	    _this._bufferBindings = [new Map(), new Map(), new Map()];
+
+	    /**
+	     * @access private
 	     * @type {boolean}
 	     */
 	    _this._programCompiled = false;
@@ -49492,6 +49838,8 @@ module.exports =
 	    key: 'setSemanticForSymbol',
 	    value: function setSemanticForSymbol(semantic, symbol) {
 	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	      this._semantics.set(symbol, semantic);
 	    }
 
 	    /**
@@ -49505,7 +49853,7 @@ module.exports =
 	  }, {
 	    key: 'semanticForSymbol',
 	    value: function semanticForSymbol(symbol) {
-	      return null;
+	      return this._semantics.set(symbol);
 	    }
 
 	    // Providing Input for Metal Shaders
@@ -49523,7 +49871,9 @@ module.exports =
 
 	  }, {
 	    key: 'handleBindingOfBufferNamedHandler',
-	    value: function handleBindingOfBufferNamedHandler(name, frequency, block) {}
+	    value: function handleBindingOfBufferNamedHandler(name, frequency, block) {
+	      this._bufferBindings[frequency].set(name, block);
+	    }
 	  }, {
 	    key: '_getGLProgramForContext',
 	    value: function _getGLProgramForContext(context) {
@@ -50220,7 +50570,7 @@ module.exports =
 	        });
 	      });
 	      this._loadedPromise = promise.then(function () {
-	        return _this2._scene._getLoadedPromise();
+	        return _this2._scene.didLoad;
 	      });
 	    }
 
@@ -50842,10 +51192,10 @@ module.exports =
 
 	      this._loadedPromise = this._dataLoadedPromise.then(function () {
 	        var promises = [];
-	        promises.push(_this3._rootNode._getLoadedPromise());
-	        promises.push(_this3._skyBox._getLoadedPromise());
+	        promises.push(_this3._rootNode.didLoad);
+	        promises.push(_this3._skyBox.didLoad);
 	        if (_this3._lightingEnvironment) {
-	          promises.push(_this3._lightingEnvironment._getLoadedPromise());
+	          promises.push(_this3._lightingEnvironment.didLoad);
 	        }
 	        return Promise.all(promises);
 	      });
@@ -51075,6 +51425,19 @@ module.exports =
 	    _this._url = null;
 	    _this._options = options;
 	    _this._data = data;
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this._loadedPromise = new Promise(function (resolve, reject) {
+	      _this._resolveFunction = resolve;
+	      _this._rejectFunction = reject;
+	    });
+
+	    if (data) {
+	      _this._resolveFunction();
+	    }
 	    return _this;
 	  }
 
@@ -51228,6 +51591,23 @@ module.exports =
 	     */
 
 	  }, {
+	    key: '_getLoadedPromise',
+
+
+	    /**
+	     * @access private
+	     * @returns {Promise* -
+	     */
+	    value: function _getLoadedPromise() {
+	      return this._loadedPromise;
+	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise}
+	     */
+
+	  }, {
 	    key: 'url',
 	    get: function get() {
 	      return this._url;
@@ -51244,6 +51624,11 @@ module.exports =
 	    get: function get() {
 	      return this._data;
 	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
+	    }
 	  }], [{
 	    key: 'sceneSourceWithDataOptions',
 	    value: function sceneSourceWithDataOptions(data, options) {
@@ -51254,7 +51639,7 @@ module.exports =
 	     * @access public
 	     * @param {string|File} url -
 	     * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] -
-	     * @returns {Promise} -
+	     * @returns {SCNSceneSource} -
 	     */
 
 	  }, {
@@ -51274,10 +51659,14 @@ module.exports =
 	        _options.set(_LoadingOption.assetDirectoryURLs, directory);
 	      }
 
-	      var promise = _BinaryRequest3.default.get(url).then(function (data) {
-	        return new SCNSceneSource(data, _options);
+	      var source = new SCNSceneSource();
+	      source._url = url;
+	      _BinaryRequest3.default.get(url).then(function (data) {
+	        source._data = data;
+	        source._options = _options;
+	        source._resolveFunction();
 	      });
-	      return promise;
+	      return source;
 	    }
 	  }, {
 	    key: 'AnimationImportPolicy',
@@ -52532,8 +52921,12 @@ module.exports =
 	          var materialIndex = gl.getUniformBlockIndex(p, 'materialUniform');
 	          gl.uniformBlockBinding(p, materialIndex, _materialLoc);
 	          gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
+
+	          material._callBindingHandlerForNodeProgramContextRenderer(node, p, gl, this);
 	        } else {
 	          this._switchProgram(scnProgram);
+
+	          geometry._callBindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, this);
 	        }
 	        var vao = geometry._vertexArrayObjects[i];
 	        var element = geometry.geometryElements[i];
@@ -53767,7 +54160,7 @@ module.exports =
 	        txt = _defaultVertexShader;
 	      }
 
-	      if (obj instanceof _SCNMaterial2.default && obj._valuesForUndefinedKeys) {
+	      if (obj._valuesForUndefinedKeys) {
 	        var keys = Object.keys(obj._valuesForUndefinedKeys);
 	        return this._replaceTexts(txt, obj._shadableHelper, keys);
 	      }
@@ -53794,7 +54187,7 @@ module.exports =
 	        txt = _defaultFragmentShader;
 	      }
 
-	      if (obj instanceof _SCNMaterial2.default && obj._valuesForUndefinedKeys) {
+	      if (obj._valuesForUndefinedKeys) {
 	        var keys = Object.keys(obj._valuesForUndefinedKeys);
 	        return this._replaceTexts(txt, obj._shadableHelper, keys);
 	      }
@@ -55423,6 +55816,10 @@ module.exports =
 	    value: function _render(gl, viewRect) {
 	      var p = this.__presentation;
 	      if (this.texture === null) {
+	        //if(this.color === null){
+	        //  return
+	        //}
+	        //this.texture = this._createTextureFromColor()
 	        return;
 	      }
 	      if (this.texture._glTexture === null) {
@@ -60742,26 +61139,30 @@ module.exports =
 	        _this._mouseIsDown = false;
 	        var ev = _this._createEvent(e);
 	        _this.mouseUpWith(ev);
+	        _this._preventDefault(ev);
 	      }
 	    });
 	    this._canvas.addEventListener('mouseover', function (e) {
 	      var ev = _this._createEvent(e);
-	      _this.mouseEnteredWith(ev);
+	      _this._preventDefault(ev);
 	    });
 	    this._canvas.addEventListener('mouseout', function (e) {
 	      var ev = _this._createEvent(e);
 	      _this.mouseExitedWith(ev);
+	      _this._preventDefault(ev);
 	    });
 	    this._canvas.addEventListener('mousewheel', function (e) {
 	      var ev = _this._createEvent(e);
 	      _this.scrollWheelWith(ev);
+	      _this._preventDefault(ev);
 	    });
 
 	    this._canvas.addEventListener('keydown', function (e) {
 	      //const ev = this._createEvent(e)
 	      var ev = {
 	        keyCode: 0,
-	        isARepeat: false
+	        isARepeat: false,
+	        _doDefaultAction: false
 	      };
 	      if (_KeyCode.has(e.code)) {
 	        ev.keyCode = _KeyCode.get(e.code);
@@ -60774,12 +61175,14 @@ module.exports =
 	      }
 
 	      _this.keyDownWith(ev);
+	      _this._preventDefault(ev);
 	    });
 	    this._canvas.addEventListener('keyup', function (e) {
 	      //const ev = this._createEvent(e)
 	      var ev = {
 	        keyCode: 0,
-	        isARepeat: false
+	        isARepeat: false,
+	        _doDefaultAction: false
 	      };
 	      if (_KeyCode.has(e.code)) {
 	        ev.keyCode = _KeyCode.get(e.code);
@@ -60788,6 +61191,7 @@ module.exports =
 	      }
 
 	      _this.keyUpWith(ev);
+	      _this._preventDefault(ev);
 	    });
 	  }
 
@@ -61604,7 +62008,15 @@ module.exports =
 	    value: function _createEvent(e) {
 	      // TODO: implement
 	      e.locationInWindow = new _CGPoint2.default(e.clientX, e.clientY);
+	      e._doDefaultAction = false;
 	      return e;
+	    }
+	  }, {
+	    key: '_preventDefault',
+	    value: function _preventDefault(e) {
+	      if (!e._doDefaultAction) {
+	        e.preventDefault();
+	      }
 	    }
 
 	    /**
@@ -61615,7 +62027,9 @@ module.exports =
 
 	  }, {
 	    key: 'mouseDownWith',
-	    value: function mouseDownWith(theEvent) {}
+	    value: function mouseDownWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61625,7 +62039,9 @@ module.exports =
 
 	  }, {
 	    key: 'mouseDraggedWith',
-	    value: function mouseDraggedWith(theEvent) {}
+	    value: function mouseDraggedWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61635,7 +62051,9 @@ module.exports =
 
 	  }, {
 	    key: 'mouseUpWith',
-	    value: function mouseUpWith(theEvent) {}
+	    value: function mouseUpWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61645,7 +62063,9 @@ module.exports =
 
 	  }, {
 	    key: 'mouseMovedWith',
-	    value: function mouseMovedWith(theEvent) {}
+	    value: function mouseMovedWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61655,7 +62075,9 @@ module.exports =
 
 	  }, {
 	    key: 'mouseEnteredWith',
-	    value: function mouseEnteredWith(theEvent) {}
+	    value: function mouseEnteredWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61665,7 +62087,9 @@ module.exports =
 
 	  }, {
 	    key: 'mouseExitedWith',
-	    value: function mouseExitedWith(theEvent) {}
+	    value: function mouseExitedWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61675,7 +62099,9 @@ module.exports =
 
 	  }, {
 	    key: 'rightMouseDraggedWith',
-	    value: function rightMouseDraggedWith(theEvent) {}
+	    value: function rightMouseDraggedWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61685,7 +62111,9 @@ module.exports =
 
 	  }, {
 	    key: 'rightMouseUpWith',
-	    value: function rightMouseUpWith(theEvent) {}
+	    value: function rightMouseUpWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61695,7 +62123,9 @@ module.exports =
 
 	  }, {
 	    key: 'otherMouseDownWith',
-	    value: function otherMouseDownWith(theEvent) {}
+	    value: function otherMouseDownWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61705,7 +62135,9 @@ module.exports =
 
 	  }, {
 	    key: 'otherMouseDraggedWith',
-	    value: function otherMouseDraggedWith(theEvent) {}
+	    value: function otherMouseDraggedWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61715,7 +62147,9 @@ module.exports =
 
 	  }, {
 	    key: 'otherMouseUpWith',
-	    value: function otherMouseUpWith(theEvent) {}
+	    value: function otherMouseUpWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61725,7 +62159,9 @@ module.exports =
 
 	  }, {
 	    key: 'scrollWheelWith',
-	    value: function scrollWheelWith(theEvent) {}
+	    value: function scrollWheelWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61735,7 +62171,9 @@ module.exports =
 
 	  }, {
 	    key: 'keyDownWith',
-	    value: function keyDownWith(theEvent) {}
+	    value: function keyDownWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public
@@ -61745,7 +62183,9 @@ module.exports =
 
 	  }, {
 	    key: 'keyUpWith',
-	    value: function keyUpWith(theEvent) {}
+	    value: function keyUpWith(theEvent) {
+	      theEvent._doDefaultAction = true;
+	    }
 
 	    /**
 	     * @access public

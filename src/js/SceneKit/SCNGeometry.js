@@ -161,6 +161,25 @@ export default class SCNGeometry extends NSObject {
      */
     this.shaderModifiers = null
 
+    /**
+     * @access private
+     * @type {Map<string, SCNBindingBlock>}
+     */
+    this._bindingHandler = {}
+
+    /**
+     * @access private
+     * @type {Map<string, SCNBindingBlock>}
+     */
+    this._unbindingHandler = {}
+
+    /**
+     * @access private
+     * @type {Object}
+     */
+    this._valuesForUndefinedKeys = {}
+
+
     ///////////////////
     // SCNAnimatable //
     ///////////////////
@@ -411,6 +430,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523063-handlebinding
    */
   handleBindingOfSymbolHandler(symbol, block = null) {
+    this._bindingHandler[symbol] = block
   }
 
   /**
@@ -423,6 +443,41 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/documentation/scenekit/scnshadable/1522783-handleunbinding
    */
   handleUnbindingOfSymbolHandler(symbol, block = null) {
+    this._unbindingHandler[symbol] = block
+  }
+
+  /**
+   * @access private
+   * @param {SCNNode} node -
+   * @param {WebGLProgram} glProgram -
+   * @param {WebGLRenderingContext} gl -
+   * @param {SCNRenderer} renderer -
+   * @returns {void}
+   */
+  _callBindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, renderer) {
+    const bindingKeys = Object.keys(this._bindingHandler)
+    for(const key of bindingKeys){
+      const handler = this._bindingHandler[key]
+      const loc = gl.getUniformBlockIndex(glProgram, key)
+      handler(glProgram, loc, node, renderer)
+    }
+  }
+  
+  /**
+   * @access private
+   * @param {SCNNode} node -
+   * @param {WebGLProgram} glProgram -
+   * @param {WebGLRenderingContext} gl -
+   * @param {SCNRenderer} renderer -
+   * @returns {void}
+   */
+  _callUnindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, renderer) {
+    const bindingKeys = Object.keys(this._unbindingHandler)
+    for(const key of bindingKeys){
+      const handler = this._unbindingHandler[key]
+      const loc = gl.getUniformBlockIndex(glProgram, key)
+      handler(glProgram, loc, node, renderer)
+    }
   }
 
   ///////////////////
@@ -1226,10 +1281,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     const promises = []
     for(const m of this.materials){
-      promises.push(m._getLoadedPromise())
+      promises.push(m.didLoad)
     }
-    this._loadedPromise = Promise.all(promises)
-    return this._loadedPromise
+    //this._loadedPromise = Promise.all(promises)
+    //return this._loadedPromise
+    return Promise.all(promises)
   }
 
   /**
@@ -1239,4 +1295,33 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   get didLoad() {
     return this._getLoadedPromise()
   }
+
+  /**
+   * Invoked by setValue(_:forKey:) when it finds no property for a given key.
+   * @access public
+   * @param {?Object} value - The value for the key identified by key.
+   * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
+   * @returns {void}
+   * @desc Subclasses can override this method to handle the request in some other way. The default implementation raises an NSUndefinedKeyException.
+   * @see https://developer.apple.com/documentation/objectivec/nsobject/1413490-setvalue
+   */
+  setValueForUndefinedKey(value, key) {
+    this._valuesForUndefinedKeys[key] = value
+  }
+
+  /**
+   * Invoked by value(forKey:) when it finds no property corresponding to a given key.
+   * @access public
+   * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
+   * @returns {?Object} - 
+   * @desc Subclasses can override this method to return an alternate value for undefined keys. The default implementation raises an NSUndefinedKeyException.
+   * @see https://developer.apple.com/documentation/objectivec/nsobject/1413457-value
+   */
+  valueForUndefinedKey(key) {
+    if(typeof this._valuesForUndefinedKeys[key] !== 'undefined'){
+      return this._valuesForUndefinedKeys[key]
+    }
+    return super.valueForUndefinedKey(key)
+  }
+
 }

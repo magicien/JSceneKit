@@ -964,7 +964,8 @@ export default class SCNNode extends NSObject {
     return this._rotation.rotationToQuat()
   }
   set orientation(newValue) {
-    if(!(newValue instanceof SCNVector4)){
+    //if(!(newValue instanceof SCNVector4)){
+    if(newValue.constructor.name !== 'SCNVector4'){ // FIXME: handle subclasses
       throw new Error('orientation must be SCNVector4')
     }
 
@@ -2579,6 +2580,25 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
 
   /**
    * @access private
+   * @returns {void}
+   */
+  _resetPromise() {
+    this._loadedPromise = null
+  }
+
+  /**
+   * @access private
+   * @returns {void}
+   */
+  _resetPromiseRecursively() {
+    this._resetPromise()
+    for(const child of this._childNodes){
+      child._resetPromiseRecursively()
+    }
+  }
+
+  /**
+   * @access private
    * @returns {Promise} -
    */
   _getLoadedPromise() {
@@ -2588,21 +2608,22 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
 
     const promises = []
     for(const child of this._childNodes){
-      promises.push(child._getLoadedPromise())
+      promises.push(child.didLoad)
     }
     if(this._particleSystems){
       for(const system of this._particleSystems){
-        promises.push(system._getLoadedPromise())
+        promises.push(system.didLoad)
       }
     }
     if(this._geometry){
-      promises.push(this._geometry._getLoadedPromise())
+      promises.push(this._geometry.didLoad)
     }
     for(const player of this._audioPlayers){
-      promises.push(player._getLoadedPromise())
+      promises.push(player.didLoad)
     }
-    this._loadedPromise = Promise.all(promises)
-    return this._loadedPromise
+    //this._loadedPromise = Promise.all(promises)
+    //return this._loadedPromise
+    return Promise.all(promises)
   }
 
   /**

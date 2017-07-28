@@ -124,7 +124,7 @@ export default class SCNReferenceNode extends SCNNode {
         reject()
       })
     })
-    this._loadedPromise = promise.then(() => this._scene._getLoadedPromise())
+    this._loadedPromise = promise.then(() => this._scene.didLoad)
   }
 
   /**

@@ -329,6 +329,10 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
   _render(gl, viewRect) {
     const p = this.__presentation
     if(this.texture === null){
+      //if(this.color === null){
+      //  return
+      //}
+      //this.texture = this._createTextureFromColor()
       return
     }
     if(this.texture._glTexture === null){

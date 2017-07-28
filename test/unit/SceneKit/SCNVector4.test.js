@@ -85,4 +85,43 @@ describe('SCNVector4 class', () => {
     })
   })
 
+  /** @test {SCNVector4#rotationToEulerAngles} */
+  describe('rotationToEulerAngles', () => {
+    it('should convert x-axis rotation to eulerAngles', () => {
+      const rotation = new SCNVector4(1, 0, 0, 1.5)
+      const eulerAngles = rotation.rotationToEulerAngles()
+      const expectX = 1.5
+      const expectY = 0
+      const expectZ = 0
+
+      expect(eulerAngles.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(eulerAngles.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(eulerAngles.z).to.within(expectZ - epsilon, expectZ + epsilon)
+    })
+
+    it('should convert y-axis rotation to eulerAngles', () => {
+      // TODO: test rotation.w > pi/2
+      const rotation = new SCNVector4(0, 1, 0, 1.2)
+      const eulerAngles = rotation.rotationToEulerAngles()
+      const expectX = 0
+      const expectY = 1.2
+      const expectZ = 0
+
+      expect(eulerAngles.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(eulerAngles.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(eulerAngles.z).to.within(expectZ - epsilon, expectZ + epsilon)
+    })
+
+    it('should convert z-axis rotation to eulerAngles', () => {
+      const rotation = new SCNVector4(0, 0, 1, 1.9)
+      const eulerAngles = rotation.rotationToEulerAngles()
+      const expectX = 0
+      const expectY = 0
+      const expectZ = 1.9
+
+      expect(eulerAngles.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(eulerAngles.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(eulerAngles.z).to.within(expectZ - epsilon, expectZ + epsilon)
+    })
+  })
 })

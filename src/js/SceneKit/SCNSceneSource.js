@@ -56,6 +56,19 @@ export default class SCNSceneSource extends NSObject {
     this._url = null
     this._options = options
     this._data = data
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = new Promise((resolve, reject) => {
+      this._resolveFunction = resolve
+      this._rejectFunction = reject
+    })
+
+    if(data){
+      this._resolveFunction()
+    }
   }
 
   /**
@@ -72,7 +85,7 @@ export default class SCNSceneSource extends NSObject {
    * @access public
    * @param {string|File} url -
    * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] -
-   * @returns {Promise} -
+   * @returns {SCNSceneSource} -
    */
   static sceneSourceWithURLOptions(url, options = null) {
     let _options = options
@@ -87,11 +100,14 @@ export default class SCNSceneSource extends NSObject {
       _options.set(_LoadingOption.assetDirectoryURLs, directory)
     }
 
-    const promise = _BinaryRequest.get(url)
-      .then((data) => {
-        return new SCNSceneSource(data, _options)
-      })
-    return promise
+    const source = new SCNSceneSource()
+    source._url = url
+    _BinaryRequest.get(url).then((data) => {
+      source._data = data
+      source._options = _options
+      source._resolveFunction()
+    })
+    return source
   }
 
   // Loading a Complete Scene
@@ -249,5 +265,21 @@ NSArray *geometryNodes = [sceneSource entriesPassingTest:^BOOL(id entry, NSStrin
    */
   static get LoadingOption() {
     return _LoadingOption
+  }
+
+  /**
+   * @access private
+   * @returns {Promise* -
+   */
+  _getLoadedPromise() {
+    return this._loadedPromise
+  }
+
+  /**
+   * @access public
+   * @type {Promise}
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
   }
 }

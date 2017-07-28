@@ -103,6 +103,17 @@ export default class SCNProgram extends NSObject {
      */
     this.library = null
 
+    /**
+     * @access private
+     * @type {Map<string, NSObject}}
+     */
+    this._semantics = new Map()
+
+    /**
+     * @access private
+     * @type {Map<string, SCNBufferBindingBlock>[]}
+     */
+    this._bufferBindings = [new Map(), new Map(), new Map()]
 
     /**
      * @access private
@@ -156,6 +167,7 @@ export default class SCNProgram extends NSObject {
    * @see https://developer.apple.com/documentation/scenekit/scnprogram/1522730-setsemantic
    */
   setSemanticForSymbol(semantic, symbol, options = null) {
+    this._semantics.set(symbol, semantic)
   }
 
   /**
@@ -166,7 +178,7 @@ export default class SCNProgram extends NSObject {
    * @see https://developer.apple.com/documentation/scenekit/scnprogram/1523350-semantic
    */
   semanticForSymbol(symbol) {
-    return null
+    return this._semantics.set(symbol)
   }
 
   // Providing Input for Metal Shaders
@@ -183,6 +195,7 @@ export default class SCNProgram extends NSObject {
    * @see https://developer.apple.com/documentation/scenekit/scnprogram/1524047-handlebinding
    */
   handleBindingOfBufferNamedHandler(name, frequency, block) {
+    this._bufferBindings[frequency].set(name, block)
   }
 
   _getGLProgramForContext(context) {

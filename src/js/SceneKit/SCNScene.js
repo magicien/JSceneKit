@@ -500,10 +500,10 @@ You call this method in a try expression and handle any errors in the catch clau
 
     this._loadedPromise = this._dataLoadedPromise.then(() => {
       const promises = []
-      promises.push(this._rootNode._getLoadedPromise())
-      promises.push(this._skyBox._getLoadedPromise())
+      promises.push(this._rootNode.didLoad)
+      promises.push(this._skyBox.didLoad)
       if(this._lightingEnvironment){
-        promises.push(this._lightingEnvironment._getLoadedPromise())
+        promises.push(this._lightingEnvironment.didLoad)
       }
       return Promise.all(promises)
     })

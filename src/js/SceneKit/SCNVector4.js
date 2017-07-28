@@ -372,7 +372,8 @@ export default class SCNVector4 {
   rotationToEulerAngles() {
     const euler = new SCNVector3()
     const sinW = Math.sin(this.w)
-    const cosWR = 1.0 - Math.cos(this.w)
+    const cosW = Math.cos(this.w)
+    const cosWR = 1.0 - cosW
     const len2 = this.x * this.x + this.y * this.y + this.z * this.z
     if(len2 === 0){
       return euler
@@ -397,9 +398,15 @@ export default class SCNVector4 {
       euler.y = Math.PI * 0.5
       euler.z = 2.0 * Math.atan2(z * Math.sin(this.w * 0.5), Math.cos(this.w * 0.5))
     }else{
-      euler.x = Math.atan2(x * sinW + y * z * cosWR, 1 - (y * y + x * x) * cosWR)
-      euler.y = Math.asin(s)
-      euler.z = Math.atan2(z * sinW + x * y * cosWR, 1 - (z * z + y * y) * cosWR)
+      const m23 = x * sinW + y * z * cosWR
+      //const m33 = 1 - (y * y + x * x) * cosWR
+      const m33 = cosW + z * z * cosWR
+      const m12 = z * sinW + x * y * cosWR
+      //const m11 = 1 - (z * z + y * y) * cosWR
+      const m11 = cosW + x * x * cosWR
+      euler.x = Math.atan2(m23, m33)
+      euler.y = Math.asin(s) // How can I get euler.y > pi/2 ?
+      euler.z = Math.atan2(m12, m11)
     }
 
     return euler

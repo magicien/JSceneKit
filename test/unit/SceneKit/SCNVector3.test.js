@@ -66,4 +66,105 @@ describe('SCNVector3 class', () => {
       expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
     })
   })
+
+  /** @test {SCNVector3#eulerAnglesToRotation} */
+  describe('eulerAnglesToRotation', () => {
+    it('should convert x-axis rotation', () => {
+      const euler = new SCNVector3(1.5, 0, 0)
+      const quat = euler.eulerAnglesToRotation()
+      const expectX = 1
+      const expectY = 0
+      const expectZ = 0
+      const expectW = 1.5
+
+      expect(quat.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(quat.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(quat.z).to.within(expectZ - epsilon, expectZ + epsilon)
+      expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
+    })
+
+    it('should convert y-axis rotation', () => {
+      const euler = new SCNVector3(0, 1.7, 0)
+      const quat = euler.eulerAnglesToRotation()
+      const expectX = 0
+      const expectY = 1
+      const expectZ = 0
+      const expectW = 1.7
+
+      expect(quat.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(quat.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(quat.z).to.within(expectZ - epsilon, expectZ + epsilon)
+      expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
+    })
+
+    it('should convert z-axis rotation', () => {
+      const euler = new SCNVector3(0, 0, 1.9)
+      const quat = euler.eulerAnglesToRotation()
+      const expectX = 0
+      const expectY = 0
+      const expectZ = 1
+      const expectW = 1.9
+
+      expect(quat.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(quat.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(quat.z).to.within(expectZ - epsilon, expectZ + epsilon)
+      expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
+    })
+
+    it('should convert minus x-axis rotation', () => {
+      const euler = new SCNVector3(-0.5, 0, 0)
+      const quat = euler.eulerAnglesToRotation()
+      const expectX = -1
+      const expectY = 0
+      const expectZ = 0
+      const expectW = 0.5
+
+      expect(quat.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(quat.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(quat.z).to.within(expectZ - epsilon, expectZ + epsilon)
+      expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
+    })
+
+    it('should convert minus y-axis rotation', () => {
+      const euler = new SCNVector3(0, -2.1, 0)
+      const quat = euler.eulerAnglesToRotation()
+      const expectX = 0
+      const expectY = -1
+      const expectZ = 0
+      const expectW = 2.1
+
+      expect(quat.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(quat.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(quat.z).to.within(expectZ - epsilon, expectZ + epsilon)
+      expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
+    })
+
+    it('should convert minus z-axis rotation', () => {
+      const euler = new SCNVector3(0, 0, -0.1)
+      const quat = euler.eulerAnglesToRotation()
+      const expectX = 0
+      const expectY = 0
+      const expectZ = -1
+      const expectW = 0.1
+
+      expect(quat.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(quat.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(quat.z).to.within(expectZ - epsilon, expectZ + epsilon)
+      expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
+    })
+
+    it('should convert zero vector rotation', () => {
+      const euler = new SCNVector3(0, 0, 0)
+      const quat = euler.eulerAnglesToRotation()
+      const expectX = 0
+      const expectY = 0
+      const expectZ = 0
+      const expectW = 0
+
+      expect(quat.x).to.within(expectX - epsilon, expectX + epsilon)
+      expect(quat.y).to.within(expectY - epsilon, expectY + epsilon)
+      expect(quat.z).to.within(expectZ - epsilon, expectZ + epsilon)
+      expect(quat.w).to.within(expectW - epsilon, expectW + epsilon)
+    })
+  })
 })

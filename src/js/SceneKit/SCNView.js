@@ -471,26 +471,30 @@ export default class SCNView {
         this._mouseIsDown = false
         const ev = this._createEvent(e)
         this.mouseUpWith(ev)
+        this._preventDefault(ev)
       }
     })
     this._canvas.addEventListener('mouseover', (e) => {
       const ev = this._createEvent(e)
-      this.mouseEnteredWith(ev)
+      this._preventDefault(ev)
     })
     this._canvas.addEventListener('mouseout', (e) => {
       const ev = this._createEvent(e)
       this.mouseExitedWith(ev)
+      this._preventDefault(ev)
     })
     this._canvas.addEventListener('mousewheel', (e) => {
       const ev = this._createEvent(e)
       this.scrollWheelWith(ev)
+      this._preventDefault(ev)
     })
 
     this._canvas.addEventListener('keydown', (e) => {
       //const ev = this._createEvent(e)
       const ev = {
         keyCode: 0,
-        isARepeat: false
+        isARepeat: false,
+        _doDefaultAction: false
       }
       if(_KeyCode.has(e.code)){
         ev.keyCode = _KeyCode.get(e.code)
@@ -503,12 +507,14 @@ export default class SCNView {
       }
 
       this.keyDownWith(ev)
+      this._preventDefault(ev)
     })
     this._canvas.addEventListener('keyup', (e) => {
       //const ev = this._createEvent(e)
       const ev = {
         keyCode: 0,
-        isARepeat: false
+        isARepeat: false,
+        _doDefaultAction: false
       }
       if(_KeyCode.has(e.code)){
         ev.keyCode = _KeyCode.get(e.code)
@@ -517,8 +523,8 @@ export default class SCNView {
       }
 
       this.keyUpWith(ev)
+      this._preventDefault(ev)
     })
-
   }
 
   connectedCallback() {
@@ -1465,7 +1471,14 @@ export default class SCNView {
   _createEvent(e) {
     // TODO: implement
     e.locationInWindow = new CGPoint(e.clientX, e.clientY)
+    e._doDefaultAction = false
     return e
+  }
+
+  _preventDefault(e) {
+    if(!e._doDefaultAction){
+      e.preventDefault()
+    }
   }
 
   /**
@@ -1474,6 +1487,7 @@ export default class SCNView {
    * @returns {void}
    */
   mouseDownWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1482,6 +1496,7 @@ export default class SCNView {
    * @returns {void}
    */
   mouseDraggedWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1490,6 +1505,7 @@ export default class SCNView {
    * @returns {void}
    */
   mouseUpWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1498,6 +1514,7 @@ export default class SCNView {
    * @returns {void}
    */
   mouseMovedWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1506,6 +1523,7 @@ export default class SCNView {
    * @returns {void}
    */
   mouseEnteredWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1514,6 +1532,7 @@ export default class SCNView {
    * @returns {void}
    */
   mouseExitedWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1522,6 +1541,7 @@ export default class SCNView {
    * @returns {void}
    */
   rightMouseDraggedWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1530,6 +1550,7 @@ export default class SCNView {
    * @returns {void}
    */
   rightMouseUpWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1538,6 +1559,7 @@ export default class SCNView {
    * @returns {void}
    */
   otherMouseDownWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1546,6 +1568,7 @@ export default class SCNView {
    * @returns {void}
    */
   otherMouseDraggedWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1554,6 +1577,7 @@ export default class SCNView {
    * @returns {void}
    */
   otherMouseUpWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1562,6 +1586,7 @@ export default class SCNView {
    * @returns {void}
    */
   scrollWheelWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1570,6 +1595,7 @@ export default class SCNView {
    * @returns {void}
    */
   keyDownWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**
@@ -1578,6 +1604,7 @@ export default class SCNView {
    * @returns {void}
    */
   keyUpWith(theEvent) {
+    theEvent._doDefaultAction = true
   }
 
   /**

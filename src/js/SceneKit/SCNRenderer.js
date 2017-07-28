@@ -1881,8 +1881,12 @@ export default class SCNRenderer extends NSObject {
         const materialIndex = gl.getUniformBlockIndex(p, 'materialUniform')
         gl.uniformBlockBinding(p, materialIndex, _materialLoc)
         gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
+
+        material._callBindingHandlerForNodeProgramContextRenderer(node, p, gl, this) 
       }else{
         this._switchProgram(scnProgram)
+
+        geometry._callBindingHandlerForNodeProgramContextRenderer(node, glProgram, gl, this) 
       }
       const vao = geometry._vertexArrayObjects[i]
       const element = geometry.geometryElements[i]
@@ -3144,7 +3148,7 @@ export default class SCNRenderer extends NSObject {
       txt = _defaultVertexShader
     }
 
-    if(obj instanceof SCNMaterial && obj._valuesForUndefinedKeys){
+    if(obj._valuesForUndefinedKeys){
       const keys = Object.keys(obj._valuesForUndefinedKeys)
       return this._replaceTexts(txt, obj._shadableHelper, keys)
     }
@@ -3170,7 +3174,7 @@ export default class SCNRenderer extends NSObject {
       txt = _defaultFragmentShader
     }
 
-    if(obj instanceof SCNMaterial && obj._valuesForUndefinedKeys){
+    if(obj._valuesForUndefinedKeys){
       const keys = Object.keys(obj._valuesForUndefinedKeys)
       return this._replaceTexts(txt, obj._shadableHelper, keys)
     }
