@@ -5,8 +5,8 @@ var webpack = require('webpack-stream');
 var config = require('../config');
 var exec = require('child_process').exec;
 
-gulp.task('webpack', ['webpack:create-main', 'webpack:build-web', 'webpack:build-node'])
-gulp.task('webpack:web', ['webpack:create-main', 'webpack:build-web'])
+gulp.task('webpack', ['webpack:create-main', 'webpack:build-web', 'webpack:build-web-min', 'webpack:build-node'])
+gulp.task('webpack:web', ['webpack:create-main', 'webpack:build-web', 'webpack:build-web-min'])
 gulp.task('webpcak:node', ['webpack:create-main', 'webpack:build-node'])
 
 gulp.task('webpack:create-main', function(cb) {
@@ -32,4 +32,13 @@ gulp.task('webpack:build-node', function(cb) {
       .pipe(gulpif(config.js.uglify, uglify()))
       .pipe(gulp.dest(conf.output.path));
 })
+
+gulp.task('webpack:build-web-min', function(cb) {
+  var conf = config.webpack.webmin
+  gulp.src(conf.entry)
+      .pipe(webpack(conf))
+      .pipe(gulpif(config.js.uglify, uglify()))
+      .pipe(gulp.dest(conf.output.path));
+})
+
 

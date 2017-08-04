@@ -105,6 +105,47 @@ module.exports = {
         //fs: 'fs'
         //'../third_party/ammo': 'ammo'
       }
+    },
+    webmin: {
+      target: 'web',
+      entry: src + '/js/main.js',
+      output: {
+        path: dest,
+        filename: 'index.web.min.js',
+        library: 'JSceneKit',
+        libraryTarget: 'var'
+      },
+      resolve: {
+        extensions: ['', '.js']
+      },
+      plugins: [
+        new webpack.DefinePlugin({'process.env.BROWSER': true}),
+        new webpack.optimize.UglifyJsPlugin()
+      ],
+      module: {
+        loaders: [
+          {
+            test: /ammo.js$/,
+            loader: 'script-loader'
+          },
+          {
+            test: /\.js$/,
+            exclude: [/node_modules/, /ammo.js$/],
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015']
+            }
+          }
+        ]
+      },
+      node: {
+        fs: false,
+        Buffer: true
+      },
+      externals: {
+        //fs: 'fs'
+        //'../third_party/ammo': 'ammo'
+      }
     }
   },
 
