@@ -323,63 +323,63 @@ module.exports =
 
 	var _SCNActionFade2 = _interopRequireDefault(_SCNActionFade);
 
-	var _SCNActionGroup = __webpack_require__(88);
+	var _SCNActionGroup = __webpack_require__(109);
 
 	var _SCNActionGroup2 = _interopRequireDefault(_SCNActionGroup);
 
-	var _SCNActionHide = __webpack_require__(89);
+	var _SCNActionHide = __webpack_require__(110);
 
 	var _SCNActionHide2 = _interopRequireDefault(_SCNActionHide);
 
-	var _SCNActionJavaScript = __webpack_require__(90);
+	var _SCNActionJavaScript = __webpack_require__(111);
 
 	var _SCNActionJavaScript2 = _interopRequireDefault(_SCNActionJavaScript);
 
-	var _SCNActionMove = __webpack_require__(91);
+	var _SCNActionMove = __webpack_require__(112);
 
 	var _SCNActionMove2 = _interopRequireDefault(_SCNActionMove);
 
-	var _SCNActionPerformSelector = __webpack_require__(92);
+	var _SCNActionPerformSelector = __webpack_require__(113);
 
 	var _SCNActionPerformSelector2 = _interopRequireDefault(_SCNActionPerformSelector);
 
-	var _SCNActionPlaySound = __webpack_require__(93);
+	var _SCNActionPlaySound = __webpack_require__(114);
 
 	var _SCNActionPlaySound2 = _interopRequireDefault(_SCNActionPlaySound);
 
-	var _SCNActionReference = __webpack_require__(94);
+	var _SCNActionReference = __webpack_require__(115);
 
 	var _SCNActionReference2 = _interopRequireDefault(_SCNActionReference);
 
-	var _SCNActionRemove = __webpack_require__(95);
+	var _SCNActionRemove = __webpack_require__(116);
 
 	var _SCNActionRemove2 = _interopRequireDefault(_SCNActionRemove);
 
-	var _SCNActionRepeat = __webpack_require__(96);
+	var _SCNActionRepeat = __webpack_require__(117);
 
 	var _SCNActionRepeat2 = _interopRequireDefault(_SCNActionRepeat);
 
-	var _SCNActionRotate = __webpack_require__(97);
+	var _SCNActionRotate = __webpack_require__(118);
 
 	var _SCNActionRotate2 = _interopRequireDefault(_SCNActionRotate);
 
-	var _SCNActionRunAction = __webpack_require__(98);
+	var _SCNActionRunAction = __webpack_require__(119);
 
 	var _SCNActionRunAction2 = _interopRequireDefault(_SCNActionRunAction);
 
-	var _SCNActionRunBlock = __webpack_require__(99);
+	var _SCNActionRunBlock = __webpack_require__(120);
 
 	var _SCNActionRunBlock2 = _interopRequireDefault(_SCNActionRunBlock);
 
-	var _SCNActionScale = __webpack_require__(100);
+	var _SCNActionScale = __webpack_require__(121);
 
 	var _SCNActionScale2 = _interopRequireDefault(_SCNActionScale);
 
-	var _SCNActionSequence = __webpack_require__(101);
+	var _SCNActionSequence = __webpack_require__(122);
 
 	var _SCNActionSequence2 = _interopRequireDefault(_SCNActionSequence);
 
-	var _SCNActionTimingFunction = __webpack_require__(102);
+	var _SCNActionTimingFunction = __webpack_require__(123);
 
 	var _SCNActionTimingFunction2 = _interopRequireDefault(_SCNActionTimingFunction);
 
@@ -387,99 +387,99 @@ module.exports =
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNActionWait = __webpack_require__(103);
+	var _SCNActionWait = __webpack_require__(124);
 
 	var _SCNActionWait2 = _interopRequireDefault(_SCNActionWait);
 
-	var _SCNAnimatable = __webpack_require__(104);
+	var _SCNAnimatable = __webpack_require__(125);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNAnimation = __webpack_require__(105);
+	var _SCNAnimation = __webpack_require__(126);
 
 	var _SCNAnimation2 = _interopRequireDefault(_SCNAnimation);
 
-	var _SCNAnimationEvent = __webpack_require__(106);
+	var _SCNAnimationEvent = __webpack_require__(127);
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
-	var _SCNAnimationEventBlock = __webpack_require__(107);
+	var _SCNAnimationEventBlock = __webpack_require__(128);
 
 	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
 
-	var _SCNAnimationPlayer = __webpack_require__(108);
+	var _SCNAnimationPlayer = __webpack_require__(129);
 
 	var _SCNAnimationPlayer2 = _interopRequireDefault(_SCNAnimationPlayer);
 
-	var _SCNAntialiasingMode = __webpack_require__(109);
+	var _SCNAntialiasingMode = __webpack_require__(130);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNAudioPlayer = __webpack_require__(110);
+	var _SCNAudioPlayer = __webpack_require__(131);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNAudioSource = __webpack_require__(111);
+	var _SCNAudioSource = __webpack_require__(132);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNBillboardAxis = __webpack_require__(113);
+	var _SCNBillboardAxis = __webpack_require__(134);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
-	var _SCNBillboardConstraint = __webpack_require__(114);
+	var _SCNBillboardConstraint = __webpack_require__(135);
 
 	var _SCNBillboardConstraint2 = _interopRequireDefault(_SCNBillboardConstraint);
 
-	var _SCNBindingBlock = __webpack_require__(115);
+	var _SCNBindingBlock = __webpack_require__(136);
 
 	var _SCNBindingBlock2 = _interopRequireDefault(_SCNBindingBlock);
 
-	var _SCNBlendMode = __webpack_require__(116);
+	var _SCNBlendMode = __webpack_require__(90);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNBoundingVolume = __webpack_require__(117);
+	var _SCNBoundingVolume = __webpack_require__(137);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNBox = __webpack_require__(118);
+	var _SCNBox = __webpack_require__(88);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNBufferBindingBlock = __webpack_require__(131);
+	var _SCNBufferBindingBlock = __webpack_require__(138);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
-	var _SCNBufferFrequency = __webpack_require__(132);
+	var _SCNBufferFrequency = __webpack_require__(139);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferStream = __webpack_require__(133);
+	var _SCNBufferStream = __webpack_require__(140);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
-	var _SCNCamera = __webpack_require__(134);
+	var _SCNCamera = __webpack_require__(141);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNCameraProjectionDirection = __webpack_require__(135);
+	var _SCNCameraProjectionDirection = __webpack_require__(142);
 
 	var _SCNCameraProjectionDirection2 = _interopRequireDefault(_SCNCameraProjectionDirection);
 
-	var _SCNCapsule = __webpack_require__(136);
+	var _SCNCapsule = __webpack_require__(103);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNChamferMode = __webpack_require__(137);
+	var _SCNChamferMode = __webpack_require__(143);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
-	var _SCNColorMask = __webpack_require__(120);
+	var _SCNColorMask = __webpack_require__(91);
 
 	var _SCNColorMask2 = _interopRequireDefault(_SCNColorMask);
 
-	var _SCNCone = __webpack_require__(138);
+	var _SCNCone = __webpack_require__(144);
 
 	var _SCNCone2 = _interopRequireDefault(_SCNCone);
 
@@ -487,91 +487,91 @@ module.exports =
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNCullMode = __webpack_require__(121);
+	var _SCNCullMode = __webpack_require__(92);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNCylinder = __webpack_require__(139);
+	var _SCNCylinder = __webpack_require__(145);
 
 	var _SCNCylinder2 = _interopRequireDefault(_SCNCylinder);
 
-	var _SCNDebugOptions = __webpack_require__(140);
+	var _SCNDebugOptions = __webpack_require__(146);
 
 	var _SCNDebugOptions2 = _interopRequireDefault(_SCNDebugOptions);
 
-	var _SCNDistanceConstraint = __webpack_require__(141);
+	var _SCNDistanceConstraint = __webpack_require__(147);
 
 	var _SCNDistanceConstraint2 = _interopRequireDefault(_SCNDistanceConstraint);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(142);
+	var _SCNFieldForceEvaluator = __webpack_require__(148);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNFillMode = __webpack_require__(122);
+	var _SCNFillMode = __webpack_require__(93);
 
 	var _SCNFillMode2 = _interopRequireDefault(_SCNFillMode);
 
-	var _SCNFilterMode = __webpack_require__(124);
+	var _SCNFilterMode = __webpack_require__(95);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNFloor = __webpack_require__(143);
+	var _SCNFloor = __webpack_require__(149);
 
 	var _SCNFloor2 = _interopRequireDefault(_SCNFloor);
 
-	var _SCNGeometry = __webpack_require__(127);
+	var _SCNGeometry = __webpack_require__(99);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryTessellator = __webpack_require__(144);
+	var _SCNGeometryTessellator = __webpack_require__(150);
 
 	var _SCNGeometryTessellator2 = _interopRequireDefault(_SCNGeometryTessellator);
 
-	var _SCNHitTestOption = __webpack_require__(146);
+	var _SCNHitTestOption = __webpack_require__(152);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(147);
+	var _SCNHitTestResult = __webpack_require__(104);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNIKConstraint = __webpack_require__(148);
+	var _SCNIKConstraint = __webpack_require__(153);
 
 	var _SCNIKConstraint2 = _interopRequireDefault(_SCNIKConstraint);
 
-	var _SCNLayer = __webpack_require__(149);
+	var _SCNLayer = __webpack_require__(154);
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
-	var _SCNLevelOfDetail = __webpack_require__(150);
+	var _SCNLevelOfDetail = __webpack_require__(155);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNLight = __webpack_require__(151);
+	var _SCNLight = __webpack_require__(156);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNLookAtConstraint = __webpack_require__(152);
+	var _SCNLookAtConstraint = __webpack_require__(157);
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMaterialProperty = __webpack_require__(123);
+	var _SCNMaterialProperty = __webpack_require__(94);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -579,31 +579,31 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4EqualToMatrix = __webpack_require__(153);
+	var _SCNMatrix4EqualToMatrix = __webpack_require__(158);
 
 	var _SCNMatrix4EqualToMatrix2 = _interopRequireDefault(_SCNMatrix4EqualToMatrix);
 
-	var _SCNMatrix4FromGLKMatrix = __webpack_require__(154);
+	var _SCNMatrix4FromGLKMatrix = __webpack_require__(159);
 
 	var _SCNMatrix4FromGLKMatrix2 = _interopRequireDefault(_SCNMatrix4FromGLKMatrix);
 
-	var _SCNMatrix4FromMat = __webpack_require__(155);
+	var _SCNMatrix4FromMat = __webpack_require__(160);
 
 	var _SCNMatrix4FromMat2 = _interopRequireDefault(_SCNMatrix4FromMat);
 
-	var _SCNMatrix4Invert = __webpack_require__(156);
+	var _SCNMatrix4Invert = __webpack_require__(161);
 
 	var _SCNMatrix4Invert2 = _interopRequireDefault(_SCNMatrix4Invert);
 
-	var _SCNMatrix4IsIdentity = __webpack_require__(157);
+	var _SCNMatrix4IsIdentity = __webpack_require__(162);
 
 	var _SCNMatrix4IsIdentity2 = _interopRequireDefault(_SCNMatrix4IsIdentity);
 
-	var _SCNMatrix4MakeRotation = __webpack_require__(158);
+	var _SCNMatrix4MakeRotation = __webpack_require__(163);
 
 	var _SCNMatrix4MakeRotation2 = _interopRequireDefault(_SCNMatrix4MakeRotation);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(159);
+	var _SCNMatrix4MakeScale = __webpack_require__(164);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
@@ -611,35 +611,35 @@ module.exports =
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNMatrix4Mult = __webpack_require__(160);
+	var _SCNMatrix4Mult = __webpack_require__(165);
 
 	var _SCNMatrix4Mult2 = _interopRequireDefault(_SCNMatrix4Mult);
 
-	var _SCNMatrix4Rotate = __webpack_require__(161);
+	var _SCNMatrix4Rotate = __webpack_require__(166);
 
 	var _SCNMatrix4Rotate2 = _interopRequireDefault(_SCNMatrix4Rotate);
 
-	var _SCNMatrix4Scale = __webpack_require__(162);
+	var _SCNMatrix4Scale = __webpack_require__(167);
 
 	var _SCNMatrix4Scale2 = _interopRequireDefault(_SCNMatrix4Scale);
 
-	var _SCNMatrix4ToGLKMatrix = __webpack_require__(163);
+	var _SCNMatrix4ToGLKMatrix = __webpack_require__(168);
 
 	var _SCNMatrix4ToGLKMatrix2 = _interopRequireDefault(_SCNMatrix4ToGLKMatrix);
 
-	var _SCNMatrix4ToMat = __webpack_require__(164);
+	var _SCNMatrix4ToMat = __webpack_require__(169);
 
 	var _SCNMatrix4ToMat2 = _interopRequireDefault(_SCNMatrix4ToMat);
 
-	var _SCNMatrix4Translate = __webpack_require__(165);
+	var _SCNMatrix4Translate = __webpack_require__(170);
 
 	var _SCNMatrix4Translate2 = _interopRequireDefault(_SCNMatrix4Translate);
 
-	var _SCNMorpher = __webpack_require__(166);
+	var _SCNMorpher = __webpack_require__(171);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(167);
+	var _SCNMorpherCalculationMode = __webpack_require__(172);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
@@ -651,7 +651,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(168);
+	var _SCNNodeRendererDelegate = __webpack_require__(173);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
@@ -659,123 +659,123 @@ module.exports =
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNParticleBirthDirection = __webpack_require__(169);
+	var _SCNParticleBirthDirection = __webpack_require__(174);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
-	var _SCNParticleBirthLocation = __webpack_require__(170);
+	var _SCNParticleBirthLocation = __webpack_require__(175);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBlendMode = __webpack_require__(171);
+	var _SCNParticleBlendMode = __webpack_require__(176);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleEvent = __webpack_require__(172);
+	var _SCNParticleEvent = __webpack_require__(177);
 
 	var _SCNParticleEvent2 = _interopRequireDefault(_SCNParticleEvent);
 
-	var _SCNParticleEventBlock = __webpack_require__(173);
+	var _SCNParticleEventBlock = __webpack_require__(178);
 
 	var _SCNParticleEventBlock2 = _interopRequireDefault(_SCNParticleEventBlock);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(174);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(179);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNParticleInputMode = __webpack_require__(175);
+	var _SCNParticleInputMode = __webpack_require__(180);
 
 	var _SCNParticleInputMode2 = _interopRequireDefault(_SCNParticleInputMode);
 
-	var _SCNParticleModifierBlock = __webpack_require__(176);
+	var _SCNParticleModifierBlock = __webpack_require__(181);
 
 	var _SCNParticleModifierBlock2 = _interopRequireDefault(_SCNParticleModifierBlock);
 
-	var _SCNParticleModifierStage = __webpack_require__(177);
+	var _SCNParticleModifierStage = __webpack_require__(182);
 
 	var _SCNParticleModifierStage2 = _interopRequireDefault(_SCNParticleModifierStage);
 
-	var _SCNParticleOrientationMode = __webpack_require__(178);
+	var _SCNParticleOrientationMode = __webpack_require__(183);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticlePropertyController = __webpack_require__(179);
+	var _SCNParticlePropertyController = __webpack_require__(184);
 
 	var _SCNParticlePropertyController2 = _interopRequireDefault(_SCNParticlePropertyController);
 
-	var _SCNParticleSortingMode = __webpack_require__(180);
+	var _SCNParticleSortingMode = __webpack_require__(185);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNParticleSystem = __webpack_require__(181);
+	var _SCNParticleSystem = __webpack_require__(186);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNPhysicsBallSocketJoint = __webpack_require__(183);
+	var _SCNPhysicsBallSocketJoint = __webpack_require__(188);
 
 	var _SCNPhysicsBallSocketJoint2 = _interopRequireDefault(_SCNPhysicsBallSocketJoint);
 
-	var _SCNPhysicsBehavior = __webpack_require__(184);
+	var _SCNPhysicsBehavior = __webpack_require__(189);
 
 	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
 
-	var _SCNPhysicsBody = __webpack_require__(185);
+	var _SCNPhysicsBody = __webpack_require__(190);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsBodyType = __webpack_require__(186);
+	var _SCNPhysicsBodyType = __webpack_require__(105);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsCollisionCategory = __webpack_require__(189);
+	var _SCNPhysicsCollisionCategory = __webpack_require__(191);
 
 	var _SCNPhysicsCollisionCategory2 = _interopRequireDefault(_SCNPhysicsCollisionCategory);
 
-	var _SCNPhysicsContact = __webpack_require__(190);
+	var _SCNPhysicsContact = __webpack_require__(106);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsContactDelegate = __webpack_require__(191);
+	var _SCNPhysicsContactDelegate = __webpack_require__(192);
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
-	var _SCNPhysicsField = __webpack_require__(192);
+	var _SCNPhysicsField = __webpack_require__(193);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(193);
+	var _SCNPhysicsFieldScope = __webpack_require__(194);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
-	var _SCNPhysicsHingeJoint = __webpack_require__(194);
+	var _SCNPhysicsHingeJoint = __webpack_require__(195);
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
-	var _SCNPhysicsNoiseField = __webpack_require__(195);
+	var _SCNPhysicsNoiseField = __webpack_require__(196);
 
 	var _SCNPhysicsNoiseField2 = _interopRequireDefault(_SCNPhysicsNoiseField);
 
-	var _SCNPhysicsShape = __webpack_require__(187);
+	var _SCNPhysicsShape = __webpack_require__(107);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNPhysicsSliderJoint = __webpack_require__(196);
+	var _SCNPhysicsSliderJoint = __webpack_require__(197);
 
 	var _SCNPhysicsSliderJoint2 = _interopRequireDefault(_SCNPhysicsSliderJoint);
 
-	var _SCNPhysicsTurbulenceField = __webpack_require__(197);
+	var _SCNPhysicsTurbulenceField = __webpack_require__(198);
 
 	var _SCNPhysicsTurbulenceField2 = _interopRequireDefault(_SCNPhysicsTurbulenceField);
 
-	var _SCNPhysicsVehicle = __webpack_require__(198);
+	var _SCNPhysicsVehicle = __webpack_require__(199);
 
 	var _SCNPhysicsVehicle2 = _interopRequireDefault(_SCNPhysicsVehicle);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(199);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(200);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
-	var _SCNPhysicsWorld = __webpack_require__(200);
+	var _SCNPhysicsWorld = __webpack_require__(87);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
@@ -871,7 +871,7 @@ module.exports =
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNSphere = __webpack_require__(188);
+	var _SCNSphere = __webpack_require__(108);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
@@ -883,7 +883,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNTessellationSmoothingMode = __webpack_require__(145);
+	var _SCNTessellationSmoothingMode = __webpack_require__(151);
 
 	var _SCNTessellationSmoothingMode2 = _interopRequireDefault(_SCNTessellationSmoothingMode);
 
@@ -899,7 +899,7 @@ module.exports =
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
-	var _SCNTransaction = __webpack_require__(87);
+	var _SCNTransaction = __webpack_require__(96);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
@@ -907,7 +907,7 @@ module.exports =
 
 	var _SCNTransformConstraint2 = _interopRequireDefault(_SCNTransformConstraint);
 
-	var _SCNTransparencyMode = __webpack_require__(126);
+	var _SCNTransparencyMode = __webpack_require__(98);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
@@ -979,7 +979,7 @@ module.exports =
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
-	var _SCNWrapMode = __webpack_require__(125);
+	var _SCNWrapMode = __webpack_require__(97);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
@@ -1067,7 +1067,7 @@ module.exports =
 
 	var _SKWait2 = _interopRequireDefault(_SKWait);
 
-	var _AjaxRequest2 = __webpack_require__(112);
+	var _AjaxRequest2 = __webpack_require__(133);
 
 	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
 
@@ -1075,7 +1075,7 @@ module.exports =
 
 	var _BinaryReader3 = _interopRequireDefault(_BinaryReader2);
 
-	var _BinaryRequest2 = __webpack_require__(182);
+	var _BinaryRequest2 = __webpack_require__(187);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
@@ -8212,7 +8212,10 @@ module.exports =
 	   * @param {number} y - 
 	   * @see https://developer.apple.com/documentation/coregraphics/cgpoint/1455965-init
 	   */
-	  function CGPoint(x, y) {
+	  function CGPoint() {
+	    var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+	    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
 	    _classCallCheck(this, CGPoint);
 
 	    // Geometric Properties
@@ -18150,12 +18153,12 @@ module.exports =
 
 	    /**
 	     * The current position of the agent in 2D space.
-	     * @type {number[]}
+	     * @type {CGPoint}
 	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501043-position
 	     */
 	    var _this = _possibleConstructorReturn(this, (GKAgent2D.__proto__ || Object.getPrototypeOf(GKAgent2D)).call(this));
 
-	    _this.position = new _CGPoint2.default();
+	    _this.position = new _CGPoint2.default(0, 0);
 
 	    /**
 	     * The rotation of the agent around the z-axis.
@@ -18168,7 +18171,7 @@ module.exports =
 
 	    /**
 	     * @access private
-	     * @type {number[]}
+	     * @type {CGPoint}
 	     */
 	    _this._velocity = new _CGPoint2.default();
 	    return _this;
@@ -18192,7 +18195,7 @@ module.exports =
 
 	    /**
 	     * The current velocity of the agent in 2D space.
-	     * @type {number[]}
+	     * @type {CGPoint}
 	     * @desc An agent’s velocity is a calculated property—the velocity vector is determined by an agent’s facing direction (its rotation property) and its speed property.
 	     * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501186-velocity
 	     */
@@ -18596,6 +18599,22 @@ module.exports =
 	    /**
 	     * @access public
 	     * @param {SCNVector3} v -
+	     * @returns {SCNVector3}
+	     */
+
+	  }, {
+	    key: 'mulv',
+	    value: function mulv(v) {
+	      var r = new SCNVector3();
+	      r.x = this.x * v.x;
+	      r.y = this.y * v.y;
+	      r.z = this.z * v.z;
+	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {SCNVector3} v -
 	     * @returns {number} -
 	     */
 
@@ -18986,6 +19005,23 @@ module.exports =
 	      r.y = this.y * n;
 	      r.z = this.z * n;
 	      r.w = this.w * n;
+	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {SCNVector4} v -
+	     * @returns {SCNVector4}
+	     */
+
+	  }, {
+	    key: 'mulv',
+	    value: function mulv(v) {
+	      var r = new SCNVector4();
+	      r.x = this.x * v.x;
+	      r.y = this.y * v.y;
+	      r.z = this.z * v.z;
+	      r.z = this.w * v.w;
 	      return r;
 	    }
 
@@ -24136,7 +24172,11 @@ module.exports =
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNTransaction = __webpack_require__(87);
+	var _SCNPhysicsWorld = __webpack_require__(87);
+
+	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
+
+	var _SCNTransaction = __webpack_require__(96);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
@@ -24176,9 +24216,9 @@ module.exports =
 
 	//import SCNNodeRendererDelegate from './SCNNodeRendererDelegate'
 
+	//import SCNParticleSystem from './SCNParticleSystem'
 	//import SCNPhysicsBody from './SCNPhysicsBody'
 	//import SCNPhysicsField from './SCNPhysicsField'
-	//import SCNParticleSystem from './SCNParticleSystem'
 
 	//import SCNAudioPlayer from './SCNAudioPlayer'
 	//import SCNHitTestResult from './SCNHitTestResult'
@@ -25230,10 +25270,56 @@ module.exports =
 	  }, {
 	    key: 'hitTestWithSegmentFromTo',
 	    value: function hitTestWithSegmentFromTo(pointA, pointB) {
+	      var _this5 = this;
+
 	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
-	      // TODO: implement
-	      return [];
+	      var worldPointA = this.convertPositionTo(pointA, null);
+	      var worldPointB = this.convertPositionTo(pointB, null);
+	      var results = [];
+	      this.enumerateChildNodes(function (child) {
+	        if (child.presentation.geometry) {
+	          var hits = _SCNPhysicsWorld2.default._hitTestWithSegmentNode(worldPointA, worldPointB, child.presentation);
+	          if (hits.length > 0) {
+	            // convert from the child's coordinate to this node's coordinate
+	            var _iteratorNormalCompletion3 = true;
+	            var _didIteratorError3 = false;
+	            var _iteratorError3 = undefined;
+
+	            try {
+	              for (var _iterator3 = hits[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	                var h = _step3.value;
+
+	                h._node = child;
+	                h._worldCoordinates = child.convertPositionTo(h._localCoordinates, null);
+	                h._worldNormal = child.convertPositionTo(h._localNormal, null);
+	                h._localCoordinates = _this5.convertPositionFrom(h._localCoordinates, child);
+	                h._localNormal = child.convertPositionFrom(h._localNormal, child);
+	              }
+	            } catch (err) {
+	              _didIteratorError3 = true;
+	              _iteratorError3 = err;
+	            } finally {
+	              try {
+	                if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	                  _iterator3.return();
+	                }
+	              } finally {
+	                if (_didIteratorError3) {
+	                  throw _iteratorError3;
+	                }
+	              }
+	            }
+
+	            results.push.apply(results, _toConsumableArray(hits));
+	          }
+	        }
+	      }
+	      // TODO: sort by the distance
+	      );if (results.length > 0) {
+	        console.error('hitTestWithSegmentFromTo: ' + results.length);
+	      }
+	      return results;
 	    }
 
 	    // Converting Between Node Coordinate Spaces
@@ -25253,7 +25339,7 @@ module.exports =
 	      if (node === null) {
 	        return position.transform(this._worldTransform.invert());
 	      }
-	      return position.transform(node._worldTransform).transform(this._worldTransoform.invert());
+	      return position.transform(node._worldTransform).transform(this._worldTransform.invert());
 	    }
 
 	    /**
@@ -25893,28 +25979,28 @@ module.exports =
 	        box.max.z *= scale.z;
 	      }
 
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator3 = this._childNodes[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var child = _step3.value;
+	        for (var _iterator4 = this._childNodes[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var child = _step4.value;
 
 	          var cbox = child._updateBoundingBox();
 	          box = this._unionChildBoundingBox(box, cbox);
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -26032,27 +26118,27 @@ module.exports =
 	    value: function _copyMaterialPropertiesToPresentation() {
 	      var p = this._presentation;
 	      if (this._geometry) {
-	        var _iteratorNormalCompletion4 = true;
-	        var _didIteratorError4 = false;
-	        var _iteratorError4 = undefined;
+	        var _iteratorNormalCompletion5 = true;
+	        var _didIteratorError5 = false;
+	        var _iteratorError5 = undefined;
 
 	        try {
-	          for (var _iterator4 = this._geometry.materials[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	            var material = _step4.value;
+	          for (var _iterator5 = this._geometry.materials[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	            var material = _step5.value;
 
 	            material._copyPresentationProperties();
 	          }
 	        } catch (err) {
-	          _didIteratorError4 = true;
-	          _iteratorError4 = err;
+	          _didIteratorError5 = true;
+	          _iteratorError5 = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	              _iterator4.return();
+	            if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	              _iterator5.return();
 	            }
 	          } finally {
-	            if (_didIteratorError4) {
-	              throw _iteratorError4;
+	            if (_didIteratorError5) {
+	              throw _iteratorError5;
 	            }
 	          }
 	        }
@@ -26346,27 +26432,27 @@ module.exports =
 	    key: '_resetPromiseRecursively',
 	    value: function _resetPromiseRecursively() {
 	      this._resetPromise();
-	      var _iteratorNormalCompletion5 = true;
-	      var _didIteratorError5 = false;
-	      var _iteratorError5 = undefined;
+	      var _iteratorNormalCompletion6 = true;
+	      var _didIteratorError6 = false;
+	      var _iteratorError6 = undefined;
 
 	      try {
-	        for (var _iterator5 = this._childNodes[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-	          var child = _step5.value;
+	        for (var _iterator6 = this._childNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	          var child = _step6.value;
 
 	          child._resetPromiseRecursively();
 	        }
 	      } catch (err) {
-	        _didIteratorError5 = true;
-	        _iteratorError5 = err;
+	        _didIteratorError6 = true;
+	        _iteratorError6 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
-	            _iterator5.return();
+	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	            _iterator6.return();
 	          }
 	        } finally {
-	          if (_didIteratorError5) {
-	            throw _iteratorError5;
+	          if (_didIteratorError6) {
+	            throw _iteratorError6;
 	          }
 	        }
 	      }
@@ -26385,53 +26471,53 @@ module.exports =
 	      }
 
 	      var promises = [];
-	      var _iteratorNormalCompletion6 = true;
-	      var _didIteratorError6 = false;
-	      var _iteratorError6 = undefined;
+	      var _iteratorNormalCompletion7 = true;
+	      var _didIteratorError7 = false;
+	      var _iteratorError7 = undefined;
 
 	      try {
-	        for (var _iterator6 = this._childNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-	          var child = _step6.value;
+	        for (var _iterator7 = this._childNodes[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+	          var child = _step7.value;
 
 	          promises.push(child.didLoad);
 	        }
 	      } catch (err) {
-	        _didIteratorError6 = true;
-	        _iteratorError6 = err;
+	        _didIteratorError7 = true;
+	        _iteratorError7 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
-	            _iterator6.return();
+	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
+	            _iterator7.return();
 	          }
 	        } finally {
-	          if (_didIteratorError6) {
-	            throw _iteratorError6;
+	          if (_didIteratorError7) {
+	            throw _iteratorError7;
 	          }
 	        }
 	      }
 
 	      if (this._particleSystems) {
-	        var _iteratorNormalCompletion7 = true;
-	        var _didIteratorError7 = false;
-	        var _iteratorError7 = undefined;
+	        var _iteratorNormalCompletion8 = true;
+	        var _didIteratorError8 = false;
+	        var _iteratorError8 = undefined;
 
 	        try {
-	          for (var _iterator7 = this._particleSystems[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-	            var system = _step7.value;
+	          for (var _iterator8 = this._particleSystems[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+	            var system = _step8.value;
 
 	            promises.push(system.didLoad);
 	          }
 	        } catch (err) {
-	          _didIteratorError7 = true;
-	          _iteratorError7 = err;
+	          _didIteratorError8 = true;
+	          _iteratorError8 = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion7 && _iterator7.return) {
-	              _iterator7.return();
+	            if (!_iteratorNormalCompletion8 && _iterator8.return) {
+	              _iterator8.return();
 	            }
 	          } finally {
-	            if (_didIteratorError7) {
-	              throw _iteratorError7;
+	            if (_didIteratorError8) {
+	              throw _iteratorError8;
 	            }
 	          }
 	        }
@@ -26439,29 +26525,29 @@ module.exports =
 	      if (this._geometry) {
 	        promises.push(this._geometry.didLoad);
 	      }
-	      var _iteratorNormalCompletion8 = true;
-	      var _didIteratorError8 = false;
-	      var _iteratorError8 = undefined;
+	      var _iteratorNormalCompletion9 = true;
+	      var _didIteratorError9 = false;
+	      var _iteratorError9 = undefined;
 
 	      try {
-	        for (var _iterator8 = this._audioPlayers[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-	          var player = _step8.value;
+	        for (var _iterator9 = this._audioPlayers[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+	          var player = _step9.value;
 
 	          promises.push(player.didLoad);
 	        }
 	        //this._loadedPromise = Promise.all(promises)
 	        //return this._loadedPromise
 	      } catch (err) {
-	        _didIteratorError8 = true;
-	        _iteratorError8 = err;
+	        _didIteratorError9 = true;
+	        _iteratorError9 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
-	            _iterator8.return();
+	          if (!_iteratorNormalCompletion9 && _iterator9.return) {
+	            _iterator9.return();
 	          }
 	        } finally {
-	          if (_didIteratorError8) {
-	            throw _iteratorError8;
+	          if (_didIteratorError9) {
+	            throw _iteratorError9;
 	          }
 	        }
 	      }
@@ -26885,43 +26971,12 @@ module.exports =
 	    key: 'actionKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion9 = true;
-	      var _didIteratorError9 = false;
-	      var _iteratorError9 = undefined;
-
-	      try {
-	        for (var _iterator9 = this._actions.keys()[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
-	          var key = _step9.value;
-
-	          keys.push(key);
-	        }
-	      } catch (err) {
-	        _didIteratorError9 = true;
-	        _iteratorError9 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion9 && _iterator9.return) {
-	            _iterator9.return();
-	          }
-	        } finally {
-	          if (_didIteratorError9) {
-	            throw _iteratorError9;
-	          }
-	        }
-	      }
-
-	      return keys;
-	    }
-	  }, {
-	    key: 'animationKeys',
-	    get: function get() {
-	      var keys = [];
 	      var _iteratorNormalCompletion10 = true;
 	      var _didIteratorError10 = false;
 	      var _iteratorError10 = undefined;
 
 	      try {
-	        for (var _iterator10 = this._animations.keys()[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+	        for (var _iterator10 = this._actions.keys()[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
 	          var key = _step10.value;
 
 	          keys.push(key);
@@ -26937,6 +26992,37 @@ module.exports =
 	        } finally {
 	          if (_didIteratorError10) {
 	            throw _iteratorError10;
+	          }
+	        }
+	      }
+
+	      return keys;
+	    }
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      var keys = [];
+	      var _iteratorNormalCompletion11 = true;
+	      var _didIteratorError11 = false;
+	      var _iteratorError11 = undefined;
+
+	      try {
+	        for (var _iterator11 = this._animations.keys()[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+	          var key = _step11.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError11 = true;
+	        _iteratorError11 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion11 && _iterator11.return) {
+	            _iterator11.return();
+	          }
+	        } finally {
+	          if (_didIteratorError11) {
+	            throw _iteratorError11;
 	          }
 	        }
 	      }
@@ -27022,13 +27108,13 @@ module.exports =
 	    key: '_loadAnimationArray',
 	    value: function _loadAnimationArray(node, animations) {
 	      //console.log('_loadAnimationArray start')
-	      var _iteratorNormalCompletion11 = true;
-	      var _didIteratorError11 = false;
-	      var _iteratorError11 = undefined;
+	      var _iteratorNormalCompletion12 = true;
+	      var _didIteratorError12 = false;
+	      var _iteratorError12 = undefined;
 
 	      try {
-	        for (var _iterator11 = Object.keys(animations)[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
-	          var animName = _step11.value;
+	        for (var _iterator12 = Object.keys(animations)[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+	          var animName = _step12.value;
 
 	          var data = animations[animName];
 	          var animation = this._loadAnimationData(data, animName);
@@ -27036,16 +27122,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError11 = true;
-	        _iteratorError11 = err;
+	        _didIteratorError12 = true;
+	        _iteratorError12 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion11 && _iterator11.return) {
-	            _iterator11.return();
+	          if (!_iteratorNormalCompletion12 && _iterator12.return) {
+	            _iterator12.return();
 	          }
 	        } finally {
-	          if (_didIteratorError11) {
-	            throw _iteratorError11;
+	          if (_didIteratorError12) {
+	            throw _iteratorError12;
 	          }
 	        }
 	      }
@@ -27071,7 +27157,7 @@ module.exports =
 	  }, {
 	    key: '_loadAnimationGroup',
 	    value: function _loadAnimationGroup(animation) {
-	      var _this5 = this;
+	      var _this6 = this;
 
 	      //console.log('_loadAnimationGroup start')
 	      var group = new _CAAnimationGroup2.default();
@@ -27097,7 +27183,7 @@ module.exports =
 	      data.channels.forEach(function (channel) {
 	        var keyPath = channel.targetPath.join('.'
 	        //console.error(`SCNNode animation group keyPath: ${keyPath}`)
-	        );var chAnim = _this5._loadAnimationData(channel.animation, keyPath);
+	        );var chAnim = _this6._loadAnimationData(channel.animation, keyPath);
 	        group.animations.push(chAnim);
 	      }
 	      //console.log('_loadAnimationGroup done')
@@ -27188,13 +27274,13 @@ module.exports =
 	    key: '_loadActionArray',
 	    value: function _loadActionArray(node, actions) {
 	      //console.log('_loadActionArray start')
-	      var _iteratorNormalCompletion12 = true;
-	      var _didIteratorError12 = false;
-	      var _iteratorError12 = undefined;
+	      var _iteratorNormalCompletion13 = true;
+	      var _didIteratorError13 = false;
+	      var _iteratorError13 = undefined;
 
 	      try {
-	        for (var _iterator12 = Object.keys(actions)[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
-	          var actName = _step12.value;
+	        for (var _iterator13 = Object.keys(actions)[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
+	          var actName = _step13.value;
 
 	          var data = actions[actName];
 	          //const action = this._loadActionData(data, actName)
@@ -27203,16 +27289,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError12 = true;
-	        _iteratorError12 = err;
+	        _didIteratorError13 = true;
+	        _iteratorError13 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion12 && _iterator12.return) {
-	            _iterator12.return();
+	          if (!_iteratorNormalCompletion13 && _iterator13.return) {
+	            _iterator13.return();
 	          }
 	        } finally {
-	          if (_didIteratorError12) {
-	            throw _iteratorError12;
+	          if (_didIteratorError13) {
+	            throw _iteratorError13;
 	          }
 	        }
 	      }
@@ -27620,433 +27706,1572 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CABasicAnimation = __webpack_require__(69);
+	var _SCNBox = __webpack_require__(88);
 
-	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
+	var _SCNBox2 = _interopRequireDefault(_SCNBox);
+
+	var _SCNCapsule = __webpack_require__(103);
+
+	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
+
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNGeometrySource = __webpack_require__(100);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
+	var _SCNHitTestResult = __webpack_require__(104);
+
+	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
+
+	var _SCNMatrix = __webpack_require__(60);
+
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	var _SCNPhysicsBodyType = __webpack_require__(105);
+
+	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
+
+	var _SCNPhysicsContact = __webpack_require__(106);
+
+	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
+
+	var _SCNPhysicsShape = __webpack_require__(107);
+
+	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
+
+	var _SCNSphere = __webpack_require__(108);
+
+	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
+
+	var _SCNVector = __webpack_require__(58);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import SCNPhysicsBody from './SCNPhysicsBody'
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	//import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
+	//import SCNPhysicsBehavior from './SCNPhysicsBehavior'
+
+	//import SCNPhysicsContactDelegate from './SCNPhysicsContactDelegate'
 
 
-	//import SCNAnimationEvent from './SCNAnimationEvent'
+	//import _Ammo from '../third_party/ammo'
 
-	var _transactions = [];
-	var _immediateMode = true;
-
-	var _Transaction = function _Transaction() {
-	  _classCallCheck(this, _Transaction);
-
-	  /**
-	   * @type {Object}
-	   */
-	  this._animations = [];
-
-	  /**
-	   * @type {number}
-	   */
-	  this._animationDuration = 0.0;
-
-	  /**
-	   * @type {?CAMediaTimingFunction}
-	   */
-	  this._animationTimingFunction = null;
-
-	  /**
-	   * @type {boolean}
-	   */
-	  this._disableActions = false;
-
-	  /**
-	   * @type {?function}
-	   */
-	  this._completionBlock = null;
-
-	  /**
-	   * @type {Map<string, Object>}
-	   */
-	  this._values = new Map();
+	var _TestOption = {
+	  backfaceCulling: 'backfaceCulling',
+	  collisionBitMask: 'collisionBitMask',
+	  searchMode: 'results'
 	};
 
-	var _automaticTransaction = new _Transaction();
-
-	/**
-	 * The SCNTransaction class defines SceneKit’s mechanism for batching scene graph modifications into atomic updates. You use SCNTransaction class methods to control the animation that results from changing animatable properties in the scene graph and to combine sets of changes into nested transactions.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/documentation/scenekit/scntransaction
-	 */
-
-	var SCNTransaction = function (_NSObject) {
-	  _inherits(SCNTransaction, _NSObject);
+	var _TestSearchMode = {
+	  all: 'all',
+	  any: 'any',
+	  closest: 'closest'
 
 	  /**
-	   * constructor
+	   * The global simulation of collisions, gravity, joints, and other physics effects in a scene.
 	   * @access public
-	   * @constructor
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld
 	   */
-	  function SCNTransaction() {
-	    _classCallCheck(this, SCNTransaction);
+	};
+	var SCNPhysicsWorld = function (_NSObject) {
+	  _inherits(SCNPhysicsWorld, _NSObject);
 
-	    var _this = _possibleConstructorReturn(this, (SCNTransaction.__proto__ || Object.getPrototypeOf(SCNTransaction)).call(this));
+	  _createClass(SCNPhysicsWorld, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        gravity: 'SCNVector3',
+	        speed: 'double',
+	        timeStep: 'double',
+	        scale: ['double', '_scale'],
+	        // _allBehaviors
+	        // contactDelegate
+	        scene: ['SCNScene', '_scene']
+	      };
+	    }
 
-	    throw new Error('do not create an instance of SCNTransaction');
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNPhysicsWorld() {
+	    _classCallCheck(this, SCNPhysicsWorld);
+
+	    // Managing the Physics Simulation
+
+	    /**
+	     * A vector that specifies the gravitational acceleration applied to physics bodies in the physics world.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512855-gravity
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsWorld.__proto__ || Object.getPrototypeOf(SCNPhysicsWorld)).call(this));
+
+	    _this.gravity = new _SCNVector2.default(0, 0, 0);
+
+	    /**
+	     * The rate at which the simulation executes.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512851-speed
+	     */
+	    _this.speed = 0;
+
+	    /**
+	     * The time interval between updates to the physics simulation.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512881-timestep
+	     */
+	    _this.timeStep = 0;
+
+	    /**
+	     * @access private
+	     * @type {number}
+	     */
+	    _this._scale = 1.0;
+
+	    // Registering Physics Behaviors
+
+	    _this._allBehaviors = [];
+
+	    // Detecting Contacts Between Physics Bodies
+
+	    /**
+	     * A delegate that is called when two physics bodies come in contact with each other.
+	     * @type {?SCNPhysicsContactDelegate}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512843-contactdelegate
+	     */
+	    _this.contactDelegate = null;
+
+	    //const collisionConfiguration = new Ammo.btDefaultCollisionConfiguration()
+	    //const dispatcher = new Ammo.btCollisionDispatcher(collisionConfiguration)
+	    //const overlappingPairCache = new Ammo.btDbvtBroadphase()
+	    //const solver = new Ammo.btSequentialImpulseConstraintSolver()
+	    //this._world = new Ammo.btDiscreteDynamicsWorld(
+	    //  dispatcher, overlappingPairCache, solver, collisionConfiguration
+	    //)
+
+	    _this._prevTime = null;
+
+	    /**
+	     * @access private
+	     * @type {SCNScene}
+	     */
+	    _this._scene = null;
+
+	    // for rayTest
+	    _this._renderer = null;
 	    return _this;
 	  }
 
-	  // Creating and Committing Transactions
+	  // Managing the Physics Simulation
 
 	  /**
-	   * Begins a new transaction for the current thread.
+	   * Forces the physics engine to reevaluate possible collisions between physics bodies.
 	   * @access public
 	   * @returns {void}
-	   * @desc The new transaction is nested within the thread’s current transaction, if there is one.The first time you modify the scene graph during a pass through the run loop, SceneKit automatically creates a transaction and makes it the current transaction. (SceneKit commits that transaction when the next iteration of the run loops begins.) If you call this method to create a custom transaction before modifying the scene graph, your custom transaction becomes the current transaction.
-	   * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522820-begin
+	   * @desc By default, SceneKit checks for collisions between physics bodies only once per simulation step. If you directly change the positions of any physics bodies outside of a SCNPhysicsContactDelegate method, call the updateCollisionPairs() method before using any of the methods listed in Searching for Physics Bodies Detecting Contacts Between Physics Bodies.
+	   * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512877-updatecollisionpairs
 	   */
 
 
-	  _createClass(SCNTransaction, null, [{
-	    key: 'begin',
-	    value: function begin() {
-	      var newTransaction = new _Transaction();
-	      newTransaction._disableActions = this._currentTransaction._disabledActions;
-	      _transactions.push(newTransaction);
-	    }
+	  _createClass(SCNPhysicsWorld, [{
+	    key: 'updateCollisionPairs',
+	    value: function updateCollisionPairs() {}
+
+	    // Registering Physics Behaviors
 
 	    /**
-	     * Commits all changes made during the current transaction.
+	     * Adds a behavior to the physics world.
 	     * @access public
+	     * @param {SCNPhysicsBehavior} behavior - The behavior to be added.
 	     * @returns {void}
-	     * @desc If there is no current transaction, this method has no effect.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523436-commit
+	     * @desc Physics behaviors constrain or modify the effects of the physics simulation on sets of physics bodies. For example, the SCNPhysicsHingeJoint behavior causes two bodies to move as if connected by a hinge that pivots around a specific axis, and the SCNPhysicsVehicle behavior causes a body to roll like a car or other wheeled vehicle.To use a behavior in your scene, follow these steps:Create SCNPhysicsBody objects and attach them to each node that participates in the behavior.Create and configure a behavior object joining the physics bodies. See SCNPhysicsBehavior for a list of behavior classes.Call addBehavior(_:) on your scene’s physics world object to add the behavior to the physics simulation.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512839-addbehavior
 	     */
 
 	  }, {
-	    key: 'commit',
-	    value: function commit() {
-	      var transaction = _transactions.pop();
-	      if (transaction) {
-	        this._apply(transaction);
+	    key: 'addBehavior',
+	    value: function addBehavior(behavior) {
+	      if (this._allBehaviors.indexOf(behavior) >= 0) {
+	        return;
 	      }
+	      this._allBehaviors.push(behavior);
 	    }
 
 	    /**
-	     * Applies all changes from the current automatic transaction.
+	     * Removes a behavior from the physics world.
 	     * @access public
+	     * @param {SCNPhysicsBehavior} behavior - The behavior to be removed.
 	     * @returns {void}
-	     * @desc SceneKit automatically calls this method at the end of each pass through the run loop, regardless of the run loop mode. If your app does not have a run loop, you must call this method explicitly.If the current transaction has any nested transactions that are still animating, SceneKit waits to commit the current transaction’s changes until those transactions complete.NoteIf possible, avoid calling flush() explicitly. By allowing flush() to execute during the run loop, your app achieves better performance, atomic screen updates are preserved, and transactions and animations that work from transaction to transaction continue to function.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522860-flush
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512870-removebehavior
 	     */
 
 	  }, {
-	    key: 'flush',
-	    value: function flush() {
-	      // TODO: wait nested transactions
-	      this._apply(_automaticTransaction);
+	    key: 'removeBehavior',
+	    value: function removeBehavior(behavior) {
+	      var index = this._allBehaviors.indexOf(behavior);
+	      if (index < 0) {
+	        return;
+	      }
+	      this._allBehaviors.splice(index, 1);
 	    }
+
+	    /**
+	     * Removes all behaviors affecting bodies in the physics world.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512849-removeallbehaviors
+	     */
+
 	  }, {
-	    key: '_apply',
-	    value: function _apply(transaction) {
-	      if (transaction._disableActions || transaction._animationDuration === 0) {
-	        transaction._animations.forEach(function (anim) {
-	          anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
-	        });
-	        if (transaction._completionBlock) {
-	          transaction._completionBlock();
-	        }
-	      } else {
-	        var promises = [];
-	        transaction._animations.forEach(function (anim) {
-	          var promise = new Promise(function (resolve, reject) {
-	            var animation = new _CABasicAnimation2.default(anim.keyPath);
-	            animation.fromValue = anim.diff;
-	            animation.timingFunction = transaction._animationTimingFunction;
-	            animation.duration = transaction._animationDuration;
-	            animation.isAdditive = true;
-	            animation.isRemovedOnCompletion = true;
-	            animation.delegate = {
-	              animationDidStop: function animationDidStop(_anim, _finished) {
-	                if (_finished) {
-	                  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
-	                  resolve(anim, animation);
-	                }
-	              }
-	            };
-	            anim.target.addAnimationForKey(animation, null);
-	          });
-	          promises.push(promise);
-	        });
-	        Promise.all(promises).then(function () {
-	          if (transaction._completionBlock) {
-	            transaction._completionBlock();
+	    key: 'removeAllBehaviors',
+	    value: function removeAllBehaviors() {
+	      this._allBehaviors = [];
+	    }
+
+	    /**
+	     * The list of behaviors affecting bodies in the physics world.
+	     * @type {SCNPhysicsBehavior[]}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512853-allbehaviors
+	     */
+
+	  }, {
+	    key: 'contactTestBetween',
+
+
+	    // Detecting Contacts Between Physics Bodies
+
+	    /**
+	     * Checks for contacts between two physics bodies.
+	     * @access public
+	     * @param {SCNPhysicsBody} bodyA - The first body (to test for contact with the second).
+	     * @param {SCNPhysicsBody} bodyB - The second body (to test for contact with the first).
+	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
+	     * @returns {SCNPhysicsContact[]} - 
+	     * @desc SceneKit sends messages to the physics world’s contactDelegate object only when collisions occur between bodies whose collisionBitMask and categoryBitMask properties overlap, and only for collisions between certain types of bodies. (For details, see SCNPhysicsBodyType.) Use this method to directly test for contacts between any two bodies at a time of your choosing. For example, to implement a game where the player character can pick up an item, you might call this method when the player presses the “pick up” button to see if the player character is in contact with the item to be picked up.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512875-contacttestbetween
+	     */
+	    value: function contactTestBetween(bodyA, bodyB) {
+	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	      // FIXME: use physics library
+	      if ((bodyA.categoryBitMask & bodyB.contactTestBitMask) === 0) {
+	        return [];
+	      }
+	      if (!bodyA.physicsShape || !bodyB.physicsShape) {
+	        return [];
+	      }
+	      if (bodyA.type === _SCNPhysicsBodyType2.default.static && bodyB.type === _SCNPhysicsBodyType2.default.static) {
+	        return [];
+	      }
+	      if (bodyA._position.sub(bodyB._position).length() > bodyA._radius + bodyB._radius) {
+	        return [];
+	      }
+	      var shapeA = bodyA.physicsShape._shape;
+	      var shapeB = bodyB.physicsShape._shape;
+
+	      if (shapeA instanceof _SCNBox2.default && shapeB instanceof _SCNBox2.default) {
+	        return SCNPhysicsWorld._contactTestBetweenBoxes(bodyA, bodyB, options);
+	      } else if (shapeA instanceof _SCNBox2.default && shapeB instanceof _SCNSphere2.default) {
+	        return SCNPhysicsWorld._contactTestBetweenBoxAndSphere(bodyA, bodyB, options);
+	      } else if (shapeB instanceof _SCNBox2.default && shapeA instanceof _SCNSphere2.default) {
+	        return SCNPhysicsWorld._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true);
+	      } else if (shapeA instanceof _SCNSphere2.default && shapeB instanceof _SCNSphere2.default) {
+	        return SCNPhysicsWorld._contactTestBetweenSpheres(bodyA, bodyB, options);
+	      }
+	      return [];
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNPhysicsBody} boxA -
+	     * @param {SCNPhysicsBody} boxB -
+	     * @param {Object} options -
+	     * @returns {SCNPhysicsContact[]} -
+	     */
+
+	  }, {
+	    key: 'contactTestWith',
+
+
+	    /**
+	     * Checks for contacts between one physics body and any other bodies in the physics world.
+	     * @access public
+	     * @param {SCNPhysicsBody} body - The body to test for contact.
+	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
+	     * @returns {SCNPhysicsContact[]} - 
+	     * @desc SceneKit sends messages to the physics world’s contactdelegate object only when collisions occur between bodies whose collisionBitMask and categoryBitMask properties overlap, and only for collisions between certain types of bodies. (For details, see SCNPhysicsBodyType.) Use this method to directly test for all contacts between one body and any other bodies at a time of your choosing. For example, to implement a game with a “wall jump” effect, you could call this method when the player presses the jump button to see if the player character is in contact with any walls.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512841-contacttest
+	     */
+	    value: function contactTestWith(body) {
+	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      return [];
+	    }
+
+	    // Searching for Physics Bodies
+
+	    /**
+	     * Searches for physics bodies along a line segment between two points in the physics world.
+	     * @access public
+	     * @param {SCNVector3} origin - An endpoint of the line segment to search, specified in the scene’s world coordinate system.
+	     * @param {SCNVector3} dest - The other endpoint of the line segment to search, specified in the scene’s world coordinate system.
+	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
+	     * @returns {SCNHitTestResult[]} - 
+	     * @desc Use this method to implement concepts such as line of sight in your app. For example, in a game you might implement behavior for an enemy character by searching for physics bodies along a line between the enemy character’s position and the player character’s position, as illustrated below:// Options: Look only for the closest object along line of sight,
+	    // and use the collision bitmask to avoid finding the enemy itself.
+	    NSDictionary *options = @{ SCNPhysicsTestSearchModeKey : SCNPhysicsTestSearchModeClosest,
+	                       SCNPhysicsTestCollisionBitMaskKey : @(kMyCategoryPlayer) };
+	    NSArray *results = [physicsWorld rayTestWithSegmentFromPoint:enemy.position
+	                                                       toPoint:player.position
+	                                                       options:options];
+	    if (results.firstObject.node == player) {
+	      // Enemy can see player: begin pursuit.
+	    } else {
+	      // Enemy cannot see player: remain idle.
+	    }
+	    // Options: Look only for the closest object along line of sight,
+	    // and use the collision bitmask to avoid finding the enemy itself.
+	    NSDictionary *options = @{ SCNPhysicsTestSearchModeKey : SCNPhysicsTestSearchModeClosest,
+	                       SCNPhysicsTestCollisionBitMaskKey : @(kMyCategoryPlayer) };
+	    NSArray *results = [physicsWorld rayTestWithSegmentFromPoint:enemy.position
+	                                                       toPoint:player.position
+	                                                       options:options];
+	    if (results.firstObject.node == player) {
+	      // Enemy can see player: begin pursuit.
+	    } else {
+	      // Enemy cannot see player: remain idle.
+	    }
+	      * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512857-raytestwithsegment
+	     */
+
+	  }, {
+	    key: 'rayTestWithSegmentFromTo',
+	    value: function rayTestWithSegmentFromTo(origin, dest) {
+	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	      var opt = options;
+	      if (Array.isArray(options)) {
+	        opt = new Map(options);
+	      } else if (options === null) {
+	        opt = new Map();
+	      }
+	      var results = [];
+
+	      var backfaceCulling = true;
+	      var collisionBitMask = -1;
+	      var searchMode = _TestSearchMode.any;
+	      if (opt.has(_TestOption.backfaceCulling)) {
+	        backfaceCulling = opt.get(_TestOption.backfaceCulling);
+	      }
+	      if (opt.has(_TestOption.collisionBitMask)) {
+	        collisionBitMask = opt.get(_TestOption.collisionBitMask);
+	      }
+	      if (opt.has(_TestOption.searchMode)) {
+	        searchMode = opt.get(_TestOption.searchMode);
+	      }
+
+	      return this._renderer._physicsHitTestByGPU(origin, dest, opt);
+	    }
+
+	    /**
+	     * Searches for physics bodies in the space formed by moving a convex shape through the physics world.
+	     * @access public
+	     * @param {SCNPhysicsShape} shape - A physics shape. This shape must enclose a convex volume. For details on creating shapes that satisfy this requirement, see SCNPhysicsShape.
+	     * @param {SCNMatrix4} from - A transform matrix representing the initial position and orientation of the shape.
+	     * @param {SCNMatrix4} to - A transform matrix representing the final position and orientation of the shape.
+	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
+	     * @returns {SCNPhysicsContact[]} - 
+	     * @desc Use this method when it’s important to plan for (or avoid) collisions ahead of the physics simulation. For example, in a game you might plan maneuvers for a flying character to fit through the gaps between static bodies in the physics world, as illustrated below:// Look for potential collisions along the spaceship's current path.
+	    SCNMatrix4 current = spaceship.transform;
+	    SCNMatrix4 upAhead = SCNMatrix4Translate(current, 0, 0, LOOK_AHEAD_DISTANCE);
+	    NSArray *contacts = [physicsWorld convexSweepTestWithShape:spaceship.physicsBody.physicsShape
+	                                               fromTransform:current
+	                                                 toTransform:upAhead
+	                                                     options:nil];
+	    if (contacts.count == 0) {
+	      // Flight path looks okay.
+	    } else {
+	      // Flight path will cause a collision: look for another way around.
+	    }
+	    // Look for potential collisions along the spaceship's current path.
+	    SCNMatrix4 current = spaceship.transform;
+	    SCNMatrix4 upAhead = SCNMatrix4Translate(current, 0, 0, LOOK_AHEAD_DISTANCE);
+	    NSArray *contacts = [physicsWorld convexSweepTestWithShape:spaceship.physicsBody.physicsShape
+	                                               fromTransform:current
+	                                                 toTransform:upAhead
+	                                                     options:nil];
+	    if (contacts.count == 0) {
+	      // Flight path looks okay.
+	    } else {
+	      // Flight path will cause a collision: look for another way around.
+	    }
+	      * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512859-convexsweeptest
+	     */
+
+	  }, {
+	    key: 'convexSweepTestWith',
+	    value: function convexSweepTestWith(shape, from, to) {
+	      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+
+	      // TODO: implement
+	      return [];
+	    }
+
+	    // Structures
+
+	    /**
+	     * @type {Object} TestOption
+	     * @property {string} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
+	     * @property {string} collisionBitMask The key for selecting which categories of physics bodies that SceneKit should test for contacts.
+	     * @property {string} searchMode The key for selecting the number and order of contacts to be tested.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld.testoption
+	     */
+
+	  }, {
+	    key: '_simulate',
+	    value: function _simulate(time) {
+	      // FIXME: use physics library
+	      //this._world.stepSimulation(1.0/60.0, 0)
+	      if (!this._renderer) {
+	        return;
+	      }
+
+	      var objects = this._renderer._createRenderingPhysicsNodeArray();
+	      var contacts = [];
+
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = objects[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var obj = _step.value;
+
+	          var body = obj.physicsBody;
+	          body._prevPosition = body._position;
+	          if (body.type === _SCNPhysicsBodyType2.default.kinematic) {
+	            body._resetTransform();
+	          } else if (body.type === _SCNPhysicsBodyType2.default.dynamic) {
+	            // TODO: move physics bodies
 	          }
-	        });
-	      }
-	    }
-
-	    // Overriding Animation Duration and Timing
-
-	    /**
-	     * Returns the duration, in seconds, of all animations within the current transaction.
-	     * @type {number}
-	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523888-animationduration
-	     */
-
-	  }, {
-	    key: 'lock',
-
-
-	    // Managing Concurrency
-
-	    /**
-	     * Attempts to acquire a recursive spinlock to ensure the validity of values you retrieve during the transaction.
-	     * @access public
-	     * @returns {void}
-	     * @desc SceneKit’s data model is thread-safe in that it ensures that internal data structures will not be corrupted by concurrent attempts to modify their contents from multiple threads. However, this model does not guarantee the validity of values you read from scene graph objects after returning them.For example, consider the following operation:_node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    The intent of this line is to move a node by ten units. But if another thread modifies the node’s position property concurrently, the new position value could be unexpected. If your app modifies the scene graph from multiple threads, use a transaction lock to ensure that your modifications take effect as intended.[SCNTransaction lock];
-	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    [SCNTransaction unlock];
-	    If another thread currently holds a lock on the transaction, calling lock() has no effect._node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    [SCNTransaction lock];
-	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    [SCNTransaction unlock];
-	      * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523078-lock
-	     */
-	    value: function lock() {
-	      throw new Error('lock() is not implemented');
-	    }
-
-	    /**
-	     * Relinquishes a previously acquired transaction lock.
-	     * @access public
-	     * @returns {void}
-	     * @desc See the lock() method for more details on transaction locking.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523166-unlock
-	     */
-
-	  }, {
-	    key: 'unlock',
-	    value: function unlock() {
-	      throw new Error('unlock() is not implemented');
-	    }
-
-	    // Getting and Setting Transaction Properties
-
-	    /**
-	     * Associates an arbitrary object with the current transaction using the specified key.
-	     * @access public
-	     * @param {?Object} value - 
-	     * @param {string} key - A unique string identifying the object for later retrieval.
-	     * @returns {void}
-	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, and reading the value for a key searches through nested transactions (starting from the innermost).
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1524124-setvalue
-	     */
-
-	  }, {
-	    key: 'setValueForKey',
-	    value: function setValueForKey(value, key) {
-	      this._currentTransaction._values.set(key, value);
-	    }
-
-	    /**
-	     * Returns the object previously associated with the current transaction using the specified key.
-	     * @access public
-	     * @param {string} key - The unique string identifying an object previously associated with the transaction.
-	     * @returns {?Object} - 
-	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, but reading the value for a key searches through nested transactions (starting from the innermost).
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523919-value
-	     */
-
-	  }, {
-	    key: 'valueForKey',
-	    value: function valueForKey(key) {
-	      for (var i = _transactions.length - 1; i >= 0; i--) {
-	        var value = _transactions[i]._values.get(key);
-	        if (typeof value !== 'undefined') {
-	          return value;
+	          body._positionDiff = body._position.sub(body._prevPosition);
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
 	        }
 	      }
-	      return _automaticTransaction._values.get(key);
+
+	      var staticType = _SCNPhysicsBodyType2.default.static;
+	      for (var i = 0; i < objects.length; i++) {
+	        var bodyA = objects[i].presentation.physicsBody;
+	        if (bodyA.physicsShape._sourceGeometry instanceof _SCNCapsule2.default) {
+	          contacts.push.apply(contacts, _toConsumableArray(SCNPhysicsWorld._capsuleTestWithObjects(bodyA, objects)));
+	        }
+	        for (var j = 0; j < objects.length; j++) {
+	          if (i === j) {
+	            continue;
+	          }
+	          var bodyB = objects[j].presentation.physicsBody;
+	          contacts.push.apply(contacts, _toConsumableArray(this.contactTestBetween(bodyA, bodyB)));
+	        }
+	      }
+
+	      if (this.contactDelegate) {
+	        var _iteratorNormalCompletion2 = true;
+	        var _didIteratorError2 = false;
+	        var _iteratorError2 = undefined;
+
+	        try {
+	          for (var _iterator2 = contacts[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	            var contact = _step2.value;
+
+	            if (this.contactDelegate.physicsWorldDidBegin) {
+	              this.contactDelegate.physicsWorldDidBegin(this, contact);
+	            }
+	          }
+	          // TODO: callback
+	          // this.contactDelegate.physicsWorldDidUpdate
+	          // this.contactDelegate.physicsWorldDidEnd
+	        } catch (err) {
+	          _didIteratorError2 = true;
+	          _iteratorError2 = err;
+	        } finally {
+	          try {
+	            if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	              _iterator2.return();
+	            }
+	          } finally {
+	            if (_didIteratorError2) {
+	              throw _iteratorError2;
+	            }
+	          }
+	        }
+	      }
+
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = objects[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var _obj = _step3.value;
+
+	          var _body = _obj.physicsBody;
+	          _body._prevPosition = _body._position;
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
 	    }
 
 	    /**
 	     * @access private
-	     * @returns {_Transaction} -
+	     * @param {SCNPhysicsBody} body -
+	     * @param {SCNNode[]} objects -
+	     * @returns {SCNPhysicsContact[]} -
 	     */
 
 	  }, {
-	    key: '_addChange',
+	    key: 'allBehaviors',
+	    get: function get() {
+	      return this._allBehaviors.slice(0);
+	    }
+	  }], [{
+	    key: '_contactTestBetweenBoxes',
+	    value: function _contactTestBetweenBoxes(boxA, boxB, options) {
+	      var shapeA = boxA.physicsShape._shape;
+	      var shapeB = boxB.physicsShape._shape;
 
+	      var tb = boxB._transform.mult(boxA._invTransform);
+	      var nb1 = new _SCNVector2.default(tb.m11, tb.m12, tb.m13).normalize();
+	      var nb2 = new _SCNVector2.default(tb.m21, tb.m22, tb.m23).normalize();
+	      var nb3 = new _SCNVector2.default(tb.m31, tb.m32, tb.m33).normalize();
+	      var b1 = nb1.mul(shapeB.width * 0.5);
+	      var b2 = nb2.mul(shapeB.height * 0.5);
+	      var b3 = nb3.mul(shapeB.length * 0.5);
+	      var d = tb.getTranslation();
+
+	      var lax = shapeA.width * 0.5;
+	      var lay = shapeA.height * 0.5;
+	      var laz = shapeA.length * 0.5;
+
+	      // Ae1
+	      var rA = lax;
+	      var rB = Math.abs(b1.x) + Math.abs(b2.x) + Math.abs(b3.x);
+	      var L = Math.abs(d.x);
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Ae2
+	      rA = lay;
+	      rB = Math.abs(b1.y) + Math.abs(b2.y) + Math.abs(b3.y);
+	      L = Math.abs(d.y);
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Ae3
+	      rA = laz;
+	      rB = Math.abs(b1.z) + Math.abs(b2.z) + Math.abs(b3.z);
+	      L = Math.abs(d.z);
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Be1
+	      rA = Math.abs(nb1.x * lax) + Math.abs(nb1.y * lay) + Math.abs(nb1.z * laz);
+	      rB = b1.length();
+	      L = Math.abs(d.dot(nb1));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Be2
+	      rA = Math.abs(nb2.x * lax) + Math.abs(nb2.y * lay) + Math.abs(nb2.z * laz);
+	      rB = b2.length();
+	      L = Math.abs(d.dot(nb2));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Be3
+	      rA = Math.abs(nb3.x * lax) + Math.abs(nb3.y * lay) + Math.abs(nb3.z * laz);
+	      rB = b3.length();
+	      L = Math.abs(d.dot(nb3));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C11
+	      var axis = new _SCNVector2.default(0, -nb1.z, nb1.y);
+	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C12
+	      axis = new _SCNVector2.default(0, -nb2.z, nb2.y);
+	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C13
+	      axis = new _SCNVector2.default(0, -nb3.z, nb3.y);
+	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C21
+	      axis = new _SCNVector2.default(nb1.z, 0, -nb1.x);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C22
+	      axis = new _SCNVector2.default(nb2.z, 0, -nb2.x);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C23
+	      axis = new _SCNVector2.default(nb3.z, 0, -nb3.x);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C31
+	      axis = new _SCNVector2.default(-nb1.y, nb1.x, 0);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
+	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C32
+	      axis = new _SCNVector2.default(-nb2.y, nb2.x, 0);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
+	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C33
+	      axis = new _SCNVector2.default(-nb3.y, nb3.x, 0);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
+	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      var contact = new _SCNPhysicsContact2.default();
+	      contact._nodeA = boxA._node;
+	      contact._nodeB = boxB._node;
+	      contact._contactPoint = boxA._position.add(d.mul(0.5) // TODO: implement
+	      );contact._contactNormal = d.normalize // TODO: implement
+	      ();contact._penetrationDistance = 0; // TODO: implement
+
+	      return [contact];
+	    }
 
 	    /**
 	     * @access private
-	     * @param {Object} target -
-	     * @param {string} keyPath -
-	     * @param {Object|number} oldValue -
-	     * @param {Object|number} newValue -
-	     * @returns {void}
+	     * @param {SCNPhysicsBody} sphereA -
+	     * @param {SCNPhysicsBody} sphereB -
+	     * @param {Object} options -
+	     * @returns {SCNPhysicsContact[]} -
 	     */
-	    value: function _addChange(target, keyPath, oldValue, newValue) {
-	      if (this.immediateMode) {
-	        target.setValueForKeyPath(newValue, keyPath);
+
+	  }, {
+	    key: '_contactTestBetweenSpheres',
+	    value: function _contactTestBetweenSpheres(sphereA, sphereB, options) {
+	      var shapeA = sphereA.physicsShape._shape;
+	      var shapeB = sphereB.physicsShape._shape;
+
+	      var posA = sphereA._position;
+	      var posB = sphereB._position;
+	      var radA = shapeA.radius;
+	      var radB = shapeB.radius;
+	      var vec = posA.sub(posB);
+	      var l = vec.length();
+	      if (l > radA + radB) {
+	        return [];
+	      }
+	      var contact = new _SCNPhysicsContact2.default();
+	      contact._nodeA = sphereA._node;
+	      contact._nodeB = sphereB._node;
+	      contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5));
+	      contact._contactNormal = vec.mul(-1).normalize();
+	      contact._penetrationDistance = radA + radB - l;
+	      return [contact];
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNPhysicsBody} box -
+	     * @param {SCNPhysicsBody} sphere -
+	     * @param {Object} options -
+	     * @returns {SCNPhysicsContact[]} -
+	     */
+
+	  }, {
+	    key: '_contactTestBetweenBoxAndSphere',
+	    value: function _contactTestBetweenBoxAndSphere(box, sphere) {
+	      var reverse = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+	      var boxShape = box.physicsShape._shape;
+	      var sphereShape = sphere.physicsShape._shape;
+
+	      var size = new _SCNVector2.default();
+	      var transform = null;
+	      var spherePos = sphere._position.transform(box._invTransform);
+	      var v = new _SCNVector2.default();
+
+	      var w = boxShape.width * 0.5;
+	      var h = boxShape.height * 0.5;
+	      var l = boxShape.length * 0.5;
+	      if (Math.abs(spherePos.x) - w <= 0) {
+	        v.x = 0;
 	      } else {
-	        var diff = null;
-	        if (typeof newValue === 'number') {
-	          diff = oldValue - newValue;
-	        } else if (typeof newValue.sub !== 'undefined') {
-	          diff = oldValue.sub(newValue);
-	        } else {
-	          throw new Error('keyPath ' + keyPath + ' does not have sub function');
+	        v.x = spherePos.x - w;
+	      }
+	      if (Math.abs(spherePos.y) - h <= 0) {
+	        v.y = 0;
+	      } else {
+	        v.y = spherePos.y - h;
+	      }
+	      if (Math.abs(spherePos.z) - l <= 0) {
+	        v.z = 0;
+	      } else {
+	        v.z = spherePos.z - l;
+	      }
+
+	      var d = v.length();
+	      if (d > sphereShape.radius) {
+	        return [];
+	      }
+
+	      var contact = new _SCNPhysicsContact2.default();
+	      if (reverse) {
+	        contact._nodeA = sphere._node;
+	        contact._nodeB = box._node;
+	      } else {
+	        contact._nodeA = box._node;
+	        contact._nodeB = sphere._node;
+	      }
+
+	      contact._contactPoint = v.transform(box._transform);
+	      contact._contactNormal = v.rotate(box._transform).normalize();
+	      if (reverse) {
+	        contact._contactNormal = contact._contactNormal.mul(-1);
+	      }
+	      contact._penetrationDistance = d - sphereShape.radius;
+	      return [contact];
+	    }
+	  }, {
+	    key: '_capsuleTestWithObjects',
+	    value: function _capsuleTestWithObjects(body, objects) {
+	      var result = [];
+
+	      var objs = objects.filter(function (obj) {
+	        var bodyB = obj.presentation.physicsBody;
+	        if (bodyB === body) {
+	          return false;
 	        }
-	        this._currentTransaction._animations.push({
-	          target: target,
-	          keyPath: keyPath,
-	          diff: diff,
-	          oldValue: oldValue,
-	          newValue: newValue
-	        });
+	        if (bodyB.physicsShape._type !== _SCNPhysicsShape2.default.ShapeType.concavePolyhedron) {
+	          return false;
+	        }
+	        if ((body.categoryBitMask & bodyB.contactTestBitMask) !== 0) {
+	          return true;
+	        }
+	        if ((bodyB.categoryBitMask & body.contactTestBitMask) !== 0) {
+	          return true;
+	        }
+	        return false;
+	      });
+	      if (objs.length === 0) {
+	        return result;
 	      }
-	    }
 
-	    /**
-	     * @access public
-	     * @type {boolean}
-	     */
+	      var bodyTransform = body._node._worldTransform;
+	      var capsule = body.physicsShape._sourceGeometry;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
-	  }, {
-	    key: 'animationDuration',
-	    get: function get() {
-	      return this._currentTransaction._animationDuration;
-	    }
+	      try {
+	        for (var _iterator4 = objs[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var obj = _step4.value;
 
-	    /**
-	     * Returns the duration, in seconds, of all animations within the current transaction.
-	     * @type {number}
-	     * @param {number} newValue -
-	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523888-animationduration
-	     */
-	    ,
-	    set: function set(newValue) {
-	      this._currentTransaction._animationDuration = newValue;
-	    }
+	          if (!this._intersectsBoundingBox(body._node, obj)) {
+	            continue;
+	          }
 
-	    /**
-	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
-	     * @type {?CAMediaTimingFunction}
-	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522614-animationtimingfunction
-	     */
-
-	  }, {
-	    key: 'animationTimingFunction',
-	    get: function get() {
-	      return this._currentTransaction._animationTimingFunction;
-	    }
-
-	    /**
-	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
-	     * @type {?CAMediaTimingFunction}
-	     * @param {?CAMediaTimingFunction} newValue -
-	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522614-animationtimingfunction
-	     */
-	    ,
-	    set: function set(newValue) {
-	      this._currentTransaction._animationTimingFunction = newValue;
-	    }
-
-	    // Temporarily Disabling Property Animations
-
-	    /**
-	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
-	     * @type {boolean}
-	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1524238-disableactions
-	     */
-
-	  }, {
-	    key: 'disableActions',
-	    get: function get() {
-	      return this._currentTransaction._disableActions;
-	    }
-
-	    /**
-	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
-	     * @type {boolean}
-	     * @param {boolean} newValue -
-	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1524238-disableactions
-	     */
-	    ,
-	    set: function set(newValue) {
-	      this._currentTransaction._disableActions = newValue;
-	    }
-
-	    // Getting and Setting Completion Block Objects
-
-	    /**
-	     * Returns the block previously associated with the current transaction.
-	     * @type {?function(): void}
-	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523660-completionblock
-	     */
-
-	  }, {
-	    key: 'completionBlock',
-	    get: function get() {
-	      return this._currentTransaction._completionBlock;
-	    }
-
-	    /**
-	     * Returns the block previously associated with the current transaction.
-	     * @type {?function(): void}
-	     * @param {?function(): void} newValue -
-	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
-	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523660-completionblock
-	     */
-	    ,
-	    set: function set(newValue) {
-	      this._currentTransaction._completionBlock = newValue;
-	    }
-	  }, {
-	    key: '_currentTransaction',
-	    get: function get() {
-	      if (_transactions.length > 0) {
-	        return _transactions[_transactions.length - 1];
+	          var contacts = this._contactTestCapsuleAndConcave(body._node, obj);
+	          result.push.apply(result, _toConsumableArray(contacts));
+	        }
+	      } catch (err) {
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
+	          }
+	        } finally {
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
+	          }
+	        }
 	      }
-	      return _automaticTransaction;
+
+	      return result;
 	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} node1 -
+	     * @param {SCNNode} node2 -
+	     * @returns {boolean} -
+	     */
+
 	  }, {
-	    key: 'immediateMode',
-	    get: function get() {
-	      if (_transactions.length > 0) {
+	    key: '_intersectsBoundingBox',
+	    value: function _intersectsBoundingBox(node1, node2) {
+	      var pos1 = node1._worldTranslation;
+	      var pos2 = node2._worldTranslation;
+	      var geo1 = node1.physicsBody.physicsShape._sourceGeometry;
+	      var geo2 = node2.physicsBody.physicsShape._sourceGeometry;
+	      if (!geo1 || !geo2) {
 	        return false;
 	      }
-	      return _immediateMode;
+	      var box1 = geo1.boundingBox;
+	      var box2 = geo2.boundingBox;
+	      if (box1.min.x + pos1.x > box2.max.x + pos2.x || box1.max.x + pos1.x < box2.min.x + pos2.x) {
+	        return false;
+	      }
+	      if (box1.min.y + pos1.y > box2.max.y + pos2.y || box1.max.y + pos1.y < box2.min.y + pos2.y) {
+	        return false;
+	      }
+	      if (box1.min.z + pos1.z > box2.max.z + pos2.z || box1.max.z + pos1.z < box2.min.z + pos2.z) {
+	        return false;
+	      }
+	      return true;
 	    }
 
 	    /**
-	     * @access public
-	     * @type {boolean}
-	     * @param {boolean} newValue -
+	     * @access private
+	     * @param {SCNNode} capNode - the node which has a capsule physicsShape
+	     * @param {SCNNode} conNode - the node which has a concave physicsShape
+	     * @returns {SCNPhysicsContact[]} -
 	     */
-	    ,
-	    set: function set(newValue) {
-	      _immediateMode = newValue;
+
+	  }, {
+	    key: '_contactTestCapsuleAndConcave',
+	    value: function _contactTestCapsuleAndConcave(capNode, conNode) {
+	      var result = [];
+	      var capBody = capNode.physicsBody;
+	      var conBody = conNode.physicsBody;
+	      var capsule = capBody.physicsShape._sourceGeometry;
+	      var concave = conBody.physicsShape._sourceGeometry;
+	      var transform = capBody._transform.mult(conBody._invTransform);
+	      var capSize = capsule.capRadius;
+	      var capHeight = capsule.height * 0.5 - capSize;
+	      var capV = capBody._positionDiff.rotate(transform).normalize();
+	      var p0 = new _SCNVector2.default(0, capHeight, 0).transform(transform);
+	      var p1 = new _SCNVector2.default(0, -capHeight, 0).transform(transform);
+	      var elems = concave.geometryElements;
+	      var vert = concave.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
+
+	      try {
+	        for (var _iterator5 = elems[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var elem = _step5.value;
+
+	          if (elem._primitiveType !== _SCNGeometryPrimitiveType2.default.triangles) {
+	            // TODO: support other primitive types.
+	            continue;
+	          }
+	          var edata = elem._data;
+	          var elen = elem._primitiveCount;
+	          var ind = 0;
+	          //console.warn(`    elen = ${elen}`)
+	          for (var i = 0; i < elen; i++) {
+	            var v0 = vert._scnVectorAt(edata[ind]);
+	            var v1 = vert._scnVectorAt(edata[ind + 1]);
+	            var v2 = vert._scnVectorAt(edata[ind + 2]);
+	            ind += 3;
+
+	            //const n = this._normalOfTriangle(v0, v1, v2)
+	            //if(n.dot(capV) >= 0){
+	            //  continue
+	            //}
+
+	            var contactInfo = this._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2);
+	            if (contactInfo) {
+	              var contact = new _SCNPhysicsContact2.default();
+	              contact._nodeA = capNode;
+	              contact._nodeB = conNode;
+	              contact._contactPoint = contactInfo.point;
+	              contact._contactNormal = contactInfo.normal;
+	              contact._penetrationDistance = contactInfo.penetration;
+	              result.push(contact);
+	            }
+	          }
+	        }
+	        //console.warn(`    result length = ${result.length}`)
+	      } catch (err) {
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
+	          }
+	        } finally {
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
+	          }
+	        }
+	      }
+
+	      return result;
+	    }
+
+	    // http://marupeke296.com/COL_3D_No27_CapsuleCapsule.html
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p0 - position of an edge of the capsule (in the triangle's coordinate)
+	     * @param {SCNVector3} p1 - position of another edge of the capsule (in the triangle's coordinate)
+	     * @param {number} capSize - capsule radius
+	     * @param {SCNVector3} v0 - vertex position (in the triangle's coordinate)
+	     * @param {SCNVector3} v1 - vertex position (in the triangle's coordinate)
+	     * @param {SCNVector3} v2 - vertex position (in the triangle's coordinate)
+	     * @returns {?Object} -
+	     *    {SCNVector3} point -
+	     *    {SCNVector3} normal -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_capsuleTriangleContact',
+	    value: function _capsuleTriangleContact(p0, p1, capSize, v0, v1, v2) {
+	      var seg = p1.sub(p0);
+
+	      var segTri = this._segmentTriangleIntersection(p0, p1, v0, v1, v2);
+	      if (segTri.intersection) {
+	        var penetration = 0;
+	        if (segTri.d0 < 0) {
+	          penetration = capSize - segTri.d0;
+	        } else {
+	          penetration = capSize - segTri.d1;
+	        }
+	        return {
+	          point: segTri.intersection,
+	          normal: segTri.normal,
+	          distance: 0,
+	          penetration: penetration
+	        };
+	      }
+
+	      var d0 = this._segmentSegmentDist(p0, p1, v0, v1);
+	      var min = d0;
+
+	      var d1 = this._segmentSegmentDist(p0, p1, v1, v2);
+	      if (d1.distance < min.distance) {
+	        min = d1;
+	      }
+
+	      var d2 = this._segmentSegmentDist(p0, p1, v2, v0);
+	      if (d2.distance < min.distance) {
+	        min = d2;
+	      }
+
+	      var h0 = p0.add(segTri.normal.mul(-segTri.d0));
+	      if (this._pointIsInsideTriangle(h0, v0, v1, v2)) {
+	        if (Math.abs(segTri.d0) < min.distance) {
+	          min.distance = Math.abs(segTri.d0);
+	          min.nearestPos1 = h0;
+	        }
+	      }
+
+	      var h1 = p1.add(segTri.normal.mul(-segTri.d1));
+	      if (this._pointIsInsideTriangle(h1, v0, v1, v2)) {
+	        if (Math.abs(segTri.d1) < min.distance) {
+	          min.distance = Math.abs(segTri.d1);
+	          min.nearestPos1 = h1;
+	        }
+	      }
+
+	      if (min.distance < capSize) {
+	        return {
+	          point: min.nearestPos1,
+	          normal: segTri.normal,
+	          distance: 0,
+	          penetration: capSize - min.distance
+	        };
+	      }
+
+	      return null;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} p0 - an edge of the segment
+	     * @param {SCNVector3} p1 - another edge of the segment
+	     * @param {SCNVector3} v0 - the first point of the vertex
+	     * @param {SCNVector3} v1 - the second point of the vertex
+	     * @param {SCNVector3} v2 - the third point of the vertex
+	     * @returns {Object} -
+	     *    {SCNVector3} normal - normal vector of the vertex
+	     *    {number} d0 - distance between p0 and the plane which contains the vertex
+	     *    {number} d1 - distance between p1 and the plane which contains the vertex
+	     *    {?SCNVector3} intersection - intersection point of the segment and the vertex
+	     */
+
+	  }, {
+	    key: '_segmentTriangleIntersection',
+	    value: function _segmentTriangleIntersection(p0, p1, v0, v1, v2) {
+	      var v0p0 = p0.sub(v0);
+	      var v0p1 = p1.sub(v0);
+	      var n = this._normalOfTriangle(v0, v1, v2);
+	      var d0 = v0p0.dot(n);
+	      var d1 = v0p1.dot(n);
+	      var result = { normal: n, d0: d0, d1: d1, intersection: null };
+	      if (d0 * d1 > 0) {
+	        return result;
+	      }
+	      var t = d0 / (d0 - d1);
+	      var h = v0p0.mul(1 - t).add(v0p1.mul(t));
+	      if (!this._pointIsInsideTriangle(h, v0, v1, v2)) {
+	        return result;
+	      }
+	      result.intersection = h;
+	      return result;
+	    }
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p0 - the first point of the triangle
+	     * @param {SCNVector3} p1 - the second point of the triangle
+	     * @param {SCNVector3} p2 - the third point of the triangle
+	     * @returns {SCNVector3} - normal vector (normalized)
+	     */
+
+	  }, {
+	    key: '_normalOfTriangle',
+	    value: function _normalOfTriangle(p0, p1, p2) {
+	      var v1 = p1.sub(p0);
+	      var v2 = p2.sub(p0);
+	      return v1.cross(v2).normalize();
+	    }
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p - point
+	     * @param {SCNVector3} p0 - the first point of the triangle
+	     * @param {SCNVector3} p1 - the second point of the triangle
+	     * @param {SCNVector3} p2 - the third point of the triangle
+	     * @returns {boolean} - true if the point is in the triangle.
+	     */
+
+	  }, {
+	    key: '_pointIsInsideTriangle',
+	    value: function _pointIsInsideTriangle(p, p0, p1, p2) {
+	      var n = this._normalOfTriangle(p0, p1, p2);
+	      var v0 = p1.sub(p0).cross(n).dot(p.sub(p0));
+	      var v1 = p2.sub(p1).cross(n).dot(p.sub(p1));
+	      var v2 = p0.sub(p2).cross(n).dot(p.sub(p2));
+
+	      if (v0 < 0 && v1 < 0 && v2 < 0) {
+	        return true;
+	      }
+	      if (v0 > 0 && v1 > 0 && v2 > 0) {
+	        return true;
+	      }
+	      return false;
+	    }
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p - point
+	     * @param {SCNVector3} lp - a point on the line
+	     * @param {SCNVector3} lv - line vector
+	     * @returns {Object} -
+	     *    {number} coeff -
+	     *    {SCNVector3} nearestPos -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_pointLineDist',
+	    value: function _pointLineDist(p, lp, lv) {
+	      var len2 = lv.length2();
+	      var t = 0;
+	      if (len2 > 0) {
+	        t = lv.dot(p.sub(lp)) / len2;
+	      }
+	      var h = lp.add(lv.mul(t));
+	      var d = h.sub(p).length();
+	      return {
+	        coeff: t,
+	        nearestPos: h,
+	        distance: d
+	      };
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} p - point
+	     * @param {SCNVector3} s0 - an edge of the segment
+	     * @param {SCNVector3} s1 - another edge of the segment
+	     * @returns {Object} -
+	     *    {number} coeff -
+	     *    {SCNVector3} nearestPos -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_pointSegmentDist',
+	    value: function _pointSegmentDist(p, s0, s1) {
+	      var lv = s1.sub(s0);
+	      var plDist = this._pointLineDist(p, s0, lv);
+	      if (plDist.coeff < 0) {
+	        var d = s0.sub(p).length();
+	        return {
+	          coeff: plDist.coeff,
+	          nearestPos: s0,
+	          distance: d
+	        };
+	      } else if (plDist.coeff > 1) {
+	        var _d = s1.sub(p).length();
+	        return {
+	          coeff: plDist.coeff,
+	          nearestPos: s1,
+	          distance: _d
+	        };
+	      }
+	      return plDist;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} p0 - a point on the first line
+	     * @param {SCNVector3} v0 - a line vector
+	     * @param {SCNVector3} p1 - a point on the second line
+	     * @param {SCNVector3} v1 - a line vector
+	     * @returns {Object} -
+	     *    {number} coeff0 -
+	     *    {SCNVector3} nearestPos0 - 
+	     *    {number} coeff1 -
+	     *    {SCNVector3} nearestPos1 -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_lineLineDist',
+	    value: function _lineLineDist(p0, v0, p1, v1) {
+	      if (this._isParallel(v0, v1)) {
+	        var plDist = this._pointLineDist(p0, p1, v1);
+	        return {
+	          coeff0: 0,
+	          nearestPos0: p0,
+	          coeff1: plDist.coeff,
+	          nearestPos1: plDist.nearestPos,
+	          distance: plDist.distance
+	        };
+	      }
+
+	      var v01 = v0.dot(v1);
+	      var v00 = v0.dot(v0);
+	      var v11 = v1.dot(v1);
+	      var p10 = p0.sub(p1);
+	      var coeff0 = (v01 * v1.dot(p10) - v11 * v0.dot(p10)) / (v00 * v11 - v01 * v01);
+	      var np0 = p0.add(v0.mul(coeff0));
+	      var coeff1 = v1.dot(np0.sub(p1)) / v11;
+	      var np1 = p1.add(v1.mul(coeff1));
+	      var d = np1.sub(np0).length();
+
+	      return {
+	        coeff0: coeff0,
+	        nearestPos0: np0,
+	        coeff1: coeff1,
+	        nearestPos1: np1,
+	        distance: d
+	      };
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} v0 - line vector
+	     * @param {SCNVector3} v1 - line vector
+	     * @returns {boolean} - true if the lines are parallel
+	     */
+
+	  }, {
+	    key: '_isParallel',
+	    value: function _isParallel(v0, v1) {
+	      var l = v0.cross(v1).length2();
+	      return l < 0.0000000000001;
+	    }
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {number} -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: '_clamp',
+	    value: function _clamp(val) {
+	      if (val < 0) {
+	        return 0;
+	      }
+	      if (val > 1) {
+	        return 1;
+	      }
+	      return val;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} s00 - an edge of the first segment
+	     * @param {SCNVector3} s01 - another edge of the first segment
+	     * @param {SCNVector3} s10 - an edge of the second segment
+	     * @param {SCNVector3} s11 - another edge of the second segment
+	     * @returns {Object} -
+	     *    {number} coeff0 -
+	     *    {SCNVector3} nearestPos0 -
+	     *    {number} coeff1 -
+	     *    {SCNVector3} nearestPos1 -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_segmentSegmentDist',
+	    value: function _segmentSegmentDist(s00, s01, s10, s11) {
+	      var v0 = s01.sub(s00);
+	      var v1 = s11.sub(s10);
+	      var dist = null;
+	      if (this._isParallel(v0, v1)) {
+	        dist = this._pointSegmentDist(s00, s10, s11);
+	        if (0.0 <= dist.coeff && dist.coeff <= 1.0) {
+	          return {
+	            coeff0: 0.0,
+	            nearestPos0: s00,
+	            coeff1: dist.coeff,
+	            nearestPos1: dist.nearestPos,
+	            distance: dist.distance
+	          };
+	        }
+	        dist.coeff0 = 0.0;
+	        dist.coeff1 = dist.coeff;
+	      } else {
+	        dist = this._lineLineDist(s00, v0, s10, v1);
+	        if (0.0 <= dist.coeff0 && dist.coeff0 <= 1.0 && 0.0 <= dist.coeff1 && dist.coeff1 <= 1.0) {
+	          return dist;
+	        }
+	      }
+
+	      var dist2 = dist;
+	      var t0 = this._clamp(dist.coeff0);
+	      if (t0 !== dist.coeff0) {
+	        var p0 = s00.add(v0.mul(t0));
+	        dist2 = this._pointSegmentDist(p0, s10, s11);
+	        if (0.0 <= dist2.coeff && dist2.coeff <= 1.0) {
+	          return {
+	            coeff0: t0,
+	            nearestPos0: p0,
+	            coeff1: dist2.coeff,
+	            nearestPos1: dist2.nearestPos,
+	            distance: dist2.distance
+	          };
+	        }
+	        dist2.coeff1 = dist2.coeff;
+	      }
+
+	      var t1 = this._clamp(dist2.coeff1);
+	      var p1 = s10.add(v1.mul(t1));
+	      var dist3 = this._pointSegmentDist(p1, s00, s01);
+	      if (0.0 <= dist3.coeff && dist3.coeff <= 1.0) {
+	        return {
+	          coeff0: dist3.coeff,
+	          nearestPos0: dist3.nearestPos,
+	          coeff1: t1,
+	          nearestPos1: p1,
+	          distance: dist3.distance
+	        };
+	      }
+
+	      var t = this._clamp(dist3.coeff);
+	      var p = s00.add(v0.mul(t));
+	      var d = p1.sub(p).length();
+	      return {
+	        coeff0: t,
+	        nearestPos0: p,
+	        coeff1: t1,
+	        nearestPos1: p1,
+	        distance: d
+	      };
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNVector3} p0 - An endpoint of the line segment to test, specified in the world coordinate system.
+	     * @param {SCNVector3} p1 - The other endpoint of the line segment to test, specified in the world coordinate system.
+	     * @param {SCNNode} node -
+	     * @returns {SCNHitTestResult[]} -
+	     */
+
+	  }, {
+	    key: '_hitTestWithSegmentNode',
+	    value: function _hitTestWithSegmentNode(pointA, pointB, node) {
+	      var n = node;
+	      var geo = node.geometry;
+	      if (node.presentation && node.presentation.geometry) {
+	        n = node.presentation;
+	        geo = n.geometry;
+	      }
+	      if (!geo) {
+	        return [];
+	      }
+
+	      var pA = n.convertPositionFrom(pointA, null);
+	      var pB = n.convertPositionFrom(pointB, null
+	      //if(this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox) !== null){
+	      );var r = this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox);
+	      if (r !== null) {
+	        console.error('segmentBoundingBoxIntersects: ' + r.near + ', ' + r.far);
+	        return this._hitTestWithSegmentGeometry(pA, pB, geo);
+	      }
+	      return [];
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNVector3} pointA -
+	     * @param {SCNVector3} pointB -
+	     * @param {Object} boundingBox -
+	     * @results {?Object} -
+	     */
+
+	  }, {
+	    key: '_segmentBoundingBoxIntersects',
+	    value: function _segmentBoundingBoxIntersects(pointA, pointB, boundingBox) {
+	      var v = pointB.sub(pointA);
+	      var r = this._lineBoundingBoxIntersects(pointA, v, boundingBox);
+	      if (r === null) {
+	        return null;
+	      }
+	      if (r.near > 1 || r.far < 0) {
+	        return null;
+	      }
+	      return r;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNVector3} p - a point on the line
+	     * @param {SCNVector3} v - line vector
+	     * @param {Object} boundingBox -
+	     * @returns {?Object} -
+	     */
+
+	  }, {
+	    key: '_lineBoundingBoxIntersects',
+	    value: function _lineBoundingBoxIntersects(p, v, boundingBox) {
+	      var epsilon = 0.000001;
+	      var odd = new _SCNVector2.default(1.0 / v.x, 1.0 / v.y, 1.0 / v.z);
+	      var t1 = boundingBox.min.sub(p).mulv(odd);
+	      var t2 = boundingBox.max.sub(p).mulv(odd);
+
+	      var near = -Infinity;
+	      var far = Infinity;
+
+	      if (Math.abs(v.x) < epsilon) {
+	        if (p.x < near || far < p.x) {
+	          return null;
+	        }
+	      } else if (t1.x < t2.x) {
+	        near = Math.max(near, t1.x);
+	        far = Math.min(far, t2.x);
+	      } else {
+	        near = Math.max(near, t2.x);
+	        far = Math.min(far, t1.x);
+	      }
+
+	      if (Math.abs(v.y) < epsilon) {
+	        if (p.y < near || far < p.y) {
+	          return null;
+	        }
+	      } else if (t1.y < t2.y) {
+	        near = Math.max(near, t1.y);
+	        far = Math.min(far, t2.y);
+	      } else {
+	        near = Math.max(near, t2.y);
+	        far = Math.min(far, t1.y);
+	      }
+
+	      if (Math.abs(v.z) < epsilon) {
+	        if (p.z < near || far < p.z) {
+	          return null;
+	        }
+	      } else if (t1.z < t2.z) {
+	        near = Math.max(near, t1.z);
+	        far = Math.min(far, t2.z);
+	      } else {
+	        near = Math.max(near, t2.z);
+	        far = Math.min(far, t1.z);
+	      }
+
+	      if (near > far) {
+	        return null;
+	      }
+
+	      return { near: near, far: far };
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNVector3} p0 - An endpoint of the line segment to test, specified in the geometry's local coordinate system.
+	     * @param {SCNVector3} p1 - The other endpoint of the line segment to test, specified in the geometry's local coordinate system.
+	     * @param {SCNGeometry} geometry -
+	     * @returns {SCNHitTestResult[]} -
+	     */
+
+	  }, {
+	    key: '_hitTestWithSegmentGeometry',
+	    value: function _hitTestWithSegmentGeometry(pointA, pointB, geometry) {
+	      var results = [];
+	      var elems = geometry.geometryElements;
+	      var elemCount = elems.length;
+	      var vert = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      for (var i = 0; i < elemCount; i++) {
+	        var elem = elems[i];
+	        if (elem._primitiveType !== _SCNGeometryPrimitiveType2.default.triangles) {
+	          // TODO: support other primitive types.
+	          continue;
+	        }
+	        var edata = elem._data;
+	        var elen = elem._primitiveCount;
+	        var ind = 0;
+	        for (var j = 0; j < elen; j++) {
+	          var v0 = vert._scnVectorAt(edata[ind]);
+	          var v1 = vert._scnVectorAt(edata[ind + 1]);
+	          var v2 = vert._scnVectorAt(edata[ind + 2]);
+	          ind += 3;
+
+	          var r = this._segmentTriangleIntersection(pointA, pointB, v0, v1, v2);
+	          if (r.intersection) {
+	            var result = new _SCNHitTestResult2.default();
+	            result._geometryIndex = i;
+	            result._faceIndex = j;
+	            result._localCoordinates = r.intersection;
+	            result._localNormal = r.normal;
+	            results.push(result);
+	          }
+	        }
+	      }
+	      return results;
+	    }
+	  }, {
+	    key: 'TestOption',
+	    get: function get() {
+	      return _TestOption;
+	    }
+	    /**
+	     * @type {Object} TestSearchMode
+	     * @property {string} all Searches should return all contacts matching the search parameters.
+	     * @property {string} any Searches should return only the first contact found regardless of its position relative to the search parameters.
+	     * @property {string} closest Searches should return only the closest contact to the beginning of the search.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld.testsearchmode
+	     */
+
+	  }, {
+	    key: 'TestSearchMode',
+	    get: function get() {
+	      return _TestSearchMode;
 	    }
 	  }]);
 
-	  return SCNTransaction;
+	  return SCNPhysicsWorld;
 	}(_NSObject3.default);
 
-	exports.default = SCNTransaction;
+	exports.default = SCNPhysicsWorld;
 
 /***/ },
 /* 88 */
@@ -28062,3813 +29287,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import SCNActionTimingMode from './SCNActionTimingMode'
-
-	var SCNActionGroup = function (_SCNAction) {
-	  _inherits(SCNActionGroup, _SCNAction);
-
-	  _createClass(SCNActionGroup, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionGroup() {
-	    _classCallCheck(this, SCNActionGroup);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionGroup.__proto__ || Object.getPrototypeOf(SCNActionGroup)).call(this));
-
-	    _this._actions = [];
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that runs a collection of actions in parallel.
-	   * @access public
-	   * @param {SCNAction[]} actions - An array of SCNAction objects.
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, the actions that make up the group all start immediately and run in parallel. The duration of the group action is the longest duration among the collection of actions. If an action in the group has a duration less than the group’s duration, the action completes and then idles until the group completes the remaining actions. This matters most when creating a repeating action that repeats a group.This action is reversible; it creates a new group action that contains the reverse of each action specified in the group. 
-	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522779-group
-	   */
-
-
-	  _createClass(SCNActionGroup, [{
-	    key: 'copy',
-
-
-	    /**
-	     * @access public
-	     * @returns {SCNActionGroup} -
-	     */
-	    value: function copy() {
-	      var action = _get(SCNActionGroup.prototype.__proto__ || Object.getPrototypeOf(SCNActionGroup.prototype), 'copy', this).call(this);
-
-	      action._actions = [];
-	      this._actions.forEach(function (act) {
-	        action._actions.push(act.copy());
-	      });
-
-	      return action;
-	    }
-	  }, {
-	    key: '_applyAction',
-
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      //const dt = this._getTime(time, needTimeConversion) * this.duration
-	      //this._actions.forEach((action) => {
-	      //  if(!action._finished){
-	      //    action._applyAction(obj, dt, false)
-	      //  }
-	      //})
-	      var duration = this._activetimeFromTime(time);
-
-	      var finished = true;
-	      this._actions.forEach(function (action) {
-	        if (!action._finished) {
-	          action._applyAction(obj, duration, needTimeConversion);
-	          if (!action._finished) {
-	            finished = false;
-	          }
-	        }
-	      });
-	      this._finished = finished;
-	    }
-	  }, {
-	    key: '_resetFinished',
-	    value: function _resetFinished() {
-	      this._actions.forEach(function (action) {
-	        action._resetFinished();
-	      });
-	      this._finished = false;
-	    }
-	  }, {
-	    key: 'duration',
-	    get: function get() {
-	      var d = 0;
-	      this._actions.forEach(function (act) {
-	        if (d < act.duration) {
-	          d = act.duration;
-	        }
-	      });
-	      return d;
-	    }
-	  }], [{
-	    key: 'group',
-	    value: function group(actions) {
-	      var action = new SCNActionGroup();
-	      action._actions = actions;
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionGroup;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionGroup;
-
-
-	_SCNAction3.default.group = SCNActionGroup.group;
-
-/***/ },
-/* 89 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionHide = function (_SCNAction) {
-	  _inherits(SCNActionHide, _SCNAction);
-
-	  _createClass(SCNActionHide, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionHide() {
-	    _classCallCheck(this, SCNActionHide);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionHide.__proto__ || Object.getPrototypeOf(SCNActionHide)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  return SCNActionHide;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionHide;
-
-/***/ },
-/* 90 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionJavaScript = function (_SCNAction) {
-	  _inherits(SCNActionJavaScript, _SCNAction);
-
-	  _createClass(SCNActionJavaScript, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionJavaScript() {
-	    _classCallCheck(this, SCNActionJavaScript);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionJavaScript.__proto__ || Object.getPrototypeOf(SCNActionJavaScript)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  return SCNActionJavaScript;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionJavaScript;
-
-/***/ },
-/* 91 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	var _SCNNode = __webpack_require__(83);
-
-	var _SCNNode2 = _interopRequireDefault(_SCNNode);
-
-	var _SCNVector = __webpack_require__(58);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionMove = function (_SCNAction) {
-	  _inherits(SCNActionMove, _SCNAction);
-
-	  _createClass(SCNActionMove, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionMove() {
-	    _classCallCheck(this, SCNActionMove);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionMove.__proto__ || Object.getPrototypeOf(SCNActionMove)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-
-	    _this._toValue = null;
-	    _this._byValue = null;
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that moves a node relative to its current position.
-	   * @access public
-	   * @param {number} deltaX - The distance to move the node in the X direction of its parent node’s local coordinate space.
-	   * @param {number} deltaY - The distance to move the node in the Y direction of its parent node’s local coordinate space.
-	   * @param {number} deltaZ - The distance to move the node in the Z direction of its parent node’s local coordinate space.
-	   * @param {number} duration - The duration, in seconds, of the animation.
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
-	  [SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
-	    * @see https://developer.apple.com/documentation/scenekit/scnaction/1523238-moveby
-	   */
-
-
-	  _createClass(SCNActionMove, [{
-	    key: 'reversed',
-
-
-	    // Reversing an Action
-
-	    /**
-	     * Creates an action that reverses the behavior of another action.
-	     * @access public
-	     * @returns {SCNAction} - 
-	     * @desc This method always returns an action object; however, not all actions are reversible. When reversed, some actions return an object that either does nothing or performs the same action as the original action. For details on how an action is reversed, see the description of the class method used to create that action.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522815-reversed
-	     */
-	    value: function reversed() {
-	      var action = this.copy();
-	      if (action._toValue) {
-	        action._toValue = null;
-	        action._byValue = new _SCNVector2.default(0, 0, 0);
-	      } else if (this._byValue) {
-	        action._byValue = this._byValue.mul(-1);
-	      }
-	      return action;
-	    }
-
-	    /**
-	     * @access public
-	     * @returns {SCNActionMove} -
-	     */
-
-	  }, {
-	    key: 'copy',
-	    value: function copy() {
-	      var action = _get(SCNActionMove.prototype.__proto__ || Object.getPrototypeOf(SCNActionMove.prototype), 'copy', this).call(this);
-
-	      action._toValue = this._toValue ? this._toValue._copy() : null;
-	      action._byValue = this._byValue ? this._byValue._copy() : null;
-
-	      return action;
-	    }
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_applyAction',
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      var t = this._getTime(time, needTimeConversion);
-	      if (!(obj instanceof _SCNNode2.default)) {
-	        throw new Error('unsupported class for SCNActionMove: ' + obj.constructor.name);
-	      }
-
-	      var baseValue = obj.position;
-	      var toValue = null;
-	      if (this._toValue !== null) {
-	        toValue = this._toValue;
-	      } else if (this._byValue !== null) {
-	        toValue = baseValue.add(this._byValue);
-	      } else {
-	        throw new Error('both toValue and byValue are null');
-	      }
-
-	      var value = this._lerp(baseValue, toValue, t);
-	      obj.presentation.position = value;
-
-	      if (this._finished) {
-	        obj.position = toValue;
-	      }
-	    }
-	  }], [{
-	    key: 'moveByXYZ',
-	    value: function moveByXYZ(deltaX, deltaY, deltaZ, duration) {
-	      var action = new SCNActionMove();
-	      action._byValue = new _SCNVector2.default(deltaX, deltaY, deltaZ);
-	      action._duration = duration;
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that moves a node relative to its current position.
-	     * @access public
-	     * @param {SCNVector3} delta - A vector that describes the change to be applied to the node’s position.
-	     * @param {number} duration - The duration, in seconds, of the animation.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code had been executed:SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
-	    [SCNAction moveBy: reverseDelta duration: duration];
-	    SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
-	    [SCNAction moveBy: reverseDelta duration: duration];
-	      * @see https://developer.apple.com/documentation/scenekit/scnaction/1522605-move
-	     */
-
-	  }, {
-	    key: 'moveBy',
-	    value: function moveBy(delta, duration) {
-	      var action = new SCNActionMove();
-	      action._byValue = delta._copy();
-	      action._duration = duration;
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that moves a node to a new position.
-	     * @access public
-	     * @param {SCNVector3} location - The coordinates for the node’s new position in its parent node’s local coordinate space.
-	     * @param {number} duration - The duration, in seconds, of the animation.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is not reversible; the reverse of this action has the same duration but does not move the node.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522826-move
-	     */
-
-	  }, {
-	    key: 'moveTo',
-	    value: function moveTo(location, duration) {
-	      var action = new SCNActionMove();
-	      action._toValue = location._copy();
-	      action._duration = duration;
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionMove;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionMove;
-
-
-	_SCNAction3.default.moveByXYZ = SCNActionMove.moveByXYZ;
-	_SCNAction3.default.moveBy = SCNActionMove.moveBy;
-	_SCNAction3.default.moveTo = SCNActionMove.moveTo;
-
-/***/ },
-/* 92 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionPerformSelector = function (_SCNAction) {
-	  _inherits(SCNActionPerformSelector, _SCNAction);
-
-	  _createClass(SCNActionPerformSelector, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionPerformSelector() {
-	    _classCallCheck(this, SCNActionPerformSelector);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionPerformSelector.__proto__ || Object.getPrototypeOf(SCNActionPerformSelector)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  return SCNActionPerformSelector;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionPerformSelector;
-
-/***/ },
-/* 93 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionPlaySound = function (_SCNAction) {
-	  _inherits(SCNActionPlaySound, _SCNAction);
-
-	  _createClass(SCNActionPlaySound, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionPlaySound() {
-	    _classCallCheck(this, SCNActionPlaySound);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionPlaySound.__proto__ || Object.getPrototypeOf(SCNActionPlaySound)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-
-	    _this._source = null;
-	    _this._wait = false;
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that plays an audio source.
-	   * @access public
-	   * @param {SCNAudioSource} source - The audio source to play.
-	   * @param {boolean} wait - If true, the duration of this action is the same as the length of the audio playback. If false, the action is considered to have completed immediately.
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, SceneKit plays the audio source on the target node—any positional audio effects are based on the node’s position. For more information about positional audio in SceneKit, see SCNAudioPlayer.This action is not reversible; the reverse of this action is the same action.
-	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523651-playaudio
-	   */
-
-
-	  _createClass(SCNActionPlaySound, [{
-	    key: 'copy',
-
-
-	    /**
-	     * @access public
-	     * @returns {SCNActionPlaySound} -
-	     */
-	    value: function copy() {
-	      var action = _get(SCNActionPlaySound.prototype.__proto__ || Object.getPrototypeOf(SCNActionPlaySound.prototype), 'copy', this).call(this);
-
-	      action._source = this._source;
-	      action._wait = this._wait;
-
-	      return action;
-	    }
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_applyAction',
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      if (!this._isRunning) {
-	        this._source._play();
-	        this._isRunning = true;
-	      }
-	      if (this._duration <= 0 || this._source._duration > 0) {
-	        this._duration = this._source._duration;
-	      }
-	      var t = this._getTime(time, needTimeConversion);
-
-	      if (!this._wait) {
-	        this._finished = true;
-	      } else if (!this._source.loops && t >= 1) {
-	        this._finished = true;
-	      } else {
-	        this._finished = false;
-	      }
-	    }
-	  }], [{
-	    key: 'playAudioWaitForCompletion',
-	    value: function playAudioWaitForCompletion(source, wait) {
-	      var action = new SCNActionPlaySound();
-	      action._source = source;
-	      action._wait = wait;
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionPlaySound;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionPlaySound;
-
-
-	_SCNAction3.default.playAudioWaitForCompletion = SCNActionPlaySound.playAudioWaitForCompletion;
-
-/***/ },
-/* 94 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionReference = function (_SCNAction) {
-	  _inherits(SCNActionReference, _SCNAction);
-
-	  _createClass(SCNActionReference, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionReference() {
-	    _classCallCheck(this, SCNActionReference);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionReference.__proto__ || Object.getPrototypeOf(SCNActionReference)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  return SCNActionReference;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionReference;
-
-/***/ },
-/* 95 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	var _SCNNode = __webpack_require__(83);
-
-	var _SCNNode2 = _interopRequireDefault(_SCNNode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionRemove = function (_SCNAction) {
-	  _inherits(SCNActionRemove, _SCNAction);
-
-	  _createClass(SCNActionRemove, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionRemove() {
-	    _classCallCheck(this, SCNActionRemove);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionRemove.__proto__ || Object.getPrototypeOf(SCNActionRemove)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that removes the node from its parent.
-	   * @access public
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, the node is immediately removed from its parent.This action is not reversible; the reverse of this action is the same action.
-	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522966-removefromparentnode
-	   */
-
-
-	  _createClass(SCNActionRemove, [{
-	    key: 'copy',
-
-
-	    /**
-	     * @access public
-	     * @returns {SCNActionRotate} -
-	     */
-	    value: function copy() {
-	      var action = _get(SCNActionRemove.prototype.__proto__ || Object.getPrototypeOf(SCNActionRemove.prototype), 'copy', this).call(this);
-	      return action;
-	    }
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_applyAction',
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      if (!(obj instanceof _SCNNode2.default)) {
-	        throw new Error('unsupported class for SCNActionRemove: ' + obj.constructor.name);
-	      }
-	      obj.removeFromParentNode();
-	      this._finished = true;
-	    }
-	  }], [{
-	    key: 'removeFromParentNode',
-	    value: function removeFromParentNode() {
-	      var action = new SCNActionRemove();
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionRemove;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionRemove;
-
-
-	_SCNAction3.default.removeFromParentNode = SCNActionRemove.removeFromParentNode;
-
-/***/ },
-/* 96 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionRepeat = function (_SCNAction) {
-	  _inherits(SCNActionRepeat, _SCNAction);
-
-	  _createClass(SCNActionRepeat, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _timesToRepeat: 'float',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _repeatedAction: 'SCNAction',
-	        _forever: 'boolean',
-	        _timesRepeated: 'integer',
-	        _pausedTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionRepeat() {
-	    _classCallCheck(this, SCNActionRepeat);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionRepeat.__proto__ || Object.getPrototypeOf(SCNActionRepeat)).call(this));
-
-	    _this._timesToRepeat = 0;
-	    _this._repeatedAction = null;
-	    _this._forever = false;
-	    _this._timesRepeated = 0;
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that repeats another action a specified number of times.
-	   * @access public
-	   * @param {SCNAction} action - The action to be executed.
-	   * @param {number} count - The number of times to execute the action.
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
-	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522764-repeat
-	   */
-
-
-	  _createClass(SCNActionRepeat, [{
-	    key: 'copy',
-
-
-	    /**
-	     * @access public
-	     * @returns {SCNActionRepeat} -
-	     */
-	    value: function copy() {
-	      var action = _get(SCNActionRepeat.prototype.__proto__ || Object.getPrototypeOf(SCNActionRepeat.prototype), 'copy', this).call(this);
-
-	      action._timesToRepeat = this._timesToRepeat;
-	      action._repeatedAction = this._repeatedAction.copy();
-	      action._forever = this._forever;
-	      action._timesRepeated = this._timesRepeated;
-
-	      return action;
-	    }
-	  }, {
-	    key: '_getTime',
-	    value: function _getTime(time, needTimeConversion) {
-	      if (!needTimeConversion) {
-	        return time;
-	      }
-
-	      var baseTime = this._basetimeFromTime(time);
-	      if (this.timingFunction === null) {
-	        return baseTime;
-	      }
-
-	      var n = Math.floor(baseTime);
-	      var t = this.timingFunction._getValueAtTime(baseTime - n);
-	      return n + t;
-	    }
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_applyAction',
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      var dt = this._getTime(time, needTimeConversion);
-	      var timesRepeated = Math.floor(dt);
-	      while (timesRepeated > this._timesRepeated) {
-	        this._timesRepeated += 1;
-	        this._repeatedAction._applyAction(obj, 1.0, false);
-	        if (!this._forever && this._timesRepeated >= this._timesToRepeat) {
-	          this._finished = true;
-	          return;
-	        }
-	        this._repeatedAction._resetFinished();
-	      }
-	      var t = dt - this._timesRepeated;
-	      this._repeatedAction._applyAction(obj, t, false);
-	      this._finished = false;
-	    }
-	  }, {
-	    key: '_resetFinished',
-	    value: function _resetFinished() {
-	      this._repeatedAction._resetFinished();
-	      this._timesRepeated = 0;
-	      this._finished = false;
-	    }
-	  }, {
-	    key: 'duration',
-	    get: function get() {
-	      if (this._forever) {
-	        return Infinity;
-	      }
-	      return this._repeatedAction.duration * this._timesToRepeat;
-	    }
-	  }], [{
-	    key: 'repeat',
-	    value: function repeat(action, count) {
-	      var _action = new SCNActionRepeat();
-	      _action._repeatedAction = action;
-	      _action._duration = action.duration;
-	      _action._timesToRepeat = count;
-	      _action._forever = count === Infinity;
-	      return _action;
-	    }
-
-	    /**
-	     * Creates an action that repeats another action forever.
-	     * @access public
-	     * @param {SCNAction} action - The action to execute.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522908-repeatforever
-	     */
-
-	  }, {
-	    key: 'repeatForever',
-	    value: function repeatForever(action) {
-	      return this.repeat(action, Infinity);
-	    }
-	  }]);
-
-	  return SCNActionRepeat;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionRepeat;
-
-
-	_SCNAction3.default.repeat = SCNActionRepeat.repeat;
-	_SCNAction3.default.repeatForever = SCNActionRepeat.repeatForever;
-
-/***/ },
-/* 97 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	var _SCNNode = __webpack_require__(83);
-
-	var _SCNNode2 = _interopRequireDefault(_SCNNode);
-
-	var _SCNVector = __webpack_require__(58);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	var _SCNVector3 = __webpack_require__(59);
-
-	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionRotate = function (_SCNAction) {
-	  _inherits(SCNActionRotate, _SCNAction);
-
-	  _createClass(SCNActionRotate, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _rotX: 'float',
-	        _rotY: 'float',
-	        _rotZ: 'float',
-	        _lastRotX: 'float',
-	        _lastRotY: 'float',
-	        _lastRotZ: 'float',
-	        _axisRot: 'SCNVector4',
-	        _isRelative: 'boolean',
-	        _isReversed: 'boolean',
-	        _isUnitArc: 'boolean',
-	        _isAxisAngle: 'boolean',
-	        _isRunning: 'boolean',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _pausedTime: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionRotate() {
-	    _classCallCheck(this, SCNActionRotate);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionRotate.__proto__ || Object.getPrototypeOf(SCNActionRotate)).call(this));
-
-	    _this._rotX = 0;
-	    _this._rotY = 0;
-	    _this._rotZ = 0;
-	    _this._lastRotX = 0;
-	    _this._lastRotY = 0;
-	    _this._lastRotZ = 0;
-	    _this._axisRot = new _SCNVector4.default();
-	    _this._isRelative = false;
-	    _this._isReversed = false;
-	    _this._isUnitArc = false;
-	    _this._isAxisAngle = false;
-	    _this._isRunning = false;
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._pausedTime = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that rotates the node in each of the three principal axes by angles relative to its current orientation.
-	   * @access public
-	   * @param {number} xAngle - The amount to rotate the node counterclockwise around the x-axis of its local coordinate space, in radians.
-	   * @param {number} yAngle - The amount to rotate the node counterclockwise around the y-axis of its local coordinate space, in radians.
-	   * @param {number} zAngle - The amount to rotate the node counterclockwise around the z-axis of its local coordinate space, in radians.
-	   * @param {number} duration - The duration, in seconds, of the animation.
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
-	  [SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
-	    * @see https://developer.apple.com/documentation/scenekit/scnaction/1523522-rotateby
-	   */
-
-
-	  _createClass(SCNActionRotate, [{
-	    key: 'copy',
-
-
-	    /**
-	     * @access public
-	     * @returns {SCNActionRotate} -
-	     */
-	    value: function copy() {
-	      var action = _get(SCNActionRotate.prototype.__proto__ || Object.getPrototypeOf(SCNActionRotate.prototype), 'copy', this).call(this);
-
-	      action._rotX = this._rotX;
-	      action._rotY = this._rotY;
-	      action._rotZ = this._rotZ;
-	      action._lastRotX = this._lastRotX;
-	      action._lastRotY = this._lastRotY;
-	      action._lastRotZ = this._lastRotZ;
-	      action._axisRot = this._axisRot;
-	      action._isRelative = this._isRelative;
-	      action._isReveresed = this._isReversed;
-	      action._isUnitArc = this._isUnitArc;
-	      action._isAxisAngle = this._isAxisAngle;
-	      action._isRunning = this._isRunning;
-	      action._finished = this._finished;
-	      action._duration = this._duration;
-	      action._pausedTime = this._pausedTime;
-	      action._timingMode = this._timingMode;
-
-	      return action;
-	    }
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_applyAction',
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      if (!(obj instanceof _SCNNode2.default)) {
-	        throw new Error('unsupported class for SCNActionRotate: ' + obj.constructor.name);
-	      }
-	      var t = this._getTime(time, needTimeConversion
-	      //console.warn(`SCNActionRotate._applyAction t: ${t}`)
-
-	      );if (this._isAxisAngle) {
-	        // rotation
-	        var baseValue = obj.rotation;
-	        var toValue = this._axisRot;
-	        if (this._isRelative) {
-	          var baseQuat = baseValue.rotationToQuat;
-	          var byQuat = this._axisRot.rotationToQuat;
-	          toValue = baseQuat.cross(byQuat).quatToRotation;
-	        }
-	        if (this._isUnitArc) {
-	          var value = this._slerp(baseValue.rotationToQuat(), toValue.rotationToQuat(), t);
-	          obj.presentation.orientation = value;
-	        } else {
-	          var _value = this._lerp(baseValue, toValue, t);
-	          obj.presentation.rotation = _value;
-	        }
-	        if (this._finished) {
-	          obj.rotation = toValue;
-	        }
-	      } else {
-	        // eulerAngles
-	        var _toValue = new _SCNVector2.default(this._rotX, this._rotY, this._rotZ);
-	        var _value2 = null;
-	        if (this._isRelative) {
-	          var _baseValue = obj.orientation;
-	          _value2 = _baseValue.cross(_toValue.mul(t).eulerAnglesToQuat());
-	          obj.presentation.orientation = _value2;
-	        } else if (this._isUnitArc) {
-	          var _baseValue2 = obj.orientation;
-	          _value2 = this._slerp(_baseValue2, _toValue.eulerAnglesToQuat(), t);
-	          obj.presentation.orientation = _value2;
-	        } else {
-	          var _baseValue3 = obj.eulerAngles;
-	          _value2 = this._lerp(_baseValue3, _toValue, t);
-	          obj.presentation.eulerAngles = _value2;
-	        }
-
-	        //obj.presentation.eulerAngles = value
-	        if (this._finished) {
-	          if (this._isRelative) {
-	            _toValue = obj.orientation.cross(_toValue.eulerAnglesToQuat());
-	            obj.orientation = _toValue;
-	          } else {
-	            obj.eulerAngles = _toValue;
-	          }
-	        }
-	      }
-	    }
-	  }], [{
-	    key: 'rotateByXYZ',
-	    value: function rotateByXYZ(xAngle, yAngle, zAngle, duration) {
-	      var action = new SCNActionRotate();
-	      // TODO: Do research the reason why I need to turn around X and Y axes.
-	      action._rotX = -xAngle;
-	      action._rotY = -yAngle;
-	      action._rotZ = zAngle;
-	      action._duration = duration;
-	      action._isRelative = true;
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that rotates the node to absolute angles in each of the three principal axes.
-	     * @access public
-	     * @param {number} xAngle - The amount to rotate the node counterclockwise around the x-axis of its local coordinate space, in radians.
-	     * @param {number} yAngle - The amount to rotate the node counterclockwise around the y-axis of its local coordinate space, in radians.
-	     * @param {number} zAngle - The amount to rotate the node counterclockwise around the z-axis of its local coordinate space, in radians.
-	     * @param {number} duration - The duration, in seconds, of the animation.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the node’s rotation property animates to the new angle. Calling this method is equivalent to calling rotateTo(x:y:z:duration:usesShortestUnitArc:) and passing false for the shortestUnitArc parameter.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1524044-rotateto
-	     */
-
-	  }, {
-	    key: 'rotateToXYZ',
-	    value: function rotateToXYZ(xAngle, yAngle, zAngle, duration) {
-	      var action = new SCNActionRotate();
-	      action._rotX = xAngle;
-	      action._rotY = yAngle;
-	      action._rotZ = zAngle;
-	      action._duration = duration;
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that rotates the node to absolute angles in each of the three principal axes.
-	     * @access public
-	     * @param {number} xAngle - The amount to rotate the node counterclockwise around the x-axis of its local coordinate space, in radians.
-	     * @param {number} yAngle - The amount to rotate the node counterclockwise around the y-axis of its local coordinate space, in radians.
-	     * @param {number} zAngle - The amount to rotate the node counterclockwise around the z-axis of its local coordinate space, in radians.
-	     * @param {number} duration - The duration, in seconds, of the animation.
-	     * @param {boolean} shortestUnitArc - If false (the default), the animation interpolates each component of the node’s rotation between its current value and the new value. If true, the animation makes the most direct rotation possible from the node’s current orientation to the new orientation.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522808-rotateto
-	     */
-
-	  }, {
-	    key: 'rotateToXYZUsesShortestUnitArc',
-	    value: function rotateToXYZUsesShortestUnitArc(xAngle, yAngle, zAngle, duration, shortestUnitArc) {
-	      var action = new SCNActionRotate();
-	      action._rotX = xAngle;
-	      action._rotY = yAngle;
-	      action._rotZ = zAngle;
-	      action._duration = duration;
-	      action._isUnitArc = shortestUnitArc;
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that rotates the node by an angle around a specified axis.
-	     * @access public
-	     * @param {number} angle - The amount to rotate the node counterclockwise around the specified axis, in radians.
-	     * @param {SCNVector3} axis - A vector in the node’s local coordinate space whose direction specifies the axis of rotation.
-	     * @param {number} duration - The duration, in seconds, of the animation.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
-	    [SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
-	      * @see https://developer.apple.com/documentation/scenekit/scnaction/1523805-rotate
-	     */
-
-	  }, {
-	    key: 'rotateByAround',
-	    value: function rotateByAround(angle, axis, duration) {
-	      var action = new SCNActionRotate();
-	      action._axisRot.w = angle;
-	      action._axisRot.x = axis.x;
-	      action._axisRot.y = axis.y;
-	      action._axisRot.z = axis.z;
-	      action._duration = duration;
-	      action._isRelative = true;
-	      action._isAxisAngle = true;
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that rotates the node to an absolute angle around a specified axis.
-	     * @access public
-	     * @param {SCNVector4} axisAngle - A four-component vector whose first three components are a vector in the node’s local coordinate space specifying an axis and whose fourth component is the amount to rotate the node counterclockwise around that axis, in radians.
-	     * @param {number} duration - The duration, in seconds, of the animation.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1524191-rotate
-	     */
-
-	  }, {
-	    key: 'rotateToAxisAngle',
-	    value: function rotateToAxisAngle(axisAngle, duration) {
-	      var action = new SCNActionRotate();
-	      action._axisRot = axisAngle;
-	      action._duration = duration;
-	      action._isAxisAngle = true;
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionRotate;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionRotate;
-
-
-	_SCNAction3.default.rotateByXYZ = SCNActionRotate.rotateByXYZ;
-	_SCNAction3.default.rotateToXYZ = SCNActionRotate.rotateToXYZ;
-	_SCNAction3.default.rotateToXYZUsesShortestUnitArc = SCNActionRotate.rotateToXYZUsesShortestUnitArc;
-	_SCNAction3.default.rotateByAround = SCNActionRotate.rotateByAround;
-	_SCNAction3.default.rotateToAxisAngle = SCNActionRotate.rotateToAxisAngle;
-
-/***/ },
-/* 98 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionRunAction = function (_SCNAction) {
-	  _inherits(SCNActionRunAction, _SCNAction);
-
-	  _createClass(SCNActionRunAction, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionRunAction() {
-	    _classCallCheck(this, SCNActionRunAction);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionRunAction.__proto__ || Object.getPrototypeOf(SCNActionRunAction)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  return SCNActionRunAction;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionRunAction;
-
-/***/ },
-/* 99 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionRunBlock = function (_SCNAction) {
-	  _inherits(SCNActionRunBlock, _SCNAction);
-
-	  _createClass(SCNActionRunBlock, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionRunBlock() {
-	    _classCallCheck(this, SCNActionRunBlock);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionRunBlock.__proto__ || Object.getPrototypeOf(SCNActionRunBlock)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  /**
-	   * @access public
-	   * @returns {SCNActionFade} -
-	   */
-
-
-	  _createClass(SCNActionRunBlock, [{
-	    key: 'copy',
-	    value: function copy() {
-	      var action = _get(SCNActionRunBlock.prototype.__proto__ || Object.getPrototypeOf(SCNActionRunBlock.prototype), 'copy', this).call(this);
-
-	      action._block = this._block;
-
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that executes a block.
-	     * @access public
-	     * @param {function(arg1: SCNNode): void} block - The block to run. The block takes a single parameter:nodeThe node on which the action is running.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, SceneKit calls the block. This action takes place instantaneously.This action is not reversible; the reverse action executes the same block.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1523637-run
-	     */
-
-	  }, {
-	    key: '_applyAction',
-
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      this._block(obj);
-	      this._finished = true;
-	    }
-	  }], [{
-	    key: 'run',
-	    value: function run(block) {
-	      var action = new SCNActionRunBlock();
-	      action._block = block;
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionRunBlock;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionRunBlock;
-
-
-	_SCNAction3.default.run = SCNActionRunBlock.run;
-
-/***/ },
-/* 100 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionScale = function (_SCNAction) {
-	  _inherits(SCNActionScale, _SCNAction);
-
-	  _createClass(SCNActionScale, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionScale() {
-	    _classCallCheck(this, SCNActionScale);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionScale.__proto__ || Object.getPrototypeOf(SCNActionScale)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  return SCNActionScale;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionScale;
-
-/***/ },
-/* 101 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionSequence = function (_SCNAction) {
-	  _inherits(SCNActionSequence, _SCNAction);
-
-	  _createClass(SCNActionSequence, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        '_mycaction->_animIndex': ['integer', '_animIndex'],
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * Creates an action that runs a collection of actions sequentially.
-	     * @access public
-	     * @constructor
-	     * @param {SCNAction[]} actions - An array of SCNAction objects.
-	     * @desc When the action executes, the first action in the sequence starts and runs to completion. Subsequent actions in the sequence run in a similar fashion until all of the actions in the sequence have executed. The duration of the sequence action is the sum of the durations of the actions in the sequence.This action is reversible; it creates a new sequence action that reverses the order of the actions. Each action in the reversed sequence is itself reversed. For example, the actions reverseSequence and sequenceReverse in the code example below are equivalent:SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
-	    SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
-	                                                      [actionB reversedAction],
-	                                                      [actionA reversedAction] ]];
-	    SCNAction *sequenceReverse = [sequence reversedAction];
-	    SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
-	    SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
-	                                                      [actionB reversedAction],
-	                                                      [actionA reversedAction] ]];
-	    SCNAction *sequenceReverse = [sequence reversedAction];
-	      * @see https://developer.apple.com/documentation/scenekit/scnaction/1522793-sequence
-	     */
-
-	  }]);
-
-	  function SCNActionSequence() {
-	    _classCallCheck(this, SCNActionSequence);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionSequence.__proto__ || Object.getPrototypeOf(SCNActionSequence)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._animIndex = 0;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that runs a collection of actions sequentially.
-	   * @access public
-	   * @param {SCNAction[]} actions - An array of SCNAction objects.
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, the first action in the sequence starts and runs to completion. Subsequent actions in the sequence run in a similar fashion until all of the actions in the sequence have executed. The duration of the sequence action is the sum of the durations of the actions in the sequence.This action is reversible; it creates a new sequence action that reverses the order of the actions. Each action in the reversed sequence is itself reversed. For example, the actions reverseSequence and sequenceReverse in the code example below are equivalent:SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
-	  SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
-	                                                    [actionB reversedAction],
-	                                                    [actionA reversedAction] ]];
-	  SCNAction *sequenceReverse = [sequence reversedAction];
-	  SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
-	  SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
-	                                                    [actionB reversedAction],
-	                                                    [actionA reversedAction] ]];
-	  SCNAction *sequenceReverse = [sequence reversedAction];
-	    * @see https://developer.apple.com/documentation/scenekit/scnaction/1522793-sequence
-	   */
-
-
-	  _createClass(SCNActionSequence, [{
-	    key: 'copy',
-
-
-	    /**
-	     * @access public
-	     * @returns {SCNActionSequence} -
-	     */
-	    value: function copy() {
-	      var action = _get(SCNActionSequence.prototype.__proto__ || Object.getPrototypeOf(SCNActionSequence.prototype), 'copy', this).call(this);
-
-	      action._actions = this._actions.slice(0);
-	      action._animIndex = this._animIndex;
-
-	      return action;
-	    }
-
-	    /**
-	     * apply action to the given node.
-	     * @access private
-	     * @param {Object} obj - target object to apply this action.
-	     * @param {number} time - active time
-	     * @param {boolean} [needTimeConversion = true] -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_applyAction',
-	    value: function _applyAction(obj, time) {
-	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-	      var total = this.duration;
-	      var duration = 0;
-	      if (total <= 0 || total === Infinity) {
-	        duration = this._activetimeFromTime(time);
-	      } else {
-	        duration = this._getTime(time, needTimeConversion) * total;
-	      }
-
-	      for (var i = 0; i < this._animIndex; i++) {
-	        duration -= this._actions[i].duration / this._actions[i].speed;
-	      }
-	      for (; this._animIndex < this._actions.length; this._animIndex++) {
-	        var action = this._actions[this._animIndex];
-	        //action._applyAction(obj, duration, needTimeConversion)
-	        action._applyAction(obj, duration, true);
-	        duration -= action.duration / action.speed;
-	        if (duration < 0) {
-	          break;
-	        }
-	      }
-	      if (this._animIndex >= this._actions.length) {
-	        this._finished = true;
-	      }
-	    }
-	  }, {
-	    key: '_resetFinished',
-	    value: function _resetFinished() {
-	      this._actions.forEach(function (action) {
-	        action._resetFinished();
-	      });
-	      this._finished = false;
-	      this._animIndex = 0;
-	    }
-	  }, {
-	    key: 'duration',
-	    get: function get() {
-	      var d = 0;
-	      this._actions.forEach(function (act) {
-	        if (act.speed > 0) {
-	          d += act.duration / act.speed;
-	        }
-	      });
-	      return d;
-	    }
-	  }], [{
-	    key: 'sequence',
-	    value: function sequence(actions) {
-	      var action = new SCNActionSequence();
-	      action._actions = actions;
-	      action._duration = 0;
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionSequence;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionSequence;
-
-
-	_SCNAction3.default.sequence = SCNActionSequence.sequence;
-
-/***/ },
-/* 102 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * The signature for a block that manages animation timing, used by the timingFunction property.
-	 * @type {function(time: number): number}
-	 * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.
-	 * @returns {number} -
-	 * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.
-	 * @see https://developer.apple.com/documentation/scenekit/scnactiontimingfunction
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNActionTimingFunction = function SCNActionTimingFunction(time) {};
-
-	exports.default = SCNActionTimingFunction;
-
-/***/ },
-/* 103 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNAction2 = __webpack_require__(78);
-
-	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
-
-	var _SCNActionTimingMode = __webpack_require__(79);
-
-	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SCNActionWait = function (_SCNAction) {
-	  _inherits(SCNActionWait, _SCNAction);
-
-	  _createClass(SCNActionWait, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        _actions: 'NSArray',
-	        _finished: 'boolean',
-	        _duration: 'float',
-	        _timingMode: 'integer',
-	        _beginTime: 'float',
-	        _isRunning: 'boolean',
-	        _pausedTime: 'float',
-
-	        name: ['string', null]
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNActionWait() {
-	    _classCallCheck(this, SCNActionWait);
-
-	    var _this = _possibleConstructorReturn(this, (SCNActionWait.__proto__ || Object.getPrototypeOf(SCNActionWait)).call(this));
-
-	    _this._actions = [];
-	    _this._finished = false;
-	    _this._duration = 0;
-	    _this._timingMode = _SCNActionTimingMode2.default.linear;
-	    _this._beginTime = 0;
-	    _this._isRunning = false;
-	    _this._pausedTime = 0;
-	    return _this;
-	  }
-
-	  /**
-	   * Creates an action that idles for a specified period of time.
-	   * @access public
-	   * @param {number} sec - The amount of time to wait.
-	   * @returns {SCNAction} - 
-	   * @desc When the action executes, the action waits for the specified amount of time and then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. You might also use it in conjunction with the runAction(_:completionHandler:) method to trigger code that needs to run at a later time.This action is not reversible; the reverse of this action is the same action.
-	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523915-wait
-	   */
-
-
-	  _createClass(SCNActionWait, null, [{
-	    key: 'waitDuration',
-	    value: function waitDuration(sec) {
-	      var action = new SCNActionWait();
-	      action._duration = sec;
-	      return action;
-	    }
-
-	    /**
-	     * Creates an action that idles for a randomized period of time.
-	     * @access public
-	     * @param {number} sec - The average amount of time to wait.
-	     * @param {number} durationRange - The range of possible values for the duration.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the action waits for the specified amount of time and then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. However, you might also use it in conjunction with the runAction(_:completionHandler:) method to trigger code that needs to run at a later time.Each time the action is executed, the action computes a new random value for the duration. The duration may vary in either direction by up to half of the value of the durationRange parameter.This action is not reversible; the reverse of this action is the same action.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1523086-wait
-	     */
-
-	  }, {
-	    key: 'waitDurationWithRange',
-	    value: function waitDurationWithRange(sec, durationRange) {
-	      var duration = Math.max(0, sec + (Math.random() - 0.5) * durationRange);
-	      var action = new SCNActionWait();
-	      action._duration = duration;
-	      return action;
-	    }
-	  }]);
-
-	  return SCNActionWait;
-	}(_SCNAction3.default);
-
-	exports.default = SCNActionWait;
-
-
-	_SCNAction3.default.waitDuration = SCNActionWait.waitDuration;
-	_SCNAction3.default.waitDurationWithRange = SCNActionWait.waitDurationWithRange;
-
-/***/ },
-/* 104 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _CAAnimation = __webpack_require__(65);
-
-	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	/**
-	 * The common interface for attaching animations to nodes, geometries, materials, and other SceneKit objects.
-	 * @interface
-	 * @see https://developer.apple.com/documentation/scenekit/scnanimatable
-	 */
-	var SCNAnimatable = function () {
-	  function SCNAnimatable() {
-	    _classCallCheck(this, SCNAnimatable);
-	  }
-
-	  _createClass(SCNAnimatable, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Managing Animations
-
-	      this._animationKeys = null;
-	    }
-
-	    // Managing Animations
-
-	    /**
-	     * Required. Adds an animation object for the specified key.
-	     * @access public
-	     * @param {CAAnimation} animation - The animation object to be added.
-	     * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
-	     * @returns {void}
-	     * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523386-addanimation
-	     */
-
-	  }, {
-	    key: 'addAnimationForKey',
-	    value: function addAnimationForKey(animation, key) {}
-
-	    /**
-	     * Required. Returns the animation with the specified key.
-	     * @access public
-	     * @param {string} key - A string identifying a previously added animation.
-	     * @returns {?CAAnimation} - 
-	     * @desc Attempting to modify any properties of the returned object results in undefined behavior.
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1524020-animation
-	     */
-
-	  }, {
-	    key: 'animationForKey',
-	    value: function animationForKey(key) {
-	      return null;
-	    }
-
-	    /**
-	     * Required. Removes all the animations currently attached to the object.
-	     * @access public
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522762-removeallanimations
-	     */
-
-	  }, {
-	    key: 'removeAllAnimations',
-	    value: function removeAllAnimations() {}
-
-	    /**
-	     * Required. Removes the animation attached to the object with the specified key.
-	     * @access public
-	     * @param {string} key - A string identifying an attached animation to remove.
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522880-removeanimation
-	     */
-
-	  }, {
-	    key: 'removeAnimationForKey',
-	    value: function removeAnimationForKey(key) {}
-
-	    /**
-	     * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
-	     * @access public
-	     * @param {string} key - A string identifying an attached animation to remove.
-	     * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
-	     * @returns {void}
-	     * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522841-removeanimation
-	     */
-
-	  }, {
-	    key: 'removeAnimationForKeyFadeOutDuration',
-	    value: function removeAnimationForKeyFadeOutDuration(key, duration) {}
-	    /**
-	     * Required. An array containing the keys of all animations currently attached to the object.
-	     * @type {string[]}
-	     * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523610-animationkeys
-	     */
-
-	  }, {
-	    key: 'pauseAnimationForKey',
-
-
-	    // Pausing and Resuming Animations
-
-	    /**
-	     * Required. Pauses the animation attached to the object with the specified key.
-	     * @access public
-	     * @param {string} key - A string identifying an attached animation.
-	     * @returns {void}
-	     * @desc This method has no effect if no animation is attached to the object with the specified key.
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523592-pauseanimation
-	     */
-	    value: function pauseAnimationForKey(key) {}
-
-	    /**
-	     * Required. Resumes a previously paused animation attached to the object with the specified key.
-	     * @access public
-	     * @param {string} key - A string identifying an attached animation.
-	     * @returns {void}
-	     * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523332-resumeanimation
-	     */
-
-	  }, {
-	    key: 'resumeAnimationForKey',
-	    value: function resumeAnimationForKey(key) {}
-
-	    /**
-	     * Required. Returns a Boolean value indicating whether the animation attached to the object with the specified key is paused.
-	     * @access public
-	     * @param {string} key - A string identifying an attached animation.
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523703-isanimationpaused
-	     */
-
-	  }, {
-	    key: 'isAnimationPausedForKey',
-	    value: function isAnimationPausedForKey(key) {
-	      return false;
-	    }
-
-	    // Instance Methods
-
-	    /**
-	     * Required. 
-	     * @access public
-	     * @param {number} speed - 
-	     * @param {string} key - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1778343-setanimationspeed
-	     */
-
-	  }, {
-	    key: 'setAnimationSpeedForKey',
-	    value: function setAnimationSpeedForKey(speed, key) {}
-	  }, {
-	    key: 'animationKeys',
-	    get: function get() {
-	      return this._animationKeys;
-	    }
-	  }]);
-
-	  return SCNAnimatable;
-	}();
-
-	exports.default = SCNAnimatable;
-
-/***/ },
-/* 105 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import CAAnimation from '../QuartzCore/CAAnimation'
-	//import SCNTimingFunction from './SCNTimingFunction'
-
-	/**
-	 * 
-	 * @access public
-	 * @extends {NSObject}
-	 * @implements {SCNAnimationProtocol}
-	 * @see https://developer.apple.com/documentation/scenekit/scnanimation
-	 */
-	var SCNAnimation = function (_NSObject) {
-	  _inherits(SCNAnimation, _NSObject);
-
-	  // Initializers
-
-	  /**
-	   * 
-	   * @access public
-	   * @param {CAAnimation} caAnimation - 
-	   * @returns {void}
-	   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866056-init
-	   */
-	  function SCNAnimation(caAnimation) {
-	    _classCallCheck(this, SCNAnimation);
-
-	    // Instance Properties
-
-	    /**
-	     * 
-	     * @type {?SCNAnimationDidStartBlock}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866063-animationdidstart
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNAnimation.__proto__ || Object.getPrototypeOf(SCNAnimation)).call(this));
-
-	    _this.animationDidStart = null;
-
-	    /**
-	     * 
-	     * @type {?SCNAnimationDidStopBlock}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866040-animationdidstop
-	     */
-	    _this.animationDidStop = null;
-
-	    /**
-	     * 
-	     * @type {?SCNAnimationEvent[]}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866038-animationevents
-	     */
-	    _this.animationEvents = null;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878140-autoreverses
-	     */
-	    _this.autoreverses = false;
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881689-blendinduration
-	     */
-	    _this.blendInDuration = 0;
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881690-blendoutduration
-	     */
-	    _this.blendOutDuration = 0;
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866057-duration
-	     */
-	    _this.duration = 0;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878138-fillsbackward
-	     */
-	    _this.fillsBackward = false;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878132-fillsforward
-	     */
-	    _this.fillsForward = false;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866062-isadditive
-	     */
-	    _this.isAdditive = false;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878139-isappliedoncompletion
-	     */
-	    _this.isAppliedOnCompletion = false;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866047-iscumulative
-	     */
-	    _this.isCumulative = false;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878126-isremovedoncompletion
-	     */
-	    _this.isRemovedOnCompletion = false;
-
-	    /**
-	     * 
-	     * @type {?string}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878148-keypath
-	     */
-	    _this.keyPath = null;
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878146-repeatcount
-	     */
-	    _this.repeatCount = 0;
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878135-startdelay
-	     */
-	    _this.startDelay = 0;
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878147-timeoffset
-	     */
-	    _this.timeOffset = 0;
-
-	    /**
-	     * 
-	     * @type {SCNTimingFunction}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878143-timingfunction
-	     */
-	    _this.timingFunction = null;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878127-usesscenetimebase
-	     */
-	    _this.usesSceneTimeBase = false;
-
-	    /**
-	     * @access private
-	     * @type {CAAnimation}
-	     */
-	    _this._animation = caAnimation;
-	    return _this;
-	  }
-
-	  /**
-	   * 
-	   * @access public
-	   * @param {string} animationUrl - 
-	   * @returns {SCNAnimation} -
-	   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866053-init
-	   */
-
-
-	  _createClass(SCNAnimation, null, [{
-	    key: 'animationWithContentsOf',
-	    value: function animationWithContentsOf(animationUrl) {}
-	    // TODO: implement
-
-
-	    /**
-	     * 
-	     * @access public
-	     * @param {string} animationName - 
-	     * @returns {SCNAnimation} -
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866042-init
-	     */
-
-	  }, {
-	    key: 'animationNamed',
-	    value: function animationNamed(animationName) {
-	      // TODO: implement
-	    }
-	  }]);
-
-	  return SCNAnimation;
-	}(_NSObject3.default);
-
-	exports.default = SCNAnimation;
-
-/***/ },
-/* 106 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import SCNAnimationEventBlock from './SCNAnimationEventBlock'
-
-	/**
-	 * A container for a closure to be executed at a specific time during playback of an animation.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/documentation/scenekit/scnanimationevent
-	 */
-	var SCNAnimationEvent = function (_NSObject) {
-	  _inherits(SCNAnimationEvent, _NSObject);
-
-	  // Creating an Animation Event
-
-	  /**
-	   * Creates an animation event.
-	   * @access public
-	   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.
-	   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.
-	   * @constructor
-	   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.
-	   * @see https://developer.apple.com/documentation/scenekit/scnanimationevent/1524004-init
-	   */
-	  function SCNAnimationEvent(time, eventBlock) {
-	    _classCallCheck(this, SCNAnimationEvent);
-
-	    var _this = _possibleConstructorReturn(this, (SCNAnimationEvent.__proto__ || Object.getPrototypeOf(SCNAnimationEvent)).call(this));
-
-	    _this._time = time;
-	    _this._eventBlock = eventBlock;
-	    return _this;
-	  }
-
-	  _createClass(SCNAnimationEvent, null, [{
-	    key: 'eventWithTimeEventBlock',
-	    value: function eventWithTimeEventBlock(time, eventBlock) {
-	      return new SCNAnimationEvent(time, eventBlock);
-	    }
-	  }]);
-
-	  return SCNAnimationEvent;
-	}(_NSObject3.default);
-
-	exports.default = SCNAnimationEvent;
-
-/***/ },
-/* 107 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	//import CAAnimation from '../QuartzCore/CAAnimation'
-
-	/**
-	 * Signature for the block called when an animation event triggers.
-	 * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}
-	 * @param {CAAnimation} animation - The animation triggering the animation event.
-	 * @param {Object} animatedObject - The Scene Kit object affected by the animation.
-	 * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.
-	 * @returns {void}
-	 * @see https://developer.apple.com/documentation/scenekit/scnanimationeventblock
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNAnimationEventBlock = function SCNAnimationEventBlock(animation, animatedObject, playingBackward) {};
-
-	exports.default = SCNAnimationEventBlock;
-
-/***/ },
-/* 108 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	var _SCNAnimation = __webpack_require__(105);
-
-	var _SCNAnimation2 = _interopRequireDefault(_SCNAnimation);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	/**
-	 * 
-	 * @access public
-	 * @extends {NSObject}
-	 * @implements {SCNAnimatable}
-	 * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer
-	 */
-	var SCNAnimationPlayer = function (_NSObject) {
-	  _inherits(SCNAnimationPlayer, _NSObject);
-
-	  _createClass(SCNAnimationPlayer, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        speed: 'float',
-	        weight: ['float', '_weight'],
-	        paused: 'boolean'
-	      };
-	    }
-
-	    // Initializers
-
-	    /**
-	     * 
-	     * @access public
-	     * @constructor
-	     * @param {SCNAnimation} animation - 
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866046-init
-	     */
-
-	  }]);
-
-	  function SCNAnimationPlayer(animation) {
-	    _classCallCheck(this, SCNAnimationPlayer);
-
-	    // Instance Properties
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2881688-blendfactor
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNAnimationPlayer.__proto__ || Object.getPrototypeOf(SCNAnimationPlayer)).call(this));
-
-	    _this.blendFactor = 0;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866058-paused
-	     */
-	    _this.paused = false;
-
-	    /**
-	     * 
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866041-speed
-	     */
-	    _this.speed = 0;
-
-	    /**
-	     * @access private
-	     * @type {number}
-	     */
-	    _this._weight = 0;
-
-	    /**
-	     * @access private
-	     * @type {SCNAnimation}
-	     */
-	    _this._animation = animation;
-	    return _this;
-	  }
-
-	  // Instance Properties
-	  /**
-	   * 
-	   * @type {SCNAnimation}
-	   * @desc 
-	   * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866065-animation
-	   */
-
-
-	  _createClass(SCNAnimationPlayer, [{
-	    key: 'play',
-
-
-	    // Instance Methods
-
-	    /**
-	     * 
-	     * @access public
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866049-play
-	     */
-	    value: function play() {}
-
-	    /**
-	     * 
-	     * @access public
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866055-stop
-	     */
-
-	  }, {
-	    key: 'stop',
-	    value: function stop() {}
-
-	    /**
-	     * 
-	     * @access public
-	     * @param {number} duration - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2887037-stop
-	     */
-
-	  }, {
-	    key: 'stopWithBlendOutDuration',
-	    value: function stopWithBlendOutDuration(duration) {}
-	  }, {
-	    key: 'animation',
-	    get: function get() {
-	      return this._animation;
-	    }
-	  }]);
-
-	  return SCNAnimationPlayer;
-	}(_NSObject3.default);
-
-	exports.default = SCNAnimationPlayer;
-
-/***/ },
-/* 109 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Modes for antialiased rendering of the view’s scene, used by the SCNView property.
-	 * @typedef {Object} SCNAntialiasingMode
-	 * @property {number} none - Disables antialiased rendering.
-	 * @property {number} multisampling2X - Enables multisample antialiasing, with two samples per screen pixel.
-	 * @property {number} multisampling4X - Enables multisample antialiasing, with four samples per screen pixel.
-	 * @property {number} multisampling8X - Enables multisample antialiasing, with eight samples per screen pixel.
-	 * @property {number} multisampling16X - Enables multisample antialiasing, with sixteen samples per screen pixel.
-	 * @see https://developer.apple.com/documentation/scenekit/scnantialiasingmode
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNAntialiasingMode = {
-	  none: 0,
-	  multisampling2X: 1,
-	  multisampling4X: 2,
-	  multisampling8X: 3,
-	  multisampling16X: 4
-	};
-
-	exports.default = SCNAntialiasingMode;
-
-/***/ },
-/* 110 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	var _AVAudioMixerNode = __webpack_require__(6);
-
-	var _AVAudioMixerNode2 = _interopRequireDefault(_AVAudioMixerNode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//import SCNAudioSource from './SCNAudioSource'
-
-
-	/**
-	 * A controller for playback of a positional audio source in a SceneKit scene.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer
-	 */
-	var SCNAudioPlayer = function (_NSObject) {
-	  _inherits(SCNAudioPlayer, _NSObject);
-
-	  // Creating an Audio Player
-
-	  /**
-	   * Initializes an audio player for playing the specified simple audio source.
-	   * @access public
-	   * @constructor
-	   * @param {SCNAudioSource} source - An audio source object.
-	   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.
-	   * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522736-init
-	   */
-	  function SCNAudioPlayer(source) {
-	    _classCallCheck(this, SCNAudioPlayer);
-
-	    // Working with Audio Sources
-
-	    var _this = _possibleConstructorReturn(this, (SCNAudioPlayer.__proto__ || Object.getPrototypeOf(SCNAudioPlayer)).call(this));
-
-	    _this._audioSource = source;
-	    _this._audioNode = new _AVAudioMixerNode2.default();
-	    _this._audioNode._gainNode = source._gainNode;
-
-	    // Responding to Playback
-
-	    /**
-	     * A block called by SceneKit when playback of the player’s audio source is about to begin.
-	     * @type {?function(): void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1524115-willstartplayback
-	     */
-	    _this.willStartPlayback = null;
-
-	    /**
-	     * A block called by SceneKit when playback of the player’s audio source has completed.
-	     * @type {?function(): void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522818-didfinishplayback
-	     */
-	    _this.didFinishPlayback = null;
-	    return _this;
-	  }
-
-	  /**
-	   * Initializes an audio player for playing the specified AVFoundation audio node.
-	   * @access public
-	   * @param {AVAudioNode} audioNode - An audio node object.
-	   * @returns {void}
-	   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.
-	   * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1523010-init
-	   */
-
-
-	  _createClass(SCNAudioPlayer, [{
-	    key: 'initAvAudioNode',
-	    value: function initAvAudioNode(audioNode) {
-
-	      // Working with Audio Sources
-
-	      this._audioSource = null;
-	      this._audioNode = null;
-
-	      // Responding to Playback
-
-	      /**
-	       * A block called by SceneKit when playback of the player’s audio source is about to begin.
-	       * @type {?function(): void}
-	       * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1524115-willstartplayback
-	       */
-	      this.willStartPlayback = null;
-
-	      /**
-	       * A block called by SceneKit when playback of the player’s audio source has completed.
-	       * @type {?function(): void}
-	       * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522818-didfinishplayback
-	       */
-	      this.didFinishPlayback = null;
-	    }
-
-	    // Working with Audio Sources
-
-	    /**
-	     * The source of audio played by this player.
-	     * @type {?SCNAudioSource}
-	     * @desc An SCNAudioSource object represents a distinct source of audio—for example, a sound file—that can be reused and shared by many player objects. Use a player’s audio source to configure the default values for playback parameters such as volume and reverb. To vary those parameters in real time during playback, use the audioNode property to work with the underlying AVAudioNode object.If the player was created with the audioPlayerWithAVAudioNode: method, this property’s value is nil.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1523059-audiosource
-	     */
-
-	  }, {
-	    key: '_play',
-	    value: function _play() {
-	      this._audioSource._play();
-	    }
-	  }, {
-	    key: '_stop',
-	    value: function _stop() {
-	      this._audioSource._stop();
-	    }
-
-	    /**
-	     * @access private
-	     * @returns {Promise} -
-	     */
-
-	  }, {
-	    key: '_getLoadedPromise',
-	    value: function _getLoadedPromise() {
-	      if (this._audioSource) {
-	        return this._audioSource._getLoadedPromise();
-	      }
-
-	      return Promise.resolve();
-	    }
-
-	    /**
-	     * @access public
-	     * @type {Promise} -
-	     */
-
-	  }, {
-	    key: 'audioSource',
-	    get: function get() {
-	      return this._audioSource;
-	    }
-
-	    /**
-	     * The audio node SceneKit uses for mixing audio from this player.
-	     * @type {?AVAudioNode}
-	     * @desc SceneKit uses this AVAudioNode object to perform 3D positional mixing during playback. Use this object to vary parameters such as volume and reverb in real time during playback. To set default values for those parameters, use the audioSource property.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522747-audionode
-	     */
-
-	  }, {
-	    key: 'audioNode',
-	    get: function get() {
-	      return this._audioNode;
-	    }
-	  }, {
-	    key: 'didLoad',
-	    get: function get() {
-	      return this._getLoadedPromise();
-	    }
-	  }]);
-
-	  return SCNAudioPlayer;
-	}(_NSObject3.default);
-
-	exports.default = SCNAudioPlayer;
-
-/***/ },
-/* 111 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _AjaxRequest2 = __webpack_require__(112);
-
-	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	/*global AudioContext*/
-	var _AudioContext = function _AudioContext() {};
-	if (typeof AudioContext !== 'undefined') {
-	  _AudioContext = AudioContext;
-	} else {
-	  console.error('error: AudioContext is not supported');
-	}
-	var _context = new _AudioContext();
-
-	/**
-	 * A simple, reusable audio source—music or sound effects loaded from a file—for use in positional audio playback.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/documentation/scenekit/scnaudiosource
-	 */
-
-	var SCNAudioSource = function (_NSObject) {
-	  _inherits(SCNAudioSource, _NSObject);
-
-	  _createClass(SCNAudioSource, null, [{
-	    key: 'sourceNamed',
-
-
-	    // Creating an Audio Source
-
-	    /**
-	     * Returns the audio source associated with the specified filename.
-	     * @access public
-	     * @param {string} fileName - The name of an audio file. If this filename has not been previously requested, the method looks for an audio file with the specified name in the application’s main bundle.
-	     * @returns {void}
-	     * @desc This method looks in the system caches for an audio source with the specified name and returns that object if it exists. If a matching audio source is not already in the cache, this method locates the audio file with the specified name in the application’s main bundle, then creates a new audio source and caches it for reuse.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524138-init
-	     */
-	    value: function sourceNamed(fileName) {
-	      return new SCNAudioSource(fileName);
-	    }
-
-	    /**
-	     * Initializes an audio source from an audio file in the application’s main bundle.
-	     * @access public
-	     * @param {string} name - The name of an audio file in the application’s main bundle.
-	     * @returns {void}
-	     * @desc Calling this method is equivalent to using the Bundle class to locate an audio file in the application’s main bundle and then passing the resulting URL to the init(url:) method.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524225-init
-	     */
-
-	  }, {
-	    key: 'sourceWithFileNamed',
-	    value: function sourceWithFileNamed(name) {
-	      return new SCNAudioSource(name);
-	    }
-
-	    /**
-	     * Initializes an audio source from the specified audio file.
-	     * @access public
-	     * @constructor
-	     * @param {string} url - A URL locating an audio file.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523264-init
-	     */
-
-	  }]);
-
-	  function SCNAudioSource(url) {
-	    _classCallCheck(this, SCNAudioSource);
-
-	    // Controlling 3D Audio Spatialization
-
-	    /**
-	     * A Boolean value that determines whether audio from this source uses 3D positional mixing.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524185-ispositional
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNAudioSource.__proto__ || Object.getPrototypeOf(SCNAudioSource)).call(this));
-
-	    _this.isPositional = false;
-
-	    // Setting Default Playback Parameters
-
-	    /**
-	     * The default playback volume for the audio source.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524106-volume
-	     */
-	    //this.volume = 0
-
-	    /**
-	     * The default playback rate for the audio source.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524189-rate
-	     */
-	    _this.rate = 0;
-
-	    /**
-	     * The default blend of blend of unmodified and reverb-processed (also called dry and wet) audio for playback of the audio source.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523450-reverbblend
-	     */
-	    _this.reverbBlend = 0;
-
-	    /**
-	     * A Boolean value that determines whether the audio source should play repeatedly.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524183-loops
-	     */
-	    //this.loops = false
-
-	    /**
-	     * A Boolean value that determines whether the audio source should stream content from its source URL when playing.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523475-shouldstream
-	     */
-	    _this.shouldStream = false;
-
-	    _this._loading = false;
-	    _this._loadedPromise = new Promise(function (resolve, reject) {
-	      _this._resolve = resolve;
-	      _this._reject = reject;
-	    });
-	    _this._url = url;
-	    _this._buffer = null;
-	    _this._gainNode = _context.createGain();
-	    _this._loops = false;
-	    _this._source = null;
-	    //this._source = _context.createBufferSource()
-	    //this._source.connect(this._gainNode)
-	    //this._gainNode.connect(_context.destination)
-	    return _this;
-	  }
-
-	  /**
-	   * The default playback volume for the audio source.
-	   * @type {number}
-	   * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524106-volume
-	   */
-
-
-	  _createClass(SCNAudioSource, [{
-	    key: 'load',
-
-
-	    // Preloading Audio Data
-
-	    /**
-	     * Loads audio data from the source and prepares it for playing.
-	     * @access public
-	     * @returns {void}
-	     * @desc This method reads audio data from the source file (specified when initializing the audio source) and performs any decompression necessary to prepare for playing audio. Use this method to control when your app or game incurs the run-time performance cost of such work—for example, you can load all audio source before starting a game level, instead of suffering a frame rate drop upon playing a new audio source during gameplay.This method has no effect if the shouldStream property’s value is true.
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523399-load
-	     */
-	    value: function load() {
-	      var _this2 = this;
-
-	      if (this._loading) {
-	        return;
-	      }
-	      this._loading = true;
-
-	      var promise = _AjaxRequest3.default.get(this._url, { responseType: 'arraybuffer' }).then(function (data) {
-	        _context.decodeAudioData(data, function (buffer) {
-	          _this2._buffer = buffer;
-	          _this2._resolve();
-	        });
-	      });
-	    }
-	  }, {
-	    key: '_play',
-	    value: function _play() {
-	      var _this3 = this;
-
-	      var when = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-	      this.load();
-	      this._loadedPromise.then(function () {
-	        _this3._source = _context.createBufferSource();
-	        _this3._source.buffer = _this3._buffer;
-	        _this3._source.connect(_this3._gainNode);
-	        _this3._gainNode.connect(_context.destination);
-	        _this3._source.loop = _this3._loops;
-	        _this3._source.start(when);
-	      });
-	    }
-	  }, {
-	    key: '_stop',
-	    value: function _stop() {
-	      var when = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-	      if (this._source) {
-	        this._source.stop(when);
-	        this._source = null;
-	      }
-	    }
-	  }, {
-	    key: '_getLoadedPromise',
-
-
-	    /**
-	     * @access private
-	     * @returns {Promise} -
-	     */
-	    value: function _getLoadedPromise() {
-	      if (this._loadedPromise) {
-	        return this._loadedPromise;
-	      }
-
-	      return Promise.resolve();
-	    }
-
-	    /**
-	     * @access public
-	     * @type {Promise} -
-	     */
-
-	  }, {
-	    key: 'volume',
-	    get: function get() {
-	      return this._gainNode.gain.value;
-	    },
-	    set: function set(newValue) {
-	      this._gainNode.gain.value = newValue;
-	    }
-
-	    /**
-	     * A Boolean value that determines whether the audio source should play repeatedly.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524183-loops
-	     */
-
-	  }, {
-	    key: 'loops',
-	    get: function get() {
-	      return this._loops;
-	    },
-	    set: function set(newValue) {
-	      this._loops = newValue;
-	      if (this._source !== null) {
-	        this._source.loop = newValue;
-	      }
-	    }
-	  }, {
-	    key: '_duration',
-	    get: function get() {
-	      if (this._buffer) {
-	        return this._buffer.duration;
-	      }
-	      return null;
-	    }
-	  }, {
-	    key: 'didLoad',
-	    get: function get() {
-	      return this._getLoadedPromise();
-	    }
-	  }]);
-
-	  return SCNAudioSource;
-	}(_NSObject3.default);
-
-	exports.default = SCNAudioSource;
-
-/***/ },
-/* 112 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * AjaxRequest class
-	 * @access public
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var AjaxRequest = exports.AjaxRequest = function () {
-	  /**
-	   * constructor
-	   * @access public
-	   * @constructor
-	   */
-	  function AjaxRequest() {
-	    _classCallCheck(this, AjaxRequest);
-
-	    this.defaultOptions = {
-	      method: 'POST',
-	      async: true,
-	      data: null,
-	      user: null,
-	      password: null,
-	      mimeType: null,
-	      isJSONP: false,
-	      responseType: null,
-	      requestHeader: {}
-	    };
-
-	    this.jsonpScripts = [];
-	    this.jsonpCallbackPrefix = 'jsonpCallback_';
-	  }
-
-	  _createClass(AjaxRequest, [{
-	    key: 'get',
-	    value: function get(url) {
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	      options.method = 'GET';
-	      return this.request(url, options);
-	    }
-	  }, {
-	    key: 'post',
-	    value: function post(url) {
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	      options.method = 'POST';
-	      return this.request(url, options);
-	    }
-	  }, {
-	    key: 'jsonp',
-	    value: function jsonp(url) {
-	      var callbackParam = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'callback';
-	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	      var requestURL = url;
-	      var script = document.createElement('script');
-	      var callbackFuncName = this._getNewFuncName(this.jsonpCallbackPrefix);
-
-	      if (!options.data) {
-	        options.data = {};
-	      }
-	      options.data[callbackParam] = callbackFuncName;
-
-	      var queryArray = [];
-	      options.data.forEach(function (key, value) {
-	        queryArray.push(encodeURI(key) + '=' + encodeURI(value));
-	      });
-	      requestURL += '?' + queryArray.join('&');
-
-	      var promise = new Promise(function (resolve, reject) {
-	        window[callbackFuncName] = resolve;
-	        script.addEventListener('error', reject);
-	      }).catch(function (error) {
-	        delete window[callbackFuncName];
-	        document.head.removeChild(script);
-	        return Promise.reject(error);
-	      }).then(function (result) {
-	        delete window[callbackFuncName];
-	        document.head.removeChild(script);
-	        return Promise.resolve(result);
-	      });
-
-	      script.src = requestURL;
-	      document.head.appendChild(script);
-
-	      return promise;
-	    }
-	  }, {
-	    key: '_getNewFuncName',
-	    value: function _getNewFuncName() {
-	      var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-
-	      // ESLint prefers for(;;) more than while(true)
-	      for (;;) {
-	        var funcName = prefix + Math.random().toString(16).slice(2);
-	        if (typeof window[funcName] === 'undefined') {
-	          return funcName;
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'request',
-	    value: function request(url) {
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	      var requestURL = url;
-	      var method = typeof options.method === 'undefined' ? this.defaultOptions.method : options.method;
-	      var async = typeof options.async === 'undefined' ? this.defaultOptions.async : options.async;
-	      var data = this.defaultOptions.data;
-	      var user = typeof options.user === 'undefined' ? this.defaultOptions.user : options.user;
-	      var password = typeof options.password === 'undefined' ? this.defaultOptions.password : options.password;
-	      var mimeType = typeof options.mimeType === 'undefined' ? this.defaultOptions.mimeType : options.mimeType;
-	      var header = typeof options.requestHeader === 'undefined' ? this.defaultOptions.requestHeader : options.requestHeader;
-	      var isJSONP = typeof options.isJSONP === 'undefined' ? this.defaultOptions.isJSONP : options.isJSONP;
-	      var responseType = typeof options.responseType === 'undefined' ? this.defaultOptions.responseType : options.responseType;
-
-	      if (method !== 'POST' && method !== 'GET') {
-	        method = 'POST';
-	      }
-
-	      if (options.data) {
-	        var dataArray = [];
-	        if (options.data instanceof Map) {
-	          options.data.forEach(function (key, value) {
-	            dataArray.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
-	          });
-	        } else {
-	          Object.keys(options.data).forEach(function (key) {
-	            var value = options.data[key];
-	            dataArray.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
-	          });
-	        }
-
-	        if (method === 'POST') {
-	          data = dataArray.join('&').replace(/%20/g, '+');
-	        } else {
-	          requestURL += '?' + dataArray.join('&').replace(/%20/g, '+');
-	        }
-	      }
-
-	      if (method === 'POST' && typeof header['Content-Type'] === 'undefined') {
-	        header['Content-Type'] = 'application/x-www-form-urlencoded';
-	      }
-
-	      return new Promise(function (resolve, reject) {
-	        var xhr = new XMLHttpRequest();
-
-	        if (mimeType) {
-	          xhr.overrideMimeType(mimeType);
-	        }
-	        if (responseType) {
-	          xhr.responseType = responseType;
-	        }
-
-	        if (user) {
-	          xhr.open(method, url, async, user, password);
-	        } else {
-	          xhr.open(method, url, async);
-	        }
-
-	        if (header) {
-	          for (var key in header) {
-	            // Reflect is not yet implemented...
-	            //if(Reflect.apply({}.hasOwnProperty, header, [key])){
-	            if ({}.hasOwnProperty.call(header, key)) {
-	              xhr.setRequestHeader(key, header[key]);
-	            }
-	          }
-	        }
-
-	        xhr.onload = function () {
-	          if (xhr.readyState === 4 && xhr.status === 200) {
-	            resolve(xhr.response);
-	          } else {
-	            reject(new Error(xhr.statusText));
-	          }
-	        };
-	        xhr.onerror = function () {
-	          reject(new Error(xhr.statusText));
-	        };
-	        xhr.send(data);
-	      });
-	    }
-	  }]);
-
-	  return AjaxRequest;
-	}();
-
-	exports.default = new AjaxRequest();
-
-/***/ },
-/* 113 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Options for locking the orientation of nodes affected by a billboard constraint.
-	 * @access public
-	 * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var SCNBillboardAxis = function () {
-	  _createClass(SCNBillboardAxis, [{
-	    key: 'X',
-
-
-	    // Constants
-
-	    /**
-	     * Align an affected node such that its x-axis is always parallel to that of the view, leaving it free to rotate otherwise.
-	     * @type {SCNBillboardAxis}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468664-x
-	     */
-	    get: function get() {
-	      return this._X;
-	    }
-
-	    /**
-	     * Align an affected node such that its y-axis is always parallel to that of the view, leaving it free to rotate otherwise.
-	     * @type {SCNBillboardAxis}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468668-y
-	     */
-
-	  }, {
-	    key: 'Y',
-	    get: function get() {
-	      return this._Y;
-	    }
-
-	    /**
-	     * Align an affected node such that its z-axis is always perpendicular to the viewing plane, leaving it free to rotate otherwise.
-	     * @type {SCNBillboardAxis}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468647-z
-	     */
-
-	  }, {
-	    key: 'Z',
-	    get: function get() {
-	      return this._Z;
-	    }
-
-	    /**
-	     * Align an affected node such that its orientation always matches that of the view.
-	     * @type {SCNBillboardAxis}
-	     * @desc This is the default option for newly created billboard constraints.
-	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468666-all
-	     */
-
-	  }, {
-	    key: 'all',
-	    get: function get() {
-	      return this._all;
-	    }
-
-	    // Initializers
-
-	    /**
-	     * 
-	     * @access public
-	     * @constructor
-	     * @param {number} rawValue - 
-	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1524212-init
-	     */
-
-	  }]);
-
-	  function SCNBillboardAxis(rawValue) {
-	    _classCallCheck(this, SCNBillboardAxis);
-
-	    // Constants
-
-	    this._X = null;
-	    this._Y = null;
-	    this._Z = null;
-	    this._all = null;
-	  }
-
-	  return SCNBillboardAxis;
-	}();
-
-	exports.default = SCNBillboardAxis;
-
-/***/ },
-/* 114 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _SCNConstraint2 = __webpack_require__(77);
-
-	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import SCNBillboardAxis from './SCNBillboardAxis'
-
-	/**
-	 * A constraint that orients a node to always point toward the current camera.
-	 * @access public
-	 * @extends {SCNConstraint}
-	 * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint
-	 */
-	var SCNBillboardConstraint = function (_SCNConstraint) {
-	  _inherits(SCNBillboardConstraint, _SCNConstraint);
-
-	  /**
-	   * constructor
-	   * @access public
-	   * @constructor
-	   */
-	  function SCNBillboardConstraint() {
-	    _classCallCheck(this, SCNBillboardConstraint);
-
-	    // Working with a Constraint’s Degrees of Freedom
-
-	    /**
-	     * An option that specifies which degrees of freedom the constraint affects.
-	     * @type {SCNBillboardAxis}
-	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint/1468685-freeaxes
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNBillboardConstraint.__proto__ || Object.getPrototypeOf(SCNBillboardConstraint)).call(this));
-
-	    _this.freeAxes = null;
-
-	    return _this;
-	  }
-
-	  return SCNBillboardConstraint;
-	}(_SCNConstraint3.default);
-
-	exports.default = SCNBillboardConstraint;
-
-/***/ },
-/* 115 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	//import SCNNode from './SCNNode'
-	//import SCNRenderer from './SCNRenderer'
-
-	/**
-	 * The signature for a block called for binding or unbinding a GLSL symbol in a custom program.
-	 * @type {function(programID: number, location: number, renderedNode: ?SCNNode, renderer: SCNRenderer): void}
-	 * @param {number} programID - The OpenGL program identifier for the current SCNProgram instance, as used by OpenGL functions such as glValidateProgram.
-	 * @param {number} location - The OpenGL location index for the symbol to be bound or unbound, as used by OpenGL functions such as glUniform.
-	 * @param {?SCNNode} renderedNode - The SCNNode object being rendered.
-	 * @param {SCNRenderer} renderer - The SCNRenderer object responsible for rendering.
-	 * @returns {void}
-	 * @desc Call handleBinding(ofSymbol:handler:) or handleUnbinding(ofSymbol:handler:) to associate a handler block with a GLSL symbol for a SceneKit geometry or material.
-	 * @see https://developer.apple.com/documentation/scenekit/scnbindingblock
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNBindingBlock = function SCNBindingBlock(programID, location, renderedNode, renderer) {};
-
-	exports.default = SCNBindingBlock;
-
-/***/ },
-/* 116 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Modes that describe how SceneKit blends source colors rendered using a material with destination colors already in a rendering target, used by the blendMode property.
-	 * @typedef {Object} SCNBlendMode
-	 * @property {number} alpha - Blend by multiplying source and destination color values by their corresponding alpha values.
-	 * @property {number} add - Blend by adding the source color to the destination color.
-	 * @property {number} subtract - Blend by subtracting the source color from the destination color.
-	 * @property {number} multiply - Blend by multiplying the source color with the background color.
-	 * @property {number} screen - Blend by multiplying the inverse of the source color with the inverse of the destination color.
-	 * @property {number} replace - Blend by replacing the destination color with the source color, ignoring alpha.
-	 * @see https://developer.apple.com/documentation/scenekit/scnblendmode
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNBlendMode = {
-	  alpha: 0,
-	  add: 1,
-	  subtract: 2,
-	  multiply: 3,
-	  screen: 4,
-	  replace: 5
-	};
-
-	exports.default = SCNBlendMode;
-
-/***/ },
-/* 117 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	//import SCNVector3 from './SCNVector3'
-
-	/**
-	 * Properties for measuring an object's location and size, expressed as either a box or a sphere.
-	 * @interface
-	 * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var SCNBoundingVolume = function () {
-
-	  /**
-	   * constructor
-	   * @access public
-	   * @constructor
-	   */
-	  function SCNBoundingVolume() {
-	    _classCallCheck(this, SCNBoundingVolume);
-
-	    // Working with Bounding Volumes
-
-	    /**
-	     * The minimum and maximum corner points of the object’s bounding box.
-	     * @type {{min: SCNVector3, max: SCNVector3}}
-	     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034705-boundingbox
-	     */
-	    this.boundingBox = null;
-
-	    this._boundingSphere = null;
-	  }
-
-	  // Working with Bounding Volumes
-
-	  /**
-	   * The center point and radius of the object’s bounding sphere.
-	   * @type {{center: SCNVector3, radius: number}}
-	   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
-	   * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere
-	   */
-
-
-	  _createClass(SCNBoundingVolume, [{
-	    key: 'boundingSphere',
-	    get: function get() {
-	      return this._boundingSphere;
-	    }
-	  }]);
-
-	  return SCNBoundingVolume;
-	}();
-
-	exports.default = SCNBoundingVolume;
-
-/***/ },
-/* 118 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -32243,7 +29678,7 @@ module.exports =
 	exports.default = SCNBox;
 
 /***/ },
-/* 119 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32260,23 +29695,23 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNBlendMode = __webpack_require__(116);
+	var _SCNBlendMode = __webpack_require__(90);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNColorMask = __webpack_require__(120);
+	var _SCNColorMask = __webpack_require__(91);
 
 	var _SCNColorMask2 = _interopRequireDefault(_SCNColorMask);
 
-	var _SCNCullMode = __webpack_require__(121);
+	var _SCNCullMode = __webpack_require__(92);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNFillMode = __webpack_require__(122);
+	var _SCNFillMode = __webpack_require__(93);
 
 	var _SCNFillMode2 = _interopRequireDefault(_SCNFillMode);
 
-	var _SCNMaterialProperty = __webpack_require__(123);
+	var _SCNMaterialProperty = __webpack_require__(94);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -32284,7 +29719,7 @@ module.exports =
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNTransparencyMode = __webpack_require__(126);
+	var _SCNTransparencyMode = __webpack_require__(98);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
@@ -33255,7 +30690,39 @@ module.exports =
 	exports.default = SCNMaterial;
 
 /***/ },
-/* 120 */
+/* 90 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Modes that describe how SceneKit blends source colors rendered using a material with destination colors already in a rendering target, used by the blendMode property.
+	 * @typedef {Object} SCNBlendMode
+	 * @property {number} alpha - Blend by multiplying source and destination color values by their corresponding alpha values.
+	 * @property {number} add - Blend by adding the source color to the destination color.
+	 * @property {number} subtract - Blend by subtracting the source color from the destination color.
+	 * @property {number} multiply - Blend by multiplying the source color with the background color.
+	 * @property {number} screen - Blend by multiplying the inverse of the source color with the inverse of the destination color.
+	 * @property {number} replace - Blend by replacing the destination color with the source color, ignoring alpha.
+	 * @see https://developer.apple.com/documentation/scenekit/scnblendmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNBlendMode = {
+	  alpha: 0,
+	  add: 1,
+	  subtract: 2,
+	  multiply: 3,
+	  screen: 4,
+	  replace: 5
+	};
+
+	exports.default = SCNBlendMode;
+
+/***/ },
+/* 91 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -33286,7 +30753,7 @@ module.exports =
 	exports.default = SCNColorMask;
 
 /***/ },
-/* 121 */
+/* 92 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -33310,7 +30777,7 @@ module.exports =
 	exports.default = SCNCullMode;
 
 /***/ },
-/* 122 */
+/* 93 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -33334,7 +30801,7 @@ module.exports =
 	exports.default = SCNFillMode;
 
 /***/ },
-/* 123 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33351,7 +30818,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNFilterMode = __webpack_require__(124);
+	var _SCNFilterMode = __webpack_require__(95);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
@@ -33363,11 +30830,11 @@ module.exports =
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNTransaction = __webpack_require__(87);
+	var _SCNTransaction = __webpack_require__(96);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNWrapMode = __webpack_require__(125);
+	var _SCNWrapMode = __webpack_require__(97);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
@@ -34044,7 +31511,7 @@ module.exports =
 	exports.default = SCNMaterialProperty;
 
 /***/ },
-/* 124 */
+/* 95 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34070,7 +31537,451 @@ module.exports =
 	exports.default = SCNFilterMode;
 
 /***/ },
-/* 125 */
+/* 96 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CABasicAnimation = __webpack_require__(69);
+
+	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	//import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
+
+
+	//import SCNAnimationEvent from './SCNAnimationEvent'
+
+	var _transactions = [];
+	var _immediateMode = true;
+
+	var _Transaction = function _Transaction() {
+	  _classCallCheck(this, _Transaction);
+
+	  /**
+	   * @type {Object}
+	   */
+	  this._animations = [];
+
+	  /**
+	   * @type {number}
+	   */
+	  this._animationDuration = 0.0;
+
+	  /**
+	   * @type {?CAMediaTimingFunction}
+	   */
+	  this._animationTimingFunction = null;
+
+	  /**
+	   * @type {boolean}
+	   */
+	  this._disableActions = false;
+
+	  /**
+	   * @type {?function}
+	   */
+	  this._completionBlock = null;
+
+	  /**
+	   * @type {Map<string, Object>}
+	   */
+	  this._values = new Map();
+	};
+
+	var _automaticTransaction = new _Transaction();
+
+	/**
+	 * The SCNTransaction class defines SceneKit’s mechanism for batching scene graph modifications into atomic updates. You use SCNTransaction class methods to control the animation that results from changing animatable properties in the scene graph and to combine sets of changes into nested transactions.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/scenekit/scntransaction
+	 */
+
+	var SCNTransaction = function (_NSObject) {
+	  _inherits(SCNTransaction, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SCNTransaction() {
+	    _classCallCheck(this, SCNTransaction);
+
+	    var _this = _possibleConstructorReturn(this, (SCNTransaction.__proto__ || Object.getPrototypeOf(SCNTransaction)).call(this));
+
+	    throw new Error('do not create an instance of SCNTransaction');
+	    return _this;
+	  }
+
+	  // Creating and Committing Transactions
+
+	  /**
+	   * Begins a new transaction for the current thread.
+	   * @access public
+	   * @returns {void}
+	   * @desc The new transaction is nested within the thread’s current transaction, if there is one.The first time you modify the scene graph during a pass through the run loop, SceneKit automatically creates a transaction and makes it the current transaction. (SceneKit commits that transaction when the next iteration of the run loops begins.) If you call this method to create a custom transaction before modifying the scene graph, your custom transaction becomes the current transaction.
+	   * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522820-begin
+	   */
+
+
+	  _createClass(SCNTransaction, null, [{
+	    key: 'begin',
+	    value: function begin() {
+	      var newTransaction = new _Transaction();
+	      newTransaction._disableActions = this._currentTransaction._disabledActions;
+	      _transactions.push(newTransaction);
+	    }
+
+	    /**
+	     * Commits all changes made during the current transaction.
+	     * @access public
+	     * @returns {void}
+	     * @desc If there is no current transaction, this method has no effect.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523436-commit
+	     */
+
+	  }, {
+	    key: 'commit',
+	    value: function commit() {
+	      var transaction = _transactions.pop();
+	      if (transaction) {
+	        this._apply(transaction);
+	      }
+	    }
+
+	    /**
+	     * Applies all changes from the current automatic transaction.
+	     * @access public
+	     * @returns {void}
+	     * @desc SceneKit automatically calls this method at the end of each pass through the run loop, regardless of the run loop mode. If your app does not have a run loop, you must call this method explicitly.If the current transaction has any nested transactions that are still animating, SceneKit waits to commit the current transaction’s changes until those transactions complete.NoteIf possible, avoid calling flush() explicitly. By allowing flush() to execute during the run loop, your app achieves better performance, atomic screen updates are preserved, and transactions and animations that work from transaction to transaction continue to function.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522860-flush
+	     */
+
+	  }, {
+	    key: 'flush',
+	    value: function flush() {
+	      // TODO: wait nested transactions
+	      this._apply(_automaticTransaction);
+	    }
+	  }, {
+	    key: '_apply',
+	    value: function _apply(transaction) {
+	      if (transaction._disableActions || transaction._animationDuration === 0) {
+	        transaction._animations.forEach(function (anim) {
+	          anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
+	        });
+	        if (transaction._completionBlock) {
+	          transaction._completionBlock();
+	        }
+	      } else {
+	        var promises = [];
+	        transaction._animations.forEach(function (anim) {
+	          var promise = new Promise(function (resolve, reject) {
+	            var animation = new _CABasicAnimation2.default(anim.keyPath);
+	            animation.fromValue = anim.diff;
+	            animation.timingFunction = transaction._animationTimingFunction;
+	            animation.duration = transaction._animationDuration;
+	            animation.isAdditive = true;
+	            animation.isRemovedOnCompletion = true;
+	            animation.delegate = {
+	              animationDidStop: function animationDidStop(_anim, _finished) {
+	                if (_finished) {
+	                  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
+	                  resolve(anim, animation);
+	                }
+	              }
+	            };
+	            anim.target.addAnimationForKey(animation, null);
+	          });
+	          promises.push(promise);
+	        });
+	        Promise.all(promises).then(function () {
+	          if (transaction._completionBlock) {
+	            transaction._completionBlock();
+	          }
+	        });
+	      }
+	    }
+
+	    // Overriding Animation Duration and Timing
+
+	    /**
+	     * Returns the duration, in seconds, of all animations within the current transaction.
+	     * @type {number}
+	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523888-animationduration
+	     */
+
+	  }, {
+	    key: 'lock',
+
+
+	    // Managing Concurrency
+
+	    /**
+	     * Attempts to acquire a recursive spinlock to ensure the validity of values you retrieve during the transaction.
+	     * @access public
+	     * @returns {void}
+	     * @desc SceneKit’s data model is thread-safe in that it ensures that internal data structures will not be corrupted by concurrent attempts to modify their contents from multiple threads. However, this model does not guarantee the validity of values you read from scene graph objects after returning them.For example, consider the following operation:_node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    The intent of this line is to move a node by ten units. But if another thread modifies the node’s position property concurrently, the new position value could be unexpected. If your app modifies the scene graph from multiple threads, use a transaction lock to ensure that your modifications take effect as intended.[SCNTransaction lock];
+	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    [SCNTransaction unlock];
+	    If another thread currently holds a lock on the transaction, calling lock() has no effect._node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    [SCNTransaction lock];
+	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    [SCNTransaction unlock];
+	      * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523078-lock
+	     */
+	    value: function lock() {
+	      throw new Error('lock() is not implemented');
+	    }
+
+	    /**
+	     * Relinquishes a previously acquired transaction lock.
+	     * @access public
+	     * @returns {void}
+	     * @desc See the lock() method for more details on transaction locking.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523166-unlock
+	     */
+
+	  }, {
+	    key: 'unlock',
+	    value: function unlock() {
+	      throw new Error('unlock() is not implemented');
+	    }
+
+	    // Getting and Setting Transaction Properties
+
+	    /**
+	     * Associates an arbitrary object with the current transaction using the specified key.
+	     * @access public
+	     * @param {?Object} value - 
+	     * @param {string} key - A unique string identifying the object for later retrieval.
+	     * @returns {void}
+	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, and reading the value for a key searches through nested transactions (starting from the innermost).
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1524124-setvalue
+	     */
+
+	  }, {
+	    key: 'setValueForKey',
+	    value: function setValueForKey(value, key) {
+	      this._currentTransaction._values.set(key, value);
+	    }
+
+	    /**
+	     * Returns the object previously associated with the current transaction using the specified key.
+	     * @access public
+	     * @param {string} key - The unique string identifying an object previously associated with the transaction.
+	     * @returns {?Object} - 
+	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, but reading the value for a key searches through nested transactions (starting from the innermost).
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523919-value
+	     */
+
+	  }, {
+	    key: 'valueForKey',
+	    value: function valueForKey(key) {
+	      for (var i = _transactions.length - 1; i >= 0; i--) {
+	        var value = _transactions[i]._values.get(key);
+	        if (typeof value !== 'undefined') {
+	          return value;
+	        }
+	      }
+	      return _automaticTransaction._values.get(key);
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {_Transaction} -
+	     */
+
+	  }, {
+	    key: '_addChange',
+
+
+	    /**
+	     * @access private
+	     * @param {Object} target -
+	     * @param {string} keyPath -
+	     * @param {Object|number} oldValue -
+	     * @param {Object|number} newValue -
+	     * @returns {void}
+	     */
+	    value: function _addChange(target, keyPath, oldValue, newValue) {
+	      if (this.immediateMode) {
+	        target.setValueForKeyPath(newValue, keyPath);
+	      } else {
+	        var diff = null;
+	        if (typeof newValue === 'number') {
+	          diff = oldValue - newValue;
+	        } else if (typeof newValue.sub !== 'undefined') {
+	          diff = oldValue.sub(newValue);
+	        } else {
+	          throw new Error('keyPath ' + keyPath + ' does not have sub function');
+	        }
+	        this._currentTransaction._animations.push({
+	          target: target,
+	          keyPath: keyPath,
+	          diff: diff,
+	          oldValue: oldValue,
+	          newValue: newValue
+	        });
+	      }
+	    }
+
+	    /**
+	     * @access public
+	     * @type {boolean}
+	     */
+
+	  }, {
+	    key: 'animationDuration',
+	    get: function get() {
+	      return this._currentTransaction._animationDuration;
+	    }
+
+	    /**
+	     * Returns the duration, in seconds, of all animations within the current transaction.
+	     * @type {number}
+	     * @param {number} newValue -
+	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523888-animationduration
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._animationDuration = newValue;
+	    }
+
+	    /**
+	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
+	     * @type {?CAMediaTimingFunction}
+	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522614-animationtimingfunction
+	     */
+
+	  }, {
+	    key: 'animationTimingFunction',
+	    get: function get() {
+	      return this._currentTransaction._animationTimingFunction;
+	    }
+
+	    /**
+	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
+	     * @type {?CAMediaTimingFunction}
+	     * @param {?CAMediaTimingFunction} newValue -
+	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522614-animationtimingfunction
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._animationTimingFunction = newValue;
+	    }
+
+	    // Temporarily Disabling Property Animations
+
+	    /**
+	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
+	     * @type {boolean}
+	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1524238-disableactions
+	     */
+
+	  }, {
+	    key: 'disableActions',
+	    get: function get() {
+	      return this._currentTransaction._disableActions;
+	    }
+
+	    /**
+	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
+	     * @type {boolean}
+	     * @param {boolean} newValue -
+	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1524238-disableactions
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._disableActions = newValue;
+	    }
+
+	    // Getting and Setting Completion Block Objects
+
+	    /**
+	     * Returns the block previously associated with the current transaction.
+	     * @type {?function(): void}
+	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523660-completionblock
+	     */
+
+	  }, {
+	    key: 'completionBlock',
+	    get: function get() {
+	      return this._currentTransaction._completionBlock;
+	    }
+
+	    /**
+	     * Returns the block previously associated with the current transaction.
+	     * @type {?function(): void}
+	     * @param {?function(): void} newValue -
+	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
+	     * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523660-completionblock
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._completionBlock = newValue;
+	    }
+	  }, {
+	    key: '_currentTransaction',
+	    get: function get() {
+	      if (_transactions.length > 0) {
+	        return _transactions[_transactions.length - 1];
+	      }
+	      return _automaticTransaction;
+	    }
+	  }, {
+	    key: 'immediateMode',
+	    get: function get() {
+	      if (_transactions.length > 0) {
+	        return false;
+	      }
+	      return _immediateMode;
+	    }
+
+	    /**
+	     * @access public
+	     * @type {boolean}
+	     * @param {boolean} newValue -
+	     */
+	    ,
+	    set: function set(newValue) {
+	      _immediateMode = newValue;
+	    }
+	  }]);
+
+	  return SCNTransaction;
+	}(_NSObject3.default);
+
+	exports.default = SCNTransaction;
+
+/***/ },
+/* 97 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34098,7 +32009,7 @@ module.exports =
 	exports.default = SCNWrapMode;
 
 /***/ },
-/* 126 */
+/* 98 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34122,7 +32033,7 @@ module.exports =
 	exports.default = SCNTransparencyMode;
 
 /***/ },
-/* 127 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34139,15 +32050,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNCullMode = __webpack_require__(121);
+	var _SCNCullMode = __webpack_require__(92);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -35751,7 +33662,7 @@ module.exports =
 	exports.default = SCNGeometry;
 
 /***/ },
-/* 128 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36438,7 +34349,7 @@ module.exports =
 	exports.default = SCNGeometrySource;
 
 /***/ },
-/* 129 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36453,7 +34364,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -36733,7 +34644,7 @@ module.exports =
 	exports.default = SCNGeometryElement;
 
 /***/ },
-/* 130 */
+/* 102 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36763,7 +34674,5031 @@ module.exports =
 	exports.default = SCNGeometryPrimitiveType;
 
 /***/ },
+/* 103 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _SCNGeometry2 = __webpack_require__(99);
+
+	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
+
+	var _SCNGeometryElement = __webpack_require__(101);
+
+	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
+
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNGeometrySource = __webpack_require__(100);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
+	var _SCNMaterial = __webpack_require__(89);
+
+	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
+	var _SCNVector = __webpack_require__(58);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * A right circular cylinder geometry whose ends are capped with hemispheres.
+	 * @access public
+	 * @extends {SCNGeometry}
+	 * @see https://developer.apple.com/documentation/scenekit/scncapsule
+	 */
+	var SCNCapsule = function (_SCNGeometry) {
+	  _inherits(SCNCapsule, _SCNGeometry);
+
+	  // Creating a Capsule
+
+	  /**
+	   * Creates a capsule geometry with the specified radius and height.
+	   * @access public
+	   * @constructor
+	   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
+	   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
+	   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
+	   * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523790-init
+	   */
+	  function SCNCapsule() {
+	    var capRadius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
+	    var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2.0;
+
+	    _classCallCheck(this, SCNCapsule);
+
+	    // Adjusting a Capsule’s Dimensions
+
+	    /**
+	     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523926-capradius
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNCapsule.__proto__ || Object.getPrototypeOf(SCNCapsule)).call(this, [], []));
+
+	    _this.capRadius = capRadius;
+
+	    /**
+	     * The extent of the capsule along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1522789-height
+	     */
+	    _this.height = height;
+
+	    // Adjusting Geometric Detail
+
+	    /**
+	     * The number of subdivisions around the lateral circumference of the capsule. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1522735-radialsegmentcount
+	     */
+	    _this.radialSegmentCount = 24;
+
+	    /**
+	     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523561-capsegmentcount
+	     */
+	    _this.capSegmentCount = 48;
+
+	    /**
+	     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523697-heightsegmentcount
+	     */
+	    _this.heightSegmentCount = 1;
+
+	    _this._createGeometry();
+	    _this.materials.push(new _SCNMaterial2.default());
+	    return _this;
+	  }
+
+	  _createClass(SCNCapsule, [{
+	    key: '_createGeometry',
+	    value: function _createGeometry() {
+	      var sourceData = [];
+	      var indexData = [];
+	      var vectorCount = (this.radialSegmentCount * 2 + 1) * (this.capSegmentCount + 4);
+	      //const primitiveCount = this.radialSegmentCount * this.capSegmentCount * 4
+
+	      var yNom = [];
+	      var ySin = [];
+	      for (var lat = 0; lat <= this.capSegmentCount; lat++) {
+	        yNom.push(-Math.cos(Math.PI * lat / this.capSegmentCount));
+	        ySin.push(Math.sin(Math.PI * lat / this.capSegmentCount));
+	      }
+
+	      var cylinderHeight = this.height - this.capRadius * 2;
+	      var hemiLen = this.capSegmentCount / 2;
+	      var rad2 = this.radialSegmentCount * 2;
+	      for (var lng = 0; lng <= rad2; lng++) {
+	        var x = -Math.sin(2.0 * Math.PI * lng / rad2);
+	        var z = -Math.cos(2.0 * Math.PI * lng / rad2);
+	        var tx = lng / rad2;
+	        var y = -cylinderHeight * 0.5;
+	        for (var _lat = 0; _lat <= hemiLen; _lat++) {
+	          var xNom = x * ySin[_lat];
+	          var zNom = z * ySin[_lat];
+
+	          // vertex
+	          sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius
+
+	          // normal
+	          );sourceData.push(xNom, yNom[_lat], zNom
+
+	          // texcoord
+	          );sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
+
+	          if (_lat === hemiLen) {
+	            // put the same data again
+	            sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius);
+	            sourceData.push(xNom, yNom[_lat], zNom);
+	            sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
+	          }
+	        }
+
+	        y = cylinderHeight * 0.5;
+	        for (var _lat2 = hemiLen; _lat2 <= this.capSegmentCount; _lat2++) {
+	          var _xNom = x * ySin[_lat2];
+	          var _zNom = z * ySin[_lat2];
+
+	          // vertex
+	          sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius
+
+	          // normal
+	          );sourceData.push(_xNom, yNom[_lat2], _zNom
+
+	          // texcoord
+	          );sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
+
+	          if (_lat2 === hemiLen) {
+	            // put the same data again
+	            sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius);
+	            sourceData.push(_xNom, yNom[_lat2], _zNom);
+	            sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
+	          }
+	        }
+	      }
+
+	      // index
+	      var capLen = this.capSegmentCount;
+	      var radLen = this.radialSegmentCount * 2 + 1;
+	      for (var i = 0; i < capLen; i++) {
+	        var index1 = i * (this.capSegmentCount + 4);
+	        var index2 = index1 + this.capSegmentCount + 5;
+
+	        indexData.push(index1, index2, index1 + 1);
+	        index1 += 1;
+	        for (var j = 0; j < radLen; j++) {
+	          if (Math.abs(j - this.radialSegmentCount) !== 1) {
+	            indexData.push(index1, index2 + 1, index1 + 1);
+	            indexData.push(index1, index2, index2 + 1);
+	          }
+	          index1 += 1;
+	          index2 += 1;
+	        }
+	        indexData.push(index1, index2, index2 + 1);
+	      }
+
+	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.vertex, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      0, // offset
+	      32 // sride
+	      );
+
+	      var normalSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.normal, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      12, // offset
+	      32 // stride
+	      );
+
+	      var texcoordSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.texcoord, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      2, // componentsPerVector
+	      4, // bytesPerComponent
+	      24, // offset
+	      32 // stride
+	      );
+
+	      var element = new _SCNGeometryElement2.default(indexData, _SCNGeometryPrimitiveType2.default.triangles);
+
+	      this._geometryElements = [element];
+	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
+
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(-this.capRadius, -this.height * 0.5, -this.capRadius),
+	        max: new _SCNVector2.default(this.capRadius, this.height * 0.5, this.capRadius)
+	      };
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {Ammo.btCollisionShape} -
+	     * @desc call Ammo.destroy(shape) after using it.
+	     */
+
+	  }, {
+	    key: '_createBtCollisionShape',
+	    value: function _createBtCollisionShape() {}
+	    //const height = (this.height - this.capRadius) * 0.5
+	    //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
+	    //return shape
+
+
+	    /**
+	     * The center point and radius of the object’s bounding sphere.
+	     * @type {Object}
+	     * @parameter {SCNVector3} _boundingSphere.center -
+	     * @parameter {number} _boundingSphere.radius -
+	     * @returns {Object} -
+	     * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+	     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere
+	     */
+
+	  }, {
+	    key: 'getBoundingSphere',
+	    value: function getBoundingSphere() {
+	      var c = new _SCNVector2.default(0, 0, 0);
+	      var r = this.height * 0.5;
+
+	      return { center: c, radius: r };
+	    }
+	  }, {
+	    key: '_updateBoundingBoxForSkinner',
+	    value: function _updateBoundingBoxForSkinner() {
+	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+	      if (skinner === null) {
+	        return this.boundingBox;
+	      }
+	      return _get(SCNCapsule.prototype.__proto__ || Object.getPrototypeOf(SCNCapsule.prototype), '_updateBoundingBoxForSkinner', this).call(this, skinner);
+	    }
+	  }]);
+
+	  return SCNCapsule;
+	}(_SCNGeometry3.default);
+
+	exports.default = SCNCapsule;
+
+/***/ },
+/* 104 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SCNNode from './SCNNode'
+	//import SCNVector3 from './SCNVector3'
+	//import SCNMatrix4 from './SCNMatrix4'
+	//import CGPoint from '../CoreGraphics/CGPoint'
+
+	/**
+	 * Detailed information about a result from searching for elements of a scene located at a specified point, or along a specified line segment (or ray).
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/scenekit/scnhittestresult
+	 */
+	var SCNHitTestResult = function (_NSObject) {
+	  _inherits(SCNHitTestResult, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SCNHitTestResult() {
+	    _classCallCheck(this, SCNHitTestResult);
+
+	    // Retrieving Information About a Hit-Test Result
+
+	    var _this = _possibleConstructorReturn(this, (SCNHitTestResult.__proto__ || Object.getPrototypeOf(SCNHitTestResult)).call(this));
+
+	    _this._node = null;
+	    _this._geometryIndex = 0;
+	    _this._faceIndex = 0;
+	    _this._localCoordinates = null;
+	    _this._worldCoordinates = null;
+	    _this._localNormal = null;
+	    _this._worldNormal = null;
+	    _this._modelTransform = null;
+
+	    // Instance Properties
+
+	    _this._boneNode = null;
+	    return _this;
+	  }
+
+	  // Retrieving Information About a Hit-Test Result
+
+	  /**
+	   * Returns the texture coordinates at the point of intersection for the specified texture mapping channel.
+	   * @access public
+	   * @param {number} channel - The index of the mapping channel in which to look up texture coordinates.
+	   * @returns {CGPoint} - 
+	   * @desc An SCNGeometry object can contain multiple sources of texture coordinates, or texture mapping channels. (With multiple channels, you can map texture images for different material properties in different ways.) To use the texture coordinates of a hit-test result, specify which texture coordinate source to look up coordinates in. For example, to add “scorch marks” to a game character hit by a laser, you might modify a texture image mapped to the multiply property of the geometry’s material. Use the mappingChannel index from that material property as the channel parameter when calling textureCoordinates(withMappingChannel:) to ensure that you modify the correct location in the texture image.
+	   * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1522771-texturecoordinates
+	   */
+
+
+	  _createClass(SCNHitTestResult, [{
+	    key: 'textureCoordinatesWithMappingChannel',
+	    value: function textureCoordinatesWithMappingChannel(channel) {
+	      return null;
+	    }
+
+	    /**
+	     * The node whose geometry intersects the search ray.
+	     * @type {SCNNode}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523256-node
+	     */
+
+	  }, {
+	    key: 'node',
+	    get: function get() {
+	      return this._node;
+	    }
+
+	    /**
+	     * The index of the geometry element whose surface the search ray intersects.
+	     * @type {number}
+	     * @desc Every SCNGeometry object contains one or more SCNGeometryElement objects that define how its vertices connect to form a surface. This property provides the index of the geometry element intersecting the search ray. For more information about that geometry element, use the geometry’s geometryElement(at:) method.
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1522625-geometryindex
+	     */
+
+	  }, {
+	    key: 'geometryIndex',
+	    get: function get() {
+	      return this._geometryIndex;
+	    }
+
+	    /**
+	     * The index of the primitive in the geomety element intersected by the search ray.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1522888-faceindex
+	     */
+
+	  }, {
+	    key: 'faceIndex',
+	    get: function get() {
+	      return this._faceIndex;
+	    }
+
+	    /**
+	     * The point of intersection between the geometry and the search ray, in the local coordinate system of the node containing the geometry.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523032-localcoordinates
+	     */
+
+	  }, {
+	    key: 'localCoordinates',
+	    get: function get() {
+	      return this._localCoordinates;
+	    }
+
+	    /**
+	     * The point of intersection between the geometry and the search ray, in the scene’s world coordinate system.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523058-worldcoordinates
+	     */
+
+	  }, {
+	    key: 'worldCoordinates',
+	    get: function get() {
+	      return this._worldCoordinates;
+	    }
+
+	    /**
+	     * The surface normal vector at the point of intersection, in the local coordinate system of the node containing the geometry intersected by the search ray.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523953-localnormal
+	     */
+
+	  }, {
+	    key: 'localNormal',
+	    get: function get() {
+	      return this._localNormal;
+	    }
+
+	    /**
+	     * The surface normal vector at the point of intersection, in the scene’s world coordinate system.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1524066-worldnormal
+	     */
+
+	  }, {
+	    key: 'worldNormal',
+	    get: function get() {
+	      return this._worldNormal;
+	    }
+
+	    /**
+	     * The world transform matrix of the node containing the intersection.
+	     * @type {SCNMatrix4}
+	     * @desc Use this matrix to transform vectors from the local coordinate space of the node whose geometry is intersected by the search ray to the scene’s world coordinate system.
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523496-modeltransform
+	     */
+
+	  }, {
+	    key: 'modelTransform',
+	    get: function get() {
+	      return this._modelTransform;
+	    }
+
+	    // Instance Properties
+
+	    /**
+	     * 
+	     * @type {SCNNode}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1823463-bonenode
+	     */
+
+	  }, {
+	    key: 'boneNode',
+	    get: function get() {
+	      return this._boneNode;
+	    }
+	  }]);
+
+	  return SCNHitTestResult;
+	}(_NSObject3.default);
+
+	exports.default = SCNHitTestResult;
+
+/***/ },
+/* 105 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.
+	 * @typedef {Object} SCNPhysicsBodyType
+	 * @property {number} static - A physics body that is unaffected by forces or collisions and cannot move.
+	 * @property {number} dynamic - A physics body that can be affected by forces and collisions.
+	 * @property {number} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.
+	 * @see https://developer.apple.com/documentation/scenekit/scnphysicsbodytype
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNPhysicsBodyType = {
+	  static: 0,
+	  dynamic: 1,
+	  kinematic: 2
+	};
+
+	exports.default = SCNPhysicsBodyType;
+
+/***/ },
+/* 106 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SCNNode from './SCNNode'
+	//import SCNVector3 from './SCNVector3'
+
+	/**
+	 * Detailed information about a contact between two physics bodies in a scene’s physics simulation. 
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact
+	 */
+	var SCNPhysicsContact = function (_NSObject) {
+	  _inherits(SCNPhysicsContact, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SCNPhysicsContact() {
+	    _classCallCheck(this, SCNPhysicsContact);
+
+	    // Inspecting the Contact Properties
+
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsContact.__proto__ || Object.getPrototypeOf(SCNPhysicsContact)).call(this));
+
+	    _this._nodeA = null;
+	    _this._nodeB = null;
+	    _this._contactPoint = null;
+	    _this._contactNormal = null;
+	    _this._collisionImpulse = 0;
+	    _this._penetrationDistance = 0;
+	    return _this;
+	  }
+
+	  // Inspecting the Contact Properties
+
+	  /**
+	   * The node containing the first body in the contact.
+	   * @type {SCNNode}
+	   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
+	   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea
+	   */
+
+
+	  _createClass(SCNPhysicsContact, [{
+	    key: 'nodeA',
+	    get: function get() {
+	      return this._nodeA;
+	    }
+
+	    /**
+	     * The node containing the second body in the contact.
+	     * @type {SCNNode}
+	     * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb
+	     */
+
+	  }, {
+	    key: 'nodeB',
+	    get: function get() {
+	      return this._nodeB;
+	    }
+
+	    /**
+	     * The contact point between the two physics bodies, in scene coordinates.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint
+	     */
+
+	  }, {
+	    key: 'contactPoint',
+	    get: function get() {
+	      return this._contactPoint;
+	    }
+
+	    /**
+	     * The normal vector at the contact point between the two physics bodies, in scene coordinates.
+	     * @type {SCNVector3}
+	     * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal
+	     */
+
+	  }, {
+	    key: 'contactNormal',
+	    get: function get() {
+	      return this._contactNormal;
+	    }
+
+	    /**
+	     * The force over time of the collision, in newton-seconds.
+	     * @type {number}
+	     * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse
+	     */
+
+	  }, {
+	    key: 'collisionImpulse',
+	    get: function get() {
+	      return this._collisionImpulse;
+	    }
+
+	    /**
+	     * The distance of overlap, in units of scene coordinate space, between the two physics bodies.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance
+	     */
+
+	  }, {
+	    key: 'penetrationDistance',
+	    get: function get() {
+	      return this._penetrationDistance;
+	    }
+	  }]);
+
+	  return SCNPhysicsContact;
+	}(_NSObject3.default);
+
+	exports.default = SCNPhysicsContact;
+
+/***/ },
+/* 107 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _SCNBox = __webpack_require__(88);
+
+	var _SCNBox2 = _interopRequireDefault(_SCNBox);
+
+	var _SCNCapsule = __webpack_require__(103);
+
+	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
+
+	var _SCNGeometry = __webpack_require__(99);
+
+	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
+
+	var _SCNNode = __webpack_require__(83);
+
+	var _SCNNode2 = _interopRequireDefault(_SCNNode);
+
+	var _SCNSphere = __webpack_require__(108);
+
+	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
+
+	var _SCNVector = __webpack_require__(58);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _Option = {
+	  collisionMargin: 'SCNPhysicsShapeCollisionMarginKey',
+	  keepAsCompound: 'SCNPhysicsShapeKeepAsCompoundKey',
+	  scale: 'SCNPhysicsShapeScaleKey',
+	  type: 'SCNPhysicsShapeTypeKey'
+	};
+
+	var _ShapeType = {
+	  boundingBox: 'boundingBox',
+	  concavePolyhedron: 'concaveMesh',
+	  convexHull: 'convexHull'
+
+	  /**
+	   * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape
+	   */
+	};
+	var SCNPhysicsShape = function (_NSObject) {
+	  _inherits(SCNPhysicsShape, _NSObject);
+
+	  _createClass(SCNPhysicsShape, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        $constructor: function $constructor(propNames, propValues) {
+	          return new SCNPhysicsShape(propValues.referenceObject, propValues.options);
+	        },
+	        options: ['NSArray', null],
+	        referenceObject: ['NSObject', null]
+	      };
+	    }
+
+	    // Creating Physics Shapes
+
+	    /**
+	     * Creates a physics shape based on a geometry object.
+	     * @access public
+	     * @constructor
+	     * @param {SCNGeometry} geometry - A geometry object.
+	     * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.
+	     * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508897-init
+	     */
+
+	  }]);
+
+	  function SCNPhysicsShape(geometry) {
+	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	    _classCallCheck(this, SCNPhysicsShape);
+
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsShape.__proto__ || Object.getPrototypeOf(SCNPhysicsShape)).call(this));
+
+	    var _options = options;
+	    if (Array.isArray(options)) {
+	      _options = {};
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var arr = _step.value;
+
+	          _options[arr[0]] = arr[1];
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     * @type {SCNGeometry}
+	     */
+	    _this._sourceGeometry = null;
+
+	    /**
+	     * @type {Object}
+	     */
+	    _this._options = _options;
+
+	    /**
+	     * @type {SCNMatrix4}
+	     */
+	    _this._transforms = null;
+
+	    /**
+	     * @type {SCNGeometry}
+	     */
+	    _this._shape = null;
+
+	    /**
+	     * @type {SCNVector3}
+	     */
+	    _this._center = new _SCNVector2.default(0, 0, 0);
+
+	    // Getting Information About a Shape
+	    _this._sourceObject = null;
+
+	    _this._setSourceObject(geometry);
+	    _this._createShape();
+	    return _this;
+	  }
+
+	  _createClass(SCNPhysicsShape, [{
+	    key: '_setSourceObject',
+	    value: function _setSourceObject(obj) {
+	      this._sourceObject = obj;
+	      if (this._sourceObject instanceof _SCNGeometry2.default) {
+	        this._sourceGeometry = this._sourceObject;
+	      } else if (this._sourceObject instanceof _SCNNode2.default && this._sourceObject.geometry) {
+	        // TODO: get geometries recursively
+	        this._sourceGeometry = this._sourceObject.geometry;
+	      } else {
+	        //throw new Error(`can't use it for source object: ${geometry.className}`)
+	      }
+	      if (!this._sourceGeometry) {
+	        //throw new Error('source geometry is null')
+	      }
+	    }
+	  }, {
+	    key: '_createShape',
+	    value: function _createShape() {
+	      if (!this._sourceGeometry) {
+	        //throw new Error('SCNPhysicsShape: must have a geometry')
+	        return;
+	      }
+
+	      //if(this._options && this._options.get(_Option.type) === _ShapeType.boundingBox){
+	      if (this._options && this._options[_Option.type] === _ShapeType.boundingBox) {
+	        this._createShapeAsBoundingBox();
+	      } else if (this._sourceGeometry instanceof _SCNCapsule2.default) {
+	        // FIXME: do not convert to SCNBox
+	        this._createShapeAsBoundingBox();
+	      } else if (this._sourceGeometry instanceof _SCNBox2.default) {
+	        this._createShapeAsBox();
+	      } else if (this._sourceGeometry instanceof _SCNSphere2.default) {
+	        this._createShapeAsSphere
+	        //}else if(this._options && this._options.get(_Option.type) === _ShapeType.convecHull){
+	        ();
+	      } else if (this._options && this._options[_Option.type] === _ShapeType.concavePolyhedron) {
+	        // give up making a simple shape
+	        this._shape = this._sourceGeometry;
+	      } else {
+	        this._createShapeAsSphere();
+	      }
+	    }
+	  }, {
+	    key: '_createShapeAsBoundingBox',
+	    value: function _createShapeAsBoundingBox() {
+	      var boundingBox = this._sourceGeometry._updateBoundingBox();
+	      var width = boundingBox.max.x - boundingBox.min.x;
+	      var height = boundingBox.max.y - boundingBox.min.y;
+	      var length = boundingBox.max.z - boundingBox.min.z;
+	      var chamferRadius = 0;
+	      var box = new _SCNBox2.default(width, height, length, chamferRadius);
+	      this._shape = box;
+	      this._center = new _SCNVector2.default(boundingBox.min.x + width * 0.5, boundingBox.min.y + height * 0.5, boundingBox.min.z + length * 0.5);
+	    }
+	  }, {
+	    key: '_createShapeAsBox',
+	    value: function _createShapeAsBox() {
+	      // TODO: copy the geometry
+	      this._shape = this._sourceGeometry;
+	      this._center = new _SCNVector2.default(0, 0, 0);
+	    }
+	  }, {
+	    key: '_createShapeAsSphere',
+	    value: function _createShapeAsSphere() {
+	      if (this._sourceGeometry instanceof _SCNSphere2.default) {
+	        // TODO: copy the geometry
+	        this._shape = this._sourceGeometry;
+	        this._center = new _SCNVector2.default(0, 0, 0);
+	        return;
+	      }
+	      var boundingSphere = this._sourceGeometry.getBoundingSphere();
+	      var sphere = new _SCNSphere2.default(boundingSphere.radius);
+	      this._shape = sphere;
+	      this._center = boundingSphere.center;
+	    }
+
+	    // Getting Information About a Shape
+
+	    /**
+	     * The object that was used to create the shape.
+	     * @type {Object}
+	     * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508888-sourceobject
+	     */
+
+	  }, {
+	    key: '_createBtCollisionShape',
+
+
+	    /**
+	     * @access private
+	     * @returns {Ammo.btCollisionShape} -
+	     * @desc call Ammo.destroy(shape) after using it.
+	     */
+	    value: function _createBtCollisionShape() {
+	      if (this._sourceObject === null) {
+	        throw new Error('_sourceObject is null');
+	      }
+	      return this._sourceObject._createBtCollisionShape();
+	    }
+	  }, {
+	    key: 'sourceObject',
+	    get: function get() {
+	      return this._sourceObject;
+	    }
+
+	    /**
+	     * The options dictionary that was used to create the shape.
+	     * @type {?Map<SCNPhysicsShape.Option, Object>}
+	     * @desc You provide this dictionary in the init(geometry:options:) or init(node:options:) method. Use this dictionary along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(shapes:transforms:) method, this property’s value is nil.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508904-options
+	     */
+
+	  }, {
+	    key: 'options',
+	    get: function get() {
+	      return this._options;
+	    }
+	  }, {
+	    key: '_type',
+	    get: function get() {
+	      if (!this._options) {
+	        return null;
+	      }
+	      return this._options[_Option.type];
+	    }
+
+	    /**
+	     * The array of transforms that was used to create a compound shape.
+	     * @type {?NSValue[]}
+	     * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property's value is nil.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508898-transforms
+	     */
+
+	  }, {
+	    key: 'transforms',
+	    get: function get() {
+	      return this._transforms;
+	    }
+
+	    // Structures
+
+	    /**
+	     * @type {Object} Option
+	     * @property {string} collisionMargin 
+	     * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.
+	     * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.
+	     * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape.option
+	     */
+
+	  }], [{
+	    key: 'Option',
+	    get: function get() {
+	      return _Option;
+	    }
+
+	    /**
+	     * @type {Object} ShapeType
+	     * @property {string} boundingBox The physics shape is the smallest box containing the geometry.
+	     * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.
+	     * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape.shapetype
+	     */
+
+	  }, {
+	    key: 'ShapeType',
+	    get: function get() {
+	      return _ShapeType;
+	    }
+	  }]);
+
+	  return SCNPhysicsShape;
+	}(_NSObject3.default);
+
+	exports.default = SCNPhysicsShape;
+
+/***/ },
+/* 108 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNMaterial = __webpack_require__(89);
+
+	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
+	var _SCNGeometry2 = __webpack_require__(99);
+
+	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
+
+	var _SCNGeometryElement = __webpack_require__(101);
+
+	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
+
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNGeometrySource = __webpack_require__(100);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
+	var _SCNVector = __webpack_require__(58);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * A sphere (or ball or globe) geometry.
+	 * @access public
+	 * @extends {SCNGeometry}
+	 * @see https://developer.apple.com/documentation/scenekit/scnsphere
+	 */
+	var SCNSphere = function (_SCNGeometry) {
+	  _inherits(SCNSphere, _SCNGeometry);
+
+	  _createClass(SCNSphere, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        $constructor: function $constructor(propNames, propValues) {
+	          var sphere = new SCNSphere(propValues.sphereradius);
+	          sphere.isGeodesic = propValues.spheregeodesic;
+	          sphere.segmentCount = propValues.spheresegmentCount;
+	          sphere.name = propValues.name;
+	          sphere._sphereRadialSpan = propValues.sphereRadialSpan;
+	          sphere._isHemispheric = propValues.spherehemispheric;
+	          sphere._spherePrimitiveType = propValues.sphereprimitiveType;
+	          sphere.materials = propValues.materials;
+	          sphere.tessellator = propValues.tessellator;
+	          sphere.subdivisionLevel = propValues.subdivisionLevel;
+	          sphere.wantsAdaptiveSubdivision = propValues.wantsAdaptiveSubdivision;
+	          sphere._createGeometry();
+
+	          return sphere;
+	        },
+	        sphereradius: ['float', null],
+	        spheregeodesic: ['boolean', null],
+	        spheresegmentCount: ['integer', null],
+	        materials: ['NSArray', null],
+	        tessellator: ['SCNGeometryTessellator', null],
+	        wantsAdaptiveSubdivision: ['boolean', null],
+
+	        adaptiveSubdivision: ['boolean', null],
+	        name: ['string', null],
+	        sphereradialSpan: ['float', null],
+	        spherehemispheric: ['boolean', null],
+	        sphereprimitiveType: ['integer', null],
+	        subdivisionLevel: ['integer', null],
+	        subdivisionSettings: ['bytes', null]
+	      };
+	    }
+
+	    // Creating a Sphere
+
+	    /**
+	     * Creates a sphere geometry with the specified radius.
+	     * @access public
+	     * @constructor
+	     * @param {number} radius - The radius of the sphere in its local coordinate space.
+	     * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.
+	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1522601-init
+	     */
+
+	  }]);
+
+	  function SCNSphere() {
+	    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
+
+	    _classCallCheck(this, SCNSphere);
+
+	    // Adjusting a Sphere’s Dimensions
+
+	    /**
+	     * The radius of the sphere. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1523787-radius
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNSphere.__proto__ || Object.getPrototypeOf(SCNSphere)).call(this, [], []));
+
+	    _this.radius = radius;
+
+	    // Adjusting Geometric Detail
+
+	    /**
+	     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1523268-isgeodesic
+	     */
+	    _this.isGeodesic = false;
+
+	    /**
+	     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1523912-segmentcount
+	     */
+	    _this.segmentCount = 24;
+
+	    _this._sphereRadialSpan = 0;
+	    _this._spherePrimitiveType = 0;
+	    _this._isHemispheric = false;
+
+	    _this._createGeometry();
+	    _this.materials.push(new _SCNMaterial2.default());
+	    return _this;
+	  }
+
+	  _createClass(SCNSphere, [{
+	    key: '_createGeometry',
+	    value: function _createGeometry() {
+	      var sourceData = [];
+	      var indexData = [];
+	      var vectorCount = (this.segmentCount + 1) * (this.segmentCount + 1);
+	      var primitiveCount = (this.segmentCount - 1) * this.segmentCount * 2;
+
+	      var yNom = [];
+	      var ySin = [];
+	      for (var lat = 0; lat <= this.segmentCount; lat++) {
+	        yNom.push(-Math.cos(Math.PI * lat / this.segmentCount));
+	        ySin.push(Math.sin(Math.PI * lat / this.segmentCount));
+	      }
+
+	      for (var lng = 0; lng <= this.segmentCount; lng++) {
+	        var x = -Math.sin(2.0 * Math.PI * lng / this.segmentCount);
+	        var z = -Math.cos(2.0 * Math.PI * lng / this.segmentCount);
+	        for (var _lat = 0; _lat <= this.segmentCount; _lat++) {
+	          var xNom = x * ySin[_lat];
+	          var zNom = z * ySin[_lat];
+
+	          // vertex
+	          sourceData.push(xNom * this.radius, yNom[_lat] * this.radius, zNom * this.radius
+
+	          // normal
+	          );sourceData.push(xNom, yNom[_lat], zNom
+
+	          // texcoord
+	          );sourceData.push(lng / this.segmentCount, 1.0 - _lat / this.segmentCount);
+	        }
+	      }
+
+	      for (var i = 0; i < this.segmentCount; i++) {
+	        var index1 = i * (this.segmentCount + 1);
+	        var index2 = index1 + this.segmentCount + 2;
+
+	        indexData.push(index1, index2, index1 + 1);
+	        index1 += 1;
+	        for (var j = 0; j < this.segmentCount - 2; j++) {
+	          indexData.push(index1, index2 + 1, index1 + 1);
+	          indexData.push(index1, index2, index2 + 1);
+	          index1 += 1;
+	          index2 += 1;
+	        }
+	        indexData.push(index1, index2, index2 + 1);
+	      }
+
+	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.vertex, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      0, // offset
+	      32 // sride
+	      );
+
+	      var normalSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.normal, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      12, // offset
+	      32 // stride
+	      );
+
+	      var texcoordSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.texcoord, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      2, // componentsPerVector
+	      4, // bytesPerComponent
+	      24, // offset
+	      32 // stride
+	      );
+
+	      var element = new _SCNGeometryElement2.default(indexData, _SCNGeometryPrimitiveType2.default.triangles);
+
+	      this._geometryElements = [element];
+	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(-this.radius, -this.radius, -this.radius),
+	        max: new _SCNVector2.default(this.radius, this.radius, this.radius)
+	      };
+	    }
+	  }, {
+	    key: '_updateBoundingBoxForSkinner',
+	    value: function _updateBoundingBoxForSkinner() {
+	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+	      if (skinner === null) {
+	        return this.boundingBox;
+	      }
+	      return _get(SCNSphere.prototype.__proto__ || Object.getPrototypeOf(SCNSphere.prototype), '_updateBoundingBoxForSkinner', this).call(this, skinner);
+	    }
+	  }]);
+
+	  return SCNSphere;
+	}(_SCNGeometry3.default);
+
+	exports.default = SCNSphere;
+
+/***/ },
+/* 109 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SCNActionTimingMode from './SCNActionTimingMode'
+
+	var SCNActionGroup = function (_SCNAction) {
+	  _inherits(SCNActionGroup, _SCNAction);
+
+	  _createClass(SCNActionGroup, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionGroup() {
+	    _classCallCheck(this, SCNActionGroup);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionGroup.__proto__ || Object.getPrototypeOf(SCNActionGroup)).call(this));
+
+	    _this._actions = [];
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that runs a collection of actions in parallel.
+	   * @access public
+	   * @param {SCNAction[]} actions - An array of SCNAction objects.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the actions that make up the group all start immediately and run in parallel. The duration of the group action is the longest duration among the collection of actions. If an action in the group has a duration less than the group’s duration, the action completes and then idles until the group completes the remaining actions. This matters most when creating a repeating action that repeats a group.This action is reversible; it creates a new group action that contains the reverse of each action specified in the group. 
+	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522779-group
+	   */
+
+
+	  _createClass(SCNActionGroup, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionGroup} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionGroup.prototype.__proto__ || Object.getPrototypeOf(SCNActionGroup.prototype), 'copy', this).call(this);
+
+	      action._actions = [];
+	      this._actions.forEach(function (act) {
+	        action._actions.push(act.copy());
+	      });
+
+	      return action;
+	    }
+	  }, {
+	    key: '_applyAction',
+
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      //const dt = this._getTime(time, needTimeConversion) * this.duration
+	      //this._actions.forEach((action) => {
+	      //  if(!action._finished){
+	      //    action._applyAction(obj, dt, false)
+	      //  }
+	      //})
+	      var duration = this._activetimeFromTime(time);
+
+	      var finished = true;
+	      this._actions.forEach(function (action) {
+	        if (!action._finished) {
+	          action._applyAction(obj, duration, needTimeConversion);
+	          if (!action._finished) {
+	            finished = false;
+	          }
+	        }
+	      });
+	      this._finished = finished;
+	    }
+	  }, {
+	    key: '_resetFinished',
+	    value: function _resetFinished() {
+	      this._actions.forEach(function (action) {
+	        action._resetFinished();
+	      });
+	      this._finished = false;
+	    }
+	  }, {
+	    key: 'duration',
+	    get: function get() {
+	      var d = 0;
+	      this._actions.forEach(function (act) {
+	        if (d < act.duration) {
+	          d = act.duration;
+	        }
+	      });
+	      return d;
+	    }
+	  }], [{
+	    key: 'group',
+	    value: function group(actions) {
+	      var action = new SCNActionGroup();
+	      action._actions = actions;
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionGroup;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionGroup;
+
+
+	_SCNAction3.default.group = SCNActionGroup.group;
+
+/***/ },
+/* 110 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionHide = function (_SCNAction) {
+	  _inherits(SCNActionHide, _SCNAction);
+
+	  _createClass(SCNActionHide, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionHide() {
+	    _classCallCheck(this, SCNActionHide);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionHide.__proto__ || Object.getPrototypeOf(SCNActionHide)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  return SCNActionHide;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionHide;
+
+/***/ },
+/* 111 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionJavaScript = function (_SCNAction) {
+	  _inherits(SCNActionJavaScript, _SCNAction);
+
+	  _createClass(SCNActionJavaScript, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float'
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionJavaScript() {
+	    _classCallCheck(this, SCNActionJavaScript);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionJavaScript.__proto__ || Object.getPrototypeOf(SCNActionJavaScript)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  return SCNActionJavaScript;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionJavaScript;
+
+/***/ },
+/* 112 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	var _SCNNode = __webpack_require__(83);
+
+	var _SCNNode2 = _interopRequireDefault(_SCNNode);
+
+	var _SCNVector = __webpack_require__(58);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionMove = function (_SCNAction) {
+	  _inherits(SCNActionMove, _SCNAction);
+
+	  _createClass(SCNActionMove, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float'
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionMove() {
+	    _classCallCheck(this, SCNActionMove);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionMove.__proto__ || Object.getPrototypeOf(SCNActionMove)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+
+	    _this._toValue = null;
+	    _this._byValue = null;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that moves a node relative to its current position.
+	   * @access public
+	   * @param {number} deltaX - The distance to move the node in the X direction of its parent node’s local coordinate space.
+	   * @param {number} deltaY - The distance to move the node in the Y direction of its parent node’s local coordinate space.
+	   * @param {number} deltaZ - The distance to move the node in the Z direction of its parent node’s local coordinate space.
+	   * @param {number} duration - The duration, in seconds, of the animation.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
+	  [SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
+	    * @see https://developer.apple.com/documentation/scenekit/scnaction/1523238-moveby
+	   */
+
+
+	  _createClass(SCNActionMove, [{
+	    key: 'reversed',
+
+
+	    // Reversing an Action
+
+	    /**
+	     * Creates an action that reverses the behavior of another action.
+	     * @access public
+	     * @returns {SCNAction} - 
+	     * @desc This method always returns an action object; however, not all actions are reversible. When reversed, some actions return an object that either does nothing or performs the same action as the original action. For details on how an action is reversed, see the description of the class method used to create that action.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522815-reversed
+	     */
+	    value: function reversed() {
+	      var action = this.copy();
+	      if (action._toValue) {
+	        action._toValue = null;
+	        action._byValue = new _SCNVector2.default(0, 0, 0);
+	      } else if (this._byValue) {
+	        action._byValue = this._byValue.mul(-1);
+	      }
+	      return action;
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionMove} -
+	     */
+
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      var action = _get(SCNActionMove.prototype.__proto__ || Object.getPrototypeOf(SCNActionMove.prototype), 'copy', this).call(this);
+
+	      action._toValue = this._toValue ? this._toValue._copy() : null;
+	      action._byValue = this._byValue ? this._byValue._copy() : null;
+
+	      return action;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var t = this._getTime(time, needTimeConversion);
+	      if (!(obj instanceof _SCNNode2.default)) {
+	        throw new Error('unsupported class for SCNActionMove: ' + obj.constructor.name);
+	      }
+
+	      var baseValue = obj.position;
+	      var toValue = null;
+	      if (this._toValue !== null) {
+	        toValue = this._toValue;
+	      } else if (this._byValue !== null) {
+	        toValue = baseValue.add(this._byValue);
+	      } else {
+	        throw new Error('both toValue and byValue are null');
+	      }
+
+	      var value = this._lerp(baseValue, toValue, t);
+	      obj.presentation.position = value;
+
+	      if (this._finished) {
+	        obj.position = toValue;
+	      }
+	    }
+	  }], [{
+	    key: 'moveByXYZ',
+	    value: function moveByXYZ(deltaX, deltaY, deltaZ, duration) {
+	      var action = new SCNActionMove();
+	      action._byValue = new _SCNVector2.default(deltaX, deltaY, deltaZ);
+	      action._duration = duration;
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that moves a node relative to its current position.
+	     * @access public
+	     * @param {SCNVector3} delta - A vector that describes the change to be applied to the node’s position.
+	     * @param {number} duration - The duration, in seconds, of the animation.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code had been executed:SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
+	    [SCNAction moveBy: reverseDelta duration: duration];
+	    SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
+	    [SCNAction moveBy: reverseDelta duration: duration];
+	      * @see https://developer.apple.com/documentation/scenekit/scnaction/1522605-move
+	     */
+
+	  }, {
+	    key: 'moveBy',
+	    value: function moveBy(delta, duration) {
+	      var action = new SCNActionMove();
+	      action._byValue = delta._copy();
+	      action._duration = duration;
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that moves a node to a new position.
+	     * @access public
+	     * @param {SCNVector3} location - The coordinates for the node’s new position in its parent node’s local coordinate space.
+	     * @param {number} duration - The duration, in seconds, of the animation.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is not reversible; the reverse of this action has the same duration but does not move the node.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522826-move
+	     */
+
+	  }, {
+	    key: 'moveTo',
+	    value: function moveTo(location, duration) {
+	      var action = new SCNActionMove();
+	      action._toValue = location._copy();
+	      action._duration = duration;
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionMove;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionMove;
+
+
+	_SCNAction3.default.moveByXYZ = SCNActionMove.moveByXYZ;
+	_SCNAction3.default.moveBy = SCNActionMove.moveBy;
+	_SCNAction3.default.moveTo = SCNActionMove.moveTo;
+
+/***/ },
+/* 113 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionPerformSelector = function (_SCNAction) {
+	  _inherits(SCNActionPerformSelector, _SCNAction);
+
+	  _createClass(SCNActionPerformSelector, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float'
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionPerformSelector() {
+	    _classCallCheck(this, SCNActionPerformSelector);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionPerformSelector.__proto__ || Object.getPrototypeOf(SCNActionPerformSelector)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  return SCNActionPerformSelector;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionPerformSelector;
+
+/***/ },
+/* 114 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionPlaySound = function (_SCNAction) {
+	  _inherits(SCNActionPlaySound, _SCNAction);
+
+	  _createClass(SCNActionPlaySound, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionPlaySound() {
+	    _classCallCheck(this, SCNActionPlaySound);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionPlaySound.__proto__ || Object.getPrototypeOf(SCNActionPlaySound)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+
+	    _this._source = null;
+	    _this._wait = false;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that plays an audio source.
+	   * @access public
+	   * @param {SCNAudioSource} source - The audio source to play.
+	   * @param {boolean} wait - If true, the duration of this action is the same as the length of the audio playback. If false, the action is considered to have completed immediately.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, SceneKit plays the audio source on the target node—any positional audio effects are based on the node’s position. For more information about positional audio in SceneKit, see SCNAudioPlayer.This action is not reversible; the reverse of this action is the same action.
+	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523651-playaudio
+	   */
+
+
+	  _createClass(SCNActionPlaySound, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionPlaySound} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionPlaySound.prototype.__proto__ || Object.getPrototypeOf(SCNActionPlaySound.prototype), 'copy', this).call(this);
+
+	      action._source = this._source;
+	      action._wait = this._wait;
+
+	      return action;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      if (!this._isRunning) {
+	        this._source._play();
+	        this._isRunning = true;
+	      }
+	      if (this._duration <= 0 || this._source._duration > 0) {
+	        this._duration = this._source._duration;
+	      }
+	      var t = this._getTime(time, needTimeConversion);
+
+	      if (!this._wait) {
+	        this._finished = true;
+	      } else if (!this._source.loops && t >= 1) {
+	        this._finished = true;
+	      } else {
+	        this._finished = false;
+	      }
+	    }
+	  }], [{
+	    key: 'playAudioWaitForCompletion',
+	    value: function playAudioWaitForCompletion(source, wait) {
+	      var action = new SCNActionPlaySound();
+	      action._source = source;
+	      action._wait = wait;
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionPlaySound;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionPlaySound;
+
+
+	_SCNAction3.default.playAudioWaitForCompletion = SCNActionPlaySound.playAudioWaitForCompletion;
+
+/***/ },
+/* 115 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionReference = function (_SCNAction) {
+	  _inherits(SCNActionReference, _SCNAction);
+
+	  _createClass(SCNActionReference, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float'
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionReference() {
+	    _classCallCheck(this, SCNActionReference);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionReference.__proto__ || Object.getPrototypeOf(SCNActionReference)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  return SCNActionReference;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionReference;
+
+/***/ },
+/* 116 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	var _SCNNode = __webpack_require__(83);
+
+	var _SCNNode2 = _interopRequireDefault(_SCNNode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionRemove = function (_SCNAction) {
+	  _inherits(SCNActionRemove, _SCNAction);
+
+	  _createClass(SCNActionRemove, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float'
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionRemove() {
+	    _classCallCheck(this, SCNActionRemove);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionRemove.__proto__ || Object.getPrototypeOf(SCNActionRemove)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that removes the node from its parent.
+	   * @access public
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the node is immediately removed from its parent.This action is not reversible; the reverse of this action is the same action.
+	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522966-removefromparentnode
+	   */
+
+
+	  _createClass(SCNActionRemove, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionRotate} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionRemove.prototype.__proto__ || Object.getPrototypeOf(SCNActionRemove.prototype), 'copy', this).call(this);
+	      return action;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      if (!(obj instanceof _SCNNode2.default)) {
+	        throw new Error('unsupported class for SCNActionRemove: ' + obj.constructor.name);
+	      }
+	      obj.removeFromParentNode();
+	      this._finished = true;
+	    }
+	  }], [{
+	    key: 'removeFromParentNode',
+	    value: function removeFromParentNode() {
+	      var action = new SCNActionRemove();
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionRemove;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionRemove;
+
+
+	_SCNAction3.default.removeFromParentNode = SCNActionRemove.removeFromParentNode;
+
+/***/ },
+/* 117 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionRepeat = function (_SCNAction) {
+	  _inherits(SCNActionRepeat, _SCNAction);
+
+	  _createClass(SCNActionRepeat, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _timesToRepeat: 'float',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _repeatedAction: 'SCNAction',
+	        _forever: 'boolean',
+	        _timesRepeated: 'integer',
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionRepeat() {
+	    _classCallCheck(this, SCNActionRepeat);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionRepeat.__proto__ || Object.getPrototypeOf(SCNActionRepeat)).call(this));
+
+	    _this._timesToRepeat = 0;
+	    _this._repeatedAction = null;
+	    _this._forever = false;
+	    _this._timesRepeated = 0;
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that repeats another action a specified number of times.
+	   * @access public
+	   * @param {SCNAction} action - The action to be executed.
+	   * @param {number} count - The number of times to execute the action.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
+	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522764-repeat
+	   */
+
+
+	  _createClass(SCNActionRepeat, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionRepeat} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionRepeat.prototype.__proto__ || Object.getPrototypeOf(SCNActionRepeat.prototype), 'copy', this).call(this);
+
+	      action._timesToRepeat = this._timesToRepeat;
+	      action._repeatedAction = this._repeatedAction.copy();
+	      action._forever = this._forever;
+	      action._timesRepeated = this._timesRepeated;
+
+	      return action;
+	    }
+	  }, {
+	    key: '_getTime',
+	    value: function _getTime(time, needTimeConversion) {
+	      if (!needTimeConversion) {
+	        return time;
+	      }
+
+	      var baseTime = this._basetimeFromTime(time);
+	      if (this.timingFunction === null) {
+	        return baseTime;
+	      }
+
+	      var n = Math.floor(baseTime);
+	      var t = this.timingFunction._getValueAtTime(baseTime - n);
+	      return n + t;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var dt = this._getTime(time, needTimeConversion);
+	      var timesRepeated = Math.floor(dt);
+	      while (timesRepeated > this._timesRepeated) {
+	        this._timesRepeated += 1;
+	        this._repeatedAction._applyAction(obj, 1.0, false);
+	        if (!this._forever && this._timesRepeated >= this._timesToRepeat) {
+	          this._finished = true;
+	          return;
+	        }
+	        this._repeatedAction._resetFinished();
+	      }
+	      var t = dt - this._timesRepeated;
+	      this._repeatedAction._applyAction(obj, t, false);
+	      this._finished = false;
+	    }
+	  }, {
+	    key: '_resetFinished',
+	    value: function _resetFinished() {
+	      this._repeatedAction._resetFinished();
+	      this._timesRepeated = 0;
+	      this._finished = false;
+	    }
+	  }, {
+	    key: 'duration',
+	    get: function get() {
+	      if (this._forever) {
+	        return Infinity;
+	      }
+	      return this._repeatedAction.duration * this._timesToRepeat;
+	    }
+	  }], [{
+	    key: 'repeat',
+	    value: function repeat(action, count) {
+	      var _action = new SCNActionRepeat();
+	      _action._repeatedAction = action;
+	      _action._duration = action.duration;
+	      _action._timesToRepeat = count;
+	      _action._forever = count === Infinity;
+	      return _action;
+	    }
+
+	    /**
+	     * Creates an action that repeats another action forever.
+	     * @access public
+	     * @param {SCNAction} action - The action to execute.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522908-repeatforever
+	     */
+
+	  }, {
+	    key: 'repeatForever',
+	    value: function repeatForever(action) {
+	      return this.repeat(action, Infinity);
+	    }
+	  }]);
+
+	  return SCNActionRepeat;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionRepeat;
+
+
+	_SCNAction3.default.repeat = SCNActionRepeat.repeat;
+	_SCNAction3.default.repeatForever = SCNActionRepeat.repeatForever;
+
+/***/ },
+/* 118 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	var _SCNNode = __webpack_require__(83);
+
+	var _SCNNode2 = _interopRequireDefault(_SCNNode);
+
+	var _SCNVector = __webpack_require__(58);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
+	var _SCNVector3 = __webpack_require__(59);
+
+	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionRotate = function (_SCNAction) {
+	  _inherits(SCNActionRotate, _SCNAction);
+
+	  _createClass(SCNActionRotate, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _rotX: 'float',
+	        _rotY: 'float',
+	        _rotZ: 'float',
+	        _lastRotX: 'float',
+	        _lastRotY: 'float',
+	        _lastRotZ: 'float',
+	        _axisRot: 'SCNVector4',
+	        _isRelative: 'boolean',
+	        _isReversed: 'boolean',
+	        _isUnitArc: 'boolean',
+	        _isAxisAngle: 'boolean',
+	        _isRunning: 'boolean',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _pausedTime: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionRotate() {
+	    _classCallCheck(this, SCNActionRotate);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionRotate.__proto__ || Object.getPrototypeOf(SCNActionRotate)).call(this));
+
+	    _this._rotX = 0;
+	    _this._rotY = 0;
+	    _this._rotZ = 0;
+	    _this._lastRotX = 0;
+	    _this._lastRotY = 0;
+	    _this._lastRotZ = 0;
+	    _this._axisRot = new _SCNVector4.default();
+	    _this._isRelative = false;
+	    _this._isReversed = false;
+	    _this._isUnitArc = false;
+	    _this._isAxisAngle = false;
+	    _this._isRunning = false;
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._pausedTime = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that rotates the node in each of the three principal axes by angles relative to its current orientation.
+	   * @access public
+	   * @param {number} xAngle - The amount to rotate the node counterclockwise around the x-axis of its local coordinate space, in radians.
+	   * @param {number} yAngle - The amount to rotate the node counterclockwise around the y-axis of its local coordinate space, in radians.
+	   * @param {number} zAngle - The amount to rotate the node counterclockwise around the z-axis of its local coordinate space, in radians.
+	   * @param {number} duration - The duration, in seconds, of the animation.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
+	  [SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
+	    * @see https://developer.apple.com/documentation/scenekit/scnaction/1523522-rotateby
+	   */
+
+
+	  _createClass(SCNActionRotate, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionRotate} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionRotate.prototype.__proto__ || Object.getPrototypeOf(SCNActionRotate.prototype), 'copy', this).call(this);
+
+	      action._rotX = this._rotX;
+	      action._rotY = this._rotY;
+	      action._rotZ = this._rotZ;
+	      action._lastRotX = this._lastRotX;
+	      action._lastRotY = this._lastRotY;
+	      action._lastRotZ = this._lastRotZ;
+	      action._axisRot = this._axisRot;
+	      action._isRelative = this._isRelative;
+	      action._isReveresed = this._isReversed;
+	      action._isUnitArc = this._isUnitArc;
+	      action._isAxisAngle = this._isAxisAngle;
+	      action._isRunning = this._isRunning;
+	      action._finished = this._finished;
+	      action._duration = this._duration;
+	      action._pausedTime = this._pausedTime;
+	      action._timingMode = this._timingMode;
+
+	      return action;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      if (!(obj instanceof _SCNNode2.default)) {
+	        throw new Error('unsupported class for SCNActionRotate: ' + obj.constructor.name);
+	      }
+	      var t = this._getTime(time, needTimeConversion
+	      //console.warn(`SCNActionRotate._applyAction t: ${t}`)
+
+	      );if (this._isAxisAngle) {
+	        // rotation
+	        var baseValue = obj.rotation;
+	        var toValue = this._axisRot;
+	        if (this._isRelative) {
+	          var baseQuat = baseValue.rotationToQuat;
+	          var byQuat = this._axisRot.rotationToQuat;
+	          toValue = baseQuat.cross(byQuat).quatToRotation;
+	        }
+	        if (this._isUnitArc) {
+	          var value = this._slerp(baseValue.rotationToQuat(), toValue.rotationToQuat(), t);
+	          obj.presentation.orientation = value;
+	        } else {
+	          var _value = this._lerp(baseValue, toValue, t);
+	          obj.presentation.rotation = _value;
+	        }
+	        if (this._finished) {
+	          obj.rotation = toValue;
+	        }
+	      } else {
+	        // eulerAngles
+	        var _toValue = new _SCNVector2.default(this._rotX, this._rotY, this._rotZ);
+	        var _value2 = null;
+	        if (this._isRelative) {
+	          var _baseValue = obj.orientation;
+	          _value2 = _baseValue.cross(_toValue.mul(t).eulerAnglesToQuat());
+	          obj.presentation.orientation = _value2;
+	        } else if (this._isUnitArc) {
+	          var _baseValue2 = obj.orientation;
+	          _value2 = this._slerp(_baseValue2, _toValue.eulerAnglesToQuat(), t);
+	          obj.presentation.orientation = _value2;
+	        } else {
+	          var _baseValue3 = obj.eulerAngles;
+	          _value2 = this._lerp(_baseValue3, _toValue, t);
+	          obj.presentation.eulerAngles = _value2;
+	        }
+
+	        //obj.presentation.eulerAngles = value
+	        if (this._finished) {
+	          if (this._isRelative) {
+	            _toValue = obj.orientation.cross(_toValue.eulerAnglesToQuat());
+	            obj.orientation = _toValue;
+	          } else {
+	            obj.eulerAngles = _toValue;
+	          }
+	        }
+	      }
+	    }
+	  }], [{
+	    key: 'rotateByXYZ',
+	    value: function rotateByXYZ(xAngle, yAngle, zAngle, duration) {
+	      var action = new SCNActionRotate();
+	      // TODO: Do research the reason why I need to turn around X and Y axes.
+	      action._rotX = -xAngle;
+	      action._rotY = -yAngle;
+	      action._rotZ = zAngle;
+	      action._duration = duration;
+	      action._isRelative = true;
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that rotates the node to absolute angles in each of the three principal axes.
+	     * @access public
+	     * @param {number} xAngle - The amount to rotate the node counterclockwise around the x-axis of its local coordinate space, in radians.
+	     * @param {number} yAngle - The amount to rotate the node counterclockwise around the y-axis of its local coordinate space, in radians.
+	     * @param {number} zAngle - The amount to rotate the node counterclockwise around the z-axis of its local coordinate space, in radians.
+	     * @param {number} duration - The duration, in seconds, of the animation.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the node’s rotation property animates to the new angle. Calling this method is equivalent to calling rotateTo(x:y:z:duration:usesShortestUnitArc:) and passing false for the shortestUnitArc parameter.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1524044-rotateto
+	     */
+
+	  }, {
+	    key: 'rotateToXYZ',
+	    value: function rotateToXYZ(xAngle, yAngle, zAngle, duration) {
+	      var action = new SCNActionRotate();
+	      action._rotX = xAngle;
+	      action._rotY = yAngle;
+	      action._rotZ = zAngle;
+	      action._duration = duration;
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that rotates the node to absolute angles in each of the three principal axes.
+	     * @access public
+	     * @param {number} xAngle - The amount to rotate the node counterclockwise around the x-axis of its local coordinate space, in radians.
+	     * @param {number} yAngle - The amount to rotate the node counterclockwise around the y-axis of its local coordinate space, in radians.
+	     * @param {number} zAngle - The amount to rotate the node counterclockwise around the z-axis of its local coordinate space, in radians.
+	     * @param {number} duration - The duration, in seconds, of the animation.
+	     * @param {boolean} shortestUnitArc - If false (the default), the animation interpolates each component of the node’s rotation between its current value and the new value. If true, the animation makes the most direct rotation possible from the node’s current orientation to the new orientation.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522808-rotateto
+	     */
+
+	  }, {
+	    key: 'rotateToXYZUsesShortestUnitArc',
+	    value: function rotateToXYZUsesShortestUnitArc(xAngle, yAngle, zAngle, duration, shortestUnitArc) {
+	      var action = new SCNActionRotate();
+	      action._rotX = xAngle;
+	      action._rotY = yAngle;
+	      action._rotZ = zAngle;
+	      action._duration = duration;
+	      action._isUnitArc = shortestUnitArc;
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that rotates the node by an angle around a specified axis.
+	     * @access public
+	     * @param {number} angle - The amount to rotate the node counterclockwise around the specified axis, in radians.
+	     * @param {SCNVector3} axis - A vector in the node’s local coordinate space whose direction specifies the axis of rotation.
+	     * @param {number} duration - The duration, in seconds, of the animation.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
+	    [SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
+	      * @see https://developer.apple.com/documentation/scenekit/scnaction/1523805-rotate
+	     */
+
+	  }, {
+	    key: 'rotateByAround',
+	    value: function rotateByAround(angle, axis, duration) {
+	      var action = new SCNActionRotate();
+	      action._axisRot.w = angle;
+	      action._axisRot.x = axis.x;
+	      action._axisRot.y = axis.y;
+	      action._axisRot.z = axis.z;
+	      action._duration = duration;
+	      action._isRelative = true;
+	      action._isAxisAngle = true;
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that rotates the node to an absolute angle around a specified axis.
+	     * @access public
+	     * @param {SCNVector4} axisAngle - A four-component vector whose first three components are a vector in the node’s local coordinate space specifying an axis and whose fourth component is the amount to rotate the node counterclockwise around that axis, in radians.
+	     * @param {number} duration - The duration, in seconds, of the animation.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1524191-rotate
+	     */
+
+	  }, {
+	    key: 'rotateToAxisAngle',
+	    value: function rotateToAxisAngle(axisAngle, duration) {
+	      var action = new SCNActionRotate();
+	      action._axisRot = axisAngle;
+	      action._duration = duration;
+	      action._isAxisAngle = true;
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionRotate;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionRotate;
+
+
+	_SCNAction3.default.rotateByXYZ = SCNActionRotate.rotateByXYZ;
+	_SCNAction3.default.rotateToXYZ = SCNActionRotate.rotateToXYZ;
+	_SCNAction3.default.rotateToXYZUsesShortestUnitArc = SCNActionRotate.rotateToXYZUsesShortestUnitArc;
+	_SCNAction3.default.rotateByAround = SCNActionRotate.rotateByAround;
+	_SCNAction3.default.rotateToAxisAngle = SCNActionRotate.rotateToAxisAngle;
+
+/***/ },
+/* 119 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionRunAction = function (_SCNAction) {
+	  _inherits(SCNActionRunAction, _SCNAction);
+
+	  _createClass(SCNActionRunAction, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float'
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionRunAction() {
+	    _classCallCheck(this, SCNActionRunAction);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionRunAction.__proto__ || Object.getPrototypeOf(SCNActionRunAction)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  return SCNActionRunAction;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionRunAction;
+
+/***/ },
+/* 120 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionRunBlock = function (_SCNAction) {
+	  _inherits(SCNActionRunBlock, _SCNAction);
+
+	  _createClass(SCNActionRunBlock, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionRunBlock() {
+	    _classCallCheck(this, SCNActionRunBlock);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionRunBlock.__proto__ || Object.getPrototypeOf(SCNActionRunBlock)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * @access public
+	   * @returns {SCNActionFade} -
+	   */
+
+
+	  _createClass(SCNActionRunBlock, [{
+	    key: 'copy',
+	    value: function copy() {
+	      var action = _get(SCNActionRunBlock.prototype.__proto__ || Object.getPrototypeOf(SCNActionRunBlock.prototype), 'copy', this).call(this);
+
+	      action._block = this._block;
+
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that executes a block.
+	     * @access public
+	     * @param {function(arg1: SCNNode): void} block - The block to run. The block takes a single parameter:nodeThe node on which the action is running.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, SceneKit calls the block. This action takes place instantaneously.This action is not reversible; the reverse action executes the same block.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1523637-run
+	     */
+
+	  }, {
+	    key: '_applyAction',
+
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      this._block(obj);
+	      this._finished = true;
+	    }
+	  }], [{
+	    key: 'run',
+	    value: function run(block) {
+	      var action = new SCNActionRunBlock();
+	      action._block = block;
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionRunBlock;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionRunBlock;
+
+
+	_SCNAction3.default.run = SCNActionRunBlock.run;
+
+/***/ },
+/* 121 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionScale = function (_SCNAction) {
+	  _inherits(SCNActionScale, _SCNAction);
+
+	  _createClass(SCNActionScale, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float'
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionScale() {
+	    _classCallCheck(this, SCNActionScale);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionScale.__proto__ || Object.getPrototypeOf(SCNActionScale)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  return SCNActionScale;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionScale;
+
+/***/ },
+/* 122 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionSequence = function (_SCNAction) {
+	  _inherits(SCNActionSequence, _SCNAction);
+
+	  _createClass(SCNActionSequence, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        '_mycaction->_animIndex': ['integer', '_animIndex'],
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * Creates an action that runs a collection of actions sequentially.
+	     * @access public
+	     * @constructor
+	     * @param {SCNAction[]} actions - An array of SCNAction objects.
+	     * @desc When the action executes, the first action in the sequence starts and runs to completion. Subsequent actions in the sequence run in a similar fashion until all of the actions in the sequence have executed. The duration of the sequence action is the sum of the durations of the actions in the sequence.This action is reversible; it creates a new sequence action that reverses the order of the actions. Each action in the reversed sequence is itself reversed. For example, the actions reverseSequence and sequenceReverse in the code example below are equivalent:SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
+	    SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
+	                                                      [actionB reversedAction],
+	                                                      [actionA reversedAction] ]];
+	    SCNAction *sequenceReverse = [sequence reversedAction];
+	    SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
+	    SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
+	                                                      [actionB reversedAction],
+	                                                      [actionA reversedAction] ]];
+	    SCNAction *sequenceReverse = [sequence reversedAction];
+	      * @see https://developer.apple.com/documentation/scenekit/scnaction/1522793-sequence
+	     */
+
+	  }]);
+
+	  function SCNActionSequence() {
+	    _classCallCheck(this, SCNActionSequence);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionSequence.__proto__ || Object.getPrototypeOf(SCNActionSequence)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._animIndex = 0;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that runs a collection of actions sequentially.
+	   * @access public
+	   * @param {SCNAction[]} actions - An array of SCNAction objects.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the first action in the sequence starts and runs to completion. Subsequent actions in the sequence run in a similar fashion until all of the actions in the sequence have executed. The duration of the sequence action is the sum of the durations of the actions in the sequence.This action is reversible; it creates a new sequence action that reverses the order of the actions. Each action in the reversed sequence is itself reversed. For example, the actions reverseSequence and sequenceReverse in the code example below are equivalent:SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
+	  SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
+	                                                    [actionB reversedAction],
+	                                                    [actionA reversedAction] ]];
+	  SCNAction *sequenceReverse = [sequence reversedAction];
+	  SCNAction *sequence = [SCNAction sequence:@[ actionA, actionB, actionC ]];
+	  SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
+	                                                    [actionB reversedAction],
+	                                                    [actionA reversedAction] ]];
+	  SCNAction *sequenceReverse = [sequence reversedAction];
+	    * @see https://developer.apple.com/documentation/scenekit/scnaction/1522793-sequence
+	   */
+
+
+	  _createClass(SCNActionSequence, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionSequence} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionSequence.prototype.__proto__ || Object.getPrototypeOf(SCNActionSequence.prototype), 'copy', this).call(this);
+
+	      action._actions = this._actions.slice(0);
+	      action._animIndex = this._animIndex;
+
+	      return action;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var total = this.duration;
+	      var duration = 0;
+	      if (total <= 0 || total === Infinity) {
+	        duration = this._activetimeFromTime(time);
+	      } else {
+	        duration = this._getTime(time, needTimeConversion) * total;
+	      }
+
+	      for (var i = 0; i < this._animIndex; i++) {
+	        duration -= this._actions[i].duration / this._actions[i].speed;
+	      }
+	      for (; this._animIndex < this._actions.length; this._animIndex++) {
+	        var action = this._actions[this._animIndex];
+	        //action._applyAction(obj, duration, needTimeConversion)
+	        action._applyAction(obj, duration, true);
+	        duration -= action.duration / action.speed;
+	        if (duration < 0) {
+	          break;
+	        }
+	      }
+	      if (this._animIndex >= this._actions.length) {
+	        this._finished = true;
+	      }
+	    }
+	  }, {
+	    key: '_resetFinished',
+	    value: function _resetFinished() {
+	      this._actions.forEach(function (action) {
+	        action._resetFinished();
+	      });
+	      this._finished = false;
+	      this._animIndex = 0;
+	    }
+	  }, {
+	    key: 'duration',
+	    get: function get() {
+	      var d = 0;
+	      this._actions.forEach(function (act) {
+	        if (act.speed > 0) {
+	          d += act.duration / act.speed;
+	        }
+	      });
+	      return d;
+	    }
+	  }], [{
+	    key: 'sequence',
+	    value: function sequence(actions) {
+	      var action = new SCNActionSequence();
+	      action._actions = actions;
+	      action._duration = 0;
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionSequence;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionSequence;
+
+
+	_SCNAction3.default.sequence = SCNActionSequence.sequence;
+
+/***/ },
+/* 123 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * The signature for a block that manages animation timing, used by the timingFunction property.
+	 * @type {function(time: number): number}
+	 * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.
+	 * @returns {number} -
+	 * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.
+	 * @see https://developer.apple.com/documentation/scenekit/scnactiontimingfunction
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNActionTimingFunction = function SCNActionTimingFunction(time) {};
+
+	exports.default = SCNActionTimingFunction;
+
+/***/ },
+/* 124 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNAction2 = __webpack_require__(78);
+
+	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
+
+	var _SCNActionTimingMode = __webpack_require__(79);
+
+	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SCNActionWait = function (_SCNAction) {
+	  _inherits(SCNActionWait, _SCNAction);
+
+	  _createClass(SCNActionWait, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        _actions: 'NSArray',
+	        _finished: 'boolean',
+	        _duration: 'float',
+	        _timingMode: 'integer',
+	        _beginTime: 'float',
+	        _isRunning: 'boolean',
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNActionWait() {
+	    _classCallCheck(this, SCNActionWait);
+
+	    var _this = _possibleConstructorReturn(this, (SCNActionWait.__proto__ || Object.getPrototypeOf(SCNActionWait)).call(this));
+
+	    _this._actions = [];
+	    _this._finished = false;
+	    _this._duration = 0;
+	    _this._timingMode = _SCNActionTimingMode2.default.linear;
+	    _this._beginTime = 0;
+	    _this._isRunning = false;
+	    _this._pausedTime = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that idles for a specified period of time.
+	   * @access public
+	   * @param {number} sec - The amount of time to wait.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the action waits for the specified amount of time and then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. You might also use it in conjunction with the runAction(_:completionHandler:) method to trigger code that needs to run at a later time.This action is not reversible; the reverse of this action is the same action.
+	   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523915-wait
+	   */
+
+
+	  _createClass(SCNActionWait, null, [{
+	    key: 'waitDuration',
+	    value: function waitDuration(sec) {
+	      var action = new SCNActionWait();
+	      action._duration = sec;
+	      return action;
+	    }
+
+	    /**
+	     * Creates an action that idles for a randomized period of time.
+	     * @access public
+	     * @param {number} sec - The average amount of time to wait.
+	     * @param {number} durationRange - The range of possible values for the duration.
+	     * @returns {SCNAction} - 
+	     * @desc When the action executes, the action waits for the specified amount of time and then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. However, you might also use it in conjunction with the runAction(_:completionHandler:) method to trigger code that needs to run at a later time.Each time the action is executed, the action computes a new random value for the duration. The duration may vary in either direction by up to half of the value of the durationRange parameter.This action is not reversible; the reverse of this action is the same action.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaction/1523086-wait
+	     */
+
+	  }, {
+	    key: 'waitDurationWithRange',
+	    value: function waitDurationWithRange(sec, durationRange) {
+	      var duration = Math.max(0, sec + (Math.random() - 0.5) * durationRange);
+	      var action = new SCNActionWait();
+	      action._duration = duration;
+	      return action;
+	    }
+	  }]);
+
+	  return SCNActionWait;
+	}(_SCNAction3.default);
+
+	exports.default = SCNActionWait;
+
+
+	_SCNAction3.default.waitDuration = SCNActionWait.waitDuration;
+	_SCNAction3.default.waitDurationWithRange = SCNActionWait.waitDurationWithRange;
+
+/***/ },
+/* 125 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CAAnimation = __webpack_require__(65);
+
+	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/**
+	 * The common interface for attaching animations to nodes, geometries, materials, and other SceneKit objects.
+	 * @interface
+	 * @see https://developer.apple.com/documentation/scenekit/scnanimatable
+	 */
+	var SCNAnimatable = function () {
+	  function SCNAnimatable() {
+	    _classCallCheck(this, SCNAnimatable);
+	  }
+
+	  _createClass(SCNAnimatable, [{
+	    key: 'init',
+
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @returns {void}
+	     */
+	    value: function init() {
+
+	      // Managing Animations
+
+	      this._animationKeys = null;
+	    }
+
+	    // Managing Animations
+
+	    /**
+	     * Required. Adds an animation object for the specified key.
+	     * @access public
+	     * @param {CAAnimation} animation - The animation object to be added.
+	     * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
+	     * @returns {void}
+	     * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523386-addanimation
+	     */
+
+	  }, {
+	    key: 'addAnimationForKey',
+	    value: function addAnimationForKey(animation, key) {}
+
+	    /**
+	     * Required. Returns the animation with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying a previously added animation.
+	     * @returns {?CAAnimation} - 
+	     * @desc Attempting to modify any properties of the returned object results in undefined behavior.
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1524020-animation
+	     */
+
+	  }, {
+	    key: 'animationForKey',
+	    value: function animationForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Required. Removes all the animations currently attached to the object.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522762-removeallanimations
+	     */
+
+	  }, {
+	    key: 'removeAllAnimations',
+	    value: function removeAllAnimations() {}
+
+	    /**
+	     * Required. Removes the animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation to remove.
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522880-removeanimation
+	     */
+
+	  }, {
+	    key: 'removeAnimationForKey',
+	    value: function removeAnimationForKey(key) {}
+
+	    /**
+	     * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation to remove.
+	     * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
+	     * @returns {void}
+	     * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522841-removeanimation
+	     */
+
+	  }, {
+	    key: 'removeAnimationForKeyFadeOutDuration',
+	    value: function removeAnimationForKeyFadeOutDuration(key, duration) {}
+	    /**
+	     * Required. An array containing the keys of all animations currently attached to the object.
+	     * @type {string[]}
+	     * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523610-animationkeys
+	     */
+
+	  }, {
+	    key: 'pauseAnimationForKey',
+
+
+	    // Pausing and Resuming Animations
+
+	    /**
+	     * Required. Pauses the animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {void}
+	     * @desc This method has no effect if no animation is attached to the object with the specified key.
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523592-pauseanimation
+	     */
+	    value: function pauseAnimationForKey(key) {}
+
+	    /**
+	     * Required. Resumes a previously paused animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {void}
+	     * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523332-resumeanimation
+	     */
+
+	  }, {
+	    key: 'resumeAnimationForKey',
+	    value: function resumeAnimationForKey(key) {}
+
+	    /**
+	     * Required. Returns a Boolean value indicating whether the animation attached to the object with the specified key is paused.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523703-isanimationpaused
+	     */
+
+	  }, {
+	    key: 'isAnimationPausedForKey',
+	    value: function isAnimationPausedForKey(key) {
+	      return false;
+	    }
+
+	    // Instance Methods
+
+	    /**
+	     * Required. 
+	     * @access public
+	     * @param {number} speed - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1778343-setanimationspeed
+	     */
+
+	  }, {
+	    key: 'setAnimationSpeedForKey',
+	    value: function setAnimationSpeedForKey(speed, key) {}
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      return this._animationKeys;
+	    }
+	  }]);
+
+	  return SCNAnimatable;
+	}();
+
+	exports.default = SCNAnimatable;
+
+/***/ },
+/* 126 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import CAAnimation from '../QuartzCore/CAAnimation'
+	//import SCNTimingFunction from './SCNTimingFunction'
+
+	/**
+	 * 
+	 * @access public
+	 * @extends {NSObject}
+	 * @implements {SCNAnimationProtocol}
+	 * @see https://developer.apple.com/documentation/scenekit/scnanimation
+	 */
+	var SCNAnimation = function (_NSObject) {
+	  _inherits(SCNAnimation, _NSObject);
+
+	  // Initializers
+
+	  /**
+	   * 
+	   * @access public
+	   * @param {CAAnimation} caAnimation - 
+	   * @returns {void}
+	   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866056-init
+	   */
+	  function SCNAnimation(caAnimation) {
+	    _classCallCheck(this, SCNAnimation);
+
+	    // Instance Properties
+
+	    /**
+	     * 
+	     * @type {?SCNAnimationDidStartBlock}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866063-animationdidstart
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNAnimation.__proto__ || Object.getPrototypeOf(SCNAnimation)).call(this));
+
+	    _this.animationDidStart = null;
+
+	    /**
+	     * 
+	     * @type {?SCNAnimationDidStopBlock}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866040-animationdidstop
+	     */
+	    _this.animationDidStop = null;
+
+	    /**
+	     * 
+	     * @type {?SCNAnimationEvent[]}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866038-animationevents
+	     */
+	    _this.animationEvents = null;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878140-autoreverses
+	     */
+	    _this.autoreverses = false;
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881689-blendinduration
+	     */
+	    _this.blendInDuration = 0;
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881690-blendoutduration
+	     */
+	    _this.blendOutDuration = 0;
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866057-duration
+	     */
+	    _this.duration = 0;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878138-fillsbackward
+	     */
+	    _this.fillsBackward = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878132-fillsforward
+	     */
+	    _this.fillsForward = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866062-isadditive
+	     */
+	    _this.isAdditive = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878139-isappliedoncompletion
+	     */
+	    _this.isAppliedOnCompletion = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866047-iscumulative
+	     */
+	    _this.isCumulative = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878126-isremovedoncompletion
+	     */
+	    _this.isRemovedOnCompletion = false;
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878148-keypath
+	     */
+	    _this.keyPath = null;
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878146-repeatcount
+	     */
+	    _this.repeatCount = 0;
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878135-startdelay
+	     */
+	    _this.startDelay = 0;
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878147-timeoffset
+	     */
+	    _this.timeOffset = 0;
+
+	    /**
+	     * 
+	     * @type {SCNTimingFunction}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878143-timingfunction
+	     */
+	    _this.timingFunction = null;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878127-usesscenetimebase
+	     */
+	    _this.usesSceneTimeBase = false;
+
+	    /**
+	     * @access private
+	     * @type {CAAnimation}
+	     */
+	    _this._animation = caAnimation;
+	    return _this;
+	  }
+
+	  /**
+	   * 
+	   * @access public
+	   * @param {string} animationUrl - 
+	   * @returns {SCNAnimation} -
+	   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866053-init
+	   */
+
+
+	  _createClass(SCNAnimation, null, [{
+	    key: 'animationWithContentsOf',
+	    value: function animationWithContentsOf(animationUrl) {}
+	    // TODO: implement
+
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {string} animationName - 
+	     * @returns {SCNAnimation} -
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866042-init
+	     */
+
+	  }, {
+	    key: 'animationNamed',
+	    value: function animationNamed(animationName) {
+	      // TODO: implement
+	    }
+	  }]);
+
+	  return SCNAnimation;
+	}(_NSObject3.default);
+
+	exports.default = SCNAnimation;
+
+/***/ },
+/* 127 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SCNAnimationEventBlock from './SCNAnimationEventBlock'
+
+	/**
+	 * A container for a closure to be executed at a specific time during playback of an animation.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/scenekit/scnanimationevent
+	 */
+	var SCNAnimationEvent = function (_NSObject) {
+	  _inherits(SCNAnimationEvent, _NSObject);
+
+	  // Creating an Animation Event
+
+	  /**
+	   * Creates an animation event.
+	   * @access public
+	   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.
+	   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.
+	   * @constructor
+	   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.
+	   * @see https://developer.apple.com/documentation/scenekit/scnanimationevent/1524004-init
+	   */
+	  function SCNAnimationEvent(time, eventBlock) {
+	    _classCallCheck(this, SCNAnimationEvent);
+
+	    var _this = _possibleConstructorReturn(this, (SCNAnimationEvent.__proto__ || Object.getPrototypeOf(SCNAnimationEvent)).call(this));
+
+	    _this._time = time;
+	    _this._eventBlock = eventBlock;
+	    return _this;
+	  }
+
+	  _createClass(SCNAnimationEvent, null, [{
+	    key: 'eventWithTimeEventBlock',
+	    value: function eventWithTimeEventBlock(time, eventBlock) {
+	      return new SCNAnimationEvent(time, eventBlock);
+	    }
+	  }]);
+
+	  return SCNAnimationEvent;
+	}(_NSObject3.default);
+
+	exports.default = SCNAnimationEvent;
+
+/***/ },
+/* 128 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	//import CAAnimation from '../QuartzCore/CAAnimation'
+
+	/**
+	 * Signature for the block called when an animation event triggers.
+	 * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}
+	 * @param {CAAnimation} animation - The animation triggering the animation event.
+	 * @param {Object} animatedObject - The Scene Kit object affected by the animation.
+	 * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.
+	 * @returns {void}
+	 * @see https://developer.apple.com/documentation/scenekit/scnanimationeventblock
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNAnimationEventBlock = function SCNAnimationEventBlock(animation, animatedObject, playingBackward) {};
+
+	exports.default = SCNAnimationEventBlock;
+
+/***/ },
+/* 129 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _SCNAnimation = __webpack_require__(126);
+
+	var _SCNAnimation2 = _interopRequireDefault(_SCNAnimation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * 
+	 * @access public
+	 * @extends {NSObject}
+	 * @implements {SCNAnimatable}
+	 * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer
+	 */
+	var SCNAnimationPlayer = function (_NSObject) {
+	  _inherits(SCNAnimationPlayer, _NSObject);
+
+	  _createClass(SCNAnimationPlayer, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        speed: 'float',
+	        weight: ['float', '_weight'],
+	        paused: 'boolean'
+	      };
+	    }
+
+	    // Initializers
+
+	    /**
+	     * 
+	     * @access public
+	     * @constructor
+	     * @param {SCNAnimation} animation - 
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866046-init
+	     */
+
+	  }]);
+
+	  function SCNAnimationPlayer(animation) {
+	    _classCallCheck(this, SCNAnimationPlayer);
+
+	    // Instance Properties
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2881688-blendfactor
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNAnimationPlayer.__proto__ || Object.getPrototypeOf(SCNAnimationPlayer)).call(this));
+
+	    _this.blendFactor = 0;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866058-paused
+	     */
+	    _this.paused = false;
+
+	    /**
+	     * 
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866041-speed
+	     */
+	    _this.speed = 0;
+
+	    /**
+	     * @access private
+	     * @type {number}
+	     */
+	    _this._weight = 0;
+
+	    /**
+	     * @access private
+	     * @type {SCNAnimation}
+	     */
+	    _this._animation = animation;
+	    return _this;
+	  }
+
+	  // Instance Properties
+	  /**
+	   * 
+	   * @type {SCNAnimation}
+	   * @desc 
+	   * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866065-animation
+	   */
+
+
+	  _createClass(SCNAnimationPlayer, [{
+	    key: 'play',
+
+
+	    // Instance Methods
+
+	    /**
+	     * 
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866049-play
+	     */
+	    value: function play() {}
+
+	    /**
+	     * 
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2866055-stop
+	     */
+
+	  }, {
+	    key: 'stop',
+	    value: function stop() {}
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {number} duration - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnanimationplayer/2887037-stop
+	     */
+
+	  }, {
+	    key: 'stopWithBlendOutDuration',
+	    value: function stopWithBlendOutDuration(duration) {}
+	  }, {
+	    key: 'animation',
+	    get: function get() {
+	      return this._animation;
+	    }
+	  }]);
+
+	  return SCNAnimationPlayer;
+	}(_NSObject3.default);
+
+	exports.default = SCNAnimationPlayer;
+
+/***/ },
+/* 130 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Modes for antialiased rendering of the view’s scene, used by the SCNView property.
+	 * @typedef {Object} SCNAntialiasingMode
+	 * @property {number} none - Disables antialiased rendering.
+	 * @property {number} multisampling2X - Enables multisample antialiasing, with two samples per screen pixel.
+	 * @property {number} multisampling4X - Enables multisample antialiasing, with four samples per screen pixel.
+	 * @property {number} multisampling8X - Enables multisample antialiasing, with eight samples per screen pixel.
+	 * @property {number} multisampling16X - Enables multisample antialiasing, with sixteen samples per screen pixel.
+	 * @see https://developer.apple.com/documentation/scenekit/scnantialiasingmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNAntialiasingMode = {
+	  none: 0,
+	  multisampling2X: 1,
+	  multisampling4X: 2,
+	  multisampling8X: 3,
+	  multisampling16X: 4
+	};
+
+	exports.default = SCNAntialiasingMode;
+
+/***/ },
 /* 131 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _AVAudioMixerNode = __webpack_require__(6);
+
+	var _AVAudioMixerNode2 = _interopRequireDefault(_AVAudioMixerNode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import SCNAudioSource from './SCNAudioSource'
+
+
+	/**
+	 * A controller for playback of a positional audio source in a SceneKit scene.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer
+	 */
+	var SCNAudioPlayer = function (_NSObject) {
+	  _inherits(SCNAudioPlayer, _NSObject);
+
+	  // Creating an Audio Player
+
+	  /**
+	   * Initializes an audio player for playing the specified simple audio source.
+	   * @access public
+	   * @constructor
+	   * @param {SCNAudioSource} source - An audio source object.
+	   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.
+	   * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522736-init
+	   */
+	  function SCNAudioPlayer(source) {
+	    _classCallCheck(this, SCNAudioPlayer);
+
+	    // Working with Audio Sources
+
+	    var _this = _possibleConstructorReturn(this, (SCNAudioPlayer.__proto__ || Object.getPrototypeOf(SCNAudioPlayer)).call(this));
+
+	    _this._audioSource = source;
+	    _this._audioNode = new _AVAudioMixerNode2.default();
+	    _this._audioNode._gainNode = source._gainNode;
+
+	    // Responding to Playback
+
+	    /**
+	     * A block called by SceneKit when playback of the player’s audio source is about to begin.
+	     * @type {?function(): void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1524115-willstartplayback
+	     */
+	    _this.willStartPlayback = null;
+
+	    /**
+	     * A block called by SceneKit when playback of the player’s audio source has completed.
+	     * @type {?function(): void}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522818-didfinishplayback
+	     */
+	    _this.didFinishPlayback = null;
+	    return _this;
+	  }
+
+	  /**
+	   * Initializes an audio player for playing the specified AVFoundation audio node.
+	   * @access public
+	   * @param {AVAudioNode} audioNode - An audio node object.
+	   * @returns {void}
+	   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.
+	   * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1523010-init
+	   */
+
+
+	  _createClass(SCNAudioPlayer, [{
+	    key: 'initAvAudioNode',
+	    value: function initAvAudioNode(audioNode) {
+
+	      // Working with Audio Sources
+
+	      this._audioSource = null;
+	      this._audioNode = null;
+
+	      // Responding to Playback
+
+	      /**
+	       * A block called by SceneKit when playback of the player’s audio source is about to begin.
+	       * @type {?function(): void}
+	       * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1524115-willstartplayback
+	       */
+	      this.willStartPlayback = null;
+
+	      /**
+	       * A block called by SceneKit when playback of the player’s audio source has completed.
+	       * @type {?function(): void}
+	       * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522818-didfinishplayback
+	       */
+	      this.didFinishPlayback = null;
+	    }
+
+	    // Working with Audio Sources
+
+	    /**
+	     * The source of audio played by this player.
+	     * @type {?SCNAudioSource}
+	     * @desc An SCNAudioSource object represents a distinct source of audio—for example, a sound file—that can be reused and shared by many player objects. Use a player’s audio source to configure the default values for playback parameters such as volume and reverb. To vary those parameters in real time during playback, use the audioNode property to work with the underlying AVAudioNode object.If the player was created with the audioPlayerWithAVAudioNode: method, this property’s value is nil.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1523059-audiosource
+	     */
+
+	  }, {
+	    key: '_play',
+	    value: function _play() {
+	      this._audioSource._play();
+	    }
+	  }, {
+	    key: '_stop',
+	    value: function _stop() {
+	      this._audioSource._stop();
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+
+	  }, {
+	    key: '_getLoadedPromise',
+	    value: function _getLoadedPromise() {
+	      if (this._audioSource) {
+	        return this._audioSource._getLoadedPromise();
+	      }
+
+	      return Promise.resolve();
+	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
+	  }, {
+	    key: 'audioSource',
+	    get: function get() {
+	      return this._audioSource;
+	    }
+
+	    /**
+	     * The audio node SceneKit uses for mixing audio from this player.
+	     * @type {?AVAudioNode}
+	     * @desc SceneKit uses this AVAudioNode object to perform 3D positional mixing during playback. Use this object to vary parameters such as volume and reverb in real time during playback. To set default values for those parameters, use the audioSource property.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudioplayer/1522747-audionode
+	     */
+
+	  }, {
+	    key: 'audioNode',
+	    get: function get() {
+	      return this._audioNode;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
+	    }
+	  }]);
+
+	  return SCNAudioPlayer;
+	}(_NSObject3.default);
+
+	exports.default = SCNAudioPlayer;
+
+/***/ },
+/* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _AjaxRequest2 = __webpack_require__(133);
+
+	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/*global AudioContext*/
+	var _AudioContext = function _AudioContext() {};
+	if (typeof AudioContext !== 'undefined') {
+	  _AudioContext = AudioContext;
+	} else {
+	  console.error('error: AudioContext is not supported');
+	}
+	var _context = new _AudioContext();
+
+	/**
+	 * A simple, reusable audio source—music or sound effects loaded from a file—for use in positional audio playback.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/scenekit/scnaudiosource
+	 */
+
+	var SCNAudioSource = function (_NSObject) {
+	  _inherits(SCNAudioSource, _NSObject);
+
+	  _createClass(SCNAudioSource, null, [{
+	    key: 'sourceNamed',
+
+
+	    // Creating an Audio Source
+
+	    /**
+	     * Returns the audio source associated with the specified filename.
+	     * @access public
+	     * @param {string} fileName - The name of an audio file. If this filename has not been previously requested, the method looks for an audio file with the specified name in the application’s main bundle.
+	     * @returns {void}
+	     * @desc This method looks in the system caches for an audio source with the specified name and returns that object if it exists. If a matching audio source is not already in the cache, this method locates the audio file with the specified name in the application’s main bundle, then creates a new audio source and caches it for reuse.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524138-init
+	     */
+	    value: function sourceNamed(fileName) {
+	      return new SCNAudioSource(fileName);
+	    }
+
+	    /**
+	     * Initializes an audio source from an audio file in the application’s main bundle.
+	     * @access public
+	     * @param {string} name - The name of an audio file in the application’s main bundle.
+	     * @returns {void}
+	     * @desc Calling this method is equivalent to using the Bundle class to locate an audio file in the application’s main bundle and then passing the resulting URL to the init(url:) method.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524225-init
+	     */
+
+	  }, {
+	    key: 'sourceWithFileNamed',
+	    value: function sourceWithFileNamed(name) {
+	      return new SCNAudioSource(name);
+	    }
+
+	    /**
+	     * Initializes an audio source from the specified audio file.
+	     * @access public
+	     * @constructor
+	     * @param {string} url - A URL locating an audio file.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523264-init
+	     */
+
+	  }]);
+
+	  function SCNAudioSource(url) {
+	    _classCallCheck(this, SCNAudioSource);
+
+	    // Controlling 3D Audio Spatialization
+
+	    /**
+	     * A Boolean value that determines whether audio from this source uses 3D positional mixing.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524185-ispositional
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNAudioSource.__proto__ || Object.getPrototypeOf(SCNAudioSource)).call(this));
+
+	    _this.isPositional = false;
+
+	    // Setting Default Playback Parameters
+
+	    /**
+	     * The default playback volume for the audio source.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524106-volume
+	     */
+	    //this.volume = 0
+
+	    /**
+	     * The default playback rate for the audio source.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524189-rate
+	     */
+	    _this.rate = 0;
+
+	    /**
+	     * The default blend of blend of unmodified and reverb-processed (also called dry and wet) audio for playback of the audio source.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523450-reverbblend
+	     */
+	    _this.reverbBlend = 0;
+
+	    /**
+	     * A Boolean value that determines whether the audio source should play repeatedly.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524183-loops
+	     */
+	    //this.loops = false
+
+	    /**
+	     * A Boolean value that determines whether the audio source should stream content from its source URL when playing.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523475-shouldstream
+	     */
+	    _this.shouldStream = false;
+
+	    _this._loading = false;
+	    _this._loadedPromise = new Promise(function (resolve, reject) {
+	      _this._resolve = resolve;
+	      _this._reject = reject;
+	    });
+	    _this._url = url;
+	    _this._buffer = null;
+	    _this._gainNode = _context.createGain();
+	    _this._loops = false;
+	    _this._source = null;
+	    //this._source = _context.createBufferSource()
+	    //this._source.connect(this._gainNode)
+	    //this._gainNode.connect(_context.destination)
+	    return _this;
+	  }
+
+	  /**
+	   * The default playback volume for the audio source.
+	   * @type {number}
+	   * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524106-volume
+	   */
+
+
+	  _createClass(SCNAudioSource, [{
+	    key: 'load',
+
+
+	    // Preloading Audio Data
+
+	    /**
+	     * Loads audio data from the source and prepares it for playing.
+	     * @access public
+	     * @returns {void}
+	     * @desc This method reads audio data from the source file (specified when initializing the audio source) and performs any decompression necessary to prepare for playing audio. Use this method to control when your app or game incurs the run-time performance cost of such work—for example, you can load all audio source before starting a game level, instead of suffering a frame rate drop upon playing a new audio source during gameplay.This method has no effect if the shouldStream property’s value is true.
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1523399-load
+	     */
+	    value: function load() {
+	      var _this2 = this;
+
+	      if (this._loading) {
+	        return;
+	      }
+	      this._loading = true;
+
+	      var promise = _AjaxRequest3.default.get(this._url, { responseType: 'arraybuffer' }).then(function (data) {
+	        _context.decodeAudioData(data, function (buffer) {
+	          _this2._buffer = buffer;
+	          _this2._resolve();
+	        });
+	      });
+	    }
+	  }, {
+	    key: '_play',
+	    value: function _play() {
+	      var _this3 = this;
+
+	      var when = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+	      this.load();
+	      this._loadedPromise.then(function () {
+	        _this3._source = _context.createBufferSource();
+	        _this3._source.buffer = _this3._buffer;
+	        _this3._source.connect(_this3._gainNode);
+	        _this3._gainNode.connect(_context.destination);
+	        _this3._source.loop = _this3._loops;
+	        _this3._source.start(when);
+	      });
+	    }
+	  }, {
+	    key: '_stop',
+	    value: function _stop() {
+	      var when = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+	      if (this._source) {
+	        this._source.stop(when);
+	        this._source = null;
+	      }
+	    }
+	  }, {
+	    key: '_getLoadedPromise',
+
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      return Promise.resolve();
+	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
+	  }, {
+	    key: 'volume',
+	    get: function get() {
+	      return this._gainNode.gain.value;
+	    },
+	    set: function set(newValue) {
+	      this._gainNode.gain.value = newValue;
+	    }
+
+	    /**
+	     * A Boolean value that determines whether the audio source should play repeatedly.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnaudiosource/1524183-loops
+	     */
+
+	  }, {
+	    key: 'loops',
+	    get: function get() {
+	      return this._loops;
+	    },
+	    set: function set(newValue) {
+	      this._loops = newValue;
+	      if (this._source !== null) {
+	        this._source.loop = newValue;
+	      }
+	    }
+	  }, {
+	    key: '_duration',
+	    get: function get() {
+	      if (this._buffer) {
+	        return this._buffer.duration;
+	      }
+	      return null;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
+	    }
+	  }]);
+
+	  return SCNAudioSource;
+	}(_NSObject3.default);
+
+	exports.default = SCNAudioSource;
+
+/***/ },
+/* 133 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * AjaxRequest class
+	 * @access public
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var AjaxRequest = exports.AjaxRequest = function () {
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function AjaxRequest() {
+	    _classCallCheck(this, AjaxRequest);
+
+	    this.defaultOptions = {
+	      method: 'POST',
+	      async: true,
+	      data: null,
+	      user: null,
+	      password: null,
+	      mimeType: null,
+	      isJSONP: false,
+	      responseType: null,
+	      requestHeader: {}
+	    };
+
+	    this.jsonpScripts = [];
+	    this.jsonpCallbackPrefix = 'jsonpCallback_';
+	  }
+
+	  _createClass(AjaxRequest, [{
+	    key: 'get',
+	    value: function get(url) {
+	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	      options.method = 'GET';
+	      return this.request(url, options);
+	    }
+	  }, {
+	    key: 'post',
+	    value: function post(url) {
+	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	      options.method = 'POST';
+	      return this.request(url, options);
+	    }
+	  }, {
+	    key: 'jsonp',
+	    value: function jsonp(url) {
+	      var callbackParam = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'callback';
+	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+	      var requestURL = url;
+	      var script = document.createElement('script');
+	      var callbackFuncName = this._getNewFuncName(this.jsonpCallbackPrefix);
+
+	      if (!options.data) {
+	        options.data = {};
+	      }
+	      options.data[callbackParam] = callbackFuncName;
+
+	      var queryArray = [];
+	      options.data.forEach(function (key, value) {
+	        queryArray.push(encodeURI(key) + '=' + encodeURI(value));
+	      });
+	      requestURL += '?' + queryArray.join('&');
+
+	      var promise = new Promise(function (resolve, reject) {
+	        window[callbackFuncName] = resolve;
+	        script.addEventListener('error', reject);
+	      }).catch(function (error) {
+	        delete window[callbackFuncName];
+	        document.head.removeChild(script);
+	        return Promise.reject(error);
+	      }).then(function (result) {
+	        delete window[callbackFuncName];
+	        document.head.removeChild(script);
+	        return Promise.resolve(result);
+	      });
+
+	      script.src = requestURL;
+	      document.head.appendChild(script);
+
+	      return promise;
+	    }
+	  }, {
+	    key: '_getNewFuncName',
+	    value: function _getNewFuncName() {
+	      var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+	      // ESLint prefers for(;;) more than while(true)
+	      for (;;) {
+	        var funcName = prefix + Math.random().toString(16).slice(2);
+	        if (typeof window[funcName] === 'undefined') {
+	          return funcName;
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'request',
+	    value: function request(url) {
+	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	      var requestURL = url;
+	      var method = typeof options.method === 'undefined' ? this.defaultOptions.method : options.method;
+	      var async = typeof options.async === 'undefined' ? this.defaultOptions.async : options.async;
+	      var data = this.defaultOptions.data;
+	      var user = typeof options.user === 'undefined' ? this.defaultOptions.user : options.user;
+	      var password = typeof options.password === 'undefined' ? this.defaultOptions.password : options.password;
+	      var mimeType = typeof options.mimeType === 'undefined' ? this.defaultOptions.mimeType : options.mimeType;
+	      var header = typeof options.requestHeader === 'undefined' ? this.defaultOptions.requestHeader : options.requestHeader;
+	      var isJSONP = typeof options.isJSONP === 'undefined' ? this.defaultOptions.isJSONP : options.isJSONP;
+	      var responseType = typeof options.responseType === 'undefined' ? this.defaultOptions.responseType : options.responseType;
+
+	      if (method !== 'POST' && method !== 'GET') {
+	        method = 'POST';
+	      }
+
+	      if (options.data) {
+	        var dataArray = [];
+	        if (options.data instanceof Map) {
+	          options.data.forEach(function (key, value) {
+	            dataArray.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+	          });
+	        } else {
+	          Object.keys(options.data).forEach(function (key) {
+	            var value = options.data[key];
+	            dataArray.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+	          });
+	        }
+
+	        if (method === 'POST') {
+	          data = dataArray.join('&').replace(/%20/g, '+');
+	        } else {
+	          requestURL += '?' + dataArray.join('&').replace(/%20/g, '+');
+	        }
+	      }
+
+	      if (method === 'POST' && typeof header['Content-Type'] === 'undefined') {
+	        header['Content-Type'] = 'application/x-www-form-urlencoded';
+	      }
+
+	      return new Promise(function (resolve, reject) {
+	        var xhr = new XMLHttpRequest();
+
+	        if (mimeType) {
+	          xhr.overrideMimeType(mimeType);
+	        }
+	        if (responseType) {
+	          xhr.responseType = responseType;
+	        }
+
+	        if (user) {
+	          xhr.open(method, url, async, user, password);
+	        } else {
+	          xhr.open(method, url, async);
+	        }
+
+	        if (header) {
+	          for (var key in header) {
+	            // Reflect is not yet implemented...
+	            //if(Reflect.apply({}.hasOwnProperty, header, [key])){
+	            if ({}.hasOwnProperty.call(header, key)) {
+	              xhr.setRequestHeader(key, header[key]);
+	            }
+	          }
+	        }
+
+	        xhr.onload = function () {
+	          if (xhr.readyState === 4 && xhr.status === 200) {
+	            resolve(xhr.response);
+	          } else {
+	            reject(new Error(xhr.statusText));
+	          }
+	        };
+	        xhr.onerror = function () {
+	          reject(new Error(xhr.statusText));
+	        };
+	        xhr.send(data);
+	      });
+	    }
+	  }]);
+
+	  return AjaxRequest;
+	}();
+
+	exports.default = new AjaxRequest();
+
+/***/ },
+/* 134 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Options for locking the orientation of nodes affected by a billboard constraint.
+	 * @access public
+	 * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var SCNBillboardAxis = function () {
+	  _createClass(SCNBillboardAxis, [{
+	    key: 'X',
+
+
+	    // Constants
+
+	    /**
+	     * Align an affected node such that its x-axis is always parallel to that of the view, leaving it free to rotate otherwise.
+	     * @type {SCNBillboardAxis}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468664-x
+	     */
+	    get: function get() {
+	      return this._X;
+	    }
+
+	    /**
+	     * Align an affected node such that its y-axis is always parallel to that of the view, leaving it free to rotate otherwise.
+	     * @type {SCNBillboardAxis}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468668-y
+	     */
+
+	  }, {
+	    key: 'Y',
+	    get: function get() {
+	      return this._Y;
+	    }
+
+	    /**
+	     * Align an affected node such that its z-axis is always perpendicular to the viewing plane, leaving it free to rotate otherwise.
+	     * @type {SCNBillboardAxis}
+	     * @desc 
+	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468647-z
+	     */
+
+	  }, {
+	    key: 'Z',
+	    get: function get() {
+	      return this._Z;
+	    }
+
+	    /**
+	     * Align an affected node such that its orientation always matches that of the view.
+	     * @type {SCNBillboardAxis}
+	     * @desc This is the default option for newly created billboard constraints.
+	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1468666-all
+	     */
+
+	  }, {
+	    key: 'all',
+	    get: function get() {
+	      return this._all;
+	    }
+
+	    // Initializers
+
+	    /**
+	     * 
+	     * @access public
+	     * @constructor
+	     * @param {number} rawValue - 
+	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardaxis/1524212-init
+	     */
+
+	  }]);
+
+	  function SCNBillboardAxis(rawValue) {
+	    _classCallCheck(this, SCNBillboardAxis);
+
+	    // Constants
+
+	    this._X = null;
+	    this._Y = null;
+	    this._Z = null;
+	    this._all = null;
+	  }
+
+	  return SCNBillboardAxis;
+	}();
+
+	exports.default = SCNBillboardAxis;
+
+/***/ },
+/* 135 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _SCNConstraint2 = __webpack_require__(77);
+
+	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SCNBillboardAxis from './SCNBillboardAxis'
+
+	/**
+	 * A constraint that orients a node to always point toward the current camera.
+	 * @access public
+	 * @extends {SCNConstraint}
+	 * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint
+	 */
+	var SCNBillboardConstraint = function (_SCNConstraint) {
+	  _inherits(SCNBillboardConstraint, _SCNConstraint);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SCNBillboardConstraint() {
+	    _classCallCheck(this, SCNBillboardConstraint);
+
+	    // Working with a Constraint’s Degrees of Freedom
+
+	    /**
+	     * An option that specifies which degrees of freedom the constraint affects.
+	     * @type {SCNBillboardAxis}
+	     * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint/1468685-freeaxes
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNBillboardConstraint.__proto__ || Object.getPrototypeOf(SCNBillboardConstraint)).call(this));
+
+	    _this.freeAxes = null;
+
+	    return _this;
+	  }
+
+	  return SCNBillboardConstraint;
+	}(_SCNConstraint3.default);
+
+	exports.default = SCNBillboardConstraint;
+
+/***/ },
+/* 136 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	//import SCNNode from './SCNNode'
+	//import SCNRenderer from './SCNRenderer'
+
+	/**
+	 * The signature for a block called for binding or unbinding a GLSL symbol in a custom program.
+	 * @type {function(programID: number, location: number, renderedNode: ?SCNNode, renderer: SCNRenderer): void}
+	 * @param {number} programID - The OpenGL program identifier for the current SCNProgram instance, as used by OpenGL functions such as glValidateProgram.
+	 * @param {number} location - The OpenGL location index for the symbol to be bound or unbound, as used by OpenGL functions such as glUniform.
+	 * @param {?SCNNode} renderedNode - The SCNNode object being rendered.
+	 * @param {SCNRenderer} renderer - The SCNRenderer object responsible for rendering.
+	 * @returns {void}
+	 * @desc Call handleBinding(ofSymbol:handler:) or handleUnbinding(ofSymbol:handler:) to associate a handler block with a GLSL symbol for a SceneKit geometry or material.
+	 * @see https://developer.apple.com/documentation/scenekit/scnbindingblock
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNBindingBlock = function SCNBindingBlock(programID, location, renderedNode, renderer) {};
+
+	exports.default = SCNBindingBlock;
+
+/***/ },
+/* 137 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	//import SCNVector3 from './SCNVector3'
+
+	/**
+	 * Properties for measuring an object's location and size, expressed as either a box or a sphere.
+	 * @interface
+	 * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var SCNBoundingVolume = function () {
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SCNBoundingVolume() {
+	    _classCallCheck(this, SCNBoundingVolume);
+
+	    // Working with Bounding Volumes
+
+	    /**
+	     * The minimum and maximum corner points of the object’s bounding box.
+	     * @type {{min: SCNVector3, max: SCNVector3}}
+	     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034705-boundingbox
+	     */
+	    this.boundingBox = null;
+
+	    this._boundingSphere = null;
+	  }
+
+	  // Working with Bounding Volumes
+
+	  /**
+	   * The center point and radius of the object’s bounding sphere.
+	   * @type {{center: SCNVector3, radius: number}}
+	   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+	   * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere
+	   */
+
+
+	  _createClass(SCNBoundingVolume, [{
+	    key: 'boundingSphere',
+	    get: function get() {
+	      return this._boundingSphere;
+	    }
+	  }]);
+
+	  return SCNBoundingVolume;
+	}();
+
+	exports.default = SCNBoundingVolume;
+
+/***/ },
+/* 138 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36792,7 +39727,7 @@ module.exports =
 	exports.default = SCNBufferBindingBlock;
 
 /***/ },
-/* 132 */
+/* 139 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36818,7 +39753,7 @@ module.exports =
 	exports.default = SCNBufferFrequency;
 
 /***/ },
-/* 133 */
+/* 140 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36873,7 +39808,7 @@ module.exports =
 	exports.default = SCNBufferStream;
 
 /***/ },
-/* 134 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36888,11 +39823,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNCameraProjectionDirection = __webpack_require__(135);
+	var _SCNCameraProjectionDirection = __webpack_require__(142);
 
 	var _SCNCameraProjectionDirection2 = _interopRequireDefault(_SCNCameraProjectionDirection);
 
-	var _SCNMaterialProperty = __webpack_require__(123);
+	var _SCNMaterialProperty = __webpack_require__(94);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -37475,7 +40410,7 @@ module.exports =
 	exports.default = SCNCamera;
 
 /***/ },
-/* 135 */
+/* 142 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37499,302 +40434,7 @@ module.exports =
 	exports.default = SCNCameraProjectionDirection;
 
 /***/ },
-/* 136 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _SCNGeometry2 = __webpack_require__(127);
-
-	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
-
-	var _SCNGeometryElement = __webpack_require__(129);
-
-	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
-
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
-
-	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
-
-	var _SCNGeometrySource = __webpack_require__(128);
-
-	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
-
-	var _SCNMaterial = __webpack_require__(119);
-
-	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
-
-	var _SCNVector = __webpack_require__(58);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	/**
-	 * A right circular cylinder geometry whose ends are capped with hemispheres.
-	 * @access public
-	 * @extends {SCNGeometry}
-	 * @see https://developer.apple.com/documentation/scenekit/scncapsule
-	 */
-	var SCNCapsule = function (_SCNGeometry) {
-	  _inherits(SCNCapsule, _SCNGeometry);
-
-	  // Creating a Capsule
-
-	  /**
-	   * Creates a capsule geometry with the specified radius and height.
-	   * @access public
-	   * @constructor
-	   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
-	   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
-	   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
-	   * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523790-init
-	   */
-	  function SCNCapsule() {
-	    var capRadius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
-	    var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2.0;
-
-	    _classCallCheck(this, SCNCapsule);
-
-	    // Adjusting a Capsule’s Dimensions
-
-	    /**
-	     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523926-capradius
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNCapsule.__proto__ || Object.getPrototypeOf(SCNCapsule)).call(this, [], []));
-
-	    _this.capRadius = capRadius;
-
-	    /**
-	     * The extent of the capsule along its y-axis. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1522789-height
-	     */
-	    _this.height = height;
-
-	    // Adjusting Geometric Detail
-
-	    /**
-	     * The number of subdivisions around the lateral circumference of the capsule. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1522735-radialsegmentcount
-	     */
-	    _this.radialSegmentCount = 24;
-
-	    /**
-	     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523561-capsegmentcount
-	     */
-	    _this.capSegmentCount = 48;
-
-	    /**
-	     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523697-heightsegmentcount
-	     */
-	    _this.heightSegmentCount = 1;
-
-	    _this._createGeometry();
-	    _this.materials.push(new _SCNMaterial2.default());
-	    return _this;
-	  }
-
-	  _createClass(SCNCapsule, [{
-	    key: '_createGeometry',
-	    value: function _createGeometry() {
-	      var sourceData = [];
-	      var indexData = [];
-	      var vectorCount = (this.radialSegmentCount * 2 + 1) * (this.capSegmentCount + 4);
-	      //const primitiveCount = this.radialSegmentCount * this.capSegmentCount * 4
-
-	      var yNom = [];
-	      var ySin = [];
-	      for (var lat = 0; lat <= this.capSegmentCount; lat++) {
-	        yNom.push(-Math.cos(Math.PI * lat / this.capSegmentCount));
-	        ySin.push(Math.sin(Math.PI * lat / this.capSegmentCount));
-	      }
-
-	      var cylinderHeight = this.height - this.capRadius * 2;
-	      var hemiLen = this.capSegmentCount / 2;
-	      var rad2 = this.radialSegmentCount * 2;
-	      for (var lng = 0; lng <= rad2; lng++) {
-	        var x = -Math.sin(2.0 * Math.PI * lng / rad2);
-	        var z = -Math.cos(2.0 * Math.PI * lng / rad2);
-	        var tx = lng / rad2;
-	        var y = -cylinderHeight * 0.5;
-	        for (var _lat = 0; _lat <= hemiLen; _lat++) {
-	          var xNom = x * ySin[_lat];
-	          var zNom = z * ySin[_lat];
-
-	          // vertex
-	          sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius
-
-	          // normal
-	          );sourceData.push(xNom, yNom[_lat], zNom
-
-	          // texcoord
-	          );sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
-
-	          if (_lat === hemiLen) {
-	            // put the same data again
-	            sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius);
-	            sourceData.push(xNom, yNom[_lat], zNom);
-	            sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
-	          }
-	        }
-
-	        y = cylinderHeight * 0.5;
-	        for (var _lat2 = hemiLen; _lat2 <= this.capSegmentCount; _lat2++) {
-	          var _xNom = x * ySin[_lat2];
-	          var _zNom = z * ySin[_lat2];
-
-	          // vertex
-	          sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius
-
-	          // normal
-	          );sourceData.push(_xNom, yNom[_lat2], _zNom
-
-	          // texcoord
-	          );sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
-
-	          if (_lat2 === hemiLen) {
-	            // put the same data again
-	            sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius);
-	            sourceData.push(_xNom, yNom[_lat2], _zNom);
-	            sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
-	          }
-	        }
-	      }
-
-	      // index
-	      var capLen = this.capSegmentCount;
-	      var radLen = this.radialSegmentCount * 2 + 1;
-	      for (var i = 0; i < capLen; i++) {
-	        var index1 = i * (this.capSegmentCount + 4);
-	        var index2 = index1 + this.capSegmentCount + 5;
-
-	        indexData.push(index1, index2, index1 + 1);
-	        index1 += 1;
-	        for (var j = 0; j < radLen; j++) {
-	          if (Math.abs(j - this.radialSegmentCount) !== 1) {
-	            indexData.push(index1, index2 + 1, index1 + 1);
-	            indexData.push(index1, index2, index2 + 1);
-	          }
-	          index1 += 1;
-	          index2 += 1;
-	        }
-	        indexData.push(index1, index2, index2 + 1);
-	      }
-
-	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
-	      _SCNGeometrySource2.default.Semantic.vertex, // semantic
-	      vectorCount, // vectorCount
-	      true, // floatComponents
-	      3, // componentsPerVector
-	      4, // bytesPerComponent
-	      0, // offset
-	      32 // sride
-	      );
-
-	      var normalSource = new _SCNGeometrySource2.default(sourceData, // data
-	      _SCNGeometrySource2.default.Semantic.normal, // semantic
-	      vectorCount, // vectorCount
-	      true, // floatComponents
-	      3, // componentsPerVector
-	      4, // bytesPerComponent
-	      12, // offset
-	      32 // stride
-	      );
-
-	      var texcoordSource = new _SCNGeometrySource2.default(sourceData, // data
-	      _SCNGeometrySource2.default.Semantic.texcoord, // semantic
-	      vectorCount, // vectorCount
-	      true, // floatComponents
-	      2, // componentsPerVector
-	      4, // bytesPerComponent
-	      24, // offset
-	      32 // stride
-	      );
-
-	      var element = new _SCNGeometryElement2.default(indexData, _SCNGeometryPrimitiveType2.default.triangles);
-
-	      this._geometryElements = [element];
-	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
-
-	      this.boundingBox = {
-	        min: new _SCNVector2.default(-this.capRadius, -this.height * 0.5, -this.capRadius),
-	        max: new _SCNVector2.default(this.capRadius, this.height * 0.5, this.capRadius)
-	      };
-	    }
-
-	    /**
-	     * @access private
-	     * @returns {Ammo.btCollisionShape} -
-	     * @desc call Ammo.destroy(shape) after using it.
-	     */
-
-	  }, {
-	    key: '_createBtCollisionShape',
-	    value: function _createBtCollisionShape() {}
-	    //const height = (this.height - this.capRadius) * 0.5
-	    //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
-	    //return shape
-
-
-	    /**
-	     * The center point and radius of the object’s bounding sphere.
-	     * @type {Object}
-	     * @parameter {SCNVector3} _boundingSphere.center -
-	     * @parameter {number} _boundingSphere.radius -
-	     * @returns {Object} -
-	     * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
-	     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere
-	     */
-
-	  }, {
-	    key: 'getBoundingSphere',
-	    value: function getBoundingSphere() {
-	      var c = new _SCNVector2.default(0, 0, 0);
-	      var r = this.height * 0.5;
-
-	      return { center: c, radius: r };
-	    }
-	  }, {
-	    key: '_updateBoundingBoxForSkinner',
-	    value: function _updateBoundingBoxForSkinner() {
-	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-	      if (skinner === null) {
-	        return this.boundingBox;
-	      }
-	      return _get(SCNCapsule.prototype.__proto__ || Object.getPrototypeOf(SCNCapsule.prototype), '_updateBoundingBoxForSkinner', this).call(this, skinner);
-	    }
-	  }]);
-
-	  return SCNCapsule;
-	}(_SCNGeometry3.default);
-
-	exports.default = SCNCapsule;
-
-/***/ },
-/* 137 */
+/* 143 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37820,7 +40460,7 @@ module.exports =
 	exports.default = SCNChamferMode;
 
 /***/ },
-/* 138 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37831,23 +40471,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -38048,7 +40688,7 @@ module.exports =
 	exports.default = SCNCone;
 
 /***/ },
-/* 139 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38061,23 +40701,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -38325,7 +40965,7 @@ module.exports =
 	exports.default = SCNCylinder;
 
 /***/ },
-/* 140 */
+/* 146 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38455,7 +41095,7 @@ module.exports =
 	exports.default = SCNDebugOptions;
 
 /***/ },
-/* 141 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38553,7 +41193,7 @@ module.exports =
 	exports.default = SCNDistanceConstraint;
 
 /***/ },
-/* 142 */
+/* 148 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38581,7 +41221,7 @@ module.exports =
 	exports.default = SCNFieldForceEvaluator;
 
 /***/ },
-/* 143 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38592,23 +41232,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -38793,7 +41433,7 @@ module.exports =
 	exports.default = SCNFloor;
 
 /***/ },
-/* 144 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38806,7 +41446,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNTessellationSmoothingMode = __webpack_require__(145);
+	var _SCNTessellationSmoothingMode = __webpack_require__(151);
 
 	var _SCNTessellationSmoothingMode2 = _interopRequireDefault(_SCNTessellationSmoothingMode);
 
@@ -38908,7 +41548,7 @@ module.exports =
 	exports.default = SCNGeometryTessellator;
 
 /***/ },
-/* 145 */
+/* 151 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38934,7 +41574,7 @@ module.exports =
 	exports.default = SCNTessellationSmoothingMode;
 
 /***/ },
-/* 146 */
+/* 152 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38972,215 +41612,7 @@ module.exports =
 	exports.default = SCNHitTestOption;
 
 /***/ },
-/* 147 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import SCNNode from './SCNNode'
-	//import SCNVector3 from './SCNVector3'
-	//import SCNMatrix4 from './SCNMatrix4'
-	//import CGPoint from '../CoreGraphics/CGPoint'
-
-	/**
-	 * Detailed information about a result from searching for elements of a scene located at a specified point, or along a specified line segment (or ray).
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/documentation/scenekit/scnhittestresult
-	 */
-	var SCNHitTestResult = function (_NSObject) {
-	  _inherits(SCNHitTestResult, _NSObject);
-
-	  /**
-	   * constructor
-	   * @access public
-	   * @constructor
-	   */
-	  function SCNHitTestResult() {
-	    _classCallCheck(this, SCNHitTestResult);
-
-	    // Retrieving Information About a Hit-Test Result
-
-	    var _this = _possibleConstructorReturn(this, (SCNHitTestResult.__proto__ || Object.getPrototypeOf(SCNHitTestResult)).call(this));
-
-	    _this._node = null;
-	    _this._geometryIndex = 0;
-	    _this._faceIndex = 0;
-	    _this._localCoordinates = null;
-	    _this._worldCoordinates = null;
-	    _this._localNormal = null;
-	    _this._worldNormal = null;
-	    _this._modelTransform = null;
-
-	    // Instance Properties
-
-	    _this._boneNode = null;
-	    return _this;
-	  }
-
-	  // Retrieving Information About a Hit-Test Result
-
-	  /**
-	   * Returns the texture coordinates at the point of intersection for the specified texture mapping channel.
-	   * @access public
-	   * @param {number} channel - The index of the mapping channel in which to look up texture coordinates.
-	   * @returns {CGPoint} - 
-	   * @desc An SCNGeometry object can contain multiple sources of texture coordinates, or texture mapping channels. (With multiple channels, you can map texture images for different material properties in different ways.) To use the texture coordinates of a hit-test result, specify which texture coordinate source to look up coordinates in. For example, to add “scorch marks” to a game character hit by a laser, you might modify a texture image mapped to the multiply property of the geometry’s material. Use the mappingChannel index from that material property as the channel parameter when calling textureCoordinates(withMappingChannel:) to ensure that you modify the correct location in the texture image.
-	   * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1522771-texturecoordinates
-	   */
-
-
-	  _createClass(SCNHitTestResult, [{
-	    key: 'textureCoordinatesWithMappingChannel',
-	    value: function textureCoordinatesWithMappingChannel(channel) {
-	      return null;
-	    }
-
-	    /**
-	     * The node whose geometry intersects the search ray.
-	     * @type {SCNNode}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523256-node
-	     */
-
-	  }, {
-	    key: 'node',
-	    get: function get() {
-	      return this._node;
-	    }
-
-	    /**
-	     * The index of the geometry element whose surface the search ray intersects.
-	     * @type {number}
-	     * @desc Every SCNGeometry object contains one or more SCNGeometryElement objects that define how its vertices connect to form a surface. This property provides the index of the geometry element intersecting the search ray. For more information about that geometry element, use the geometry’s geometryElement(at:) method.
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1522625-geometryindex
-	     */
-
-	  }, {
-	    key: 'geometryIndex',
-	    get: function get() {
-	      return this._geometryIndex;
-	    }
-
-	    /**
-	     * The index of the primitive in the geomety element intersected by the search ray.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1522888-faceindex
-	     */
-
-	  }, {
-	    key: 'faceIndex',
-	    get: function get() {
-	      return this._faceIndex;
-	    }
-
-	    /**
-	     * The point of intersection between the geometry and the search ray, in the local coordinate system of the node containing the geometry.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523032-localcoordinates
-	     */
-
-	  }, {
-	    key: 'localCoordinates',
-	    get: function get() {
-	      return this._localCoordinates;
-	    }
-
-	    /**
-	     * The point of intersection between the geometry and the search ray, in the scene’s world coordinate system.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523058-worldcoordinates
-	     */
-
-	  }, {
-	    key: 'worldCoordinates',
-	    get: function get() {
-	      return this._worldCoordinates;
-	    }
-
-	    /**
-	     * The surface normal vector at the point of intersection, in the local coordinate system of the node containing the geometry intersected by the search ray.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523953-localnormal
-	     */
-
-	  }, {
-	    key: 'localNormal',
-	    get: function get() {
-	      return this._localNormal;
-	    }
-
-	    /**
-	     * The surface normal vector at the point of intersection, in the scene’s world coordinate system.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1524066-worldnormal
-	     */
-
-	  }, {
-	    key: 'worldNormal',
-	    get: function get() {
-	      return this._worldNormal;
-	    }
-
-	    /**
-	     * The world transform matrix of the node containing the intersection.
-	     * @type {SCNMatrix4}
-	     * @desc Use this matrix to transform vectors from the local coordinate space of the node whose geometry is intersected by the search ray to the scene’s world coordinate system.
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1523496-modeltransform
-	     */
-
-	  }, {
-	    key: 'modelTransform',
-	    get: function get() {
-	      return this._modelTransform;
-	    }
-
-	    // Instance Properties
-
-	    /**
-	     * 
-	     * @type {SCNNode}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnhittestresult/1823463-bonenode
-	     */
-
-	  }, {
-	    key: 'boneNode',
-	    get: function get() {
-	      return this._boneNode;
-	    }
-	  }]);
-
-	  return SCNHitTestResult;
-	}(_NSObject3.default);
-
-	exports.default = SCNHitTestResult;
-
-/***/ },
-/* 148 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39317,7 +41749,7 @@ module.exports =
 	exports.default = SCNIKConstraint;
 
 /***/ },
-/* 149 */
+/* 154 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39359,7 +41791,7 @@ module.exports =
 	exports.default = SCNLayer;
 
 /***/ },
-/* 150 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39374,7 +41806,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(127);
+	var _SCNGeometry = __webpack_require__(99);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -39503,7 +41935,7 @@ module.exports =
 	exports.default = SCNLevelOfDetail;
 
 /***/ },
-/* 151 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39518,7 +41950,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNMaterialProperty = __webpack_require__(123);
+	var _SCNMaterialProperty = __webpack_require__(94);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -40073,7 +42505,7 @@ module.exports =
 	exports.default = SCNLight;
 
 /***/ },
-/* 152 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40192,7 +42624,7 @@ module.exports =
 	exports.default = SCNLookAtConstraint;
 
 /***/ },
-/* 153 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40226,7 +42658,7 @@ module.exports =
 	exports.default = SCNMatrix4EqualToMatrix4;
 
 /***/ },
-/* 154 */
+/* 159 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40252,7 +42684,7 @@ module.exports =
 	exports.default = SCNMatrix4FromGLKMatrix4;
 
 /***/ },
-/* 155 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40281,7 +42713,7 @@ module.exports =
 	exports.default = SCNMatrix4FromMat4;
 
 /***/ },
-/* 156 */
+/* 161 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40306,7 +42738,7 @@ module.exports =
 	exports.default = SCNMatrix4Invert;
 
 /***/ },
-/* 157 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40339,7 +42771,7 @@ module.exports =
 	exports.default = SCNMatrix4IsIdentity;
 
 /***/ },
-/* 158 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40401,7 +42833,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeRotation;
 
 /***/ },
-/* 159 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40432,7 +42864,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeScale;
 
 /***/ },
-/* 160 */
+/* 165 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40459,7 +42891,7 @@ module.exports =
 	exports.default = SCNMatrix4Mult;
 
 /***/ },
-/* 161 */
+/* 166 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40489,7 +42921,7 @@ module.exports =
 	exports.default = SCNMatrix4Rotate;
 
 /***/ },
-/* 162 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40500,7 +42932,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix4MakeScale = __webpack_require__(159);
+	var _SCNMatrix4MakeScale = __webpack_require__(164);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
@@ -40522,7 +42954,7 @@ module.exports =
 	};exports.default = SCNMatrix4Scale;
 
 /***/ },
-/* 163 */
+/* 168 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40548,7 +42980,7 @@ module.exports =
 	exports.default = SCNMatrix4ToGLKMatrix4;
 
 /***/ },
-/* 164 */
+/* 169 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40573,7 +43005,7 @@ module.exports =
 	exports.default = SCNMatrix4ToMat4;
 
 /***/ },
-/* 165 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40606,7 +43038,7 @@ module.exports =
 	};exports.default = SCNMatrix4Translate;
 
 /***/ },
-/* 166 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40623,7 +43055,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(167);
+	var _SCNMorpherCalculationMode = __webpack_require__(172);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
@@ -40885,7 +43317,7 @@ module.exports =
 	exports.default = SCNMorpher;
 
 /***/ },
-/* 167 */
+/* 172 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40909,7 +43341,7 @@ module.exports =
 	exports.default = SCNMorpherCalculationMode;
 
 /***/ },
-/* 168 */
+/* 173 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40969,7 +43401,7 @@ module.exports =
 	exports.default = SCNNodeRendererDelegate;
 
 /***/ },
-/* 169 */
+/* 174 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40995,7 +43427,7 @@ module.exports =
 	exports.default = SCNParticleBirthDirection;
 
 /***/ },
-/* 170 */
+/* 175 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41021,7 +43453,7 @@ module.exports =
 	exports.default = SCNParticleBirthLocation;
 
 /***/ },
-/* 171 */
+/* 176 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41053,7 +43485,7 @@ module.exports =
 	exports.default = SCNParticleBlendMode;
 
 /***/ },
-/* 172 */
+/* 177 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41079,7 +43511,7 @@ module.exports =
 	exports.default = SCNParticleEvent;
 
 /***/ },
-/* 173 */
+/* 178 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41127,7 +43559,7 @@ module.exports =
 	exports.default = SCNParticleEventBlock;
 
 /***/ },
-/* 174 */
+/* 179 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41153,7 +43585,7 @@ module.exports =
 	exports.default = SCNParticleImageSequenceAnimationMode;
 
 /***/ },
-/* 175 */
+/* 180 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41179,7 +43611,7 @@ module.exports =
 	exports.default = SCNParticleInputMode;
 
 /***/ },
-/* 176 */
+/* 181 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41223,7 +43655,7 @@ module.exports =
 	exports.default = SCNParticleModifierBlock;
 
 /***/ },
-/* 177 */
+/* 182 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41251,7 +43683,7 @@ module.exports =
 	exports.default = SCNParticleModifierStage;
 
 /***/ },
-/* 178 */
+/* 183 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41279,7 +43711,7 @@ module.exports =
 	exports.default = SCNParticleOrientationMode;
 
 /***/ },
-/* 179 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41418,7 +43850,7 @@ module.exports =
 	exports.default = SCNParticlePropertyController;
 
 /***/ },
-/* 180 */
+/* 185 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41448,7 +43880,7 @@ module.exports =
 	exports.default = SCNParticleSortingMode;
 
 /***/ },
-/* 181 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41461,7 +43893,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _BinaryRequest2 = __webpack_require__(182);
+	var _BinaryRequest2 = __webpack_require__(187);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
@@ -41473,7 +43905,7 @@ module.exports =
 
 	var _NSObject4 = _interopRequireDefault(_NSObject3);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -41481,11 +43913,11 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNParticleBirthLocation = __webpack_require__(170);
+	var _SCNParticleBirthLocation = __webpack_require__(175);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBirthDirection = __webpack_require__(169);
+	var _SCNParticleBirthDirection = __webpack_require__(174);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
@@ -41501,23 +43933,23 @@ module.exports =
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(174);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(179);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNParticleBlendMode = __webpack_require__(171);
+	var _SCNParticleBlendMode = __webpack_require__(176);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleOrientationMode = __webpack_require__(178);
+	var _SCNParticleOrientationMode = __webpack_require__(183);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticleSortingMode = __webpack_require__(180);
+	var _SCNParticleSortingMode = __webpack_require__(185);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNTransaction = __webpack_require__(87);
+	var _SCNTransaction = __webpack_require__(96);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
@@ -43521,7 +45953,7 @@ module.exports =
 	exports.default = SCNParticleSystem;
 
 /***/ },
-/* 182 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43531,7 +45963,7 @@ module.exports =
 	});
 	exports.BinaryRequest = undefined;
 
-	var _AjaxRequest2 = __webpack_require__(112);
+	var _AjaxRequest2 = __webpack_require__(133);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -43566,7 +45998,7 @@ module.exports =
 	exports.default = new BinaryRequest();
 
 /***/ },
-/* 183 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43577,7 +46009,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(184);
+	var _SCNPhysicsBehavior2 = __webpack_require__(189);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -43676,7 +46108,7 @@ module.exports =
 	exports.default = SCNPhysicsBallSocketJoint;
 
 /***/ },
-/* 184 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43718,7 +46150,7 @@ module.exports =
 	exports.default = SCNPhysicsBehavior;
 
 /***/ },
-/* 185 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43733,11 +46165,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNPhysicsBodyType = __webpack_require__(186);
+	var _SCNPhysicsBodyType = __webpack_require__(105);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsShape = __webpack_require__(187);
+	var _SCNPhysicsShape = __webpack_require__(107);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
@@ -44244,626 +46676,7 @@ module.exports =
 	exports.default = SCNPhysicsBody;
 
 /***/ },
-/* 186 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.
-	 * @typedef {Object} SCNPhysicsBodyType
-	 * @property {number} static - A physics body that is unaffected by forces or collisions and cannot move.
-	 * @property {number} dynamic - A physics body that can be affected by forces and collisions.
-	 * @property {number} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.
-	 * @see https://developer.apple.com/documentation/scenekit/scnphysicsbodytype
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNPhysicsBodyType = {
-	  static: 0,
-	  dynamic: 1,
-	  kinematic: 2
-	};
-
-	exports.default = SCNPhysicsBodyType;
-
-/***/ },
-/* 187 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	var _SCNBox = __webpack_require__(118);
-
-	var _SCNBox2 = _interopRequireDefault(_SCNBox);
-
-	var _SCNCapsule = __webpack_require__(136);
-
-	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
-
-	var _SCNGeometry = __webpack_require__(127);
-
-	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
-
-	var _SCNNode = __webpack_require__(83);
-
-	var _SCNNode2 = _interopRequireDefault(_SCNNode);
-
-	var _SCNSphere = __webpack_require__(188);
-
-	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
-
-	var _SCNVector = __webpack_require__(58);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _Option = {
-	  collisionMargin: 'SCNPhysicsShapeCollisionMarginKey',
-	  keepAsCompound: 'SCNPhysicsShapeKeepAsCompoundKey',
-	  scale: 'SCNPhysicsShapeScaleKey',
-	  type: 'SCNPhysicsShapeTypeKey'
-	};
-
-	var _ShapeType = {
-	  boundingBox: 'boundingBox',
-	  concavePolyhedron: 'concaveMesh',
-	  convexHull: 'convexHull'
-
-	  /**
-	   * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.
-	   * @access public
-	   * @extends {NSObject}
-	   * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape
-	   */
-	};
-	var SCNPhysicsShape = function (_NSObject) {
-	  _inherits(SCNPhysicsShape, _NSObject);
-
-	  _createClass(SCNPhysicsShape, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        $constructor: function $constructor(propNames, propValues) {
-	          return new SCNPhysicsShape(propValues.referenceObject, propValues.options);
-	        },
-	        options: ['NSArray', null],
-	        referenceObject: ['NSObject', null]
-	      };
-	    }
-
-	    // Creating Physics Shapes
-
-	    /**
-	     * Creates a physics shape based on a geometry object.
-	     * @access public
-	     * @constructor
-	     * @param {SCNGeometry} geometry - A geometry object.
-	     * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.
-	     * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508897-init
-	     */
-
-	  }]);
-
-	  function SCNPhysicsShape(geometry) {
-	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-	    _classCallCheck(this, SCNPhysicsShape);
-
-	    var _this = _possibleConstructorReturn(this, (SCNPhysicsShape.__proto__ || Object.getPrototypeOf(SCNPhysicsShape)).call(this));
-
-	    var _options = options;
-	    if (Array.isArray(options)) {
-	      _options = {};
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
-
-	      try {
-	        for (var _iterator = options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var arr = _step.value;
-
-	          _options[arr[0]] = arr[1];
-	        }
-	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
-	          }
-	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
-	          }
-	        }
-	      }
-	    }
-
-	    /**
-	     * @type {SCNGeometry}
-	     */
-	    _this._sourceGeometry = null;
-
-	    /**
-	     * @type {Object}
-	     */
-	    _this._options = _options;
-
-	    /**
-	     * @type {SCNMatrix4}
-	     */
-	    _this._transforms = null;
-
-	    /**
-	     * @type {SCNGeometry}
-	     */
-	    _this._shape = null;
-
-	    /**
-	     * @type {SCNVector3}
-	     */
-	    _this._center = new _SCNVector2.default(0, 0, 0);
-
-	    // Getting Information About a Shape
-	    _this._sourceObject = null;
-
-	    _this._setSourceObject(geometry);
-	    _this._createShape();
-	    return _this;
-	  }
-
-	  _createClass(SCNPhysicsShape, [{
-	    key: '_setSourceObject',
-	    value: function _setSourceObject(obj) {
-	      this._sourceObject = obj;
-	      if (this._sourceObject instanceof _SCNGeometry2.default) {
-	        this._sourceGeometry = this._sourceObject;
-	      } else if (this._sourceObject instanceof _SCNNode2.default && this._sourceObject.geometry) {
-	        // TODO: get geometries recursively
-	        this._sourceGeometry = this._sourceObject.geometry;
-	      } else {
-	        //throw new Error(`can't use it for source object: ${geometry.className}`)
-	      }
-	      if (!this._sourceGeometry) {
-	        //throw new Error('source geometry is null')
-	      }
-	    }
-	  }, {
-	    key: '_createShape',
-	    value: function _createShape() {
-	      if (!this._sourceGeometry) {
-	        //throw new Error('SCNPhysicsShape: must have a geometry')
-	        return;
-	      }
-
-	      //if(this._options && this._options.get(_Option.type) === _ShapeType.boundingBox){
-	      if (this._options && this._options[_Option.type] === _ShapeType.boundingBox) {
-	        this._createShapeAsBoundingBox();
-	      } else if (this._sourceGeometry instanceof _SCNCapsule2.default) {
-	        // FIXME: do not convert to SCNBox
-	        this._createShapeAsBoundingBox();
-	      } else if (this._sourceGeometry instanceof _SCNBox2.default) {
-	        this._createShapeAsBox();
-	      } else if (this._sourceGeometry instanceof _SCNSphere2.default) {
-	        this._createShapeAsSphere
-	        //}else if(this._options && this._options.get(_Option.type) === _ShapeType.convecHull){
-	        ();
-	      } else if (this._options && this._options[_Option.type] === _ShapeType.concavePolyhedron) {
-	        // give up making a simple shape
-	        this._shape = this._sourceGeometry;
-	      } else {
-	        this._createShapeAsSphere();
-	      }
-	    }
-	  }, {
-	    key: '_createShapeAsBoundingBox',
-	    value: function _createShapeAsBoundingBox() {
-	      var boundingBox = this._sourceGeometry._updateBoundingBox();
-	      var width = boundingBox.max.x - boundingBox.min.x;
-	      var height = boundingBox.max.y - boundingBox.min.y;
-	      var length = boundingBox.max.z - boundingBox.min.z;
-	      var chamferRadius = 0;
-	      var box = new _SCNBox2.default(width, height, length, chamferRadius);
-	      this._shape = box;
-	      this._center = new _SCNVector2.default(boundingBox.min.x + width * 0.5, boundingBox.min.y + height * 0.5, boundingBox.min.z + length * 0.5);
-	    }
-	  }, {
-	    key: '_createShapeAsBox',
-	    value: function _createShapeAsBox() {
-	      // TODO: copy the geometry
-	      this._shape = this._sourceGeometry;
-	      this._center = new _SCNVector2.default(0, 0, 0);
-	    }
-	  }, {
-	    key: '_createShapeAsSphere',
-	    value: function _createShapeAsSphere() {
-	      if (this._sourceGeometry instanceof _SCNSphere2.default) {
-	        // TODO: copy the geometry
-	        this._shape = this._sourceGeometry;
-	        this._center = new _SCNVector2.default(0, 0, 0);
-	        return;
-	      }
-	      var boundingSphere = this._sourceGeometry.getBoundingSphere();
-	      var sphere = new _SCNSphere2.default(boundingSphere.radius);
-	      this._shape = sphere;
-	      this._center = boundingSphere.center;
-	    }
-
-	    // Getting Information About a Shape
-
-	    /**
-	     * The object that was used to create the shape.
-	     * @type {Object}
-	     * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508888-sourceobject
-	     */
-
-	  }, {
-	    key: '_createBtCollisionShape',
-
-
-	    /**
-	     * @access private
-	     * @returns {Ammo.btCollisionShape} -
-	     * @desc call Ammo.destroy(shape) after using it.
-	     */
-	    value: function _createBtCollisionShape() {
-	      if (this._sourceObject === null) {
-	        throw new Error('_sourceObject is null');
-	      }
-	      return this._sourceObject._createBtCollisionShape();
-	    }
-	  }, {
-	    key: 'sourceObject',
-	    get: function get() {
-	      return this._sourceObject;
-	    }
-
-	    /**
-	     * The options dictionary that was used to create the shape.
-	     * @type {?Map<SCNPhysicsShape.Option, Object>}
-	     * @desc You provide this dictionary in the init(geometry:options:) or init(node:options:) method. Use this dictionary along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(shapes:transforms:) method, this property’s value is nil.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508904-options
-	     */
-
-	  }, {
-	    key: 'options',
-	    get: function get() {
-	      return this._options;
-	    }
-	  }, {
-	    key: '_type',
-	    get: function get() {
-	      if (!this._options) {
-	        return null;
-	      }
-	      return this._options[_Option.type];
-	    }
-
-	    /**
-	     * The array of transforms that was used to create a compound shape.
-	     * @type {?NSValue[]}
-	     * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property's value is nil.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape/1508898-transforms
-	     */
-
-	  }, {
-	    key: 'transforms',
-	    get: function get() {
-	      return this._transforms;
-	    }
-
-	    // Structures
-
-	    /**
-	     * @type {Object} Option
-	     * @property {string} collisionMargin 
-	     * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.
-	     * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.
-	     * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape.option
-	     */
-
-	  }], [{
-	    key: 'Option',
-	    get: function get() {
-	      return _Option;
-	    }
-
-	    /**
-	     * @type {Object} ShapeType
-	     * @property {string} boundingBox The physics shape is the smallest box containing the geometry.
-	     * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.
-	     * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsshape.shapetype
-	     */
-
-	  }, {
-	    key: 'ShapeType',
-	    get: function get() {
-	      return _ShapeType;
-	    }
-	  }]);
-
-	  return SCNPhysicsShape;
-	}(_NSObject3.default);
-
-	exports.default = SCNPhysicsShape;
-
-/***/ },
-/* 188 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNMaterial = __webpack_require__(119);
-
-	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
-
-	var _SCNGeometry2 = __webpack_require__(127);
-
-	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
-
-	var _SCNGeometryElement = __webpack_require__(129);
-
-	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
-
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
-
-	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
-
-	var _SCNGeometrySource = __webpack_require__(128);
-
-	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
-
-	var _SCNVector = __webpack_require__(58);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	/**
-	 * A sphere (or ball or globe) geometry.
-	 * @access public
-	 * @extends {SCNGeometry}
-	 * @see https://developer.apple.com/documentation/scenekit/scnsphere
-	 */
-	var SCNSphere = function (_SCNGeometry) {
-	  _inherits(SCNSphere, _SCNGeometry);
-
-	  _createClass(SCNSphere, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        $constructor: function $constructor(propNames, propValues) {
-	          var sphere = new SCNSphere(propValues.sphereradius);
-	          sphere.isGeodesic = propValues.spheregeodesic;
-	          sphere.segmentCount = propValues.spheresegmentCount;
-	          sphere.name = propValues.name;
-	          sphere._sphereRadialSpan = propValues.sphereRadialSpan;
-	          sphere._isHemispheric = propValues.spherehemispheric;
-	          sphere._spherePrimitiveType = propValues.sphereprimitiveType;
-	          sphere.materials = propValues.materials;
-	          sphere.tessellator = propValues.tessellator;
-	          sphere.subdivisionLevel = propValues.subdivisionLevel;
-	          sphere.wantsAdaptiveSubdivision = propValues.wantsAdaptiveSubdivision;
-	          sphere._createGeometry();
-
-	          return sphere;
-	        },
-	        sphereradius: ['float', null],
-	        spheregeodesic: ['boolean', null],
-	        spheresegmentCount: ['integer', null],
-	        materials: ['NSArray', null],
-	        tessellator: ['SCNGeometryTessellator', null],
-	        wantsAdaptiveSubdivision: ['boolean', null],
-
-	        adaptiveSubdivision: ['boolean', null],
-	        name: ['string', null],
-	        sphereradialSpan: ['float', null],
-	        spherehemispheric: ['boolean', null],
-	        sphereprimitiveType: ['integer', null],
-	        subdivisionLevel: ['integer', null],
-	        subdivisionSettings: ['bytes', null]
-	      };
-	    }
-
-	    // Creating a Sphere
-
-	    /**
-	     * Creates a sphere geometry with the specified radius.
-	     * @access public
-	     * @constructor
-	     * @param {number} radius - The radius of the sphere in its local coordinate space.
-	     * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.
-	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1522601-init
-	     */
-
-	  }]);
-
-	  function SCNSphere() {
-	    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
-
-	    _classCallCheck(this, SCNSphere);
-
-	    // Adjusting a Sphere’s Dimensions
-
-	    /**
-	     * The radius of the sphere. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1523787-radius
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNSphere.__proto__ || Object.getPrototypeOf(SCNSphere)).call(this, [], []));
-
-	    _this.radius = radius;
-
-	    // Adjusting Geometric Detail
-
-	    /**
-	     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1523268-isgeodesic
-	     */
-	    _this.isGeodesic = false;
-
-	    /**
-	     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnsphere/1523912-segmentcount
-	     */
-	    _this.segmentCount = 24;
-
-	    _this._sphereRadialSpan = 0;
-	    _this._spherePrimitiveType = 0;
-	    _this._isHemispheric = false;
-
-	    _this._createGeometry();
-	    _this.materials.push(new _SCNMaterial2.default());
-	    return _this;
-	  }
-
-	  _createClass(SCNSphere, [{
-	    key: '_createGeometry',
-	    value: function _createGeometry() {
-	      var sourceData = [];
-	      var indexData = [];
-	      var vectorCount = (this.segmentCount + 1) * (this.segmentCount + 1);
-	      var primitiveCount = (this.segmentCount - 1) * this.segmentCount * 2;
-
-	      var yNom = [];
-	      var ySin = [];
-	      for (var lat = 0; lat <= this.segmentCount; lat++) {
-	        yNom.push(-Math.cos(Math.PI * lat / this.segmentCount));
-	        ySin.push(Math.sin(Math.PI * lat / this.segmentCount));
-	      }
-
-	      for (var lng = 0; lng <= this.segmentCount; lng++) {
-	        var x = -Math.sin(2.0 * Math.PI * lng / this.segmentCount);
-	        var z = -Math.cos(2.0 * Math.PI * lng / this.segmentCount);
-	        for (var _lat = 0; _lat <= this.segmentCount; _lat++) {
-	          var xNom = x * ySin[_lat];
-	          var zNom = z * ySin[_lat];
-
-	          // vertex
-	          sourceData.push(xNom * this.radius, yNom[_lat] * this.radius, zNom * this.radius
-
-	          // normal
-	          );sourceData.push(xNom, yNom[_lat], zNom
-
-	          // texcoord
-	          );sourceData.push(lng / this.segmentCount, 1.0 - _lat / this.segmentCount);
-	        }
-	      }
-
-	      for (var i = 0; i < this.segmentCount; i++) {
-	        var index1 = i * (this.segmentCount + 1);
-	        var index2 = index1 + this.segmentCount + 2;
-
-	        indexData.push(index1, index2, index1 + 1);
-	        index1 += 1;
-	        for (var j = 0; j < this.segmentCount - 2; j++) {
-	          indexData.push(index1, index2 + 1, index1 + 1);
-	          indexData.push(index1, index2, index2 + 1);
-	          index1 += 1;
-	          index2 += 1;
-	        }
-	        indexData.push(index1, index2, index2 + 1);
-	      }
-
-	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
-	      _SCNGeometrySource2.default.Semantic.vertex, // semantic
-	      vectorCount, // vectorCount
-	      true, // floatComponents
-	      3, // componentsPerVector
-	      4, // bytesPerComponent
-	      0, // offset
-	      32 // sride
-	      );
-
-	      var normalSource = new _SCNGeometrySource2.default(sourceData, // data
-	      _SCNGeometrySource2.default.Semantic.normal, // semantic
-	      vectorCount, // vectorCount
-	      true, // floatComponents
-	      3, // componentsPerVector
-	      4, // bytesPerComponent
-	      12, // offset
-	      32 // stride
-	      );
-
-	      var texcoordSource = new _SCNGeometrySource2.default(sourceData, // data
-	      _SCNGeometrySource2.default.Semantic.texcoord, // semantic
-	      vectorCount, // vectorCount
-	      true, // floatComponents
-	      2, // componentsPerVector
-	      4, // bytesPerComponent
-	      24, // offset
-	      32 // stride
-	      );
-
-	      var element = new _SCNGeometryElement2.default(indexData, _SCNGeometryPrimitiveType2.default.triangles);
-
-	      this._geometryElements = [element];
-	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
-	      this.boundingBox = {
-	        min: new _SCNVector2.default(-this.radius, -this.radius, -this.radius),
-	        max: new _SCNVector2.default(this.radius, this.radius, this.radius)
-	      };
-	    }
-	  }, {
-	    key: '_updateBoundingBoxForSkinner',
-	    value: function _updateBoundingBoxForSkinner() {
-	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-	      if (skinner === null) {
-	        return this.boundingBox;
-	      }
-	      return _get(SCNSphere.prototype.__proto__ || Object.getPrototypeOf(SCNSphere.prototype), '_updateBoundingBoxForSkinner', this).call(this, skinner);
-	    }
-	  }]);
-
-	  return SCNSphere;
-	}(_SCNGeometry3.default);
-
-	exports.default = SCNSphere;
-
-/***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -44954,151 +46767,7 @@ module.exports =
 	exports.default = SCNPhysicsCollisionCategory;
 
 /***/ },
-/* 190 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import SCNNode from './SCNNode'
-	//import SCNVector3 from './SCNVector3'
-
-	/**
-	 * Detailed information about a contact between two physics bodies in a scene’s physics simulation. 
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact
-	 */
-	var SCNPhysicsContact = function (_NSObject) {
-	  _inherits(SCNPhysicsContact, _NSObject);
-
-	  /**
-	   * constructor
-	   * @access public
-	   * @constructor
-	   */
-	  function SCNPhysicsContact() {
-	    _classCallCheck(this, SCNPhysicsContact);
-
-	    // Inspecting the Contact Properties
-
-	    var _this = _possibleConstructorReturn(this, (SCNPhysicsContact.__proto__ || Object.getPrototypeOf(SCNPhysicsContact)).call(this));
-
-	    _this._nodeA = null;
-	    _this._nodeB = null;
-	    _this._contactPoint = null;
-	    _this._contactNormal = null;
-	    _this._collisionImpulse = 0;
-	    _this._penetrationDistance = 0;
-	    return _this;
-	  }
-
-	  // Inspecting the Contact Properties
-
-	  /**
-	   * The node containing the first body in the contact.
-	   * @type {SCNNode}
-	   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
-	   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea
-	   */
-
-
-	  _createClass(SCNPhysicsContact, [{
-	    key: 'nodeA',
-	    get: function get() {
-	      return this._nodeA;
-	    }
-
-	    /**
-	     * The node containing the second body in the contact.
-	     * @type {SCNNode}
-	     * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb
-	     */
-
-	  }, {
-	    key: 'nodeB',
-	    get: function get() {
-	      return this._nodeB;
-	    }
-
-	    /**
-	     * The contact point between the two physics bodies, in scene coordinates.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint
-	     */
-
-	  }, {
-	    key: 'contactPoint',
-	    get: function get() {
-	      return this._contactPoint;
-	    }
-
-	    /**
-	     * The normal vector at the contact point between the two physics bodies, in scene coordinates.
-	     * @type {SCNVector3}
-	     * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal
-	     */
-
-	  }, {
-	    key: 'contactNormal',
-	    get: function get() {
-	      return this._contactNormal;
-	    }
-
-	    /**
-	     * The force over time of the collision, in newton-seconds.
-	     * @type {number}
-	     * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse
-	     */
-
-	  }, {
-	    key: 'collisionImpulse',
-	    get: function get() {
-	      return this._collisionImpulse;
-	    }
-
-	    /**
-	     * The distance of overlap, in units of scene coordinate space, between the two physics bodies.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance
-	     */
-
-	  }, {
-	    key: 'penetrationDistance',
-	    get: function get() {
-	      return this._penetrationDistance;
-	    }
-	  }]);
-
-	  return SCNPhysicsContact;
-	}(_NSObject3.default);
-
-	exports.default = SCNPhysicsContact;
-
-/***/ },
-/* 191 */
+/* 192 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45183,7 +46852,7 @@ module.exports =
 	exports.default = SCNPhysicsContactDelegate;
 
 /***/ },
-/* 192 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45472,7 +47141,7 @@ module.exports =
 	exports.default = SCNPhysicsField;
 
 /***/ },
-/* 193 */
+/* 194 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45496,7 +47165,7 @@ module.exports =
 	exports.default = SCNPhysicsFieldScope;
 
 /***/ },
-/* 194 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45507,7 +47176,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(184);
+	var _SCNPhysicsBehavior2 = __webpack_require__(189);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -45622,7 +47291,7 @@ module.exports =
 	exports.default = SCNPhysicsHingeJoint;
 
 /***/ },
-/* 195 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45631,7 +47300,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNPhysicsField2 = __webpack_require__(192);
+	var _SCNPhysicsField2 = __webpack_require__(193);
 
 	var _SCNPhysicsField3 = _interopRequireDefault(_SCNPhysicsField2);
 
@@ -45673,7 +47342,7 @@ module.exports =
 	exports.default = SCNPhysicsNoiseField;
 
 /***/ },
-/* 196 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45684,7 +47353,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(184);
+	var _SCNPhysicsBehavior2 = __webpack_require__(189);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -45860,7 +47529,7 @@ module.exports =
 	exports.default = SCNPhysicsSliderJoint;
 
 /***/ },
-/* 197 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45871,7 +47540,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsNoiseField2 = __webpack_require__(195);
+	var _SCNPhysicsNoiseField2 = __webpack_require__(196);
 
 	var _SCNPhysicsNoiseField3 = _interopRequireDefault(_SCNPhysicsNoiseField2);
 
@@ -45935,7 +47604,7 @@ module.exports =
 	exports.default = SCNPhysicsTurbulenceField;
 
 /***/ },
-/* 198 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45946,7 +47615,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(184);
+	var _SCNPhysicsBehavior2 = __webpack_require__(189);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
@@ -46093,7 +47762,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicle;
 
 /***/ },
-/* 199 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46257,1366 +47926,6 @@ module.exports =
 	exports.default = SCNPhysicsVehicleWheel;
 
 /***/ },
-/* 200 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	var _SCNBox = __webpack_require__(118);
-
-	var _SCNBox2 = _interopRequireDefault(_SCNBox);
-
-	var _SCNCapsule = __webpack_require__(136);
-
-	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
-
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
-
-	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
-
-	var _SCNGeometrySource = __webpack_require__(128);
-
-	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
-
-	var _SCNMatrix = __webpack_require__(60);
-
-	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
-
-	var _SCNPhysicsBodyType = __webpack_require__(186);
-
-	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
-
-	var _SCNPhysicsContact = __webpack_require__(190);
-
-	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
-
-	var _SCNPhysicsShape = __webpack_require__(187);
-
-	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
-
-	var _SCNSphere = __webpack_require__(188);
-
-	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
-
-	var _SCNVector = __webpack_require__(58);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//import SCNHitTestResult from './SCNHitTestResult'
-
-	//import SCNPhysicsBody from './SCNPhysicsBody'
-
-	//import SCNPhysicsBehavior from './SCNPhysicsBehavior'
-
-	//import SCNPhysicsContactDelegate from './SCNPhysicsContactDelegate'
-
-
-	//import _Ammo from '../third_party/ammo'
-
-	var _TestOption = {
-	  backfaceCulling: 'backfaceCulling',
-	  collisionBitMask: 'collisionBitMask',
-	  searchMode: 'results'
-	};
-
-	var _TestSearchMode = {
-	  all: 'all',
-	  any: 'any',
-	  closest: 'closest'
-
-	  /**
-	   * The global simulation of collisions, gravity, joints, and other physics effects in a scene.
-	   * @access public
-	   * @extends {NSObject}
-	   * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld
-	   */
-	};
-	var SCNPhysicsWorld = function (_NSObject) {
-	  _inherits(SCNPhysicsWorld, _NSObject);
-
-	  _createClass(SCNPhysicsWorld, null, [{
-	    key: '_propTypes',
-	    get: function get() {
-	      return {
-	        gravity: 'SCNVector3',
-	        speed: 'double',
-	        timeStep: 'double',
-	        scale: ['double', '_scale'],
-	        // _allBehaviors
-	        // contactDelegate
-	        scene: ['SCNScene', '_scene']
-	      };
-	    }
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @constructor
-	     */
-
-	  }]);
-
-	  function SCNPhysicsWorld() {
-	    _classCallCheck(this, SCNPhysicsWorld);
-
-	    // Managing the Physics Simulation
-
-	    /**
-	     * A vector that specifies the gravitational acceleration applied to physics bodies in the physics world.
-	     * @type {SCNVector3}
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512855-gravity
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNPhysicsWorld.__proto__ || Object.getPrototypeOf(SCNPhysicsWorld)).call(this));
-
-	    _this.gravity = new _SCNVector2.default(0, 0, 0);
-
-	    /**
-	     * The rate at which the simulation executes.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512851-speed
-	     */
-	    _this.speed = 0;
-
-	    /**
-	     * The time interval between updates to the physics simulation.
-	     * @type {number}
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512881-timestep
-	     */
-	    _this.timeStep = 0;
-
-	    /**
-	     * @access private
-	     * @type {number}
-	     */
-	    _this._scale = 1.0;
-
-	    // Registering Physics Behaviors
-
-	    _this._allBehaviors = [];
-
-	    // Detecting Contacts Between Physics Bodies
-
-	    /**
-	     * A delegate that is called when two physics bodies come in contact with each other.
-	     * @type {?SCNPhysicsContactDelegate}
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512843-contactdelegate
-	     */
-	    _this.contactDelegate = null;
-
-	    //const collisionConfiguration = new Ammo.btDefaultCollisionConfiguration()
-	    //const dispatcher = new Ammo.btCollisionDispatcher(collisionConfiguration)
-	    //const overlappingPairCache = new Ammo.btDbvtBroadphase()
-	    //const solver = new Ammo.btSequentialImpulseConstraintSolver()
-	    //this._world = new Ammo.btDiscreteDynamicsWorld(
-	    //  dispatcher, overlappingPairCache, solver, collisionConfiguration
-	    //)
-
-	    _this._prevTime = null;
-
-	    /**
-	     * @access private
-	     * @type {SCNScene}
-	     */
-	    _this._scene = null;
-
-	    // for rayTest
-	    _this._renderer = null;
-	    return _this;
-	  }
-
-	  // Managing the Physics Simulation
-
-	  /**
-	   * Forces the physics engine to reevaluate possible collisions between physics bodies.
-	   * @access public
-	   * @returns {void}
-	   * @desc By default, SceneKit checks for collisions between physics bodies only once per simulation step. If you directly change the positions of any physics bodies outside of a SCNPhysicsContactDelegate method, call the updateCollisionPairs() method before using any of the methods listed in Searching for Physics Bodies Detecting Contacts Between Physics Bodies.
-	   * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512877-updatecollisionpairs
-	   */
-
-
-	  _createClass(SCNPhysicsWorld, [{
-	    key: 'updateCollisionPairs',
-	    value: function updateCollisionPairs() {}
-
-	    // Registering Physics Behaviors
-
-	    /**
-	     * Adds a behavior to the physics world.
-	     * @access public
-	     * @param {SCNPhysicsBehavior} behavior - The behavior to be added.
-	     * @returns {void}
-	     * @desc Physics behaviors constrain or modify the effects of the physics simulation on sets of physics bodies. For example, the SCNPhysicsHingeJoint behavior causes two bodies to move as if connected by a hinge that pivots around a specific axis, and the SCNPhysicsVehicle behavior causes a body to roll like a car or other wheeled vehicle.To use a behavior in your scene, follow these steps:Create SCNPhysicsBody objects and attach them to each node that participates in the behavior.Create and configure a behavior object joining the physics bodies. See SCNPhysicsBehavior for a list of behavior classes.Call addBehavior(_:) on your scene’s physics world object to add the behavior to the physics simulation.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512839-addbehavior
-	     */
-
-	  }, {
-	    key: 'addBehavior',
-	    value: function addBehavior(behavior) {
-	      if (this._allBehaviors.indexOf(behavior) >= 0) {
-	        return;
-	      }
-	      this._allBehaviors.push(behavior);
-	    }
-
-	    /**
-	     * Removes a behavior from the physics world.
-	     * @access public
-	     * @param {SCNPhysicsBehavior} behavior - The behavior to be removed.
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512870-removebehavior
-	     */
-
-	  }, {
-	    key: 'removeBehavior',
-	    value: function removeBehavior(behavior) {
-	      var index = this._allBehaviors.indexOf(behavior);
-	      if (index < 0) {
-	        return;
-	      }
-	      this._allBehaviors.splice(index, 1);
-	    }
-
-	    /**
-	     * Removes all behaviors affecting bodies in the physics world.
-	     * @access public
-	     * @returns {void}
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512849-removeallbehaviors
-	     */
-
-	  }, {
-	    key: 'removeAllBehaviors',
-	    value: function removeAllBehaviors() {
-	      this._allBehaviors = [];
-	    }
-
-	    /**
-	     * The list of behaviors affecting bodies in the physics world.
-	     * @type {SCNPhysicsBehavior[]}
-	     * @desc 
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512853-allbehaviors
-	     */
-
-	  }, {
-	    key: 'contactTestBetween',
-
-
-	    // Detecting Contacts Between Physics Bodies
-
-	    /**
-	     * Checks for contacts between two physics bodies.
-	     * @access public
-	     * @param {SCNPhysicsBody} bodyA - The first body (to test for contact with the second).
-	     * @param {SCNPhysicsBody} bodyB - The second body (to test for contact with the first).
-	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
-	     * @returns {SCNPhysicsContact[]} - 
-	     * @desc SceneKit sends messages to the physics world’s contactDelegate object only when collisions occur between bodies whose collisionBitMask and categoryBitMask properties overlap, and only for collisions between certain types of bodies. (For details, see SCNPhysicsBodyType.) Use this method to directly test for contacts between any two bodies at a time of your choosing. For example, to implement a game where the player character can pick up an item, you might call this method when the player presses the “pick up” button to see if the player character is in contact with the item to be picked up.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512875-contacttestbetween
-	     */
-	    value: function contactTestBetween(bodyA, bodyB) {
-	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-
-	      // FIXME: use physics library
-	      if ((bodyA.categoryBitMask & bodyB.contactTestBitMask) === 0) {
-	        return [];
-	      }
-	      if (!bodyA.physicsShape || !bodyB.physicsShape) {
-	        return [];
-	      }
-	      if (bodyA.type === _SCNPhysicsBodyType2.default.static && bodyB.type === _SCNPhysicsBodyType2.default.static) {
-	        return [];
-	      }
-	      if (bodyA._position.sub(bodyB._position).length() > bodyA._radius + bodyB._radius) {
-	        return [];
-	      }
-	      var shapeA = bodyA.physicsShape._shape;
-	      var shapeB = bodyB.physicsShape._shape;
-
-	      if (shapeA instanceof _SCNBox2.default && shapeB instanceof _SCNBox2.default) {
-	        return this._contactTestBetweenBoxes(bodyA, bodyB, options);
-	      } else if (shapeA instanceof _SCNBox2.default && shapeB instanceof _SCNSphere2.default) {
-	        return this._contactTestBetweenBoxAndSphere(bodyA, bodyB, options);
-	      } else if (shapeB instanceof _SCNBox2.default && shapeA instanceof _SCNSphere2.default) {
-	        return this._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true);
-	      } else if (shapeA instanceof _SCNSphere2.default && shapeB instanceof _SCNSphere2.default) {
-	        return this._contactTestBetweenSpheres(bodyA, bodyB, options);
-	      }
-	      return [];
-	    }
-	  }, {
-	    key: '_contactTestBetweenBoxes',
-	    value: function _contactTestBetweenBoxes(boxA, boxB, options) {
-	      var shapeA = boxA.physicsShape._shape;
-	      var shapeB = boxB.physicsShape._shape;
-
-	      var tb = boxB._transform.mult(boxA._invTransform);
-	      var nb1 = new _SCNVector2.default(tb.m11, tb.m12, tb.m13).normalize();
-	      var nb2 = new _SCNVector2.default(tb.m21, tb.m22, tb.m23).normalize();
-	      var nb3 = new _SCNVector2.default(tb.m31, tb.m32, tb.m33).normalize();
-	      var b1 = nb1.mul(shapeB.width * 0.5);
-	      var b2 = nb2.mul(shapeB.height * 0.5);
-	      var b3 = nb3.mul(shapeB.length * 0.5);
-	      var d = tb.getTranslation();
-
-	      var lax = shapeA.width * 0.5;
-	      var lay = shapeA.height * 0.5;
-	      var laz = shapeA.length * 0.5;
-
-	      // Ae1
-	      var rA = lax;
-	      var rB = Math.abs(b1.x) + Math.abs(b2.x) + Math.abs(b3.x);
-	      var L = Math.abs(d.x);
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // Ae2
-	      rA = lay;
-	      rB = Math.abs(b1.y) + Math.abs(b2.y) + Math.abs(b3.y);
-	      L = Math.abs(d.y);
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // Ae3
-	      rA = laz;
-	      rB = Math.abs(b1.z) + Math.abs(b2.z) + Math.abs(b3.z);
-	      L = Math.abs(d.z);
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // Be1
-	      rA = Math.abs(nb1.x * lax) + Math.abs(nb1.y * lay) + Math.abs(nb1.z * laz);
-	      rB = b1.length();
-	      L = Math.abs(d.dot(nb1));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // Be2
-	      rA = Math.abs(nb2.x * lax) + Math.abs(nb2.y * lay) + Math.abs(nb2.z * laz);
-	      rB = b2.length();
-	      L = Math.abs(d.dot(nb2));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // Be3
-	      rA = Math.abs(nb3.x * lax) + Math.abs(nb3.y * lay) + Math.abs(nb3.z * laz);
-	      rB = b3.length();
-	      L = Math.abs(d.dot(nb3));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C11
-	      var axis = new _SCNVector2.default(0, -nb1.z, nb1.y);
-	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
-	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C12
-	      axis = new _SCNVector2.default(0, -nb2.z, nb2.y);
-	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
-	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C13
-	      axis = new _SCNVector2.default(0, -nb3.z, nb3.y);
-	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
-	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C21
-	      axis = new _SCNVector2.default(nb1.z, 0, -nb1.x);
-	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
-	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C22
-	      axis = new _SCNVector2.default(nb2.z, 0, -nb2.x);
-	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
-	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C23
-	      axis = new _SCNVector2.default(nb3.z, 0, -nb3.x);
-	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
-	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C31
-	      axis = new _SCNVector2.default(-nb1.y, nb1.x, 0);
-	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
-	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C32
-	      axis = new _SCNVector2.default(-nb2.y, nb2.x, 0);
-	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
-	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      // C33
-	      axis = new _SCNVector2.default(-nb3.y, nb3.x, 0);
-	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
-	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
-	      L = Math.abs(d.dot(axis));
-	      if (L > rA + rB) {
-	        return [];
-	      }
-
-	      var contact = new _SCNPhysicsContact2.default();
-	      contact._nodeA = boxA._node;
-	      contact._nodeB = boxB._node;
-	      contact._contactPoint = boxA._position.add(d.mul(0.5) // TODO: implement
-	      );contact._contactNormal = d.normalize // TODO: implement
-	      ();contact._penetrationDistance = 0; // TODO: implement
-
-	      return [contact];
-	    }
-	  }, {
-	    key: '_contactTestBetweenSpheres',
-	    value: function _contactTestBetweenSpheres(sphereA, sphereB, options) {
-	      var shapeA = sphereA.physicsShape._shape;
-	      var shapeB = sphereB.physicsShape._shape;
-
-	      var posA = sphereA._position;
-	      var posB = sphereB._position;
-	      var radA = shapeA.radius;
-	      var radB = shapeB.radius;
-	      var vec = posA.sub(posB);
-	      var l = vec.length();
-	      if (l > radA + radB) {
-	        return [];
-	      }
-	      var contact = new _SCNPhysicsContact2.default();
-	      contact._nodeA = sphereA._node;
-	      contact._nodeB = sphereB._node;
-	      contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5));
-	      contact._contactNormal = vec.mul(-1).normalize();
-	      contact._penetrationDistance = radA + radB - l;
-	      return [contact];
-	    }
-	  }, {
-	    key: '_contactTestBetweenBoxAndSphere',
-	    value: function _contactTestBetweenBoxAndSphere(box, sphere) {
-	      var reverse = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-	      var boxShape = box.physicsShape._shape;
-	      var sphereShape = sphere.physicsShape._shape;
-
-	      var size = new _SCNVector2.default();
-	      var transform = null;
-	      var spherePos = sphere._position.transform(box._invTransform);
-	      var v = new _SCNVector2.default();
-
-	      var w = boxShape.width * 0.5;
-	      var h = boxShape.height * 0.5;
-	      var l = boxShape.length * 0.5;
-	      if (Math.abs(spherePos.x) - w <= 0) {
-	        v.x = 0;
-	      } else {
-	        v.x = spherePos.x - w;
-	      }
-	      if (Math.abs(spherePos.y) - h <= 0) {
-	        v.y = 0;
-	      } else {
-	        v.y = spherePos.y - h;
-	      }
-	      if (Math.abs(spherePos.z) - l <= 0) {
-	        v.z = 0;
-	      } else {
-	        v.z = spherePos.z - l;
-	      }
-
-	      var d = v.length();
-	      if (d > sphereShape.radius) {
-	        return [];
-	      }
-
-	      var contact = new _SCNPhysicsContact2.default();
-	      if (reverse) {
-	        contact._nodeA = sphere._node;
-	        contact._nodeB = box._node;
-	      } else {
-	        contact._nodeA = box._node;
-	        contact._nodeB = sphere._node;
-	      }
-
-	      contact._contactPoint = v.transform(box._transform);
-	      contact._contactNormal = v.rotate(box._transform).normalize();
-	      if (reverse) {
-	        contact._contactNormal = contact._contactNormal.mul(-1);
-	      }
-	      contact._penetrationDistance = d - sphereShape.radius;
-	      return [contact];
-	    }
-
-	    /**
-	     * Checks for contacts between one physics body and any other bodies in the physics world.
-	     * @access public
-	     * @param {SCNPhysicsBody} body - The body to test for contact.
-	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
-	     * @returns {SCNPhysicsContact[]} - 
-	     * @desc SceneKit sends messages to the physics world’s contactdelegate object only when collisions occur between bodies whose collisionBitMask and categoryBitMask properties overlap, and only for collisions between certain types of bodies. (For details, see SCNPhysicsBodyType.) Use this method to directly test for all contacts between one body and any other bodies at a time of your choosing. For example, to implement a game with a “wall jump” effect, you could call this method when the player presses the jump button to see if the player character is in contact with any walls.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512841-contacttest
-	     */
-
-	  }, {
-	    key: 'contactTestWith',
-	    value: function contactTestWith(body) {
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-	      return [];
-	    }
-
-	    // Searching for Physics Bodies
-
-	    /**
-	     * Searches for physics bodies along a line segment between two points in the physics world.
-	     * @access public
-	     * @param {SCNVector3} origin - An endpoint of the line segment to search, specified in the scene’s world coordinate system.
-	     * @param {SCNVector3} dest - The other endpoint of the line segment to search, specified in the scene’s world coordinate system.
-	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
-	     * @returns {SCNHitTestResult[]} - 
-	     * @desc Use this method to implement concepts such as line of sight in your app. For example, in a game you might implement behavior for an enemy character by searching for physics bodies along a line between the enemy character’s position and the player character’s position, as illustrated below:// Options: Look only for the closest object along line of sight,
-	    // and use the collision bitmask to avoid finding the enemy itself.
-	    NSDictionary *options = @{ SCNPhysicsTestSearchModeKey : SCNPhysicsTestSearchModeClosest,
-	                       SCNPhysicsTestCollisionBitMaskKey : @(kMyCategoryPlayer) };
-	    NSArray *results = [physicsWorld rayTestWithSegmentFromPoint:enemy.position
-	                                                       toPoint:player.position
-	                                                       options:options];
-	    if (results.firstObject.node == player) {
-	      // Enemy can see player: begin pursuit.
-	    } else {
-	      // Enemy cannot see player: remain idle.
-	    }
-	    // Options: Look only for the closest object along line of sight,
-	    // and use the collision bitmask to avoid finding the enemy itself.
-	    NSDictionary *options = @{ SCNPhysicsTestSearchModeKey : SCNPhysicsTestSearchModeClosest,
-	                       SCNPhysicsTestCollisionBitMaskKey : @(kMyCategoryPlayer) };
-	    NSArray *results = [physicsWorld rayTestWithSegmentFromPoint:enemy.position
-	                                                       toPoint:player.position
-	                                                       options:options];
-	    if (results.firstObject.node == player) {
-	      // Enemy can see player: begin pursuit.
-	    } else {
-	      // Enemy cannot see player: remain idle.
-	    }
-	      * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512857-raytestwithsegment
-	     */
-
-	  }, {
-	    key: 'rayTestWithSegmentFromTo',
-	    value: function rayTestWithSegmentFromTo(origin, dest) {
-	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-
-	      var opt = options;
-	      if (Array.isArray(options)) {
-	        opt = new Map(options);
-	      } else if (options === null) {
-	        opt = new Map();
-	      }
-	      var results = [];
-
-	      var backfaceCulling = true;
-	      var collisionBitMask = -1;
-	      var searchMode = _TestSearchMode.any;
-	      if (opt.has(_TestOption.backfaceCulling)) {
-	        backfaceCulling = opt.get(_TestOption.backfaceCulling);
-	      }
-	      if (opt.has(_TestOption.collisionBitMask)) {
-	        collisionBitMask = opt.get(_TestOption.collisionBitMask);
-	      }
-	      if (opt.has(_TestOption.searchMode)) {
-	        searchMode = opt.get(_TestOption.searchMode);
-	      }
-
-	      return this._renderer._physicsHitTestByGPU(origin, dest, opt);
-	    }
-
-	    /**
-	     * Searches for physics bodies in the space formed by moving a convex shape through the physics world.
-	     * @access public
-	     * @param {SCNPhysicsShape} shape - A physics shape. This shape must enclose a convex volume. For details on creating shapes that satisfy this requirement, see SCNPhysicsShape.
-	     * @param {SCNMatrix4} from - A transform matrix representing the initial position and orientation of the shape.
-	     * @param {SCNMatrix4} to - A transform matrix representing the final position and orientation of the shape.
-	     * @param {?Map<SCNPhysicsWorld.TestOption, Object>} [options = null] - A dictionary of options affecting the test, or nil to use default options. For applicable keys and the possible values, see Physics Test Options Keys.
-	     * @returns {SCNPhysicsContact[]} - 
-	     * @desc Use this method when it’s important to plan for (or avoid) collisions ahead of the physics simulation. For example, in a game you might plan maneuvers for a flying character to fit through the gaps between static bodies in the physics world, as illustrated below:// Look for potential collisions along the spaceship's current path.
-	    SCNMatrix4 current = spaceship.transform;
-	    SCNMatrix4 upAhead = SCNMatrix4Translate(current, 0, 0, LOOK_AHEAD_DISTANCE);
-	    NSArray *contacts = [physicsWorld convexSweepTestWithShape:spaceship.physicsBody.physicsShape
-	                                               fromTransform:current
-	                                                 toTransform:upAhead
-	                                                     options:nil];
-	    if (contacts.count == 0) {
-	      // Flight path looks okay.
-	    } else {
-	      // Flight path will cause a collision: look for another way around.
-	    }
-	    // Look for potential collisions along the spaceship's current path.
-	    SCNMatrix4 current = spaceship.transform;
-	    SCNMatrix4 upAhead = SCNMatrix4Translate(current, 0, 0, LOOK_AHEAD_DISTANCE);
-	    NSArray *contacts = [physicsWorld convexSweepTestWithShape:spaceship.physicsBody.physicsShape
-	                                               fromTransform:current
-	                                                 toTransform:upAhead
-	                                                     options:nil];
-	    if (contacts.count == 0) {
-	      // Flight path looks okay.
-	    } else {
-	      // Flight path will cause a collision: look for another way around.
-	    }
-	      * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512859-convexsweeptest
-	     */
-
-	  }, {
-	    key: 'convexSweepTestWith',
-	    value: function convexSweepTestWith(shape, from, to) {
-	      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
-
-	      // TODO: implement
-	      return [];
-	    }
-
-	    // Structures
-
-	    /**
-	     * @type {Object} TestOption
-	     * @property {string} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
-	     * @property {string} collisionBitMask The key for selecting which categories of physics bodies that SceneKit should test for contacts.
-	     * @property {string} searchMode The key for selecting the number and order of contacts to be tested.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld.testoption
-	     */
-
-	  }, {
-	    key: '_simulate',
-	    value: function _simulate(time) {
-	      // FIXME: use physics library
-	      //this._world.stepSimulation(1.0/60.0, 0)
-	      if (!this._renderer) {
-	        return;
-	      }
-
-	      var objects = this._renderer._createRenderingPhysicsNodeArray();
-	      var contacts = [];
-
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
-
-	      try {
-	        for (var _iterator = objects[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var obj = _step.value;
-
-	          var body = obj.physicsBody;
-	          body._prevPosition = body._position;
-	          if (body.type === _SCNPhysicsBodyType2.default.kinematic) {
-	            body._resetTransform();
-	          } else if (body.type === _SCNPhysicsBodyType2.default.dynamic) {
-	            // TODO: move physics bodies
-	          }
-	          body._positionDiff = body._position.sub(body._prevPosition);
-	        }
-	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
-	          }
-	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
-	          }
-	        }
-	      }
-
-	      var staticType = _SCNPhysicsBodyType2.default.static;
-	      for (var i = 0; i < objects.length; i++) {
-	        var bodyA = objects[i].presentation.physicsBody;
-	        if (bodyA.physicsShape._sourceGeometry instanceof _SCNCapsule2.default) {
-	          contacts.push.apply(contacts, _toConsumableArray(this._capsuleTestWithObjects(bodyA, objects)));
-	        }
-	        for (var j = 0; j < objects.length; j++) {
-	          if (i === j) {
-	            continue;
-	          }
-	          var bodyB = objects[j].presentation.physicsBody;
-	          contacts.push.apply(contacts, _toConsumableArray(this.contactTestBetween(bodyA, bodyB)));
-	        }
-	      }
-
-	      if (this.contactDelegate) {
-	        var _iteratorNormalCompletion2 = true;
-	        var _didIteratorError2 = false;
-	        var _iteratorError2 = undefined;
-
-	        try {
-	          for (var _iterator2 = contacts[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	            var contact = _step2.value;
-
-	            if (this.contactDelegate.physicsWorldDidBegin) {
-	              this.contactDelegate.physicsWorldDidBegin(this, contact);
-	            }
-	          }
-	          // TODO: callback
-	          // this.contactDelegate.physicsWorldDidUpdate
-	          // this.contactDelegate.physicsWorldDidEnd
-	        } catch (err) {
-	          _didIteratorError2 = true;
-	          _iteratorError2 = err;
-	        } finally {
-	          try {
-	            if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	              _iterator2.return();
-	            }
-	          } finally {
-	            if (_didIteratorError2) {
-	              throw _iteratorError2;
-	            }
-	          }
-	        }
-	      }
-
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
-
-	      try {
-	        for (var _iterator3 = objects[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var _obj = _step3.value;
-
-	          var _body = _obj.physicsBody;
-	          _body._prevPosition = _body._position;
-	        }
-	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
-	          }
-	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
-	          }
-	        }
-	      }
-	    }
-	  }, {
-	    key: '_capsuleTestWithObjects',
-	    value: function _capsuleTestWithObjects(body, objects) {
-	      var result = [];
-
-	      var objs = objects.filter(function (obj) {
-	        var bodyB = obj.presentation.physicsBody;
-	        if (bodyB === body) {
-	          return false;
-	        }
-	        if (bodyB.physicsShape._type !== _SCNPhysicsShape2.default.ShapeType.concavePolyhedron) {
-	          return false;
-	        }
-	        if ((body.categoryBitMask & bodyB.contactTestBitMask) !== 0) {
-	          return true;
-	        }
-	        if ((bodyB.categoryBitMask & body.contactTestBitMask) !== 0) {
-	          return true;
-	        }
-	        return false;
-	      });
-	      if (objs.length === 0) {
-	        return result;
-	      }
-
-	      var bodyTransform = body._node._worldTransform;
-	      var capsule = body.physicsShape._sourceGeometry;
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
-
-	      try {
-	        for (var _iterator4 = objs[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var obj = _step4.value;
-
-	          if (!this._intersectsBoundingBox(body._node, obj)) {
-	            continue;
-	          }
-
-	          var contacts = this._contactTestCapsuleAndConcave(body._node, obj);
-	          result.push.apply(result, _toConsumableArray(contacts));
-	        }
-	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
-	          }
-	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
-	          }
-	        }
-	      }
-
-	      return result;
-	    }
-	  }, {
-	    key: '_intersectsBoundingBox',
-	    value: function _intersectsBoundingBox(node1, node2) {
-	      var pos1 = node1._worldTranslation;
-	      var pos2 = node2._worldTranslation;
-	      var geo1 = node1.physicsBody.physicsShape._sourceGeometry;
-	      var geo2 = node2.physicsBody.physicsShape._sourceGeometry;
-	      if (!geo1 || !geo2) {
-	        return false;
-	      }
-	      var box1 = geo1.boundingBox;
-	      var box2 = geo2.boundingBox;
-	      if (box1.min.x + pos1.x > box2.max.x + pos2.x || box1.max.x + pos1.x < box2.min.x + pos2.x) {
-	        return false;
-	      }
-	      if (box1.min.y + pos1.y > box2.max.y + pos2.y || box1.max.y + pos1.y < box2.min.y + pos2.y) {
-	        return false;
-	      }
-	      if (box1.min.z + pos1.z > box2.max.z + pos2.z || box1.max.z + pos1.z < box2.min.z + pos2.z) {
-	        return false;
-	      }
-	      return true;
-	    }
-	  }, {
-	    key: '_contactTestCapsuleAndConcave',
-	    value: function _contactTestCapsuleAndConcave(capNode, conNode) {
-	      var result = [];
-	      var capBody = capNode.physicsBody;
-	      var conBody = conNode.physicsBody;
-	      var capsule = capBody.physicsShape._sourceGeometry;
-	      var concave = conBody.physicsShape._sourceGeometry;
-	      var transform = capBody._transform.mult(conBody._invTransform);
-	      var capSize = capsule.capRadius;
-	      var capHeight = capsule.height * 0.5 - capSize;
-	      var capV = capBody._positionDiff.rotate(transform).normalize();
-	      var p0 = new _SCNVector2.default(0, capHeight, 0).transform(transform);
-	      var p1 = new _SCNVector2.default(0, -capHeight, 0).transform(transform);
-	      var elems = concave.geometryElements;
-	      var vert = concave.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
-
-	      var _iteratorNormalCompletion5 = true;
-	      var _didIteratorError5 = false;
-	      var _iteratorError5 = undefined;
-
-	      try {
-	        for (var _iterator5 = elems[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-	          var elem = _step5.value;
-
-	          if (elem._primitiveType !== _SCNGeometryPrimitiveType2.default.triangles) {
-	            continue;
-	          }
-	          var edata = elem._data;
-	          var elen = elem._primitiveCount;
-	          var ind = 0;
-	          //console.warn(`    elen = ${elen}`)
-	          for (var i = 0; i < elen; i++) {
-	            var v0 = vert._scnVectorAt(edata[ind]);
-	            var v1 = vert._scnVectorAt(edata[ind + 1]);
-	            var v2 = vert._scnVectorAt(edata[ind + 2]);
-	            ind += 3;
-
-	            //const n = this._normalOfTriangle(v0, v1, v2)
-	            //if(n.dot(capV) >= 0){
-	            //  continue
-	            //}
-
-	            var contactInfo = this._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2);
-	            if (contactInfo) {
-	              var contact = new _SCNPhysicsContact2.default();
-	              contact._nodeA = capNode;
-	              contact._nodeB = conNode;
-	              contact._contactPoint = contactInfo.point;
-	              contact._contactNormal = contactInfo.normal;
-	              contact._penetrationDistance = contactInfo.penetration;
-	              result.push(contact);
-	            }
-	          }
-	        }
-	        //console.warn(`    result length = ${result.length}`)
-	      } catch (err) {
-	        _didIteratorError5 = true;
-	        _iteratorError5 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
-	            _iterator5.return();
-	          }
-	        } finally {
-	          if (_didIteratorError5) {
-	            throw _iteratorError5;
-	          }
-	        }
-	      }
-
-	      return result;
-	    }
-
-	    // http://marupeke296.com/COL_3D_No27_CapsuleCapsule.html
-
-	    /**
-	     * 
-	     * @access private
-	     * @param {SCNVector3} p0 - position of an edge of the capsule (in the triangle's coordinate)
-	     * @param {SCNVector3} p1 - position of another edge of the capsule (in the triangle's coordinate)
-	     * @param {number} capSize - capsule radius
-	     * @param {SCNVector3} v0 - vertex position (in the triangle's coordinate)
-	     * @param {SCNVector3} v1 - vertex position (in the triangle's coordinate)
-	     * @param {SCNVector3} v2 - vertex position (in the triangle's coordinate)
-	     * @returns {?Object} -
-	     *    {SCNVector3} point -
-	     *    {SCNVector3} normal -
-	     *    {number} distance -
-	     */
-
-	  }, {
-	    key: '_capsuleTriangleContact',
-	    value: function _capsuleTriangleContact(p0, p1, capSize, v0, v1, v2) {
-	      var seg = p1.sub(p0);
-
-	      var segTri = this._segmentTriangleIntersection(p0, p1, v0, v1, v2);
-	      if (segTri.intersection) {
-	        var penetration = 0;
-	        if (segTri.d0 < 0) {
-	          penetration = capSize - segTri.d0;
-	        } else {
-	          penetration = capSize - segTri.d1;
-	        }
-	        return {
-	          point: segTri.intersection,
-	          normal: segTri.normal,
-	          distance: 0,
-	          penetration: penetration
-	        };
-	      }
-
-	      var d0 = this._segmentSegmentDist(p0, p1, v0, v1);
-	      var min = d0;
-
-	      var d1 = this._segmentSegmentDist(p0, p1, v1, v2);
-	      if (d1.distance < min.distance) {
-	        min = d1;
-	      }
-
-	      var d2 = this._segmentSegmentDist(p0, p1, v2, v0);
-	      if (d2.distance < min.distance) {
-	        min = d2;
-	      }
-
-	      var h0 = p0.add(segTri.normal.mul(-segTri.d0));
-	      if (this._pointIsInsideTriangle(h0, v0, v1, v2)) {
-	        if (Math.abs(segTri.d0) < min.distance) {
-	          min.distance = Math.abs(segTri.d0);
-	          min.nearestPos1 = h0;
-	        }
-	      }
-
-	      var h1 = p1.add(segTri.normal.mul(-segTri.d1));
-	      if (this._pointIsInsideTriangle(h1, v0, v1, v2)) {
-	        if (Math.abs(segTri.d1) < min.distance) {
-	          min.distance = Math.abs(segTri.d1);
-	          min.nearestPos1 = h1;
-	        }
-	      }
-
-	      if (min.distance < capSize) {
-	        return {
-	          point: min.nearestPos1,
-	          normal: segTri.normal,
-	          distance: 0,
-	          penetration: capSize - min.distance
-	        };
-	      }
-
-	      return null;
-	    }
-
-	    /**
-	     *
-	     * @access private
-	     * @param {SCNVector3} p0 - an edge of the segment
-	     * @param {SCNVector3} p1 - another edge of the segment
-	     * @param {SCNVector3} v0 - the fist point of the vertex
-	     * @param {SCNVector3} v1 - the second point of the vertex
-	     * @param {SCNVector3} v2 - the third point of the vertex
-	     * @returns {Object} -
-	     *    {SCNVector3} normal - normal vector of the vertex
-	     *    {number} d0 - distance between p0 and the plane which contains the vertex
-	     *    {number} d1 - distance between p1 and the plane which contains the vertex
-	     *    {?SCNVector3} intersection - intersection point of the segment and the vertex
-	     */
-
-	  }, {
-	    key: '_segmentTriangleIntersection',
-	    value: function _segmentTriangleIntersection(p0, p1, v0, v1, v2) {
-	      var v0p0 = p0.sub(v0);
-	      var v0p1 = p1.sub(v0);
-	      var n = this._normalOfTriangle(v0, v1, v2);
-	      var d0 = v0p0.dot(n);
-	      var d1 = v0p1.dot(n);
-	      var result = { normal: n, d0: d0, d1: d1, intersection: null };
-	      if (d0 * d1 > 0) {
-	        return result;
-	      }
-	      var t = d0 / (d0 - d1);
-	      var h = v0p0.mul(1 - t).add(v0p1.mul(t));
-	      if (!this._pointIsInsideTriangle(h, v0, v1, v2)) {
-	        return result;
-	      }
-	      result.intersection = h;
-	      return result;
-	    }
-
-	    /**
-	     * 
-	     * @access private
-	     * @param {SCNVector3} p0 - the first point of the triangle
-	     * @param {SCNVector3} p1 - the second point of the triangle
-	     * @param {SCNVector3} p2 - the third point of the triangle
-	     * @returns {SCNVector3} - normal vector (normalized)
-	     */
-
-	  }, {
-	    key: '_normalOfTriangle',
-	    value: function _normalOfTriangle(p0, p1, p2) {
-	      var v1 = p1.sub(p0);
-	      var v2 = p2.sub(p0);
-	      return v1.cross(v2).normalize();
-	    }
-
-	    /**
-	     * 
-	     * @access private
-	     * @param {SCNVector3} p - point
-	     * @param {SCNVector3} p0 - the first point of the triangle
-	     * @param {SCNVector3} p1 - the second point of the triangle
-	     * @param {SCNVector3} p2 - the third point of the triangle
-	     * @returns {boolean} - true if the point is in the triangle.
-	     */
-
-	  }, {
-	    key: '_pointIsInsideTriangle',
-	    value: function _pointIsInsideTriangle(p, p0, p1, p2) {
-	      var n = this._normalOfTriangle(p0, p1, p2);
-	      var v0 = p1.sub(p0).cross(n).dot(p.sub(p0));
-	      var v1 = p2.sub(p1).cross(n).dot(p.sub(p1));
-	      var v2 = p0.sub(p2).cross(n).dot(p.sub(p2));
-
-	      if (v0 < 0 && v1 < 0 && v2 < 0) {
-	        return true;
-	      }
-	      if (v0 > 0 && v1 > 0 && v2 > 0) {
-	        return true;
-	      }
-	      return false;
-	    }
-
-	    /**
-	     * 
-	     * @access private
-	     * @param {SCNVector3} p - point
-	     * @param {SCNVector3} lp - a point on the line
-	     * @param {SCNVector3} lv - line vector
-	     * @returns {Object} -
-	     *    {number} coeff -
-	     *    {SCNVector3} nearestPos -
-	     *    {number} distance -
-	     */
-
-	  }, {
-	    key: '_pointLineDist',
-	    value: function _pointLineDist(p, lp, lv) {
-	      var len2 = lv.length2();
-	      var t = 0;
-	      if (len2 > 0) {
-	        t = lv.dot(p.sub(lp)) / len2;
-	      }
-	      var h = lp.add(lv.mul(t));
-	      var d = h.sub(p).length();
-	      return {
-	        coeff: t,
-	        nearestPos: h,
-	        distance: d
-	      };
-	    }
-
-	    /**
-	     *
-	     * @access private
-	     * @param {SCNVector3} p - point
-	     * @param {SCNVector3} s0 - an edge of the segment
-	     * @param {SCNVector3} s1 - another edge of the segment
-	     * @returns {Object} -
-	     *    {number} coeff -
-	     *    {SCNVector3} nearestPos -
-	     *    {number} distance -
-	     */
-
-	  }, {
-	    key: '_pointSegmentDist',
-	    value: function _pointSegmentDist(p, s0, s1) {
-	      var lv = s1.sub(s0);
-	      var plDist = this._pointLineDist(p, s0, lv);
-	      if (plDist.coeff < 0) {
-	        var d = s0.sub(p).length();
-	        return {
-	          coeff: plDist.coeff,
-	          nearestPos: s0,
-	          distance: d
-	        };
-	      } else if (plDist.coeff > 1) {
-	        var _d = s1.sub(p).length();
-	        return {
-	          coeff: plDist.coeff,
-	          nearestPos: s1,
-	          distance: _d
-	        };
-	      }
-	      return plDist;
-	    }
-
-	    /**
-	     *
-	     * @access private
-	     * @param {SCNVector3} p0 - a point on the first line
-	     * @param {SCNVector3} v0 - a line vector
-	     * @param {SCNVector3} p1 - a point on the second line
-	     * @param {SCNVector3} v1 - a line vector
-	     * @returns {Object} -
-	     *    {number} coeff0 -
-	     *    {SCNVector3} nearestPos0 - 
-	     *    {number} coeff1 -
-	     *    {SCNVector3} nearestPos1 -
-	     *    {number} distance -
-	     */
-
-	  }, {
-	    key: '_lineLineDist',
-	    value: function _lineLineDist(p0, v0, p1, v1) {
-	      if (this._isParallel(v0, v1)) {
-	        var plDist = this._pointLineDist(p0, p1, v1);
-	        return {
-	          coeff0: 0,
-	          nearestPos0: p0,
-	          coeff1: plDist.coeff,
-	          nearestPos1: plDist.nearestPos,
-	          distance: plDist.distance
-	        };
-	      }
-
-	      var v01 = v0.dot(v1);
-	      var v00 = v0.dot(v0);
-	      var v11 = v1.dot(v1);
-	      var p10 = p0.sub(p1);
-	      var coeff0 = (v01 * v1.dot(p10) - v11 * v0.dot(p10)) / (v00 * v11 - v01 * v01);
-	      var np0 = p0.add(v0.mul(coeff0));
-	      var coeff1 = v1.dot(np0.sub(p1)) / v11;
-	      var np1 = p1.add(v1.mul(coeff1));
-	      var d = np1.sub(np0).length();
-
-	      return {
-	        coeff0: coeff0,
-	        nearestPos0: np0,
-	        coeff1: coeff1,
-	        nearestPos1: np1,
-	        distance: d
-	      };
-	    }
-
-	    /**
-	     *
-	     * @access private
-	     * @param {SCNVector3} v0 - line vector
-	     * @param {SCNVector3} v1 - line vector
-	     * @returns {boolean} - true if the lines are parallel
-	     */
-
-	  }, {
-	    key: '_isParallel',
-	    value: function _isParallel(v0, v1) {
-	      var l = v0.cross(v1).length2();
-	      return l < 0.0000000000001;
-	    }
-	  }, {
-	    key: '_clamp',
-	    value: function _clamp(val) {
-	      if (val < 0) {
-	        return 0;
-	      }
-	      if (val > 1) {
-	        return 1;
-	      }
-	      return val;
-	    }
-
-	    /**
-	     *
-	     * @access private
-	     * @param {SCNVector3} s00 - an edge of the first segment
-	     * @param {SCNVector3} s01 - another edge of the first segment
-	     * @param {SCNVector3} s10 - an edge of the second segment
-	     * @param {SCNVector3} s11 - another edge of the second segment
-	     * @returns {Object} -
-	     *    {number} coeff0 -
-	     *    {SCNVector3} nearestPos0 -
-	     *    {number} coeff1 -
-	     *    {SCNVector3} nearestPos1 -
-	     *    {number} distance -
-	     */
-
-	  }, {
-	    key: '_segmentSegmentDist',
-	    value: function _segmentSegmentDist(s00, s01, s10, s11) {
-	      var v0 = s01.sub(s00);
-	      var v1 = s11.sub(s10);
-	      var dist = null;
-	      if (this._isParallel(v0, v1)) {
-	        dist = this._pointSegmentDist(s00, s10, s11);
-	        if (0.0 <= dist.coeff && dist.coeff <= 1.0) {
-	          return {
-	            coeff0: 0.0,
-	            nearestPos0: s00,
-	            coeff1: dist.coeff,
-	            nearestPos1: dist.nearestPos,
-	            distance: dist.distance
-	          };
-	        }
-	        dist.coeff0 = 0.0;
-	        dist.coeff1 = dist.coeff;
-	      } else {
-	        dist = this._lineLineDist(s00, v0, s10, v1);
-	        if (0.0 <= dist.coeff0 && dist.coeff0 <= 1.0 && 0.0 <= dist.coeff1 && dist.coeff1 <= 1.0) {
-	          return dist;
-	        }
-	      }
-
-	      var dist2 = dist;
-	      var t0 = this._clamp(dist.coeff0);
-	      if (t0 !== dist.coeff0) {
-	        var p0 = s00.add(v0.mul(t0));
-	        dist2 = this._pointSegmentDist(p0, s10, s11);
-	        if (0.0 <= dist2.coeff && dist2.coeff <= 1.0) {
-	          return {
-	            coeff0: t0,
-	            nearestPos0: p0,
-	            coeff1: dist2.coeff,
-	            nearestPos1: dist2.nearestPos,
-	            distance: dist2.distance
-	          };
-	        }
-	        dist2.coeff1 = dist2.coeff;
-	      }
-
-	      var t1 = this._clamp(dist2.coeff1);
-	      var p1 = s10.add(v1.mul(t1));
-	      var dist3 = this._pointSegmentDist(p1, s00, s01);
-	      if (0.0 <= dist3.coeff && dist3.coeff <= 1.0) {
-	        return {
-	          coeff0: dist3.coeff,
-	          nearestPos0: dist3.nearestPos,
-	          coeff1: t1,
-	          nearestPos1: p1,
-	          distance: dist3.distance
-	        };
-	      }
-
-	      var t = this._clamp(dist3.coeff);
-	      var p = s00.add(v0.mul(t));
-	      var d = p1.sub(p).length();
-	      return {
-	        coeff0: t,
-	        nearestPos0: p,
-	        coeff1: t1,
-	        nearestPos1: p1,
-	        distance: d
-	      };
-	    }
-	  }, {
-	    key: 'allBehaviors',
-	    get: function get() {
-	      return this._allBehaviors.slice(0);
-	    }
-	  }], [{
-	    key: 'TestOption',
-	    get: function get() {
-	      return _TestOption;
-	    }
-	    /**
-	     * @type {Object} TestSearchMode
-	     * @property {string} all Searches should return all contacts matching the search parameters.
-	     * @property {string} any Searches should return only the first contact found regardless of its position relative to the search parameters.
-	     * @property {string} closest Searches should return only the closest contact to the beginning of the search.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld.testsearchmode
-	     */
-
-	  }, {
-	    key: 'TestSearchMode',
-	    get: function get() {
-	      return _TestSearchMode;
-	    }
-	  }]);
-
-	  return SCNPhysicsWorld;
-	}(_NSObject3.default);
-
-	exports.default = SCNPhysicsWorld;
-
-/***/ },
 /* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -47628,23 +47937,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -48278,23 +48587,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -48914,15 +49223,15 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNBox = __webpack_require__(118);
+	var _SCNBox = __webpack_require__(88);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -48930,11 +49239,11 @@ module.exports =
 
 	var _SCNSceneSource2 = _interopRequireDefault(_SCNSceneSource);
 
-	var _SCNPhysicsWorld = __webpack_require__(200);
+	var _SCNPhysicsWorld = __webpack_require__(87);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _BinaryRequest2 = __webpack_require__(182);
+	var _BinaryRequest2 = __webpack_require__(187);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
@@ -49555,7 +49864,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _BinaryRequest2 = __webpack_require__(182);
+	var _BinaryRequest2 = __webpack_require__(187);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
@@ -49930,7 +50239,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -49950,15 +50259,15 @@ module.exports =
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNPhysicsWorld = __webpack_require__(200);
+	var _SCNPhysicsWorld = __webpack_require__(87);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNCamera = __webpack_require__(134);
+	var _SCNCamera = __webpack_require__(141);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNLight = __webpack_require__(151);
+	var _SCNLight = __webpack_require__(156);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
@@ -49970,19 +50279,19 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNHitTestOption = __webpack_require__(146);
+	var _SCNHitTestOption = __webpack_require__(152);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(147);
+	var _SCNHitTestResult = __webpack_require__(104);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -57083,7 +57392,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -57184,7 +57493,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -57756,7 +58065,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -57982,23 +58291,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -58313,23 +58622,23 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SCNGeometry2 = __webpack_require__(127);
+	var _SCNGeometry2 = __webpack_require__(99);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometryElement = __webpack_require__(129);
+	var _SCNGeometryElement = __webpack_require__(101);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(130);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(128);
+	var _SCNGeometrySource = __webpack_require__(100);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMaterial = __webpack_require__(119);
+	var _SCNMaterial = __webpack_require__(89);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -58950,7 +59259,7 @@ module.exports =
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNAntialiasingMode = __webpack_require__(109);
+	var _SCNAntialiasingMode = __webpack_require__(130);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
@@ -65615,7 +65924,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryRequest2 = __webpack_require__(182);
+	var _BinaryRequest2 = __webpack_require__(187);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 

@@ -5,7 +5,7 @@ import SCNBox from './SCNBox'
 import SCNCapsule from './SCNCapsule'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
-//import SCNHitTestResult from './SCNHitTestResult'
+import SCNHitTestResult from './SCNHitTestResult'
 import SCNMatrix4 from './SCNMatrix4'
 //import SCNPhysicsBody from './SCNPhysicsBody'
 import SCNPhysicsBodyType from './SCNPhysicsBodyType'
@@ -213,18 +213,25 @@ export default class SCNPhysicsWorld extends NSObject {
     const shapeB = bodyB.physicsShape._shape
 
     if((shapeA instanceof SCNBox) && (shapeB instanceof SCNBox)){
-      return this._contactTestBetweenBoxes(bodyA, bodyB, options)
+      return SCNPhysicsWorld._contactTestBetweenBoxes(bodyA, bodyB, options)
     }else if((shapeA instanceof SCNBox) && (shapeB instanceof SCNSphere)){
-      return this._contactTestBetweenBoxAndSphere(bodyA, bodyB, options)
+      return SCNPhysicsWorld._contactTestBetweenBoxAndSphere(bodyA, bodyB, options)
     }else if((shapeB instanceof SCNBox) && (shapeA instanceof SCNSphere)){
-      return this._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true)
+      return SCNPhysicsWorld._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true)
     }else if((shapeA instanceof SCNSphere) && (shapeB instanceof SCNSphere)){
-      return this._contactTestBetweenSpheres(bodyA, bodyB, options)
+      return SCNPhysicsWorld._contactTestBetweenSpheres(bodyA, bodyB, options)
     }
     return []
   }
 
-  _contactTestBetweenBoxes(boxA, boxB, options) {
+  /**
+   * @access private
+   * @param {SCNPhysicsBody} boxA -
+   * @param {SCNPhysicsBody} boxB -
+   * @param {Object} options -
+   * @returns {SCNPhysicsContact[]} -
+   */
+  static _contactTestBetweenBoxes(boxA, boxB, options) {
     const shapeA = boxA.physicsShape._shape
     const shapeB = boxB.physicsShape._shape
 
@@ -380,7 +387,14 @@ export default class SCNPhysicsWorld extends NSObject {
     return [contact]
   }
 
-  _contactTestBetweenSpheres(sphereA, sphereB, options) {
+  /**
+   * @access private
+   * @param {SCNPhysicsBody} sphereA -
+   * @param {SCNPhysicsBody} sphereB -
+   * @param {Object} options -
+   * @returns {SCNPhysicsContact[]} -
+   */
+  static _contactTestBetweenSpheres(sphereA, sphereB, options) {
     const shapeA = sphereA.physicsShape._shape
     const shapeB = sphereB.physicsShape._shape
 
@@ -402,7 +416,14 @@ export default class SCNPhysicsWorld extends NSObject {
     return [contact]
   }
 
-  _contactTestBetweenBoxAndSphere(box, sphere, reverse = false) {
+  /**
+   * @access private
+   * @param {SCNPhysicsBody} box -
+   * @param {SCNPhysicsBody} sphere -
+   * @param {Object} options -
+   * @returns {SCNPhysicsContact[]} -
+   */
+  static _contactTestBetweenBoxAndSphere(box, sphere, reverse = false) {
     const boxShape = box.physicsShape._shape
     const sphereShape = sphere.physicsShape._shape
 
@@ -617,7 +638,7 @@ if (contacts.count == 0) {
     for(let i=0; i<objects.length; i++){
       const bodyA = objects[i].presentation.physicsBody
       if(bodyA.physicsShape._sourceGeometry instanceof SCNCapsule){
-        contacts.push(...this._capsuleTestWithObjects(bodyA, objects))
+        contacts.push(...SCNPhysicsWorld._capsuleTestWithObjects(bodyA, objects))
       }
       for(let j=0; j<objects.length; j++){
         if(i === j){
@@ -645,7 +666,13 @@ if (contacts.count == 0) {
     }
   }
 
-  _capsuleTestWithObjects(body, objects) {
+  /**
+   * @access private
+   * @param {SCNPhysicsBody} body -
+   * @param {SCNNode[]} objects -
+   * @returns {SCNPhysicsContact[]} -
+   */
+  static _capsuleTestWithObjects(body, objects) {
     const result = []
 
     const objs = objects.filter((obj) => {
@@ -681,7 +708,14 @@ if (contacts.count == 0) {
     return result
   }
 
-  _intersectsBoundingBox(node1, node2) {
+  /**
+   *
+   * @access private
+   * @param {SCNNode} node1 -
+   * @param {SCNNode} node2 -
+   * @returns {boolean} -
+   */
+  static _intersectsBoundingBox(node1, node2) {
     const pos1 = node1._worldTranslation
     const pos2 = node2._worldTranslation
     const geo1 = node1.physicsBody.physicsShape._sourceGeometry
@@ -703,7 +737,13 @@ if (contacts.count == 0) {
     return true
   }
 
-  _contactTestCapsuleAndConcave(capNode, conNode) {
+  /**
+   * @access private
+   * @param {SCNNode} capNode - the node which has a capsule physicsShape
+   * @param {SCNNode} conNode - the node which has a concave physicsShape
+   * @returns {SCNPhysicsContact[]} -
+   */
+  static _contactTestCapsuleAndConcave(capNode, conNode) {
     const result = []
     const capBody = capNode.physicsBody
     const conBody = conNode.physicsBody
@@ -720,6 +760,7 @@ if (contacts.count == 0) {
 
     for(const elem of elems){
       if(elem._primitiveType !== SCNGeometryPrimitiveType.triangles){
+        // TODO: support other primitive types.
         continue
       }
       const edata = elem._data
@@ -770,7 +811,7 @@ if (contacts.count == 0) {
    *    {SCNVector3} normal -
    *    {number} distance -
    */
-  _capsuleTriangleContact(p0, p1, capSize, v0, v1, v2) {
+  static _capsuleTriangleContact(p0, p1, capSize, v0, v1, v2) {
     const seg = p1.sub(p0)
 
     const segTri = this._segmentTriangleIntersection(p0, p1, v0, v1, v2)
@@ -835,7 +876,7 @@ if (contacts.count == 0) {
    * @access private
    * @param {SCNVector3} p0 - an edge of the segment
    * @param {SCNVector3} p1 - another edge of the segment
-   * @param {SCNVector3} v0 - the fist point of the vertex
+   * @param {SCNVector3} v0 - the first point of the vertex
    * @param {SCNVector3} v1 - the second point of the vertex
    * @param {SCNVector3} v2 - the third point of the vertex
    * @returns {Object} -
@@ -844,7 +885,7 @@ if (contacts.count == 0) {
    *    {number} d1 - distance between p1 and the plane which contains the vertex
    *    {?SCNVector3} intersection - intersection point of the segment and the vertex
    */
-  _segmentTriangleIntersection(p0, p1, v0, v1, v2) {
+  static _segmentTriangleIntersection(p0, p1, v0, v1, v2) {
     const v0p0 = p0.sub(v0)
     const v0p1 = p1.sub(v0)
     const n = this._normalOfTriangle(v0, v1, v2)
@@ -871,7 +912,7 @@ if (contacts.count == 0) {
    * @param {SCNVector3} p2 - the third point of the triangle
    * @returns {SCNVector3} - normal vector (normalized)
    */
-  _normalOfTriangle(p0, p1, p2) {
+  static _normalOfTriangle(p0, p1, p2) {
     const v1 = p1.sub(p0)
     const v2 = p2.sub(p0)
     return v1.cross(v2).normalize()
@@ -886,7 +927,7 @@ if (contacts.count == 0) {
    * @param {SCNVector3} p2 - the third point of the triangle
    * @returns {boolean} - true if the point is in the triangle.
    */
-  _pointIsInsideTriangle(p, p0, p1, p2) {
+  static _pointIsInsideTriangle(p, p0, p1, p2) {
     const n = this._normalOfTriangle(p0, p1, p2)
     const v0 = p1.sub(p0).cross(n).dot(p.sub(p0))
     const v1 = p2.sub(p1).cross(n).dot(p.sub(p1))
@@ -912,7 +953,7 @@ if (contacts.count == 0) {
    *    {SCNVector3} nearestPos -
    *    {number} distance -
    */
-  _pointLineDist(p, lp, lv) {
+  static _pointLineDist(p, lp, lv) {
     const len2 = lv.length2()
     let t = 0
     if(len2 > 0){
@@ -938,7 +979,7 @@ if (contacts.count == 0) {
    *    {SCNVector3} nearestPos -
    *    {number} distance -
    */
-  _pointSegmentDist(p, s0, s1) {
+  static _pointSegmentDist(p, s0, s1) {
     const lv = s1.sub(s0)
     const plDist = this._pointLineDist(p, s0, lv)
     if(plDist.coeff < 0){
@@ -973,7 +1014,7 @@ if (contacts.count == 0) {
    *    {SCNVector3} nearestPos1 -
    *    {number} distance -
    */
-  _lineLineDist(p0, v0, p1, v1) {
+  static _lineLineDist(p0, v0, p1, v1) {
     if(this._isParallel(v0, v1)){
       const plDist = this._pointLineDist(p0, p1, v1)
       return {
@@ -1011,12 +1052,18 @@ if (contacts.count == 0) {
    * @param {SCNVector3} v1 - line vector
    * @returns {boolean} - true if the lines are parallel
    */
-  _isParallel(v0, v1) {
+  static _isParallel(v0, v1) {
     const l = v0.cross(v1).length2()
     return (l < 0.0000000000001)
   }
 
-  _clamp(val) {
+  /**
+   * 
+   * @access private
+   * @param {number} -
+   * @returns {number} -
+   */
+  static _clamp(val) {
     if(val < 0){
       return 0
     }
@@ -1040,7 +1087,7 @@ if (contacts.count == 0) {
    *    {SCNVector3} nearestPos1 -
    *    {number} distance -
    */
-  _segmentSegmentDist(s00, s01, s10, s11) {
+  static _segmentSegmentDist(s00, s01, s10, s11) {
     const v0 = s01.sub(s00)
     const v1 = s11.sub(s10)
     let dist = null
@@ -1105,5 +1152,153 @@ if (contacts.count == 0) {
       nearestPos1: p1,
       distance: d
     }
+  }
+
+  /**
+   * @access private
+   * @param {SCNVector3} p0 - An endpoint of the line segment to test, specified in the world coordinate system.
+   * @param {SCNVector3} p1 - The other endpoint of the line segment to test, specified in the world coordinate system.
+   * @param {SCNNode} node -
+   * @returns {SCNHitTestResult[]} -
+   */
+  static _hitTestWithSegmentNode(pointA, pointB, node) {
+    let n = node
+    let geo = node.geometry
+    if(node.presentation && node.presentation.geometry){
+      n = node.presentation
+      geo = n.geometry
+    }
+    if(!geo){
+      return []
+    }
+
+    const pA = n.convertPositionFrom(pointA, null)
+    const pB = n.convertPositionFrom(pointB, null)
+    //if(this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox) !== null){
+    const r = this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox)
+    if(r !== null){
+      console.error('segmentBoundingBoxIntersects: ' + r.near + ', ' + r.far)
+      return this._hitTestWithSegmentGeometry(pA, pB, geo)
+    }
+    return []
+  }
+
+  /**
+   * @access private
+   * @param {SCNVector3} pointA -
+   * @param {SCNVector3} pointB -
+   * @param {Object} boundingBox -
+   * @results {?Object} -
+   */
+  static _segmentBoundingBoxIntersects(pointA, pointB, boundingBox) {
+    const v = pointB.sub(pointA)
+    const r = this._lineBoundingBoxIntersects(pointA, v, boundingBox)
+    if(r === null){
+      return null
+    }
+    if(r.near > 1 || r.far < 0){
+      return null
+    }
+    return r
+  }
+
+  /**
+   * @access private
+   * @param {SCNVector3} p - a point on the line
+   * @param {SCNVector3} v - line vector
+   * @param {Object} boundingBox -
+   * @returns {?Object} -
+   */
+  static _lineBoundingBoxIntersects(p, v, boundingBox) {
+    const epsilon = 0.000001
+    const odd = new SCNVector3(1.0/v.x, 1.0/v.y, 1.0/v.z)
+    const t1 = boundingBox.min.sub(p).mulv(odd)
+    const t2 = boundingBox.max.sub(p).mulv(odd)
+
+    let near = -Infinity
+    let far = Infinity
+
+    if(Math.abs(v.x) < epsilon){
+      if(p.x < near || far < p.x){
+        return null
+      }
+    }else if(t1.x < t2.x){
+      near = Math.max(near, t1.x)
+      far = Math.min(far, t2.x)
+    }else{
+      near = Math.max(near, t2.x)
+      far = Math.min(far, t1.x)
+    }
+
+    if(Math.abs(v.y) < epsilon){
+      if(p.y < near || far < p.y){
+        return null
+      }
+    }else if(t1.y < t2.y){
+      near = Math.max(near, t1.y)
+      far = Math.min(far, t2.y)
+    }else{
+      near = Math.max(near, t2.y)
+      far = Math.min(far, t1.y)
+    }
+      
+    if(Math.abs(v.z) < epsilon){
+      if(p.z < near || far < p.z){
+        return null
+      }
+    }else if(t1.z < t2.z){
+      near = Math.max(near, t1.z)
+      far = Math.min(far, t2.z)
+    }else{
+      near = Math.max(near, t2.z)
+      far = Math.min(far, t1.z)
+    }
+
+    if(near > far){
+      return null
+    }
+
+    return { near: near, far: far }
+  }
+
+  /**
+   * @access private
+   * @param {SCNVector3} p0 - An endpoint of the line segment to test, specified in the geometry's local coordinate system.
+   * @param {SCNVector3} p1 - The other endpoint of the line segment to test, specified in the geometry's local coordinate system.
+   * @param {SCNGeometry} geometry -
+   * @returns {SCNHitTestResult[]} -
+   */
+  static _hitTestWithSegmentGeometry(pointA, pointB, geometry) {
+    const results = []
+    const elems = geometry.geometryElements
+    const elemCount = elems.length
+    const vert = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    for(let i=0; i<elemCount; i++){
+      const elem = elems[i]
+      if(elem._primitiveType !== SCNGeometryPrimitiveType.triangles){
+        // TODO: support other primitive types.
+        continue
+      }
+      const edata = elem._data
+      const elen = elem._primitiveCount
+      let ind = 0
+      for(let j=0; j<elen; j++){
+        const v0 = vert._scnVectorAt(edata[ind])
+        const v1 = vert._scnVectorAt(edata[ind + 1])
+        const v2 = vert._scnVectorAt(edata[ind + 2])
+        ind += 3
+
+        const r = this._segmentTriangleIntersection(pointA, pointB, v0, v1, v2)
+        if(r.intersection){
+          const result = new SCNHitTestResult()
+          result._geometryIndex = i
+          result._faceIndex = j
+          result._localCoordinates = r.intersection
+          result._localNormal = r.normal
+          results.push(result)
+        }
+      }
+    }
+    return results
   }
 }

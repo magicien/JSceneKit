@@ -16,7 +16,7 @@ export default class CGPoint {
    * @param {number} y - 
    * @see https://developer.apple.com/documentation/coregraphics/cgpoint/1455965-init
    */
-  constructor(x, y) {
+  constructor(x = 0, y = 0) {
     // Geometric Properties
     this.x = x
     this.y = y

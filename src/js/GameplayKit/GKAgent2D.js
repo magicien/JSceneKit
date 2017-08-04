@@ -23,10 +23,10 @@ export default class GKAgent2D extends GKAgent {
 
     /**
      * The current position of the agent in 2D space.
-     * @type {number[]}
+     * @type {CGPoint}
      * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501043-position
      */
-    this.position = new CGPoint()
+    this.position = new CGPoint(0, 0)
 
     /**
      * The rotation of the agent around the z-axis.
@@ -40,7 +40,7 @@ export default class GKAgent2D extends GKAgent {
 
     /**
      * @access private
-     * @type {number[]}
+     * @type {CGPoint}
      */
     this._velocity = new CGPoint()
   }
@@ -60,7 +60,7 @@ export default class GKAgent2D extends GKAgent {
 
   /**
    * The current velocity of the agent in 2D space.
-   * @type {number[]}
+   * @type {CGPoint}
    * @desc An agent’s velocity is a calculated property—the velocity vector is determined by an agent’s facing direction (its rotation property) and its speed property.
    * @see https://developer.apple.com/documentation/gameplaykit/gkagent2d/1501186-velocity
    */

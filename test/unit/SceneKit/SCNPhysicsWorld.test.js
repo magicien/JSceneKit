@@ -22,7 +22,6 @@ describe('SCNPhysicsWorld class', () => {
   UnitTest.propertiesDefined(SCNPhysicsWorld, [
   ])
   */
-  const world = new SCNPhysicsWorld()
 
   describe('constructor function', () => {
   })
@@ -55,7 +54,7 @@ describe('SCNPhysicsWorld class', () => {
       const v0 = new SCNVector3(0, 0, 0)
       const v1 = new SCNVector3(0, 0, 100)
       const v2 = new SCNVector3(100, 0, 0)
-      const result = world._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
+      const result = SCNPhysicsWorld._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
 
       expect(result).to.be.null
     })
@@ -67,7 +66,7 @@ describe('SCNPhysicsWorld class', () => {
       const v0 = new SCNVector3(-100, -100, -3)
       const v1 = new SCNVector3(200, -100, -3)
       const v2 = new SCNVector3(-100, 200, -3)
-      const result = world._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
+      const result = SCNPhysicsWorld._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
       const answer = {
         point: new SCNVector3(0, 10, -3),
         normal: new SCNVector3(0, 0, 1),
@@ -91,7 +90,7 @@ describe('SCNPhysicsWorld class', () => {
       const v0 = new SCNVector3(0, 0, 0)
       const v1 = new SCNVector3(0, 0, 100)
       const v2 = new SCNVector3(100, 0, 0)
-      const result = world._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
+      const result = SCNPhysicsWorld._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
       const answer = {
         point: new SCNVector3(40, 0, 40), // FIXME: it might not be correct.
         normal: new SCNVector3(0, 1, 0),
@@ -115,7 +114,7 @@ describe('SCNPhysicsWorld class', () => {
       const v0 = new SCNVector3(0, 0, 0)
       const v1 = new SCNVector3(0, 0, 100)
       const v2 = new SCNVector3(100, 0, 0)
-      const result = world._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
+      const result = SCNPhysicsWorld._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
       const answer = {
         point: new SCNVector3(50, 0, 0),
         normal: new SCNVector3(0, 1, 0),
@@ -139,7 +138,7 @@ describe('SCNPhysicsWorld class', () => {
       const v0 = new SCNVector3(0, 0, 0)
       const v1 = new SCNVector3(0, 0, 100)
       const v2 = new SCNVector3(100, 0, 0)
-      const result = world._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
+      const result = SCNPhysicsWorld._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
       const answer = {
         point: new SCNVector3(30, 0, 30),
         normal: new SCNVector3(0, 1, 0),
@@ -171,7 +170,7 @@ describe('SCNPhysicsWorld class', () => {
         intersection: null
       }
 
-      const result = world._segmentTriangleIntersection(p0, p1, v0, v1, v2)
+      const result = SCNPhysicsWorld._segmentTriangleIntersection(p0, p1, v0, v1, v2)
 
       expect(result.normal.x).to.within(answer.normal.x - epsilon, answer.normal.x + epsilon)
       expect(result.normal.y).to.within(answer.normal.y - epsilon, answer.normal.y + epsilon)
@@ -194,7 +193,7 @@ describe('SCNPhysicsWorld class', () => {
         intersection: new SCNVector3(30, 0, 30)
       }
 
-      const result = world._segmentTriangleIntersection(p0, p1, v0, v1, v2)
+      const result = SCNPhysicsWorld._segmentTriangleIntersection(p0, p1, v0, v1, v2)
 
       expect(result.normal.x).to.within(answer.normal.x - epsilon, answer.normal.x + epsilon)
       expect(result.normal.y).to.within(answer.normal.y - epsilon, answer.normal.y + epsilon)
@@ -212,7 +211,7 @@ describe('SCNPhysicsWorld class', () => {
       const p0 = new SCNVector3(0, 0, 0)
       const p1 = new SCNVector3(100, 0, 0)
       const p2 = new SCNVector3(0, 100, 0)
-      const n = world._normalOfTriangle(p0, p1, p2)
+      const n = SCNPhysicsWorld._normalOfTriangle(p0, p1, p2)
       const answer = new SCNVector3(0, 0, 1)
 
       expect(n.x).to.within(answer.x - epsilon, answer.x + epsilon)
@@ -230,7 +229,7 @@ describe('SCNPhysicsWorld class', () => {
       const p = new SCNVector3(50, 0, -10)
       const lp = new SCNVector3(0, 0, 0)
       const lv = new SCNVector3(0, 0, 100)
-      const result = world._pointLineDist(p, lp, lv)
+      const result = SCNPhysicsWorld._pointLineDist(p, lp, lv)
       const answer = {
         coeff: -0.1,
         nearestPos: new SCNVector3(0, 0, -10),
@@ -249,7 +248,7 @@ describe('SCNPhysicsWorld class', () => {
       const p = new SCNVector3(0, 0, 0)
       const s0 = new SCNVector3(50, 30, 20)
       const s1 = new SCNVector3(50, -20, -30)
-      const result = world._pointSegmentDist(p, s0, s1)
+      const result = SCNPhysicsWorld._pointSegmentDist(p, s0, s1)
       const answer = {
         coeff: 0.5,
         nearestPos: new SCNVector3(50, 5, -5),
@@ -266,7 +265,7 @@ describe('SCNPhysicsWorld class', () => {
       const p = new SCNVector3(50, 0, -10)
       const s0 = new SCNVector3(0, 0, 0)
       const s1 = new SCNVector3(0, 0, 100)
-      const result = world._pointSegmentDist(p, s0, s1)
+      const result = SCNPhysicsWorld._pointSegmentDist(p, s0, s1)
       const answer = {
         coeff: -0.1,
         nearestPos: new SCNVector3(0, 0, 0),
@@ -291,7 +290,7 @@ describe('SCNPhysicsWorld class', () => {
       const va = a1.sub(a0)
       const vb = b1.sub(b0)
 
-      const dist = world._lineLineDist(a0, va, b0, vb)
+      const dist = SCNPhysicsWorld._lineLineDist(a0, va, b0, vb)
       const answer = {
         coeff0: 0.0,
         nearestPos0: a0,
@@ -319,7 +318,7 @@ describe('SCNPhysicsWorld class', () => {
       const va = a1.sub(a0)
       const vb = b1.sub(b0)
 
-      const dist = world._lineLineDist(b0, vb, a0, va)
+      const dist = SCNPhysicsWorld._lineLineDist(b0, vb, a0, va)
       const answer = {
         coeff0: 0.0,
         nearestPos0: b0,
@@ -347,7 +346,7 @@ describe('SCNPhysicsWorld class', () => {
       const va = a1.sub(a0)
       const vb = b1.sub(b0)
 
-      const dist = world._lineLineDist(a0, va, b0, vb)
+      const dist = SCNPhysicsWorld._lineLineDist(a0, va, b0, vb)
       const answer = {
         coeff0: 1.0,
         nearestPos0: a1,
@@ -375,7 +374,7 @@ describe('SCNPhysicsWorld class', () => {
       const va = a1.sub(a0)
       const vb = b1.sub(b0)
 
-      const dist = world._lineLineDist(a0, va, b0, vb)
+      const dist = SCNPhysicsWorld._lineLineDist(a0, va, b0, vb)
       const answer = {
         coeff0: 0.2,
         nearestPos0: new SCNVector3(50, 20, 10),
@@ -403,7 +402,7 @@ describe('SCNPhysicsWorld class', () => {
       const va = a1.sub(a0)
       const vb = b1.sub(b0)
 
-      const dist = world._lineLineDist(a0, va, b0, vb)
+      const dist = SCNPhysicsWorld._lineLineDist(a0, va, b0, vb)
       const answer = {
         coeff0: 0.6,
         nearestPos0: new SCNVector3(50, 0, -10),
@@ -431,7 +430,7 @@ describe('SCNPhysicsWorld class', () => {
       const va = a1.sub(a0)
       const vb = b1.sub(b0)
 
-      const dist = world._lineLineDist(a0, va, b0, vb)
+      const dist = SCNPhysicsWorld._lineLineDist(a0, va, b0, vb)
       const answer = {
         coeff0: 2.0,
         nearestPos0: new SCNVector3(1, 4, 0),
@@ -456,42 +455,42 @@ describe('SCNPhysicsWorld class', () => {
       let v0 = new SCNVector3(1, 0, 0)
       let v1 = new SCNVector3(-1, 0, 0)
 
-      let isParallel = world._isParallel(v0, v0)
+      let isParallel = SCNPhysicsWorld._isParallel(v0, v0)
       expect(isParallel, 'the same x vectors').to.be.true
 
-      isParallel = world._isParallel(v0, v1)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v1)
       expect(isParallel, 'the opposite x vectors').to.be.true
 
       v0 = new SCNVector3(0, 1, 0)
       v1 = new SCNVector3(0, -1, 0)
 
-      isParallel = world._isParallel(v0, v0)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v0)
       expect(isParallel, 'the same y vectors').to.be.true
 
-      isParallel = world._isParallel(v0, v1)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v1)
       expect(isParallel, 'the opposite y vectors').to.be.true
       
       v0 = new SCNVector3(0, 0, 1)
       v1 = new SCNVector3(0, 0, -1)
 
-      isParallel = world._isParallel(v0, v0)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v0)
       expect(isParallel, 'the same z vectors').to.be.true
 
-      isParallel = world._isParallel(v0, v1)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v1)
       expect(isParallel, 'the opposite z vectors').to.be.true
 
       v0 = new SCNVector3(3.1, -4.1, 5.9)
       v1 = v0.mul(-1)
 
-      isParallel = world._isParallel(v0, v0)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v0)
       expect(isParallel, 'the same vectors').to.be.true
 
-      isParallel = world._isParallel(v0, v1)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v1)
       expect(isParallel, 'the opposite vectors').to.be.true
 
       v1 = v0.mul(1.5)
 
-      isParallel = world._isParallel(v0, v1)
+      isParallel = SCNPhysicsWorld._isParallel(v0, v1)
       expect(isParallel, 'the different size vectors').to.be.true
     })
 
@@ -499,26 +498,26 @@ describe('SCNPhysicsWorld class', () => {
       let v0 = new SCNVector3(0, -50, -50)
       let v1 = new SCNVector3(0, 0, 100)
 
-      let isParallel = world._isParallel(v0, v1)
+      let isParallel = SCNPhysicsWorld._isParallel(v0, v1)
       expect(isParallel).to.be.false
     })
   })
 
   describe('_clamp function', () => {
     it('should return the original value when it is between 0 and 1', () => {
-      expect(world._clamp(0)).to.equal(0)
-      expect(world._clamp(1)).to.equal(1)
-      expect(world._clamp(0.6)).to.equal(0.6)
+      expect(SCNPhysicsWorld._clamp(0)).to.equal(0)
+      expect(SCNPhysicsWorld._clamp(1)).to.equal(1)
+      expect(SCNPhysicsWorld._clamp(0.6)).to.equal(0.6)
     })
 
     it('should return 1 when it is bigger then 1', () => {
-      expect(world._clamp(1.01)).to.equal(1)
-      expect(world._clamp(2.5)).to.equal(1)
+      expect(SCNPhysicsWorld._clamp(1.01)).to.equal(1)
+      expect(SCNPhysicsWorld._clamp(2.5)).to.equal(1)
     })
 
     it('should return 0 when it is smaller than 0', () => {
-      expect(world._clamp(-0.01)).to.equal(0)
-      expect(world._clamp(-2.5)).to.equal(0)
+      expect(SCNPhysicsWorld._clamp(-0.01)).to.equal(0)
+      expect(SCNPhysicsWorld._clamp(-2.5)).to.equal(0)
     })
   })
 
@@ -528,7 +527,7 @@ describe('SCNPhysicsWorld class', () => {
       const s01 = new SCNVector3(170, 120, 130)
       const s10 = new SCNVector3(-10, 20, -10)
       const s11 = new SCNVector3(10, 40, 10)
-      const result = world._segmentSegmentDist(s00, s01, s10, s11)
+      const result = SCNPhysicsWorld._segmentSegmentDist(s00, s01, s10, s11)
       const answer = {
         coeff0: 0.3,
         nearestPos0: new SCNVector3(30, -20, -10),
@@ -552,7 +551,7 @@ describe('SCNPhysicsWorld class', () => {
       const s01 = new SCNVector3(10, 30, -20)
       const s10 = new SCNVector3(20, -50, 10)
       const s11 = new SCNVector3(-20, 50, -10)
-      const result = world._segmentSegmentDist(s00, s01, s10, s11)
+      const result = SCNPhysicsWorld._segmentSegmentDist(s00, s01, s10, s11)
       const answer = {
         coeff0: 0.5,
         nearestPos0: new SCNVector3(0, 0, 0),
@@ -576,7 +575,7 @@ describe('SCNPhysicsWorld class', () => {
       const s01 = new SCNVector3(20, 0, -20)
       const s10 = new SCNVector3(40, 10, 80)
       const s11 = new SCNVector3(-10, 10, -20)
-      const result = world._segmentSegmentDist(s00, s01, s10, s11)
+      const result = SCNPhysicsWorld._segmentSegmentDist(s00, s01, s10, s11)
       const answer = {
         coeff0: 0.5,
         nearestPos0: new SCNVector3(0, 0, 0),
@@ -600,7 +599,7 @@ describe('SCNPhysicsWorld class', () => {
       const p1 = new SCNVector3(50, -20, -30)
       const v0 = new SCNVector3(0, 0, 0)
       const v1 = new SCNVector3(0, 0, 100)
-      const result = world._segmentSegmentDist(p0, p1, v0, v1)
+      const result = SCNPhysicsWorld._segmentSegmentDist(p0, p1, v0, v1)
       const answer = {
         coeff0: 0.5,
         nearestPos0: new SCNVector3(50, 5, -5),
@@ -624,7 +623,7 @@ describe('SCNPhysicsWorld class', () => {
       const p1 = new SCNVector3(50, -20, -30)
       const v1 = new SCNVector3(0, 0, 100)
       const v2 = new SCNVector3(100, 0, 0)
-      const result = world._segmentSegmentDist(p0, p1, v1, v2)
+      const result = SCNPhysicsWorld._segmentSegmentDist(p0, p1, v1, v2)
       const answer = {
         coeff0: 0.2,
         nearestPos0: new SCNVector3(50, 20, 10),
@@ -648,7 +647,7 @@ describe('SCNPhysicsWorld class', () => {
       const p1 = new SCNVector3(50, -20, -30)
       const v2 = new SCNVector3(100, 0, 0)
       const v0 = new SCNVector3(0, 0, 0)
-      const result = world._segmentSegmentDist(p0, p1, v2, v0)
+      const result = SCNPhysicsWorld._segmentSegmentDist(p0, p1, v2, v0)
       const answer = {
         coeff0: 0.5,
         nearestPos0: new SCNVector3(50, 5, -5),

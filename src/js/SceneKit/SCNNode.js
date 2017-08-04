@@ -24,9 +24,10 @@ import SCNVector4 from './SCNVector4'
 import SCNMovabilityHint from './SCNMovabilityHint'
 //import SCNNodeRendererDelegate from './SCNNodeRendererDelegate'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
+//import SCNParticleSystem from './SCNParticleSystem'
 //import SCNPhysicsBody from './SCNPhysicsBody'
 //import SCNPhysicsField from './SCNPhysicsField'
-//import SCNParticleSystem from './SCNParticleSystem'
+import SCNPhysicsWorld from './SCNPhysicsWorld'
 import SCNTransaction from './SCNTransaction'
 //import SCNAudioPlayer from './SCNAudioPlayer'
 //import SCNHitTestResult from './SCNHitTestResult'
@@ -1508,8 +1509,30 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/documentation/scenekit/scnnode/1407998-hittestwithsegment
    */
   hitTestWithSegmentFromTo(pointA, pointB, options = null) {
-    // TODO: implement
-    return []
+    const worldPointA = this.convertPositionTo(pointA, null)
+    const worldPointB = this.convertPositionTo(pointB, null)
+    const results = []
+    this.enumerateChildNodes((child) => {
+      if(child.presentation.geometry){
+        const hits = SCNPhysicsWorld._hitTestWithSegmentNode(worldPointA, worldPointB, child.presentation)
+        if(hits.length > 0){
+          // convert from the child's coordinate to this node's coordinate
+          for(const h of hits){
+            h._node = child
+            h._worldCoordinates = child.convertPositionTo(h._localCoordinates, null)
+            h._worldNormal = child.convertPositionTo(h._localNormal, null)
+            h._localCoordinates = this.convertPositionFrom(h._localCoordinates, child)
+            h._localNormal = child.convertPositionFrom(h._localNormal, child)
+          }
+          results.push(...hits)
+        }
+      }
+    })
+    // TODO: sort by the distance
+    if(results.length > 0){
+      console.error('hitTestWithSegmentFromTo: ' + results.length)
+    }
+    return results
   }
 
   // Converting Between Node Coordinate Spaces
@@ -1526,7 +1549,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     if(node === null){
       return position.transform(this._worldTransform.invert())
     }
-    return position.transform(node._worldTransform).transform(this._worldTransoform.invert())
+    return position.transform(node._worldTransform).transform(this._worldTransform.invert())
   }
 
   /**

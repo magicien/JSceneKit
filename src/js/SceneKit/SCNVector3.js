@@ -116,6 +116,19 @@ export default class SCNVector3 {
   /**
    * @access public
    * @param {SCNVector3} v -
+   * @returns {SCNVector3}
+   */
+  mulv(v) {
+    const r = new SCNVector3()
+    r.x = this.x * v.x
+    r.y = this.y * v.y
+    r.z = this.z * v.z
+    return r
+  }
+
+  /**
+   * @access public
+   * @param {SCNVector3} v -
    * @returns {number} -
    */
   dot(v) {
