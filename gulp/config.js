@@ -1,6 +1,5 @@
 const path = require('path');
 const babel = require('babel-core/register');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
 const src = './src';
