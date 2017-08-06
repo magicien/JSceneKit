@@ -3,6 +3,7 @@
 import SCNAction from './SCNAction'
 import SCNActionTimingMode from './SCNActionTimingMode'
 import SCNNode from './SCNNode'
+import _InstanceOf from '../util/_InstanceOf'
 
 export default class SCNActionRemove extends SCNAction {
   static get _propTypes() {
@@ -64,7 +65,7 @@ export default class SCNActionRemove extends SCNAction {
    * @returns {void}
    */
   _applyAction(obj, time, needTimeConversion = true) {
-    if(!(obj instanceof SCNNode)){
+    if(!_InstanceOf(obj, SCNNode)){
       throw new Error(`unsupported class for SCNActionRemove: ${obj.constructor.name}`)
     }
     obj.removeFromParentNode()

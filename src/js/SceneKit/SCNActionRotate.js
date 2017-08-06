@@ -5,6 +5,7 @@ import SCNActionTimingMode from './SCNActionTimingMode'
 import SCNNode from './SCNNode'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
+import _InstanceOf from '../util/_InstanceOf'
 
 export default class SCNActionRotate extends SCNAction {
   static get _propTypes() {
@@ -201,7 +202,7 @@ export default class SCNActionRotate extends SCNAction {
    * @returns {void}
    */
   _applyAction(obj, time, needTimeConversion = true) {
-    if(!(obj instanceof SCNNode)){
+    if(!_InstanceOf(obj, SCNNode)){
       throw new Error(`unsupported class for SCNActionRotate: ${obj.constructor.name}`)
     }
     const t = this._getTime(time, needTimeConversion)

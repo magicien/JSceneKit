@@ -29,6 +29,7 @@ import SCNActionTimingMode from './SCNActionTimingMode'
 //import SCNActionHide from './SCNActionHide'
 //import SCNActionRunAction from './SCNActionRunAction'
 import SKColor from '../SpriteKit/SKColor'
+import _InstanceOf from '../util/_InstanceOf'
 import * as Constants from '../constants'
 
 /**
@@ -685,18 +686,18 @@ SCNAction *sequenceReverse = [sequence reversedAction];
       // the action is over.
       return to
     }
-    if(from instanceof SCNVector4){
+    if(_InstanceOf(from, SCNVector4)){
       // TODO: slerp for Quaternion
       return from.lerp(to, t)
-    }else if(from instanceof SCNVector3){
+    }else if(_InstanceOf(from, SCNVector3)){
       return from.lerp(to, t)
-    }else if(from instanceof CGSize){
+    }else if(_InstanceOf(from, CGSize)){
       return from.lerp(to, t)
-    }else if(from instanceof CGPoint){
+    }else if(_InstanceOf(from, CGPoint)){
       return from.lerp(to, t)
-    }else if(from instanceof CGRect){
+    }else if(_InstanceOf(from, CGRect)){
       return from.lerp(to, t)
-    }else if(from instanceof SKColor){
+    }else if(_InstanceOf(from, SKColor)){
       return from._lerp(to, t)
     }
     return from + (to - from) * t
@@ -710,7 +711,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @returns {Object} -
    */
   _slerp(from, to, t) {
-    if(!(from instanceof SCNVector4)){
+    if(!_InstanceOf(from, SCNVector4)){
       throw new Error('SCNAction._slerp: object is not SCNVector4')
     }
     return from.slerp(to, t)

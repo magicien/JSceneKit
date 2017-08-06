@@ -5,6 +5,7 @@ import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import CGPoint from '../CoreGraphics/CGPoint'
+import _InstanceOf from '../util/_InstanceOf'
 /*global Buffer*/
 
 const _Semantic = {
@@ -507,9 +508,9 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
       throw new Error(`index out of range: ${index} (0 - ${this.vectorCount - 1})`)
     }
     let data = v
-    if(v instanceof SCNVector3){
+    if(_InstanceOf(v, SCNVector3)){
       data = [v.x, v.y, v.z]
-    }else if(v instanceof SCNVector4){
+    }else if(_InstanceOf(v, SCNVector4)){
       data = [v.x, v.y, v.z, v.w]
     }
     if(data.length !== this._componentsPerVector){

@@ -7,6 +7,7 @@ import SCNGeometry from './SCNGeometry'
 import SCNNode from './SCNNode'
 import SCNSphere from './SCNSphere'
 import SCNVector3 from './SCNVector3'
+import _InstanceOf from '../util/_InstanceOf'
 
 const _Option = {
   collisionMargin: 'SCNPhysicsShapeCollisionMarginKey',
@@ -95,9 +96,9 @@ export default class SCNPhysicsShape extends NSObject {
 
   _setSourceObject(obj) {
     this._sourceObject = obj
-    if(this._sourceObject instanceof SCNGeometry){
+    if(_InstanceOf(this._sourceObject, SCNGeometry)){
       this._sourceGeometry = this._sourceObject
-    }else if(this._sourceObject instanceof SCNNode && this._sourceObject.geometry){
+    }else if(_InstanceOf(this._sourceObject, SCNNode) && this._sourceObject.geometry){
       // TODO: get geometries recursively
       this._sourceGeometry = this._sourceObject.geometry
     }else{
@@ -117,12 +118,12 @@ export default class SCNPhysicsShape extends NSObject {
     //if(this._options && this._options.get(_Option.type) === _ShapeType.boundingBox){
     if(this._options && this._options[_Option.type] === _ShapeType.boundingBox){
       this._createShapeAsBoundingBox()
-    }else if(this._sourceGeometry instanceof SCNCapsule){
+    }else if(_InstanceOf(this._sourceGeometry, SCNCapsule)){
       // FIXME: do not convert to SCNBox
       this._createShapeAsBoundingBox()
-    }else if(this._sourceGeometry instanceof SCNBox){
+    }else if(_InstanceOf(this._sourceGeometry, SCNBox)){
       this._createShapeAsBox()
-    }else if(this._sourceGeometry instanceof SCNSphere){
+    }else if(_InstanceOf(this._sourceGeometry, SCNSphere)){
       this._createShapeAsSphere()
     //}else if(this._options && this._options.get(_Option.type) === _ShapeType.convecHull){
     }else if(this._options && this._options[_Option.type] === _ShapeType.concavePolyhedron){
@@ -155,7 +156,7 @@ export default class SCNPhysicsShape extends NSObject {
   }
 
   _createShapeAsSphere() {
-    if(this._sourceGeometry instanceof SCNSphere){
+    if(_InstanceOf(this._sourceGeometry, SCNSphere)){
       // TODO: copy the geometry
       this._shape = this._sourceGeometry
       this._center = new SCNVector3(0, 0, 0)

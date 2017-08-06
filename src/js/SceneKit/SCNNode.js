@@ -33,6 +33,7 @@ import SCNTransaction from './SCNTransaction'
 //import SCNHitTestResult from './SCNHitTestResult'
 import SKColor from '../SpriteKit/SKColor'
 import * as Constants from '../constants'
+import _InstanceOf from '../util/_InstanceOf'
 
 const _localFront = new SCNVector3(0, 0, 1)
 const _localRight = new SCNVector3(1, 0, 0)
@@ -965,8 +966,7 @@ export default class SCNNode extends NSObject {
     return this._rotation.rotationToQuat()
   }
   set orientation(newValue) {
-    //if(!(newValue instanceof SCNVector4)){
-    if(newValue.constructor.name !== 'SCNVector4'){ // FIXME: handle subclasses
+    if(!_InstanceOf(newValue, SCNVector4)){
       throw new Error('orientation must be SCNVector4')
     }
 

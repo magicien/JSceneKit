@@ -4,6 +4,7 @@ import SCNAction from './SCNAction'
 import SCNActionTimingMode from './SCNActionTimingMode'
 import SCNNode from './SCNNode'
 import SCNVector3 from './SCNVector3'
+import _InstanceOf from '../util/_InstanceOf'
 
 export default class SCNActionMove extends SCNAction {
   static get _propTypes() {
@@ -137,7 +138,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    */
   _applyAction(obj, time, needTimeConversion = true) {
     const t = this._getTime(time, needTimeConversion)
-    if(!(obj instanceof SCNNode)){
+    if(!_InstanceOf(obj, SCNNode)){
       throw new Error(`unsupported class for SCNActionMove: ${obj.constructor.name}`)
     }
 

@@ -1,6 +1,7 @@
 'use strict'
 
 import SCNMatrix4 from './SCNMatrix4'
+import _InstanceOf from '../util/_InstanceOf'
 
 /**
  * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.
@@ -12,7 +13,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4
  */
 const SCNMatrix4EqualToMatrix4 = function(a, b) {
-  if(!(a instanceof SCNMatrix4)){
+  if(!_InstanceOf(a, SCNMatrix4)){
     return false
   }
   return a.equalTo(b)

@@ -12,6 +12,10 @@ import _ClassList from '../util/_ClassList'
  * @see https://developer.apple.com/documentation/objectivec/nsobject
  */
 export default class NSObject {
+  /**
+   * @access private
+   * @type {Object}
+   */
   static get _propTypes() {
     return {}
   }
@@ -281,7 +285,11 @@ In some cases, a custom implementation of the init() method might return a subst
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1418803-superclass
    */
   static superclass() {
-    return null
+    const superClass = Object.getPrototypeOf(this)
+    if(superClass === Object.getPrototypeOf(Object)){
+      return null
+    }
+    return superClass
   }
 
   /**
@@ -292,7 +300,30 @@ In some cases, a custom implementation of the init() method might return a subst
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1418669-issubclass
    */
   static isSubclassOf(aClass) {
+    if(this.className === aClass.className){
+      return true
+    }
+
+    const superClass = this.superclass()
+    if(superClass === null){
+      return false
+    }
+    if(superClass.className === aClass.className){
+      return true
+    }
+    if(superClass.isSubclassOf(aClass)){
+      return true
+    }
     return false
+  }
+
+  /**
+   * @access public
+   * @param {Object} aClass - A class object.
+   * @returns {boolean} -
+   */
+  isInstanceOf(aClass) {
+    return this.constructor.isSubclassOf(aClass)
   }
 
   // Testing Class Functionality
@@ -306,6 +337,9 @@ In some cases, a custom implementation of the init() method might return a subst
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1418555-instancesrespond
    */
   static instancesRespondTo(aSelector) {
+    if(typeof this.prototype[aSelector] === 'function'){
+      return true
+    }
     return false
   }
 
@@ -326,6 +360,7 @@ BOOL canJoin = [MyClass conformsToProtocol:@protocol(Joining)];
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1418893-conforms
    */
   static conformsTo(protocol) {
+    // TODO: implement
     return false
   }
 
@@ -365,7 +400,7 @@ BOOL canJoin = [MyClass conformsToProtocol:@protocol(Joining)];
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1418799-description
    */
   static description() {
-    return ''
+    return this.className
   }
 
   // Discardable Content Proxy Support
@@ -797,7 +832,7 @@ returns the string employees.employee inverseForRelationshipKey:@"department"];
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1411337-classname
    */
   get className() {
-    return this.constructor.name
+    return this.constructor._className
   }
 
   /**
@@ -807,7 +842,7 @@ returns the string employees.employee inverseForRelationshipKey:@"department"];
    * @see https://developer.apple.com/documentation/objectivec/nsobject/1411337-classname
    */
   static get className() {
-    return this.prototype.constructor.name
+    return this.prototype.constructor._className
   }
 
   // Deprecated Methods

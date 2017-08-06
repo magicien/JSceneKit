@@ -3,6 +3,7 @@
 import SCNAction from './SCNAction'
 import SCNActionTimingMode from './SCNActionTimingMode'
 import SCNNode from './SCNNode'
+import _InstanceOf from '../util/_InstanceOf'
 
 export default class SCNActionFade extends SCNAction {
   static get _propTypes() {
@@ -131,7 +132,7 @@ export default class SCNActionFade extends SCNAction {
    */
   _applyAction(obj, time, needTimeConversion = true) {
     const t = this._getTime(time, needTimeConversion)
-    if(!(obj instanceof SCNNode)){
+    if(!_InstanceOf(obj, SCNNode)){
       throw new Error(`unsupported class for SCNActionFade: ${obj.constructor.name}`)
     }
 

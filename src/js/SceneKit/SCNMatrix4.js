@@ -2,6 +2,7 @@
 
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
+import _InstanceOf from '../util/_InstanceOf'
 
 
 const _epsilon = 0.0000001
@@ -58,7 +59,7 @@ export default class SCNMatrix4 {
     /** @type {number} */
     this.m44 = 0
 
-    if(m instanceof SCNMatrix4){
+    if(_InstanceOf(m, SCNMatrix4)){
       this.m11 = m.m11
       this.m12 = m.m12
       this.m13 = m.m13
@@ -595,7 +596,7 @@ export default class SCNMatrix4 {
     let _x = x
     let _y = y
     let _z = z
-    if(x instanceof SCNVector3){
+    if(_InstanceOf(x, SCNVector3)){
       const v = x
       _x = v.x
       _y = v.y
@@ -619,7 +620,7 @@ export default class SCNMatrix4 {
    * @returns {SCNMatrix4} -
    */
   rotation(x, y, z, w) {
-    if(x instanceof SCNVector4){
+    if(_InstanceOf(x, SCNVector4)){
       const v = x
       x = v.x
       y = v.y
@@ -640,7 +641,7 @@ export default class SCNMatrix4 {
    * @returns {SCNMatrix4} -
    */
   static matrixWithRotation(x, y, z, w) {
-    if(x instanceof SCNVector4){
+    if(_InstanceOf(x, SCNVector4)){
       const v = x
       x = v.x
       y = v.y
@@ -704,7 +705,7 @@ export default class SCNMatrix4 {
     let _x = x
     let _y = y
     let _z = z
-    if(x instanceof SCNVector3){
+    if(_InstanceOf(x, SCNVector3)){
       const v = x
       _x = v.x
       _y = v.y
@@ -728,7 +729,7 @@ export default class SCNMatrix4 {
    * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4
    */
   equalTo(m) {
-    if(!(m instanceof SCNMatrix4)){
+    if(!_InstanceOf(m, SCNMatrix4)){
       return false
     }
 

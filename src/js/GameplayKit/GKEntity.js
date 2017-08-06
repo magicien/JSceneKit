@@ -2,6 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import GKComponent from './GKComponent'
+import _InstanceOf from '../util/_InstanceOf'
 
 /**
  * An object relevant to gameplay, with functionality entirely provided by a collection of component objects. 
@@ -79,7 +80,7 @@ export default class GKEntity extends NSObject {
    * @see https://developer.apple.com/documentation/gameplaykit/gkentity/2300466-component
    */
   componentOfType(componentClass) {
-    return this._components.find((component) => component instanceof componentClass)
+    return this._components.find((component) => _InstanceOf(component, componentClass))
   }
 
   /**
@@ -91,7 +92,7 @@ export default class GKEntity extends NSObject {
    */
   removeComponentOfType(componentClass) {
     for(const component of this._components){
-      if(component instanceof componentClass){
+      if(_InstanceOf(component, componentClass)){
         component.willRemoveFromEntity()
 
         const index = this._components.indexOf(component)

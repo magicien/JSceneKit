@@ -9,6 +9,7 @@ import SCNMatrix4 from '../SceneKit/SCNMatrix4'
 import SCNVector4 from '../SceneKit/SCNVector4'
 import SCNVector3 from '../SceneKit/SCNVector3'
 import SKColor from '../SpriteKit/SKColor'
+import _InstanceOf from '../util/_InstanceOf'
 
 /**
  * An abstract subclass of CAAnimation for creating animations that manipulate the value of layer properties. 
@@ -153,27 +154,27 @@ export default class CAPropertyAnimation extends CAAnimation {
       // the animation is over.
       return to
     }
-    if(from instanceof SCNVector4){
+    if(_InstanceOf(from, SCNVector4)){
       // TODO: slerp for Quaternion
       return from.lerp(to, t)
-    }else if(from instanceof SCNVector3){
+    }else if(_InstanceOf(from, SCNVector3)){
       return from.lerp(to, t)
-    }else if(from instanceof SCNMatrix4){
+    }else if(_InstanceOf(from, SCNMatrix4)){
       return from.lerp(to, t)
-    }else if(from instanceof CGSize){
+    }else if(_InstanceOf(from, CGSize)){
       // TODO: implement
-    }else if(from instanceof CGPoint){
+    }else if(_InstanceOf(from, CGPoint)){
       // TODO: implement
-    }else if(from instanceof CGRect){
+    }else if(_InstanceOf(from, CGRect)){
       // TODO: implement
-    }else if(from instanceof SKColor){
+    }else if(_InstanceOf(from, SKColor)){
       return from._lerp(to, t)
     }
     return from + (to - from) * t
   }
 
   _slerp(from, to, t) {
-    if(!(from instanceof SCNVector4)){
+    if(!_InstanceOf(from, SCNVector4)){
       throw new Error('CABasicAnimation._slerp: object is not SCNVector4')
     }
     return from.slerp(to, t)

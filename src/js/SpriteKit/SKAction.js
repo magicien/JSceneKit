@@ -12,6 +12,7 @@ import SKColor from './SKColor'
 //import SKWarpGeometry from './SKWarpGeometry'
 //import SKNode from './SKNode'
 //import SKActionTimingFunction from './SKActionTimingFunction'
+import _InstanceOf from '../util/_InstanceOf'
 
 
 /**
@@ -253,13 +254,13 @@ export default class SKAction extends NSObject {
     //}else if(from instanceof SCNVector3){
     //  return from.lerp(to, t)
     //}else if(from instanceof CGSize){
-    if(from instanceof CGSize){
+    if(_InstanceOf(from, CGSize)){
       return from._lerp(to, t)
-    }else if(from instanceof CGPoint){
+    }else if(_InstanceOf(from, CGPoint)){
       return from._lerp(to, t)
-    }else if(from instanceof CGRect){
+    }else if(_InstanceOf(from, CGRect)){
       return from._lerp(to, t)
-    }else if(from instanceof SKColor){
+    }else if(_InstanceOf(from, SKColor)){
       return from._lerp(to, t)
     }
     return from + (to - from) * t

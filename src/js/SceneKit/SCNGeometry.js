@@ -13,6 +13,7 @@ import SCNMaterial from './SCNMaterial'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNVector3 from './SCNVector3'
 import SKColor from '../SpriteKit/SKColor'
+import _InstanceOf from '../util/_InstanceOf'
 
 /**
  * A three-dimensional shape (also called a model or mesh) that can be displayed in a scene, with attached materials that define its appearance.
@@ -674,7 +675,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     if(typeof texcoordSource1 !== 'undefined' && texcoordSource1.vectorCount !== vectorCount){
       throw new Error('texcoordSource1.vectorCount !== vertexSource.vectorCount')
     }
-    if(typeof tangentSource === 'undefined' && this.materials.find((m) => !(m._normal._contents instanceof SKColor))){
+    if(typeof tangentSource === 'undefined' && this.materials.find((m) => !_InstanceOf(m._normal._contents, SKColor))){
       tangentSource = this._createTangentSource()
       pTangentSource = tangentSource
       this._geometrySources.push(tangentSource)

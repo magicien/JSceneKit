@@ -9,6 +9,7 @@ import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNTransaction from './SCNTransaction'
 import SCNWrapMode from './SCNWrapMode'
 import SKColor from '../SpriteKit/SKColor'
+import _InstanceOf from '../util/_InstanceOf'
 
 
 /**
@@ -536,7 +537,7 @@ export default class SCNMaterialProperty extends NSObject {
    */
   float32Array() {
     const target = this.__presentation ? this.__presentation : this
-    if(target._contents instanceof SKColor){
+    if(_InstanceOf(target._contents, SKColor)){
       return target._contents.float32Array()
     }
     return new Float32Array([1, 1, 1, 1])

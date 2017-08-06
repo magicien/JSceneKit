@@ -24,6 +24,7 @@ import SCNParticleSortingMode from './SCNParticleSortingMode'
 //import SCNParticleModifierBlock from './SCNParticleModifierBlock'
 import SCNTransaction from './SCNTransaction'
 import SKColor from '../SpriteKit/SKColor'
+import _InstanceOf from '../util/_InstanceOf'
 
 const _ParticleProperty = {
   angle: 'Angle',
@@ -792,7 +793,7 @@ export default class SCNParticleSystem extends NSObject {
       return _BinaryRequest.get(path)
         .then((data) => {
           const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
-          if(!(system instanceof SCNParticleSystem)){
+          if(!_InstanceOf(system, SCNParticleSystem)){
             throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
           }
           // FIXME: wait for images
