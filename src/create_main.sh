@@ -37,7 +37,7 @@ for FILE in ${FILES}; do
       -a "${CLASS##*.}" != "web" \
       -a "${CATEGORY}" != "third_party" \
       -a "${CATEGORY}" != "util" ]; then
-    echo "_ClassList.registerClass(${CLASS})" >> ${MAIN_JS}
+    echo "_ClassList.registerClass(${CLASS}, '${CLASS}')" >> ${MAIN_JS}
   fi
 done
   
