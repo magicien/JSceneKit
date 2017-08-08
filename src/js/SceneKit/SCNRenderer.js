@@ -58,7 +58,12 @@ const _defaultVertexShader =
     vec4 ambient;
     vec4 diffuse;
     vec4 specular;
+    vec4 normal;
+    vec4 reflective;
     vec4 emission;
+    vec4 transparent;
+    vec4 multiply;
+    vec4 ambientOcclusion;
     float shininess;
     float fresnelExponent;
   } material;
@@ -346,7 +351,12 @@ const _defaultFragmentShader =
     vec4 ambient;
     vec4 diffuse;
     vec4 specular;
+    vec4 normal;
+    vec4 reflective;
     vec4 emission;
+    vec4 transparent;
+    vec4 multiply;
+    vec4 ambientOcclusion;
     float shininess;
     float fresnelExponent;
   } material;
@@ -532,6 +542,24 @@ const _defaultFragmentShader =
       _surface.normal = normalize(tsInv * color);
     }
 
+    _surface.ambient = material.ambient;
+    _surface.diffuse = material.diffuse;
+    _surface.specular = material.specular;
+    _surface.emission = material.emission;
+    _surface.multiply = material.multiply;
+    _surface.transparent = material.transparent;
+    _surface.reflective = material.reflective;
+    _surface.ambientOcclusion = 1.0; // TODO: calculate AO
+    _surface.shininess = material.shininess;
+    _surface.fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent); // TODO: calculate coefficient
+    // TODO: check mapping channel for each material
+    _surface.ambientTexcoord = v_texcoord0;
+    _surface.diffuseTexcoord = v_texcoord0;
+    _surface.specularTexcoord = v_texcoord0;
+    _surface.emissionTexcoord = v_texcoord1;
+    _surface.multiplyTexcoord = v_texcoord0;
+    _surface.transparentTexcoord = v_texcoord0;
+
     #if USE_SHADER_MODIFIER_SURFACE
       shaderModifierSurface();
     #endif
@@ -625,8 +653,8 @@ const _defaultFragmentShader =
       vec3 r = reflect(_surface.view, _surface.normal);
       //float f0 = 0.0; // TODO: calculate f0
       //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
-      float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
-      _output.color.rgb += texture(u_reflectiveTexture, r).rgb * fresnel;
+      //float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
+      _output.color.rgb += texture(u_reflectiveTexture, r).rgb * _surface.fresnel;
     }
 
     float fogFactor = pow(v_fogFactor, fog.densityExponent);
@@ -635,9 +663,6 @@ const _defaultFragmentShader =
     #if USE_SHADER_MODIFIER_FRAGMENT
       shaderModifierFragment();
     #endif
-
-    // DEBUG
-    //_output.color.a = material.diffuse.a;
 
     outColor = _output.color;
   }
@@ -1830,13 +1855,6 @@ export default class SCNRenderer extends NSObject {
       this._updateVAO(node)
     }
 
-    const uniformTime = gl.getUniformLocation(glProgram, 'u_time')
-    if(uniformTime){
-      // this._time might be too large.
-      const time = this._time % 100000.0
-      gl.uniform1f(uniformTime, time)
-    }
-
     gl.uniformMatrix4fv(gl.getUniformLocation(glProgram, 'modelTransform'), false, node._worldTransform.float32Array())
 
     if(node.presentation.skinner !== null){
@@ -1860,12 +1878,6 @@ export default class SCNRenderer extends NSObject {
         this._switchProgram(material.program)
         // TODO: refactoring
         p = material.program._getGLProgramForContext(gl)
-        const _uniformTime = gl.getUniformLocation(p, 'u_time')
-        if(uniformTime){
-          // this._time might be too large.
-          const time = this._time % 100000.0
-          gl.uniform1f(uniformTime, time)
-        }
         if(node.presentation.skinner !== null){
           if(node.presentation.skinner._useGPU){
             gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -3052,6 +3064,14 @@ export default class SCNRenderer extends NSObject {
     const lightIndex = gl.getUniformBlockIndex(glProgram, 'lightUniform')
     gl.uniformBlockBinding(glProgram, lightIndex, _lightLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
+
+    // set uniform variables
+    const uniformTime = gl.getUniformLocation(glProgram, 'u_time')
+    if(uniformTime){
+      // this._time might be too large.
+      const time = this._time % 100000.0
+      gl.uniform1f(uniformTime, time)
+    }
 
     this._currentProgram = program
   }

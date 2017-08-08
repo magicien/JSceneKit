@@ -547,7 +547,41 @@ if (results.firstObject.node == player) {
       searchMode = opt.get(_TestOption.searchMode)
     }
     
-    return this._renderer._physicsHitTestByGPU(origin, dest, opt)
+    //return this._renderer._physicsHitTestByGPU(origin, dest, opt)
+
+    this._scene.rootNode.enumerateChildNodes((child) => {
+      if(child.presentation 
+        && child.presentation.physicsBody 
+        && (child.presentation.physicsBody.categoryBitMask & collisionBitMask)){
+        const hits = SCNPhysicsWorld._hitTestWithSegmentPhysicsNode(origin, dest, child.presentation)
+        if(hits.length > 0){
+          // convert from child's coordinate to this node's coordinate
+          for(const h of hits){
+            h._node = child
+            h._worldCoordinates = child.convertPositionTo(h._localCoordinates, null)
+            h._worldNormal = child.convertPositionTo(h._localNormal, null)
+            h._localCoordinates = child.convertPositionFrom(h._localCoordinates, child)
+            h._localNormal = child.convertPositionFrom(h._localNormal, child)
+          }
+          results.push(...hits)
+          if(searchMode === _TestSearchMode.any){
+            // stop searching
+            return true
+          }
+        }
+      }
+      return false
+    })
+    if(results.length === 0){
+      return results
+    }
+
+    let sortedResults = results.sort((a, b) => a._distance - b._distance)
+    if(searchMode === _TestSearchMode.closest){
+      sortedResults = [sortedResults[0]]
+    }
+
+    return sortedResults
   }
 
   /**
@@ -896,7 +930,7 @@ if (contacts.count == 0) {
       return result
     }
     const t = d0 / (d0 - d1)
-    const h = v0p0.mul(1-t).add(v0p1.mul(t))
+    const h = v0p0.mul(1-t).add(v0p1.mul(t)).add(v0)
     if(!this._pointIsInsideTriangle(h, v0, v1, v2)){
       return result
     }
@@ -1163,11 +1197,10 @@ if (contacts.count == 0) {
    */
   static _hitTestWithSegmentNode(pointA, pointB, node) {
     let n = node
-    let geo = node.geometry
     if(node.presentation && node.presentation.geometry){
       n = node.presentation
-      geo = n.geometry
     }
+    const geo = n.geometry
     if(!geo){
       return []
     }
@@ -1178,6 +1211,41 @@ if (contacts.count == 0) {
     const r = this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox)
     if(r !== null){
       console.error('segmentBoundingBoxIntersects: ' + r.near + ', ' + r.far)
+      return this._hitTestWithSegmentGeometry(pA, pB, geo)
+    }
+    return []
+  }
+
+  /**
+   * @access private
+   * @param {SCNVector3} p0 - An endpoint of the line segment to test, specified in the world coordinate system.
+   * @param {SCNVector3} p1 - The other endpoint of the line segment to test, specified in the world coordinate system.
+   * @param {SCNNode} node -
+   * @returns {SCNHitTestResult[]} -
+   */
+  static _hitTestWithSegmentPhysicsNode(pointA, pointB, node) {
+    let n = node
+    if(node.presentation && node.presentation.physicsBody){
+      n = node.presentation
+    }
+
+    const body = n.physicsBody
+    if(body === null){
+      return []
+    }
+    const shape = body.physicsShape
+    if(shape === null){
+      return []
+    }
+    const geo = shape._sourceGeometry
+    if(geo === null){
+      return []
+    }
+
+    const pA = pointA.transform(body._invTransform)
+    const pB = pointB.transform(body._invTransform)
+    const r = this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox)
+    if(r !== null){
       return this._hitTestWithSegmentGeometry(pA, pB, geo)
     }
     return []
@@ -1212,14 +1280,16 @@ if (contacts.count == 0) {
   static _lineBoundingBoxIntersects(p, v, boundingBox) {
     const epsilon = 0.000001
     const odd = new SCNVector3(1.0/v.x, 1.0/v.y, 1.0/v.z)
-    const t1 = boundingBox.min.sub(p).mulv(odd)
-    const t2 = boundingBox.max.sub(p).mulv(odd)
+    const bmin = boundingBox.min
+    const bmax = boundingBox.max
+    const t1 = bmin.sub(p).mulv(odd)
+    const t2 = bmax.sub(p).mulv(odd)
 
     let near = -Infinity
     let far = Infinity
 
     if(Math.abs(v.x) < epsilon){
-      if(p.x < near || far < p.x){
+      if(p.x < bmin.x || bmax.x < p.x){
         return null
       }
     }else if(t1.x < t2.x){
@@ -1231,7 +1301,7 @@ if (contacts.count == 0) {
     }
 
     if(Math.abs(v.y) < epsilon){
-      if(p.y < near || far < p.y){
+      if(p.y < bmin.y || bmax.y < p.y){
         return null
       }
     }else if(t1.y < t2.y){
@@ -1243,7 +1313,7 @@ if (contacts.count == 0) {
     }
       
     if(Math.abs(v.z) < epsilon){
-      if(p.z < near || far < p.z){
+      if(p.z < bmin.z || bmax.z < p.z){
         return null
       }
     }else if(t1.z < t2.z){
@@ -1295,6 +1365,7 @@ if (contacts.count == 0) {
           result._faceIndex = j
           result._localCoordinates = r.intersection
           result._localNormal = r.normal
+          result._distance = r.intersection.sub(pointA).length()
           results.push(result)
         }
       }

@@ -32,6 +32,8 @@ export default class SCNHitTestResult extends NSObject {
     this._worldNormal = null
     this._modelTransform = null
 
+    this._distance = null
+
     // Instance Properties
 
     this._boneNode = null

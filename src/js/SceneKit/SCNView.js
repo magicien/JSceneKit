@@ -370,7 +370,43 @@ export default class SCNView {
      * @access private
      * @type {number}
      */
-    this._lastUpdate = 0
+    this._elapsedTime = 0
+
+    /**
+     * @access private
+     * @type {number}
+     */
+    this._previousSystemTimeMs = 0
+
+    /**
+     * @access private
+     * @type {number}
+     */
+    this._sumElapsedTimeMs = 0
+
+    /**
+     * @access private
+     * @type {number}
+     */
+    this._sumFrames = 0
+
+    /**
+     * @access private
+     * @type {number}
+     */
+    this._lastFpsCalculationTimeMs = 0
+
+    /**
+     * @access private
+     * @type {number}
+     */
+    this._fpsCalculationSpanMs = 2000
+
+    /**
+     * @access private
+     * @type {number}
+     */
+    this._fps = 0
 
     /**
      * @access private
@@ -1221,7 +1257,32 @@ export default class SCNView {
   __requestAnimationFrame() {
     // Reflect.apply(this._requestAnimationFrame, window, () => {
     this._requestAnimationFrame.call(window, () => {
-      this._currentSystemTime = Date.now() * 0.001
+      const time = Date.now()
+
+      let elapsedTimeMs = 0
+      if(this._previousSystemTimeMs){
+        elapsedTimeMs = time - this._previousSystemTimeMs
+      }
+      if(elapsedTimeMs){
+        if(!this._lastFpsCalculationTimeMs){
+          this._lastFpsCalculationTime = time
+        }
+        this._sumElapsedTimeMs += elapsedTimeMs
+        this._sumFrames += 1
+
+        if(time - this._lastFpsCalculationTimeMs > this._fpsCalculationSpanMs){
+          this._fps = this._sumFrames / (this._sumElapsedTimeMs * 0.001)
+
+          this._sumFrames = 0
+          this._sumElapsedTimeMs = 0
+          this._lastFpsCalculationTimeMs = time
+
+          console.error('fps: ' + this._fps)
+        }
+      }
+
+      this._currentSystemTime = time * 0.001
+      this._elapsedTime = elapsedTimeMs * 0.001
       this.currentTime = this._currentSystemTime
       GCController._update()
       this._drawAtTimeWithContext(this.currentTime, this._context)
@@ -1229,6 +1290,7 @@ export default class SCNView {
       if(this._isPlaying){
         this.__requestAnimationFrame()
       }
+      this._previousSystemTimeMs = time
     })
   }
 

@@ -886,7 +886,12 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       ...ambient,
       ...diffuse,
       ...material.specular.float32Array(),
+      ...material.normal.float32Array(),
+      ...material.reflective.float32Array(),
       ...material.emission.float32Array(),
+      ...material.transparent.float32Array(),
+      ...material.multiply.float32Array(),
+      ...material.ambientOcclusion.float32Array(),
       material.shininess * 100.0, 
       material.fresnelExponent,
       0, 0 // needs padding for 16-byte alignment
