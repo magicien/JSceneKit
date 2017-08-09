@@ -873,6 +873,12 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       // FIXME: What should I do if there's no material? 
       material = new SCNMaterial()
     }
+
+    if(material.lightingModel === SCNMaterial.LightingModel.constant){
+      this._bindMaterialDataForConstantLighting(material, gl, program, opacity)
+      return
+    }
+
     let diffuse = material.diffuse.float32Array()
     diffuse[3] *= opacity
     let ambient = null
@@ -882,6 +888,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       ambient = material.ambient.float32Array()
       ambient[3] *= opacity
     }
+
     const materialData = new Float32Array([
       ...ambient,
       ...diffuse,
@@ -896,6 +903,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       material.fresnelExponent,
       0, 0 // needs padding for 16-byte alignment
     ])
+    
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
@@ -934,6 +942,85 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     // normal
     this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags)
+
+    // TODO: cache uniform location
+    gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))
+
+    if(material.isDoubleSided){
+      gl.disable(gl.CULL_FACE)
+    }else{
+      gl.enable(gl.CULL_FACE)
+      if(material.cullMode === SCNCullMode.back){
+        gl.cullFace(gl.BACK)
+      }else{
+        gl.cullFace(gl.FRONT)
+      }
+    }
+
+    const blendFuncSrc = [
+      gl.SRC_ALPHA, // alpha
+      gl.ONE, // add
+      gl.ZERO, // subtract
+      gl.ZERO, // multiply
+      gl.SRC_ALPHA, // screen
+      gl.ONE // replace
+    ]
+    const blendFuncDst = [
+      gl.ONE_MINUS_SRC_ALPHA, // alpha
+      gl.ONE, // add
+      gl.ONE_MINUS_SRC_COLOR, // subtract
+      gl.SRC_COLOR, // multiply
+      gl.ONE, // screen
+      gl.ZERO // replace
+    ]
+    gl.blendFunc(blendFuncSrc[material.blendMode], blendFuncDst[material.blendMode])
+  }
+
+  /**
+   * @access private
+   * @param {SCNMaterial} material -
+   * @param {WebGLRenderingContext} gl -
+   * @param {WebGLProgram} program -
+   * @param {number} opacity -
+   */
+  _bindMaterialDataForConstantLighting(material, gl, program, opacity) {
+    const ambient = material.ambient.float32Array()
+    ambient[3] *= opacity
+    const materialData = new Float32Array([
+      ...ambient,
+      0, 0, 0, 1, // diffuse
+      0, 0, 0, 1, // specular
+      0, 0, 0, 1, // normal
+      0, 0, 0, 1, // reflective
+      0, 0, 0, 1, // emission
+      0, 0, 0, 1, // transparent
+      1, 1, 1, 1, // multiply
+      0, 0, 0, 1, // ambientOcclusion
+      0, // shininess
+      0, // fresnelExponent
+      0, 0 // needs padding for 16-byte alignment
+    ])
+
+    gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer)
+    gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW)
+    gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+
+    const textureFlags = []
+
+    // emission
+    textureFlags.push(0)
+
+    gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), 0)
+
+    // ambient
+    this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags)
+
+    textureFlags.push(0) // diffuse
+    textureFlags.push(0) // specular
+    textureFlags.push(0) // reflective
+    textureFlags.push(0) // transparent
+    textureFlags.push(0) // multiply
+    textureFlags.push(0) // normal
 
     // TODO: cache uniform location
     gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))

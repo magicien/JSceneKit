@@ -152,6 +152,12 @@ export default class SCNProgram extends NSObject {
      * @type {WebGLTexture}
      */
     this._dummyCubeMapTexture = null
+
+    /**
+     * @access private
+     * @type {SCNShadable}
+     */
+    this._parentObject = null
   }
 
   // Mapping GLSL Symbols to SceneKit Semantics

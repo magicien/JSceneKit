@@ -9,6 +9,7 @@ import NSObject from '../ObjectiveC/NSObject'
 //import SCNScene from './SCNScene'
 //import SCNAntialiasingMode from './SCNAntialiasingMode'
 import SCNMaterial from './SCNMaterial'
+import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNNode from './SCNNode'
@@ -26,6 +27,8 @@ import SKColor from '../SpriteKit/SKColor'
 
 import SKSpriteNode from '../SpriteKit/SKSpriteNode'
 import SKTexture from '../SpriteKit/SKTexture'
+
+import _InstanceOf from '../util/_InstanceOf'
 
 /**
  * @access private
@@ -559,6 +562,8 @@ const _defaultFragmentShader =
     _surface.emissionTexcoord = v_texcoord1;
     _surface.multiplyTexcoord = v_texcoord0;
     _surface.transparentTexcoord = v_texcoord0;
+
+    __USER_CUSTOM_TEXCOORD__
 
     #if USE_SHADER_MODIFIER_SURFACE
       shaderModifierSurface();
@@ -2970,6 +2975,7 @@ export default class SCNRenderer extends NSObject {
     }else if(p._programCompiled){
       return p
     }
+    p._parentObject = obj
 
     const glProgram = p._getGLProgramForContext(gl)
 
@@ -2998,7 +3004,6 @@ export default class SCNRenderer extends NSObject {
 
     gl.attachShader(glProgram, vertexShader)
     gl.attachShader(glProgram, fragmentShader)
-
 
     // link program object
     gl.linkProgram(glProgram)
@@ -3071,6 +3076,49 @@ export default class SCNRenderer extends NSObject {
       // this._time might be too large.
       const time = this._time % 100000.0
       gl.uniform1f(uniformTime, time)
+    }
+
+    const obj = program._parentObject
+    if(obj){
+      // bind custom uniforms
+      let textureNo = 8 // TEXTURE0-7 is reserved for the default renderer
+      for(const key of Object.keys(obj._valuesForUndefinedKeys)){
+        const loc = gl.getUniformLocation(glProgram, key)
+        if(loc !== null){
+          const val = obj._valuesForUndefinedKeys[key]
+          if(_InstanceOf(val, SCNMaterialProperty)){
+            // TODO: refactoring: SCNGeometry has the same function
+            if(val._contents instanceof Image){
+              //val._contents = this._createTexture(gl, val._contents)
+              const image = val._contents
+              const texture = gl.createTexture()
+              const canvas = document.createElement('canvas')
+              canvas.width = image.naturalWidth
+              canvas.height = image.naturalHeight
+              canvas.getContext('2d').drawImage(image, 0, 0)
+              gl.bindTexture(gl.TEXTURE_2D, texture)
+              // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+              // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+              gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
+              gl.generateMipmap(gl.TEXTURE_2D)
+              val._contents = texture
+            }
+            if(val._contents instanceof WebGLTexture){
+              gl.uniform1i(loc, textureNo)
+              gl.activeTexture(gl[`TEXTURE${textureNo}`])
+              // TODO: check texture type
+              gl.bindTexture(gl.TEXTURE_2D, val._contents)
+              gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, val._magnificationFilterFor(gl))
+              gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, val._minificationFilterFor(gl))
+              gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, val._wrapSFor(gl))
+              gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, val._wrapTFor(gl))
+            }
+          }
+          // TODO: implement for other types
+
+          textureNo += 1
+        }
+      }
     }
 
     this._currentProgram = program
@@ -3169,8 +3217,8 @@ export default class SCNRenderer extends NSObject {
     }
 
     if(obj._valuesForUndefinedKeys){
-      const keys = Object.keys(obj._valuesForUndefinedKeys)
-      return this._replaceTexts(txt, obj._shadableHelper, keys)
+      //const keys = Object.keys(obj._valuesForUndefinedKeys)
+      return this._replaceTexts(txt, obj._shadableHelper, obj._valuesForUndefinedKeys)
     }
     return this._replaceTexts(txt, obj._shadableHelper)
   }
@@ -3195,8 +3243,8 @@ export default class SCNRenderer extends NSObject {
     }
 
     if(obj._valuesForUndefinedKeys){
-      const keys = Object.keys(obj._valuesForUndefinedKeys)
-      return this._replaceTexts(txt, obj._shadableHelper, keys)
+      //const keys = Object.keys(obj._valuesForUndefinedKeys)
+      return this._replaceTexts(txt, obj._shadableHelper, obj._valuesForUndefinedKeys)
     }
     return this._replaceTexts(txt, obj._shadableHelper)
   }
@@ -3205,10 +3253,10 @@ export default class SCNRenderer extends NSObject {
    * @access private
    * @param {string} text -
    * @param {?SCNShadableHelper} [shadableHelper = null] -
-   * @param {?string[]} customProperties -
+   * @param {?Object} customProperties -
    * @returns {string} -
    */
-  _replaceTexts(text, shadableHelper = null, customProperties = []) {
+  _replaceTexts(text, shadableHelper = null, customProperties = {}) {
     const vars = new Map()
     const numAmbient = this._numLights[SCNLight.LightType.ambient]
     const numDirectional = this._numLights[SCNLight.LightType.directional]
@@ -3235,13 +3283,22 @@ export default class SCNRenderer extends NSObject {
 
     let customUniform = ''
     let customSurface = ''
-    for(const prop of customProperties){
-      customUniform += `uniform sampler2D ${prop};`
-      customSurface += `vec2 ${prop}Texcoord;`
+    let customTexcoord = ''
+    for(const key of Object.keys(customProperties)){
+      const val = customProperties[key]
+      if(_InstanceOf(val, SCNMaterialProperty)){
+        customUniform += `uniform sampler2D ${key};`
+        customTexcoord += `_surface.${key}Texcoord = v_texcoord${val.mappingChannel};`
+        customSurface += `vec2 ${key}Texcoord;`
+      }else{
+        // TODO: implement for other types
+        throw new Error(`custom property for ${key} is not implemented`)
+      }
     }
 
     vars.set('__USER_CUSTOM_UNIFORM__', customUniform)
     vars.set('__USER_CUSTOM_SURFACE__', customSurface)
+    vars.set('__USER_CUSTOM_TEXCOORD__', customTexcoord)
 
 
     if(shadableHelper && shadableHelper._shaderModifiers){
