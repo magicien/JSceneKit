@@ -1522,7 +1522,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
             h._worldCoordinates = child.convertPositionTo(h._localCoordinates, null)
             h._worldNormal = child.convertPositionTo(h._localNormal, null)
             h._localCoordinates = this.convertPositionFrom(h._localCoordinates, child)
-            h._localNormal = child.convertPositionFrom(h._localNormal, child)
+            h._localNormal = this.convertPositionFrom(h._localNormal, child)
           }
           results.push(...hits)
         }

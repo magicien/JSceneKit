@@ -2367,7 +2367,7 @@ export default class SCNRenderer extends NSObject {
     const from = new SCNVector3(point.x, point.y, 0)
     const to = new SCNVector3(point.x, point.y, 1.0)
 
-    const useGPU = true
+    const useGPU = false
     if(!useGPU){
       return this._hitTestByCPU(cameraNode.viewProjectionTransform, from, to, _options)
     }
@@ -2433,7 +2433,7 @@ export default class SCNRenderer extends NSObject {
     //console.log(`rayFrom: ${rayFrom.float32Array()}`)
     //console.log(`rayTo  : ${rayTo.float32Array()}`)
 
-    const rayVec = rayTo.sub(rayFrom)
+    //const rayVec = rayTo.sub(rayFrom)
     const renderingArray = this._createRenderingNodeArray()
     //console.log(`renderingArray.length: ${renderingArray.length}`)
 
@@ -2444,7 +2444,17 @@ export default class SCNRenderer extends NSObject {
 
     for(const node of renderingArray){
       if(node.categoryBitMask & categoryBitMask){
-        result.push(...this._nodeHitTestByCPU(node, rayFrom, rayVec))
+        //result.push(...this._nodeHitTestByCPU(node, rayFrom, rayVec))
+        const hits = SCNPhysicsWorld._hitTestWithSegmentNode(rayFrom, rayTo, node)
+        if(hits.length > 0){
+          // convert from the child's coordinate to this node's coordinate
+          for(const h of hits){
+            h._node = node
+            h._worldCoordinates = node.convertPositionTo(h._localCoordinates, null)
+            h._worldNormal = node.convertPositionTo(h._localNormal, null)
+          }
+          result.push(...hits)
+        }
       }
     }
 

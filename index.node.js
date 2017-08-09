@@ -25438,7 +25438,7 @@ module.exports =
 	                h._worldCoordinates = child.convertPositionTo(h._localCoordinates, null);
 	                h._worldNormal = child.convertPositionTo(h._localNormal, null);
 	                h._localCoordinates = _this5.convertPositionFrom(h._localCoordinates, child);
-	                h._localNormal = child.convertPositionFrom(h._localNormal, child);
+	                h._localNormal = _this5.convertPositionFrom(h._localNormal, child);
 	              }
 	            } catch (err) {
 	              _didIteratorError3 = true;
@@ -52287,7 +52287,7 @@ module.exports =
 	      var from = new _SCNVector2.default(point.x, point.y, 0);
 	      var to = new _SCNVector2.default(point.x, point.y, 1.0);
 
-	      var useGPU = true;
+	      var useGPU = false;
 	      if (!useGPU) {
 	        return this._hitTestByCPU(cameraNode.viewProjectionTransform, from, to, _options);
 	      }
@@ -52357,8 +52357,8 @@ module.exports =
 	      //console.log(`rayFrom: ${rayFrom.float32Array()}`)
 	      //console.log(`rayTo  : ${rayTo.float32Array()}`)
 
-	      );var rayVec = rayTo.sub(rayFrom);
-	      var renderingArray = this._createRenderingNodeArray
+	      //const rayVec = rayTo.sub(rayFrom)
+	      );var renderingArray = this._createRenderingNodeArray
 	      //console.log(`renderingArray.length: ${renderingArray.length}`)
 
 	      ();var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
@@ -52375,7 +52375,39 @@ module.exports =
 	          var node = _step6.value;
 
 	          if (node.categoryBitMask & categoryBitMask) {
-	            result.push.apply(result, _toConsumableArray(this._nodeHitTestByCPU(node, rayFrom, rayVec)));
+	            //result.push(...this._nodeHitTestByCPU(node, rayFrom, rayVec))
+	            var hits = _SCNPhysicsWorld2.default._hitTestWithSegmentNode(rayFrom, rayTo, node);
+	            if (hits.length > 0) {
+	              // convert from the child's coordinate to this node's coordinate
+	              var _iteratorNormalCompletion7 = true;
+	              var _didIteratorError7 = false;
+	              var _iteratorError7 = undefined;
+
+	              try {
+	                for (var _iterator7 = hits[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+	                  var h = _step7.value;
+
+	                  h._node = node;
+	                  h._worldCoordinates = node.convertPositionTo(h._localCoordinates, null);
+	                  h._worldNormal = node.convertPositionTo(h._localNormal, null);
+	                }
+	              } catch (err) {
+	                _didIteratorError7 = true;
+	                _iteratorError7 = err;
+	              } finally {
+	                try {
+	                  if (!_iteratorNormalCompletion7 && _iterator7.return) {
+	                    _iterator7.return();
+	                  }
+	                } finally {
+	                  if (_didIteratorError7) {
+	                    throw _iteratorError7;
+	                  }
+	                }
+	              }
+
+	              result.push.apply(result, _toConsumableArray(hits));
+	            }
 	          }
 	        }
 	      } catch (err) {
@@ -52843,29 +52875,29 @@ module.exports =
 	      if (geometry.program || geometry._shadableHelper !== null) {
 	        this._compileProgramForObject(geometry);
 	      }
-	      var _iteratorNormalCompletion7 = true;
-	      var _didIteratorError7 = false;
-	      var _iteratorError7 = undefined;
+	      var _iteratorNormalCompletion8 = true;
+	      var _didIteratorError8 = false;
+	      var _iteratorError8 = undefined;
 
 	      try {
-	        for (var _iterator7 = geometry.materials[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-	          var material = _step7.value;
+	        for (var _iterator8 = geometry.materials[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+	          var material = _step8.value;
 
 	          if (material.program || material._shadableHelper !== null) {
 	            this._compileProgramForObject(material);
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError7 = true;
-	        _iteratorError7 = err;
+	        _didIteratorError8 = true;
+	        _iteratorError8 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
-	            _iterator7.return();
+	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
+	            _iterator8.return();
 	          }
 	        } finally {
-	          if (_didIteratorError7) {
-	            throw _iteratorError7;
+	          if (_didIteratorError8) {
+	            throw _iteratorError8;
 	          }
 	        }
 	      }
@@ -53006,13 +53038,13 @@ module.exports =
 	      if (obj) {
 	        // bind custom uniforms
 	        var textureNo = 8; // TEXTURE0-7 is reserved for the default renderer
-	        var _iteratorNormalCompletion8 = true;
-	        var _didIteratorError8 = false;
-	        var _iteratorError8 = undefined;
+	        var _iteratorNormalCompletion9 = true;
+	        var _didIteratorError9 = false;
+	        var _iteratorError9 = undefined;
 
 	        try {
-	          for (var _iterator8 = Object.keys(obj._valuesForUndefinedKeys)[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-	            var key = _step8.value;
+	          for (var _iterator9 = Object.keys(obj._valuesForUndefinedKeys)[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+	            var key = _step9.value;
 
 	            var loc = gl.getUniformLocation(glProgram, key);
 	            if (loc !== null) {
@@ -53051,16 +53083,16 @@ module.exports =
 	            }
 	          }
 	        } catch (err) {
-	          _didIteratorError8 = true;
-	          _iteratorError8 = err;
+	          _didIteratorError9 = true;
+	          _iteratorError9 = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion8 && _iterator8.return) {
-	              _iterator8.return();
+	            if (!_iteratorNormalCompletion9 && _iterator9.return) {
+	              _iterator9.return();
 	            }
 	          } finally {
-	            if (_didIteratorError8) {
-	              throw _iteratorError8;
+	            if (_didIteratorError9) {
+	              throw _iteratorError9;
 	            }
 	          }
 	        }
@@ -53180,13 +53212,13 @@ module.exports =
 	      var customUniform = '';
 	      var customSurface = '';
 	      var customTexcoord = '';
-	      var _iteratorNormalCompletion9 = true;
-	      var _didIteratorError9 = false;
-	      var _iteratorError9 = undefined;
+	      var _iteratorNormalCompletion10 = true;
+	      var _didIteratorError10 = false;
+	      var _iteratorError10 = undefined;
 
 	      try {
-	        for (var _iterator9 = Object.keys(customProperties)[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
-	          var key = _step9.value;
+	        for (var _iterator10 = Object.keys(customProperties)[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+	          var key = _step10.value;
 
 	          var val = customProperties[key];
 	          if ((0, _InstanceOf3.default)(val, _SCNMaterialProperty2.default)) {
@@ -53199,16 +53231,16 @@ module.exports =
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError9 = true;
-	        _iteratorError9 = err;
+	        _didIteratorError10 = true;
+	        _iteratorError10 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion9 && _iterator9.return) {
-	            _iterator9.return();
+	          if (!_iteratorNormalCompletion10 && _iterator10.return) {
+	            _iterator10.return();
 	          }
 	        } finally {
-	          if (_didIteratorError9) {
-	            throw _iteratorError9;
+	          if (_didIteratorError10) {
+	            throw _iteratorError10;
 	          }
 	        }
 	      }
@@ -53784,13 +53816,13 @@ module.exports =
 	    value: function _numLightsChanged() {
 	      var changed = false;
 	      var types = [].concat(_toConsumableArray(Object.values(_SCNLight2.default.LightType)), ['directionalShadow']);
-	      var _iteratorNormalCompletion10 = true;
-	      var _didIteratorError10 = false;
-	      var _iteratorError10 = undefined;
+	      var _iteratorNormalCompletion11 = true;
+	      var _didIteratorError11 = false;
+	      var _iteratorError11 = undefined;
 
 	      try {
-	        for (var _iterator10 = types[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
-	          var type = _step10.value;
+	        for (var _iterator11 = types[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+	          var type = _step11.value;
 
 	          var num = this._lightNodes[type].length;
 	          if (num !== this._numLights[type]) {
@@ -53799,16 +53831,16 @@ module.exports =
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError10 = true;
-	        _iteratorError10 = err;
+	        _didIteratorError11 = true;
+	        _iteratorError11 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion10 && _iterator10.return) {
-	            _iterator10.return();
+	          if (!_iteratorNormalCompletion11 && _iterator11.return) {
+	            _iterator11.return();
 	          }
 	        } finally {
-	          if (_didIteratorError10) {
-	            throw _iteratorError10;
+	          if (_didIteratorError11) {
+	            throw _iteratorError11;
 	          }
 	        }
 	      }
