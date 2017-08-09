@@ -669,6 +669,11 @@ const _defaultFragmentShader =
       shaderModifierFragment();
     #endif
 
+    if(_output.color.a <= 0.0){
+      // avoid update the depth buffer
+      discard;
+    }
+
     outColor = _output.color;
   }
 `
@@ -799,6 +804,11 @@ const _defaultParticleFragmentShader =
 
   void main() {
     vec4 texColor = texture(particleTexture, v_texcoord);
+    if(texColor.a <= 0.0){
+      // avoid update the depth buffer
+      discard;
+    }
+
     texColor.rgb *= texColor.a;
     outColor = v_color * texColor;
   }
@@ -3096,7 +3106,9 @@ export default class SCNRenderer extends NSObject {
         const loc = gl.getUniformLocation(glProgram, key)
         if(loc !== null){
           const val = obj._valuesForUndefinedKeys[key]
-          if(_InstanceOf(val, SCNMaterialProperty)){
+          if(typeof val === 'number'){
+            gl.uniform1f(loc, val)
+          }else if(_InstanceOf(val, SCNMaterialProperty)){
             // TODO: refactoring: SCNGeometry has the same function
             if(val._contents instanceof Image){
               //val._contents = this._createTexture(gl, val._contents)
@@ -3123,10 +3135,9 @@ export default class SCNRenderer extends NSObject {
               gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, val._wrapSFor(gl))
               gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, val._wrapTFor(gl))
             }
+            textureNo += 1
           }
           // TODO: implement for other types
-
-          textureNo += 1
         }
       }
     }
@@ -3296,7 +3307,9 @@ export default class SCNRenderer extends NSObject {
     let customTexcoord = ''
     for(const key of Object.keys(customProperties)){
       const val = customProperties[key]
-      if(_InstanceOf(val, SCNMaterialProperty)){
+      if(typeof val === 'number'){
+        customUniform += `uniform float ${key};`
+      }else if(_InstanceOf(val, SCNMaterialProperty)){
         customUniform += `uniform sampler2D ${key};`
         customTexcoord += `_surface.${key}Texcoord = v_texcoord${val.mappingChannel};`
         customSurface += `vec2 ${key}Texcoord;`
