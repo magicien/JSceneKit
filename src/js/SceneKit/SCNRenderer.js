@@ -134,6 +134,7 @@ const _defaultVertexShader =
       vec4 dummy;
     #endif
   } light;
+
   #if NUM_SHADOW_LIGHTS > 0
     out vec3 v_light[NUM_SHADOW_LIGHTS];
   #endif
@@ -179,7 +180,7 @@ const _defaultVertexShader =
   out vec3 v_bitangent;
   out vec2 v_texcoord0;
   out vec2 v_texcoord1;
-  out vec4 v_color;
+  //out vec4 v_color;
   out vec3 v_eye;
   out float v_fogFactor;
 
@@ -241,16 +242,17 @@ const _defaultVertexShader =
     vec3 viewVec = camera.position.xyz - pos;
     v_eye = viewVec;
 
-    v_color = material.emission;
+    //v_color = material.emission;
 
     // Lighting
     int numLights = 0;
 
-    #if NUM_AMBIENT_LIGHTS > 0
-      for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){
-        v_color += light.ambient[i].color * material.ambient;
-      }
-    #endif
+    //#if NUM_AMBIENT_LIGHTS > 0
+    //  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){
+    //    v_color += light.ambient[i].color * material.ambient;
+    //    v_ambient += light.ambient[i].color;
+    //  }
+    //#endif
 
     #if NUM_DIRECTIONAL_LIGHTS > 0
       for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
@@ -303,7 +305,8 @@ const _defaultVertexShader =
 const _cameraLoc = 0
 const _materialLoc = 1
 const _lightLoc = 2
-const _fogLoc = 3
+const _scnLightsLoc = 3
+const _fogLoc = 4
 
 
 /**
@@ -368,6 +371,12 @@ const _defaultFragmentShader =
     vec4 color;
   };
 
+  struct SCNShaderLightingContribution {
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+  } _lightingContribution;
+
   struct DirectionalLight {
     vec4 color;
     vec4 direction; // should use vec4; vec3 might cause problem for the layout
@@ -428,17 +437,21 @@ const _defaultFragmentShader =
   #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0
     in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS];
     in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS];
-    uniform sampler2D u_shadowMapTexture0;
+    uniform sampler2D u_shadowTexture0;
     #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 1
-      uniform sampler2D u_shadowMapTexture1;
+      uniform sampler2D u_shadowTexture1;
     #endif
     #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 2
-      uniform sampler2D u_shadowMapTexture2;
+      uniform sampler2D u_shadowTexture2;
     #endif
     #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 3
-      uniform sampler2D u_shadowMapTexture3;
+      uniform sampler2D u_shadowTexture3;
     #endif
   #endif
+
+  layout (std140) uniform SCNLightsUniform {
+    mat4 shadowMatrix0;
+  } scn_lights;
 
   layout (std140) uniform fogUniform {
     vec4 color;
@@ -491,7 +504,7 @@ const _defaultFragmentShader =
   in vec3 v_normal;
   in vec2 v_texcoord0;
   in vec2 v_texcoord1;
-  in vec4 v_color;
+  //in vec4 v_color;
   in vec3 v_eye;
   in vec3 v_tangent;
   in vec3 v_bitangent;
@@ -528,7 +541,8 @@ const _defaultFragmentShader =
 
     
   void main() {
-    _output.color = v_color;
+    //_output.color = v_color;
+    //_output.color = vec4(0, 0, 0, 1);
 
     //vec3 viewVec = normalize(v_eye);
     //vec3 nom = normalize(v_normal);
@@ -545,7 +559,8 @@ const _defaultFragmentShader =
       _surface.normal = normalize(tsInv * color);
     }
 
-    _surface.ambient = material.ambient;
+    //_surface.ambient = material.ambient;
+    _surface.ambient = vec4(0, 0, 0, 1); // FIXME: check: lock ambient with diffuse
     _surface.diffuse = material.diffuse;
     _surface.specular = material.specular;
     _surface.emission = material.emission;
@@ -555,13 +570,37 @@ const _defaultFragmentShader =
     _surface.ambientOcclusion = 1.0; // TODO: calculate AO
     _surface.shininess = material.shininess;
     _surface.fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent); // TODO: calculate coefficient
+
     // TODO: check mapping channel for each material
     _surface.ambientTexcoord = v_texcoord0;
     _surface.diffuseTexcoord = v_texcoord0;
     _surface.specularTexcoord = v_texcoord0;
-    _surface.emissionTexcoord = v_texcoord1;
+    if(selfIllumination){
+      _surface.emissionTexcoord = v_texcoord1;
+    }else{
+      _surface.emissionTexcoord = v_texcoord0;
+    }
     _surface.multiplyTexcoord = v_texcoord0;
     _surface.transparentTexcoord = v_texcoord0;
+
+    if(textureFlags[TEXTURE_AMBIENT_INDEX]){
+      _surface.ambient = texture(u_ambientTexture, _surface.ambientTexcoord);
+    }
+    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
+      _surface.diffuse = texture(u_diffuseTexture, _surface.diffuseTexcoord);
+    }
+    if(textureFlags[TEXTURE_SPECULAR_INDEX]){
+      _surface.specular = texture(u_specularTexture, _surface.specularTexcoord);
+    }
+    if(textureFlags[TEXTURE_EMISSION_INDEX]){
+      _surface.emission = texture(u_emissionTexture, _surface.emissionTexcoord);
+    }
+    if(textureFlags[TEXTURE_MULTIPLY_INDEX]){
+      _surface.multiply = texture(u_multiplyTexture, _surface.multiplyTexcoord);
+    }
+    if(textureFlags[TEXTURE_TRANSPARENT_INDEX]){
+      _surface.transparent = texture(u_transparentTexture, _surface.transparentTexcoord);
+    }
 
     __USER_CUSTOM_TEXCOORD__
 
@@ -569,32 +608,16 @@ const _defaultFragmentShader =
       shaderModifierSurface();
     #endif
 
-    // emission texture
-    if(textureFlags[TEXTURE_EMISSION_INDEX]){
-      if(selfIllumination){
-        vec4 color = texture(u_emissionTexture, v_texcoord1); // FIXME: check mappingChannel to decide which texture you use.
-        _output.color += color;
-      }else{
-        vec4 color = texture(u_emissionTexture, v_texcoord0);
-        _output.color = color * _output.color;
-      }
-    }
-
-    vec4 specularColor;
-    if(textureFlags[TEXTURE_SPECULAR_INDEX]){
-      vec4 color = texture(u_specularTexture, v_texcoord0);
-      specularColor = color;
-    }else{
-      specularColor = material.specular;
-    }
-      
-    _output.color.a = material.diffuse.a;
-
     // Lighting
     int numLights = 0;
+    _lightingContribution.ambient = vec3(0);
+    _lightingContribution.diffuse = vec3(0);
+    _lightingContribution.specular = vec3(0);
 
     #if NUM_AMBIENT_LIGHTS > 0
-      // nothing to do for ambient lights
+      for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){
+        _lightingContribution.ambient += light.ambient[i].color.rgb;
+      }
     #endif
 
     #if NUM_DIRECTIONAL_LIGHTS > 0
@@ -602,13 +625,15 @@ const _defaultFragmentShader =
         // diffuse
         vec3 lightVec = normalize(v_light[numLights + i]);
         float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
-        _output.color.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
+        //_output.color.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
+        _lightingContribution.diffuse += light.directional[i].color.rgb * diffuse;
 
         // specular
         if(diffuse > 0.0f){
           vec3 halfVec = normalize(lightVec + _surface.view);
-          float specular = pow(dot(halfVec, _surface.normal), material.shininess);
-          _output.color.rgb += specularColor.rgb * specular;
+          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
+          // TODO: use intensity
+          _lightingContribution.specular += vec3(specular);
         }
       }
       numLights += NUM_DIRECTIONAL_LIGHTS;
@@ -619,14 +644,15 @@ const _defaultFragmentShader =
         // diffuse
         vec3 lightVec = normalize(v_light[numLights + i]);
         float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
-        _output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
+        //_output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
+        _lightingContribution.diffuse += light.omni[i].color.rgb * diffuse;
 
         // specular
         if(diffuse > 0.0f){
           vec3 halfVec = normalize(lightVec + _surface.view);
-          float specular = pow(dot(halfVec, _surface.normal), material.shininess);
-          //outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
-          _output.color.rgb += specularColor.rgb * specular;
+          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
+          // TODO: use intensity
+          _lightingContribution.specular += vec3(1, 1, 1) * specular;
         }
       }
       numLights += NUM_OMNI_LIGHTS;
@@ -645,18 +671,42 @@ const _defaultFragmentShader =
     #endif
 
     __FS_LIGHTING__
-    
 
-    // diffuse texture
-    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
-      vec4 color = texture(u_diffuseTexture, v_texcoord0);
-      _output.color = color * _output.color;
+
+    // calculate color
+    _output.color = vec4(0, 0, 0, _surface.diffuse.a);
+
+    vec3 D = _lightingContribution.diffuse;
+
+    // lock ambient with diffuse
+    D += _lightingContribution.ambient * _surface.ambientOcclusion;
+
+    // emission
+    if(selfIllumination){
+      D += _surface.emission.rgb;
     }
+
+    // diffuse
+    _output.color.rgb = _surface.diffuse.rgb * D;
+
+    vec3 S = _lightingContribution.specular;
+    //S += _surface.reflective.rgb * _surface.ambientOcclusion;
+    S *= _surface.specular.rgb;
+    _output.color.rgb += S;
+
+    // ambient
+    _output.color.rgb += _surface.ambient.rgb * _lightingContribution.ambient;
+
+    if(!selfIllumination){
+      _output.color.rgb += _surface.emission.rgb;
+    }
+
+    // multiply
+    _output.color.rgb *= _surface.multiply.rgb;
 
     // fresnel reflection
     if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){
       vec3 r = reflect(_surface.view, _surface.normal);
-      //float f0 = 0.0; // TODO: calculate f0
       //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
       //float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
       _output.color.rgb += texture(u_reflectiveTexture, r).rgb * _surface.fresnel;
@@ -665,12 +715,14 @@ const _defaultFragmentShader =
     float fogFactor = pow(v_fogFactor, fog.densityExponent);
     _output.color = mix(_output.color, fog.color, fogFactor);
 
+    _output.color.rgb *= _surface.diffuse.a;
+
     #if USE_SHADER_MODIFIER_FRAGMENT
       shaderModifierFragment();
     #endif
 
     if(_output.color.a <= 0.0){
-      // avoid update the depth buffer
+      // avoid overwriting the depth buffer
       discard;
     }
 
@@ -679,7 +731,7 @@ const _defaultFragmentShader =
 `
 
 const _fsDirectionalShadow = `
-  //float shadow = convDepth(texture(u_shadowMapTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));
+  //float shadow = convDepth(texture(u_shadowTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));
   //if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > shadow){
   //  _output.color.rgb += material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
   //}else{
@@ -699,24 +751,27 @@ const _fsDirectionalShadow = `
   {
     float shadow = 0.0;
     for(int i=0; i<4; i++){
-      float d = convDepth(texture(u_shadowMapTexture__I__, (v_directionalShadowTexcoord[__I__].xy + poissonDisk[i]/700.0) / v_directionalShadowTexcoord[__I__].w));
+      float d = convDepth(texture(u_shadowTexture__I__, (v_directionalShadowTexcoord[__I__].xy + poissonDisk[i]/700.0) / v_directionalShadowTexcoord[__I__].w));
       if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > d){
         shadow += 0.25;
       }
     }
-    vec3 shadowColor = material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
+    //vec3 shadowColor = material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
+    vec3 shadowColor = light.directionalShadow[__I__].shadowColor.rgb;
     // diffuse
     vec3 lightVec = normalize(v_light[numLights]);
     float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
-    vec3 lightColor = light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;
+    vec3 lightDiffuse = light.directionalShadow[__I__].color.rgb * diffuse;
+    _lightingContribution.diffuse += shadowColor * shadow + lightDiffuse * (1.0 - shadow);
 
     // specular
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + _surface.view);
-      float specular = pow(dot(halfVec, _surface.normal), material.shininess);
-      lightColor += specularColor.rgb * specular;
+      float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
+      // TODO: use intensity
+      _lightingContribution.specular += vec3(specular);
     }
-    _output.color.rgb += shadowColor * shadow + lightColor * (1.0 - shadow);
+    //_output.color.rgb += shadowColor * shadow + lightColor * (1.0 - shadow);
   }
 
   numLights += 1;
@@ -805,7 +860,7 @@ const _defaultParticleFragmentShader =
   void main() {
     vec4 texColor = texture(particleTexture, v_texcoord);
     if(texColor.a <= 0.0){
-      // avoid update the depth buffer
+      // avoid overwriting the depth buffer
       discard;
     }
 
@@ -1262,6 +1317,12 @@ export default class SCNRenderer extends NSObject {
      * @access private
      * @type {WebGLBuffer}
      */
+    this._scnLightsBuffer = null
+
+    /**
+     * @access private
+     * @type {WebGLBuffer}
+     */
     this._fogBuffer = null
 
     ////////////////////////////
@@ -1477,6 +1538,17 @@ export default class SCNRenderer extends NSObject {
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
+    // FIXME: set params for each light
+    let shadowMatrix0 = null
+    if(lights.directionalShadow.length > 0){
+      shadowMatrix0 = lights.directionalShadow[0].presentation.shadowProjectionTransform.float32Array()
+    }else{
+      shadowMatrix0 = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
+    }
+    gl.bindBuffer(gl.UNIFORM_BUFFER, this._scnLightsBuffer)
+    gl.bufferData(gl.UNIFORM_BUFFER, shadowMatrix0, gl.DYNAMIC_DRAW)
+    gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+
     //////////////////////////
     // Background (SkyBox)
     //////////////////////////
@@ -1523,7 +1595,6 @@ export default class SCNRenderer extends NSObject {
       }
     }
     this._setViewPort() // reset viewport size
-    //gl.useProgram(program)
     this._useProgram(p)
     for(let i=0; i<lights.directionalShadow.length; i++){
       const node = lights.directionalShadow[i]
@@ -3089,6 +3160,9 @@ export default class SCNRenderer extends NSObject {
     const lightIndex = gl.getUniformBlockIndex(glProgram, 'lightUniform')
     gl.uniformBlockBinding(glProgram, lightIndex, _lightLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
+    const scnLightsIndex = gl.getUniformBlockIndex(glProgram, 'SCNLightsUniform')
+    gl.uniformBlockBinding(glProgram, scnLightsIndex, _scnLightsLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _scnLightsLoc, this._scnLightsBuffer)
 
     // set uniform variables
     const uniformTime = gl.getUniformLocation(glProgram, 'u_time')
@@ -3101,7 +3175,7 @@ export default class SCNRenderer extends NSObject {
     const obj = program._parentObject
     if(obj){
       // bind custom uniforms
-      let textureNo = 8 // TEXTURE0-7 is reserved for the default renderer
+      let textureNo = 12 // TEXTURE0-11 is reserved for the default renderer (0-7: material, 8-11: shadow)
       for(const key of Object.keys(obj._valuesForUndefinedKeys)){
         const loc = gl.getUniformLocation(glProgram, key)
         if(loc !== null){
@@ -3237,11 +3311,7 @@ export default class SCNRenderer extends NSObject {
       txt = _defaultVertexShader
     }
 
-    if(obj._valuesForUndefinedKeys){
-      //const keys = Object.keys(obj._valuesForUndefinedKeys)
-      return this._replaceTexts(txt, obj._shadableHelper, obj._valuesForUndefinedKeys)
-    }
-    return this._replaceTexts(txt, obj._shadableHelper)
+    return this._replaceTexts(txt, obj)
   }
 
   /**
@@ -3263,21 +3333,16 @@ export default class SCNRenderer extends NSObject {
       txt = _defaultFragmentShader
     }
 
-    if(obj._valuesForUndefinedKeys){
-      //const keys = Object.keys(obj._valuesForUndefinedKeys)
-      return this._replaceTexts(txt, obj._shadableHelper, obj._valuesForUndefinedKeys)
-    }
-    return this._replaceTexts(txt, obj._shadableHelper)
+    return this._replaceTexts(txt, obj)
   }
 
   /**
    * @access private
    * @param {string} text -
-   * @param {?SCNShadableHelper} [shadableHelper = null] -
-   * @param {?Object} customProperties -
+   * @param {?SCNShadable} [shadable = null] -
    * @returns {string} -
    */
-  _replaceTexts(text, shadableHelper = null, customProperties = {}) {
+  _replaceTexts(text, shadable = null) {
     const vars = new Map()
     const numAmbient = this._numLights[SCNLight.LightType.ambient]
     const numDirectional = this._numLights[SCNLight.LightType.directional]
@@ -3286,6 +3351,8 @@ export default class SCNRenderer extends NSObject {
     const numSpot = this._numLights[SCNLight.LightType.spot]
     const numIES = this._numLights[SCNLight.LightType.IES]
     const numProbe = this._numLights[SCNLight.LightType.probe]
+    const shadableHelper = shadable ? shadable._shadableHelper : null
+    const customProperties = shadable ? shadable._valuesForUndefinedKeys : {}
 
     vars.set('__NUM_AMBIENT_LIGHTS__', numAmbient)
     vars.set('__NUM_DIRECTIONAL_LIGHTS__', numDirectional)
@@ -3692,16 +3759,21 @@ export default class SCNRenderer extends NSObject {
   _initializeLightBuffer(glProgram) {
     const gl = this.context
     
+    // TODO: replace lightUniform to SCNLightsUniform
     const lightIndex = gl.getUniformBlockIndex(glProgram, 'lightUniform')
-
     this._lightBuffer = gl.createBuffer()
     gl.uniformBlockBinding(glProgram, lightIndex, _lightLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
 
+    const scnLightsIndex = gl.getUniformBlockIndex(glProgram, 'SCNLightsUniform')
+    this._scnLightsBuffer = gl.createBuffer()
+    gl.uniformBlockBinding(glProgram, scnLightsIndex, _scnLightsLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _scnLightsLoc, this._scnLightsBuffer)
+
     for(let i=0; i<this._lightNodes.directionalShadow.length; i++){
       const node = this._lightNodes.directionalShadow[i]
       const symbol = `TEXTURE${i+8}`
-      const name = `u_shadowMapTexture${i}`
+      const name = `u_shadowTexture${i}`
 
       gl.uniform1i(gl.getUniformLocation(glProgram, name), i+8)
       gl.activeTexture(gl[symbol])
