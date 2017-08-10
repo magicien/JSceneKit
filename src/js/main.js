@@ -2,6 +2,7 @@ import NSColor from './AppKit/NSColor'
 import NSColorSpaceModel from './AppKit/NSColorSpaceModel'
 import AVAudioMixerNode from './AVFoundation/AVAudioMixerNode'
 import AVAudioNode from './AVFoundation/AVAudioNode'
+import CFAbsoluteTimeGetCurrent from './CoreFoundation/CFAbsoluteTimeGetCurrent'
 import CGBlendMode from './CoreGraphics/CGBlendMode'
 import CGLineCap from './CoreGraphics/CGLineCap'
 import CGLineJoin from './CoreGraphics/CGLineJoin'
@@ -267,6 +268,7 @@ _ClassList.registerClass(NSColor, 'NSColor')
 _ClassList.registerClass(NSColorSpaceModel, 'NSColorSpaceModel')
 _ClassList.registerClass(AVAudioMixerNode, 'AVAudioMixerNode')
 _ClassList.registerClass(AVAudioNode, 'AVAudioNode')
+_ClassList.registerClass(CFAbsoluteTimeGetCurrent, 'CFAbsoluteTimeGetCurrent')
 _ClassList.registerClass(CGBlendMode, 'CGBlendMode')
 _ClassList.registerClass(CGLineCap, 'CGLineCap')
 _ClassList.registerClass(CGLineJoin, 'CGLineJoin')
@@ -524,6 +526,7 @@ exports.NSColor = NSColor
 exports.NSColorSpaceModel = NSColorSpaceModel
 exports.AVAudioMixerNode = AVAudioMixerNode
 exports.AVAudioNode = AVAudioNode
+exports.CFAbsoluteTimeGetCurrent = CFAbsoluteTimeGetCurrent
 exports.CGBlendMode = CGBlendMode
 exports.CGLineCap = CGLineCap
 exports.CGLineJoin = CGLineJoin
