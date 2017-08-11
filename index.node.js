@@ -40528,6 +40528,7 @@ var SCNRenderer = function (_NSObject) {
       var numProbe = this._numLights[_SCNLight2.default.LightType.probe];
       var shadableHelper = shadable ? shadable._shadableHelper : null;
       var customProperties = shadable ? shadable._valuesForUndefinedKeys : {};
+      var shaderModifiers = shadable ? shadable.shaderModifiers : null;
 
       vars.set('__NUM_AMBIENT_LIGHTS__', numAmbient);
       vars.set('__NUM_DIRECTIONAL_LIGHTS__', numDirectional);
@@ -40553,18 +40554,18 @@ var SCNRenderer = function (_NSObject) {
 
       try {
         for (var _iterator10 = Object.keys(customProperties)[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
-          var key = _step10.value;
+          var _key = _step10.value;
 
-          var val = customProperties[key];
+          var val = customProperties[_key];
           if (typeof val === 'number') {
-            customUniform += 'uniform float ' + key + ';';
+            customUniform += 'uniform float ' + _key + ';';
           } else if ((0, _InstanceOf3.default)(val, _SCNMaterialProperty2.default)) {
-            customUniform += 'uniform sampler2D ' + key + ';';
-            customTexcoord += '_surface.' + key + 'Texcoord = v_texcoord' + val.mappingChannel + ';';
-            customSurface += 'vec2 ' + key + 'Texcoord;';
+            customUniform += 'uniform sampler2D ' + _key + ';';
+            customTexcoord += '_surface.' + _key + 'Texcoord = v_texcoord' + val.mappingChannel + ';';
+            customSurface += 'vec2 ' + _key + 'Texcoord;';
           } else {
             // TODO: implement for other types
-            throw new Error('custom property for ' + key + ' is not implemented');
+            throw new Error('custom property for ' + _key + ' is not implemented');
           }
         }
       } catch (err) {
@@ -40582,12 +40583,53 @@ var SCNRenderer = function (_NSObject) {
         }
       }
 
+      if (shaderModifiers) {
+        var _iteratorNormalCompletion11 = true;
+        var _didIteratorError11 = false;
+        var _iteratorError11 = undefined;
+
+        try {
+          for (var _iterator11 = shaderModifiers[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+            var key = _step11.value;
+
+            var mod = shaderModifiers[key];
+            var _texts = mod.split(/^\s*#pragma\s+body\s*$/m);
+            if (_texts.length === 1) {
+              // nothing to do
+            } else if (_texts.length === 2) {
+              customUniform += _texts[0].replace(/^\s*#pragma\s+.*$/mg, '');
+            } else {
+              throw new Error('found multiple "#pragma body" in the shaderModifier');
+            }
+          }
+        } catch (err) {
+          _didIteratorError11 = true;
+          _iteratorError11 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion11 && _iterator11.return) {
+              _iterator11.return();
+            }
+          } finally {
+            if (_didIteratorError11) {
+              throw _iteratorError11;
+            }
+          }
+        }
+      }
+
       vars.set('__USER_CUSTOM_UNIFORM__', customUniform);
       vars.set('__USER_CUSTOM_SURFACE__', customSurface);
       vars.set('__USER_CUSTOM_TEXCOORD__', customTexcoord);
 
-      if (shadableHelper && shadableHelper._shaderModifiers) {
-        var modifiers = shadableHelper._shaderModifiers;
+      var modifiers = null;
+      if (shaderModifiers) {
+        modifiers = shaderModifiers;
+      } else if (shadableHelper) {
+        modifiers = shadableHelper._shaderModifiers;
+      }
+
+      if (modifiers) {
         if (modifiers.SCNShaderModifierEntryPointGeometry) {
           var _text = this._processShaderText(modifiers.SCNShaderModifierEntryPointGeometry);
           vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1);
@@ -40626,7 +40668,14 @@ var SCNRenderer = function (_NSObject) {
   }, {
     key: '_processShaderText',
     value: function _processShaderText(text) {
-      var _text = text.replace(/texture2D/g, 'texture');
+      var _text = text;
+
+      var _texts = text.split(/^\s*#pragma\s+body\s*$/m);
+      if (_texts.length == 2) {
+        _text = _texts[1].replace(/^\s*#pragma\s+.*$/mg, '');
+      }
+
+      _text = text.replace(/texture2D/g, 'texture');
       _text = _text.replace(/float2/g, 'vec2');
       _text = _text.replace(/float3/g, 'vec3');
       _text = _text.replace(/float4/g, 'vec4');
@@ -41158,13 +41207,13 @@ var SCNRenderer = function (_NSObject) {
     value: function _numLightsChanged() {
       var changed = false;
       var types = [].concat(_toConsumableArray(Object.values(_SCNLight2.default.LightType)), ['directionalShadow']);
-      var _iteratorNormalCompletion11 = true;
-      var _didIteratorError11 = false;
-      var _iteratorError11 = undefined;
+      var _iteratorNormalCompletion12 = true;
+      var _didIteratorError12 = false;
+      var _iteratorError12 = undefined;
 
       try {
-        for (var _iterator11 = types[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
-          var type = _step11.value;
+        for (var _iterator12 = types[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+          var type = _step12.value;
 
           var num = this._lightNodes[type].length;
           if (num !== this._numLights[type]) {
@@ -41173,16 +41222,16 @@ var SCNRenderer = function (_NSObject) {
           }
         }
       } catch (err) {
-        _didIteratorError11 = true;
-        _iteratorError11 = err;
+        _didIteratorError12 = true;
+        _iteratorError12 = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion11 && _iterator11.return) {
-            _iterator11.return();
+          if (!_iteratorNormalCompletion12 && _iterator12.return) {
+            _iterator12.return();
           }
         } finally {
-          if (_didIteratorError11) {
-            throw _iteratorError11;
+          if (_didIteratorError12) {
+            throw _iteratorError12;
           }
         }
       }

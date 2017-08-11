@@ -3353,6 +3353,7 @@ export default class SCNRenderer extends NSObject {
     const numProbe = this._numLights[SCNLight.LightType.probe]
     const shadableHelper = shadable ? shadable._shadableHelper : null
     const customProperties = shadable ? shadable._valuesForUndefinedKeys : {}
+    const shaderModifiers = shadable ? shadable.shaderModifiers : null
 
     vars.set('__NUM_AMBIENT_LIGHTS__', numAmbient)
     vars.set('__NUM_DIRECTIONAL_LIGHTS__', numDirectional)
@@ -3386,13 +3387,32 @@ export default class SCNRenderer extends NSObject {
       }
     }
 
+    if(shaderModifiers){
+      for(const key of shaderModifiers){
+        const mod = shaderModifiers[key]
+        const _texts = mod.split(/^\s*#pragma\s+body\s*$/m)
+        if(_texts.length === 1){
+          // nothing to do
+        }else if(_texts.length === 2){
+          customUniform += _texts[0].replace(/^\s*#pragma\s+.*$/mg, '')
+        }else{
+          throw new Error('found multiple "#pragma body" in the shaderModifier')
+        }
+      }
+    }
+
     vars.set('__USER_CUSTOM_UNIFORM__', customUniform)
     vars.set('__USER_CUSTOM_SURFACE__', customSurface)
     vars.set('__USER_CUSTOM_TEXCOORD__', customTexcoord)
 
+    let modifiers = null
+    if(shaderModifiers){
+      modifiers = shaderModifiers
+    }else if(shadableHelper){
+      modifiers = shadableHelper._shaderModifiers
+    }
 
-    if(shadableHelper && shadableHelper._shaderModifiers){
-      const modifiers = shadableHelper._shaderModifiers
+    if(modifiers){
       if(modifiers.SCNShaderModifierEntryPointGeometry){
         const _text = this._processShaderText(modifiers.SCNShaderModifierEntryPointGeometry)
         vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1)
@@ -3430,7 +3450,14 @@ export default class SCNRenderer extends NSObject {
   }
 
   _processShaderText(text) {
-    let _text = text.replace(/texture2D/g, 'texture')
+    let _text = text
+
+    const _texts = text.split(/^\s*#pragma\s+body\s*$/m)
+    if(_texts.length == 2){
+      _text = _texts[1].replace(/^\s*#pragma\s+.*$/mg, '')
+    }
+
+    _text = text.replace(/texture2D/g, 'texture')
     _text = _text.replace(/float2/g, 'vec2')
     _text = _text.replace(/float3/g, 'vec3')
     _text = _text.replace(/float4/g, 'vec4')
