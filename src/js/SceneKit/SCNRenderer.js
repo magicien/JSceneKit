@@ -234,12 +234,16 @@ const _defaultVertexShader =
       nom = mat3(jointMatrix) * _geometry.normal;
       tng = mat3(jointMatrix) * _geometry.tangent.xyz;
     }
-    v_position = pos;
-    v_normal = normalize(nom);
-    v_tangent = normalize(tng);
+    //v_position = pos;
+    //v_normal = normalize(nom);
+    //v_tangent = normalize(tng);
+    v_position = (camera.viewTransform * vec4(pos, 1.0)).xyz;
+    v_normal = normalize((camera.viewTransform * vec4(nom, 0.0)).xyz);
+    v_tangent = normalize((camera.viewTransform * vec4(tng, 0.0)).xyz);
     v_bitangent = cross(v_tangent, v_normal);
 
-    vec3 viewVec = camera.position.xyz - pos;
+    //vec3 viewVec = camera.position.xyz - pos;
+    vec3 viewVec = (camera.viewTransform * vec4(camera.position.xyz - pos, 0.0)).xyz;
     v_eye = viewVec;
 
     //v_color = material.emission;
@@ -256,14 +260,16 @@ const _defaultVertexShader =
 
     #if NUM_DIRECTIONAL_LIGHTS > 0
       for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
-        v_light[numLights + i] = -light.directional[i].direction.xyz;
+        //v_light[numLights + i] = -light.directional[i].direction.xyz;
+        v_light[numLights + i] = (camera.viewTransform * (-light.directional[i].direction)).xyz;
       }
       numLights += NUM_DIRECTIONAL_LIGHTS;
     #endif
 
     #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0
       for(int i=0; i<NUM_DIRECTIONAL_SHADOW_LIGHTS; i++){
-        v_light[numLights + i] = -light.directionalShadow[i].direction.xyz;
+        //v_light[numLights + i] = -light.directionalShadow[i].direction.xyz;
+        v_light[numLights + i] = (camera.viewTransform * (-light.directionalShadow[i].direction)).xyz;
         v_directionalShadowDepth[i] = light.directionalShadow[i].viewProjectionTransform * vec4(pos, 1.0);
         v_directionalShadowTexcoord[i] = light.directionalShadow[i].shadowProjectionTransform * vec4(pos, 1.0);
       }
@@ -272,14 +278,16 @@ const _defaultVertexShader =
 
     #if NUM_OMNI_LIGHTS > 0
       for(int i=0; i<NUM_OMNI_LIGHTS; i++){
-        v_light[numLights + i] = light.omni[i].position.xyz - pos;
+        //v_light[numLights + i] = light.omni[i].position.xyz - pos;
+        v_light[numLights + i] = (camera.viewTransform * vec4(light.omni[i].position.xyz - pos, 0.0)).xyz;
       }
       numLights += NUM_OMNI_LIGHTS;
     #endif
 
     #if NUM_SPOT_LIGHTS > 0
       for(int i=0; i<NUM_SPOT_LIGHTS; i++){
-        v_light[numLights + i] = light.spot[i].position.xyz - pos;
+        //v_light[numLights + i] = light.spot[i].position.xyz - pos;
+        v_light[numLights + i] = (camera.viewTransform * vec4(light.spot[i].position.xyz - pos, 0.0)).xyz;
       }
       numLights += NUM_SPOT_LIGHTS;
     #endif
@@ -352,6 +360,12 @@ const _defaultFragmentShader =
 
   #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__
   #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__
+
+  layout (std140) uniform cameraUniform {
+    vec4 position;
+    mat4 viewTransform;
+    mat4 viewProjectionTransform;
+  } camera;
 
   layout (std140) uniform materialUniform {
     vec4 ambient;
@@ -450,6 +464,7 @@ const _defaultFragmentShader =
   #endif
 
   layout (std140) uniform SCNLightsUniform {
+    vec4 direction0;
     mat4 shadowMatrix0;
   } scn_lights;
 
@@ -727,6 +742,10 @@ const _defaultFragmentShader =
     }
 
     outColor = _output.color;
+
+    // linear To sRGB
+    //outColor.rgb = pow(_output.color.rgb, vec3(1.0/2.2));
+    //outColor.a = _output.color.a;
   }
 `
 
@@ -1539,14 +1558,20 @@ export default class SCNRenderer extends NSObject {
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
     // FIXME: set params for each light
-    let shadowMatrix0 = null
+    const scnLightsData = []
     if(lights.directionalShadow.length > 0){
-      shadowMatrix0 = lights.directionalShadow[0].presentation.shadowProjectionTransform.float32Array()
+      const l = lights.directionalShadow[0].presentation
+      const direction = (new SCNVector3(0, 0, -1)).rotateWithQuaternion(l._worldOrientation)
+      scnLightsData.push(...direction.float32Array(), 0)
+      scnLightsData.push(...l.shadowProjectionTransform.float32Array())
     }else{
-      shadowMatrix0 = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
+      // direction
+      scnLightsData.push(0, 0, 0, 0)
+      // identity matrix
+      scnLightsData.push(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
     }
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._scnLightsBuffer)
-    gl.bufferData(gl.UNIFORM_BUFFER, shadowMatrix0, gl.DYNAMIC_DRAW)
+    gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(scnLightsData), gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
     //////////////////////////
@@ -3037,11 +3062,11 @@ export default class SCNRenderer extends NSObject {
       return geometry.program
     }
 
-    if(geometry.program || geometry._shadableHelper !== null){
+    if(geometry.program || geometry.shaderModifiers !== null || geometry._shadableHelper !== null){
       this._compileProgramForObject(geometry)
     }
     for(const material of geometry.materials){
-      if(material.program || material._shadableHelper !== null){
+      if(material.program || material.shaderModifiers !== null || material._shadableHelper !== null){
         this._compileProgramForObject(material)
       }
     }
@@ -3373,22 +3398,9 @@ export default class SCNRenderer extends NSObject {
     let customUniform = ''
     let customSurface = ''
     let customTexcoord = ''
-    for(const key of Object.keys(customProperties)){
-      const val = customProperties[key]
-      if(typeof val === 'number'){
-        customUniform += `uniform float ${key};`
-      }else if(_InstanceOf(val, SCNMaterialProperty)){
-        customUniform += `uniform sampler2D ${key};`
-        customTexcoord += `_surface.${key}Texcoord = v_texcoord${val.mappingChannel};`
-        customSurface += `vec2 ${key}Texcoord;`
-      }else{
-        // TODO: implement for other types
-        throw new Error(`custom property for ${key} is not implemented`)
-      }
-    }
-
+    
     if(shaderModifiers){
-      for(const key of shaderModifiers){
+      for(const key of Object.keys(shaderModifiers)){
         const mod = shaderModifiers[key]
         const _texts = mod.split(/^\s*#pragma\s+body\s*$/m)
         if(_texts.length === 1){
@@ -3397,6 +3409,20 @@ export default class SCNRenderer extends NSObject {
           customUniform += _texts[0].replace(/^\s*#pragma\s+.*$/mg, '')
         }else{
           throw new Error('found multiple "#pragma body" in the shaderModifier')
+        }
+      }
+    }else{
+      for(const key of Object.keys(customProperties)){
+        const val = customProperties[key]
+        if(typeof val === 'number'){
+          customUniform += `uniform float ${key};`
+        }else if(_InstanceOf(val, SCNMaterialProperty)){
+          customUniform += `uniform sampler2D ${key};`
+          customTexcoord += `_surface.${key}Texcoord = v_texcoord${val.mappingChannel};`
+          customSurface += `vec2 ${key}Texcoord;`
+        }else{
+          // TODO: implement for other types
+          throw new Error(`custom property for ${key} is not implemented`)
         }
       }
     }
@@ -3457,15 +3483,17 @@ export default class SCNRenderer extends NSObject {
       _text = _texts[1].replace(/^\s*#pragma\s+.*$/mg, '')
     }
 
-    _text = text.replace(/texture2D/g, 'texture')
+    _text = _text.replace(/texture2D/g, 'texture')
     _text = _text.replace(/float2/g, 'vec2')
     _text = _text.replace(/float3/g, 'vec3')
     _text = _text.replace(/float4/g, 'vec4')
     _text = _text.replace(/scn_frame\.time/g, 'u_time')
-    _text = _text.replace(/#pragma alpha/g, '')
+    //_text = _text.replace(/#pragma alpha/g, '')
     _text = _text.replace(/half /g, 'float ') // FIXME: check semicolon before half
 
     _text = _text.replace(/u_modelTransform/g, 'modelTransform') // TODO: use u_modelTransform
+    _text = _text.replace(/u_viewTransform/g, 'camera.viewTransform') // TODO: use u_viewTransform
+    _text = _text.replace(/u_viewProjectionTransform/g, 'caemra.viewProjectionTransform') // TODO: use u_viewTransform
     _text = _text.replace(/\s*uniform[^;]*;/g, '')
 
     // workaround for Badger...

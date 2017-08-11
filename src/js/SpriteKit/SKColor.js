@@ -486,7 +486,7 @@ export default class SKColor extends NSObject {
   }
 
   /**
-   * @access private
+   * @access public
    * @param {SKColor} c -
    * @returns {SKColor} -
    */
@@ -500,7 +500,7 @@ export default class SKColor extends NSObject {
   }
 
   /**
-   * @access private
+   * @access public
    * @param {SKColor} c -
    * @returns {SKColor} -
    */
@@ -510,6 +510,56 @@ export default class SKColor extends NSObject {
     r.green = this.green - c.green
     r.blue = this.blue - c.blue
     r.alpha = this.alpha - c.alpha
+    return r
+  }
+
+  /**
+   * @access private
+   * @param {number} val -
+   * @returns {number} -
+   */
+  _srgbToLinear(val) {
+    if(val <= 0.04045){
+      return val / 12.92
+    }
+    return Math.pow((val + 0.055) / 1.055, 2.4)
+  }
+
+  /**
+   * @access private
+   * @param {number} val -
+   * @returns {number} -
+   */
+  _linearToSrgb(val) {
+    if(val <= 0.0031308){
+      return val * 12.92
+    }
+    return 1.055 * Math.pow(val, 1.0 / 2.4)
+  }
+
+  /**
+   * @access public
+   * @returns {SKColor} -
+   */
+  srgbToLinear() {
+    const r = new SKColor()
+    r.red = this._srgbToLinear(this.red)
+    r.green = this._srgbToLinear(this.green)
+    r.blue = this._srgbToLinear(this.blue)
+    r.alpha = this.alpha
+    return r
+  }
+
+  /**
+   * @access public
+   * @returns {SKColor} -
+   */
+  linearToSrgb() {
+    const r = new SKColor()
+    r.red = this._linearToSrgb(this.red)
+    r.green = this._linearToSrgb(this.green)
+    r.blue = this._linearToSrgb(this.blue)
+    r.alpha = this.alpha
     return r
   }
 

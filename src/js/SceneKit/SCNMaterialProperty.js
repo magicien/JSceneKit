@@ -539,6 +539,7 @@ export default class SCNMaterialProperty extends NSObject {
     const target = this.__presentation ? this.__presentation : this
     if(_InstanceOf(target._contents, SKColor)){
       return target._contents.float32Array()
+      //return target._contents.srgbToLinear().float32Array()
     }
     return new Float32Array([1, 1, 1, 1])
   }
