@@ -38807,13 +38807,17 @@ var SCNRenderer = function (_NSObject) {
         return;
       }
       var gl = this.context;
-      gl.clearDepth(-1);
-      gl.clearStencil(0);
-      gl.depthMask(true);
-      gl.enable(gl.DEPTH_TEST);
       gl.disable(gl.CULL_FACE);
+
+      gl.enable(gl.DEPTH_TEST);
       gl.depthFunc(gl.GEQUAL);
+
+      gl.enable(gl.BLEND);
+      gl.depthMask(true);
       gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+      gl.clearStencil(0);
+      gl.clearDepth(-1);
       gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 
       var skNodes = this._createSKNodeArray();
