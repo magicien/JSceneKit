@@ -2248,7 +2248,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.light = this.light
     node.camera = this.camera
     node._geometry = this._geometry
-    node.morpher = this.morpher
+    node.morpher = this.morpher ? this.morpher._copy() : null
     node.skinner = this.skinner
     node.categoryBitMask = this.categoryBitMask
     node.isPaused = this.isPaused
@@ -2260,7 +2260,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.renderingOrder = this.renderingOrder
     node.castsShadow = this.castsShadow
     node.movabilityHint = this.movabilityHint
-    node.filters = this.filters ? this.filters.slice() : null
+    node.filters = this.filters ? this.filters.slice(0) : null
     node.rendererDelegate = this.rendererDelegate
     node._physicsBody = this._physicsBody // FIXME: copy
     node.physicsField = this.physicsField
@@ -2307,6 +2307,15 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       }
     }
     p.opacity = this.opacity
+  }
+
+  _copyMorpherToPresentation() {
+    const p = this._presentation
+    if(this.morpher){
+      p.morpher.targets = this.morpher.targets.slice(0)
+      p.morpher._weights = this.morpher._weights.slice(0)
+      p.morpher.calculationMode = this.morpher.calculationMode
+    }
   }
 
   get viewTransform() {

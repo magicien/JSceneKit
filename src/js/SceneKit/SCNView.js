@@ -1218,6 +1218,7 @@ export default class SCNView {
       const node = arr.shift()
       node._copyTransformToPresentation()
       node._copyMaterialPropertiesToPresentation()
+      node._copyMorpherToPresentation()
       arr.push(...node.childNodes)
     }
   }

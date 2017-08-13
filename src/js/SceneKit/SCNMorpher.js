@@ -81,10 +81,9 @@ export default class SCNMorpher extends NSObject {
     if(weightsMatch !== null){
       if(weightsMatch.length > 1){
         const index = weightsMatch[1]
-        if(typeof this._weights[index] !== 'undefined'){
-          //console.log(`_weights[ ${index} ] = ${value}`)
+        //if(typeof this._weights[index] !== 'undefined'){
           this._weights[index] = value
-        }
+        //}
       }
       return
     }
@@ -131,6 +130,7 @@ export default class SCNMorpher extends NSObject {
       return
     }
     const pg = p.geometry
+    const pm = p.morpher
     const totalWeightForSemantic = new Map()
 
     // reset presentation geometry
@@ -146,11 +146,11 @@ export default class SCNMorpher extends NSObject {
     //node.geometry.geometryElements().forEach((element) => {
     //})
 
-    const targetCount = this.targets.length
+    const targetCount = pm.targets.length
     //console.log(`targetCount: ${targetCount}`)
     for(let i=0; i<targetCount; i++){
-      const target = this.targets[i]
-      const weight = this._weights[i]
+      const target = pm.targets[i]
+      const weight = pm._weights[i]
       if(weight === 0 || typeof weight === 'undefined'){
         continue
       }
@@ -169,9 +169,35 @@ export default class SCNMorpher extends NSObject {
         const dstStride = pSource._dataStride / pSource._bytesPerComponent
         const componentCount = source._componentsPerVector
         const vectorCount = source._vectorCount
-        for(let j=0; j<vectorCount; j++){
+
+        if(typeof source._firstIndex === 'undefined'){
+          // find first and last vector index
+          let index = srcIndex
+          for(let j=0; j<vectorCount; j++){
+            if(typeof source._data[index] !== 'undefined' && source._data[index] !== 0){
+              source._firstIndex = j
+              break
+            }
+            index += srcStride
+          }
+          index = srcIndex + srcStride * (vectorCount-1)
+          for(let j=vectorCount-1; j>=0; j--){
+            if(typeof source._data[index] !== 'undefined' && source._data[index] !== 0){
+              source._lastIndex = j
+              break
+            }
+            index -= srcStride
+          }
+        }
+
+        srcIndex += srcStride * source._firstIndex
+        dstIndex += dstStride * source._firstIndex
+        for(let j=source._firstIndex; j<=source._lastIndex; j++){
           for(let k=0; k<componentCount; k++){
-            pSource._data[dstIndex + k] += source._data[srcIndex + k] * weight
+            const s = source._data[srcIndex + k]
+            if(s){
+              pSource._data[dstIndex + k] += s * weight
+            }
           }
           srcIndex += srcStride
           dstIndex += dstStride
@@ -191,7 +217,7 @@ export default class SCNMorpher extends NSObject {
       const componentCount = source._componentsPerVector
       const vectorCount = source._vectorCount
 
-      if(this.calculationMode === SCNMorpherCalculationMode.normalized){
+      if(p.calculationMode === SCNMorpherCalculationMode.normalized){
         const weight = 1.0 - totalWeightForSemantic.get(source.semantic) 
         // FIXME: don't access private properties
         for(let i=0; i<vectorCount; i++){
@@ -218,5 +244,17 @@ export default class SCNMorpher extends NSObject {
     // TODO: needs to update normal vector?
 
     //console.log(`_morph done`)
+  }
+
+  /**
+   * @access private
+   * @returns {SCNMorpher} -
+   */
+  _copy() {
+    const morpher = new SCNMorpher()
+    morpher.targets = this.targets.slice(0)
+    morpher._weights = this._weights.slice(0)
+    morpher.calculationMode = this.calculationMode
+    return morpher
   }
 }

@@ -14361,7 +14361,7 @@ var SCNNode = function (_NSObject) {
       node.light = this.light;
       node.camera = this.camera;
       node._geometry = this._geometry;
-      node.morpher = this.morpher;
+      node.morpher = this.morpher ? this.morpher._copy() : null;
       node.skinner = this.skinner;
       node.categoryBitMask = this.categoryBitMask;
       node.isPaused = this.isPaused;
@@ -14373,7 +14373,7 @@ var SCNNode = function (_NSObject) {
       node.renderingOrder = this.renderingOrder;
       node.castsShadow = this.castsShadow;
       node.movabilityHint = this.movabilityHint;
-      node.filters = this.filters ? this.filters.slice() : null;
+      node.filters = this.filters ? this.filters.slice(0) : null;
       node.rendererDelegate = this.rendererDelegate;
       node._physicsBody = this._physicsBody; // FIXME: copy
       node.physicsField = this.physicsField;
@@ -14444,6 +14444,16 @@ var SCNNode = function (_NSObject) {
         }
       }
       p.opacity = this.opacity;
+    }
+  }, {
+    key: '_copyMorpherToPresentation',
+    value: function _copyMorpherToPresentation() {
+      var p = this._presentation;
+      if (this.morpher) {
+        p.morpher.targets = this.morpher.targets.slice(0);
+        p.morpher._weights = this.morpher._weights.slice(0);
+        p.morpher.calculationMode = this.morpher.calculationMode;
+      }
     }
   }, {
     key: 'valueForUndefinedKey',
@@ -56056,10 +56066,9 @@ var SCNMorpher = function (_NSObject) {
       if (weightsMatch !== null) {
         if (weightsMatch.length > 1) {
           var index = weightsMatch[1];
-          if (typeof this._weights[index] !== 'undefined') {
-            //console.log(`_weights[ ${index} ] = ${value}`)
-            this._weights[index] = value;
-          }
+          //if(typeof this._weights[index] !== 'undefined'){
+          this._weights[index] = value;
+          //}
         }
         return;
       }
@@ -56101,8 +56110,6 @@ var SCNMorpher = function (_NSObject) {
   }, {
     key: '_morph',
     value: function _morph(node) {
-      var _this2 = this;
-
       //console.log(`SCNMorpher._morph ${node.name}`)
       var p = node.presentation;
       if (node.geometry === null || p === null || p.geometry === null) {
@@ -56110,6 +56117,7 @@ var SCNMorpher = function (_NSObject) {
         return;
       }
       var pg = p.geometry;
+      var pm = p.morpher;
       var totalWeightForSemantic = new Map();
 
       // reset presentation geometry
@@ -56125,12 +56133,12 @@ var SCNMorpher = function (_NSObject) {
       //node.geometry.geometryElements().forEach((element) => {
       //})
 
-      );var targetCount = this.targets.length;
+      );var targetCount = pm.targets.length;
       //console.log(`targetCount: ${targetCount}`)
 
       var _loop = function _loop(i) {
-        var target = _this2.targets[i];
-        var weight = _this2._weights[i];
+        var target = pm.targets[i];
+        var weight = pm._weights[i];
         if (weight === 0 || typeof weight === 'undefined') {
           return 'continue';
         }
@@ -56149,9 +56157,35 @@ var SCNMorpher = function (_NSObject) {
           var dstStride = pSource._dataStride / pSource._bytesPerComponent;
           var componentCount = source._componentsPerVector;
           var vectorCount = source._vectorCount;
-          for (var j = 0; j < vectorCount; j++) {
+
+          if (typeof source._firstIndex === 'undefined') {
+            // find first and last vector index
+            var index = srcIndex;
+            for (var j = 0; j < vectorCount; j++) {
+              if (typeof source._data[index] !== 'undefined' && source._data[index] !== 0) {
+                source._firstIndex = j;
+                break;
+              }
+              index += srcStride;
+            }
+            index = srcIndex + srcStride * (vectorCount - 1);
+            for (var _j2 = vectorCount - 1; _j2 >= 0; _j2--) {
+              if (typeof source._data[index] !== 'undefined' && source._data[index] !== 0) {
+                source._lastIndex = _j2;
+                break;
+              }
+              index -= srcStride;
+            }
+          }
+
+          srcIndex += srcStride * source._firstIndex;
+          dstIndex += dstStride * source._firstIndex;
+          for (var _j3 = source._firstIndex; _j3 <= source._lastIndex; _j3++) {
             for (var k = 0; k < componentCount; k++) {
-              pSource._data[dstIndex + k] += source._data[srcIndex + k] * weight;
+              var s = source._data[srcIndex + k];
+              if (s) {
+                pSource._data[dstIndex + k] += s * weight;
+              }
             }
             srcIndex += srcStride;
             dstIndex += dstStride;
@@ -56177,7 +56211,7 @@ var SCNMorpher = function (_NSObject) {
         var componentCount = source._componentsPerVector;
         var vectorCount = source._vectorCount;
 
-        if (_this2.calculationMode === _SCNMorpherCalculationMode2.default.normalized) {
+        if (p.calculationMode === _SCNMorpherCalculationMode2.default.normalized) {
           var _weight = 1.0 - totalWeightForSemantic.get(source.semantic
           // FIXME: don't access private properties
           );for (var i = 0; i < vectorCount; i++) {
@@ -56205,6 +56239,21 @@ var SCNMorpher = function (_NSObject) {
 
       //console.log(`_morph done`)
       );
+    }
+
+    /**
+     * @access private
+     * @returns {SCNMorpher} -
+     */
+
+  }, {
+    key: '_copy',
+    value: function _copy() {
+      var morpher = new SCNMorpher();
+      morpher.targets = this.targets.slice(0);
+      morpher._weights = this._weights.slice(0);
+      morpher.calculationMode = this.calculationMode;
+      return morpher;
     }
   }]);
 
@@ -64853,6 +64902,7 @@ var SCNView = function () {
         var node = arr.shift();
         node._copyTransformToPresentation();
         node._copyMaterialPropertiesToPresentation();
+        node._copyMorpherToPresentation();
         arr.push.apply(arr, _toConsumableArray(node.childNodes));
       }
     }
