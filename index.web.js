@@ -65312,7 +65312,7 @@ var SCNView = function () {
       ev.data2 = 0;
       ev.sutype = null;
 
-      if (typeof ev.deltaX !== 'undefined') {
+      if (typeof e.deltaX !== 'undefined') {
         ev.deltaX = e.deltaX;
         ev.deltaY = e.deltaY;
         ev.deltaZ = e.deltaZ;
@@ -65321,7 +65321,7 @@ var SCNView = function () {
         ev.deltaX = 0;
         ev.deltaY = 0;
         ev.deltaZ = 0;
-        if (typeof ev.detail !== 'undefined') {
+        if (typeof e.detail !== 'undefined') {
           ev.deltaY = -e.detail * 10.0;
         }
       }
