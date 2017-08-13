@@ -1564,7 +1564,7 @@ export default class SCNView {
       ev.deltaY = 0
       ev.deltaZ = 0
       if(typeof ev.detail !== 'undefined'){
-        ev.deltaY = -ev.detail * 10.0
+        ev.deltaY = -e.detail * 10.0
       }
     }
 
