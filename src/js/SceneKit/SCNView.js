@@ -524,6 +524,12 @@ export default class SCNView {
       this.scrollWheelWith(ev)
       this._preventDefault(ev)
     })
+    // For Firefox
+    this._canvas.addEventListener('DOMMouseScroll', (e) => {
+      const ev = this._createEvent(e)
+      this.scrollWheelWith(ev)
+      this._preventDefault(ev)
+    })
 
     this._canvas.addEventListener('keydown', (e) => {
       const ev = this._createEvent(e)
@@ -1548,9 +1554,19 @@ export default class SCNView {
     ev.data2 = 0
     ev.sutype = null
 
-    ev.deltaX = e.deltaX
-    ev.deltaY = e.deltaY
-    ev.deltaZ = e.deltaZ
+    if(typeof ev.deltaX !== 'undefined'){
+      ev.deltaX = e.deltaX
+      ev.deltaY = e.deltaY
+      ev.deltaZ = e.deltaZ
+    }else{
+      // for Firefox
+      ev.deltaX = 0
+      ev.deltaY = 0
+      ev.deltaZ = 0
+      if(typeof ev.detail !== 'undefined'){
+        ev.deltaY = -ev.detail * 10.0
+      }
+    }
 
     ev._doDefaultAction = false
     return ev
