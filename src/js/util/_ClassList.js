@@ -24,6 +24,10 @@ _ClassList.registerClass = (classObj, className) => {
   //  }
   //  className = classObj.prototype.constructor.name
   //}
+  if(className.startsWith('_')){
+    return
+  }
+
   classObj._className = className
 
   // copy utility functions

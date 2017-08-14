@@ -63,6 +63,15 @@ import CAMediaTiming from './QuartzCore/CAMediaTiming'
 import CAMediaTimingFunction from './QuartzCore/CAMediaTimingFunction'
 import CAPropertyAnimation from './QuartzCore/CAPropertyAnimation'
 import CATransform3D from './QuartzCore/CATransform3D'
+import _SCNDefaultFragmentShader from './SceneKit/_SCNDefaultFragmentShader'
+import _SCNDefaultHitTestFragmentShader from './SceneKit/_SCNDefaultHitTestFragmentShader'
+import _SCNDefaultHitTestVertexShader from './SceneKit/_SCNDefaultHitTestVertexShader'
+import _SCNDefaultParticleFragmentShader from './SceneKit/_SCNDefaultParticleFragmentShader'
+import _SCNDefaultParticleVertexShader from './SceneKit/_SCNDefaultParticleVertexShader'
+import _SCNDefaultPBRFragmentShader from './SceneKit/_SCNDefaultPBRFragmentShader'
+import _SCNDefaultShadowFragmentShader from './SceneKit/_SCNDefaultShadowFragmentShader'
+import _SCNDefaultShadowVertexShader from './SceneKit/_SCNDefaultShadowVertexShader'
+import _SCNDefaultVertexShader from './SceneKit/_SCNDefaultVertexShader'
 import SCNAccelerationConstraint from './SceneKit/SCNAccelerationConstraint'
 import SCNAction from './SceneKit/SCNAction'
 import SCNActionable from './SceneKit/SCNActionable'
@@ -329,6 +338,15 @@ _ClassList.registerClass(CAMediaTiming, 'CAMediaTiming')
 _ClassList.registerClass(CAMediaTimingFunction, 'CAMediaTimingFunction')
 _ClassList.registerClass(CAPropertyAnimation, 'CAPropertyAnimation')
 _ClassList.registerClass(CATransform3D, 'CATransform3D')
+_ClassList.registerClass(_SCNDefaultFragmentShader, '_SCNDefaultFragmentShader')
+_ClassList.registerClass(_SCNDefaultHitTestFragmentShader, '_SCNDefaultHitTestFragmentShader')
+_ClassList.registerClass(_SCNDefaultHitTestVertexShader, '_SCNDefaultHitTestVertexShader')
+_ClassList.registerClass(_SCNDefaultParticleFragmentShader, '_SCNDefaultParticleFragmentShader')
+_ClassList.registerClass(_SCNDefaultParticleVertexShader, '_SCNDefaultParticleVertexShader')
+_ClassList.registerClass(_SCNDefaultPBRFragmentShader, '_SCNDefaultPBRFragmentShader')
+_ClassList.registerClass(_SCNDefaultShadowFragmentShader, '_SCNDefaultShadowFragmentShader')
+_ClassList.registerClass(_SCNDefaultShadowVertexShader, '_SCNDefaultShadowVertexShader')
+_ClassList.registerClass(_SCNDefaultVertexShader, '_SCNDefaultVertexShader')
 _ClassList.registerClass(SCNAccelerationConstraint, 'SCNAccelerationConstraint')
 _ClassList.registerClass(SCNAction, 'SCNAction')
 _ClassList.registerClass(SCNActionable, 'SCNActionable')
@@ -587,6 +605,15 @@ exports.CAMediaTiming = CAMediaTiming
 exports.CAMediaTimingFunction = CAMediaTimingFunction
 exports.CAPropertyAnimation = CAPropertyAnimation
 exports.CATransform3D = CATransform3D
+exports._SCNDefaultFragmentShader = _SCNDefaultFragmentShader
+exports._SCNDefaultHitTestFragmentShader = _SCNDefaultHitTestFragmentShader
+exports._SCNDefaultHitTestVertexShader = _SCNDefaultHitTestVertexShader
+exports._SCNDefaultParticleFragmentShader = _SCNDefaultParticleFragmentShader
+exports._SCNDefaultParticleVertexShader = _SCNDefaultParticleVertexShader
+exports._SCNDefaultPBRFragmentShader = _SCNDefaultPBRFragmentShader
+exports._SCNDefaultShadowFragmentShader = _SCNDefaultShadowFragmentShader
+exports._SCNDefaultShadowVertexShader = _SCNDefaultShadowVertexShader
+exports._SCNDefaultVertexShader = _SCNDefaultVertexShader
 exports.SCNAccelerationConstraint = SCNAccelerationConstraint
 exports.SCNAction = SCNAction
 exports.SCNActionable = SCNActionable
