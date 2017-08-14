@@ -228,7 +228,11 @@ export default class SCNProgram extends NSObject {
       gl.TEXTURE4,
       gl.TEXTURE5,
       gl.TEXTURE6,
-      gl.TEXTURE7
+      gl.TEXTURE7,
+      gl.TEXTURE8,
+      gl.TEXTURE9,
+      gl.TEXTURE10,
+      gl.TEXTURE11
     ]
     const texSymbols = [
       'u_emissionTexture',
@@ -238,10 +242,14 @@ export default class SCNProgram extends NSObject {
       'u_reflectiveTexture',
       'u_transparentTexture',
       'u_multiplyTexture',
-      'u_normalTexture'
+      'u_normalTexture',
+      'u_ambientOcclusionTexture',
+      'u_selfIlluminationTexture',
+      'u_metalnessTexture',
+      'u_roughnessTexture'
     ]
     const isCubeMap = [
-      false, false, false, false, true, false, false, false
+      false, false, false, false, true, false, false, false, false, false, false, false
     ]
     for(let i=0; i<texNames.length; i++){
       const texName = texNames[i]

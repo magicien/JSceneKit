@@ -46,6 +46,8 @@ const _lightLoc = 2
 const _scnLightsLoc = 3
 const _fogLoc = 4
 
+const _shadowTextureBaseIndex = 8
+
 const _fsDirectionalShadow = `
   //float shadow = convDepth(texture(u_shadowTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));
   //if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > shadow){
@@ -655,7 +657,7 @@ export default class SCNRenderer extends NSObject {
     this._useProgram(p)
     for(let i=0; i<lights.directionalShadow.length; i++){
       const node = lights.directionalShadow[i]
-      const symbol = `TEXTURE${i+8}`
+      const symbol = `TEXTURE${i+_shadowTextureBaseIndex}`
       gl.activeTexture(gl[symbol])
       gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
     }
@@ -2236,7 +2238,7 @@ export default class SCNRenderer extends NSObject {
     const obj = program._parentObject
     if(obj){
       // bind custom uniforms
-      let textureNo = 12 // TEXTURE0-11 is reserved for the default renderer (0-7: material, 8-11: shadow)
+      let textureNo = 16 // TEXTURE0-15 is reserved for the default renderer (0-11: material, 12-15: shadow)
       for(const key of Object.keys(obj._valuesForUndefinedKeys)){
         const loc = gl.getUniformLocation(glProgram, key)
         if(loc !== null){
@@ -2868,10 +2870,10 @@ export default class SCNRenderer extends NSObject {
 
     for(let i=0; i<this._lightNodes.directionalShadow.length; i++){
       const node = this._lightNodes.directionalShadow[i]
-      const symbol = `TEXTURE${i+8}`
+      const symbol = `TEXTURE${i+_shadowTextureBaseIndex}`
       const name = `u_shadowTexture${i}`
 
-      gl.uniform1i(gl.getUniformLocation(glProgram, name), i+8)
+      gl.uniform1i(gl.getUniformLocation(glProgram, name), i+_shadowTextureBaseIndex)
       gl.activeTexture(gl[symbol])
       gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
     }

@@ -37,6 +37,9 @@ const _SCNDefaultVertexShader =
     vec4 transparent;
     vec4 multiply;
     vec4 ambientOcclusion;
+    vec4 selfIllumination;
+    vec4 metalness;
+    vec4 roughness;
     float shininess;
     float fresnelExponent;
   } material;

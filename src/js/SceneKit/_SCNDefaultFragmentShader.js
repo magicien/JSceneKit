@@ -8,7 +8,7 @@ const _SCNDefaultFragmentShader =
   precision mediump float;
   precision highp sampler2DShadow;
 
-  uniform bool[8] textureFlags;
+  uniform bool[12] textureFlags;
   #define TEXTURE_EMISSION_INDEX 0
   #define TEXTURE_AMBIENT_INDEX 1
   #define TEXTURE_DIFFUSE_INDEX 2
@@ -17,6 +17,10 @@ const _SCNDefaultFragmentShader =
   #define TEXTURE_TRANSPARENT_INDEX 5
   #define TEXTURE_MULTIPLY_INDEX 6
   #define TEXTURE_NORMAL_INDEX 7
+  #define TEXTURE_AMBIENT_OCCLUSION_INDEX 8
+  #define TEXTURE_SELF_ILLUMINATION_INDEX 9
+  #define TEXTURE_METALNESS_INDEX 10
+  #define TEXTURE_ROUGHNESS_INDEX 11
 
   uniform bool selfIllumination;
 
@@ -28,6 +32,10 @@ const _SCNDefaultFragmentShader =
   uniform sampler2D u_transparentTexture;
   uniform sampler2D u_multiplyTexture;
   uniform sampler2D u_normalTexture;
+  uniform sampler2D u_ambientOcclusionTexture;
+  uniform sampler2D u_selfIlluminationTexture;
+  uniform sampler2D u_metalnessTexture;
+  uniform sampler2D u_roughnessTexture;
 
   #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
   #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
@@ -60,6 +68,9 @@ const _SCNDefaultFragmentShader =
     vec4 transparent;
     vec4 multiply;
     vec4 ambientOcclusion;
+    vec4 selfIllumination;
+    vec4 metalness;
+    vec4 roughness;
     float shininess;
     float fresnelExponent;
   } material;

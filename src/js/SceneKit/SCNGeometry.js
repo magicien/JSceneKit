@@ -899,6 +899,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       ...material.transparent.float32Array(),
       ...material.multiply.float32Array(),
       ...material.ambientOcclusion.float32Array(),
+      ...material.selfIllumination.float32Array(),
+      ...material.metalness.float32Array(),
+      ...material.roughness.float32Array(),
       material.shininess * 100.0, 
       material.fresnelExponent,
       0, 0 // needs padding for 16-byte alignment
@@ -942,6 +945,18 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     // normal
     this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags)
+
+    // ambientOcclusion
+    this._setTextureToName(gl, material._ambientOcclusion, 'TEXTURE8', textureFlags)
+
+    // selfIllumination
+    this._setTextureToName(gl, material._selfIllumination, 'TEXTURE9', textureFlags)
+
+    // metalness
+    this._setTextureToName(gl, material._metalness, 'TEXTURE10', textureFlags)
+
+    // roughness
+    this._setTextureToName(gl, material._roughness, 'TEXTURE11', textureFlags)
 
     // TODO: cache uniform location
     gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))
@@ -996,6 +1011,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       0, 0, 0, 1, // transparent
       1, 1, 1, 1, // multiply
       0, 0, 0, 1, // ambientOcclusion
+      0, 0, 0, 1, // selfIllumination
+      0, 0, 0, 1, // metalness
+      0, 0, 0, 1, // roughness
       0, // shininess
       0, // fresnelExponent
       0, 0 // needs padding for 16-byte alignment
