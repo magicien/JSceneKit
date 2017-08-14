@@ -54,6 +54,7 @@ const _defaultVertexShader =
   layout (std140) uniform cameraUniform {
     vec4 position;
     mat4 viewTransform;
+    mat4 inverseViewTransform;
     mat4 viewProjectionTransform;
   } camera;
 
@@ -158,6 +159,14 @@ const _defaultVertexShader =
     vec4 color;
     vec2 texcoords[kSCNTexcoordCount];
   };
+  //struct _SCNShaderGeometry {
+  //  vec3 position;
+  //  vec3 normal;
+  //  vec4 tangent;
+  //  vec4 color;
+  //  vec2 texcoord0;
+  //  vec2 texcoord1;
+  //};
 
   uniform float u_time;
   //uniform mat3x4[255] skinningJoints;
@@ -183,6 +192,8 @@ const _defaultVertexShader =
   //out vec4 v_color;
   out vec3 v_eye;
   out float v_fogFactor;
+
+  //out _SCNShaderGeometry __geometry;
 
   __USER_CUSTOM_UNIFORM__
 
@@ -364,6 +375,7 @@ const _defaultFragmentShader =
   layout (std140) uniform cameraUniform {
     vec4 position;
     mat4 viewTransform;
+    mat4 inverseViewTransform;
     mat4 viewProjectionTransform;
   } camera;
 
@@ -513,6 +525,15 @@ const _defaultFragmentShader =
     vec2( 0.34495938, 0.29387760 )
   );
 
+  //#define kSCNTexcoordCount 2
+  //struct SCNShaderGeometry {
+  //  vec3 position;
+  //  vec3 normal;
+  //  vec4 tangent;
+  //  vec4 color;
+  //  vec2 texcoords[kSCNTexcoordCount];
+  //};
+
   uniform float u_time;
 
   in vec3 v_position;
@@ -524,6 +545,8 @@ const _defaultFragmentShader =
   in vec3 v_tangent;
   in vec3 v_bitangent;
   in float v_fogFactor;
+
+  //in SCNShaderGeometry _geometry;
 
   out vec4 outColor;
 
@@ -603,6 +626,7 @@ const _defaultFragmentShader =
     }
     if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
       _surface.diffuse = texture(u_diffuseTexture, _surface.diffuseTexcoord);
+      _surface.diffuse.a *= material.diffuse.a;
     }
     if(textureFlags[TEXTURE_SPECULAR_INDEX]){
       _surface.specular = texture(u_specularTexture, _surface.specularTexcoord);
@@ -1479,6 +1503,7 @@ export default class SCNRenderer extends NSObject {
 
     cameraData.push(...cameraPNode.worldTransform.getTranslation().floatArray(), 0)
     cameraData.push(...cameraPNode.viewTransform.floatArray())
+    cameraData.push(...cameraPNode.inverseViewTransform.floatArray())
     cameraData.push(...cameraPNode.viewProjectionTransform.floatArray())
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW)
@@ -3211,6 +3236,10 @@ export default class SCNRenderer extends NSObject {
           const val = obj._valuesForUndefinedKeys[key]
           if(typeof val === 'number'){
             gl.uniform1f(loc, val)
+          }else if(_InstanceOf(val, SCNVector3)){
+            gl.uniform3fv(loc, val.float32Array())
+          }else if(_InstanceOf(val, SCNVector4) || _InstanceOf(val, SKColor)){
+            gl.uniform4fv(loc, val.float32Array())
           }else if(_InstanceOf(val, SCNMaterialProperty)){
             // TODO: refactoring: SCNGeometry has the same function
             if(val._contents instanceof Image){
@@ -3497,6 +3526,7 @@ export default class SCNRenderer extends NSObject {
 
     _text = _text.replace(/u_modelTransform/g, 'modelTransform') // TODO: use u_modelTransform
     _text = _text.replace(/u_viewTransform/g, 'camera.viewTransform') // TODO: use u_viewTransform
+    _text = _text.replace(/u_inverseViewTransform/g, 'camera.inverseViewTransform') // TODO: use u_inverseViewTransform
     _text = _text.replace(/u_viewProjectionTransform/g, 'caemra.viewProjectionTransform') // TODO: use u_viewTransform
     _text = _text.replace(/\s*uniform[^;]*;/g, '')
 

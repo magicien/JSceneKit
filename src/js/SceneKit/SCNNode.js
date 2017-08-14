@@ -2322,6 +2322,10 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     return this.worldTransform.invert()
   }
 
+  get inverseViewTransform() {
+    return this.worldTransform
+  }
+
   get projectionTransform() {
     if(this.camera === null){
       return null

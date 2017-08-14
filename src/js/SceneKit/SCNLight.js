@@ -442,14 +442,14 @@ export default class SCNLight extends NSObject {
       // orthographic
       // FIXME: use orthographicScale, adjust x/y scale automatically
       //m.m11 = 2 / (right - left)
-      m.m11 = 0.2
+      m.m11 = 0.1
       //m.m11 = 2 / (right - left)
       m.m12 = 0
       m.m13 = 0
       m.m14 = 0
       m.m21 = 0
       //m.m22 = 2 / (top - bottom)
-      m.m22 = 0.2
+      m.m22 = 0.1
       m.m23 = 0
       m.m24 = 0
       m.m31 = 0
