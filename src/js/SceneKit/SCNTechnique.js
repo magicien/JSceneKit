@@ -28,7 +28,7 @@ export default class SCNTechnique extends NSObject {
 
     // Retrieving a Technique’s Definition
 
-    this._dictionaryRepresentation = null
+    this._dictionaryRepresentation = dictionary
   }
 
   // Combining Techniques

@@ -8,7 +8,7 @@ const _SCNDefaultPBRFragmentShader =
   precision mediump float;
   precision highp sampler2DShadow;
 
-  uniform bool[8] textureFlags;
+  uniform bool[12] textureFlags;
   #define TEXTURE_EMISSION_INDEX 0
   #define TEXTURE_AMBIENT_INDEX 1
   #define TEXTURE_DIFFUSE_INDEX 2
@@ -17,6 +17,10 @@ const _SCNDefaultPBRFragmentShader =
   #define TEXTURE_TRANSPARENT_INDEX 5
   #define TEXTURE_MULTIPLY_INDEX 6
   #define TEXTURE_NORMAL_INDEX 7
+  #define TEXTURE_AMBIENT_OCCLUSION_INDEX 8
+  #define TEXTURE_SELF_ILLUMINATION_INDEX 9
+  #define TEXTURE_METALNESS_INDEX 10
+  #define TEXTURE_ROUGHNESS_INDEX 11
 
   uniform bool selfIllumination;
 
@@ -28,6 +32,10 @@ const _SCNDefaultPBRFragmentShader =
   uniform sampler2D u_transparentTexture;
   uniform sampler2D u_multiplyTexture;
   uniform sampler2D u_normalTexture;
+  uniform sampler2D u_ambientOcclusionTexture;
+  uniform sampler2D u_selfIlluminationTexture;
+  uniform sampler2D u_metalnessTexture;
+  uniform sampler2D u_roughnessTexture;
 
   #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
   #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
@@ -60,6 +68,9 @@ const _SCNDefaultPBRFragmentShader =
     vec4 transparent;
     vec4 multiply;
     vec4 ambientOcclusion;
+    vec4 selfIllumination;
+    vec4 metalness;
+    vec4 roughness;
     float shininess;
     float fresnelExponent;
   } material;
@@ -179,9 +190,13 @@ const _SCNDefaultPBRFragmentShader =
     vec4 transparent;
     vec2 transparentTexcoord;
     vec4 reflective;
+    vec2 metalnessTexcoord;
+    vec2 roughnessTexcoord;
     float ambientOcclusion;
     float shininess;
     float fresnel;
+    float metalness;
+    float roughness;
     __USER_CUSTOM_SURFACE__
   } _surface;
 
@@ -276,9 +291,11 @@ const _SCNDefaultPBRFragmentShader =
     _surface.multiply = material.multiply;
     _surface.transparent = material.transparent;
     _surface.reflective = material.reflective;
-    _surface.ambientOcclusion = 1.0; // TODO: calculate AO
+    _surface.ambientOcclusion = material.ambientOcclusion.r;
     _surface.shininess = material.shininess;
     _surface.fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent); // TODO: calculate coefficient
+    _surface.metalness = material.metalness.r;
+    _surface.roughness = material.roughness.r;
 
     // TODO: check mapping channel for each material
     _surface.ambientTexcoord = v_texcoord0;
@@ -291,6 +308,8 @@ const _SCNDefaultPBRFragmentShader =
     }
     _surface.multiplyTexcoord = v_texcoord0;
     _surface.transparentTexcoord = v_texcoord0;
+    _surface.metalnessTexcoord = v_texcoord0;
+    _surface.roughnessTexcoord = v_texcoord0;
 
     if(textureFlags[TEXTURE_AMBIENT_INDEX]){
       _surface.ambient = texture(u_ambientTexture, _surface.ambientTexcoord);
@@ -310,6 +329,12 @@ const _SCNDefaultPBRFragmentShader =
     }
     if(textureFlags[TEXTURE_TRANSPARENT_INDEX]){
       _surface.transparent = texture(u_transparentTexture, _surface.transparentTexcoord);
+    }
+    if(textureFlags[TEXTURE_METALNESS_INDEX]){
+      _surface.metalness = texture(u_metalnessTexture, _surface.metalnessTexcoord).r;
+    }
+    if(textureFlags[TEXTURE_ROUGHNESS_INDEX]){
+      _surface.roughness = texture(u_roughnessTexture, _surface.roughnessTexcoord).r;
     }
 
     __USER_CUSTOM_TEXCOORD__
@@ -335,14 +360,12 @@ const _SCNDefaultPBRFragmentShader =
         // diffuse
         vec3 lightVec = normalize(v_light[numLights + i]);
         float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
-        //_output.color.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
         _lightingContribution.diffuse += light.directional[i].color.rgb * diffuse;
 
         // specular
         if(diffuse > 0.0f){
           vec3 halfVec = normalize(lightVec + _surface.view);
           float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
-          // TODO: use intensity
           _lightingContribution.specular += vec3(specular);
         }
       }
@@ -386,46 +409,62 @@ const _SCNDefaultPBRFragmentShader =
     // calculate color
     _output.color = vec4(0, 0, 0, _surface.diffuse.a);
 
-    vec3 D = _lightingContribution.diffuse;
+    //vec3 D = _lightingContribution.diffuse;
+    //// lock ambient with diffuse
+    //D += _lightingContribution.ambient * _surface.ambientOcclusion;
+    //// emission
+    //if(selfIllumination){
+    //  D += _surface.emission.rgb;
+    //}
+    //// diffuse
+    //_output.color.rgb = _surface.diffuse.rgb * D;
+    //vec3 S = _lightingContribution.specular;
+    ////S += _surface.reflective.rgb * _surface.ambientOcclusion;
+    //S *= _surface.specular.rgb;
+    //_output.color.rgb += S;
+    //// ambient
+    //_output.color.rgb += _surface.ambient.rgb * _lightingContribution.ambient;
+    //if(!selfIllumination){
+    //  _output.color.rgb += _surface.emission.rgb;
+    //}
+    //// multiply
+    //_output.color.rgb *= _surface.multiply.rgb;
+    //// fresnel reflection
+    //if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){
+    //  vec3 r = reflect(_surface.view, _surface.normal);
+    //  //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
+    //  //float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
+    //  _output.color.rgb += texture(u_reflectiveTexture, r).rgb * _surface.fresnel;
+    //}
+    //float fogFactor = pow(v_fogFactor, fog.densityExponent);
+    //_output.color = mix(_output.color, fog.color, fogFactor);
+    //_output.color.rgb *= _surface.diffuse.a;
 
-    // lock ambient with diffuse
-    D += _lightingContribution.ambient * _surface.ambientOcclusion;
+    #define pi 3.14159265
+    vec4 debugColor;
+    float alpha = pow(_surface.roughness, 4.0);
+    float invAlpha = 1.0 - alpha;
+    float nv = clamp(dot(_surface.normal, _surface.view), 0.0, 1.0);
+    float f0 = 0.6;
+    float Gv = 1.0 / (nv + sqrt(alpha + invAlpha * nv * nv));
+    for(int i=0; i<NUM_SHADOW_LIGHTS; i++){
+      vec3 lightVec = normalize(v_light[i]);
+      vec3 halfVec = normalize(lightVec + _surface.view);
 
-    // emission
-    if(selfIllumination){
-      D += _surface.emission.rgb;
+      float nh = clamp(dot(_surface.normal, halfVec), 0.0, 1.0);
+      float nl = clamp(dot(_surface.normal, lightVec), 0.0, 1.0);
+      //float vh = clamp(dot(_surface.view, halfVec), 0.0, 1.0);
+
+      float D = alpha / (pi * pow(nh * nh * (alpha - 1.0) + 1.0, 2.0));
+      //float F = f0 + (1.0 - f0) * pow(vh, 5.0);
+      float F = f0 + (1.0 - f0) * pow(1.0 - nh, 5.0);
+      float G = Gv / (nl + sqrt(alpha + invAlpha * nl * nl));
+      float specular = D * F * G;
+      float diffuse = (1.0 - F) * nl / pi;
+      _output.color.rgb += _surface.diffuse.rgb * mix(diffuse, specular, _surface.metalness);
+
+      debugColor = vec4(F, nl, diffuse, 1.0);
     }
-
-    // diffuse
-    _output.color.rgb = _surface.diffuse.rgb * D;
-
-    vec3 S = _lightingContribution.specular;
-    //S += _surface.reflective.rgb * _surface.ambientOcclusion;
-    S *= _surface.specular.rgb;
-    _output.color.rgb += S;
-
-    // ambient
-    _output.color.rgb += _surface.ambient.rgb * _lightingContribution.ambient;
-
-    if(!selfIllumination){
-      _output.color.rgb += _surface.emission.rgb;
-    }
-
-    // multiply
-    _output.color.rgb *= _surface.multiply.rgb;
-
-    // fresnel reflection
-    if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){
-      vec3 r = reflect(_surface.view, _surface.normal);
-      //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
-      //float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
-      _output.color.rgb += texture(u_reflectiveTexture, r).rgb * _surface.fresnel;
-    }
-
-    float fogFactor = pow(v_fogFactor, fog.densityExponent);
-    _output.color = mix(_output.color, fog.color, fogFactor);
-
-    _output.color.rgb *= _surface.diffuse.a;
 
     #if USE_SHADER_MODIFIER_FRAGMENT
       shaderModifierFragment();
@@ -441,6 +480,9 @@ const _SCNDefaultPBRFragmentShader =
     // linear To sRGB
     //outColor.rgb = pow(_output.color.rgb, vec3(1.0/2.2));
     //outColor.a = _output.color.a;
+
+    //outColor = vec4(1.0, 0.0, 0.0, 1.0);
+    //outColor = debugColor;
   }
 
 `

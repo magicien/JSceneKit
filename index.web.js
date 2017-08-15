@@ -9910,6 +9910,10 @@ var SCNGeometry = function (_NSObject) {
       );textureFlags.push(0 // transparent
       );textureFlags.push(0 // multiply
       );textureFlags.push(0 // normal
+      );textureFlags.push(0 // ambientOcclusion
+      );textureFlags.push(0 // selfIllumination
+      );textureFlags.push(0 // metalness
+      );textureFlags.push(0 // roughness
 
       // TODO: cache uniform location
       );gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
@@ -35850,7 +35854,7 @@ exports.default = _SCNDefaultParticleVertexShader;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _SCNDefaultPBRFragmentShader = '#version 300 es\n  precision mediump float;\n  precision highp sampler2DShadow;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform bool selfIllumination;\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform samplerCube u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  #define NUM_SHADOW_LIGHTS (NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS)\n  #define NUM_LIGHTS (NUM_AMBIENT_LIGHTS + NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS + NUM_IES_LIGHTS + NUM_PROBE_LIGHTS)\n\n  #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__\n  #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 inverseViewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 normal;\n    vec4 reflective;\n    vec4 emission;\n    vec4 transparent;\n    vec4 multiply;\n    vec4 ambientOcclusion;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct SCNShaderLightingContribution {\n    vec3 ambient;\n    vec3 diffuse;\n    vec3 specular;\n  } _lightingContribution;\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    #if NUM_AMBIENT_LIGHTS > 0\n      AmbientLight ambient[NUM_AMBIENT_LIGHTS];\n    #endif\n    #if NUM_DIRECTIONAL_LIGHTS > 0\n      DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];\n    #endif\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0\n      DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS];\n    #endif\n    #if NUM_OMNI_LIGHTS > 0\n      OmniLight omni[NUM_OMNI_LIGHTS];\n    #endif\n    #if NUM_SPOT_LIGHTS > 0\n      SpotLight spot[NUM_SPOT_LIGHTS];\n    #endif\n    #if NUM_IES_LIGHTS > 0\n      IESLight ies[NUM_IES_LIGHTS];\n    #endif\n    #if NUM_PROBE_LIGHTS > 0\n      ProbeLight probe[NUM_PROBE_LIGHTS];\n    #endif\n    #if NUM_LIGHTS == 0\n      vec4 dummy;\n    #endif\n  } light;\n  #if NUM_SHADOW_LIGHTS > 0\n    in vec3 v_light[NUM_SHADOW_LIGHTS];\n  #endif\n  #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0\n    in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS];\n    in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS];\n    uniform sampler2D u_shadowTexture0;\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 1\n      uniform sampler2D u_shadowTexture1;\n    #endif\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 2\n      uniform sampler2D u_shadowTexture2;\n    #endif\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 3\n      uniform sampler2D u_shadowTexture3;\n    #endif\n  #endif\n\n  layout (std140) uniform SCNLightsUniform {\n    vec4 direction0;\n    mat4 shadowMatrix0;\n  } scn_lights;\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  struct SCNShaderSurface {\n    vec3 view;\n    vec3 position;\n    vec3 normal;\n    vec2 normalTexcoord;\n    vec3 geometryNormal;\n    vec3 tangent;\n    vec3 bitangent;\n    vec4 ambient;\n    vec2 ambientTexcoord;\n    vec4 diffuse;\n    vec2 diffuseTexcoord;\n    vec4 specular;\n    vec2 specularTexcoord;\n    vec4 emission;\n    vec2 emissionTexcoord;\n    vec4 multiply;\n    vec2 multiplyTexcoord;\n    vec4 transparent;\n    vec2 transparentTexcoord;\n    vec4 reflective;\n    float ambientOcclusion;\n    float shininess;\n    float fresnel;\n    __USER_CUSTOM_SURFACE__\n  } _surface;\n\n  struct SCNShaderOutput {\n    vec4 color;\n  } _output;\n\n  vec2 poissonDisk[4] = vec2[](\n    vec2( -0.94201624, -0.39906216 ),\n    vec2( 0.94558609, -0.76890725 ),\n    vec2( -0.094184101, -0.92938870 ),\n    vec2( 0.34495938, 0.29387760 )\n  );\n\n  //#define kSCNTexcoordCount 2\n  //struct SCNShaderGeometry {\n  //  vec3 position;\n  //  vec3 normal;\n  //  vec4 tangent;\n  //  vec4 color;\n  //  vec2 texcoords[kSCNTexcoordCount];\n  //};\n\n  uniform float u_time;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord0;\n  in vec2 v_texcoord1;\n  //in vec4 v_color;\n  in vec3 v_eye;\n  in vec3 v_tangent;\n  in vec3 v_bitangent;\n  in float v_fogFactor;\n\n  //in SCNShaderGeometry _geometry;\n\n  out vec4 outColor;\n\n  __USER_CUSTOM_UNIFORM__\n\n  float saturate(float value) {\n    return clamp(value, 0.0, 1.0);\n  }\n\n  float convDepth(vec4 color) {\n    const float rMask = 1.0;\n    const float gMask = 1.0 / 255.0;\n    const float bMask = 1.0 / (255.0 * 255.0);\n    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);\n    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));\n    return depth * 2.0 - 1.0;\n  }\n\n  #if USE_SHADER_MODIFIER_SURFACE\n  void shaderModifierSurface() {\n    __SHADER_MODIFIER_SURFACE__\n  }\n  #endif\n\n  #if USE_SHADER_MODIFIER_FRAGMENT\n  void shaderModifierFragment() {\n    __SHADER_MODIFIER_FRAGMENT__\n  }\n  #endif\n\n    \n  void main() {\n    //_output.color = v_color;\n    //_output.color = vec4(0, 0, 0, 1);\n\n    //vec3 viewVec = normalize(v_eye);\n    //vec3 nom = normalize(v_normal);\n    _surface.view = normalize(v_eye);\n    _surface.position = v_position;\n    _surface.normal = normalize(v_normal);\n    _surface.tangent = normalize(v_tangent);\n    _surface.bitangent = normalize(v_bitangent);\n\n    // normal texture\n    if(textureFlags[TEXTURE_NORMAL_INDEX]){\n      mat3 tsInv = mat3(_surface.tangent, _surface.bitangent, _surface.normal);\n      vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.\n      _surface.normal = normalize(tsInv * color);\n    }\n\n    //_surface.ambient = material.ambient;\n    _surface.ambient = vec4(0, 0, 0, 1); // FIXME: check: lock ambient with diffuse\n    _surface.diffuse = material.diffuse;\n    _surface.specular = material.specular;\n    _surface.emission = material.emission;\n    _surface.multiply = material.multiply;\n    _surface.transparent = material.transparent;\n    _surface.reflective = material.reflective;\n    _surface.ambientOcclusion = 1.0; // TODO: calculate AO\n    _surface.shininess = material.shininess;\n    _surface.fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent); // TODO: calculate coefficient\n\n    // TODO: check mapping channel for each material\n    _surface.ambientTexcoord = v_texcoord0;\n    _surface.diffuseTexcoord = v_texcoord0;\n    _surface.specularTexcoord = v_texcoord0;\n    if(selfIllumination){\n      _surface.emissionTexcoord = v_texcoord1;\n    }else{\n      _surface.emissionTexcoord = v_texcoord0;\n    }\n    _surface.multiplyTexcoord = v_texcoord0;\n    _surface.transparentTexcoord = v_texcoord0;\n\n    if(textureFlags[TEXTURE_AMBIENT_INDEX]){\n      _surface.ambient = texture(u_ambientTexture, _surface.ambientTexcoord);\n    }\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      _surface.diffuse = texture(u_diffuseTexture, _surface.diffuseTexcoord);\n      _surface.diffuse.a *= material.diffuse.a;\n    }\n    if(textureFlags[TEXTURE_SPECULAR_INDEX]){\n      _surface.specular = texture(u_specularTexture, _surface.specularTexcoord);\n    }\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      _surface.emission = texture(u_emissionTexture, _surface.emissionTexcoord);\n    }\n    if(textureFlags[TEXTURE_MULTIPLY_INDEX]){\n      _surface.multiply = texture(u_multiplyTexture, _surface.multiplyTexcoord);\n    }\n    if(textureFlags[TEXTURE_TRANSPARENT_INDEX]){\n      _surface.transparent = texture(u_transparentTexture, _surface.transparentTexcoord);\n    }\n\n    __USER_CUSTOM_TEXCOORD__\n\n    #if USE_SHADER_MODIFIER_SURFACE\n      shaderModifierSurface();\n    #endif\n\n    // Lighting\n    int numLights = 0;\n    _lightingContribution.ambient = vec3(0);\n    _lightingContribution.diffuse = vec3(0);\n    _lightingContribution.specular = vec3(0);\n\n    #if NUM_AMBIENT_LIGHTS > 0\n      for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n        _lightingContribution.ambient += light.ambient[i].color.rgb;\n      }\n    #endif\n\n    #if NUM_DIRECTIONAL_LIGHTS > 0\n      for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n        // diffuse\n        vec3 lightVec = normalize(v_light[numLights + i]);\n        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);\n        //_output.color.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;\n        _lightingContribution.diffuse += light.directional[i].color.rgb * diffuse;\n\n        // specular\n        if(diffuse > 0.0f){\n          vec3 halfVec = normalize(lightVec + _surface.view);\n          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);\n          // TODO: use intensity\n          _lightingContribution.specular += vec3(specular);\n        }\n      }\n      numLights += NUM_DIRECTIONAL_LIGHTS;\n    #endif\n\n    #if NUM_OMNI_LIGHTS > 0\n      for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n        // diffuse\n        vec3 lightVec = normalize(v_light[numLights + i]);\n        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);\n        //_output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;\n        _lightingContribution.diffuse += light.omni[i].color.rgb * diffuse;\n\n        // specular\n        if(diffuse > 0.0f){\n          vec3 halfVec = normalize(lightVec + _surface.view);\n          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);\n          // TODO: use intensity\n          _lightingContribution.specular += vec3(1, 1, 1) * specular;\n        }\n      }\n      numLights += NUM_OMNI_LIGHTS;\n    #endif\n\n    #if NUM_SPOT_LIGHTS > 0\n      // TODO: implement\n    #endif\n\n    #if NUM_IES_LIGHTS > 0\n      // TODO: implement\n    #endif\n\n    #if NUM_PROBE_LIGHTS > 0\n      // TODO: implement\n    #endif\n\n    __FS_LIGHTING__\n\n\n    // calculate color\n    _output.color = vec4(0, 0, 0, _surface.diffuse.a);\n\n    vec3 D = _lightingContribution.diffuse;\n\n    // lock ambient with diffuse\n    D += _lightingContribution.ambient * _surface.ambientOcclusion;\n\n    // emission\n    if(selfIllumination){\n      D += _surface.emission.rgb;\n    }\n\n    // diffuse\n    _output.color.rgb = _surface.diffuse.rgb * D;\n\n    vec3 S = _lightingContribution.specular;\n    //S += _surface.reflective.rgb * _surface.ambientOcclusion;\n    S *= _surface.specular.rgb;\n    _output.color.rgb += S;\n\n    // ambient\n    _output.color.rgb += _surface.ambient.rgb * _lightingContribution.ambient;\n\n    if(!selfIllumination){\n      _output.color.rgb += _surface.emission.rgb;\n    }\n\n    // multiply\n    _output.color.rgb *= _surface.multiply.rgb;\n\n    // fresnel reflection\n    if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){\n      vec3 r = reflect(_surface.view, _surface.normal);\n      //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);\n      //float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);\n      _output.color.rgb += texture(u_reflectiveTexture, r).rgb * _surface.fresnel;\n    }\n\n    float fogFactor = pow(v_fogFactor, fog.densityExponent);\n    _output.color = mix(_output.color, fog.color, fogFactor);\n\n    _output.color.rgb *= _surface.diffuse.a;\n\n    #if USE_SHADER_MODIFIER_FRAGMENT\n      shaderModifierFragment();\n    #endif\n\n    if(_output.color.a <= 0.0){\n      // avoid overwriting the depth buffer\n      discard;\n    }\n\n    outColor = _output.color;\n\n    // linear To sRGB\n    //outColor.rgb = pow(_output.color.rgb, vec3(1.0/2.2));\n    //outColor.a = _output.color.a;\n  }\n\n';
+var _SCNDefaultPBRFragmentShader = '#version 300 es\n  precision mediump float;\n  precision highp sampler2DShadow;\n\n  uniform bool[12] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n  #define TEXTURE_AMBIENT_OCCLUSION_INDEX 8\n  #define TEXTURE_SELF_ILLUMINATION_INDEX 9\n  #define TEXTURE_METALNESS_INDEX 10\n  #define TEXTURE_ROUGHNESS_INDEX 11\n\n  uniform bool selfIllumination;\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform samplerCube u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform sampler2D u_ambientOcclusionTexture;\n  uniform sampler2D u_selfIlluminationTexture;\n  uniform sampler2D u_metalnessTexture;\n  uniform sampler2D u_roughnessTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  #define NUM_SHADOW_LIGHTS (NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS)\n  #define NUM_LIGHTS (NUM_AMBIENT_LIGHTS + NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS + NUM_IES_LIGHTS + NUM_PROBE_LIGHTS)\n\n  #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__\n  #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 inverseViewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 normal;\n    vec4 reflective;\n    vec4 emission;\n    vec4 transparent;\n    vec4 multiply;\n    vec4 ambientOcclusion;\n    vec4 selfIllumination;\n    vec4 metalness;\n    vec4 roughness;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct SCNShaderLightingContribution {\n    vec3 ambient;\n    vec3 diffuse;\n    vec3 specular;\n  } _lightingContribution;\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    #if NUM_AMBIENT_LIGHTS > 0\n      AmbientLight ambient[NUM_AMBIENT_LIGHTS];\n    #endif\n    #if NUM_DIRECTIONAL_LIGHTS > 0\n      DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];\n    #endif\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0\n      DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS];\n    #endif\n    #if NUM_OMNI_LIGHTS > 0\n      OmniLight omni[NUM_OMNI_LIGHTS];\n    #endif\n    #if NUM_SPOT_LIGHTS > 0\n      SpotLight spot[NUM_SPOT_LIGHTS];\n    #endif\n    #if NUM_IES_LIGHTS > 0\n      IESLight ies[NUM_IES_LIGHTS];\n    #endif\n    #if NUM_PROBE_LIGHTS > 0\n      ProbeLight probe[NUM_PROBE_LIGHTS];\n    #endif\n    #if NUM_LIGHTS == 0\n      vec4 dummy;\n    #endif\n  } light;\n  #if NUM_SHADOW_LIGHTS > 0\n    in vec3 v_light[NUM_SHADOW_LIGHTS];\n  #endif\n  #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 0\n    in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS];\n    in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS];\n    uniform sampler2D u_shadowTexture0;\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 1\n      uniform sampler2D u_shadowTexture1;\n    #endif\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 2\n      uniform sampler2D u_shadowTexture2;\n    #endif\n    #if NUM_DIRECTIONAL_SHADOW_LIGHTS > 3\n      uniform sampler2D u_shadowTexture3;\n    #endif\n  #endif\n\n  layout (std140) uniform SCNLightsUniform {\n    vec4 direction0;\n    mat4 shadowMatrix0;\n  } scn_lights;\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  struct SCNShaderSurface {\n    vec3 view;\n    vec3 position;\n    vec3 normal;\n    vec2 normalTexcoord;\n    vec3 geometryNormal;\n    vec3 tangent;\n    vec3 bitangent;\n    vec4 ambient;\n    vec2 ambientTexcoord;\n    vec4 diffuse;\n    vec2 diffuseTexcoord;\n    vec4 specular;\n    vec2 specularTexcoord;\n    vec4 emission;\n    vec2 emissionTexcoord;\n    vec4 multiply;\n    vec2 multiplyTexcoord;\n    vec4 transparent;\n    vec2 transparentTexcoord;\n    vec4 reflective;\n    vec2 metalnessTexcoord;\n    vec2 roughnessTexcoord;\n    float ambientOcclusion;\n    float shininess;\n    float fresnel;\n    float metalness;\n    float roughness;\n    __USER_CUSTOM_SURFACE__\n  } _surface;\n\n  struct SCNShaderOutput {\n    vec4 color;\n  } _output;\n\n  vec2 poissonDisk[4] = vec2[](\n    vec2( -0.94201624, -0.39906216 ),\n    vec2( 0.94558609, -0.76890725 ),\n    vec2( -0.094184101, -0.92938870 ),\n    vec2( 0.34495938, 0.29387760 )\n  );\n\n  //#define kSCNTexcoordCount 2\n  //struct SCNShaderGeometry {\n  //  vec3 position;\n  //  vec3 normal;\n  //  vec4 tangent;\n  //  vec4 color;\n  //  vec2 texcoords[kSCNTexcoordCount];\n  //};\n\n  uniform float u_time;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord0;\n  in vec2 v_texcoord1;\n  //in vec4 v_color;\n  in vec3 v_eye;\n  in vec3 v_tangent;\n  in vec3 v_bitangent;\n  in float v_fogFactor;\n\n  //in SCNShaderGeometry _geometry;\n\n  out vec4 outColor;\n\n  __USER_CUSTOM_UNIFORM__\n\n  float saturate(float value) {\n    return clamp(value, 0.0, 1.0);\n  }\n\n  float convDepth(vec4 color) {\n    const float rMask = 1.0;\n    const float gMask = 1.0 / 255.0;\n    const float bMask = 1.0 / (255.0 * 255.0);\n    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);\n    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));\n    return depth * 2.0 - 1.0;\n  }\n\n  #if USE_SHADER_MODIFIER_SURFACE\n  void shaderModifierSurface() {\n    __SHADER_MODIFIER_SURFACE__\n  }\n  #endif\n\n  #if USE_SHADER_MODIFIER_FRAGMENT\n  void shaderModifierFragment() {\n    __SHADER_MODIFIER_FRAGMENT__\n  }\n  #endif\n\n    \n  void main() {\n    //_output.color = v_color;\n    //_output.color = vec4(0, 0, 0, 1);\n\n    //vec3 viewVec = normalize(v_eye);\n    //vec3 nom = normalize(v_normal);\n    _surface.view = normalize(v_eye);\n    _surface.position = v_position;\n    _surface.normal = normalize(v_normal);\n    _surface.tangent = normalize(v_tangent);\n    _surface.bitangent = normalize(v_bitangent);\n\n    // normal texture\n    if(textureFlags[TEXTURE_NORMAL_INDEX]){\n      mat3 tsInv = mat3(_surface.tangent, _surface.bitangent, _surface.normal);\n      vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.\n      _surface.normal = normalize(tsInv * color);\n    }\n\n    //_surface.ambient = material.ambient;\n    _surface.ambient = vec4(0, 0, 0, 1); // FIXME: check: lock ambient with diffuse\n    _surface.diffuse = material.diffuse;\n    _surface.specular = material.specular;\n    _surface.emission = material.emission;\n    _surface.multiply = material.multiply;\n    _surface.transparent = material.transparent;\n    _surface.reflective = material.reflective;\n    _surface.ambientOcclusion = material.ambientOcclusion.r;\n    _surface.shininess = material.shininess;\n    _surface.fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent); // TODO: calculate coefficient\n    _surface.metalness = material.metalness.r;\n    _surface.roughness = material.roughness.r;\n\n    // TODO: check mapping channel for each material\n    _surface.ambientTexcoord = v_texcoord0;\n    _surface.diffuseTexcoord = v_texcoord0;\n    _surface.specularTexcoord = v_texcoord0;\n    if(selfIllumination){\n      _surface.emissionTexcoord = v_texcoord1;\n    }else{\n      _surface.emissionTexcoord = v_texcoord0;\n    }\n    _surface.multiplyTexcoord = v_texcoord0;\n    _surface.transparentTexcoord = v_texcoord0;\n    _surface.metalnessTexcoord = v_texcoord0;\n    _surface.roughnessTexcoord = v_texcoord0;\n\n    if(textureFlags[TEXTURE_AMBIENT_INDEX]){\n      _surface.ambient = texture(u_ambientTexture, _surface.ambientTexcoord);\n    }\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      _surface.diffuse = texture(u_diffuseTexture, _surface.diffuseTexcoord);\n      _surface.diffuse.a *= material.diffuse.a;\n    }\n    if(textureFlags[TEXTURE_SPECULAR_INDEX]){\n      _surface.specular = texture(u_specularTexture, _surface.specularTexcoord);\n    }\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      _surface.emission = texture(u_emissionTexture, _surface.emissionTexcoord);\n    }\n    if(textureFlags[TEXTURE_MULTIPLY_INDEX]){\n      _surface.multiply = texture(u_multiplyTexture, _surface.multiplyTexcoord);\n    }\n    if(textureFlags[TEXTURE_TRANSPARENT_INDEX]){\n      _surface.transparent = texture(u_transparentTexture, _surface.transparentTexcoord);\n    }\n    if(textureFlags[TEXTURE_METALNESS_INDEX]){\n      _surface.metalness = texture(u_metalnessTexture, _surface.metalnessTexcoord).r;\n    }\n    if(textureFlags[TEXTURE_ROUGHNESS_INDEX]){\n      _surface.roughness = texture(u_roughnessTexture, _surface.roughnessTexcoord).r;\n    }\n\n    __USER_CUSTOM_TEXCOORD__\n\n    #if USE_SHADER_MODIFIER_SURFACE\n      shaderModifierSurface();\n    #endif\n\n    // Lighting\n    int numLights = 0;\n    _lightingContribution.ambient = vec3(0);\n    _lightingContribution.diffuse = vec3(0);\n    _lightingContribution.specular = vec3(0);\n\n    #if NUM_AMBIENT_LIGHTS > 0\n      for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n        _lightingContribution.ambient += light.ambient[i].color.rgb;\n      }\n    #endif\n\n    #if NUM_DIRECTIONAL_LIGHTS > 0\n      for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n        // diffuse\n        vec3 lightVec = normalize(v_light[numLights + i]);\n        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);\n        _lightingContribution.diffuse += light.directional[i].color.rgb * diffuse;\n\n        // specular\n        if(diffuse > 0.0f){\n          vec3 halfVec = normalize(lightVec + _surface.view);\n          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);\n          _lightingContribution.specular += vec3(specular);\n        }\n      }\n      numLights += NUM_DIRECTIONAL_LIGHTS;\n    #endif\n\n    #if NUM_OMNI_LIGHTS > 0\n      for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n        // diffuse\n        vec3 lightVec = normalize(v_light[numLights + i]);\n        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);\n        //_output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;\n        _lightingContribution.diffuse += light.omni[i].color.rgb * diffuse;\n\n        // specular\n        if(diffuse > 0.0f){\n          vec3 halfVec = normalize(lightVec + _surface.view);\n          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);\n          // TODO: use intensity\n          _lightingContribution.specular += vec3(1, 1, 1) * specular;\n        }\n      }\n      numLights += NUM_OMNI_LIGHTS;\n    #endif\n\n    #if NUM_SPOT_LIGHTS > 0\n      // TODO: implement\n    #endif\n\n    #if NUM_IES_LIGHTS > 0\n      // TODO: implement\n    #endif\n\n    #if NUM_PROBE_LIGHTS > 0\n      // TODO: implement\n    #endif\n\n    __FS_LIGHTING__\n\n\n    // calculate color\n    _output.color = vec4(0, 0, 0, _surface.diffuse.a);\n\n    //vec3 D = _lightingContribution.diffuse;\n    //// lock ambient with diffuse\n    //D += _lightingContribution.ambient * _surface.ambientOcclusion;\n    //// emission\n    //if(selfIllumination){\n    //  D += _surface.emission.rgb;\n    //}\n    //// diffuse\n    //_output.color.rgb = _surface.diffuse.rgb * D;\n    //vec3 S = _lightingContribution.specular;\n    ////S += _surface.reflective.rgb * _surface.ambientOcclusion;\n    //S *= _surface.specular.rgb;\n    //_output.color.rgb += S;\n    //// ambient\n    //_output.color.rgb += _surface.ambient.rgb * _lightingContribution.ambient;\n    //if(!selfIllumination){\n    //  _output.color.rgb += _surface.emission.rgb;\n    //}\n    //// multiply\n    //_output.color.rgb *= _surface.multiply.rgb;\n    //// fresnel reflection\n    //if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){\n    //  vec3 r = reflect(_surface.view, _surface.normal);\n    //  //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);\n    //  //float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);\n    //  _output.color.rgb += texture(u_reflectiveTexture, r).rgb * _surface.fresnel;\n    //}\n    //float fogFactor = pow(v_fogFactor, fog.densityExponent);\n    //_output.color = mix(_output.color, fog.color, fogFactor);\n    //_output.color.rgb *= _surface.diffuse.a;\n\n    #define pi 3.14159265\n    vec4 debugColor;\n    float alpha = pow(_surface.roughness, 4.0);\n    float invAlpha = 1.0 - alpha;\n    float nv = clamp(dot(_surface.normal, _surface.view), 0.0, 1.0);\n    float f0 = 0.6;\n    float Gv = 1.0 / (nv + sqrt(alpha + invAlpha * nv * nv));\n    for(int i=0; i<NUM_SHADOW_LIGHTS; i++){\n      vec3 lightVec = normalize(v_light[i]);\n      vec3 halfVec = normalize(lightVec + _surface.view);\n\n      float nh = clamp(dot(_surface.normal, halfVec), 0.0, 1.0);\n      float nl = clamp(dot(_surface.normal, lightVec), 0.0, 1.0);\n      //float vh = clamp(dot(_surface.view, halfVec), 0.0, 1.0);\n\n      float D = alpha / (pi * pow(nh * nh * (alpha - 1.0) + 1.0, 2.0));\n      //float F = f0 + (1.0 - f0) * pow(vh, 5.0);\n      float F = f0 + (1.0 - f0) * pow(1.0 - nh, 5.0);\n      float G = Gv / (nl + sqrt(alpha + invAlpha * nl * nl));\n      float specular = D * F * G;\n      float diffuse = (1.0 - F) * nl / pi;\n      _output.color.rgb += _surface.diffuse.rgb * mix(diffuse, specular, _surface.metalness);\n\n      debugColor = vec4(F, nl, diffuse, 1.0);\n    }\n\n    #if USE_SHADER_MODIFIER_FRAGMENT\n      shaderModifierFragment();\n    #endif\n\n    if(_output.color.a <= 0.0){\n      // avoid overwriting the depth buffer\n      discard;\n    }\n\n    outColor = _output.color;\n\n    // linear To sRGB\n    //outColor.rgb = pow(_output.color.rgb, vec3(1.0/2.2));\n    //outColor.a = _output.color.a;\n\n    //outColor = vec4(1.0, 0.0, 0.0, 1.0);\n    //outColor = debugColor;\n  }\n\n';
 
 exports.default = _SCNDefaultPBRFragmentShader;
 
@@ -40086,6 +40090,12 @@ var SCNRenderer = function (_NSObject) {
      * @access private
      * @type {SCNProgram}
      */
+    _this.__defaultPBRProgram = null;
+
+    /**
+     * @access private
+     * @type {SCNProgram}
+     */
     _this.__defaultParticleProgram = null;
 
     /**
@@ -40945,10 +40955,12 @@ var SCNRenderer = function (_NSObject) {
         var materialCount = geometry.materials.length;
         var material = geometry.materials[i % materialCount];
         var p = glProgram;
-        if (material && material.program) {
-          this._switchProgram(material.program
+        if (material && (material.program || material.lightingModel === _SCNMaterial2.default.LightingModel.physicallyBased)) {
+          var _scnProgram = material.program ? material.program : this._defaultPBRProgram;
+          this._switchProgram(_scnProgram
+
           // TODO: refactoring
-          );p = material.program._getGLProgramForContext(gl);
+          );p = _scnProgram._getGLProgramForContext(gl);
           if (node.presentation.skinner !== null) {
             if (node.presentation.skinner._useGPU) {
               gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
@@ -43504,6 +43516,73 @@ var SCNRenderer = function (_NSObject) {
 
       );return this.__defaultProgram;
     }
+
+    /**
+     * @access private
+     * @type {SCNProgram}
+     */
+
+  }, {
+    key: '_defaultPBRProgram',
+    get: function get() {
+      var numLightsChanged = this._numLightsChanged();
+      if (this.__defaultPBRProgram !== null && !numLightsChanged) {
+        return this.__defaultPBRProgram;
+      }
+
+      var gl = this.context;
+      if (this.__defaultPBRProgram === null) {
+        this.__defaultPBRProgram = new _SCNProgram2.default();
+      }
+      var p = this.__defaultPBRProgram;
+      var glProgram = p._getGLProgramForContext(gl);
+      var vsText = this._defaultVertexShader;
+      var fsText = this._defaultPBRFragmentShader;
+
+      // initialize vertex shader
+      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+      gl.shaderSource(vertexShader, vsText);
+      gl.compileShader(vertexShader);
+      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+        var info = gl.getShaderInfoLog(vertexShader);
+        throw new Error('vertex shader compile error: ' + info);
+      }
+      this.__defaultPBRProgram._glVertexShader = vertexShader;
+
+      // initialize fragment shader
+      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+      gl.shaderSource(fragmentShader, fsText);
+      gl.compileShader(fragmentShader);
+      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+        var _info5 = gl.getShaderInfoLog(fragmentShader);
+        throw new Error('fragment shader compile error: ' + _info5);
+      }
+      this.__defaultPBRProgram._glFragmentShader = fragmentShader;
+
+      gl.attachShader(glProgram, vertexShader);
+      gl.attachShader(glProgram, fragmentShader
+
+      // link program object
+      );gl.linkProgram(glProgram);
+      if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
+        var _info6 = gl.getProgramInfoLog(glProgram);
+        throw new Error('program link error: ' + _info6);
+      }
+
+      this._switchProgram(p);
+
+      gl.enable(gl.DEPTH_TEST);
+      gl.depthFunc(gl.LEQUAL);
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+      gl.enable(gl.CULL_FACE);
+      gl.cullFace(gl.BACK
+
+      // set default textures to prevent warnings
+      //this._setDummyTextureAsDefault(p)
+
+      );return this.__defaultPBRProgram;
+    }
   }, {
     key: '_defaultVertexShader',
     get: function get() {
@@ -43513,6 +43592,17 @@ var SCNRenderer = function (_NSObject) {
     key: '_defaultFragmentShader',
     get: function get() {
       return this._replaceTexts(_SCNDefaultFragmentShader3.default);
+    }
+
+    /**
+     * @access private
+     * @returns {string} -
+     */
+
+  }, {
+    key: '_defaultPBRFragmentShader',
+    get: function get() {
+      return this._replaceTexts(_SCNDefaultPBRFragmentShader3.default);
     }
   }, {
     key: '_dummyTexture',
@@ -43548,8 +43638,8 @@ var SCNRenderer = function (_NSObject) {
       gl.shaderSource(fragmentShader, fsText);
       gl.compileShader(fragmentShader);
       if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-        var _info5 = gl.getShaderInfoLog(fragmentShader);
-        throw new Error('particle fragment shader compile error: ' + _info5);
+        var _info7 = gl.getShaderInfoLog(fragmentShader);
+        throw new Error('particle fragment shader compile error: ' + _info7);
       }
 
       gl.attachShader(glProgram, vertexShader);
@@ -43558,8 +43648,8 @@ var SCNRenderer = function (_NSObject) {
       // link program object
       );gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
-        var _info6 = gl.getProgramInfoLog(glProgram);
-        throw new Error('program link error: ' + _info6);
+        var _info8 = gl.getProgramInfoLog(glProgram);
+        throw new Error('program link error: ' + _info8);
       }
 
       //gl.useProgram(glProgram)
@@ -43615,8 +43705,8 @@ var SCNRenderer = function (_NSObject) {
       gl.shaderSource(fragmentShader, fsText);
       gl.compileShader(fragmentShader);
       if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-        var _info7 = gl.getShaderInfoLog(fragmentShader);
-        throw new Error('particle fragment shader compile error: ' + _info7);
+        var _info9 = gl.getShaderInfoLog(fragmentShader);
+        throw new Error('particle fragment shader compile error: ' + _info9);
       }
 
       gl.attachShader(glProgram, vertexShader);
@@ -43625,8 +43715,8 @@ var SCNRenderer = function (_NSObject) {
       // link program object
       );gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
-        var _info8 = gl.getProgramInfoLog(glProgram);
-        throw new Error('program link error: ' + _info8);
+        var _info10 = gl.getProgramInfoLog(glProgram);
+        throw new Error('program link error: ' + _info10);
       }
 
       //gl.useProgram(glProgram)
@@ -43674,8 +43764,8 @@ var SCNRenderer = function (_NSObject) {
       gl.shaderSource(fragmentShader, fsText);
       gl.compileShader(fragmentShader);
       if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-        var _info9 = gl.getShaderInfoLog(fragmentShader);
-        throw new Error('hitTest fragment shader compile error: ' + _info9);
+        var _info11 = gl.getShaderInfoLog(fragmentShader);
+        throw new Error('hitTest fragment shader compile error: ' + _info11);
       }
 
       gl.attachShader(glProgram, vertexShader);
@@ -43684,8 +43774,8 @@ var SCNRenderer = function (_NSObject) {
       // link program object
       );gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
-        var _info10 = gl.getProgramInfoLog(glProgram);
-        throw new Error('program link error: ' + _info10);
+        var _info12 = gl.getProgramInfoLog(glProgram);
+        throw new Error('program link error: ' + _info12);
       }
 
       //gl.useProgram(glProgram)
@@ -62913,7 +63003,7 @@ var SCNTechnique = function (_NSObject) {
 
     var _this = _possibleConstructorReturn(this, (SCNTechnique.__proto__ || Object.getPrototypeOf(SCNTechnique)).call(this));
 
-    _this._dictionaryRepresentation = null;
+    _this._dictionaryRepresentation = dictionary;
     return _this;
   }
 

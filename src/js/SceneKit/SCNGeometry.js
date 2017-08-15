@@ -1039,6 +1039,10 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     textureFlags.push(0) // transparent
     textureFlags.push(0) // multiply
     textureFlags.push(0) // normal
+    textureFlags.push(0) // ambientOcclusion
+    textureFlags.push(0) // selfIllumination
+    textureFlags.push(0) // metalness
+    textureFlags.push(0) // roughness
 
     // TODO: cache uniform location
     gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))

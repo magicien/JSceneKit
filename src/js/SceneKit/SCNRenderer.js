@@ -282,6 +282,12 @@ export default class SCNRenderer extends NSObject {
      * @access private
      * @type {SCNProgram}
      */
+    this.__defaultPBRProgram = null
+
+    /**
+     * @access private
+     * @type {SCNProgram}
+     */
     this.__defaultParticleProgram = null
 
     /**
@@ -1023,10 +1029,12 @@ export default class SCNRenderer extends NSObject {
       const materialCount = geometry.materials.length
       const material = geometry.materials[i % materialCount]
       let p = glProgram
-      if(material && material.program){
-        this._switchProgram(material.program)
+      if(material && (material.program || material.lightingModel === SCNMaterial.LightingModel.physicallyBased)){
+        const _scnProgram = material.program ? material.program : this._defaultPBRProgram
+        this._switchProgram(_scnProgram)
+
         // TODO: refactoring
-        p = material.program._getGLProgramForContext(gl)
+        p = _scnProgram._getGLProgramForContext(gl)
         if(node.presentation.skinner !== null){
           if(node.presentation.skinner._useGPU){
             gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -2353,6 +2361,71 @@ export default class SCNRenderer extends NSObject {
 
   /**
    * @access private
+   * @type {SCNProgram}
+   */
+  get _defaultPBRProgram() {
+    const numLightsChanged = this._numLightsChanged()
+    if(this.__defaultPBRProgram !== null && !numLightsChanged){
+      return this.__defaultPBRProgram
+    }
+
+    const gl = this.context
+    if(this.__defaultPBRProgram === null){
+      this.__defaultPBRProgram = new SCNProgram()
+    }
+    const p = this.__defaultPBRProgram
+    const glProgram = p._getGLProgramForContext(gl)
+    const vsText = this._defaultVertexShader
+    const fsText = this._defaultPBRFragmentShader
+
+    // initialize vertex shader
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER)
+    gl.shaderSource(vertexShader, vsText)
+    gl.compileShader(vertexShader)
+    if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(vertexShader)
+      throw new Error(`vertex shader compile error: ${info}`)
+    }
+    this.__defaultPBRProgram._glVertexShader = vertexShader
+
+    // initialize fragment shader
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+    gl.shaderSource(fragmentShader, fsText)
+    gl.compileShader(fragmentShader)
+    if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(fragmentShader)
+      throw new Error(`fragment shader compile error: ${info}`)
+    }
+    this.__defaultPBRProgram._glFragmentShader = fragmentShader
+
+    gl.attachShader(glProgram, vertexShader)
+    gl.attachShader(glProgram, fragmentShader)
+
+
+    // link program object
+    gl.linkProgram(glProgram)
+    if(!gl.getProgramParameter(glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(glProgram)
+      throw new Error(`program link error: ${info}`)
+    }
+
+    this._switchProgram(p)
+
+    gl.enable(gl.DEPTH_TEST)
+    gl.depthFunc(gl.LEQUAL)
+    gl.enable(gl.BLEND)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+    gl.enable(gl.CULL_FACE)
+    gl.cullFace(gl.BACK)
+
+    // set default textures to prevent warnings
+    //this._setDummyTextureAsDefault(p)
+    
+    return this.__defaultPBRProgram
+  }
+
+  /**
+   * @access private
    * @param {SCNGeometry} geometry -
    * @returns {SCNProgram} -
    */
@@ -2387,6 +2460,14 @@ export default class SCNRenderer extends NSObject {
    */
   get _defaultFragmentShader() {
     return this._replaceTexts(_SCNDefaultFragmentShader)
+  }
+
+  /**
+   * @access private
+   * @returns {string} -
+   */
+  get _defaultPBRFragmentShader() {
+    return this._replaceTexts(_SCNDefaultPBRFragmentShader)
   }
 
   /**
