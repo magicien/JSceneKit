@@ -4435,9 +4435,8 @@ var NSObject = function () {
           if (typeof this._propTypes[key] === 'undefined') {
             //console.warn(`unknown key ${key}`)
             if (this._propTypes.$unknownKey && this._propTypes.$unknownKey(key) !== null) {
-              propTypes[key] = this._propTypes.$unknownKey(key
+              propTypes[key] = this._propTypes.$unknownKey(key);
               //console.warn(`unknown key: ${key} => ${propTypes[key]}`)
-              );
             } else {
               console.error(this.className + ': property ' + key + ' not registered');
               throw new Error(this.className + ': property ' + key + ' not registered');
@@ -6073,9 +6072,8 @@ var SCNAction = function (_NSObject) {
     value: function _applyAction(obj, time) {
       var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
-      var t = this._getTime(time, needTimeConversion
+      var t = this._getTime(time, needTimeConversion);
       //this._handleEvents(obj, t)
-      );
     }
   }, {
     key: '_getTime',
@@ -6971,9 +6969,9 @@ var SCNGeometrySource = function (_NSObject) {
     value: function _createBuffer(context) {
       var gl = context;
       this._buffer = gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER, this._buffer
+      gl.bindBuffer(gl.ARRAY_BUFFER, this._buffer);
       // FIXME: dynamic data
-      );gl.bufferData(gl.ARRAY_BUFFER, this._glData, gl.STATIC_DRAW);
+      gl.bufferData(gl.ARRAY_BUFFER, this._glData, gl.STATIC_DRAW);
       return this._buffer;
     }
 
@@ -7117,11 +7115,11 @@ var SCNGeometrySource = function (_NSObject) {
       var len = this._vectorCount;
       var arr = [];
       for (var i = 0; i < len; i++) {
-        var p = new _SCNVector2.default(this._data[ind + 0], this._data[ind + 1], this._data[ind + 2]).transform(t
+        var p = new _SCNVector2.default(this._data[ind + 0], this._data[ind + 1], this._data[ind + 2]).transform(t);
         //const x = this._data[ind + 0]
         //const y = this._data[ind + 1]
         //const z = this._data[ind + 2]
-        );if (p.x < min.x) {
+        if (p.x < min.x) {
           min.x = p.x;
         }
         if (p.x > max.x) {
@@ -8278,7 +8276,7 @@ var SCNMatrix4 = function () {
   }, {
     key: 'getOrientation',
     value: function getOrientation() {
-      return this.getRotation().rotationToQuat
+      return this.getRotation().rotationToQuat();
       /*
       const e = []
       const scale = this.getScale().mul(this.m44)
@@ -8338,7 +8336,6 @@ var SCNMatrix4 = function () {
       v.z *= len
        return v
       */
-      ();
     }
 
     /**
@@ -9357,9 +9354,9 @@ var SCNGeometry = function (_NSObject) {
       if (typeof key === 'undefined' || key === null) {
         key = Symbol();
       }
-      var anim = animation.copy
+      var anim = animation.copy();
       // FIXME: use current frame time
-      ();anim._animationStartTime = Date.now() * 0.001;
+      anim._animationStartTime = Date.now() * 0.001;
       anim._prevTime = anim._animationStartTime - 0.0000001;
 
       this._animations.set(key, anim);
@@ -9404,9 +9401,8 @@ var SCNGeometry = function (_NSObject) {
   }, {
     key: 'removeAnimationForKey',
     value: function removeAnimationForKey(key) {
-      this._animations.delete(key
+      this._animations.delete(key);
       // TODO: reset values
-      );
     }
 
     /**
@@ -9675,10 +9671,10 @@ var SCNGeometry = function (_NSObject) {
 
       var vertexData = new Float32Array(arr);
       //console.log(`vertexData length: ${arr.length}`)
-      gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW
+      gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW);
 
       // set new data
-      );pVertexSource._data = arr;
+      pVertexSource._data = arr;
       if (pNormalSource) {
         pNormalSource._data = arr;
       }
@@ -9793,43 +9789,43 @@ var SCNGeometry = function (_NSObject) {
       } else {
         textureFlags.push(0);
       }
-      gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), selfIllumination
+      gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), selfIllumination);
 
       // ambient
-      );this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags
+      this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags);
 
       // diffuse
-      );this._setTextureToName(gl, material._diffuse, 'TEXTURE2', textureFlags
+      this._setTextureToName(gl, material._diffuse, 'TEXTURE2', textureFlags);
 
       // specular
-      );this._setTextureToName(gl, material._specular, 'TEXTURE3', textureFlags
+      this._setTextureToName(gl, material._specular, 'TEXTURE3', textureFlags);
 
       // reflective
-      );this._setCubeTextureToName(gl, material._reflective, 'TEXTURE4', textureFlags
+      this._setCubeTextureToName(gl, material._reflective, 'TEXTURE4', textureFlags);
 
       // transparent
-      );this._setTextureToName(gl, material._transparent, 'TEXTURE5', textureFlags
+      this._setTextureToName(gl, material._transparent, 'TEXTURE5', textureFlags);
 
       // multiply
-      );this._setTextureToName(gl, material._multiply, 'TEXTURE6', textureFlags
+      this._setTextureToName(gl, material._multiply, 'TEXTURE6', textureFlags);
 
       // normal
-      );this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags
+      this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags);
 
       // ambientOcclusion
-      );this._setTextureToName(gl, material._ambientOcclusion, 'TEXTURE8', textureFlags
+      this._setTextureToName(gl, material._ambientOcclusion, 'TEXTURE8', textureFlags);
 
       // selfIllumination
-      );this._setTextureToName(gl, material._selfIllumination, 'TEXTURE9', textureFlags
+      this._setTextureToName(gl, material._selfIllumination, 'TEXTURE9', textureFlags);
 
       // metalness
-      );this._setTextureToName(gl, material._metalness, 'TEXTURE10', textureFlags
+      this._setTextureToName(gl, material._metalness, 'TEXTURE10', textureFlags);
 
       // roughness
-      );this._setTextureToName(gl, material._roughness, 'TEXTURE11', textureFlags
+      this._setTextureToName(gl, material._roughness, 'TEXTURE11', textureFlags);
 
       // TODO: cache uniform location
-      );gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
+      gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
 
       if (material.isDoubleSided) {
         gl.disable(gl.CULL_FACE);
@@ -9897,24 +9893,24 @@ var SCNGeometry = function (_NSObject) {
       // emission
       textureFlags.push(0);
 
-      gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), 0
+      gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), 0);
 
       // ambient
-      );this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags);
+      this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags);
 
-      textureFlags.push(0 // diffuse
-      );textureFlags.push(0 // specular
-      );textureFlags.push(0 // reflective
-      );textureFlags.push(0 // transparent
-      );textureFlags.push(0 // multiply
-      );textureFlags.push(0 // normal
-      );textureFlags.push(0 // ambientOcclusion
-      );textureFlags.push(0 // selfIllumination
-      );textureFlags.push(0 // metalness
-      );textureFlags.push(0 // roughness
+      textureFlags.push(0); // diffuse
+      textureFlags.push(0); // specular
+      textureFlags.push(0); // reflective
+      textureFlags.push(0); // transparent
+      textureFlags.push(0); // multiply
+      textureFlags.push(0); // normal
+      textureFlags.push(0); // ambientOcclusion
+      textureFlags.push(0); // selfIllumination
+      textureFlags.push(0); // metalness
+      textureFlags.push(0); // roughness
 
       // TODO: cache uniform location
-      );gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
+      gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
 
       if (material.isDoubleSided) {
         gl.disable(gl.CULL_FACE);
@@ -10108,10 +10104,10 @@ var SCNGeometry = function (_NSObject) {
     value: function _createCubeTexture(gl, image) {
       var texture = gl.createTexture();
 
-      gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture
+      gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture);
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-      );var targets = [gl.TEXTURE_CUBE_MAP_POSITIVE_Z, gl.TEXTURE_CUBE_MAP_POSITIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Z, gl.TEXTURE_CUBE_MAP_NEGATIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Y, gl.TEXTURE_CUBE_MAP_POSITIVE_Y];
+      var targets = [gl.TEXTURE_CUBE_MAP_POSITIVE_Z, gl.TEXTURE_CUBE_MAP_POSITIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Z, gl.TEXTURE_CUBE_MAP_NEGATIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Y, gl.TEXTURE_CUBE_MAP_POSITIVE_Y];
       //const tx = [0, 1.0/6.0, 2.0/6.0, 3.0/6.0, 4.0/6.0, 5.0/6.0, 1]
       //const itx = [4, 1, 5, 0, 2, 3]
       var margin = 0.001;
@@ -10151,13 +10147,13 @@ var SCNGeometry = function (_NSObject) {
       //console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
       canvas.getContext('2d').drawImage(image, 0, 0);
 
-      gl.bindTexture(gl.TEXTURE_2D, texture
+      gl.bindTexture(gl.TEXTURE_2D, texture);
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
-      gl.generateMipmap(gl.TEXTURE_2D
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+      gl.generateMipmap(gl.TEXTURE_2D);
       //gl.bindTexture(gl.TEXTURE_2D, null)
-      );return texture;
+      return texture;
     }
 
     /**
@@ -11287,8 +11283,8 @@ var SCNVector4 = function () {
         //const m11 = 1 - (z * z + y * y) * cosWR
         var m11 = cosW + x * x * cosWR;
         euler.x = Math.atan2(m23, m33);
-        euler.y = Math.asin(s // How can I get euler.y > pi/2 ?
-        );euler.z = Math.atan2(m12, m11);
+        euler.y = Math.asin(s); // How can I get euler.y > pi/2 ?
+        euler.z = Math.atan2(m12, m11);
       }
 
       return euler;
@@ -11742,13 +11738,13 @@ var SCNMaterial = function (_NSObject) {
      */
     _this._entityID = null;
 
-    _this._createPresentationProperties
+    _this._createPresentationProperties();
 
     /**
      * @access private
      * @type {?SCNShadableHelper}
      */
-    ();_this._shadableHelper = null;
+    _this._shadableHelper = null;
 
     /**
      * @access private
@@ -11970,9 +11966,9 @@ var SCNMaterial = function (_NSObject) {
       if (typeof key === 'undefined' || key === null) {
         key = Symbol();
       }
-      var anim = animation.copy
+      var anim = animation.copy();
       // FIXME: use current frame time
-      ();anim._animationStartTime = Date.now() * 0.001;
+      anim._animationStartTime = Date.now() * 0.001;
       anim._prevTime = anim._animationStartTime - 0.0000001;
 
       this._animations.set(key, anim);
@@ -12017,9 +12013,8 @@ var SCNMaterial = function (_NSObject) {
   }, {
     key: 'removeAnimationForKey',
     value: function removeAnimationForKey(key) {
-      this._animations.delete(key
+      this._animations.delete(key);
       // TODO: reset values
-      );
     }
 
     /**
@@ -12953,13 +12948,13 @@ var SCNNode = function (_NSObject) {
      */
     _this._nodeID = null;
 
-    _this._updateBoundingBox
+    _this._updateBoundingBox();
 
     /**
      * @access private
      * @type {Promise}
      */
-    ();_this._loadedPromise = null;
+    _this._loadedPromise = null;
     return _this;
   }
 
@@ -13631,9 +13626,9 @@ var SCNNode = function (_NSObject) {
             results.push.apply(results, _toConsumableArray(hits));
           }
         }
-      }
+      });
       // TODO: sort by the distance
-      );if (results.length > 0) {
+      if (results.length > 0) {
         console.error('hitTestWithSegmentFromTo: ' + results.length);
       }
       return results;
@@ -13916,13 +13911,12 @@ var SCNNode = function (_NSObject) {
       if (typeof key === 'undefined' || key === null) {
         key = Symbol();
       }
-      var act = action.copy
+      var act = action.copy();
       // FIXME: use current frame time
-      ();act._actionStartTime = Date.now() * 0.001;
+      act._actionStartTime = Date.now() * 0.001;
       act._completionHandler = block;
-      this._actions.set(key, act
+      this._actions.set(key, act);
       //this._copyTransformToPresentationRecursive()
-      );
     }
 
     // Inspecting a Node’s Running Actions
@@ -14584,9 +14578,9 @@ var SCNNode = function (_NSObject) {
 
       var paths = keyPath.split('.');
       var key = paths.shift();
-      var restPath = paths.join('.'
+      var restPath = paths.join('.');
       //console.log(`SCNNode setValueForKeyPath ${this.name} ${key} ${restPath}`)
-      );if (key === 'transform') {
+      if (key === 'transform') {
         switch (restPath) {
           case 'rotation.x':
             target._rotation.x = value;
@@ -15426,8 +15420,8 @@ var SCNNode = function (_NSObject) {
         return null;
       }
       var vp = this.lightViewProjectionTransform;
-      var scale = (0, _SCNMatrix4MakeTranslation2.default)(1.0, 1.0, 0.0).scale(0.5, 0.5, 1.0 // [-1, 1] => [0, 1]
-      );return vp.mult(scale);
+      var scale = (0, _SCNMatrix4MakeTranslation2.default)(1.0, 1.0, 0.0).scale(0.5, 0.5, 1.0); // [-1, 1] => [0, 1]
+      return vp.mult(scale);
     }
   }, {
     key: 'didLoad',
@@ -15492,10 +15486,10 @@ var SCNNode = function (_NSObject) {
       //console.log('_loadAnimationGroup start')
       var group = new _CAAnimationGroup2.default();
       var data = animation.animation;
-      group.isRemovedOnCompletion = Boolean(animation.removeOnCompletion
+      group.isRemovedOnCompletion = Boolean(animation.removeOnCompletion);
       // group.timingFunction
       // group.delegate
-      );group.usesSceneTimeBase = Boolean(animation.usesSceneTimeBase);
+      group.usesSceneTimeBase = Boolean(animation.usesSceneTimeBase);
       group.fadeInDuration = data.fadeInDuration;
       group.fadeOutDuration = data.fadeOutDuration;
       group.beginTime = data.beginTime;
@@ -15511,14 +15505,14 @@ var SCNNode = function (_NSObject) {
       // data.additive
       // data.attributes
       data.channels.forEach(function (channel) {
-        var keyPath = channel.targetPath.join('.'
+        var keyPath = channel.targetPath.join('.');
         //console.error(`SCNNode animation group keyPath: ${keyPath}`)
-        );var chAnim = _this6._loadAnimationData(channel.animation, keyPath);
+        var chAnim = _this6._loadAnimationData(channel.animation, keyPath);
         group.animations.push(chAnim);
-      }
+      });
       //console.log('_loadAnimationGroup done')
 
-      );return group;
+      return group;
     }
   }, {
     key: '_loadKeyframeAnimation',
@@ -15526,10 +15520,10 @@ var SCNNode = function (_NSObject) {
       //console.log(`_loadKeyframeAnimation ${keyPath} start`)
       var anim = new _CAKeyframeAnimation2.default(keyPath);
 
-      anim.isRemovedOnCompletion = Boolean(data.removeOnCompletion
+      anim.isRemovedOnCompletion = Boolean(data.removeOnCompletion);
       // anim.timingFunction
       // anim.delegate
-      );anim.usesSceneTimeBase = Boolean(data.sceneTimeBased);
+      anim.usesSceneTimeBase = Boolean(data.sceneTimeBased);
       anim.fadeInDuration = data.fadeInDuration;
       anim.fadeOutDuration = data.fadeOutDuration;
       anim.beginTime = data.beginTime;
@@ -15542,13 +15536,13 @@ var SCNNode = function (_NSObject) {
       var fillMode = [Constants.kCAFillModeRemoved, Constants.kCAFillModeForwards, Constants.kCAFillModeBackwards, Constants.kCAFillModeBoth];
       anim.fillMode = fillMode[data.fillModeMask];
       anim.isCumulative = Boolean(data.cumulative);
-      anim.isAdditive = Boolean(data.additive
+      anim.isAdditive = Boolean(data.additive);
       // data.attributes
 
-      );var keyframe = data.keyframeController;
-      anim.values = this._loadData(keyframe, 'values'
+      var keyframe = data.keyframeController;
+      anim.values = this._loadData(keyframe, 'values');
       //anim.path
-      );anim.keyTimes = this._loadData(keyframe, 'keytimes');
+      anim.keyTimes = this._loadData(keyframe, 'keytimes');
       switch (keyframe.interpolationMode) {
         case 0:
         default:
@@ -15592,13 +15586,13 @@ var SCNNode = function (_NSObject) {
       var fillMode = [Constants.kCAFillModeRemoved, Constants.kCAFillModeForwards, Constants.kCAFillModeBackwards, Constants.kCAFillModeBoth];
       anim.fillMode = fillMode[data.fillModeMask];
       anim.isCumulative = Boolean(data.cumulative);
-      anim.isAdditive = Boolean(data.additive
+      anim.isAdditive = Boolean(data.additive);
       // data.attributes
       // data.baseType
 
       //console.log(`_loadBasicAnimation ${keyPath} done`)
 
-      );return anim;
+      return anim;
     }
   }, {
     key: '_loadActionArray',
@@ -17576,9 +17570,9 @@ var SKNode = function (_NSObject) {
       if (typeof key === 'undefined' || key === null) {
         _key = Symbol();
       }
-      var act = action.copy
+      var act = action.copy();
       // FIXME: use current frame time
-      ();act._actionStartTime = Date.now() * 0.001;
+      act._actionStartTime = Date.now() * 0.001;
       act._completionHandler = block;
       this._actions.set(_key, act);
     }
@@ -18199,9 +18193,8 @@ var SKAction = function (_NSObject) {
     value: function _applyAction(obj, time) {
       var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
-      var t = this._getTime(time, needTimeConversion
+      var t = this._getTime(time, needTimeConversion);
       //this._handleEvents(obj, t)
-      );
     }
   }, {
     key: '_getTime',
@@ -20585,14 +20578,14 @@ var SCNMaterialProperty = function (_NSObject) {
      * @type {SCNMatrix4}
      * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395388-contentstransform
      */
-    _this.contentsTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0
+    _this.contentsTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
 
     /**
      * The wrapping behavior for the S texture coordinate.
      * @type {SCNWrapMode}
      * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395384-wraps
      */
-    );_this.wrapS = _SCNWrapMode2.default.clamp;
+    _this.wrapS = _SCNWrapMode2.default.clamp;
 
     /**
      * The wrapping behavior for the T texture coordinate.
@@ -20766,9 +20759,9 @@ var SCNMaterialProperty = function (_NSObject) {
       if (typeof key === 'undefined' || key === null) {
         key = Symbol();
       }
-      var anim = animation.copy
+      var anim = animation.copy();
       // FIXME: use current frame time
-      ();anim._animationStartTime = Date.now() * 0.001;
+      anim._animationStartTime = Date.now() * 0.001;
       anim._prevTime = anim._animationStartTime - 0.0000001;
 
       this._animations.set(key, anim);
@@ -20813,9 +20806,8 @@ var SCNMaterialProperty = function (_NSObject) {
   }, {
     key: 'removeAnimationForKey',
     value: function removeAnimationForKey(key) {
-      this._animations.delete(key
+      this._animations.delete(key);
       // TODO: reset values
-      );
     }
 
     /**
@@ -21019,6 +21011,9 @@ var SCNMaterialProperty = function (_NSObject) {
       var _this2 = this;
 
       var image = new Image();
+      // TODO: check option if it allows cross-domain.
+      image.crossOrigin = 'anonymous';
+
       var __path = path;
       if (__path.indexOf('file:///') === 0) {
         __path = __path.slice(8);
@@ -21065,9 +21060,8 @@ var SCNMaterialProperty = function (_NSObject) {
     value: function float32Array() {
       var target = this.__presentation ? this.__presentation : this;
       if ((0, _InstanceOf3.default)(target._contents, _SKColor2.default)) {
-        return target._contents.float32Array
+        return target._contents.float32Array();
         //return target._contents.srgbToLinear().float32Array()
-        ();
       }
       return new Float32Array([1, 1, 1, 1]);
     }
@@ -22636,8 +22630,8 @@ var SCNPhysicsWorld = function (_NSObject) {
         for (var _iterator4 = objects[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
           var _obj = _step4.value;
 
-          var _body = _obj.physicsBody;
-          _body._prevPosition = _body._position;
+          var body = _obj.physicsBody;
+          body._prevPosition = body._position;
         }
       } catch (err) {
         _didIteratorError4 = true;
@@ -22818,9 +22812,9 @@ var SCNPhysicsWorld = function (_NSObject) {
       var contact = new _SCNPhysicsContact2.default();
       contact._nodeA = boxA._node;
       contact._nodeB = boxB._node;
-      contact._contactPoint = boxA._position.add(d.mul(0.5) // TODO: implement
-      );contact._contactNormal = d.normalize // TODO: implement
-      ();contact._penetrationDistance = 0; // TODO: implement
+      contact._contactPoint = boxA._position.add(d.mul(0.5)); // TODO: implement
+      contact._contactNormal = d.normalize(); // TODO: implement
+      contact._penetrationDistance = 0; // TODO: implement
 
       return [contact];
     }
@@ -23502,9 +23496,9 @@ var SCNPhysicsWorld = function (_NSObject) {
       }
 
       var pA = n.convertPositionFrom(pointA, null);
-      var pB = n.convertPositionFrom(pointB, null
+      var pB = n.convertPositionFrom(pointB, null);
       //if(this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox) !== null){
-      );var r = this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox);
+      var r = this._segmentBoundingBoxIntersects(pA, pB, geo.boundingBox);
       if (r !== null) {
         console.error('segmentBoundingBoxIntersects: ' + r.near + ', ' + r.far);
         return this._hitTestWithSegmentGeometry(pA, pB, geo);
@@ -23903,11 +23897,11 @@ var SCNBox = function (_SCNGeometry) {
       var back = -this.length * 0.5;
 
       // front
-      sourceData.push(left, bottom, front // position
-      );sourceData.push(0, 0, 1 // normal
-      );sourceData.push(0, 1 // texcoord
+      sourceData.push(left, bottom, front); // position
+      sourceData.push(0, 0, 1); // normal
+      sourceData.push(0, 1); // texcoord
 
-      );sourceData.push(left, top, front);
+      sourceData.push(left, top, front);
       sourceData.push(0, 0, 1);
       sourceData.push(0, 0);
 
@@ -23920,10 +23914,10 @@ var SCNBox = function (_SCNGeometry) {
       sourceData.push(1, 0);
 
       indexData.push(0, 3, 1);
-      indexData.push(0, 2, 3
+      indexData.push(0, 2, 3);
 
       // right
-      );sourceData.push(right, bottom, front);
+      sourceData.push(right, bottom, front);
       sourceData.push(1, 0, 0);
       sourceData.push(0, 1);
 
@@ -23940,10 +23934,10 @@ var SCNBox = function (_SCNGeometry) {
       sourceData.push(1, 0);
 
       indexData.push(4, 7, 5);
-      indexData.push(4, 6, 7
+      indexData.push(4, 6, 7);
 
       // back
-      );sourceData.push(right, bottom, back);
+      sourceData.push(right, bottom, back);
       sourceData.push(0, 0, -1);
       sourceData.push(0, 1);
 
@@ -23960,10 +23954,10 @@ var SCNBox = function (_SCNGeometry) {
       sourceData.push(1, 0);
 
       indexData.push(8, 11, 9);
-      indexData.push(8, 10, 11
+      indexData.push(8, 10, 11);
 
       // left
-      );sourceData.push(left, bottom, back);
+      sourceData.push(left, bottom, back);
       sourceData.push(-1, 0, 0);
       sourceData.push(0, 1);
 
@@ -23980,10 +23974,10 @@ var SCNBox = function (_SCNGeometry) {
       sourceData.push(1, 0);
 
       indexData.push(12, 15, 13);
-      indexData.push(12, 14, 15
+      indexData.push(12, 14, 15);
 
       // top
-      );sourceData.push(left, top, front);
+      sourceData.push(left, top, front);
       sourceData.push(0, 1, 0);
       sourceData.push(0, 1);
 
@@ -24000,10 +23994,10 @@ var SCNBox = function (_SCNGeometry) {
       sourceData.push(1, 0);
 
       indexData.push(16, 19, 17);
-      indexData.push(16, 18, 19
+      indexData.push(16, 18, 19);
 
       // bottom
-      );sourceData.push(left, bottom, back);
+      sourceData.push(left, bottom, back);
       sourceData.push(0, -1, 0);
       sourceData.push(0, 1);
 
@@ -24675,8 +24669,8 @@ _ClassList.registerClass = function (classObj, className) {
       for (var _iterator2 = _instanceProperties[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
         var _name = _step2.value;
 
-        var _org = Object.getOwnPropertyDescriptor(_NSObject2.default.prototype, _name);
-        Object.defineProperty(classObj.prototype, _name, _org);
+        var org = Object.getOwnPropertyDescriptor(_NSObject2.default.prototype, _name);
+        Object.defineProperty(classObj.prototype, _name, org);
       }
     } catch (err) {
       _didIteratorError2 = true;
@@ -26103,7 +26097,7 @@ var NSKeyedUnarchiver = function (_NSCoder) {
       this._offsetSize = reader.readUnsignedByte();
       this._objCount = reader.readUnsignedLongLong();
       var topIndex = reader.readUnsignedLongLong();
-      var tablePos = reader.readUnsignedLongLong
+      var tablePos = reader.readUnsignedLongLong();
 
       //console.log(`dataLen: ${dataLen}`)
       //console.log(`intSize: ${intSize}`)
@@ -26112,7 +26106,7 @@ var NSKeyedUnarchiver = function (_NSCoder) {
       //console.log(`topIndex: ${topIndex}`)
       //console.log(`tablePos: ${tablePos}`)
 
-      ();this._offsetArray = [];
+      this._offsetArray = [];
       var pos = tablePos;
       reader.seek(pos);
       var objCount = this._objCount;
@@ -26158,9 +26152,9 @@ var NSKeyedUnarchiver = function (_NSCoder) {
         }
       } else if (type1 === 0x10) {
         // Int
-        var len = Math.pow(2, type2
+        var len = Math.pow(2, type2);
         //console.log('   type: integer ' + len)
-        );return reader.readInteger(len, signed);
+        return reader.readInteger(len, signed);
       } else if (type1 === 0x20) {
         // Float
         var _len = Math.pow(2, type2);
@@ -26177,38 +26171,37 @@ var NSKeyedUnarchiver = function (_NSCoder) {
         //console.log('   type: Date')
       } else if (type1 === 0x40) {
         // Data
-        var count = this._getDataSize(type2
+        var count = this._getDataSize(type2);
         //console.log(`   type: Data: length: ${count}`)
-        );return reader.readData(count);
+        return reader.readData(count);
       } else if (type1 === 0x50) {
         // ASCII
-        var _count = this._getDataSize(type2
+        var _count = this._getDataSize(type2);
         //console.log('   type: ascii ' + count)
-        );return reader.readString(_count, 'ascii');
+        return reader.readString(_count, 'ascii');
       } else if (type1 === 0x60) {
         // UTF-16
-        var _count2 = this._getDataSize(type2
+        var _count2 = this._getDataSize(type2);
         //console.log('   type: UTF-16 ' + count)
-        );return reader.readString(_count2, 'utf16be' // Big Endian might not be supported...
-        );
+        return reader.readString(_count2, 'utf16be'); // Big Endian might not be supported...
       } else if (type1 === 0x80) {
         // UID
-        var uid = reader.readInteger(type2 + 1, false
+        var uid = reader.readInteger(type2 + 1, false);
         //console.log('   type: UID: ' + uid)
-        );return new _UID(this, uid);
+        return new _UID(this, uid);
       } else if (type1 === 0xA0) {
         // Array
-        var _count3 = this._getDataSize(type2
+        var _count3 = this._getDataSize(type2);
         //console.log('   type: array: ' + count)
-        );var arrIndex = [];
+        var arrIndex = [];
         for (var i = 0; i < _count3; i++) {
           arrIndex.push(reader.readInteger(this._offsetSize, false));
         }
         var arr = arrIndex.map(function (index) {
           return _this2._parseObjAtIndex(index);
-        }
+        });
         //console.log(`***arr.length: ${arr.length}`)
-        );return arr;
+        return arr;
       } else if (type1 === 0xC0) {
         // Set
         var _count4 = this._getDataSize(type2);
@@ -26234,11 +26227,11 @@ var NSKeyedUnarchiver = function (_NSCoder) {
         }
         var result = {};
         for (var _i4 = 0; _i4 < _count5; _i4++) {
-          var key = this._parseObjAtIndex(keyIndex[_i4]
+          var key = this._parseObjAtIndex(keyIndex[_i4]);
           //console.log('key: ' + key)
-          );var val = this._parseObjAtIndex(valueIndex[_i4]
+          var val = this._parseObjAtIndex(valueIndex[_i4]);
           //console.log('val: ' + val)
-          );result[key] = val;
+          result[key] = val;
         }
         return result;
       }
@@ -26512,9 +26505,9 @@ var NSKeyedUnarchiver = function (_NSCoder) {
       if (this._decodingFinished) {
         throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
       }
-      var parsedObj = this.decodeObjectForKey(key
+      var parsedObj = this.decodeObjectForKey(key);
       //console.log(`${key}: ${parsedObj.constructor.name}`)
-      );if (!(parsedObj instanceof Buffer)) {
+      if (!(parsedObj instanceof Buffer)) {
         throw new Error('propertylist of key ' + key + ' is not Buffer data');
       }
       //console.log(`***header: ${parsedObj.toString('ascii', 0, 8)}`)
@@ -27223,13 +27216,13 @@ var CABasicAnimation = function (_CAPropertyAnimation) {
         // TODO: retain prevValue
         //value = this._lerp(prevValue, currentValue, t)
       }
-      var value = this._lerp(fromValue, toValue, t
+      var value = this._lerp(fromValue, toValue, t);
 
       //if(this.keyPath === 'rotation.w'){
       //  console.log(`from: ${fromValue}, to: ${toValue}, t: ${t}, value: ${value}`)
       //}
 
-      );if (this.isAdditive) {
+      if (this.isAdditive) {
         if (isObject) {
           //value = value.add(obj.valueForKeyPath(this.keyPath))
           value = value.add(this._baseValue);
@@ -27430,9 +27423,9 @@ var CAPropertyAnimation = function (_CAAnimation) {
       if (this.valueFunction !== null) {
         value = this.valueFunction._getValueAtTime(t);
       }
-      value = this._calculateWithBaseValue(obj, value
+      value = this._calculateWithBaseValue(obj, value);
       //console.log(`CAPropertyAnimation: obj: ${obj.name}, time: ${time}, keyPath: ${this.keyPath}, value: ${value}`)
-      );this._applyValue(obj, value);
+      this._applyValue(obj, value);
       this._handleEvents(obj, t);
     }
   }, {
@@ -27842,13 +27835,13 @@ var SCNCapsule = function (_SCNGeometry) {
           var zNom = z * ySin[_lat];
 
           // vertex
-          sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius
+          sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius);
 
           // normal
-          );sourceData.push(xNom, yNom[_lat], zNom
+          sourceData.push(xNom, yNom[_lat], zNom);
 
           // texcoord
-          );sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
+          sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
 
           if (_lat === hemiLen) {
             // put the same data again
@@ -27864,13 +27857,13 @@ var SCNCapsule = function (_SCNGeometry) {
           var _zNom = z * ySin[_lat2];
 
           // vertex
-          sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius
+          sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius);
 
           // normal
-          );sourceData.push(_xNom, yNom[_lat2], _zNom
+          sourceData.push(_xNom, yNom[_lat2], _zNom);
 
           // texcoord
-          );sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
+          sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
 
           if (_lat2 === hemiLen) {
             // put the same data again
@@ -28432,9 +28425,8 @@ var SCNPhysicsShape = function (_NSObject) {
       } else if ((0, _InstanceOf3.default)(this._sourceGeometry, _SCNBox2.default)) {
         this._createShapeAsBox();
       } else if ((0, _InstanceOf3.default)(this._sourceGeometry, _SCNSphere2.default)) {
-        this._createShapeAsSphere
+        this._createShapeAsSphere();
         //}else if(this._options && this._options.get(_Option.type) === _ShapeType.convecHull){
-        ();
       } else if (this._options && this._options[_Option.type] === _ShapeType.concavePolyhedron) {
         // give up making a simple shape
         this._shape = this._sourceGeometry;
@@ -28747,13 +28739,13 @@ var SCNSphere = function (_SCNGeometry) {
           var zNom = z * ySin[_lat];
 
           // vertex
-          sourceData.push(xNom * this.radius, yNom[_lat] * this.radius, zNom * this.radius
+          sourceData.push(xNom * this.radius, yNom[_lat] * this.radius, zNom * this.radius);
 
           // normal
-          );sourceData.push(xNom, yNom[_lat], zNom
+          sourceData.push(xNom, yNom[_lat], zNom);
 
           // texcoord
-          );sourceData.push(lng / this.segmentCount, 1.0 - _lat / this.segmentCount);
+          sourceData.push(lng / this.segmentCount, 1.0 - _lat / this.segmentCount);
         }
       }
 
@@ -29388,10 +29380,10 @@ var SKTexture = function (_NSObject) {
       canvas.height = this._image.naturalHeight;
       canvas.getContext('2d').drawImage(this._image, 0, 0);
 
-      gl.bindTexture(gl.TEXTURE_2D, texture
+      gl.bindTexture(gl.TEXTURE_2D, texture);
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._image.width, this._image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._image.width, this._image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
       gl.generateMipmap(gl.TEXTURE_2D);
       gl.bindTexture(gl.TEXTURE_2D, null);
 
@@ -37077,10 +37069,10 @@ var SCNProgram = function (_NSObject) {
 
       this._dummyTexture = gl.createTexture();
 
-      gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture
+      gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture);
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
       gl.bindTexture(gl.TEXTURE_2D, null);
 
       this._dummyCubeMapTexture = gl.createTexture();
@@ -37371,13 +37363,13 @@ var SCNScene = function (_NSObject) {
       _this._dataLoadedPromise = promise;
     }
 
-    _this._createSkyBox
+    _this._createSkyBox();
 
     /**
      * @access private
      * @type {Promise}
      */
-    ();_this._loadedPromise = null;
+    _this._loadedPromise = null;
     return _this;
   }
 
@@ -38565,13 +38557,13 @@ var SCNRenderer = function (_NSObject) {
     light.type = _SCNLight2.default.LightType.omni;
     light.position = new _SCNVector2.default(0, 10, 10);
     _this._defaultLightNode.light = light;
-    _this._defaultLightNode._presentation = _this._defaultLightNode.copy
+    _this._defaultLightNode._presentation = _this._defaultLightNode.copy();
 
     /**
      * @access private
      * @type {CGRect}
      */
-    ();_this._viewRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
+    _this._viewRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
 
     /**
      * The background color of the view.
@@ -38730,28 +38722,28 @@ var SCNRenderer = function (_NSObject) {
         return;
       }
 
-      this._lightNodes = this._createLightNodeArray // createLightNodeArray must be called before getting program
+      this._lightNodes = this._createLightNodeArray(); // createLightNodeArray must be called before getting program
 
-      ();var p = this._defaultProgram;
+      var p = this._defaultProgram;
       var glProgram = p._getGLProgramForContext(gl);
 
       gl.clearColor(this._backgroundColor.red, this._backgroundColor.green, this._backgroundColor.blue, this._backgroundColor.alpha);
       gl.clearDepth(1.0);
       gl.clearStencil(0);
-      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 
       //gl.useProgram(glProgram)
-      );this._useProgram(p);
+      this._useProgram(p);
 
       gl.depthFunc(gl.LEQUAL);
       gl.depthMask(true);
       gl.enable(gl.BLEND);
-      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 
       //////////////////////////
       // Camera
       //////////////////////////
-      );if (this._cameraBuffer === null) {
+      if (this._cameraBuffer === null) {
         this._initializeCameraBuffer(glProgram);
       }
       var cameraData = [];
@@ -38767,7 +38759,7 @@ var SCNRenderer = function (_NSObject) {
       cameraData.push.apply(cameraData, _toConsumableArray(cameraPNode.viewProjectionTransform.floatArray()));
       gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer);
       gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW);
-      gl.bindBuffer(gl.UNIFORM_BUFFER, null
+      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
       //console.log('cameraNode.worldPosition: ' + cameraPNode.worldTransform.getTranslation().float32Array())
       //console.log('viewTransform: ' + cameraPNode.viewTransform.float32Array())
@@ -38777,7 +38769,7 @@ var SCNRenderer = function (_NSObject) {
       //////////////////////////
       // Fog
       //////////////////////////
-      );if (this._fogBuffer === null) {
+      if (this._fogBuffer === null) {
         this._initializeFogBuffer(glProgram);
       }
       var fogData = [];
@@ -38788,12 +38780,12 @@ var SCNRenderer = function (_NSObject) {
       }
       gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
       gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW);
-      gl.bindBuffer(gl.UNIFORM_BUFFER, null
+      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
       //////////////////////////
       // Lights
       //////////////////////////
-      );if (this._lightBuffer === null) {
+      if (this._lightBuffer === null) {
         this._initializeLightBuffer(glProgram);
       }
       var lights = this._lightNodes;
@@ -38822,10 +38814,10 @@ var SCNRenderer = function (_NSObject) {
 
       gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer);
       gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW);
-      gl.bindBuffer(gl.UNIFORM_BUFFER, null
+      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
       // FIXME: set params for each light
-      );var scnLightsData = [];
+      var scnLightsData = [];
       if (lights.directionalShadow.length > 0) {
         var l = lights.directionalShadow[0].presentation;
         var direction = new _SCNVector2.default(0, 0, -1).rotateWithQuaternion(l._worldOrientation);
@@ -38833,26 +38825,26 @@ var SCNRenderer = function (_NSObject) {
         scnLightsData.push.apply(scnLightsData, _toConsumableArray(l.shadowProjectionTransform.float32Array()));
       } else {
         // direction
-        scnLightsData.push(0, 0, 0, 0
+        scnLightsData.push(0, 0, 0, 0);
         // identity matrix
-        );scnLightsData.push(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        scnLightsData.push(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       }
       gl.bindBuffer(gl.UNIFORM_BUFFER, this._scnLightsBuffer);
       gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(scnLightsData), gl.DYNAMIC_DRAW);
-      gl.bindBuffer(gl.UNIFORM_BUFFER, null
+      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
       //////////////////////////
       // Background (SkyBox)
       //////////////////////////
-      );if (this.scene.background._contents !== null) {
+      if (this.scene.background._contents !== null) {
         var skyBox = this.scene._skyBox;
         skyBox.position = cameraPNode._worldTranslation;
         var scale = camera.zFar * 1.154;
         skyBox.scale = new _SCNVector2.default(scale, scale, scale);
-        skyBox._updateWorldTransform
+        skyBox._updateWorldTransform();
 
         // disable fog
-        ();var disabledFogData = fogData.slice(0);
+        var disabledFogData = fogData.slice(0);
         disabledFogData[4] = camera.zFar * 2.0; // startDistance
         disabledFogData[5] = camera.zFar * 2.1; // endDistance
         disabledFogData[6] = 1.0; // densityExponent
@@ -38860,10 +38852,10 @@ var SCNRenderer = function (_NSObject) {
         gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(disabledFogData), gl.DYNAMIC_DRAW);
         gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
-        this._renderNode(skyBox
+        this._renderNode(skyBox);
 
         // enable fog
-        );gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
+        gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
         gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW);
         gl.bindBuffer(gl.UNIFORM_BUFFER, null);
       }
@@ -38928,20 +38920,20 @@ var SCNRenderer = function (_NSObject) {
         }
       }
 
-      this._setViewPort // reset viewport size
-      ();this._useProgram(p);
+      this._setViewPort(); // reset viewport size
+      this._useProgram(p);
       for (var i = 0; i < lights.directionalShadow.length; i++) {
         var node = lights.directionalShadow[i];
         var symbol = 'TEXTURE' + (i + _shadowTextureBaseIndex);
         gl.activeTexture(gl[symbol]);
         gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture);
       }
-      gl.enable(gl.BLEND
+      gl.enable(gl.BLEND);
 
       //////////////////////////
       // Nodes
       //////////////////////////
-      );var renderingArray = this._createRenderingNodeArray();
+      var renderingArray = this._createRenderingNodeArray();
       renderingArray.forEach(function (node) {
         _this2._renderNode(node);
       });
@@ -38953,12 +38945,12 @@ var SCNRenderer = function (_NSObject) {
       gl.enable(gl.BLEND);
       gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
       gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraPNode.viewTransform.float32Array());
-      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraPNode.projectionTransform.float32Array()
+      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraPNode.projectionTransform.float32Array());
 
       //////////////////////////
       // Particles
       //////////////////////////
-      );if (this.scene._particleSystems !== null) {
+      if (this.scene._particleSystems !== null) {
         var _iteratorNormalCompletion2 = true;
         var _didIteratorError2 = false;
         var _iteratorError2 = undefined;
@@ -38987,17 +38979,17 @@ var SCNRenderer = function (_NSObject) {
       var particleArray = this._createParticleNodeArray();
       particleArray.forEach(function (node) {
         _this2._renderParticle(node);
-      }
+      });
 
       //////////////////////////
       // 2D Overlay
       //////////////////////////
-      );this._renderOverlaySKScene
+      this._renderOverlaySKScene();
 
       // DEBUG: show shadow map
       //this._showShadowMapOfLight(lights.directionalShadow[0])
 
-      ();gl.flush();
+      gl.flush();
     }
   }, {
     key: '_renderOverlaySKScene',
@@ -39272,10 +39264,10 @@ var SCNRenderer = function (_NSObject) {
             var vao = geometry._shadowVAO[i];
             var element = geometry.geometryElements[i];
 
-            gl.bindVertexArray(vao
+            gl.bindVertexArray(vao);
             // FIXME: use bufferData instead of bindBufferBase
 
-            );var shape = null;
+            var shape = null;
             switch (element.primitiveType) {
               case _SCNGeometryPrimitiveType2.default.triangles:
                 shape = gl.TRIANGLES;
@@ -39359,8 +39351,7 @@ var SCNRenderer = function (_NSObject) {
 
       if (geometry._vertexArrayObjects === null) {
         this._initializeVAO(node, glProgram);
-        this._initializeUBO(node, glProgram // FIXME: program should have UBO, not node.
-        );
+        this._initializeUBO(node, glProgram); // FIXME: program should have UBO, not node.
       }
 
       if (node.morpher !== null || node.skinner && !node.skinner._useGPU) {
@@ -39388,10 +39379,10 @@ var SCNRenderer = function (_NSObject) {
         var p = glProgram;
         if (material && (material.program || material.lightingModel === _SCNMaterial2.default.LightingModel.physicallyBased)) {
           var _scnProgram = material.program ? material.program : this._defaultPBRProgram;
-          this._switchProgram(_scnProgram
+          this._switchProgram(_scnProgram);
 
           // TODO: refactoring
-          );p = _scnProgram._getGLProgramForContext(gl);
+          p = _scnProgram._getGLProgramForContext(gl);
           if (node.presentation.skinner !== null) {
             if (node.presentation.skinner._useGPU) {
               gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
@@ -39417,9 +39408,9 @@ var SCNRenderer = function (_NSObject) {
         var vao = geometry._vertexArrayObjects[i];
         var element = geometry.geometryElements[i];
 
-        gl.bindVertexArray(vao
+        gl.bindVertexArray(vao);
         // FIXME: use bufferData instead of bindBufferBase
-        );gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
+        gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
 
         geometry._bufferMaterialData(gl, p, i, node.presentation._worldOpacity);
 
@@ -39510,9 +39501,9 @@ var SCNRenderer = function (_NSObject) {
         p = system._program;
       }
       var glProgram = p._getGLProgramForContext(gl);
-      this._useProgram(p
+      this._useProgram(p);
       //this._switchProgram(p)
-      );gl.disable(gl.CULL_FACE);
+      gl.disable(gl.CULL_FACE);
 
       if (system._vertexBuffer === null) {
         system._initializeVAO(gl, glProgram);
@@ -39920,28 +39911,28 @@ var SCNRenderer = function (_NSObject) {
       gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height);
 
       this._hitObjectIDTexture = gl.createTexture();
-      gl.bindTexture(gl.TEXTURE_2D, this._hitObjectIDTexture
+      gl.bindTexture(gl.TEXTURE_2D, this._hitObjectIDTexture);
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
 
       this._hitFaceIDTexture = gl.createTexture();
       gl.bindTexture(gl.TEXTURE_2D, this._hitFaceIDTexture);
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
 
       this._hitPositionTexture = gl.createTexture();
-      gl.bindTexture(gl.TEXTURE_2D, this._hitPositionTexture
+      gl.bindTexture(gl.TEXTURE_2D, this._hitPositionTexture);
       //gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
 
       this._hitNormalTexture = gl.createTexture();
-      gl.bindTexture(gl.TEXTURE_2D, this._hitNormalTexture
+      gl.bindTexture(gl.TEXTURE_2D, this._hitNormalTexture);
       //gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
 
       //gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
-      );gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this._hitDepthBuffer
+      gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this._hitDepthBuffer);
       //gl.framebufferTexture2D(target, attachment, textarget, texture, level)
-      );gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._hitObjectIDTexture, 0);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._hitObjectIDTexture, 0);
       gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT1, gl.TEXTURE_2D, this._hitFaceIDTexture, 0);
       gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT2, gl.TEXTURE_2D, this._hitPositionTexture, 0);
       gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT3, gl.TEXTURE_2D, this._hitNormalTexture, 0);
@@ -39967,15 +39958,15 @@ var SCNRenderer = function (_NSObject) {
 
       var invVp = viewProjectionMatrix.invert();
       var rayFrom = from.transform(invVp);
-      var rayTo = to.transform(invVp
+      var rayTo = to.transform(invVp);
       //console.log(`rayFrom: ${rayFrom.float32Array()}`)
       //console.log(`rayTo  : ${rayTo.float32Array()}`)
 
       //const rayVec = rayTo.sub(rayFrom)
-      );var renderingArray = this._createRenderingNodeArray
+      var renderingArray = this._createRenderingNodeArray();
       //console.log(`renderingArray.length: ${renderingArray.length}`)
 
-      ();var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
+      var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
       if (typeof categoryBitMask === 'undefined') {
         categoryBitMask = -1;
       }
@@ -40062,10 +40053,10 @@ var SCNRenderer = function (_NSObject) {
       }
       var prg = this._defaultHitTestProgram;
       var hitTestProgram = prg._glProgram;
-      this._useProgram(prg
+      this._useProgram(prg);
       //gl.useProgram(hitTestProgram)
 
-      );gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer);
 
       gl.depthMask(true);
       gl.depthFunc(gl.LEQUAL);
@@ -40138,10 +40129,10 @@ var SCNRenderer = function (_NSObject) {
 
       var positionBuf = new Uint8Array(4);
       gl.readBuffer(gl.COLOR_ATTACHMENT2);
-      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0
+      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0);
       //const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
       //const position = screenPos.transform(viewProjectionTransform.invert())
-      );var p = ((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0 + positionBuf[0]) / 255.0;
+      var p = ((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0 + positionBuf[0]) / 255.0;
       var position = from.lerp(to, p);
 
       var normalBuf = new Uint8Array(4);
@@ -40213,10 +40204,10 @@ var SCNRenderer = function (_NSObject) {
       gl.disable(gl.BLEND);
       gl.clearColor(0, 0, 0, 0);
       gl.clearDepth(1.0);
-      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
       // screen position
-      );var x = (_from.x + 1.0) * 0.5 * this._viewRect.size.width;
+      var x = (_from.x + 1.0) * 0.5 * this._viewRect.size.width;
       var y = (_from.y + 1.0) * 0.5 * this._viewRect.size.height;
       // left top of the scissor area
       var areaSize = 3;
@@ -40287,10 +40278,10 @@ var SCNRenderer = function (_NSObject) {
 
       var positionBuf = new Uint8Array(4);
       gl.readBuffer(gl.COLOR_ATTACHMENT2);
-      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0
+      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0);
       //const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
       //const position = screenPos.transform(viewProjectionTransform.invert())
-      );var p = ((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0 + positionBuf[0]) / 255.0;
+      var p = ((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0 + positionBuf[0]) / 255.0;
       var screenPos = _from.lerp(_to, p);
       var position = screenPos.transform(viewProjectionTransform.invert());
 
@@ -40544,10 +40535,10 @@ var SCNRenderer = function (_NSObject) {
       var glProgram = p._getGLProgramForContext(gl);
 
       var vsText = this._vertexShaderForObject(obj);
-      var fsText = this._fragmentShaderForObject(obj
+      var fsText = this._fragmentShaderForObject(obj);
 
       // initialize vertex shader
-      );var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
       gl.shaderSource(vertexShader, vsText);
       gl.compileShader(vertexShader);
       if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
@@ -40567,10 +40558,10 @@ var SCNRenderer = function (_NSObject) {
       p._glFragmentShader = fragmentShader;
 
       gl.attachShader(glProgram, vertexShader);
-      gl.attachShader(glProgram, fragmentShader
+      gl.attachShader(glProgram, fragmentShader);
 
       // link program object
-      );gl.linkProgram(glProgram);
+      gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
         var _info2 = gl.getProgramInfoLog(glProgram);
         throw new Error('program link error: ' + _info2);
@@ -40615,13 +40606,13 @@ var SCNRenderer = function (_NSObject) {
 
       var gl = this.context;
       var glProgram = program._getGLProgramForContext(gl);
-      gl.useProgram(glProgram
+      gl.useProgram(glProgram);
 
       // set dummy textures
-      );program._setDummyTextureForContext(gl
+      program._setDummyTextureForContext(gl);
 
       // set shadow textures
-      );var lights = this._lightNodes;
+      var lights = this._lightNodes;
       for (var i = 0; i < lights.directionalShadow.length; i++) {
         var node = lights.directionalShadow[i];
         var symbol = 'TEXTURE' + (i + 8);
@@ -40641,10 +40632,10 @@ var SCNRenderer = function (_NSObject) {
       gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer);
       var scnLightsIndex = gl.getUniformBlockIndex(glProgram, 'SCNLightsUniform');
       gl.uniformBlockBinding(glProgram, scnLightsIndex, _scnLightsLoc);
-      gl.bindBufferBase(gl.UNIFORM_BUFFER, _scnLightsLoc, this._scnLightsBuffer
+      gl.bindBufferBase(gl.UNIFORM_BUFFER, _scnLightsLoc, this._scnLightsBuffer);
 
       // set uniform variables
-      );var uniformTime = gl.getUniformLocation(glProgram, 'u_time');
+      var uniformTime = gl.getUniformLocation(glProgram, 'u_time');
       if (uniformTime) {
         // this._time might be too large.
         var time = this._time % 100000.0;
@@ -40682,18 +40673,18 @@ var SCNRenderer = function (_NSObject) {
                   canvas.width = image.naturalWidth;
                   canvas.height = image.naturalHeight;
                   canvas.getContext('2d').drawImage(image, 0, 0);
-                  gl.bindTexture(gl.TEXTURE_2D, texture
+                  gl.bindTexture(gl.TEXTURE_2D, texture);
                   // texImage2D(target, level, internalformat, width, height, border, format, type, source)
                   // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-                  );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+                  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
                   gl.generateMipmap(gl.TEXTURE_2D);
                   val._contents = texture;
                 }
                 if (val._contents instanceof WebGLTexture) {
                   gl.uniform1i(loc, textureNo);
-                  gl.activeTexture(gl['TEXTURE' + textureNo]
+                  gl.activeTexture(gl['TEXTURE' + textureNo]);
                   // TODO: check texture type
-                  );gl.bindTexture(gl.TEXTURE_2D, val._contents);
+                  gl.bindTexture(gl.TEXTURE_2D, val._contents);
                   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, val._magnificationFilterFor(gl));
                   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, val._minificationFilterFor(gl));
                   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, val._wrapSFor(gl));
@@ -40959,23 +40950,23 @@ var SCNRenderer = function (_NSObject) {
       _text = _text.replace(/float2/g, 'vec2');
       _text = _text.replace(/float3/g, 'vec3');
       _text = _text.replace(/float4/g, 'vec4');
-      _text = _text.replace(/scn_frame\.time/g, 'u_time'
+      _text = _text.replace(/scn_frame\.time/g, 'u_time');
       //_text = _text.replace(/#pragma alpha/g, '')
-      );_text = _text.replace(/half /g, 'float ' // FIXME: check semicolon before half
+      _text = _text.replace(/half /g, 'float '); // FIXME: check semicolon before half
 
-      );_text = _text.replace(/u_modelTransform/g, 'modelTransform' // TODO: use u_modelTransform
-      );_text = _text.replace(/u_viewTransform/g, 'camera.viewTransform' // TODO: use u_viewTransform
-      );_text = _text.replace(/u_inverseViewTransform/g, 'camera.inverseViewTransform' // TODO: use u_inverseViewTransform
-      );_text = _text.replace(/u_viewProjectionTransform/g, 'caemra.viewProjectionTransform' // TODO: use u_viewTransform
-      );_text = _text.replace(/\s*uniform[^;]*;/g, ''
+      _text = _text.replace(/u_modelTransform/g, 'modelTransform'); // TODO: use u_modelTransform
+      _text = _text.replace(/u_viewTransform/g, 'camera.viewTransform'); // TODO: use u_viewTransform
+      _text = _text.replace(/u_inverseViewTransform/g, 'camera.inverseViewTransform'); // TODO: use u_inverseViewTransform
+      _text = _text.replace(/u_viewProjectionTransform/g, 'caemra.viewProjectionTransform'); // TODO: use u_viewTransform
+      _text = _text.replace(/\s*uniform[^;]*;/g, '');
 
       // workaround for Badger...
-      );_text = _text.replace('uvs.x *= 2', 'uvs.x *= 2.0');
+      _text = _text.replace('uvs.x *= 2', 'uvs.x *= 2.0');
       _text = _text.replace('tn * 2 - 1', 'tn * 2.0 - vec3(1)');
-      _text = _text.replace('tn2 * 2 - 1', 'tn2 * 2.0 - vec3(1)'
+      _text = _text.replace('tn2 * 2 - 1', 'tn2 * 2.0 - vec3(1)');
 
       // workaround for Fox2...
-      );_text = _text.replace('pow(_surface.ambientOcclusion,3)', 'pow(_surface.ambientOcclusion,3.0)');
+      _text = _text.replace('pow(_surface.ambientOcclusion,3)', 'pow(_surface.ambientOcclusion,3.0)');
       _text = _text.replace('pow(AO,5)', 'pow(AO,5.0)');
       _text = _text.replace('pow(1.-fresnelBasis , 6)', 'pow(1.-fresnelBasis , 6.0)');
       _text = _text.replace('pow(1.-fresnelBasis , 4)', 'pow(1.-fresnelBasis , 4.0)');
@@ -41001,9 +40992,9 @@ var SCNRenderer = function (_NSObject) {
       var baseGeometry = node.geometry;
 
       // prepare vertex array data
-      var vertexBuffer = geometry._createVertexBuffer(gl, node
+      var vertexBuffer = geometry._createVertexBuffer(gl, node);
       // TODO: retain attribute locations
-      );var positionLoc = gl.getAttribLocation(glProgram, 'position');
+      var positionLoc = gl.getAttribLocation(glProgram, 'position');
       var normalLoc = gl.getAttribLocation(glProgram, 'normal');
       var tangentLoc = gl.getAttribLocation(glProgram, 'tangent');
       var colorLoc = gl.getAttribLocation(glProgram, 'color');
@@ -41018,10 +41009,10 @@ var SCNRenderer = function (_NSObject) {
         var element = node.presentation.geometry.geometryElements[i];
         var material = node.presentation.geometry.materials[i];
         var vao = gl.createVertexArray();
-        gl.bindVertexArray(vao
+        gl.bindVertexArray(vao);
 
         // initialize vertex buffer
-        );gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
         gl.bindAttribLocation(glProgram, positionLoc, 'position');
         gl.bindAttribLocation(glProgram, normalLoc, 'normal');
@@ -41030,12 +41021,12 @@ var SCNRenderer = function (_NSObject) {
         gl.bindAttribLocation(glProgram, texcoord0Loc, 'texcoord0');
         gl.bindAttribLocation(glProgram, texcoord1Loc, 'texcoord1');
         gl.bindAttribLocation(glProgram, boneIndicesLoc, 'boneIndices');
-        gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights'
+        gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights');
 
         // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
         // position
-        );var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
         if (posSrc) {
           gl.enableVertexAttribArray(positionLoc);
           gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
@@ -41110,11 +41101,11 @@ var SCNRenderer = function (_NSObject) {
         }
 
         // FIXME: use setting
-        gl.disable(gl.CULL_FACE
+        gl.disable(gl.CULL_FACE);
 
         // initialize index buffer
         // FIXME: check geometrySource semantic
-        );var indexBuffer = element._createBuffer(gl);
+        var indexBuffer = element._createBuffer(gl);
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
         geometry._vertexArrayObjects.push(vao);
@@ -41128,9 +41119,9 @@ var SCNRenderer = function (_NSObject) {
       var baseGeometry = node.geometry;
 
       // prepare vertex array data
-      var vertexBuffer = geometry._createVertexBuffer(gl, node
+      var vertexBuffer = geometry._createVertexBuffer(gl, node);
       // TODO: retain attribute locations
-      );var positionLoc = gl.getAttribLocation(glProgram, 'position');
+      var positionLoc = gl.getAttribLocation(glProgram, 'position');
       var boneIndicesLoc = gl.getAttribLocation(glProgram, 'boneIndices');
       var boneWeightsLoc = gl.getAttribLocation(glProgram, 'boneWeights');
 
@@ -41140,19 +41131,19 @@ var SCNRenderer = function (_NSObject) {
         var element = node.presentation.geometry.geometryElements[i];
         var material = node.presentation.geometry.materials[i];
         var shadowVAO = gl.createVertexArray();
-        gl.bindVertexArray(shadowVAO
+        gl.bindVertexArray(shadowVAO);
 
         // initialize vertex buffer
-        );gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
         gl.bindAttribLocation(glProgram, positionLoc, 'position');
         gl.bindAttribLocation(glProgram, boneIndicesLoc, 'boneIndices');
-        gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights'
+        gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights');
 
         // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
         // position
-        );var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
         if (posSrc) {
           gl.enableVertexAttribArray(positionLoc);
           gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
@@ -41179,11 +41170,11 @@ var SCNRenderer = function (_NSObject) {
         }
 
         // FIXME: use setting
-        gl.disable(gl.CULL_FACE
+        gl.disable(gl.CULL_FACE);
 
         // initialize index buffer
         // FIXME: check geometrySource semantic
-        );var indexBuffer = element._createBuffer(gl);
+        var indexBuffer = element._createBuffer(gl);
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
         geometry._shadowVAO.push(shadowVAO);
@@ -41216,12 +41207,12 @@ var SCNRenderer = function (_NSObject) {
         gl.bindAttribLocation(glProgram, positionLoc, 'position');
         gl.bindAttribLocation(glProgram, normalLoc, 'normal');
         gl.bindAttribLocation(glProgram, boneIndicesLoc, 'boneIndices');
-        gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights'
+        gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights');
 
         // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
         // position
-        );var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
         if (posSrc) {
           gl.enableVertexAttribArray(positionLoc);
           gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
@@ -41346,10 +41337,10 @@ var SCNRenderer = function (_NSObject) {
 
       this.__dummyTexture = gl.createTexture();
 
-      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture
+      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture);
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
       gl.bindTexture(gl.TEXTURE_2D, null);
     }
 
@@ -41540,7 +41531,7 @@ var SCNRenderer = function (_NSObject) {
         // nothing to draw...
         return result;
       }
-      var invRay = rayVec.mul(-1
+      var invRay = rayVec.mul(-1);
 
       //console.log(`rayPoint: ${rayPoint.float32Array()}`)
       //console.log(`rayVec: ${rayVec.float32Array()}`)
@@ -41551,7 +41542,7 @@ var SCNRenderer = function (_NSObject) {
 
       // TODO: test the bounding box/sphere first for performance
 
-      );var source = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+      var source = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
       var sourceLen = source.vectorCount;
       var sourceData = [];
       var modelTransform = node.presentation._worldTransform;
@@ -41924,10 +41915,10 @@ var SCNRenderer = function (_NSObject) {
       this.__defaultProgram._glFragmentShader = fragmentShader;
 
       gl.attachShader(glProgram, vertexShader);
-      gl.attachShader(glProgram, fragmentShader
+      gl.attachShader(glProgram, fragmentShader);
 
       // link program object
-      );gl.linkProgram(glProgram);
+      gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
         var _info4 = gl.getProgramInfoLog(glProgram);
         throw new Error('program link error: ' + _info4);
@@ -41940,12 +41931,12 @@ var SCNRenderer = function (_NSObject) {
       gl.enable(gl.BLEND);
       gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
       gl.enable(gl.CULL_FACE);
-      gl.cullFace(gl.BACK
+      gl.cullFace(gl.BACK);
 
       // set default textures to prevent warnings
       //this._setDummyTextureAsDefault(p)
 
-      );return this.__defaultProgram;
+      return this.__defaultProgram;
     }
 
     /**
@@ -41991,10 +41982,10 @@ var SCNRenderer = function (_NSObject) {
       this.__defaultPBRProgram._glFragmentShader = fragmentShader;
 
       gl.attachShader(glProgram, vertexShader);
-      gl.attachShader(glProgram, fragmentShader
+      gl.attachShader(glProgram, fragmentShader);
 
       // link program object
-      );gl.linkProgram(glProgram);
+      gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
         var _info6 = gl.getProgramInfoLog(glProgram);
         throw new Error('program link error: ' + _info6);
@@ -42007,12 +41998,12 @@ var SCNRenderer = function (_NSObject) {
       gl.enable(gl.BLEND);
       gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
       gl.enable(gl.CULL_FACE);
-      gl.cullFace(gl.BACK
+      gl.cullFace(gl.BACK);
 
       // set default textures to prevent warnings
       //this._setDummyTextureAsDefault(p)
 
-      );return this.__defaultPBRProgram;
+      return this.__defaultPBRProgram;
     }
   }, {
     key: '_defaultVertexShader',
@@ -42074,30 +42065,30 @@ var SCNRenderer = function (_NSObject) {
       }
 
       gl.attachShader(glProgram, vertexShader);
-      gl.attachShader(glProgram, fragmentShader
+      gl.attachShader(glProgram, fragmentShader);
 
       // link program object
-      );gl.linkProgram(glProgram);
+      gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
         var _info8 = gl.getProgramInfoLog(glProgram);
         throw new Error('program link error: ' + _info8);
       }
 
       //gl.useProgram(glProgram)
-      this._useProgram(p
+      this._useProgram(p);
       //gl.clearColor(1, 1, 1, 1)
       //gl.clearDepth(1.0)
       //gl.clearStencil(0)
 
-      );gl.enable(gl.DEPTH_TEST);
+      gl.enable(gl.DEPTH_TEST);
       gl.depthFunc(gl.LEQUAL);
       gl.enable(gl.BLEND);
       gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
       gl.enable(gl.CULL_FACE);
-      gl.cullFace(gl.BACK
+      gl.cullFace(gl.BACK);
 
       // set default textures to prevent warnings
-      );this._setDummyParticleTextureAsDefault();
+      this._setDummyParticleTextureAsDefault();
 
       return this.__defaultParticleProgram;
     }
@@ -42141,27 +42132,27 @@ var SCNRenderer = function (_NSObject) {
       }
 
       gl.attachShader(glProgram, vertexShader);
-      gl.attachShader(glProgram, fragmentShader
+      gl.attachShader(glProgram, fragmentShader);
 
       // link program object
-      );gl.linkProgram(glProgram);
+      gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
         var _info10 = gl.getProgramInfoLog(glProgram);
         throw new Error('program link error: ' + _info10);
       }
 
       //gl.useProgram(glProgram)
-      this._useProgram(p
+      this._useProgram(p);
       //gl.clearColor(1, 1, 1, 1)
       //gl.clearDepth(1.0)
       //gl.clearStencil(0)
 
-      );gl.enable(gl.DEPTH_TEST);
-      gl.depthFunc(gl.LEQUAL
+      gl.enable(gl.DEPTH_TEST);
+      gl.depthFunc(gl.LEQUAL);
       //gl.enable(gl.BLEND)
-      );gl.disable(gl.BLEND
+      gl.disable(gl.BLEND);
       //gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
-      );gl.enable(gl.CULL_FACE);
+      gl.enable(gl.CULL_FACE);
       gl.cullFace(gl.BACK);
 
       return this.__defaultShadowProgram;
@@ -42200,31 +42191,31 @@ var SCNRenderer = function (_NSObject) {
       }
 
       gl.attachShader(glProgram, vertexShader);
-      gl.attachShader(glProgram, fragmentShader
+      gl.attachShader(glProgram, fragmentShader);
 
       // link program object
-      );gl.linkProgram(glProgram);
+      gl.linkProgram(glProgram);
       if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
         var _info12 = gl.getProgramInfoLog(glProgram);
         throw new Error('program link error: ' + _info12);
       }
 
       //gl.useProgram(glProgram)
-      this._useProgram(p
+      this._useProgram(p);
       //gl.clearColor(1, 1, 1, 1)
       //gl.clearDepth(1.0)
       //gl.clearStencil(0)
 
-      );gl.enable(gl.DEPTH_TEST);
+      gl.enable(gl.DEPTH_TEST);
       gl.depthFunc(gl.LEQUAL);
       gl.enable(gl.BLEND);
       gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
       gl.enable(gl.CULL_FACE);
-      gl.cullFace(gl.BACK
+      gl.cullFace(gl.BACK);
 
       //this._setDummyHitTestTextureAsDefault()
 
-      );return this.__defaultHitTestProgram;
+      return this.__defaultHitTestProgram;
     }
   }]);
 
@@ -42452,11 +42443,10 @@ var SKSpriteNode = function (_SKNode) {
     _this._loadingImagePromise = null;
 
     if (name !== null) {
-      _this.texture = _SKTexture2.default.textureWithImageNamed(name
+      _this.texture = _SKTexture2.default.textureWithImageNamed(name);
       //if(generateNormalMap){
       //  this.normalTexture = this.texture.generatingNormalMap()
       //}
-      );
     }
     return _this;
   }
@@ -42625,10 +42615,10 @@ var SKSpriteNode = function (_SKNode) {
       }
 
       gl.attachShader(program, vertexShader);
-      gl.attachShader(program, fragmentShader
+      gl.attachShader(program, fragmentShader);
 
       // link program object
-      );gl.linkProgram(program);
+      gl.linkProgram(program);
       if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
         var _info2 = gl.getProgramInfoLog(program);
         throw new Error('program link error: ' + _info2);
@@ -42657,15 +42647,15 @@ var SKSpriteNode = function (_SKNode) {
 
       var positionLoc = gl.getAttribLocation(program, 'position');
       gl.bindAttribLocation(program, positionLoc, 'position');
-      gl.enableVertexAttribArray(positionLoc
+      gl.enableVertexAttribArray(positionLoc);
       // idx, size, type, norm, stride, offset
-      );gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
+      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 
       var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
       gl.bindAttribLocation(program, texcoordLoc, 'texcoord');
-      gl.enableVertexAttribArray(texcoordLoc
+      gl.enableVertexAttribArray(texcoordLoc);
       // idx, size, type, norm, stride, offset
-      );gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
+      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
 
       this._indexBuffer = gl.createBuffer();
       var indexData = new Uint8Array([0, 3, 2, 0, 1, 3]);
@@ -44456,10 +44446,10 @@ _ClassList3.default.registerClass(_SKShapeNode2.default, 'SKShapeNode');
 _ClassList3.default.registerClass(_SKSpriteNode2.default, 'SKSpriteNode');
 _ClassList3.default.registerClass(_SKTexture2.default, 'SKTexture');
 _ClassList3.default.registerClass(_SKTextureFilteringMode2.default, 'SKTextureFilteringMode');
-_ClassList3.default.registerClass(_SKWait2.default, 'SKWait'
+_ClassList3.default.registerClass(_SKWait2.default, 'SKWait');
 
 /*global exports*/
-);exports.NSColor = _NSColor2.default;
+exports.NSColor = _NSColor2.default;
 exports.NSColorSpaceModel = _NSColorSpaceModel2.default;
 exports.AVAudioMixerNode = _AVAudioMixerNode2.default;
 exports.AVAudioNode = _AVAudioNode2.default;
@@ -44869,7 +44859,7 @@ exports.default = NSColorSpaceModel;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var baseTime = Date.UTC(2001, 0, 1, 0, 0, 0, 0
+var baseTime = Date.UTC(2001, 0, 1, 0, 0, 0, 0);
 
 /**
  * Returns the current system absolute time.
@@ -44878,7 +44868,7 @@ var baseTime = Date.UTC(2001, 0, 1, 0, 0, 0, 0
  * @desc Absolute time is measured in seconds relative to the absolute reference date of Jan 1 2001 00:00:00 GMT. A positive value represents a date after the reference date, a negative value represents a date before it. For example, the absolute time -32940326 is equivalent to December 16th, 1999 at 17:54:34. Repeated calls to this function do not guarantee monotonically increasing results. The system time may decrease due to synchronization with external time references or due to an explicit user change of the clock.
  * @see https://developer.apple.com/documentation/corefoundation/1543542-cfabsolutetimegetcurrent
  */
-);function CFAbsoluteTimeGetCurrent() {
+function CFAbsoluteTimeGetCurrent() {
   return (Date.now() - baseTime) * 0.001;
 }
 
@@ -48957,9 +48947,9 @@ var SCNActionFade = function (_SCNAction) {
         throw new Error('both toValue and byValue are null');
       }
 
-      var value = this._lerp(baseValue, toValue, t
+      var value = this._lerp(baseValue, toValue, t);
       //console.warn(`opacity time: ${time}, t: ${t}, base: ${baseValue}, to: ${toValue}, val: ${value}`)
-      );obj.presentation._opacity = value;
+      obj.presentation._opacity = value;
 
       if (this._finished) {
         obj._opacity = toValue;
@@ -50408,10 +50398,10 @@ var SCNActionRotate = function (_SCNAction) {
       if (!(0, _InstanceOf3.default)(obj, _SCNNode2.default)) {
         throw new Error('unsupported class for SCNActionRotate: ' + obj.constructor.name);
       }
-      var t = this._getTime(time, needTimeConversion
+      var t = this._getTime(time, needTimeConversion);
       //console.warn(`SCNActionRotate._applyAction t: ${t}`)
 
-      );if (this._isAxisAngle) {
+      if (this._isAxisAngle) {
         // rotation
         var baseValue = obj.rotation;
         var toValue = this._axisRot;
@@ -52662,30 +52652,30 @@ var SCNCone = function (_SCNGeometry) {
 
         // vertex
         sideData.push(bvx, bottom, bvz);
-        bottomData.push(-bvx, bottom, bvz
+        bottomData.push(-bvx, bottom, bvz);
 
         // normal
-        );sideData.push(x, 0, z);
-        bottomData.push(0, -1, 0
+        sideData.push(x, 0, z);
+        bottomData.push(0, -1, 0);
 
         // texcoord
-        );var tx = tStep * i;
+        var tx = tStep * i;
         sideData.push(tx, 1.0);
 
         var ttx = (1 + Math.cos(i * rStep)) * 0.5;
         var tty = (1 + Math.sin(i * rStep)) * 0.5;
-        bottomData.push(ttx, tty
+        bottomData.push(ttx, tty);
 
         // vertex
-        );sideData.push(tvx, top, tvz);
-        bottomData.push(0, bottom, 0
+        sideData.push(tvx, top, tvz);
+        bottomData.push(0, bottom, 0);
 
         // normal
-        );sideData.push(x, 0, z);
-        bottomData.push(0, -1, 0
+        sideData.push(x, 0, z);
+        bottomData.push(0, -1, 0);
 
         // texcoord
-        );sideData.push(tx, 0.0);
+        sideData.push(tx, 0.0);
         bottomData.push(0.5, 0.5);
       }
       sourceData.push.apply(sourceData, sideData.concat(bottomData));
@@ -52917,34 +52907,34 @@ var SCNCylinder = function (_SCNGeometry) {
         // vertex
         sideData.push(vx, bottom, vz);
         topData.push(vx, top, vz);
-        bottomData.push(-vx, bottom, vz
+        bottomData.push(-vx, bottom, vz);
 
         // normal
-        );sideData.push(x, 0, z);
+        sideData.push(x, 0, z);
         topData.push(0, 1, 0);
-        bottomData.push(0, -1, 0
+        bottomData.push(0, -1, 0);
 
         // texcoord
-        );var tx = tStep * i;
+        var tx = tStep * i;
         sideData.push(tx, 1.0);
 
         var ttx = (1 + Math.cos(i * rStep)) * 0.5;
         var tty = (1 + Math.sin(i * rStep)) * 0.5;
         topData.push(ttx, tty);
-        bottomData.push(ttx, tty
+        bottomData.push(ttx, tty);
 
         // vertex
-        );sideData.push(vx, top, vz);
+        sideData.push(vx, top, vz);
         topData.push(0, top, 0);
-        bottomData.push(0, bottom, 0
+        bottomData.push(0, bottom, 0);
 
         // normal
-        );sideData.push(x, 0, z);
+        sideData.push(x, 0, z);
         topData.push(0, 1, 0);
-        bottomData.push(0, -1, 0
+        bottomData.push(0, -1, 0);
 
         // texcoord
-        );sideData.push(tx, 0.0);
+        sideData.push(tx, 0.0);
         topData.push(0.5, 0.5);
         bottomData.push(0.5, 0.5);
       }
@@ -53425,13 +53415,13 @@ var SCNFloor = function (_SCNGeometry) {
         var tx = 0.0;
         for (var w = 0; w <= segmentCount; w++) {
           // vector
-          sourceData.push(x, y, 0
+          sourceData.push(x, y, 0);
 
           // normal
-          );sourceData.push(0, 0, 1
+          sourceData.push(0, 0, 1);
 
           // texcoord
-          );sourceData.push(tx, ty);
+          sourceData.push(tx, ty);
 
           x += xStep;
           tx += txStep;
@@ -54640,16 +54630,16 @@ var SCNMorpher = function (_NSObject) {
       node.geometry.geometrySources.forEach(function (source) {
         // FIXME: copy more than 1 source.
         var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
-        pSource.fill(0
+        pSource.fill(0);
         //newData.set(source.semantic, Array(source._data.length).fill(0))
-        );totalWeightForSemantic.set(source.semantic, 0.0);
-      }
+        totalWeightForSemantic.set(source.semantic, 0.0);
+      });
 
       // should I morph elements?
       //node.geometry.geometryElements().forEach((element) => {
       //})
 
-      );var targetCount = pm.targets.length;
+      var targetCount = pm.targets.length;
       //console.log(`targetCount: ${targetCount}`)
 
       var _loop = function _loop(i) {
@@ -54664,10 +54654,10 @@ var SCNMorpher = function (_NSObject) {
           if (typeof pSource === 'undefined') {
             return;
           }
-          totalWeightForSemantic.set(source.semantic, totalWeightForSemantic.get(source.semantic) + weight
+          totalWeightForSemantic.set(source.semantic, totalWeightForSemantic.get(source.semantic) + weight);
 
           // FIXME: don't access private properties
-          );var srcIndex = source._dataOffset / source._bytesPerComponent;
+          var srcIndex = source._dataOffset / source._bytesPerComponent;
           var srcStride = source._dataStride / source._bytesPerComponent;
           var dstIndex = pSource._dataOffset / pSource._bytesPerComponent;
           var dstStride = pSource._dataStride / pSource._bytesPerComponent;
@@ -54728,9 +54718,9 @@ var SCNMorpher = function (_NSObject) {
         var vectorCount = source._vectorCount;
 
         if (p.calculationMode === _SCNMorpherCalculationMode2.default.normalized) {
-          var _weight = 1.0 - totalWeightForSemantic.get(source.semantic
+          var _weight = 1.0 - totalWeightForSemantic.get(source.semantic);
           // FIXME: don't access private properties
-          );for (var i = 0; i < vectorCount; i++) {
+          for (var i = 0; i < vectorCount; i++) {
             for (var j = 0; j < componentCount; j++) {
               pSource._data[dstIndex + j] += source._data[srcIndex + j] * _weight;
             }
@@ -54749,12 +54739,11 @@ var SCNMorpher = function (_NSObject) {
             dstIndex += dstStride;
           }
         }
-      }
+      });
 
       // TODO: needs to update normal vector?
 
       //console.log(`_morph done`)
-      );
     }
 
     /**
@@ -56168,6 +56157,9 @@ var SCNParticleSystem = function (_NSObject2) {
       var _this3 = this;
 
       var image = new Image();
+      // TODO: check option if it allows cross-domain.
+      image.crossOrigin = 'anonymous';
+
       var __path = path;
       if (__path.indexOf('file:///') === 0) {
         __path = __path.slice(8);
@@ -56212,21 +56204,21 @@ var SCNParticleSystem = function (_NSObject2) {
       gl.bindVertexArray(this._vertexArray);
 
       this._vertexBuffer = gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer
+      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 
       // prepare vertex array data
       // TODO: retain attribute locations
-      );var positionLoc = gl.getAttribLocation(program, 'position');
+      var positionLoc = gl.getAttribLocation(program, 'position');
       var velocityLoc = gl.getAttribLocation(program, 'velocity');
       var rotationLoc = gl.getAttribLocation(program, 'rotation');
       var colorLoc = gl.getAttribLocation(program, 'color');
-      var sizeLoc = gl.getAttribLocation(program, 'size'
+      var sizeLoc = gl.getAttribLocation(program, 'size');
       //const lifeLoc = gl.getAttribLocation(program, 'life')
-      );var cornerLoc = gl.getAttribLocation(program, 'corner');
-      var texcoordLoc = gl.getAttribLocation(program, 'texcoord'
+      var cornerLoc = gl.getAttribLocation(program, 'corner');
+      var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
 
       // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
-      );var stride = 76;
+      var stride = 76;
       gl.enableVertexAttribArray(positionLoc);
       gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, stride, 0);
       gl.enableVertexAttribArray(velocityLoc);
@@ -56240,7 +56232,7 @@ var SCNParticleSystem = function (_NSObject2) {
       gl.enableVertexAttribArray(cornerLoc);
       gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, stride, 60);
       gl.enableVertexAttribArray(texcoordLoc);
-      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, stride, 68
+      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, stride, 68);
 
       /*
       const arr = []
@@ -56251,11 +56243,11 @@ var SCNParticleSystem = function (_NSObject2) {
       gl.bufferData(gl.ARRAY_BUFFER, particleData, gl.DYNAMIC_DRAW)
       */
 
-      );var len = this._maxParticles + 5;
-      this._updateIndexBuffer(gl, len
+      var len = this._maxParticles + 5;
+      this._updateIndexBuffer(gl, len);
 
       // initialize parameters
-      );this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
+      this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
       this._imageWidth = 1.0 / this.imageSequenceColumnCount;
       this._imageHeight = 1.0 / this.imageSequenceRowCount;
     }
@@ -56314,10 +56306,10 @@ var SCNParticleSystem = function (_NSObject2) {
       var spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random();
       var spreadingAngleRot = 2.0 * Math.PI * Math.random();
       var angleMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle);
-      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot
+      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot);
 
       // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
-      );if (this.emitterShape === null) {
+      if (this.emitterShape === null) {
         p.position = position;
         p.velocity = new _SCNVector2.default(0, 0, velocity); // TODO: use spreadingAngle
       } else if (this.birthLocation === _SCNParticleBirthLocation2.default.surface) {
@@ -56591,8 +56583,7 @@ var SCNParticleSystem = function (_NSObject2) {
         p.position.z += p.velocity.z * _dt;
         if (_this4.propertyControllers !== null) {
           Object.keys(_this4.propertyControllers).forEach(function (key) {
-            _this4.propertyControllers[key].animation._applyAnimation(p, t, false // should I use p.life instead of t?
-            );
+            _this4.propertyControllers[key].animation._applyAnimation(p, t, false); // should I use p.life instead of t?
           });
         }
 
@@ -56680,10 +56671,10 @@ var SCNParticleSystem = function (_NSObject2) {
       }
 
       gl.uniform1i(gl.getUniformLocation(program, 'orientationMode'), this.orientationMode);
-      gl.uniform1f(gl.getUniformLocation(program, 'stretchFactor'), this.stretchFactor
+      gl.uniform1f(gl.getUniformLocation(program, 'stretchFactor'), this.stretchFactor);
 
       // buffer particle data
-      );gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
       gl.bufferData(gl.ARRAY_BUFFER, this._particleData, gl.DYNAMIC_DRAW);
 
       if (this._particles.length > this._maxParticleIndex) {
@@ -56717,10 +56708,10 @@ var SCNParticleSystem = function (_NSObject2) {
       //console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
       canvas.getContext('2d').drawImage(image, 0, 0);
 
-      gl.bindTexture(gl.TEXTURE_2D, texture
+      gl.bindTexture(gl.TEXTURE_2D, texture);
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
       gl.generateMipmap(gl.TEXTURE_2D);
       gl.bindTexture(gl.TEXTURE_2D, null);
 
@@ -56735,23 +56726,23 @@ var SCNParticleSystem = function (_NSObject2) {
   }, {
     key: '_createColor',
     value: function _createColor() {
-      var hsb = this._rgb2hsb(this.particleColor
+      var hsb = this._rgb2hsb(this.particleColor);
 
       // Hue
       //hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() - 0.5)) % 360.0
-      );hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() * 2.0 - 1.0)) % 360.0;
+      hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() * 2.0 - 1.0)) % 360.0;
       if (hsb.x < 0) {
         hsb.x += 360.0;
       }
 
       // Saturation
-      hsb.y = Math.max(0, Math.min(1.0, hsb.y + this.particleColorVariation.y * (Math.random() - 0.5))
+      hsb.y = Math.max(0, Math.min(1.0, hsb.y + this.particleColorVariation.y * (Math.random() - 0.5)));
 
       // Brightness
-      );hsb.z = Math.max(0, Math.min(1.0, hsb.z + this.particleColorVariation.z * (Math.random() - 0.5))
+      hsb.z = Math.max(0, Math.min(1.0, hsb.z + this.particleColorVariation.z * (Math.random() - 0.5)));
 
       // Alpha
-      );hsb.w = Math.max(0, Math.min(1.0, hsb.w + this.particleColorVariation.w * (Math.random() - 0.5)));
+      hsb.w = Math.max(0, Math.min(1.0, hsb.w + this.particleColorVariation.w * (Math.random() - 0.5)));
 
       return this._hsb2rgb(hsb);
     }
@@ -56813,7 +56804,7 @@ var SCNParticleSystem = function (_NSObject2) {
         return new _SKColor2.default(hsb.z, hsb.z, hsb.z, hsb.w);
       }
 
-      var region = Math.floor(hsb.x / 60.0
+      var region = Math.floor(hsb.x / 60.0);
       /*
       const c = hsb.z * hsb.y
       const x = c * (region % 2)
@@ -56853,7 +56844,7 @@ var SCNParticleSystem = function (_NSObject2) {
       
       return rgb
       */
-      );var v = hsb.z;
+      var v = hsb.z;
       var f = hsb.x / 60.0 - region;
       var m = v * (1.0 - hsb.y);
       var n = v * (1.0 - hsb.y * f);
@@ -56949,9 +56940,9 @@ var SCNParticleSystem = function (_NSObject2) {
       if (typeof key === 'undefined' || key === null) {
         key = Symbol();
       }
-      var anim = animation.copy
+      var anim = animation.copy();
       // FIXME: use current frame time
-      ();anim._animationStartTime = Date.now() * 0.001;
+      anim._animationStartTime = Date.now() * 0.001;
 
       this._animations.set(key, anim);
     }
@@ -58955,10 +58946,9 @@ var SCNPlane = function (_SCNGeometry) {
           var tx = j / this.widthSegmentCount;
           var x = (-0.5 + tx) * this.width;
 
-          sourceData.push(x, y, 0.0 // position
-          );sourceData.push(0.0, 0.0, 1.0 // normal
-          );sourceData.push(tx, 1.0 - ty // texcoord
-          );
+          sourceData.push(x, y, 0.0); // position
+          sourceData.push(0.0, 0.0, 1.0); // normal
+          sourceData.push(tx, 1.0 - ty); // texcoord
         }
       }
 
@@ -59387,25 +59377,25 @@ var SCNPyramid = function (_SCNGeometry) {
       } else {
         throw new Error('position inconsistent');
       }
-      normal = normal.normalize
+      normal = normal.normalize();
 
       // left bottom
-      ();data.push(x0, 0, z0);
+      data.push(x0, 0, z0);
       data.push(normal.x, normal.y, normal.z);
-      data.push(0.0, 1.0
+      data.push(0.0, 1.0);
 
       // top
-      );data.push(0, this.height, 0);
+      data.push(0, this.height, 0);
       data.push(normal.x, normal.y, normal.z);
-      data.push(0.0, 0.0
+      data.push(0.0, 0.0);
 
       // right bottom
-      );data.push(x1, 0, z1);
+      data.push(x1, 0, z1);
       data.push(normal.x, normal.y, normal.z);
-      data.push(1.0, 1.0
+      data.push(1.0, 1.0);
 
       // top again
-      );data.push(0, this.height, 0);
+      data.push(0, this.height, 0);
       data.push(normal.x, normal.y, normal.z);
       data.push(1.0, 0.0);
 
@@ -60876,7 +60866,7 @@ var SCNSkinner = function (_NSObject) {
      * @type {SCNMatrix4}
      * @see https://developer.apple.com/documentation/scenekit/scnskinner/1523160-basegeometrybindtransform
      */
-    _this.baseGeometryBindTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0
+    _this.baseGeometryBindTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
 
     // Working with an Animation Skeleton
 
@@ -60885,7 +60875,7 @@ var SCNSkinner = function (_NSObject) {
      * @type {?SCNNode}
      * @see https://developer.apple.com/documentation/scenekit/scnskinner/1523048-skeleton
      */
-    );_this.skeleton = null;
+    _this.skeleton = null;
 
     /**
      * @access private
@@ -60956,7 +60946,7 @@ var SCNSkinner = function (_NSObject) {
         //       it doesn't consider the rotation of initial pose so far.
         //const mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
         //const mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform)
-        var mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone.presentation._worldTransform
+        var mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone.presentation._worldTransform);
         //const mat = bone._presentation._worldTransform.mult(this._boneInverseBindTransforms[i])
         //mat = bone.presentation.transform.mult(mat)
         //if(bone._parent !== null){
@@ -60965,7 +60955,7 @@ var SCNSkinner = function (_NSObject) {
         //}
         //mat = bone.presentation.transform.mult(mat)
         //mat = mat.mult(bone.presentation.transform)
-        );arr.push.apply(arr, _toConsumableArray(mat.floatArray3x4f()));
+        arr.push.apply(arr, _toConsumableArray(mat.floatArray3x4f()));
 
         /*
         if(!mat.isIdentity()){
@@ -61673,13 +61663,13 @@ var SCNTorus = function (_SCNGeometry) {
           var z = cz + this.pipeRadius * cosr * cosp;
 
           // vertex
-          sourceData.push(x, y, z
+          sourceData.push(x, y, z);
 
           // normal
-          );sourceData.push(sinr * cosp, -sinp, cosr * cosp
+          sourceData.push(sinr * cosp, -sinp, cosr * cosp);
 
           // texcoord
-          );var tz = 1.0 - pi / this.pipeSegmentCount;
+          var tz = 1.0 - pi / this.pipeSegmentCount;
           sourceData.push(tx, tz);
         }
       }
@@ -62018,38 +62008,38 @@ var SCNTube = function (_SCNGeometry) {
         outerData.push(ovx, bottom, ovz);
         innerData.push(ivx, top, ivz);
         topData.push(ovx, top, ovz);
-        bottomData.push(-ovx, bottom, ovz
+        bottomData.push(-ovx, bottom, ovz);
 
         // normal
-        );outerData.push(x, 0, z);
+        outerData.push(x, 0, z);
         innerData.push(-x, 0, -z);
         topData.push(0, 1, 0);
-        bottomData.push(0, -1, 0
+        bottomData.push(0, -1, 0);
 
         // texcoord
-        );var tx = tStep * i;
+        var tx = tStep * i;
         outerData.push(tx, 1.0);
         innerData.push(1.0 - tx, 0.0);
 
         var ttx = 0.5 + Math.cos(rStep * i) * 0.5;
         var tty = 0.5 + Math.sin(rStep * i) * 0.5;
         topData.push(ttx, tty);
-        bottomData.push(ttx, tty
+        bottomData.push(ttx, tty);
 
         // vertex
-        );outerData.push(ovx, top, ovz);
+        outerData.push(ovx, top, ovz);
         innerData.push(ivx, bottom, ivz);
         topData.push(ivx, top, ivz);
-        bottomData.push(-ivx, bottom, ivz
+        bottomData.push(-ivx, bottom, ivz);
 
         // normal
-        );outerData.push(x, 0, z);
+        outerData.push(x, 0, z);
         innerData.push(-x, 0, -z);
         topData.push(0, 1, 0);
-        bottomData.push(0, -1, 0
+        bottomData.push(0, -1, 0);
 
         // texcoord
-        );outerData.push(tx, 0.0);
+        outerData.push(tx, 0.0);
         innerData.push(1.0 - tx, 1.0);
 
         var ttx2 = 0.5 + Math.cos(rStep * i) * 0.25;
@@ -62977,9 +62967,9 @@ var SCNView = function () {
       var ev = _this._createEvent(e);
       _this.scrollWheelWith(ev);
       _this._preventDefault(ev);
-    }
+    });
     // For Firefox
-    );this._canvas.addEventListener('DOMMouseScroll', function (e) {
+    this._canvas.addEventListener('DOMMouseScroll', function (e) {
       var ev = _this._createEvent(e);
       _this.scrollWheelWith(ev);
       _this._preventDefault(ev);
@@ -63044,10 +63034,10 @@ var SCNView = function () {
     value: function appendTo(element) {
       var _this2 = this;
 
-      element.appendChild(this._canvas
+      element.appendChild(this._canvas);
 
       // update canvas size
-      );if (typeof this._frame === 'undefined') {
+      if (typeof this._frame === 'undefined') {
         this._canvas.style.width = '100%';
         this._canvas.style.height = '100%';
         if (this._canvas.clientHeight <= 0) {
@@ -63355,12 +63345,12 @@ var SCNView = function () {
         this._delegate.rendererDidApplyAnimationsAtTime(this._renderer, time);
       }
 
-      this._updateTransform
+      this._updateTransform();
 
       ///////////////////////
       // simulates physics //
       ///////////////////////
-      ();if (this._scene && this._scene._physicsWorld !== null) {
+      if (this._scene && this._scene._physicsWorld !== null) {
         this._scene._physicsWorld._simulate(time);
       }
 
@@ -63650,11 +63640,11 @@ var SCNView = function () {
       node.childNodes.forEach(function (child) {
         return _this10._runAnimationForNode(child);
       });
-      this._runAnimationForObject(node
+      this._runAnimationForObject(node);
       // TODO: implement animations for all animatable objects:
       //         SCNCamera, SCNConstraint, SCNGeometry, SCNLight, SCNMaterial, 
       //         SCNMaterialProperty, SCNMorpher, SCNParticleSystem, SCNTechnique
-      );if (node.geometry) {
+      if (node.geometry) {
         this._runAnimationForObject(node.geometry);
         node.geometry.materials.forEach(function (material) {
           _this10._runAnimationForObject(material);
@@ -65112,9 +65102,9 @@ var SKLabelNode = function (_SKNode) {
         this._textureUpToDate = false;
       }
       if (!this._textureUpToDate) {
-        gl.bindTexture(gl.TEXTURE_2D, this._texture
+        gl.bindTexture(gl.TEXTURE_2D, this._texture);
         // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-        );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._canvas.width, this._canvas.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, this._canvas);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._canvas.width, this._canvas.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, this._canvas);
         gl.generateMipmap(gl.TEXTURE_2D);
         gl.bindTexture(gl.TEXTURE_2D, null);
 
@@ -65175,10 +65165,10 @@ var SKLabelNode = function (_SKNode) {
       }
 
       gl.attachShader(program, vertexShader);
-      gl.attachShader(program, fragmentShader
+      gl.attachShader(program, fragmentShader);
 
       // link program object
-      );gl.linkProgram(program);
+      gl.linkProgram(program);
       if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
         var _info2 = gl.getProgramInfoLog(program);
         throw new Error('program link error: ' + _info2);
@@ -65207,15 +65197,15 @@ var SKLabelNode = function (_SKNode) {
 
       var positionLoc = gl.getAttribLocation(program, 'position');
       gl.bindAttribLocation(program, positionLoc, 'position');
-      gl.enableVertexAttribArray(positionLoc
+      gl.enableVertexAttribArray(positionLoc);
       // idx, size, type, norm, stride, offset
-      );gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
+      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 
       var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
       gl.bindAttribLocation(program, texcoordLoc, 'texcoord');
-      gl.enableVertexAttribArray(texcoordLoc
+      gl.enableVertexAttribArray(texcoordLoc);
       // idx, size, type, norm, stride, offset
-      );gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
+      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
 
       this._indexBuffer = gl.createBuffer();
       var indexData = new Uint8Array([0, 3, 2, 0, 1, 3]);

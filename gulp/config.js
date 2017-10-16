@@ -55,7 +55,7 @@ module.exports = {
             exclude: [/node_modules/, /ammo.js$/],
             loader: 'babel-loader',
             query: {
-              presets: ['es2015']
+              presets: ['env']
             }
           }
         ]
@@ -91,7 +91,7 @@ module.exports = {
             exclude: [/node_modules/, /ammo.js$/],
             loader: 'babel-loader',
             query: {
-              presets: ['es2015']
+              presets: ['env']
             }
           }
         ]
@@ -132,7 +132,7 @@ module.exports = {
             exclude: [/node_modules/, /ammo.js$/],
             loader: 'babel-loader',
             query: {
-              presets: ['es2015']
+              presets: ['env']
             }
           }
         ]

@@ -495,6 +495,9 @@ export default class SCNMaterialProperty extends NSObject {
    */
   _loadContentsImage(path, dirPath) {
     const image = new Image()
+    // TODO: check option if it allows cross-domain.
+    image.crossOrigin = 'anonymous'
+
     let __path = path
     if(__path.indexOf('file:///') === 0){
       __path = __path.slice(8)
