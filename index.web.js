@@ -30899,6 +30899,9 @@ var SKTexture = function (_NSObject) {
       var _this2 = this;
 
       var image = new Image();
+      // TODO: check option if it allows cross-domain.
+      image.crossOrigin = 'anonymous';
+
       this._loadingImagePromise = new Promise(function (resolve, reject) {
         if (path.indexOf('file:///') === 0) {
           var paths = path.slice(8).split('/');

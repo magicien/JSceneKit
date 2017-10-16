@@ -387,6 +387,9 @@ for i in 0...2 {
 
   _loadImage(path) {
     const image = new Image()
+    // TODO: check option if it allows cross-domain.
+    image.crossOrigin = 'anonymous'
+
     this._loadingImagePromise = new Promise((resolve, reject) => {
       if(path.indexOf('file:///') === 0){
         const paths = path.slice(8).split('/')
