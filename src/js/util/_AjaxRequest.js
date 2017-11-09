@@ -133,9 +133,9 @@ export class AjaxRequest {
       }
 
       if(user) {
-        xhr.open(method, url, async, user, password)
+        xhr.open(method, requestURL, async, user, password)
       }else{
-        xhr.open(method, url, async)
+        xhr.open(method, requestURL, async)
       }
 
       if(header){

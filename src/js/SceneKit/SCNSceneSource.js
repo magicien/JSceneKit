@@ -1,5 +1,6 @@
 'use strict'
 
+import _SCNObjLoader from './_SCNObjLoader'
 import NSKeyedUnarchiver from '../Foundation/NSKeyedUnarchiver'
 import NSObject from '../ObjectiveC/NSObject'
 //import SCNScene from './SCNScene'
@@ -140,6 +141,11 @@ export default class SCNSceneSource extends NSObject {
       if(this._url){
         url += this._url.split('/').pop()
       }
+    }
+
+    if(this._data.match(/\nv -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)?\s*\n/)){
+      // seems obj data
+      return _SCNObjLoader.unarchiveObjectWithData(this._data, url)
     }
 
     return NSKeyedUnarchiver.unarchiveObjectWithData(this._data, url)

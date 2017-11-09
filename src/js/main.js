@@ -72,6 +72,8 @@ import _SCNDefaultPBRFragmentShader from './SceneKit/_SCNDefaultPBRFragmentShade
 import _SCNDefaultShadowFragmentShader from './SceneKit/_SCNDefaultShadowFragmentShader'
 import _SCNDefaultShadowVertexShader from './SceneKit/_SCNDefaultShadowVertexShader'
 import _SCNDefaultVertexShader from './SceneKit/_SCNDefaultVertexShader'
+import _SCNMtlLoader from './SceneKit/_SCNMtlLoader'
+import _SCNObjLoader from './SceneKit/_SCNObjLoader'
 import SCNAccelerationConstraint from './SceneKit/SCNAccelerationConstraint'
 import SCNAction from './SceneKit/SCNAction'
 import SCNActionable from './SceneKit/SCNActionable'
@@ -272,6 +274,7 @@ import _File from './util/_File'
 import _FileReader from './util/_FileReader'
 import _HTMLCanvasElement from './util/_HTMLCanvasElement'
 import _InstanceOf from './util/_InstanceOf'
+import _TextReader from './util/_TextReader'
 
 _ClassList.registerClass(NSColor, 'NSColor')
 _ClassList.registerClass(NSColorSpaceModel, 'NSColorSpaceModel')
@@ -347,6 +350,8 @@ _ClassList.registerClass(_SCNDefaultPBRFragmentShader, '_SCNDefaultPBRFragmentSh
 _ClassList.registerClass(_SCNDefaultShadowFragmentShader, '_SCNDefaultShadowFragmentShader')
 _ClassList.registerClass(_SCNDefaultShadowVertexShader, '_SCNDefaultShadowVertexShader')
 _ClassList.registerClass(_SCNDefaultVertexShader, '_SCNDefaultVertexShader')
+_ClassList.registerClass(_SCNMtlLoader, '_SCNMtlLoader')
+_ClassList.registerClass(_SCNObjLoader, '_SCNObjLoader')
 _ClassList.registerClass(SCNAccelerationConstraint, 'SCNAccelerationConstraint')
 _ClassList.registerClass(SCNAction, 'SCNAction')
 _ClassList.registerClass(SCNActionable, 'SCNActionable')
@@ -614,6 +619,8 @@ exports._SCNDefaultPBRFragmentShader = _SCNDefaultPBRFragmentShader
 exports._SCNDefaultShadowFragmentShader = _SCNDefaultShadowFragmentShader
 exports._SCNDefaultShadowVertexShader = _SCNDefaultShadowVertexShader
 exports._SCNDefaultVertexShader = _SCNDefaultVertexShader
+exports._SCNMtlLoader = _SCNMtlLoader
+exports._SCNObjLoader = _SCNObjLoader
 exports.SCNAccelerationConstraint = SCNAccelerationConstraint
 exports.SCNAction = SCNAction
 exports.SCNActionable = SCNActionable
@@ -814,6 +821,7 @@ exports._File = _File
 exports._FileReader = _FileReader
 exports._HTMLCanvasElement = _HTMLCanvasElement
 exports._InstanceOf = _InstanceOf
+exports._TextReader = _TextReader
 
 // constants
 /*global exports*/
