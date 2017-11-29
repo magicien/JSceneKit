@@ -35338,7 +35338,7 @@ var _SCNObjLoader = function () {
 
   /**
    * @access public
-   * @param {} data -
+   * @param {Buffer} data -
    * @param {?string} [path = null] -
    * @returns {SCNScene} -
    */
@@ -47819,6 +47819,83 @@ exports.SCNMorpherCalculationMode = _SCNMorpherCalculationMode2.default;
 exports.SCNVector3ToFloat3 = _SCNVector3ToFloat2.default;
 exports.SCNGeometryPrimitiveType = _SCNGeometryPrimitiveType2.default;
 exports.SCNSceneSourceStatusHandler = _SCNSceneSourceStatusHandler2.default;
+exports.SCNPhysicsWorld = _SCNPhysicsWorld2.default;
+exports.SCNVector4EqualToVector4 = _SCNVector4EqualToVector2.default;
+exports.SCNCapsule = _SCNCapsule2.default;
+exports.SCNSceneRenderer = _SCNSceneRenderer2.default;
+exports.SCNMatrix4MakeTranslation = _SCNMatrix4MakeTranslation2.default;
+exports.SCNAnimationEventBlock = _SCNAnimationEventBlock2.default;
+exports.SCNView = _SCNView2.default;
+exports.SCNMatrix4FromGLKMatrix4 = _SCNMatrix4FromGLKMatrix2.default;
+exports.SCNMatrix4IsIdentity = _SCNMatrix4IsIdentity2.default;
+exports.SCNMorpher = _SCNMorpher2.default;
+exports.SCNSceneRendererDelegate = _SCNSceneRendererDelegate2.default;
+exports.SCNActionJavaScript = _SCNActionJavaScript2.default;
+exports._SCNDefaultParticleVertexShader = _SCNDefaultParticleVertexShader3.default;
+exports.SCNAccelerationConstraint = _SCNAccelerationConstraint2.default;
+exports.SCNPyramid = _SCNPyramid2.default;
+exports._SCNDefaultShadowVertexShader = _SCNDefaultShadowVertexShader3.default;
+exports.SCNActionGroup = _SCNActionGroup2.default;
+exports.SCNParticleSystem = _SCNParticleSystem2.default;
+exports.SCNVector3EqualToVector3 = _SCNVector3EqualToVector2.default;
+exports.SCNPhysicsField = _SCNPhysicsField2.default;
+exports.NSColorSpace = _NSColorSpace2.default;
+exports.NSCoder = _NSCoder2.default;
+exports.NSMutableData = _NSMutableData2.default;
+exports.NSMutableDictionary = _NSMutableDictionary2.default;
+exports.NSData = _NSData2.default;
+exports.NSURL = _NSURL2.default;
+exports.NSKeyedArchiver = _NSKeyedArchiver2.default;
+exports.NSValue = _NSValue2.default;
+exports.NSArray = _NSArray2.default;
+exports.NSNotification = _NSNotification2.default;
+exports.NSKeyedUnarchiver = _NSKeyedUnarchiver2.default;
+exports.NSDictionary = _NSDictionary2.default;
+exports.NotificationCenter = _NotificationCenter2.default;
+exports.NSMutableArray = _NSMutableArray2.default;
+exports.AVAudioNode = _AVAudioNode2.default;
+exports.AVAudioMixerNode = _AVAudioMixerNode2.default;
+exports.GKAgent2D = _GKAgent2D2.default;
+exports.GKSCNNodeComponent = _GKSCNNodeComponent2.default;
+exports.GKGoal = _GKGoal2.default;
+exports.GKPath = _GKPath2.default;
+exports.GKBehavior = _GKBehavior2.default;
+exports.GKScene = _GKScene2.default;
+exports.GKComponent = _GKComponent2.default;
+exports.GKAgentDelegate = _GKAgentDelegate2.default;
+exports.GKEntity = _GKEntity2.default;
+exports.GKAgent = _GKAgent2.default;
+exports.SKSpriteNode = _SKSpriteNode2.default;
+exports.SKColor = _SKColor2.default;
+exports.SKAction = _SKAction2.default;
+exports.SKActionTimingMode = _SKActionTimingMode2.default;
+exports.SKBlendMode = _SKBlendMode2.default;
+exports.SKScene = _SKScene2.default;
+exports.SKFade = _SKFade2.default;
+exports.SKLabelHorizontalAlignmentMode = _SKLabelHorizontalAlignmentMode2.default;
+exports.SKSceneScaleMode = _SKSceneScaleMode2.default;
+exports.SKNode = _SKNode2.default;
+exports.SKGroup = _SKGroup2.default;
+exports.SKEffectNode = _SKEffectNode2.default;
+exports.SKTexture = _SKTexture2.default;
+exports.SKTextureFilteringMode = _SKTextureFilteringMode2.default;
+exports.SKShapeNode = _SKShapeNode2.default;
+exports.SKSequence = _SKSequence2.default;
+exports.SKRepeat = _SKRepeat2.default;
+exports.SKScale = _SKScale2.default;
+exports.SKLabelNode = _SKLabelNode2.default;
+exports.SKLabelVerticalAlignmentMode = _SKLabelVerticalAlignmentMode2.default;
+exports.SKWait = _SKWait2.default;
+exports.GCExtendedGamepad = _GCExtendedGamepad2.default;
+exports.GCGamepad = _GCGamepad2.default;
+exports.GCControllerDirectionPad = _GCControllerDirectionPad2.default;
+exports.GCControllerElement = _GCControllerElement2.default;
+exports.GCMicroGamepad = _GCMicroGamepad2.default;
+exports.GCControllerAxisInput = _GCControllerAxisInput2.default;
+exports.GCControllerButtonInput = _GCControllerButtonInput2.default;
+exports.GCController = _GCController2.default;
+exports.CAMediaTiming = _CAMediaTiming2.default;
+exports.CAAnimationGroup = _CAAnimationGroup2.default;
 
 /***/ }),
 /* 129 */
@@ -49355,6 +49432,7 @@ var fsText = '#version 300 es\n  precision mediump float;\n  precision highp sam
 /**
  * Check if the browser can use WebGL2.
  * @access public
+ * @type {function(): boolean}
  * @returns {boolean} - true if the browser supports WebGL2.
  */
 var CanUseWebGL2 = function CanUseWebGL2() {

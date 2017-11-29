@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 835,
+  "end": 841,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 34,
+      "line": 32,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 835,
+    "end": 841,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 34,
+        "line": 32,
         "column": 0
       }
     },
@@ -30,43 +30,43 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 190,
-        "end": 834,
+        "start": 188,
+        "end": 840,
         "loc": {
           "start": {
-            "line": 10,
+            "line": 8,
             "column": 0
           },
           "end": {
-            "line": 33,
+            "line": 31,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 205,
-          "end": 834,
+          "start": 203,
+          "end": 840,
           "loc": {
             "start": {
-              "line": 10,
+              "line": 8,
               "column": 15
             },
             "end": {
-              "line": 33,
+              "line": 31,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 211,
-            "end": 219,
+            "start": 209,
+            "end": 217,
             "loc": {
               "start": {
-                "line": 10,
+                "line": 8,
                 "column": 21
               },
               "end": {
-                "line": 10,
+                "line": 8,
                 "column": 29
               },
               "identifierName": "CAAction"
@@ -77,157 +77,45 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 220,
-            "end": 834,
+            "start": 218,
+            "end": 840,
             "loc": {
               "start": {
-                "line": 10,
+                "line": 8,
                 "column": 30
               },
               "end": {
-                "line": 33,
+                "line": 31,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 295,
-                "end": 307,
+                "start": 785,
+                "end": 838,
                 "loc": {
                   "start": {
-                    "line": 17,
+                    "line": 29,
                     "column": 2
                   },
                   "end": {
-                    "line": 18,
+                    "line": 30,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 295,
-                  "end": 299,
+                  "start": 785,
+                  "end": 809,
                   "loc": {
                     "start": {
-                      "line": 17,
+                      "line": 29,
                       "column": 2
                     },
                     "end": {
-                      "line": 17,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 302,
-                  "end": 307,
-                  "loc": {
-                    "start": {
-                      "line": 17,
-                      "column": 9
-                    },
-                    "end": {
-                      "line": 18,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
-                  "directives": [],
-                  "leadingComments": null,
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 225,
-                    "end": 292,
-                    "loc": {
-                      "start": {
-                        "line": 12,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 16,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Responding to an action",
-                    "start": 311,
-                    "end": 337,
-                    "loc": {
-                      "start": {
-                        "line": 20,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 20,
-                        "column": 28
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
-                    "start": 341,
-                    "end": 776,
-                    "loc": {
-                      "start": {
-                        "line": 22,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 30,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 779,
-                "end": 832,
-                "loc": {
-                  "start": {
-                    "line": 31,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 32,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 779,
-                  "end": 803,
-                  "loc": {
-                    "start": {
-                      "line": 31,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 31,
+                      "line": 29,
                       "column": 26
                     },
                     "identifierName": "runForKeyObjectArguments"
@@ -244,15 +132,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 804,
-                    "end": 809,
+                    "start": 810,
+                    "end": 815,
                     "loc": {
                       "start": {
-                        "line": 31,
+                        "line": 29,
                         "column": 27
                       },
                       "end": {
-                        "line": 31,
+                        "line": 29,
                         "column": 32
                       },
                       "identifierName": "event"
@@ -261,15 +149,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 811,
-                    "end": 819,
+                    "start": 817,
+                    "end": 825,
                     "loc": {
                       "start": {
-                        "line": 31,
+                        "line": 29,
                         "column": 34
                       },
                       "end": {
-                        "line": 31,
+                        "line": 29,
                         "column": 42
                       },
                       "identifierName": "anObject"
@@ -278,15 +166,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 821,
-                    "end": 825,
+                    "start": 827,
+                    "end": 831,
                     "loc": {
                       "start": {
-                        "line": 31,
+                        "line": 29,
                         "column": 44
                       },
                       "end": {
-                        "line": 31,
+                        "line": 29,
                         "column": 48
                       },
                       "identifierName": "dict"
@@ -296,15 +184,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 827,
-                  "end": 832,
+                  "start": 833,
+                  "end": 838,
                   "loc": {
                     "start": {
-                      "line": 31,
+                      "line": 29,
                       "column": 50
                     },
                     "end": {
-                      "line": 32,
+                      "line": 30,
                       "column": 3
                     }
                   },
@@ -313,17 +201,65 @@
                 },
                 "leadingComments": [
                   {
-                    "type": "CommentLine",
-                    "value": " Responding to an action",
-                    "start": 311,
-                    "end": 337,
+                    "type": "CommentBlock",
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 223,
+                    "end": 287,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 10,
                         "column": 2
                       },
                       "end": {
-                        "line": 20,
+                        "line": 14,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "constructor() {",
+                    "start": 290,
+                    "end": 307,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 19
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "}",
+                    "start": 310,
+                    "end": 313,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": " Responding to an action",
+                    "start": 317,
+                    "end": 343,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 18,
                         "column": 28
                       }
                     }
@@ -331,15 +267,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
-                    "start": 341,
-                    "end": 776,
+                    "start": 347,
+                    "end": 782,
                     "loc": {
                       "start": {
-                        "line": 22,
+                        "line": 20,
                         "column": 2
                       },
                       "end": {
-                        "line": 30,
+                        "line": 28,
                         "column": 5
                       }
                     }
@@ -352,15 +288,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
-              "start": 16,
-              "end": 189,
+              "start": 14,
+              "end": 187,
               "loc": {
                 "start": {
-                  "line": 5,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 9,
+                  "line": 7,
                   "column": 3
                 }
               }
@@ -372,15 +308,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
-            "start": 16,
-            "end": 189,
+            "start": 14,
+            "end": 187,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 9,
+                "line": 7,
                 "column": 3
               }
             }
@@ -428,15 +364,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
-            "start": 16,
-            "end": 189,
+            "start": 14,
+            "end": 187,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 9,
+                "line": 7,
                 "column": 3
               }
             }
@@ -449,27 +385,59 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
-      "start": 16,
-      "end": 189,
+      "start": 14,
+      "end": 187,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 7,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 225,
-      "end": 292,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 223,
+      "end": 287,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 10,
+          "column": 2
+        },
+        "end": {
+          "line": 14,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "constructor() {",
+      "start": 290,
+      "end": 307,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 15,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 310,
+      "end": 313,
+      "loc": {
+        "start": {
+          "line": 16,
           "column": 2
         },
         "end": {
@@ -481,15 +449,15 @@
     {
       "type": "CommentLine",
       "value": " Responding to an action",
-      "start": 311,
-      "end": 337,
+      "start": 317,
+      "end": 343,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 18,
           "column": 28
         }
       }
@@ -497,15 +465,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
-      "start": 341,
-      "end": 776,
+      "start": 347,
+      "end": 782,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 5
         }
       }
@@ -542,15 +510,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
-      "start": 16,
-      "end": 189,
+      "start": 14,
+      "end": 187,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 7,
           "column": 3
         }
       }
@@ -570,15 +538,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 190,
-      "end": 196,
+      "start": 188,
+      "end": 194,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 6
         }
       }
@@ -598,15 +566,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 197,
-      "end": 204,
+      "start": 195,
+      "end": 202,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 7
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 14
         }
       }
@@ -626,15 +594,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 205,
-      "end": 210,
+      "start": 203,
+      "end": 208,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 15
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 20
         }
       }
@@ -652,15 +620,15 @@
         "binop": null
       },
       "value": "CAAction",
-      "start": 211,
-      "end": 219,
+      "start": 209,
+      "end": 217,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 21
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 29
         }
       }
@@ -677,27 +645,59 @@
         "postfix": false,
         "binop": null
       },
-      "start": 220,
-      "end": 221,
+      "start": 218,
+      "end": 219,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 30
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 31
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 225,
-      "end": 292,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 223,
+      "end": 287,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 10,
+          "column": 2
+        },
+        "end": {
+          "line": 14,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "constructor() {",
+      "start": 290,
+      "end": 307,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 15,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 310,
+      "end": 313,
+      "loc": {
+        "start": {
+          "line": 16,
           "column": 2
         },
         "end": {
@@ -707,143 +707,17 @@
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 295,
-      "end": 299,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 2
-        },
-        "end": {
-          "line": 17,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 299,
-      "end": 300,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 6
-        },
-        "end": {
-          "line": 17,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 300,
-      "end": 301,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 7
-        },
-        "end": {
-          "line": 17,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 302,
-      "end": 303,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 9
-        },
-        "end": {
-          "line": 17,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 306,
-      "end": 307,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 2
-        },
-        "end": {
-          "line": 18,
-          "column": 3
-        }
-      }
-    },
-    {
       "type": "CommentLine",
       "value": " Responding to an action",
-      "start": 311,
-      "end": 337,
+      "start": 317,
+      "end": 343,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 18,
           "column": 28
         }
       }
@@ -851,15 +725,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
-      "start": 341,
-      "end": 776,
+      "start": 347,
+      "end": 782,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 5
         }
       }
@@ -877,15 +751,15 @@
         "binop": null
       },
       "value": "runForKeyObjectArguments",
-      "start": 779,
-      "end": 803,
+      "start": 785,
+      "end": 809,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 2
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 26
         }
       }
@@ -902,15 +776,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 803,
-      "end": 804,
+      "start": 809,
+      "end": 810,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 26
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 27
         }
       }
@@ -928,15 +802,15 @@
         "binop": null
       },
       "value": "event",
-      "start": 804,
-      "end": 809,
+      "start": 810,
+      "end": 815,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 27
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 32
         }
       }
@@ -954,15 +828,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 809,
-      "end": 810,
+      "start": 815,
+      "end": 816,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 32
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 33
         }
       }
@@ -980,15 +854,15 @@
         "binop": null
       },
       "value": "anObject",
-      "start": 811,
-      "end": 819,
+      "start": 817,
+      "end": 825,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 34
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 42
         }
       }
@@ -1006,15 +880,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 819,
-      "end": 820,
+      "start": 825,
+      "end": 826,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 42
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 43
         }
       }
@@ -1032,15 +906,15 @@
         "binop": null
       },
       "value": "dict",
-      "start": 821,
-      "end": 825,
+      "start": 827,
+      "end": 831,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 44
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 48
         }
       }
@@ -1057,15 +931,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 825,
-      "end": 826,
+      "start": 831,
+      "end": 832,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 48
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 49
         }
       }
@@ -1082,15 +956,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 827,
-      "end": 828,
+      "start": 833,
+      "end": 834,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 50
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 51
         }
       }
@@ -1107,15 +981,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 831,
-      "end": 832,
+      "start": 837,
+      "end": 838,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 30,
           "column": 2
         },
         "end": {
-          "line": 32,
+          "line": 30,
           "column": 3
         }
       }
@@ -1132,15 +1006,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 833,
-      "end": 834,
+      "start": 839,
+      "end": 840,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 31,
           "column": 0
         },
         "end": {
-          "line": 33,
+          "line": 31,
           "column": 1
         }
       }
@@ -1158,15 +1032,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 835,
-      "end": 835,
+      "start": 841,
+      "end": 841,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 32,
           "column": 0
         },
         "end": {
-          "line": 34,
+          "line": 32,
           "column": 0
         }
       }

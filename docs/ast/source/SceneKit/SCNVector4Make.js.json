@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 623,
+  "end": 625,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 623,
+    "end": 625,
     "loc": {
       "start": {
         "line": 1,
@@ -29,98 +29,9 @@
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 51,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 37
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 31,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 17
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 31,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 17
-                },
-                "identifierName": "SCNVector4"
-              },
-              "name": "SCNVector4"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 37,
-          "end": 51,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 37
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNVector4",
-            "raw": "'./SCNVector4'"
-          },
-          "value": "./SCNVector4",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * Returns a new four-component vector created from individual component values.\n * @access public\n * @param {number} x - The first component of the vector.\n * @param {number} y - The second component of the vector.\n * @param {number} z - The third component of the vector.\n * @param {number} w - The fourth component of the vector.\n * @returns {SCNVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409677-scnvector4make\n ",
-            "start": 53,
-            "end": 503,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 0
-              },
-              "end": {
-                "line": 14,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "Identifier",
-        "start": 504,
-        "end": 591,
+        "start": 506,
+        "end": 593,
         "loc": {
           "start": {
             "line": 15,
@@ -134,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 510,
-            "end": 591,
+            "start": 512,
+            "end": 593,
             "loc": {
               "start": {
                 "line": 15,
@@ -148,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 510,
-              "end": 524,
+              "start": 512,
+              "end": 526,
               "loc": {
                 "start": {
                   "line": 15,
@@ -166,8 +77,8 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 527,
-              "end": 591,
+              "start": 529,
+              "end": 593,
               "loc": {
                 "start": {
                   "line": 15,
@@ -185,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 536,
-                  "end": 537,
+                  "start": 538,
+                  "end": 539,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -202,8 +113,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 539,
-                  "end": 540,
+                  "start": 541,
+                  "end": 542,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -219,8 +130,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 542,
-                  "end": 543,
+                  "start": 544,
+                  "end": 545,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -236,8 +147,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 545,
-                  "end": 546,
+                  "start": 547,
+                  "end": 548,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -254,8 +165,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 548,
-                "end": 591,
+                "start": 550,
+                "end": 593,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -269,8 +180,8 @@
                 "body": [
                   {
                     "type": "ReturnStatement",
-                    "start": 552,
-                    "end": 589,
+                    "start": 554,
+                    "end": 591,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -283,8 +194,8 @@
                     },
                     "argument": {
                       "type": "NewExpression",
-                      "start": 559,
-                      "end": 589,
+                      "start": 561,
+                      "end": 591,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -297,8 +208,8 @@
                       },
                       "callee": {
                         "type": "Identifier",
-                        "start": 563,
-                        "end": 577,
+                        "start": 565,
+                        "end": 579,
                         "loc": {
                           "start": {
                             "line": 16,
@@ -315,8 +226,8 @@
                       "arguments": [
                         {
                           "type": "Identifier",
-                          "start": 578,
-                          "end": 579,
+                          "start": 580,
+                          "end": 581,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -332,8 +243,8 @@
                         },
                         {
                           "type": "Identifier",
-                          "start": 581,
-                          "end": 582,
+                          "start": 583,
+                          "end": 584,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -349,8 +260,8 @@
                         },
                         {
                           "type": "Identifier",
-                          "start": 584,
-                          "end": 585,
+                          "start": 586,
+                          "end": 587,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -366,8 +277,8 @@
                         },
                         {
                           "type": "Identifier",
-                          "start": 587,
-                          "end": 588,
+                          "start": 589,
+                          "end": 590,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -398,8 +309,8 @@
       },
       {
         "type": "Identifier",
-        "start": 593,
-        "end": 622,
+        "start": 595,
+        "end": 624,
         "loc": {
           "start": {
             "line": 19,
@@ -412,8 +323,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 608,
-          "end": 622,
+          "start": 610,
+          "end": 624,
           "loc": {
             "start": {
               "line": 19,
@@ -433,8 +344,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 593,
-        "end": 622,
+        "start": 595,
+        "end": 624,
         "loc": {
           "start": {
             "line": 19,
@@ -447,8 +358,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 504,
-          "end": 591,
+          "start": 506,
+          "end": 593,
           "loc": {
             "start": {
               "line": 15,
@@ -462,8 +373,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 510,
-              "end": 591,
+              "start": 512,
+              "end": 593,
               "loc": {
                 "start": {
                   "line": 15,
@@ -476,8 +387,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 510,
-                "end": 524,
+                "start": 512,
+                "end": 526,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -494,8 +405,8 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 527,
-                "end": 591,
+                "start": 529,
+                "end": 593,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -508,8 +419,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 510,
-                  "end": 524,
+                  "start": 512,
+                  "end": 526,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -530,8 +441,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 536,
-                    "end": 537,
+                    "start": 538,
+                    "end": 539,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -547,8 +458,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 539,
-                    "end": 540,
+                    "start": 541,
+                    "end": 542,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -564,8 +475,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 542,
-                    "end": 543,
+                    "start": 544,
+                    "end": 545,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -581,8 +492,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 545,
-                    "end": 546,
+                    "start": 547,
+                    "end": 548,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -599,8 +510,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 548,
-                  "end": 591,
+                  "start": 550,
+                  "end": 593,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -614,8 +525,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 552,
-                      "end": 589,
+                      "start": 554,
+                      "end": 591,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -628,8 +539,8 @@
                       },
                       "argument": {
                         "type": "NewExpression",
-                        "start": 559,
-                        "end": 589,
+                        "start": 561,
+                        "end": 591,
                         "loc": {
                           "start": {
                             "line": 16,
@@ -642,8 +553,8 @@
                         },
                         "callee": {
                           "type": "Identifier",
-                          "start": 563,
-                          "end": 577,
+                          "start": 565,
+                          "end": 579,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -660,8 +571,8 @@
                         "arguments": [
                           {
                             "type": "Identifier",
-                            "start": 578,
-                            "end": 579,
+                            "start": 580,
+                            "end": 581,
                             "loc": {
                               "start": {
                                 "line": 16,
@@ -677,8 +588,8 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 581,
-                            "end": 582,
+                            "start": 583,
+                            "end": 584,
                             "loc": {
                               "start": {
                                 "line": 16,
@@ -694,8 +605,8 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 584,
-                            "end": 585,
+                            "start": 586,
+                            "end": 587,
                             "loc": {
                               "start": {
                                 "line": 16,
@@ -711,8 +622,8 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 587,
-                            "end": 588,
+                            "start": 589,
+                            "end": 590,
                             "loc": {
                               "start": {
                                 "line": 16,
@@ -739,10 +650,26 @@
           "kind": "const",
           "leadingComments": [
             {
+              "type": "CommentLine",
+              "value": "import SCNVector4 from './SCNVector4'",
+              "start": 14,
+              "end": 53,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 3,
+                  "column": 39
+                }
+              }
+            },
+            {
               "type": "CommentBlock",
               "value": "*\n * Returns a new four-component vector created from individual component values.\n * @access public\n * @param {number} x - The first component of the vector.\n * @param {number} y - The second component of the vector.\n * @param {number} z - The third component of the vector.\n * @param {number} w - The fourth component of the vector.\n * @returns {SCNVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409677-scnvector4make\n ",
-              "start": 53,
-              "end": 503,
+              "start": 55,
+              "end": 505,
               "loc": {
                 "start": {
                   "line": 5,
@@ -792,17 +719,68 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNVector4 from './SCNVector4'",
+            "start": 14,
+            "end": 53,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Returns a new four-component vector created from individual component values.\n * @access public\n * @param {number} x - The first component of the vector.\n * @param {number} y - The second component of the vector.\n * @param {number} z - The third component of the vector.\n * @param {number} w - The fourth component of the vector.\n * @returns {SCNVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409677-scnvector4make\n ",
+            "start": 55,
+            "end": 505,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 14,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
+      "type": "CommentLine",
+      "value": "import SCNVector4 from './SCNVector4'",
+      "start": 14,
+      "end": 53,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 39
+        }
+      }
+    },
+    {
       "type": "CommentBlock",
       "value": "*\n * Returns a new four-component vector created from individual component values.\n * @access public\n * @param {number} x - The first component of the vector.\n * @param {number} y - The second component of the vector.\n * @param {number} z - The third component of the vector.\n * @param {number} w - The fourth component of the vector.\n * @returns {SCNVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409677-scnvector4make\n ",
-      "start": 53,
-      "end": 503,
+      "start": 55,
+      "end": 505,
       "loc": {
         "start": {
           "line": 5,
@@ -844,22 +822,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNVector4 from './SCNVector4'",
       "start": 14,
-      "end": 20,
+      "end": 53,
       "loc": {
         "start": {
           "line": 3,
@@ -867,94 +833,15 @@
         },
         "end": {
           "line": 3,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNVector4",
-      "start": 21,
-      "end": 31,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 32,
-      "end": 36,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 18
-        },
-        "end": {
-          "line": 3,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNVector4",
-      "start": 37,
-      "end": 51,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 23
-        },
-        "end": {
-          "line": 3,
-          "column": 37
+          "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * Returns a new four-component vector created from individual component values.\n * @access public\n * @param {number} x - The first component of the vector.\n * @param {number} y - The second component of the vector.\n * @param {number} z - The third component of the vector.\n * @param {number} w - The fourth component of the vector.\n * @returns {SCNVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409677-scnvector4make\n ",
-      "start": 53,
-      "end": 503,
+      "start": 55,
+      "end": 505,
       "loc": {
         "start": {
           "line": 5,
@@ -981,8 +868,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 504,
-      "end": 509,
+      "start": 506,
+      "end": 511,
       "loc": {
         "start": {
           "line": 15,
@@ -1007,8 +894,8 @@
         "binop": null
       },
       "value": "SCNVector4Make",
-      "start": 510,
-      "end": 524,
+      "start": 512,
+      "end": 526,
       "loc": {
         "start": {
           "line": 15,
@@ -1034,8 +921,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 525,
-      "end": 526,
+      "start": 527,
+      "end": 528,
       "loc": {
         "start": {
           "line": 15,
@@ -1061,8 +948,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 527,
-      "end": 535,
+      "start": 529,
+      "end": 537,
       "loc": {
         "start": {
           "line": 15,
@@ -1086,8 +973,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 535,
-      "end": 536,
+      "start": 537,
+      "end": 538,
       "loc": {
         "start": {
           "line": 15,
@@ -1112,8 +999,8 @@
         "binop": null
       },
       "value": "x",
-      "start": 536,
-      "end": 537,
+      "start": 538,
+      "end": 539,
       "loc": {
         "start": {
           "line": 15,
@@ -1138,8 +1025,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 537,
-      "end": 538,
+      "start": 539,
+      "end": 540,
       "loc": {
         "start": {
           "line": 15,
@@ -1164,8 +1051,8 @@
         "binop": null
       },
       "value": "y",
-      "start": 539,
-      "end": 540,
+      "start": 541,
+      "end": 542,
       "loc": {
         "start": {
           "line": 15,
@@ -1190,8 +1077,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 540,
-      "end": 541,
+      "start": 542,
+      "end": 543,
       "loc": {
         "start": {
           "line": 15,
@@ -1216,8 +1103,8 @@
         "binop": null
       },
       "value": "z",
-      "start": 542,
-      "end": 543,
+      "start": 544,
+      "end": 545,
       "loc": {
         "start": {
           "line": 15,
@@ -1242,8 +1129,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 543,
-      "end": 544,
+      "start": 545,
+      "end": 546,
       "loc": {
         "start": {
           "line": 15,
@@ -1268,8 +1155,8 @@
         "binop": null
       },
       "value": "w",
-      "start": 545,
-      "end": 546,
+      "start": 547,
+      "end": 548,
       "loc": {
         "start": {
           "line": 15,
@@ -1293,8 +1180,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 546,
-      "end": 547,
+      "start": 548,
+      "end": 549,
       "loc": {
         "start": {
           "line": 15,
@@ -1318,8 +1205,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 548,
-      "end": 549,
+      "start": 550,
+      "end": 551,
       "loc": {
         "start": {
           "line": 15,
@@ -1346,8 +1233,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 552,
-      "end": 558,
+      "start": 554,
+      "end": 560,
       "loc": {
         "start": {
           "line": 16,
@@ -1374,8 +1261,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 559,
-      "end": 562,
+      "start": 561,
+      "end": 564,
       "loc": {
         "start": {
           "line": 16,
@@ -1400,8 +1287,8 @@
         "binop": null
       },
       "value": "SCNVector4Make",
-      "start": 563,
-      "end": 577,
+      "start": 565,
+      "end": 579,
       "loc": {
         "start": {
           "line": 16,
@@ -1425,8 +1312,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 577,
-      "end": 578,
+      "start": 579,
+      "end": 580,
       "loc": {
         "start": {
           "line": 16,
@@ -1451,8 +1338,8 @@
         "binop": null
       },
       "value": "x",
-      "start": 578,
-      "end": 579,
+      "start": 580,
+      "end": 581,
       "loc": {
         "start": {
           "line": 16,
@@ -1477,8 +1364,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 579,
-      "end": 580,
+      "start": 581,
+      "end": 582,
       "loc": {
         "start": {
           "line": 16,
@@ -1503,8 +1390,8 @@
         "binop": null
       },
       "value": "y",
-      "start": 581,
-      "end": 582,
+      "start": 583,
+      "end": 584,
       "loc": {
         "start": {
           "line": 16,
@@ -1529,8 +1416,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 582,
-      "end": 583,
+      "start": 584,
+      "end": 585,
       "loc": {
         "start": {
           "line": 16,
@@ -1555,8 +1442,8 @@
         "binop": null
       },
       "value": "z",
-      "start": 584,
-      "end": 585,
+      "start": 586,
+      "end": 587,
       "loc": {
         "start": {
           "line": 16,
@@ -1581,8 +1468,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 585,
-      "end": 586,
+      "start": 587,
+      "end": 588,
       "loc": {
         "start": {
           "line": 16,
@@ -1607,8 +1494,8 @@
         "binop": null
       },
       "value": "w",
-      "start": 587,
-      "end": 588,
+      "start": 589,
+      "end": 590,
       "loc": {
         "start": {
           "line": 16,
@@ -1632,8 +1519,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 588,
-      "end": 589,
+      "start": 590,
+      "end": 591,
       "loc": {
         "start": {
           "line": 16,
@@ -1657,8 +1544,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 590,
-      "end": 591,
+      "start": 592,
+      "end": 593,
       "loc": {
         "start": {
           "line": 17,
@@ -1685,8 +1572,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 593,
-      "end": 599,
+      "start": 595,
+      "end": 601,
       "loc": {
         "start": {
           "line": 19,
@@ -1713,8 +1600,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 600,
-      "end": 607,
+      "start": 602,
+      "end": 609,
       "loc": {
         "start": {
           "line": 19,
@@ -1739,8 +1626,8 @@
         "binop": null
       },
       "value": "SCNVector4Make",
-      "start": 608,
-      "end": 622,
+      "start": 610,
+      "end": 624,
       "loc": {
         "start": {
           "line": 19,
@@ -1765,8 +1652,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 623,
-      "end": 623,
+      "start": 625,
+      "end": 625,
       "loc": {
         "start": {
           "line": 20,

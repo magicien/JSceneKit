@@ -1,230 +1,72 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1955,
+  "end": 1965,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 37,
+      "line": 36,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1955,
+    "end": 1965,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 37,
+        "line": 36,
         "column": 0
       }
     },
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 45,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 31
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 28,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 14
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 28,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 14
-                },
-                "identifierName": "SCNNode"
-              },
-              "name": "SCNNode"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 34,
-          "end": 45,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 20
-            },
-            "end": {
-              "line": 3,
-              "column": 31
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNNode",
-            "raw": "'./SCNNode'"
-          },
-          "value": "./SCNNode"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 46,
-        "end": 85,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 39
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 53,
-            "end": 64,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 18
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 53,
-              "end": 64,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 18
-                },
-                "identifierName": "SCNRenderer"
-              },
-              "name": "SCNRenderer"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 70,
-          "end": 85,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 24
-            },
-            "end": {
-              "line": 4,
-              "column": 39
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNRenderer",
-            "raw": "'./SCNRenderer'"
-          },
-          "value": "./SCNRenderer",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
-            "start": 88,
-            "end": 304,
-            "loc": {
-              "start": {
-                "line": 7,
-                "column": 0
-              },
-              "end": {
-                "line": 11,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "ExportDefaultDeclaration",
-        "start": 305,
-        "end": 1954,
+        "start": 308,
+        "end": 1964,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 11,
             "column": 0
           },
           "end": {
-            "line": 36,
+            "line": 35,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 320,
-          "end": 1954,
+          "start": 323,
+          "end": 1964,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 11,
               "column": 15
             },
             "end": {
-              "line": 36,
+              "line": 35,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 326,
-            "end": 349,
+            "start": 329,
+            "end": 352,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 21
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 44
               },
               "identifierName": "SCNNodeRendererDelegate"
@@ -235,157 +77,45 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 350,
-            "end": 1954,
+            "start": 353,
+            "end": 1964,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 45
               },
               "end": {
-                "line": 36,
+                "line": 35,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 425,
-                "end": 437,
+                "start": 1918,
+                "end": 1962,
                 "loc": {
                   "start": {
-                    "line": 19,
+                    "line": 33,
                     "column": 2
                   },
                   "end": {
-                    "line": 20,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 425,
-                  "end": 429,
-                  "loc": {
-                    "start": {
-                      "line": 19,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 19,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 432,
-                  "end": 437,
-                  "loc": {
-                    "start": {
-                      "line": 19,
-                      "column": 9
-                    },
-                    "end": {
-                      "line": 20,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
-                  "directives": [],
-                  "leadingComments": null,
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 355,
-                    "end": 422,
-                    "loc": {
-                      "start": {
-                        "line": 14,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 18,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Customizing the Rendering of a Node",
-                    "start": 441,
-                    "end": 479,
-                    "loc": {
-                      "start": {
-                        "line": 22,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 22,
-                        "column": 40
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-                    "start": 483,
-                    "end": 1905,
-                    "loc": {
-                      "start": {
-                        "line": 24,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 33,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 1908,
-                "end": 1952,
-                "loc": {
-                  "start": {
                     "line": 34,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 35,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1908,
-                  "end": 1918,
+                  "start": 1918,
+                  "end": 1928,
                   "loc": {
                     "start": {
-                      "line": 34,
+                      "line": 33,
                       "column": 2
                     },
                     "end": {
-                      "line": 34,
+                      "line": 33,
                       "column": 12
                     },
                     "identifierName": "renderNode"
@@ -402,15 +132,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1919,
-                    "end": 1923,
+                    "start": 1929,
+                    "end": 1933,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 33,
                         "column": 13
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 17
                       },
                       "identifierName": "node"
@@ -419,15 +149,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1925,
-                    "end": 1933,
+                    "start": 1935,
+                    "end": 1943,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 33,
                         "column": 19
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 27
                       },
                       "identifierName": "renderer"
@@ -436,15 +166,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1935,
-                    "end": 1945,
+                    "start": 1945,
+                    "end": 1955,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 33,
                         "column": 29
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 39
                       },
                       "identifierName": "_arguments"
@@ -454,15 +184,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1947,
-                  "end": 1952,
+                  "start": 1957,
+                  "end": 1962,
                   "loc": {
                     "start": {
-                      "line": 34,
+                      "line": 33,
                       "column": 41
                     },
                     "end": {
-                      "line": 35,
+                      "line": 34,
                       "column": 3
                     }
                   },
@@ -471,17 +201,65 @@
                 },
                 "leadingComments": [
                   {
-                    "type": "CommentLine",
-                    "value": " Customizing the Rendering of a Node",
-                    "start": 441,
-                    "end": 479,
+                    "type": "CommentBlock",
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 358,
+                    "end": 422,
                     "loc": {
                       "start": {
-                        "line": 22,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 22,
+                        "line": 17,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "construtor() {",
+                    "start": 425,
+                    "end": 441,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 18
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "}",
+                    "start": 444,
+                    "end": 447,
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": " Customizing the Rendering of a Node",
+                    "start": 451,
+                    "end": 489,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 21,
                         "column": 40
                       }
                     }
@@ -489,15 +267,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-                    "start": 483,
-                    "end": 1905,
+                    "start": 493,
+                    "end": 1915,
                     "loc": {
                       "start": {
-                        "line": 24,
+                        "line": 23,
                         "column": 2
                       },
                       "end": {
-                        "line": 33,
+                        "line": 32,
                         "column": 5
                       }
                     }
@@ -508,17 +286,49 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
-              "start": 88,
-              "end": 304,
+              "type": "CommentLine",
+              "value": "import SCNNode from './SCNNode'",
+              "start": 14,
+              "end": 47,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 11,
+                  "line": 3,
+                  "column": 33
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import SCNRenderer from './SCNRenderer'",
+              "start": 48,
+              "end": 89,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 4,
+                  "column": 41
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
+              "start": 91,
+              "end": 307,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 10,
                   "column": 3
                 }
               }
@@ -528,17 +338,49 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
-            "start": 88,
-            "end": 304,
+            "type": "CommentLine",
+            "value": "import SCNNode from './SCNNode'",
+            "start": 14,
+            "end": 47,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 3,
+                "column": 33
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNRenderer from './SCNRenderer'",
+            "start": 48,
+            "end": 89,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 41
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
+            "start": 91,
+            "end": 307,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
                 "column": 3
               }
             }
@@ -579,40 +421,155 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNNode from './SCNNode'",
+            "start": 14,
+            "end": 47,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 33
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNRenderer from './SCNRenderer'",
+            "start": 48,
+            "end": 89,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 41
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
+            "start": 91,
+            "end": 307,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
-      "start": 88,
-      "end": 304,
+      "type": "CommentLine",
+      "value": "import SCNNode from './SCNNode'",
+      "start": 14,
+      "end": 47,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 3,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "import SCNRenderer from './SCNRenderer'",
+      "start": 48,
+      "end": 89,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
+      "start": 91,
+      "end": 307,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 355,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 358,
       "end": 422,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "construtor() {",
+      "start": 425,
+      "end": 441,
+      "loc": {
+        "start": {
+          "line": 18,
           "column": 2
         },
         "end": {
           "line": 18,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 444,
+      "end": 447,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
           "column": 5
         }
       }
@@ -620,15 +577,15 @@
     {
       "type": "CommentLine",
       "value": " Customizing the Rendering of a Node",
-      "start": 441,
-      "end": 479,
+      "start": 451,
+      "end": 489,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 2
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 40
         }
       }
@@ -636,15 +593,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-      "start": 483,
-      "end": 1905,
+      "start": 493,
+      "end": 1915,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 23,
           "column": 2
         },
         "end": {
-          "line": 33,
+          "line": 32,
           "column": 5
         }
       }
@@ -679,22 +636,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNNode from './SCNNode'",
       "start": 14,
-      "end": 20,
+      "end": 47,
       "loc": {
         "start": {
           "line": 3,
@@ -702,106 +647,15 @@
         },
         "end": {
           "line": 3,
-          "column": 6
+          "column": 33
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNNode",
-      "start": 21,
-      "end": 28,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 29,
-      "end": 33,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 15
-        },
-        "end": {
-          "line": 3,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNNode",
-      "start": 34,
-      "end": 45,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 20
-        },
-        "end": {
-          "line": 3,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 46,
-      "end": 52,
+      "type": "CommentLine",
+      "value": "import SCNRenderer from './SCNRenderer'",
+      "start": 48,
+      "end": 89,
       "loc": {
         "start": {
           "line": 4,
@@ -809,101 +663,22 @@
         },
         "end": {
           "line": 4,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNRenderer",
-      "start": 53,
-      "end": 64,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 65,
-      "end": 69,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 19
-        },
-        "end": {
-          "line": 4,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNRenderer",
-      "start": 70,
-      "end": 85,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 24
-        },
-        "end": {
-          "line": 4,
-          "column": 39
+          "column": 41
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
-      "start": 88,
-      "end": 304,
+      "start": 91,
+      "end": 307,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
@@ -923,15 +698,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 305,
-      "end": 311,
+      "start": 308,
+      "end": 314,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 6
         }
       }
@@ -951,15 +726,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 312,
-      "end": 319,
+      "start": 315,
+      "end": 322,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 14
         }
       }
@@ -979,15 +754,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 320,
-      "end": 325,
+      "start": 323,
+      "end": 328,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 20
         }
       }
@@ -1005,15 +780,15 @@
         "binop": null
       },
       "value": "SCNNodeRendererDelegate",
-      "start": 326,
-      "end": 349,
+      "start": 329,
+      "end": 352,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 21
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 44
         }
       }
@@ -1030,50 +805,56 @@
         "postfix": false,
         "binop": null
       },
-      "start": 350,
-      "end": 351,
+      "start": 353,
+      "end": 354,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 45
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 46
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 355,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 358,
       "end": 422,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 17,
           "column": 5
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
+      "type": "CommentLine",
+      "value": "construtor() {",
       "start": 425,
-      "end": 429,
+      "end": 441,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 444,
+      "end": 447,
       "loc": {
         "start": {
           "line": 19,
@@ -1081,122 +862,22 @@
         },
         "end": {
           "line": 19,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 429,
-      "end": 430,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 6
-        },
-        "end": {
-          "line": 19,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 430,
-      "end": 431,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 7
-        },
-        "end": {
-          "line": 19,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 432,
-      "end": 433,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 9
-        },
-        "end": {
-          "line": 19,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 436,
-      "end": 437,
-      "loc": {
-        "start": {
-          "line": 20,
-          "column": 2
-        },
-        "end": {
-          "line": 20,
-          "column": 3
+          "column": 5
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Customizing the Rendering of a Node",
-      "start": 441,
-      "end": 479,
+      "start": 451,
+      "end": 489,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 2
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 40
         }
       }
@@ -1204,15 +885,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-      "start": 483,
-      "end": 1905,
+      "start": 493,
+      "end": 1915,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 23,
           "column": 2
         },
         "end": {
-          "line": 33,
+          "line": 32,
           "column": 5
         }
       }
@@ -1230,15 +911,15 @@
         "binop": null
       },
       "value": "renderNode",
-      "start": 1908,
-      "end": 1918,
+      "start": 1918,
+      "end": 1928,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 2
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 12
         }
       }
@@ -1255,15 +936,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1918,
-      "end": 1919,
+      "start": 1928,
+      "end": 1929,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 12
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 13
         }
       }
@@ -1281,68 +962,16 @@
         "binop": null
       },
       "value": "node",
-      "start": 1919,
-      "end": 1923,
-      "loc": {
-        "start": {
-          "line": 34,
-          "column": 13
-        },
-        "end": {
-          "line": 34,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 1923,
-      "end": 1924,
-      "loc": {
-        "start": {
-          "line": 34,
-          "column": 17
-        },
-        "end": {
-          "line": 34,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "renderer",
-      "start": 1925,
+      "start": 1929,
       "end": 1933,
       "loc": {
         "start": {
-          "line": 34,
-          "column": 19
+          "line": 33,
+          "column": 13
         },
         "end": {
-          "line": 34,
-          "column": 27
+          "line": 33,
+          "column": 17
         }
       }
     },
@@ -1363,11 +992,63 @@
       "end": 1934,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
+          "column": 17
+        },
+        "end": {
+          "line": 33,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "renderer",
+      "start": 1935,
+      "end": 1943,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 19
+        },
+        "end": {
+          "line": 33,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1943,
+      "end": 1944,
+      "loc": {
+        "start": {
+          "line": 33,
           "column": 27
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 28
         }
       }
@@ -1385,15 +1066,15 @@
         "binop": null
       },
       "value": "_arguments",
-      "start": 1935,
-      "end": 1945,
+      "start": 1945,
+      "end": 1955,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 29
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 39
         }
       }
@@ -1410,15 +1091,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1945,
-      "end": 1946,
+      "start": 1955,
+      "end": 1956,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 39
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 40
         }
       }
@@ -1435,15 +1116,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1947,
-      "end": 1948,
+      "start": 1957,
+      "end": 1958,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 41
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 42
         }
       }
@@ -1460,15 +1141,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1951,
-      "end": 1952,
+      "start": 1961,
+      "end": 1962,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 2
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 3
         }
       }
@@ -1485,15 +1166,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1953,
-      "end": 1954,
+      "start": 1963,
+      "end": 1964,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 0
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 1
         }
       }
@@ -1511,15 +1192,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1955,
-      "end": 1955,
+      "start": 1965,
+      "end": 1965,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 36,
           "column": 0
         },
         "end": {
-          "line": 37,
+          "line": 36,
           "column": 0
         }
       }

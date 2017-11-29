@@ -1,230 +1,72 @@
 {
   "type": "File",
   "start": 0,
-  "end": 6966,
+  "end": 6977,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 91,
+      "line": 90,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 6966,
+    "end": 6977,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 91,
+        "line": 90,
         "column": 0
       }
     },
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 63,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 49
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 37,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 23
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 37,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 23
-                },
-                "identifierName": "SCNSceneRenderer"
-              },
-              "name": "SCNSceneRenderer"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 43,
-          "end": 63,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 29
-            },
-            "end": {
-              "line": 3,
-              "column": 49
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNSceneRenderer",
-            "raw": "'./SCNSceneRenderer'"
-          },
-          "value": "./SCNSceneRenderer"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 64,
-        "end": 97,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 33
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 71,
-            "end": 79,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 15
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 71,
-              "end": 79,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 15
-                },
-                "identifierName": "SCNScene"
-              },
-              "name": "SCNScene"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 85,
-          "end": 97,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 21
-            },
-            "end": {
-              "line": 4,
-              "column": 33
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNScene",
-            "raw": "'./SCNScene'"
-          },
-          "value": "./SCNScene",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
-            "start": 100,
-            "end": 317,
-            "loc": {
-              "start": {
-                "line": 7,
-                "column": 0
-              },
-              "end": {
-                "line": 11,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "ExportDefaultDeclaration",
-        "start": 318,
-        "end": 6965,
+        "start": 321,
+        "end": 6976,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 11,
             "column": 0
           },
           "end": {
-            "line": 90,
+            "line": 89,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 333,
-          "end": 6965,
+          "start": 336,
+          "end": 6976,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 11,
               "column": 15
             },
             "end": {
-              "line": 90,
+              "line": 89,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 339,
-            "end": 363,
+            "start": 342,
+            "end": 366,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 21
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 45
               },
               "identifierName": "SCNSceneRendererDelegate"
@@ -235,157 +77,45 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 364,
-            "end": 6965,
+            "start": 367,
+            "end": 6976,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 46
               },
               "end": {
-                "line": 90,
+                "line": 89,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 439,
-                "end": 451,
+                "start": 1473,
+                "end": 1515,
                 "loc": {
                   "start": {
-                    "line": 19,
+                    "line": 33,
                     "column": 2
                   },
                   "end": {
-                    "line": 20,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 439,
-                  "end": 443,
-                  "loc": {
-                    "start": {
-                      "line": 19,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 19,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 446,
-                  "end": 451,
-                  "loc": {
-                    "start": {
-                      "line": 19,
-                      "column": 9
-                    },
-                    "end": {
-                      "line": 20,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
-                  "directives": [],
-                  "leadingComments": null,
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 369,
-                    "end": 436,
-                    "loc": {
-                      "start": {
-                        "line": 14,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 18,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Adding Custom Logic to the Rendering Loop",
-                    "start": 455,
-                    "end": 499,
-                    "loc": {
-                      "start": {
-                        "line": 22,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 22,
-                        "column": 46
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-                    "start": 503,
-                    "end": 1459,
-                    "loc": {
-                      "start": {
-                        "line": 24,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 33,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 1462,
-                "end": 1504,
-                "loc": {
-                  "start": {
                     "line": 34,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 35,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1462,
-                  "end": 1482,
+                  "start": 1473,
+                  "end": 1493,
                   "loc": {
                     "start": {
-                      "line": 34,
+                      "line": 33,
                       "column": 2
                     },
                     "end": {
-                      "line": 34,
+                      "line": 33,
                       "column": 22
                     },
                     "identifierName": "rendererUpdateAtTime"
@@ -402,15 +132,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1483,
-                    "end": 1491,
+                    "start": 1494,
+                    "end": 1502,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 33,
                         "column": 23
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 31
                       },
                       "identifierName": "renderer"
@@ -419,15 +149,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1493,
-                    "end": 1497,
+                    "start": 1504,
+                    "end": 1508,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 33,
                         "column": 33
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 37
                       },
                       "identifierName": "time"
@@ -437,15 +167,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1499,
-                  "end": 1504,
+                  "start": 1510,
+                  "end": 1515,
                   "loc": {
                     "start": {
-                      "line": 34,
+                      "line": 33,
                       "column": 39
                     },
                     "end": {
-                      "line": 35,
+                      "line": 34,
                       "column": 3
                     }
                   },
@@ -456,17 +186,65 @@
                 },
                 "leadingComments": [
                   {
-                    "type": "CommentLine",
-                    "value": " Adding Custom Logic to the Rendering Loop",
-                    "start": 455,
-                    "end": 499,
+                    "type": "CommentBlock",
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 372,
+                    "end": 436,
                     "loc": {
                       "start": {
-                        "line": 22,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 22,
+                        "line": 17,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "constructor() {",
+                    "start": 439,
+                    "end": 456,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 19
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "}",
+                    "start": 459,
+                    "end": 462,
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": " Adding Custom Logic to the Rendering Loop",
+                    "start": 466,
+                    "end": 510,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 21,
                         "column": 46
                       }
                     }
@@ -474,15 +252,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-                    "start": 503,
-                    "end": 1459,
+                    "start": 514,
+                    "end": 1470,
                     "loc": {
                       "start": {
-                        "line": 24,
+                        "line": 23,
                         "column": 2
                       },
                       "end": {
-                        "line": 33,
+                        "line": 32,
                         "column": 5
                       }
                     }
@@ -492,15 +270,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-                    "start": 1508,
-                    "end": 2453,
+                    "start": 1519,
+                    "end": 2464,
                     "loc": {
                       "start": {
-                        "line": 37,
+                        "line": 36,
                         "column": 2
                       },
                       "end": {
-                        "line": 46,
+                        "line": 45,
                         "column": 5
                       }
                     }
@@ -509,30 +287,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2456,
-                "end": 2510,
+                "start": 2467,
+                "end": 2521,
                 "loc": {
                   "start": {
-                    "line": 47,
+                    "line": 46,
                     "column": 2
                   },
                   "end": {
-                    "line": 48,
+                    "line": 47,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2456,
-                  "end": 2488,
+                  "start": 2467,
+                  "end": 2499,
                   "loc": {
                     "start": {
-                      "line": 47,
+                      "line": 46,
                       "column": 2
                     },
                     "end": {
-                      "line": 47,
+                      "line": 46,
                       "column": 34
                     },
                     "identifierName": "rendererDidApplyAnimationsAtTime"
@@ -549,15 +327,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 2489,
-                    "end": 2497,
+                    "start": 2500,
+                    "end": 2508,
                     "loc": {
                       "start": {
-                        "line": 47,
+                        "line": 46,
                         "column": 35
                       },
                       "end": {
-                        "line": 47,
+                        "line": 46,
                         "column": 43
                       },
                       "identifierName": "renderer"
@@ -566,15 +344,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2499,
-                    "end": 2503,
+                    "start": 2510,
+                    "end": 2514,
                     "loc": {
                       "start": {
-                        "line": 47,
+                        "line": 46,
                         "column": 45
                       },
                       "end": {
-                        "line": 47,
+                        "line": 46,
                         "column": 49
                       },
                       "identifierName": "time"
@@ -584,15 +362,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2505,
-                  "end": 2510,
+                  "start": 2516,
+                  "end": 2521,
                   "loc": {
                     "start": {
-                      "line": 47,
+                      "line": 46,
                       "column": 51
                     },
                     "end": {
-                      "line": 48,
+                      "line": 47,
                       "column": 3
                     }
                   },
@@ -605,15 +383,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-                    "start": 1508,
-                    "end": 2453,
+                    "start": 1519,
+                    "end": 2464,
                     "loc": {
                       "start": {
-                        "line": 37,
+                        "line": 36,
                         "column": 2
                       },
                       "end": {
-                        "line": 46,
+                        "line": 45,
                         "column": 5
                       }
                     }
@@ -623,15 +401,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-                    "start": 2514,
-                    "end": 3561,
+                    "start": 2525,
+                    "end": 3572,
                     "loc": {
                       "start": {
-                        "line": 50,
+                        "line": 49,
                         "column": 2
                       },
                       "end": {
-                        "line": 59,
+                        "line": 58,
                         "column": 5
                       }
                     }
@@ -640,30 +418,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3564,
-                "end": 3618,
+                "start": 3575,
+                "end": 3629,
                 "loc": {
                   "start": {
-                    "line": 60,
+                    "line": 59,
                     "column": 2
                   },
                   "end": {
-                    "line": 61,
+                    "line": 60,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3564,
-                  "end": 3596,
+                  "start": 3575,
+                  "end": 3607,
                   "loc": {
                     "start": {
-                      "line": 60,
+                      "line": 59,
                       "column": 2
                     },
                     "end": {
-                      "line": 60,
+                      "line": 59,
                       "column": 34
                     },
                     "identifierName": "rendererDidSimulatePhysicsAtTime"
@@ -680,15 +458,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3597,
-                    "end": 3605,
+                    "start": 3608,
+                    "end": 3616,
                     "loc": {
                       "start": {
-                        "line": 60,
+                        "line": 59,
                         "column": 35
                       },
                       "end": {
-                        "line": 60,
+                        "line": 59,
                         "column": 43
                       },
                       "identifierName": "renderer"
@@ -697,15 +475,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3607,
-                    "end": 3611,
+                    "start": 3618,
+                    "end": 3622,
                     "loc": {
                       "start": {
-                        "line": 60,
+                        "line": 59,
                         "column": 45
                       },
                       "end": {
-                        "line": 60,
+                        "line": 59,
                         "column": 49
                       },
                       "identifierName": "time"
@@ -715,15 +493,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3613,
-                  "end": 3618,
+                  "start": 3624,
+                  "end": 3629,
                   "loc": {
                     "start": {
-                      "line": 60,
+                      "line": 59,
                       "column": 51
                     },
                     "end": {
-                      "line": 61,
+                      "line": 60,
                       "column": 3
                     }
                   },
@@ -736,15 +514,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-                    "start": 2514,
-                    "end": 3561,
+                    "start": 2525,
+                    "end": 3572,
                     "loc": {
                       "start": {
-                        "line": 50,
+                        "line": 49,
                         "column": 2
                       },
                       "end": {
-                        "line": 59,
+                        "line": 58,
                         "column": 5
                       }
                     }
@@ -754,15 +532,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Rendering Custom Scene Content",
-                    "start": 3622,
-                    "end": 3655,
+                    "start": 3633,
+                    "end": 3666,
                     "loc": {
                       "start": {
-                        "line": 63,
+                        "line": 62,
                         "column": 2
                       },
                       "end": {
-                        "line": 63,
+                        "line": 62,
                         "column": 35
                       }
                     }
@@ -770,15 +548,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-                    "start": 3659,
-                    "end": 5267,
+                    "start": 3670,
+                    "end": 5278,
                     "loc": {
                       "start": {
-                        "line": 65,
+                        "line": 64,
                         "column": 2
                       },
                       "end": {
-                        "line": 74,
+                        "line": 73,
                         "column": 5
                       }
                     }
@@ -787,30 +565,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5270,
-                "end": 5328,
+                "start": 5281,
+                "end": 5339,
                 "loc": {
                   "start": {
-                    "line": 75,
+                    "line": 74,
                     "column": 2
                   },
                   "end": {
-                    "line": 76,
+                    "line": 75,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5270,
-                  "end": 5299,
+                  "start": 5281,
+                  "end": 5310,
                   "loc": {
                     "start": {
-                      "line": 75,
+                      "line": 74,
                       "column": 2
                     },
                     "end": {
-                      "line": 75,
+                      "line": 74,
                       "column": 31
                     },
                     "identifierName": "rendererWillRenderSceneAtTime"
@@ -827,15 +605,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5300,
-                    "end": 5308,
+                    "start": 5311,
+                    "end": 5319,
                     "loc": {
                       "start": {
-                        "line": 75,
+                        "line": 74,
                         "column": 32
                       },
                       "end": {
-                        "line": 75,
+                        "line": 74,
                         "column": 40
                       },
                       "identifierName": "renderer"
@@ -844,15 +622,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5310,
-                    "end": 5315,
+                    "start": 5321,
+                    "end": 5326,
                     "loc": {
                       "start": {
-                        "line": 75,
+                        "line": 74,
                         "column": 42
                       },
                       "end": {
-                        "line": 75,
+                        "line": 74,
                         "column": 47
                       },
                       "identifierName": "scene"
@@ -861,15 +639,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5317,
-                    "end": 5321,
+                    "start": 5328,
+                    "end": 5332,
                     "loc": {
                       "start": {
-                        "line": 75,
+                        "line": 74,
                         "column": 49
                       },
                       "end": {
-                        "line": 75,
+                        "line": 74,
                         "column": 53
                       },
                       "identifierName": "time"
@@ -879,15 +657,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5323,
-                  "end": 5328,
+                  "start": 5334,
+                  "end": 5339,
                   "loc": {
                     "start": {
-                      "line": 75,
+                      "line": 74,
                       "column": 55
                     },
                     "end": {
-                      "line": 76,
+                      "line": 75,
                       "column": 3
                     }
                   },
@@ -900,15 +678,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Rendering Custom Scene Content",
-                    "start": 3622,
-                    "end": 3655,
+                    "start": 3633,
+                    "end": 3666,
                     "loc": {
                       "start": {
-                        "line": 63,
+                        "line": 62,
                         "column": 2
                       },
                       "end": {
-                        "line": 63,
+                        "line": 62,
                         "column": 35
                       }
                     }
@@ -916,15 +694,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-                    "start": 3659,
-                    "end": 5267,
+                    "start": 3670,
+                    "end": 5278,
                     "loc": {
                       "start": {
-                        "line": 65,
+                        "line": 64,
                         "column": 2
                       },
                       "end": {
-                        "line": 74,
+                        "line": 73,
                         "column": 5
                       }
                     }
@@ -934,15 +712,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-                    "start": 5332,
-                    "end": 6903,
+                    "start": 5343,
+                    "end": 6914,
                     "loc": {
                       "start": {
-                        "line": 78,
+                        "line": 77,
                         "column": 2
                       },
                       "end": {
-                        "line": 87,
+                        "line": 86,
                         "column": 5
                       }
                     }
@@ -951,30 +729,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6906,
-                "end": 6963,
+                "start": 6917,
+                "end": 6974,
                 "loc": {
                   "start": {
-                    "line": 88,
+                    "line": 87,
                     "column": 2
                   },
                   "end": {
-                    "line": 89,
+                    "line": 88,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6906,
-                  "end": 6934,
+                  "start": 6917,
+                  "end": 6945,
                   "loc": {
                     "start": {
-                      "line": 88,
+                      "line": 87,
                       "column": 2
                     },
                     "end": {
-                      "line": 88,
+                      "line": 87,
                       "column": 30
                     },
                     "identifierName": "rendererDidRenderSceneAtTime"
@@ -991,15 +769,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6935,
-                    "end": 6943,
+                    "start": 6946,
+                    "end": 6954,
                     "loc": {
                       "start": {
-                        "line": 88,
+                        "line": 87,
                         "column": 31
                       },
                       "end": {
-                        "line": 88,
+                        "line": 87,
                         "column": 39
                       },
                       "identifierName": "renderer"
@@ -1008,15 +786,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6945,
-                    "end": 6950,
+                    "start": 6956,
+                    "end": 6961,
                     "loc": {
                       "start": {
-                        "line": 88,
+                        "line": 87,
                         "column": 41
                       },
                       "end": {
-                        "line": 88,
+                        "line": 87,
                         "column": 46
                       },
                       "identifierName": "scene"
@@ -1025,15 +803,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6952,
-                    "end": 6956,
+                    "start": 6963,
+                    "end": 6967,
                     "loc": {
                       "start": {
-                        "line": 88,
+                        "line": 87,
                         "column": 48
                       },
                       "end": {
-                        "line": 88,
+                        "line": 87,
                         "column": 52
                       },
                       "identifierName": "time"
@@ -1043,15 +821,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6958,
-                  "end": 6963,
+                  "start": 6969,
+                  "end": 6974,
                   "loc": {
                     "start": {
-                      "line": 88,
+                      "line": 87,
                       "column": 54
                     },
                     "end": {
-                      "line": 89,
+                      "line": 88,
                       "column": 3
                     }
                   },
@@ -1062,15 +840,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-                    "start": 5332,
-                    "end": 6903,
+                    "start": 5343,
+                    "end": 6914,
                     "loc": {
                       "start": {
-                        "line": 78,
+                        "line": 77,
                         "column": 2
                       },
                       "end": {
-                        "line": 87,
+                        "line": 86,
                         "column": 5
                       }
                     }
@@ -1081,17 +859,49 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
-              "start": 100,
-              "end": 317,
+              "type": "CommentLine",
+              "value": "import SCNSceneRenderer from './SCNSceneRenderer'",
+              "start": 14,
+              "end": 65,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 11,
+                  "line": 3,
+                  "column": 51
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import SCNScene from './SCNScene'",
+              "start": 66,
+              "end": 101,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 4,
+                  "column": 35
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
+              "start": 103,
+              "end": 320,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 10,
                   "column": 3
                 }
               }
@@ -1101,17 +911,49 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
-            "start": 100,
-            "end": 317,
+            "type": "CommentLine",
+            "value": "import SCNSceneRenderer from './SCNSceneRenderer'",
+            "start": 14,
+            "end": 65,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 3,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNScene from './SCNScene'",
+            "start": 66,
+            "end": 101,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 35
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
+            "start": 103,
+            "end": 320,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
                 "column": 3
               }
             }
@@ -1152,40 +994,155 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNSceneRenderer from './SCNSceneRenderer'",
+            "start": 14,
+            "end": 65,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNScene from './SCNScene'",
+            "start": 66,
+            "end": 101,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 35
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
+            "start": 103,
+            "end": 320,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
-      "start": 100,
-      "end": 317,
+      "type": "CommentLine",
+      "value": "import SCNSceneRenderer from './SCNSceneRenderer'",
+      "start": 14,
+      "end": 65,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 3,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "import SCNScene from './SCNScene'",
+      "start": 66,
+      "end": 101,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
+      "start": 103,
+      "end": 320,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 369,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 372,
       "end": 436,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "constructor() {",
+      "start": 439,
+      "end": 456,
+      "loc": {
+        "start": {
+          "line": 18,
           "column": 2
         },
         "end": {
           "line": 18,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 459,
+      "end": 462,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
           "column": 5
         }
       }
@@ -1193,15 +1150,15 @@
     {
       "type": "CommentLine",
       "value": " Adding Custom Logic to the Rendering Loop",
-      "start": 455,
-      "end": 499,
+      "start": 466,
+      "end": 510,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 2
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 46
         }
       }
@@ -1209,15 +1166,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-      "start": 503,
-      "end": 1459,
+      "start": 514,
+      "end": 1470,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 23,
           "column": 2
         },
         "end": {
-          "line": 33,
+          "line": 32,
           "column": 5
         }
       }
@@ -1225,15 +1182,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-      "start": 1508,
-      "end": 2453,
+      "start": 1519,
+      "end": 2464,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 36,
           "column": 2
         },
         "end": {
-          "line": 46,
+          "line": 45,
           "column": 5
         }
       }
@@ -1241,15 +1198,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-      "start": 2514,
-      "end": 3561,
+      "start": 2525,
+      "end": 3572,
       "loc": {
         "start": {
-          "line": 50,
+          "line": 49,
           "column": 2
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 5
         }
       }
@@ -1257,15 +1214,15 @@
     {
       "type": "CommentLine",
       "value": " Rendering Custom Scene Content",
-      "start": 3622,
-      "end": 3655,
+      "start": 3633,
+      "end": 3666,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 2
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 35
         }
       }
@@ -1273,15 +1230,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-      "start": 3659,
-      "end": 5267,
+      "start": 3670,
+      "end": 5278,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 64,
           "column": 2
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 5
         }
       }
@@ -1289,15 +1246,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-      "start": 5332,
-      "end": 6903,
+      "start": 5343,
+      "end": 6914,
       "loc": {
         "start": {
-          "line": 78,
+          "line": 77,
           "column": 2
         },
         "end": {
-          "line": 87,
+          "line": 86,
           "column": 5
         }
       }
@@ -1332,22 +1289,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNSceneRenderer from './SCNSceneRenderer'",
       "start": 14,
-      "end": 20,
+      "end": 65,
       "loc": {
         "start": {
           "line": 3,
@@ -1355,106 +1300,15 @@
         },
         "end": {
           "line": 3,
-          "column": 6
+          "column": 51
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNSceneRenderer",
-      "start": 21,
-      "end": 37,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 38,
-      "end": 42,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 24
-        },
-        "end": {
-          "line": 3,
-          "column": 28
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNSceneRenderer",
-      "start": 43,
-      "end": 63,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 29
-        },
-        "end": {
-          "line": 3,
-          "column": 49
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 64,
-      "end": 70,
+      "type": "CommentLine",
+      "value": "import SCNScene from './SCNScene'",
+      "start": 66,
+      "end": 101,
       "loc": {
         "start": {
           "line": 4,
@@ -1462,101 +1316,22 @@
         },
         "end": {
           "line": 4,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNScene",
-      "start": 71,
-      "end": 79,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 80,
-      "end": 84,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 16
-        },
-        "end": {
-          "line": 4,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNScene",
-      "start": 85,
-      "end": 97,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 21
-        },
-        "end": {
-          "line": 4,
-          "column": 33
+          "column": 35
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
-      "start": 100,
-      "end": 317,
+      "start": 103,
+      "end": 320,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
@@ -1576,15 +1351,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 318,
-      "end": 324,
+      "start": 321,
+      "end": 327,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 6
         }
       }
@@ -1604,15 +1379,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 325,
-      "end": 332,
+      "start": 328,
+      "end": 335,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 14
         }
       }
@@ -1632,15 +1407,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 333,
-      "end": 338,
+      "start": 336,
+      "end": 341,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 20
         }
       }
@@ -1658,15 +1433,15 @@
         "binop": null
       },
       "value": "SCNSceneRendererDelegate",
-      "start": 339,
-      "end": 363,
+      "start": 342,
+      "end": 366,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 21
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 45
         }
       }
@@ -1683,50 +1458,56 @@
         "postfix": false,
         "binop": null
       },
-      "start": 364,
-      "end": 365,
+      "start": 367,
+      "end": 368,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 46
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 47
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 369,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 372,
       "end": 436,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 17,
           "column": 5
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
+      "type": "CommentLine",
+      "value": "constructor() {",
       "start": 439,
-      "end": 443,
+      "end": 456,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 459,
+      "end": 462,
       "loc": {
         "start": {
           "line": 19,
@@ -1734,122 +1515,22 @@
         },
         "end": {
           "line": 19,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 443,
-      "end": 444,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 6
-        },
-        "end": {
-          "line": 19,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 444,
-      "end": 445,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 7
-        },
-        "end": {
-          "line": 19,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 446,
-      "end": 447,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 9
-        },
-        "end": {
-          "line": 19,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 450,
-      "end": 451,
-      "loc": {
-        "start": {
-          "line": 20,
-          "column": 2
-        },
-        "end": {
-          "line": 20,
-          "column": 3
+          "column": 5
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Adding Custom Logic to the Rendering Loop",
-      "start": 455,
-      "end": 499,
+      "start": 466,
+      "end": 510,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 2
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 46
         }
       }
@@ -1857,15 +1538,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-      "start": 503,
-      "end": 1459,
+      "start": 514,
+      "end": 1470,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 23,
           "column": 2
         },
         "end": {
-          "line": 33,
+          "line": 32,
           "column": 5
         }
       }
@@ -1883,15 +1564,15 @@
         "binop": null
       },
       "value": "rendererUpdateAtTime",
-      "start": 1462,
-      "end": 1482,
+      "start": 1473,
+      "end": 1493,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 2
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 22
         }
       }
@@ -1908,15 +1589,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1482,
-      "end": 1483,
+      "start": 1493,
+      "end": 1494,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 22
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 23
         }
       }
@@ -1934,15 +1615,15 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 1483,
-      "end": 1491,
+      "start": 1494,
+      "end": 1502,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 23
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 31
         }
       }
@@ -1960,15 +1641,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1491,
-      "end": 1492,
+      "start": 1502,
+      "end": 1503,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 31
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 32
         }
       }
@@ -1986,15 +1667,15 @@
         "binop": null
       },
       "value": "time",
-      "start": 1493,
-      "end": 1497,
+      "start": 1504,
+      "end": 1508,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 33
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 37
         }
       }
@@ -2011,15 +1692,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1497,
-      "end": 1498,
+      "start": 1508,
+      "end": 1509,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 37
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 38
         }
       }
@@ -2036,15 +1717,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1499,
-      "end": 1500,
+      "start": 1510,
+      "end": 1511,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 39
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 40
         }
       }
@@ -2061,15 +1742,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1503,
-      "end": 1504,
+      "start": 1514,
+      "end": 1515,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 2
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 3
         }
       }
@@ -2077,15 +1758,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-      "start": 1508,
-      "end": 2453,
+      "start": 1519,
+      "end": 2464,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 36,
           "column": 2
         },
         "end": {
-          "line": 46,
+          "line": 45,
           "column": 5
         }
       }
@@ -2103,15 +1784,15 @@
         "binop": null
       },
       "value": "rendererDidApplyAnimationsAtTime",
-      "start": 2456,
-      "end": 2488,
+      "start": 2467,
+      "end": 2499,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 2
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 34
         }
       }
@@ -2128,15 +1809,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2488,
-      "end": 2489,
+      "start": 2499,
+      "end": 2500,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 34
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 35
         }
       }
@@ -2154,15 +1835,15 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 2489,
-      "end": 2497,
+      "start": 2500,
+      "end": 2508,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 35
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 43
         }
       }
@@ -2180,15 +1861,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2497,
-      "end": 2498,
+      "start": 2508,
+      "end": 2509,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 43
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 44
         }
       }
@@ -2206,15 +1887,15 @@
         "binop": null
       },
       "value": "time",
-      "start": 2499,
-      "end": 2503,
+      "start": 2510,
+      "end": 2514,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 45
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 49
         }
       }
@@ -2231,15 +1912,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2503,
-      "end": 2504,
+      "start": 2514,
+      "end": 2515,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 49
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 50
         }
       }
@@ -2256,15 +1937,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2505,
-      "end": 2506,
+      "start": 2516,
+      "end": 2517,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 51
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 52
         }
       }
@@ -2281,15 +1962,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2509,
-      "end": 2510,
+      "start": 2520,
+      "end": 2521,
       "loc": {
         "start": {
-          "line": 48,
+          "line": 47,
           "column": 2
         },
         "end": {
-          "line": 48,
+          "line": 47,
           "column": 3
         }
       }
@@ -2297,15 +1978,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-      "start": 2514,
-      "end": 3561,
+      "start": 2525,
+      "end": 3572,
       "loc": {
         "start": {
-          "line": 50,
+          "line": 49,
           "column": 2
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 5
         }
       }
@@ -2323,15 +2004,15 @@
         "binop": null
       },
       "value": "rendererDidSimulatePhysicsAtTime",
-      "start": 3564,
-      "end": 3596,
+      "start": 3575,
+      "end": 3607,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 2
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 34
         }
       }
@@ -2348,15 +2029,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3596,
-      "end": 3597,
+      "start": 3607,
+      "end": 3608,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 34
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 35
         }
       }
@@ -2374,15 +2055,15 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 3597,
-      "end": 3605,
+      "start": 3608,
+      "end": 3616,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 35
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 43
         }
       }
@@ -2400,15 +2081,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3605,
-      "end": 3606,
+      "start": 3616,
+      "end": 3617,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 43
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 44
         }
       }
@@ -2426,15 +2107,15 @@
         "binop": null
       },
       "value": "time",
-      "start": 3607,
-      "end": 3611,
+      "start": 3618,
+      "end": 3622,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 45
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 49
         }
       }
@@ -2451,15 +2132,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3611,
-      "end": 3612,
+      "start": 3622,
+      "end": 3623,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 49
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 50
         }
       }
@@ -2476,15 +2157,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3613,
-      "end": 3614,
+      "start": 3624,
+      "end": 3625,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 51
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 52
         }
       }
@@ -2501,15 +2182,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3617,
-      "end": 3618,
+      "start": 3628,
+      "end": 3629,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 61,
+          "line": 60,
           "column": 3
         }
       }
@@ -2517,15 +2198,15 @@
     {
       "type": "CommentLine",
       "value": " Rendering Custom Scene Content",
-      "start": 3622,
-      "end": 3655,
+      "start": 3633,
+      "end": 3666,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 2
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 35
         }
       }
@@ -2533,15 +2214,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-      "start": 3659,
-      "end": 5267,
+      "start": 3670,
+      "end": 5278,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 64,
           "column": 2
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 5
         }
       }
@@ -2559,15 +2240,15 @@
         "binop": null
       },
       "value": "rendererWillRenderSceneAtTime",
-      "start": 5270,
-      "end": 5299,
+      "start": 5281,
+      "end": 5310,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 2
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 31
         }
       }
@@ -2584,15 +2265,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5299,
-      "end": 5300,
+      "start": 5310,
+      "end": 5311,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 31
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 32
         }
       }
@@ -2610,15 +2291,15 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 5300,
-      "end": 5308,
+      "start": 5311,
+      "end": 5319,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 32
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 40
         }
       }
@@ -2636,15 +2317,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5308,
-      "end": 5309,
+      "start": 5319,
+      "end": 5320,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 40
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 41
         }
       }
@@ -2662,15 +2343,15 @@
         "binop": null
       },
       "value": "scene",
-      "start": 5310,
-      "end": 5315,
+      "start": 5321,
+      "end": 5326,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 42
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 47
         }
       }
@@ -2688,15 +2369,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5315,
-      "end": 5316,
+      "start": 5326,
+      "end": 5327,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 47
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 48
         }
       }
@@ -2714,15 +2395,15 @@
         "binop": null
       },
       "value": "time",
-      "start": 5317,
-      "end": 5321,
+      "start": 5328,
+      "end": 5332,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 49
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 53
         }
       }
@@ -2739,15 +2420,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5321,
-      "end": 5322,
+      "start": 5332,
+      "end": 5333,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 53
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 54
         }
       }
@@ -2764,15 +2445,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5323,
-      "end": 5324,
+      "start": 5334,
+      "end": 5335,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 55
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 56
         }
       }
@@ -2789,15 +2470,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5327,
-      "end": 5328,
+      "start": 5338,
+      "end": 5339,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 2
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 3
         }
       }
@@ -2805,15 +2486,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-      "start": 5332,
-      "end": 6903,
+      "start": 5343,
+      "end": 6914,
       "loc": {
         "start": {
-          "line": 78,
+          "line": 77,
           "column": 2
         },
         "end": {
-          "line": 87,
+          "line": 86,
           "column": 5
         }
       }
@@ -2831,15 +2512,15 @@
         "binop": null
       },
       "value": "rendererDidRenderSceneAtTime",
-      "start": 6906,
-      "end": 6934,
+      "start": 6917,
+      "end": 6945,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 2
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 30
         }
       }
@@ -2856,15 +2537,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6934,
-      "end": 6935,
+      "start": 6945,
+      "end": 6946,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 30
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 31
         }
       }
@@ -2882,15 +2563,15 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 6935,
-      "end": 6943,
+      "start": 6946,
+      "end": 6954,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 31
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 39
         }
       }
@@ -2908,15 +2589,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6943,
-      "end": 6944,
+      "start": 6954,
+      "end": 6955,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 39
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 40
         }
       }
@@ -2934,15 +2615,15 @@
         "binop": null
       },
       "value": "scene",
-      "start": 6945,
-      "end": 6950,
+      "start": 6956,
+      "end": 6961,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 41
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 46
         }
       }
@@ -2960,15 +2641,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6950,
-      "end": 6951,
+      "start": 6961,
+      "end": 6962,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 46
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 47
         }
       }
@@ -2986,15 +2667,15 @@
         "binop": null
       },
       "value": "time",
-      "start": 6952,
-      "end": 6956,
+      "start": 6963,
+      "end": 6967,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 48
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 52
         }
       }
@@ -3011,15 +2692,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6956,
-      "end": 6957,
+      "start": 6967,
+      "end": 6968,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 52
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 53
         }
       }
@@ -3036,15 +2717,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6958,
-      "end": 6959,
+      "start": 6969,
+      "end": 6970,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 54
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 55
         }
       }
@@ -3061,15 +2742,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6962,
-      "end": 6963,
+      "start": 6973,
+      "end": 6974,
       "loc": {
         "start": {
-          "line": 89,
+          "line": 88,
           "column": 2
         },
         "end": {
-          "line": 89,
+          "line": 88,
           "column": 3
         }
       }
@@ -3086,15 +2767,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6964,
-      "end": 6965,
+      "start": 6975,
+      "end": 6976,
       "loc": {
         "start": {
-          "line": 90,
+          "line": 89,
           "column": 0
         },
         "end": {
-          "line": 90,
+          "line": 89,
           "column": 1
         }
       }
@@ -3112,15 +2793,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6966,
-      "end": 6966,
+      "start": 6977,
+      "end": 6977,
       "loc": {
         "start": {
-          "line": 91,
+          "line": 90,
           "column": 0
         },
         "end": {
-          "line": 91,
+          "line": 90,
           "column": 0
         }
       }

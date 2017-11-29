@@ -36,6 +36,7 @@ const fsText =
 /**
  * Check if the browser can use WebGL2.
  * @access public
+ * @type {function(): boolean}
  * @returns {boolean} - true if the browser supports WebGL2.
  */
 const CanUseWebGL2 = () => {

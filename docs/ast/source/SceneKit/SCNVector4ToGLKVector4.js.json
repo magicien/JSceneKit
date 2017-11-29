@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 522,
+  "end": 524,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 522,
+    "end": 524,
     "loc": {
       "start": {
         "line": 1,
@@ -29,118 +29,9 @@
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 65,
-        "end": 102,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 37
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 72,
-            "end": 82,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 17
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 72,
-              "end": 82,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 17
-                },
-                "identifierName": "SCNVector4"
-              },
-              "name": "SCNVector4",
-              "leadingComments": null
-            },
-            "leadingComments": null
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 88,
-          "end": 102,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 23
-            },
-            "end": {
-              "line": 4,
-              "column": 37
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNVector4",
-            "raw": "'./SCNVector4'"
-          },
-          "value": "./SCNVector4",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "leadingComments": [
-          {
-            "type": "CommentLine",
-            "value": "import GLKVector4 from '../undefined/GLKVector4'",
-            "start": 14,
-            "end": 64,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 0
-              },
-              "end": {
-                "line": 3,
-                "column": 50
-              }
-            }
-          }
-        ],
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * Returns a four-element GLKit vector structure corresponding to a SceneKit vector structure.\n * @access public\n * @param {SCNVector4} vector - A four-element SceneKit vector structure.\n * @returns {GLKVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409663-scnvector4toglkvector4\n ",
-            "start": 104,
-            "end": 416,
-            "loc": {
-              "start": {
-                "line": 6,
-                "column": 0
-              },
-              "end": {
-                "line": 12,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "Identifier",
-        "start": 417,
-        "end": 482,
+        "start": 419,
+        "end": 484,
         "loc": {
           "start": {
             "line": 13,
@@ -154,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 423,
-            "end": 482,
+            "start": 425,
+            "end": 484,
             "loc": {
               "start": {
                 "line": 13,
@@ -168,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 423,
-              "end": 445,
+              "start": 425,
+              "end": 447,
               "loc": {
                 "start": {
                   "line": 13,
@@ -186,8 +77,8 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 448,
-              "end": 482,
+              "start": 450,
+              "end": 484,
               "loc": {
                 "start": {
                   "line": 13,
@@ -205,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 457,
-                  "end": 463,
+                  "start": 459,
+                  "end": 465,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -223,8 +114,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 465,
-                "end": 482,
+                "start": 467,
+                "end": 484,
                 "loc": {
                   "start": {
                     "line": 13,
@@ -238,8 +129,8 @@
                 "body": [
                   {
                     "type": "ReturnStatement",
-                    "start": 469,
-                    "end": 480,
+                    "start": 471,
+                    "end": 482,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -252,8 +143,8 @@
                     },
                     "argument": {
                       "type": "NullLiteral",
-                      "start": 476,
-                      "end": 480,
+                      "start": 478,
+                      "end": 482,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -280,8 +171,8 @@
       },
       {
         "type": "Identifier",
-        "start": 484,
-        "end": 521,
+        "start": 486,
+        "end": 523,
         "loc": {
           "start": {
             "line": 17,
@@ -294,8 +185,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 499,
-          "end": 521,
+          "start": 501,
+          "end": 523,
           "loc": {
             "start": {
               "line": 17,
@@ -315,8 +206,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 484,
-        "end": 521,
+        "start": 486,
+        "end": 523,
         "loc": {
           "start": {
             "line": 17,
@@ -329,8 +220,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 417,
-          "end": 482,
+          "start": 419,
+          "end": 484,
           "loc": {
             "start": {
               "line": 13,
@@ -344,8 +235,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 423,
-              "end": 482,
+              "start": 425,
+              "end": 484,
               "loc": {
                 "start": {
                   "line": 13,
@@ -358,8 +249,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 423,
-                "end": 445,
+                "start": 425,
+                "end": 447,
                 "loc": {
                   "start": {
                     "line": 13,
@@ -376,8 +267,8 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 448,
-                "end": 482,
+                "start": 450,
+                "end": 484,
                 "loc": {
                   "start": {
                     "line": 13,
@@ -390,8 +281,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 423,
-                  "end": 445,
+                  "start": 425,
+                  "end": 447,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -412,8 +303,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 457,
-                    "end": 463,
+                    "start": 459,
+                    "end": 465,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -430,8 +321,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 465,
-                  "end": 482,
+                  "start": 467,
+                  "end": 484,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -445,8 +336,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 469,
-                      "end": 480,
+                      "start": 471,
+                      "end": 482,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -459,8 +350,8 @@
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 476,
-                        "end": 480,
+                        "start": 478,
+                        "end": 482,
                         "loc": {
                           "start": {
                             "line": 14,
@@ -483,10 +374,42 @@
           "kind": "const",
           "leadingComments": [
             {
+              "type": "CommentLine",
+              "value": "import GLKVector4 from '../undefined/GLKVector4'",
+              "start": 14,
+              "end": 64,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 3,
+                  "column": 50
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import SCNVector4 from './SCNVector4'",
+              "start": 65,
+              "end": 104,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 4,
+                  "column": 39
+                }
+              }
+            },
+            {
               "type": "CommentBlock",
               "value": "*\n * Returns a four-element GLKit vector structure corresponding to a SceneKit vector structure.\n * @access public\n * @param {SCNVector4} vector - A four-element SceneKit vector structure.\n * @returns {GLKVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409663-scnvector4toglkvector4\n ",
-              "start": 104,
-              "end": 416,
+              "start": 106,
+              "end": 418,
               "loc": {
                 "start": {
                   "line": 6,
@@ -555,6 +478,38 @@
                 "column": 50
               }
             }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNVector4 from './SCNVector4'",
+            "start": 65,
+            "end": 104,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Returns a four-element GLKit vector structure corresponding to a SceneKit vector structure.\n * @access public\n * @param {SCNVector4} vector - A four-element SceneKit vector structure.\n * @returns {GLKVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409663-scnvector4toglkvector4\n ",
+            "start": 106,
+            "end": 418,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
+                "column": 3
+              }
+            }
           }
         ]
       }
@@ -578,10 +533,26 @@
       }
     },
     {
+      "type": "CommentLine",
+      "value": "import SCNVector4 from './SCNVector4'",
+      "start": 65,
+      "end": 104,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 39
+        }
+      }
+    },
+    {
       "type": "CommentBlock",
       "value": "*\n * Returns a four-element GLKit vector structure corresponding to a SceneKit vector structure.\n * @access public\n * @param {SCNVector4} vector - A four-element SceneKit vector structure.\n * @returns {GLKVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409663-scnvector4toglkvector4\n ",
-      "start": 104,
-      "end": 416,
+      "start": 106,
+      "end": 418,
       "loc": {
         "start": {
           "line": 6,
@@ -639,22 +610,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNVector4 from './SCNVector4'",
       "start": 65,
-      "end": 71,
+      "end": 104,
       "loc": {
         "start": {
           "line": 4,
@@ -662,94 +621,15 @@
         },
         "end": {
           "line": 4,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNVector4",
-      "start": 72,
-      "end": 82,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 83,
-      "end": 87,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 18
-        },
-        "end": {
-          "line": 4,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNVector4",
-      "start": 88,
-      "end": 102,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 23
-        },
-        "end": {
-          "line": 4,
-          "column": 37
+          "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * Returns a four-element GLKit vector structure corresponding to a SceneKit vector structure.\n * @access public\n * @param {SCNVector4} vector - A four-element SceneKit vector structure.\n * @returns {GLKVector4} - \n * @see https://developer.apple.com/documentation/scenekit/1409663-scnvector4toglkvector4\n ",
-      "start": 104,
-      "end": 416,
+      "start": 106,
+      "end": 418,
       "loc": {
         "start": {
           "line": 6,
@@ -776,8 +656,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 417,
-      "end": 422,
+      "start": 419,
+      "end": 424,
       "loc": {
         "start": {
           "line": 13,
@@ -802,8 +682,8 @@
         "binop": null
       },
       "value": "SCNVector4ToGLKVector4",
-      "start": 423,
-      "end": 445,
+      "start": 425,
+      "end": 447,
       "loc": {
         "start": {
           "line": 13,
@@ -829,8 +709,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 446,
-      "end": 447,
+      "start": 448,
+      "end": 449,
       "loc": {
         "start": {
           "line": 13,
@@ -856,8 +736,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 448,
-      "end": 456,
+      "start": 450,
+      "end": 458,
       "loc": {
         "start": {
           "line": 13,
@@ -881,8 +761,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 456,
-      "end": 457,
+      "start": 458,
+      "end": 459,
       "loc": {
         "start": {
           "line": 13,
@@ -907,8 +787,8 @@
         "binop": null
       },
       "value": "vector",
-      "start": 457,
-      "end": 463,
+      "start": 459,
+      "end": 465,
       "loc": {
         "start": {
           "line": 13,
@@ -932,8 +812,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 463,
-      "end": 464,
+      "start": 465,
+      "end": 466,
       "loc": {
         "start": {
           "line": 13,
@@ -957,8 +837,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 465,
-      "end": 466,
+      "start": 467,
+      "end": 468,
       "loc": {
         "start": {
           "line": 13,
@@ -985,8 +865,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 469,
-      "end": 475,
+      "start": 471,
+      "end": 477,
       "loc": {
         "start": {
           "line": 14,
@@ -1013,8 +893,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 476,
-      "end": 480,
+      "start": 478,
+      "end": 482,
       "loc": {
         "start": {
           "line": 14,
@@ -1038,8 +918,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 481,
-      "end": 482,
+      "start": 483,
+      "end": 484,
       "loc": {
         "start": {
           "line": 15,
@@ -1066,8 +946,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 484,
-      "end": 490,
+      "start": 486,
+      "end": 492,
       "loc": {
         "start": {
           "line": 17,
@@ -1094,8 +974,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 491,
-      "end": 498,
+      "start": 493,
+      "end": 500,
       "loc": {
         "start": {
           "line": 17,
@@ -1120,8 +1000,8 @@
         "binop": null
       },
       "value": "SCNVector4ToGLKVector4",
-      "start": 499,
-      "end": 521,
+      "start": 501,
+      "end": 523,
       "loc": {
         "start": {
           "line": 17,
@@ -1146,8 +1026,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 522,
-      "end": 522,
+      "start": 524,
+      "end": 524,
       "loc": {
         "start": {
           "line": 18,

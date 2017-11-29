@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4705,
+  "end": 4709,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4705,
+    "end": 4709,
     "loc": {
       "start": {
         "line": 1,
@@ -94,154 +94,48 @@
             "rawValue": "../ObjectiveC/NSObject",
             "raw": "'../ObjectiveC/NSObject'"
           },
-          "value": "../ObjectiveC/NSObject"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 60,
-        "end": 111,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 51
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 67,
-            "end": 78,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 18
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 67,
-              "end": 78,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 18
-                },
-                "identifierName": "CAAnimation"
-              },
-              "name": "CAAnimation"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 84,
-          "end": 111,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 24
-            },
-            "end": {
-              "line": 4,
-              "column": 51
-            }
-          },
-          "extra": {
-            "rawValue": "../QuartzCore/CAAnimation",
-            "raw": "'../QuartzCore/CAAnimation'"
-          },
-          "value": "../QuartzCore/CAAnimation"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 112,
-        "end": 163,
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 0
-          },
-          "end": {
-            "line": 5,
-            "column": 51
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 119,
-            "end": 136,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 7
-              },
-              "end": {
-                "line": 5,
-                "column": 24
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 119,
-              "end": 136,
-              "loc": {
-                "start": {
-                  "line": 5,
-                  "column": 7
-                },
-                "end": {
-                  "line": 5,
-                  "column": 24
-                },
-                "identifierName": "SCNTimingFunction"
-              },
-              "name": "SCNTimingFunction"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 142,
-          "end": 163,
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 30
-            },
-            "end": {
-              "line": 5,
-              "column": 51
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNTimingFunction",
-            "raw": "'./SCNTimingFunction'"
-          },
-          "value": "./SCNTimingFunction",
+          "value": "../ObjectiveC/NSObject",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
+            "type": "CommentLine",
+            "value": "import CAAnimation from '../QuartzCore/CAAnimation'",
+            "start": 60,
+            "end": 113,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 53
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNTimingFunction from './SCNTimingFunction'",
+            "start": 114,
+            "end": 167,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 53
+              }
+            }
+          },
+          {
             "type": "CommentBlock",
             "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimationProtocol}\n * @see https://developer.apple.com/documentation/scenekit/scnanimation\n ",
-            "start": 165,
-            "end": 327,
+            "start": 169,
+            "end": 331,
             "loc": {
               "start": {
                 "line": 7,
@@ -257,8 +151,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 328,
-        "end": 4704,
+        "start": 332,
+        "end": 4708,
         "loc": {
           "start": {
             "line": 14,
@@ -271,8 +165,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 343,
-          "end": 4704,
+          "start": 347,
+          "end": 4708,
           "loc": {
             "start": {
               "line": 14,
@@ -285,8 +179,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 349,
-            "end": 361,
+            "start": 353,
+            "end": 365,
             "loc": {
               "start": {
                 "line": 14,
@@ -303,8 +197,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 370,
-            "end": 378,
+            "start": 374,
+            "end": 382,
             "loc": {
               "start": {
                 "line": 14,
@@ -320,8 +214,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 379,
-            "end": 4704,
+            "start": 383,
+            "end": 4708,
             "loc": {
               "start": {
                 "line": 14,
@@ -335,8 +229,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 590,
-                "end": 4169,
+                "start": 594,
+                "end": 4173,
                 "loc": {
                   "start": {
                     "line": 25,
@@ -350,8 +244,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 590,
-                  "end": 601,
+                  "start": 594,
+                  "end": 605,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -375,8 +269,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 602,
-                    "end": 613,
+                    "start": 606,
+                    "end": 617,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -393,8 +287,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 615,
-                  "end": 4169,
+                  "start": 619,
+                  "end": 4173,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -408,8 +302,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 621,
-                      "end": 628,
+                      "start": 625,
+                      "end": 632,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -422,8 +316,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 621,
-                        "end": 628,
+                        "start": 625,
+                        "end": 632,
                         "loc": {
                           "start": {
                             "line": 26,
@@ -436,8 +330,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 621,
-                          "end": 626,
+                          "start": 625,
+                          "end": 630,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -456,8 +350,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Instance Properties",
-                          "start": 634,
-                          "end": 656,
+                          "start": 638,
+                          "end": 660,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -472,8 +366,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?SCNAnimationDidStartBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866063-animationdidstart\n     ",
-                          "start": 662,
-                          "end": 825,
+                          "start": 666,
+                          "end": 829,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -489,8 +383,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 830,
-                      "end": 859,
+                      "start": 834,
+                      "end": 863,
                       "loc": {
                         "start": {
                           "line": 35,
@@ -503,8 +397,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 830,
-                        "end": 859,
+                        "start": 834,
+                        "end": 863,
                         "loc": {
                           "start": {
                             "line": 35,
@@ -518,8 +412,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 830,
-                          "end": 852,
+                          "start": 834,
+                          "end": 856,
                           "loc": {
                             "start": {
                               "line": 35,
@@ -532,8 +426,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 830,
-                            "end": 834,
+                            "start": 834,
+                            "end": 838,
                             "loc": {
                               "start": {
                                 "line": 35,
@@ -548,8 +442,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 835,
-                            "end": 852,
+                            "start": 839,
+                            "end": 856,
                             "loc": {
                               "start": {
                                 "line": 35,
@@ -568,8 +462,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 855,
-                          "end": 859,
+                          "start": 859,
+                          "end": 863,
                           "loc": {
                             "start": {
                               "line": 35,
@@ -590,8 +484,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Instance Properties",
-                          "start": 634,
-                          "end": 656,
+                          "start": 638,
+                          "end": 660,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -606,8 +500,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?SCNAnimationDidStartBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866063-animationdidstart\n     ",
-                          "start": 662,
-                          "end": 825,
+                          "start": 666,
+                          "end": 829,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -624,8 +518,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?SCNAnimationDidStopBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866040-animationdidstop\n     ",
-                          "start": 865,
-                          "end": 1026,
+                          "start": 869,
+                          "end": 1030,
                           "loc": {
                             "start": {
                               "line": 37,
@@ -641,8 +535,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1031,
-                      "end": 1059,
+                      "start": 1035,
+                      "end": 1063,
                       "loc": {
                         "start": {
                           "line": 42,
@@ -655,8 +549,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1031,
-                        "end": 1059,
+                        "start": 1035,
+                        "end": 1063,
                         "loc": {
                           "start": {
                             "line": 42,
@@ -670,8 +564,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1031,
-                          "end": 1052,
+                          "start": 1035,
+                          "end": 1056,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -684,8 +578,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1031,
-                            "end": 1035,
+                            "start": 1035,
+                            "end": 1039,
                             "loc": {
                               "start": {
                                 "line": 42,
@@ -700,8 +594,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1036,
-                            "end": 1052,
+                            "start": 1040,
+                            "end": 1056,
                             "loc": {
                               "start": {
                                 "line": 42,
@@ -720,8 +614,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1055,
-                          "end": 1059,
+                          "start": 1059,
+                          "end": 1063,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -742,8 +636,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?SCNAnimationDidStopBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866040-animationdidstop\n     ",
-                          "start": 865,
-                          "end": 1026,
+                          "start": 869,
+                          "end": 1030,
                           "loc": {
                             "start": {
                               "line": 37,
@@ -760,8 +654,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?SCNAnimationEvent[]}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866038-animationevents\n     ",
-                          "start": 1065,
-                          "end": 1220,
+                          "start": 1069,
+                          "end": 1224,
                           "loc": {
                             "start": {
                               "line": 44,
@@ -777,8 +671,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1225,
-                      "end": 1252,
+                      "start": 1229,
+                      "end": 1256,
                       "loc": {
                         "start": {
                           "line": 49,
@@ -791,8 +685,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1225,
-                        "end": 1252,
+                        "start": 1229,
+                        "end": 1256,
                         "loc": {
                           "start": {
                             "line": 49,
@@ -806,8 +700,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1225,
-                          "end": 1245,
+                          "start": 1229,
+                          "end": 1249,
                           "loc": {
                             "start": {
                               "line": 49,
@@ -820,8 +714,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1225,
-                            "end": 1229,
+                            "start": 1229,
+                            "end": 1233,
                             "loc": {
                               "start": {
                                 "line": 49,
@@ -836,8 +730,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1230,
-                            "end": 1245,
+                            "start": 1234,
+                            "end": 1249,
                             "loc": {
                               "start": {
                                 "line": 49,
@@ -856,8 +750,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1248,
-                          "end": 1252,
+                          "start": 1252,
+                          "end": 1256,
                           "loc": {
                             "start": {
                               "line": 49,
@@ -878,8 +772,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?SCNAnimationEvent[]}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866038-animationevents\n     ",
-                          "start": 1065,
-                          "end": 1220,
+                          "start": 1069,
+                          "end": 1224,
                           "loc": {
                             "start": {
                               "line": 44,
@@ -896,8 +790,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878140-autoreverses\n     ",
-                          "start": 1258,
-                          "end": 1397,
+                          "start": 1262,
+                          "end": 1401,
                           "loc": {
                             "start": {
                               "line": 51,
@@ -913,8 +807,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1402,
-                      "end": 1427,
+                      "start": 1406,
+                      "end": 1431,
                       "loc": {
                         "start": {
                           "line": 56,
@@ -927,8 +821,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1402,
-                        "end": 1427,
+                        "start": 1406,
+                        "end": 1431,
                         "loc": {
                           "start": {
                             "line": 56,
@@ -942,8 +836,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1402,
-                          "end": 1419,
+                          "start": 1406,
+                          "end": 1423,
                           "loc": {
                             "start": {
                               "line": 56,
@@ -956,8 +850,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1402,
-                            "end": 1406,
+                            "start": 1406,
+                            "end": 1410,
                             "loc": {
                               "start": {
                                 "line": 56,
@@ -972,8 +866,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1407,
-                            "end": 1419,
+                            "start": 1411,
+                            "end": 1423,
                             "loc": {
                               "start": {
                                 "line": 56,
@@ -992,8 +886,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 1422,
-                          "end": 1427,
+                          "start": 1426,
+                          "end": 1431,
                           "loc": {
                             "start": {
                               "line": 56,
@@ -1015,8 +909,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878140-autoreverses\n     ",
-                          "start": 1258,
-                          "end": 1397,
+                          "start": 1262,
+                          "end": 1401,
                           "loc": {
                             "start": {
                               "line": 51,
@@ -1033,8 +927,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881689-blendinduration\n     ",
-                          "start": 1433,
-                          "end": 1574,
+                          "start": 1437,
+                          "end": 1578,
                           "loc": {
                             "start": {
                               "line": 58,
@@ -1050,8 +944,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1579,
-                      "end": 1603,
+                      "start": 1583,
+                      "end": 1607,
                       "loc": {
                         "start": {
                           "line": 63,
@@ -1064,8 +958,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1579,
-                        "end": 1603,
+                        "start": 1583,
+                        "end": 1607,
                         "loc": {
                           "start": {
                             "line": 63,
@@ -1079,8 +973,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1579,
-                          "end": 1599,
+                          "start": 1583,
+                          "end": 1603,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1093,8 +987,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1579,
-                            "end": 1583,
+                            "start": 1583,
+                            "end": 1587,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1109,8 +1003,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1584,
-                            "end": 1599,
+                            "start": 1588,
+                            "end": 1603,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1129,8 +1023,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1602,
-                          "end": 1603,
+                          "start": 1606,
+                          "end": 1607,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1156,8 +1050,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881689-blendinduration\n     ",
-                          "start": 1433,
-                          "end": 1574,
+                          "start": 1437,
+                          "end": 1578,
                           "loc": {
                             "start": {
                               "line": 58,
@@ -1174,8 +1068,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881690-blendoutduration\n     ",
-                          "start": 1609,
-                          "end": 1751,
+                          "start": 1613,
+                          "end": 1755,
                           "loc": {
                             "start": {
                               "line": 65,
@@ -1191,8 +1085,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1756,
-                      "end": 1781,
+                      "start": 1760,
+                      "end": 1785,
                       "loc": {
                         "start": {
                           "line": 70,
@@ -1205,8 +1099,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1756,
-                        "end": 1781,
+                        "start": 1760,
+                        "end": 1785,
                         "loc": {
                           "start": {
                             "line": 70,
@@ -1220,8 +1114,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1756,
-                          "end": 1777,
+                          "start": 1760,
+                          "end": 1781,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1234,8 +1128,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1756,
-                            "end": 1760,
+                            "start": 1760,
+                            "end": 1764,
                             "loc": {
                               "start": {
                                 "line": 70,
@@ -1250,8 +1144,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1761,
-                            "end": 1777,
+                            "start": 1765,
+                            "end": 1781,
                             "loc": {
                               "start": {
                                 "line": 70,
@@ -1270,8 +1164,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1780,
-                          "end": 1781,
+                          "start": 1784,
+                          "end": 1785,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1297,8 +1191,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881690-blendoutduration\n     ",
-                          "start": 1609,
-                          "end": 1751,
+                          "start": 1613,
+                          "end": 1755,
                           "loc": {
                             "start": {
                               "line": 65,
@@ -1315,8 +1209,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866057-duration\n     ",
-                          "start": 1787,
-                          "end": 1921,
+                          "start": 1791,
+                          "end": 1925,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1332,8 +1226,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1926,
-                      "end": 1943,
+                      "start": 1930,
+                      "end": 1947,
                       "loc": {
                         "start": {
                           "line": 77,
@@ -1346,8 +1240,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1926,
-                        "end": 1943,
+                        "start": 1930,
+                        "end": 1947,
                         "loc": {
                           "start": {
                             "line": 77,
@@ -1361,8 +1255,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1926,
-                          "end": 1939,
+                          "start": 1930,
+                          "end": 1943,
                           "loc": {
                             "start": {
                               "line": 77,
@@ -1375,8 +1269,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1926,
-                            "end": 1930,
+                            "start": 1930,
+                            "end": 1934,
                             "loc": {
                               "start": {
                                 "line": 77,
@@ -1391,8 +1285,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1931,
-                            "end": 1939,
+                            "start": 1935,
+                            "end": 1943,
                             "loc": {
                               "start": {
                                 "line": 77,
@@ -1411,8 +1305,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1942,
-                          "end": 1943,
+                          "start": 1946,
+                          "end": 1947,
                           "loc": {
                             "start": {
                               "line": 77,
@@ -1438,8 +1332,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866057-duration\n     ",
-                          "start": 1787,
-                          "end": 1921,
+                          "start": 1791,
+                          "end": 1925,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1456,8 +1350,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878138-fillsbackward\n     ",
-                          "start": 1949,
-                          "end": 2089,
+                          "start": 1953,
+                          "end": 2093,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1473,8 +1367,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2094,
-                      "end": 2120,
+                      "start": 2098,
+                      "end": 2124,
                       "loc": {
                         "start": {
                           "line": 84,
@@ -1487,8 +1381,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2094,
-                        "end": 2120,
+                        "start": 2098,
+                        "end": 2124,
                         "loc": {
                           "start": {
                             "line": 84,
@@ -1502,8 +1396,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2094,
-                          "end": 2112,
+                          "start": 2098,
+                          "end": 2116,
                           "loc": {
                             "start": {
                               "line": 84,
@@ -1516,8 +1410,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2094,
-                            "end": 2098,
+                            "start": 2098,
+                            "end": 2102,
                             "loc": {
                               "start": {
                                 "line": 84,
@@ -1532,8 +1426,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2099,
-                            "end": 2112,
+                            "start": 2103,
+                            "end": 2116,
                             "loc": {
                               "start": {
                                 "line": 84,
@@ -1552,8 +1446,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2115,
-                          "end": 2120,
+                          "start": 2119,
+                          "end": 2124,
                           "loc": {
                             "start": {
                               "line": 84,
@@ -1575,8 +1469,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878138-fillsbackward\n     ",
-                          "start": 1949,
-                          "end": 2089,
+                          "start": 1953,
+                          "end": 2093,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1593,8 +1487,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878132-fillsforward\n     ",
-                          "start": 2126,
-                          "end": 2265,
+                          "start": 2130,
+                          "end": 2269,
                           "loc": {
                             "start": {
                               "line": 86,
@@ -1610,8 +1504,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2270,
-                      "end": 2295,
+                      "start": 2274,
+                      "end": 2299,
                       "loc": {
                         "start": {
                           "line": 91,
@@ -1624,8 +1518,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2270,
-                        "end": 2295,
+                        "start": 2274,
+                        "end": 2299,
                         "loc": {
                           "start": {
                             "line": 91,
@@ -1639,8 +1533,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2270,
-                          "end": 2287,
+                          "start": 2274,
+                          "end": 2291,
                           "loc": {
                             "start": {
                               "line": 91,
@@ -1653,8 +1547,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2270,
-                            "end": 2274,
+                            "start": 2274,
+                            "end": 2278,
                             "loc": {
                               "start": {
                                 "line": 91,
@@ -1669,8 +1563,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2275,
-                            "end": 2287,
+                            "start": 2279,
+                            "end": 2291,
                             "loc": {
                               "start": {
                                 "line": 91,
@@ -1689,8 +1583,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2290,
-                          "end": 2295,
+                          "start": 2294,
+                          "end": 2299,
                           "loc": {
                             "start": {
                               "line": 91,
@@ -1712,8 +1606,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878132-fillsforward\n     ",
-                          "start": 2126,
-                          "end": 2265,
+                          "start": 2130,
+                          "end": 2269,
                           "loc": {
                             "start": {
                               "line": 86,
@@ -1730,8 +1624,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866062-isadditive\n     ",
-                          "start": 2301,
-                          "end": 2438,
+                          "start": 2305,
+                          "end": 2442,
                           "loc": {
                             "start": {
                               "line": 93,
@@ -1747,8 +1641,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2443,
-                      "end": 2466,
+                      "start": 2447,
+                      "end": 2470,
                       "loc": {
                         "start": {
                           "line": 98,
@@ -1761,8 +1655,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2443,
-                        "end": 2466,
+                        "start": 2447,
+                        "end": 2470,
                         "loc": {
                           "start": {
                             "line": 98,
@@ -1776,8 +1670,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2443,
-                          "end": 2458,
+                          "start": 2447,
+                          "end": 2462,
                           "loc": {
                             "start": {
                               "line": 98,
@@ -1790,8 +1684,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2443,
-                            "end": 2447,
+                            "start": 2447,
+                            "end": 2451,
                             "loc": {
                               "start": {
                                 "line": 98,
@@ -1806,8 +1700,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2448,
-                            "end": 2458,
+                            "start": 2452,
+                            "end": 2462,
                             "loc": {
                               "start": {
                                 "line": 98,
@@ -1826,8 +1720,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2461,
-                          "end": 2466,
+                          "start": 2465,
+                          "end": 2470,
                           "loc": {
                             "start": {
                               "line": 98,
@@ -1849,8 +1743,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866062-isadditive\n     ",
-                          "start": 2301,
-                          "end": 2438,
+                          "start": 2305,
+                          "end": 2442,
                           "loc": {
                             "start": {
                               "line": 93,
@@ -1867,8 +1761,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878139-isappliedoncompletion\n     ",
-                          "start": 2472,
-                          "end": 2620,
+                          "start": 2476,
+                          "end": 2624,
                           "loc": {
                             "start": {
                               "line": 100,
@@ -1884,8 +1778,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2625,
-                      "end": 2659,
+                      "start": 2629,
+                      "end": 2663,
                       "loc": {
                         "start": {
                           "line": 105,
@@ -1898,8 +1792,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2625,
-                        "end": 2659,
+                        "start": 2629,
+                        "end": 2663,
                         "loc": {
                           "start": {
                             "line": 105,
@@ -1913,8 +1807,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2625,
-                          "end": 2651,
+                          "start": 2629,
+                          "end": 2655,
                           "loc": {
                             "start": {
                               "line": 105,
@@ -1927,8 +1821,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2625,
-                            "end": 2629,
+                            "start": 2629,
+                            "end": 2633,
                             "loc": {
                               "start": {
                                 "line": 105,
@@ -1943,8 +1837,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2630,
-                            "end": 2651,
+                            "start": 2634,
+                            "end": 2655,
                             "loc": {
                               "start": {
                                 "line": 105,
@@ -1963,8 +1857,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2654,
-                          "end": 2659,
+                          "start": 2658,
+                          "end": 2663,
                           "loc": {
                             "start": {
                               "line": 105,
@@ -1986,8 +1880,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878139-isappliedoncompletion\n     ",
-                          "start": 2472,
-                          "end": 2620,
+                          "start": 2476,
+                          "end": 2624,
                           "loc": {
                             "start": {
                               "line": 100,
@@ -2004,8 +1898,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866047-iscumulative\n     ",
-                          "start": 2665,
-                          "end": 2804,
+                          "start": 2669,
+                          "end": 2808,
                           "loc": {
                             "start": {
                               "line": 107,
@@ -2021,8 +1915,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2809,
-                      "end": 2834,
+                      "start": 2813,
+                      "end": 2838,
                       "loc": {
                         "start": {
                           "line": 112,
@@ -2035,8 +1929,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2809,
-                        "end": 2834,
+                        "start": 2813,
+                        "end": 2838,
                         "loc": {
                           "start": {
                             "line": 112,
@@ -2050,8 +1944,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2809,
-                          "end": 2826,
+                          "start": 2813,
+                          "end": 2830,
                           "loc": {
                             "start": {
                               "line": 112,
@@ -2064,8 +1958,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2809,
-                            "end": 2813,
+                            "start": 2813,
+                            "end": 2817,
                             "loc": {
                               "start": {
                                 "line": 112,
@@ -2080,8 +1974,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2814,
-                            "end": 2826,
+                            "start": 2818,
+                            "end": 2830,
                             "loc": {
                               "start": {
                                 "line": 112,
@@ -2100,8 +1994,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2829,
-                          "end": 2834,
+                          "start": 2833,
+                          "end": 2838,
                           "loc": {
                             "start": {
                               "line": 112,
@@ -2123,8 +2017,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866047-iscumulative\n     ",
-                          "start": 2665,
-                          "end": 2804,
+                          "start": 2669,
+                          "end": 2808,
                           "loc": {
                             "start": {
                               "line": 107,
@@ -2141,8 +2035,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878126-isremovedoncompletion\n     ",
-                          "start": 2840,
-                          "end": 2988,
+                          "start": 2844,
+                          "end": 2992,
                           "loc": {
                             "start": {
                               "line": 114,
@@ -2158,8 +2052,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2993,
-                      "end": 3027,
+                      "start": 2997,
+                      "end": 3031,
                       "loc": {
                         "start": {
                           "line": 119,
@@ -2172,8 +2066,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2993,
-                        "end": 3027,
+                        "start": 2997,
+                        "end": 3031,
                         "loc": {
                           "start": {
                             "line": 119,
@@ -2187,8 +2081,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2993,
-                          "end": 3019,
+                          "start": 2997,
+                          "end": 3023,
                           "loc": {
                             "start": {
                               "line": 119,
@@ -2201,8 +2095,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2993,
-                            "end": 2997,
+                            "start": 2997,
+                            "end": 3001,
                             "loc": {
                               "start": {
                                 "line": 119,
@@ -2217,8 +2111,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2998,
-                            "end": 3019,
+                            "start": 3002,
+                            "end": 3023,
                             "loc": {
                               "start": {
                                 "line": 119,
@@ -2237,8 +2131,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 3022,
-                          "end": 3027,
+                          "start": 3026,
+                          "end": 3031,
                           "loc": {
                             "start": {
                               "line": 119,
@@ -2260,8 +2154,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878126-isremovedoncompletion\n     ",
-                          "start": 2840,
-                          "end": 2988,
+                          "start": 2844,
+                          "end": 2992,
                           "loc": {
                             "start": {
                               "line": 114,
@@ -2278,8 +2172,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?string}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878148-keypath\n     ",
-                          "start": 3033,
-                          "end": 3167,
+                          "start": 3037,
+                          "end": 3171,
                           "loc": {
                             "start": {
                               "line": 121,
@@ -2295,8 +2189,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3172,
-                      "end": 3191,
+                      "start": 3176,
+                      "end": 3195,
                       "loc": {
                         "start": {
                           "line": 126,
@@ -2309,8 +2203,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3172,
-                        "end": 3191,
+                        "start": 3176,
+                        "end": 3195,
                         "loc": {
                           "start": {
                             "line": 126,
@@ -2324,8 +2218,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3172,
-                          "end": 3184,
+                          "start": 3176,
+                          "end": 3188,
                           "loc": {
                             "start": {
                               "line": 126,
@@ -2338,8 +2232,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3172,
-                            "end": 3176,
+                            "start": 3176,
+                            "end": 3180,
                             "loc": {
                               "start": {
                                 "line": 126,
@@ -2354,8 +2248,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3177,
-                            "end": 3184,
+                            "start": 3181,
+                            "end": 3188,
                             "loc": {
                               "start": {
                                 "line": 126,
@@ -2374,8 +2268,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 3187,
-                          "end": 3191,
+                          "start": 3191,
+                          "end": 3195,
                           "loc": {
                             "start": {
                               "line": 126,
@@ -2396,8 +2290,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {?string}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878148-keypath\n     ",
-                          "start": 3033,
-                          "end": 3167,
+                          "start": 3037,
+                          "end": 3171,
                           "loc": {
                             "start": {
                               "line": 121,
@@ -2414,8 +2308,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878146-repeatcount\n     ",
-                          "start": 3197,
-                          "end": 3334,
+                          "start": 3201,
+                          "end": 3338,
                           "loc": {
                             "start": {
                               "line": 128,
@@ -2431,8 +2325,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3339,
-                      "end": 3359,
+                      "start": 3343,
+                      "end": 3363,
                       "loc": {
                         "start": {
                           "line": 133,
@@ -2445,8 +2339,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3339,
-                        "end": 3359,
+                        "start": 3343,
+                        "end": 3363,
                         "loc": {
                           "start": {
                             "line": 133,
@@ -2460,8 +2354,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3339,
-                          "end": 3355,
+                          "start": 3343,
+                          "end": 3359,
                           "loc": {
                             "start": {
                               "line": 133,
@@ -2474,8 +2368,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3339,
-                            "end": 3343,
+                            "start": 3343,
+                            "end": 3347,
                             "loc": {
                               "start": {
                                 "line": 133,
@@ -2490,8 +2384,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3344,
-                            "end": 3355,
+                            "start": 3348,
+                            "end": 3359,
                             "loc": {
                               "start": {
                                 "line": 133,
@@ -2510,8 +2404,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3358,
-                          "end": 3359,
+                          "start": 3362,
+                          "end": 3363,
                           "loc": {
                             "start": {
                               "line": 133,
@@ -2537,8 +2431,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878146-repeatcount\n     ",
-                          "start": 3197,
-                          "end": 3334,
+                          "start": 3201,
+                          "end": 3338,
                           "loc": {
                             "start": {
                               "line": 128,
@@ -2555,8 +2449,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878135-startdelay\n     ",
-                          "start": 3365,
-                          "end": 3501,
+                          "start": 3369,
+                          "end": 3505,
                           "loc": {
                             "start": {
                               "line": 135,
@@ -2572,8 +2466,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3506,
-                      "end": 3525,
+                      "start": 3510,
+                      "end": 3529,
                       "loc": {
                         "start": {
                           "line": 140,
@@ -2586,8 +2480,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3506,
-                        "end": 3525,
+                        "start": 3510,
+                        "end": 3529,
                         "loc": {
                           "start": {
                             "line": 140,
@@ -2601,8 +2495,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3506,
-                          "end": 3521,
+                          "start": 3510,
+                          "end": 3525,
                           "loc": {
                             "start": {
                               "line": 140,
@@ -2615,8 +2509,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3506,
-                            "end": 3510,
+                            "start": 3510,
+                            "end": 3514,
                             "loc": {
                               "start": {
                                 "line": 140,
@@ -2631,8 +2525,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3511,
-                            "end": 3521,
+                            "start": 3515,
+                            "end": 3525,
                             "loc": {
                               "start": {
                                 "line": 140,
@@ -2651,8 +2545,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3524,
-                          "end": 3525,
+                          "start": 3528,
+                          "end": 3529,
                           "loc": {
                             "start": {
                               "line": 140,
@@ -2678,8 +2572,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878135-startdelay\n     ",
-                          "start": 3365,
-                          "end": 3501,
+                          "start": 3369,
+                          "end": 3505,
                           "loc": {
                             "start": {
                               "line": 135,
@@ -2696,8 +2590,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878147-timeoffset\n     ",
-                          "start": 3531,
-                          "end": 3667,
+                          "start": 3535,
+                          "end": 3671,
                           "loc": {
                             "start": {
                               "line": 142,
@@ -2713,8 +2607,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3672,
-                      "end": 3691,
+                      "start": 3676,
+                      "end": 3695,
                       "loc": {
                         "start": {
                           "line": 147,
@@ -2727,8 +2621,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3672,
-                        "end": 3691,
+                        "start": 3676,
+                        "end": 3695,
                         "loc": {
                           "start": {
                             "line": 147,
@@ -2742,8 +2636,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3672,
-                          "end": 3687,
+                          "start": 3676,
+                          "end": 3691,
                           "loc": {
                             "start": {
                               "line": 147,
@@ -2756,8 +2650,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3672,
-                            "end": 3676,
+                            "start": 3676,
+                            "end": 3680,
                             "loc": {
                               "start": {
                                 "line": 147,
@@ -2772,8 +2666,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3677,
-                            "end": 3687,
+                            "start": 3681,
+                            "end": 3691,
                             "loc": {
                               "start": {
                                 "line": 147,
@@ -2792,8 +2686,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3690,
-                          "end": 3691,
+                          "start": 3694,
+                          "end": 3695,
                           "loc": {
                             "start": {
                               "line": 147,
@@ -2819,8 +2713,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878147-timeoffset\n     ",
-                          "start": 3531,
-                          "end": 3667,
+                          "start": 3535,
+                          "end": 3671,
                           "loc": {
                             "start": {
                               "line": 142,
@@ -2837,8 +2731,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {SCNTimingFunction}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878143-timingfunction\n     ",
-                          "start": 3697,
-                          "end": 3848,
+                          "start": 3701,
+                          "end": 3852,
                           "loc": {
                             "start": {
                               "line": 149,
@@ -2854,8 +2748,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3853,
-                      "end": 3879,
+                      "start": 3857,
+                      "end": 3883,
                       "loc": {
                         "start": {
                           "line": 154,
@@ -2868,8 +2762,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3853,
-                        "end": 3879,
+                        "start": 3857,
+                        "end": 3883,
                         "loc": {
                           "start": {
                             "line": 154,
@@ -2883,8 +2777,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3853,
-                          "end": 3872,
+                          "start": 3857,
+                          "end": 3876,
                           "loc": {
                             "start": {
                               "line": 154,
@@ -2897,8 +2791,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3853,
-                            "end": 3857,
+                            "start": 3857,
+                            "end": 3861,
                             "loc": {
                               "start": {
                                 "line": 154,
@@ -2913,8 +2807,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3858,
-                            "end": 3872,
+                            "start": 3862,
+                            "end": 3876,
                             "loc": {
                               "start": {
                                 "line": 154,
@@ -2933,8 +2827,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 3875,
-                          "end": 3879,
+                          "start": 3879,
+                          "end": 3883,
                           "loc": {
                             "start": {
                               "line": 154,
@@ -2955,8 +2849,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {SCNTimingFunction}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878143-timingfunction\n     ",
-                          "start": 3697,
-                          "end": 3848,
+                          "start": 3701,
+                          "end": 3852,
                           "loc": {
                             "start": {
                               "line": 149,
@@ -2973,8 +2867,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878127-usesscenetimebase\n     ",
-                          "start": 3885,
-                          "end": 4029,
+                          "start": 3889,
+                          "end": 4033,
                           "loc": {
                             "start": {
                               "line": 156,
@@ -2990,8 +2884,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4034,
-                      "end": 4064,
+                      "start": 4038,
+                      "end": 4068,
                       "loc": {
                         "start": {
                           "line": 161,
@@ -3004,8 +2898,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4034,
-                        "end": 4064,
+                        "start": 4038,
+                        "end": 4068,
                         "loc": {
                           "start": {
                             "line": 161,
@@ -3019,8 +2913,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4034,
-                          "end": 4056,
+                          "start": 4038,
+                          "end": 4060,
                           "loc": {
                             "start": {
                               "line": 161,
@@ -3033,8 +2927,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4034,
-                            "end": 4038,
+                            "start": 4038,
+                            "end": 4042,
                             "loc": {
                               "start": {
                                 "line": 161,
@@ -3049,8 +2943,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4039,
-                            "end": 4056,
+                            "start": 4043,
+                            "end": 4060,
                             "loc": {
                               "start": {
                                 "line": 161,
@@ -3069,8 +2963,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 4059,
-                          "end": 4064,
+                          "start": 4063,
+                          "end": 4068,
                           "loc": {
                             "start": {
                               "line": 161,
@@ -3092,8 +2986,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878127-usesscenetimebase\n     ",
-                          "start": 3885,
-                          "end": 4029,
+                          "start": 3889,
+                          "end": 4033,
                           "loc": {
                             "start": {
                               "line": 156,
@@ -3110,8 +3004,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * @access private\n     * @type {CAAnimation}\n     ",
-                          "start": 4070,
-                          "end": 4131,
+                          "start": 4074,
+                          "end": 4135,
                           "loc": {
                             "start": {
                               "line": 163,
@@ -3127,8 +3021,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4136,
-                      "end": 4165,
+                      "start": 4140,
+                      "end": 4169,
                       "loc": {
                         "start": {
                           "line": 167,
@@ -3141,8 +3035,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4136,
-                        "end": 4165,
+                        "start": 4140,
+                        "end": 4169,
                         "loc": {
                           "start": {
                             "line": 167,
@@ -3156,8 +3050,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4136,
-                          "end": 4151,
+                          "start": 4140,
+                          "end": 4155,
                           "loc": {
                             "start": {
                               "line": 167,
@@ -3170,8 +3064,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4136,
-                            "end": 4140,
+                            "start": 4140,
+                            "end": 4144,
                             "loc": {
                               "start": {
                                 "line": 167,
@@ -3186,8 +3080,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4141,
-                            "end": 4151,
+                            "start": 4145,
+                            "end": 4155,
                             "loc": {
                               "start": {
                                 "line": 167,
@@ -3206,8 +3100,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 4154,
-                          "end": 4165,
+                          "start": 4158,
+                          "end": 4169,
                           "loc": {
                             "start": {
                               "line": 167,
@@ -3227,8 +3121,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * @access private\n     * @type {CAAnimation}\n     ",
-                          "start": 4070,
-                          "end": 4131,
+                          "start": 4074,
+                          "end": 4135,
                           "loc": {
                             "start": {
                               "line": 163,
@@ -3250,8 +3144,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Initializers",
-                    "start": 384,
-                    "end": 399,
+                    "start": 388,
+                    "end": 403,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -3266,8 +3160,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {CAAnimation} caAnimation - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866056-init\n   ",
-                    "start": 403,
-                    "end": 587,
+                    "start": 407,
+                    "end": 591,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -3284,8 +3178,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {string} animationUrl - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866053-init\n   ",
-                    "start": 4173,
-                    "end": 4363,
+                    "start": 4177,
+                    "end": 4367,
                     "loc": {
                       "start": {
                         "line": 170,
@@ -3301,8 +3195,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4366,
-                "end": 4439,
+                "start": 4370,
+                "end": 4443,
                 "loc": {
                   "start": {
                     "line": 177,
@@ -3316,8 +3210,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4373,
-                  "end": 4396,
+                  "start": 4377,
+                  "end": 4400,
                   "loc": {
                     "start": {
                       "line": 177,
@@ -3340,8 +3234,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4397,
-                    "end": 4409,
+                    "start": 4401,
+                    "end": 4413,
                     "loc": {
                       "start": {
                         "line": 177,
@@ -3358,8 +3252,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4411,
-                  "end": 4439,
+                  "start": 4415,
+                  "end": 4443,
                   "loc": {
                     "start": {
                       "line": 177,
@@ -3377,8 +3271,8 @@
                     {
                       "type": "CommentLine",
                       "value": " TODO: implement",
-                      "start": 4417,
-                      "end": 4435,
+                      "start": 4421,
+                      "end": 4439,
                       "loc": {
                         "start": {
                           "line": 178,
@@ -3393,8 +3287,8 @@
                     {
                       "type": "CommentBlock",
                       "value": "*\n   * \n   * @access public\n   * @param {string} animationName - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866042-init\n   ",
-                      "start": 4443,
-                      "end": 4634,
+                      "start": 4447,
+                      "end": 4638,
                       "loc": {
                         "start": {
                           "line": 181,
@@ -3412,8 +3306,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {string} animationUrl - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866053-init\n   ",
-                    "start": 4173,
-                    "end": 4363,
+                    "start": 4177,
+                    "end": 4367,
                     "loc": {
                       "start": {
                         "line": 170,
@@ -3429,8 +3323,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4637,
-                "end": 4702,
+                "start": 4641,
+                "end": 4706,
                 "loc": {
                   "start": {
                     "line": 188,
@@ -3444,8 +3338,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4644,
-                  "end": 4658,
+                  "start": 4648,
+                  "end": 4662,
                   "loc": {
                     "start": {
                       "line": 188,
@@ -3468,8 +3362,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4659,
-                    "end": 4672,
+                    "start": 4663,
+                    "end": 4676,
                     "loc": {
                       "start": {
                         "line": 188,
@@ -3486,8 +3380,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4674,
-                  "end": 4702,
+                  "start": 4678,
+                  "end": 4706,
                   "loc": {
                     "start": {
                       "line": 188,
@@ -3505,8 +3399,8 @@
                     {
                       "type": "CommentLine",
                       "value": " TODO: implement",
-                      "start": 4680,
-                      "end": 4698,
+                      "start": 4684,
+                      "end": 4702,
                       "loc": {
                         "start": {
                           "line": 189,
@@ -3524,8 +3418,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {string} animationName - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866042-init\n   ",
-                    "start": 4443,
-                    "end": 4634,
+                    "start": 4447,
+                    "end": 4638,
                     "loc": {
                       "start": {
                         "line": 181,
@@ -3543,10 +3437,42 @@
           },
           "leadingComments": [
             {
+              "type": "CommentLine",
+              "value": "import CAAnimation from '../QuartzCore/CAAnimation'",
+              "start": 60,
+              "end": 113,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 4,
+                  "column": 53
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import SCNTimingFunction from './SCNTimingFunction'",
+              "start": 114,
+              "end": 167,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 53
+                }
+              }
+            },
+            {
               "type": "CommentBlock",
               "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimationProtocol}\n * @see https://developer.apple.com/documentation/scenekit/scnanimation\n ",
-              "start": 165,
-              "end": 327,
+              "start": 169,
+              "end": 331,
               "loc": {
                 "start": {
                   "line": 7,
@@ -3563,10 +3489,42 @@
         },
         "leadingComments": [
           {
+            "type": "CommentLine",
+            "value": "import CAAnimation from '../QuartzCore/CAAnimation'",
+            "start": 60,
+            "end": 113,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 53
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNTimingFunction from './SCNTimingFunction'",
+            "start": 114,
+            "end": 167,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 53
+              }
+            }
+          },
+          {
             "type": "CommentBlock",
             "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimationProtocol}\n * @see https://developer.apple.com/documentation/scenekit/scnanimation\n ",
-            "start": 165,
-            "end": 327,
+            "start": 169,
+            "end": 331,
             "loc": {
               "start": {
                 "line": 7,
@@ -3621,10 +3579,42 @@
   },
   "comments": [
     {
+      "type": "CommentLine",
+      "value": "import CAAnimation from '../QuartzCore/CAAnimation'",
+      "start": 60,
+      "end": 113,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "import SCNTimingFunction from './SCNTimingFunction'",
+      "start": 114,
+      "end": 167,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 53
+        }
+      }
+    },
+    {
       "type": "CommentBlock",
       "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimationProtocol}\n * @see https://developer.apple.com/documentation/scenekit/scnanimation\n ",
-      "start": 165,
-      "end": 327,
+      "start": 169,
+      "end": 331,
       "loc": {
         "start": {
           "line": 7,
@@ -3639,8 +3629,8 @@
     {
       "type": "CommentLine",
       "value": " Initializers",
-      "start": 384,
-      "end": 399,
+      "start": 388,
+      "end": 403,
       "loc": {
         "start": {
           "line": 16,
@@ -3655,8 +3645,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {CAAnimation} caAnimation - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866056-init\n   ",
-      "start": 403,
-      "end": 587,
+      "start": 407,
+      "end": 591,
       "loc": {
         "start": {
           "line": 18,
@@ -3671,8 +3661,8 @@
     {
       "type": "CommentLine",
       "value": " Instance Properties",
-      "start": 634,
-      "end": 656,
+      "start": 638,
+      "end": 660,
       "loc": {
         "start": {
           "line": 28,
@@ -3687,8 +3677,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?SCNAnimationDidStartBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866063-animationdidstart\n     ",
-      "start": 662,
-      "end": 825,
+      "start": 666,
+      "end": 829,
       "loc": {
         "start": {
           "line": 30,
@@ -3703,8 +3693,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?SCNAnimationDidStopBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866040-animationdidstop\n     ",
-      "start": 865,
-      "end": 1026,
+      "start": 869,
+      "end": 1030,
       "loc": {
         "start": {
           "line": 37,
@@ -3719,8 +3709,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?SCNAnimationEvent[]}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866038-animationevents\n     ",
-      "start": 1065,
-      "end": 1220,
+      "start": 1069,
+      "end": 1224,
       "loc": {
         "start": {
           "line": 44,
@@ -3735,8 +3725,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878140-autoreverses\n     ",
-      "start": 1258,
-      "end": 1397,
+      "start": 1262,
+      "end": 1401,
       "loc": {
         "start": {
           "line": 51,
@@ -3751,8 +3741,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881689-blendinduration\n     ",
-      "start": 1433,
-      "end": 1574,
+      "start": 1437,
+      "end": 1578,
       "loc": {
         "start": {
           "line": 58,
@@ -3767,8 +3757,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881690-blendoutduration\n     ",
-      "start": 1609,
-      "end": 1751,
+      "start": 1613,
+      "end": 1755,
       "loc": {
         "start": {
           "line": 65,
@@ -3783,8 +3773,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866057-duration\n     ",
-      "start": 1787,
-      "end": 1921,
+      "start": 1791,
+      "end": 1925,
       "loc": {
         "start": {
           "line": 72,
@@ -3799,8 +3789,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878138-fillsbackward\n     ",
-      "start": 1949,
-      "end": 2089,
+      "start": 1953,
+      "end": 2093,
       "loc": {
         "start": {
           "line": 79,
@@ -3815,8 +3805,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878132-fillsforward\n     ",
-      "start": 2126,
-      "end": 2265,
+      "start": 2130,
+      "end": 2269,
       "loc": {
         "start": {
           "line": 86,
@@ -3831,8 +3821,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866062-isadditive\n     ",
-      "start": 2301,
-      "end": 2438,
+      "start": 2305,
+      "end": 2442,
       "loc": {
         "start": {
           "line": 93,
@@ -3847,8 +3837,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878139-isappliedoncompletion\n     ",
-      "start": 2472,
-      "end": 2620,
+      "start": 2476,
+      "end": 2624,
       "loc": {
         "start": {
           "line": 100,
@@ -3863,8 +3853,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866047-iscumulative\n     ",
-      "start": 2665,
-      "end": 2804,
+      "start": 2669,
+      "end": 2808,
       "loc": {
         "start": {
           "line": 107,
@@ -3879,8 +3869,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878126-isremovedoncompletion\n     ",
-      "start": 2840,
-      "end": 2988,
+      "start": 2844,
+      "end": 2992,
       "loc": {
         "start": {
           "line": 114,
@@ -3895,8 +3885,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?string}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878148-keypath\n     ",
-      "start": 3033,
-      "end": 3167,
+      "start": 3037,
+      "end": 3171,
       "loc": {
         "start": {
           "line": 121,
@@ -3911,8 +3901,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878146-repeatcount\n     ",
-      "start": 3197,
-      "end": 3334,
+      "start": 3201,
+      "end": 3338,
       "loc": {
         "start": {
           "line": 128,
@@ -3927,8 +3917,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878135-startdelay\n     ",
-      "start": 3365,
-      "end": 3501,
+      "start": 3369,
+      "end": 3505,
       "loc": {
         "start": {
           "line": 135,
@@ -3943,8 +3933,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878147-timeoffset\n     ",
-      "start": 3531,
-      "end": 3667,
+      "start": 3535,
+      "end": 3671,
       "loc": {
         "start": {
           "line": 142,
@@ -3959,8 +3949,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {SCNTimingFunction}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878143-timingfunction\n     ",
-      "start": 3697,
-      "end": 3848,
+      "start": 3701,
+      "end": 3852,
       "loc": {
         "start": {
           "line": 149,
@@ -3975,8 +3965,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878127-usesscenetimebase\n     ",
-      "start": 3885,
-      "end": 4029,
+      "start": 3889,
+      "end": 4033,
       "loc": {
         "start": {
           "line": 156,
@@ -3991,8 +3981,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * @access private\n     * @type {CAAnimation}\n     ",
-      "start": 4070,
-      "end": 4131,
+      "start": 4074,
+      "end": 4135,
       "loc": {
         "start": {
           "line": 163,
@@ -4007,8 +3997,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {string} animationUrl - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866053-init\n   ",
-      "start": 4173,
-      "end": 4363,
+      "start": 4177,
+      "end": 4367,
       "loc": {
         "start": {
           "line": 170,
@@ -4023,8 +4013,8 @@
     {
       "type": "CommentLine",
       "value": " TODO: implement",
-      "start": 4417,
-      "end": 4435,
+      "start": 4421,
+      "end": 4439,
       "loc": {
         "start": {
           "line": 178,
@@ -4039,8 +4029,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {string} animationName - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866042-init\n   ",
-      "start": 4443,
-      "end": 4634,
+      "start": 4447,
+      "end": 4638,
       "loc": {
         "start": {
           "line": 181,
@@ -4055,8 +4045,8 @@
     {
       "type": "CommentLine",
       "value": " TODO: implement",
-      "start": 4680,
-      "end": 4698,
+      "start": 4684,
+      "end": 4702,
       "loc": {
         "start": {
           "line": 189,
@@ -4205,22 +4195,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import CAAnimation from '../QuartzCore/CAAnimation'",
       "start": 60,
-      "end": 66,
+      "end": 113,
       "loc": {
         "start": {
           "line": 4,
@@ -4228,106 +4206,15 @@
         },
         "end": {
           "line": 4,
-          "column": 6
+          "column": 53
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "CAAnimation",
-      "start": 67,
-      "end": 78,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 79,
-      "end": 83,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 19
-        },
-        "end": {
-          "line": 4,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "../QuartzCore/CAAnimation",
-      "start": 84,
-      "end": 111,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 24
-        },
-        "end": {
-          "line": 4,
-          "column": 51
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 112,
-      "end": 118,
+      "type": "CommentLine",
+      "value": "import SCNTimingFunction from './SCNTimingFunction'",
+      "start": 114,
+      "end": 167,
       "loc": {
         "start": {
           "line": 5,
@@ -4335,94 +4222,15 @@
         },
         "end": {
           "line": 5,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNTimingFunction",
-      "start": 119,
-      "end": 136,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 7
-        },
-        "end": {
-          "line": 5,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 137,
-      "end": 141,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 25
-        },
-        "end": {
-          "line": 5,
-          "column": 29
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNTimingFunction",
-      "start": 142,
-      "end": 163,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 30
-        },
-        "end": {
-          "line": 5,
-          "column": 51
+          "column": 53
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimationProtocol}\n * @see https://developer.apple.com/documentation/scenekit/scnanimation\n ",
-      "start": 165,
-      "end": 327,
+      "start": 169,
+      "end": 331,
       "loc": {
         "start": {
           "line": 7,
@@ -4449,8 +4257,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 328,
-      "end": 334,
+      "start": 332,
+      "end": 338,
       "loc": {
         "start": {
           "line": 14,
@@ -4477,8 +4285,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 335,
-      "end": 342,
+      "start": 339,
+      "end": 346,
       "loc": {
         "start": {
           "line": 14,
@@ -4505,8 +4313,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 343,
-      "end": 348,
+      "start": 347,
+      "end": 352,
       "loc": {
         "start": {
           "line": 14,
@@ -4531,8 +4339,8 @@
         "binop": null
       },
       "value": "SCNAnimation",
-      "start": 349,
-      "end": 361,
+      "start": 353,
+      "end": 365,
       "loc": {
         "start": {
           "line": 14,
@@ -4559,8 +4367,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 362,
-      "end": 369,
+      "start": 366,
+      "end": 373,
       "loc": {
         "start": {
           "line": 14,
@@ -4585,8 +4393,8 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 370,
-      "end": 378,
+      "start": 374,
+      "end": 382,
       "loc": {
         "start": {
           "line": 14,
@@ -4610,8 +4418,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 379,
-      "end": 380,
+      "start": 383,
+      "end": 384,
       "loc": {
         "start": {
           "line": 14,
@@ -4626,8 +4434,8 @@
     {
       "type": "CommentLine",
       "value": " Initializers",
-      "start": 384,
-      "end": 399,
+      "start": 388,
+      "end": 403,
       "loc": {
         "start": {
           "line": 16,
@@ -4642,8 +4450,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {CAAnimation} caAnimation - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866056-init\n   ",
-      "start": 403,
-      "end": 587,
+      "start": 407,
+      "end": 591,
       "loc": {
         "start": {
           "line": 18,
@@ -4668,8 +4476,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 590,
-      "end": 601,
+      "start": 594,
+      "end": 605,
       "loc": {
         "start": {
           "line": 25,
@@ -4693,8 +4501,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 601,
-      "end": 602,
+      "start": 605,
+      "end": 606,
       "loc": {
         "start": {
           "line": 25,
@@ -4719,8 +4527,8 @@
         "binop": null
       },
       "value": "caAnimation",
-      "start": 602,
-      "end": 613,
+      "start": 606,
+      "end": 617,
       "loc": {
         "start": {
           "line": 25,
@@ -4744,8 +4552,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 613,
-      "end": 614,
+      "start": 617,
+      "end": 618,
       "loc": {
         "start": {
           "line": 25,
@@ -4769,8 +4577,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 615,
-      "end": 616,
+      "start": 619,
+      "end": 620,
       "loc": {
         "start": {
           "line": 25,
@@ -4797,8 +4605,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 621,
-      "end": 626,
+      "start": 625,
+      "end": 630,
       "loc": {
         "start": {
           "line": 26,
@@ -4822,8 +4630,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 626,
-      "end": 627,
+      "start": 630,
+      "end": 631,
       "loc": {
         "start": {
           "line": 26,
@@ -4847,8 +4655,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 627,
-      "end": 628,
+      "start": 631,
+      "end": 632,
       "loc": {
         "start": {
           "line": 26,
@@ -4863,8 +4671,8 @@
     {
       "type": "CommentLine",
       "value": " Instance Properties",
-      "start": 634,
-      "end": 656,
+      "start": 638,
+      "end": 660,
       "loc": {
         "start": {
           "line": 28,
@@ -4879,8 +4687,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?SCNAnimationDidStartBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866063-animationdidstart\n     ",
-      "start": 662,
-      "end": 825,
+      "start": 666,
+      "end": 829,
       "loc": {
         "start": {
           "line": 30,
@@ -4907,8 +4715,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 830,
-      "end": 834,
+      "start": 834,
+      "end": 838,
       "loc": {
         "start": {
           "line": 35,
@@ -4933,8 +4741,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 834,
-      "end": 835,
+      "start": 838,
+      "end": 839,
       "loc": {
         "start": {
           "line": 35,
@@ -4959,8 +4767,8 @@
         "binop": null
       },
       "value": "animationDidStart",
-      "start": 835,
-      "end": 852,
+      "start": 839,
+      "end": 856,
       "loc": {
         "start": {
           "line": 35,
@@ -4986,8 +4794,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 853,
-      "end": 854,
+      "start": 857,
+      "end": 858,
       "loc": {
         "start": {
           "line": 35,
@@ -5014,8 +4822,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 855,
-      "end": 859,
+      "start": 859,
+      "end": 863,
       "loc": {
         "start": {
           "line": 35,
@@ -5030,8 +4838,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?SCNAnimationDidStopBlock}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866040-animationdidstop\n     ",
-      "start": 865,
-      "end": 1026,
+      "start": 869,
+      "end": 1030,
       "loc": {
         "start": {
           "line": 37,
@@ -5058,8 +4866,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1031,
-      "end": 1035,
+      "start": 1035,
+      "end": 1039,
       "loc": {
         "start": {
           "line": 42,
@@ -5084,8 +4892,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1035,
-      "end": 1036,
+      "start": 1039,
+      "end": 1040,
       "loc": {
         "start": {
           "line": 42,
@@ -5110,8 +4918,8 @@
         "binop": null
       },
       "value": "animationDidStop",
-      "start": 1036,
-      "end": 1052,
+      "start": 1040,
+      "end": 1056,
       "loc": {
         "start": {
           "line": 42,
@@ -5137,8 +4945,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1053,
-      "end": 1054,
+      "start": 1057,
+      "end": 1058,
       "loc": {
         "start": {
           "line": 42,
@@ -5165,8 +4973,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1055,
-      "end": 1059,
+      "start": 1059,
+      "end": 1063,
       "loc": {
         "start": {
           "line": 42,
@@ -5181,8 +4989,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?SCNAnimationEvent[]}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866038-animationevents\n     ",
-      "start": 1065,
-      "end": 1220,
+      "start": 1069,
+      "end": 1224,
       "loc": {
         "start": {
           "line": 44,
@@ -5209,8 +5017,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1225,
-      "end": 1229,
+      "start": 1229,
+      "end": 1233,
       "loc": {
         "start": {
           "line": 49,
@@ -5235,8 +5043,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1229,
-      "end": 1230,
+      "start": 1233,
+      "end": 1234,
       "loc": {
         "start": {
           "line": 49,
@@ -5261,8 +5069,8 @@
         "binop": null
       },
       "value": "animationEvents",
-      "start": 1230,
-      "end": 1245,
+      "start": 1234,
+      "end": 1249,
       "loc": {
         "start": {
           "line": 49,
@@ -5288,8 +5096,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1246,
-      "end": 1247,
+      "start": 1250,
+      "end": 1251,
       "loc": {
         "start": {
           "line": 49,
@@ -5316,8 +5124,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1248,
-      "end": 1252,
+      "start": 1252,
+      "end": 1256,
       "loc": {
         "start": {
           "line": 49,
@@ -5332,8 +5140,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878140-autoreverses\n     ",
-      "start": 1258,
-      "end": 1397,
+      "start": 1262,
+      "end": 1401,
       "loc": {
         "start": {
           "line": 51,
@@ -5360,8 +5168,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1402,
-      "end": 1406,
+      "start": 1406,
+      "end": 1410,
       "loc": {
         "start": {
           "line": 56,
@@ -5386,8 +5194,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1406,
-      "end": 1407,
+      "start": 1410,
+      "end": 1411,
       "loc": {
         "start": {
           "line": 56,
@@ -5412,8 +5220,8 @@
         "binop": null
       },
       "value": "autoreverses",
-      "start": 1407,
-      "end": 1419,
+      "start": 1411,
+      "end": 1423,
       "loc": {
         "start": {
           "line": 56,
@@ -5439,8 +5247,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1420,
-      "end": 1421,
+      "start": 1424,
+      "end": 1425,
       "loc": {
         "start": {
           "line": 56,
@@ -5467,8 +5275,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 1422,
-      "end": 1427,
+      "start": 1426,
+      "end": 1431,
       "loc": {
         "start": {
           "line": 56,
@@ -5483,8 +5291,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881689-blendinduration\n     ",
-      "start": 1433,
-      "end": 1574,
+      "start": 1437,
+      "end": 1578,
       "loc": {
         "start": {
           "line": 58,
@@ -5511,8 +5319,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1579,
-      "end": 1583,
+      "start": 1583,
+      "end": 1587,
       "loc": {
         "start": {
           "line": 63,
@@ -5537,8 +5345,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1583,
-      "end": 1584,
+      "start": 1587,
+      "end": 1588,
       "loc": {
         "start": {
           "line": 63,
@@ -5563,8 +5371,8 @@
         "binop": null
       },
       "value": "blendInDuration",
-      "start": 1584,
-      "end": 1599,
+      "start": 1588,
+      "end": 1603,
       "loc": {
         "start": {
           "line": 63,
@@ -5590,8 +5398,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1600,
-      "end": 1601,
+      "start": 1604,
+      "end": 1605,
       "loc": {
         "start": {
           "line": 63,
@@ -5617,8 +5425,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1602,
-      "end": 1603,
+      "start": 1606,
+      "end": 1607,
       "loc": {
         "start": {
           "line": 63,
@@ -5633,8 +5441,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2881690-blendoutduration\n     ",
-      "start": 1609,
-      "end": 1751,
+      "start": 1613,
+      "end": 1755,
       "loc": {
         "start": {
           "line": 65,
@@ -5661,8 +5469,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1756,
-      "end": 1760,
+      "start": 1760,
+      "end": 1764,
       "loc": {
         "start": {
           "line": 70,
@@ -5687,8 +5495,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1760,
-      "end": 1761,
+      "start": 1764,
+      "end": 1765,
       "loc": {
         "start": {
           "line": 70,
@@ -5713,8 +5521,8 @@
         "binop": null
       },
       "value": "blendOutDuration",
-      "start": 1761,
-      "end": 1777,
+      "start": 1765,
+      "end": 1781,
       "loc": {
         "start": {
           "line": 70,
@@ -5740,8 +5548,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1778,
-      "end": 1779,
+      "start": 1782,
+      "end": 1783,
       "loc": {
         "start": {
           "line": 70,
@@ -5767,8 +5575,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1780,
-      "end": 1781,
+      "start": 1784,
+      "end": 1785,
       "loc": {
         "start": {
           "line": 70,
@@ -5783,8 +5591,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866057-duration\n     ",
-      "start": 1787,
-      "end": 1921,
+      "start": 1791,
+      "end": 1925,
       "loc": {
         "start": {
           "line": 72,
@@ -5811,8 +5619,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1926,
-      "end": 1930,
+      "start": 1930,
+      "end": 1934,
       "loc": {
         "start": {
           "line": 77,
@@ -5837,8 +5645,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1930,
-      "end": 1931,
+      "start": 1934,
+      "end": 1935,
       "loc": {
         "start": {
           "line": 77,
@@ -5863,8 +5671,8 @@
         "binop": null
       },
       "value": "duration",
-      "start": 1931,
-      "end": 1939,
+      "start": 1935,
+      "end": 1943,
       "loc": {
         "start": {
           "line": 77,
@@ -5890,8 +5698,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1940,
-      "end": 1941,
+      "start": 1944,
+      "end": 1945,
       "loc": {
         "start": {
           "line": 77,
@@ -5917,8 +5725,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1942,
-      "end": 1943,
+      "start": 1946,
+      "end": 1947,
       "loc": {
         "start": {
           "line": 77,
@@ -5933,8 +5741,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878138-fillsbackward\n     ",
-      "start": 1949,
-      "end": 2089,
+      "start": 1953,
+      "end": 2093,
       "loc": {
         "start": {
           "line": 79,
@@ -5961,8 +5769,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2094,
-      "end": 2098,
+      "start": 2098,
+      "end": 2102,
       "loc": {
         "start": {
           "line": 84,
@@ -5987,8 +5795,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2098,
-      "end": 2099,
+      "start": 2102,
+      "end": 2103,
       "loc": {
         "start": {
           "line": 84,
@@ -6013,8 +5821,8 @@
         "binop": null
       },
       "value": "fillsBackward",
-      "start": 2099,
-      "end": 2112,
+      "start": 2103,
+      "end": 2116,
       "loc": {
         "start": {
           "line": 84,
@@ -6040,8 +5848,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2113,
-      "end": 2114,
+      "start": 2117,
+      "end": 2118,
       "loc": {
         "start": {
           "line": 84,
@@ -6068,8 +5876,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2115,
-      "end": 2120,
+      "start": 2119,
+      "end": 2124,
       "loc": {
         "start": {
           "line": 84,
@@ -6084,8 +5892,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878132-fillsforward\n     ",
-      "start": 2126,
-      "end": 2265,
+      "start": 2130,
+      "end": 2269,
       "loc": {
         "start": {
           "line": 86,
@@ -6112,8 +5920,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2270,
-      "end": 2274,
+      "start": 2274,
+      "end": 2278,
       "loc": {
         "start": {
           "line": 91,
@@ -6138,8 +5946,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2274,
-      "end": 2275,
+      "start": 2278,
+      "end": 2279,
       "loc": {
         "start": {
           "line": 91,
@@ -6164,8 +5972,8 @@
         "binop": null
       },
       "value": "fillsForward",
-      "start": 2275,
-      "end": 2287,
+      "start": 2279,
+      "end": 2291,
       "loc": {
         "start": {
           "line": 91,
@@ -6191,8 +5999,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2288,
-      "end": 2289,
+      "start": 2292,
+      "end": 2293,
       "loc": {
         "start": {
           "line": 91,
@@ -6219,8 +6027,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2290,
-      "end": 2295,
+      "start": 2294,
+      "end": 2299,
       "loc": {
         "start": {
           "line": 91,
@@ -6235,8 +6043,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866062-isadditive\n     ",
-      "start": 2301,
-      "end": 2438,
+      "start": 2305,
+      "end": 2442,
       "loc": {
         "start": {
           "line": 93,
@@ -6263,8 +6071,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2443,
-      "end": 2447,
+      "start": 2447,
+      "end": 2451,
       "loc": {
         "start": {
           "line": 98,
@@ -6289,8 +6097,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2447,
-      "end": 2448,
+      "start": 2451,
+      "end": 2452,
       "loc": {
         "start": {
           "line": 98,
@@ -6315,8 +6123,8 @@
         "binop": null
       },
       "value": "isAdditive",
-      "start": 2448,
-      "end": 2458,
+      "start": 2452,
+      "end": 2462,
       "loc": {
         "start": {
           "line": 98,
@@ -6342,8 +6150,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2459,
-      "end": 2460,
+      "start": 2463,
+      "end": 2464,
       "loc": {
         "start": {
           "line": 98,
@@ -6370,8 +6178,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2461,
-      "end": 2466,
+      "start": 2465,
+      "end": 2470,
       "loc": {
         "start": {
           "line": 98,
@@ -6386,8 +6194,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878139-isappliedoncompletion\n     ",
-      "start": 2472,
-      "end": 2620,
+      "start": 2476,
+      "end": 2624,
       "loc": {
         "start": {
           "line": 100,
@@ -6414,8 +6222,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2625,
-      "end": 2629,
+      "start": 2629,
+      "end": 2633,
       "loc": {
         "start": {
           "line": 105,
@@ -6440,8 +6248,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2629,
-      "end": 2630,
+      "start": 2633,
+      "end": 2634,
       "loc": {
         "start": {
           "line": 105,
@@ -6466,8 +6274,8 @@
         "binop": null
       },
       "value": "isAppliedOnCompletion",
-      "start": 2630,
-      "end": 2651,
+      "start": 2634,
+      "end": 2655,
       "loc": {
         "start": {
           "line": 105,
@@ -6493,8 +6301,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2652,
-      "end": 2653,
+      "start": 2656,
+      "end": 2657,
       "loc": {
         "start": {
           "line": 105,
@@ -6521,8 +6329,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2654,
-      "end": 2659,
+      "start": 2658,
+      "end": 2663,
       "loc": {
         "start": {
           "line": 105,
@@ -6537,8 +6345,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866047-iscumulative\n     ",
-      "start": 2665,
-      "end": 2804,
+      "start": 2669,
+      "end": 2808,
       "loc": {
         "start": {
           "line": 107,
@@ -6565,8 +6373,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2809,
-      "end": 2813,
+      "start": 2813,
+      "end": 2817,
       "loc": {
         "start": {
           "line": 112,
@@ -6591,8 +6399,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2813,
-      "end": 2814,
+      "start": 2817,
+      "end": 2818,
       "loc": {
         "start": {
           "line": 112,
@@ -6617,8 +6425,8 @@
         "binop": null
       },
       "value": "isCumulative",
-      "start": 2814,
-      "end": 2826,
+      "start": 2818,
+      "end": 2830,
       "loc": {
         "start": {
           "line": 112,
@@ -6644,8 +6452,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2827,
-      "end": 2828,
+      "start": 2831,
+      "end": 2832,
       "loc": {
         "start": {
           "line": 112,
@@ -6672,8 +6480,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2829,
-      "end": 2834,
+      "start": 2833,
+      "end": 2838,
       "loc": {
         "start": {
           "line": 112,
@@ -6688,8 +6496,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878126-isremovedoncompletion\n     ",
-      "start": 2840,
-      "end": 2988,
+      "start": 2844,
+      "end": 2992,
       "loc": {
         "start": {
           "line": 114,
@@ -6716,8 +6524,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2993,
-      "end": 2997,
+      "start": 2997,
+      "end": 3001,
       "loc": {
         "start": {
           "line": 119,
@@ -6742,8 +6550,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2997,
-      "end": 2998,
+      "start": 3001,
+      "end": 3002,
       "loc": {
         "start": {
           "line": 119,
@@ -6768,8 +6576,8 @@
         "binop": null
       },
       "value": "isRemovedOnCompletion",
-      "start": 2998,
-      "end": 3019,
+      "start": 3002,
+      "end": 3023,
       "loc": {
         "start": {
           "line": 119,
@@ -6795,8 +6603,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3020,
-      "end": 3021,
+      "start": 3024,
+      "end": 3025,
       "loc": {
         "start": {
           "line": 119,
@@ -6823,8 +6631,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 3022,
-      "end": 3027,
+      "start": 3026,
+      "end": 3031,
       "loc": {
         "start": {
           "line": 119,
@@ -6839,8 +6647,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {?string}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878148-keypath\n     ",
-      "start": 3033,
-      "end": 3167,
+      "start": 3037,
+      "end": 3171,
       "loc": {
         "start": {
           "line": 121,
@@ -6867,8 +6675,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3172,
-      "end": 3176,
+      "start": 3176,
+      "end": 3180,
       "loc": {
         "start": {
           "line": 126,
@@ -6893,8 +6701,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3176,
-      "end": 3177,
+      "start": 3180,
+      "end": 3181,
       "loc": {
         "start": {
           "line": 126,
@@ -6919,8 +6727,8 @@
         "binop": null
       },
       "value": "keyPath",
-      "start": 3177,
-      "end": 3184,
+      "start": 3181,
+      "end": 3188,
       "loc": {
         "start": {
           "line": 126,
@@ -6946,8 +6754,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3185,
-      "end": 3186,
+      "start": 3189,
+      "end": 3190,
       "loc": {
         "start": {
           "line": 126,
@@ -6974,8 +6782,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3187,
-      "end": 3191,
+      "start": 3191,
+      "end": 3195,
       "loc": {
         "start": {
           "line": 126,
@@ -6990,8 +6798,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878146-repeatcount\n     ",
-      "start": 3197,
-      "end": 3334,
+      "start": 3201,
+      "end": 3338,
       "loc": {
         "start": {
           "line": 128,
@@ -7018,8 +6826,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3339,
-      "end": 3343,
+      "start": 3343,
+      "end": 3347,
       "loc": {
         "start": {
           "line": 133,
@@ -7044,8 +6852,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3343,
-      "end": 3344,
+      "start": 3347,
+      "end": 3348,
       "loc": {
         "start": {
           "line": 133,
@@ -7070,8 +6878,8 @@
         "binop": null
       },
       "value": "repeatCount",
-      "start": 3344,
-      "end": 3355,
+      "start": 3348,
+      "end": 3359,
       "loc": {
         "start": {
           "line": 133,
@@ -7097,8 +6905,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3356,
-      "end": 3357,
+      "start": 3360,
+      "end": 3361,
       "loc": {
         "start": {
           "line": 133,
@@ -7124,8 +6932,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3358,
-      "end": 3359,
+      "start": 3362,
+      "end": 3363,
       "loc": {
         "start": {
           "line": 133,
@@ -7140,8 +6948,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878135-startdelay\n     ",
-      "start": 3365,
-      "end": 3501,
+      "start": 3369,
+      "end": 3505,
       "loc": {
         "start": {
           "line": 135,
@@ -7168,8 +6976,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3506,
-      "end": 3510,
+      "start": 3510,
+      "end": 3514,
       "loc": {
         "start": {
           "line": 140,
@@ -7194,8 +7002,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3510,
-      "end": 3511,
+      "start": 3514,
+      "end": 3515,
       "loc": {
         "start": {
           "line": 140,
@@ -7220,8 +7028,8 @@
         "binop": null
       },
       "value": "startDelay",
-      "start": 3511,
-      "end": 3521,
+      "start": 3515,
+      "end": 3525,
       "loc": {
         "start": {
           "line": 140,
@@ -7247,8 +7055,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3522,
-      "end": 3523,
+      "start": 3526,
+      "end": 3527,
       "loc": {
         "start": {
           "line": 140,
@@ -7274,8 +7082,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3524,
-      "end": 3525,
+      "start": 3528,
+      "end": 3529,
       "loc": {
         "start": {
           "line": 140,
@@ -7290,8 +7098,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878147-timeoffset\n     ",
-      "start": 3531,
-      "end": 3667,
+      "start": 3535,
+      "end": 3671,
       "loc": {
         "start": {
           "line": 142,
@@ -7318,8 +7126,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3672,
-      "end": 3676,
+      "start": 3676,
+      "end": 3680,
       "loc": {
         "start": {
           "line": 147,
@@ -7344,8 +7152,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3676,
-      "end": 3677,
+      "start": 3680,
+      "end": 3681,
       "loc": {
         "start": {
           "line": 147,
@@ -7370,8 +7178,8 @@
         "binop": null
       },
       "value": "timeOffset",
-      "start": 3677,
-      "end": 3687,
+      "start": 3681,
+      "end": 3691,
       "loc": {
         "start": {
           "line": 147,
@@ -7397,8 +7205,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3688,
-      "end": 3689,
+      "start": 3692,
+      "end": 3693,
       "loc": {
         "start": {
           "line": 147,
@@ -7424,8 +7232,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3690,
-      "end": 3691,
+      "start": 3694,
+      "end": 3695,
       "loc": {
         "start": {
           "line": 147,
@@ -7440,8 +7248,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {SCNTimingFunction}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878143-timingfunction\n     ",
-      "start": 3697,
-      "end": 3848,
+      "start": 3701,
+      "end": 3852,
       "loc": {
         "start": {
           "line": 149,
@@ -7468,8 +7276,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3853,
-      "end": 3857,
+      "start": 3857,
+      "end": 3861,
       "loc": {
         "start": {
           "line": 154,
@@ -7494,8 +7302,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3857,
-      "end": 3858,
+      "start": 3861,
+      "end": 3862,
       "loc": {
         "start": {
           "line": 154,
@@ -7520,8 +7328,8 @@
         "binop": null
       },
       "value": "timingFunction",
-      "start": 3858,
-      "end": 3872,
+      "start": 3862,
+      "end": 3876,
       "loc": {
         "start": {
           "line": 154,
@@ -7547,8 +7355,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3873,
-      "end": 3874,
+      "start": 3877,
+      "end": 3878,
       "loc": {
         "start": {
           "line": 154,
@@ -7575,8 +7383,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3875,
-      "end": 3879,
+      "start": 3879,
+      "end": 3883,
       "loc": {
         "start": {
           "line": 154,
@@ -7591,8 +7399,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * \n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scnanimation/2878127-usesscenetimebase\n     ",
-      "start": 3885,
-      "end": 4029,
+      "start": 3889,
+      "end": 4033,
       "loc": {
         "start": {
           "line": 156,
@@ -7619,8 +7427,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4034,
-      "end": 4038,
+      "start": 4038,
+      "end": 4042,
       "loc": {
         "start": {
           "line": 161,
@@ -7645,8 +7453,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4038,
-      "end": 4039,
+      "start": 4042,
+      "end": 4043,
       "loc": {
         "start": {
           "line": 161,
@@ -7671,8 +7479,8 @@
         "binop": null
       },
       "value": "usesSceneTimeBase",
-      "start": 4039,
-      "end": 4056,
+      "start": 4043,
+      "end": 4060,
       "loc": {
         "start": {
           "line": 161,
@@ -7698,8 +7506,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4057,
-      "end": 4058,
+      "start": 4061,
+      "end": 4062,
       "loc": {
         "start": {
           "line": 161,
@@ -7726,8 +7534,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 4059,
-      "end": 4064,
+      "start": 4063,
+      "end": 4068,
       "loc": {
         "start": {
           "line": 161,
@@ -7742,8 +7550,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * @access private\n     * @type {CAAnimation}\n     ",
-      "start": 4070,
-      "end": 4131,
+      "start": 4074,
+      "end": 4135,
       "loc": {
         "start": {
           "line": 163,
@@ -7770,8 +7578,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4136,
-      "end": 4140,
+      "start": 4140,
+      "end": 4144,
       "loc": {
         "start": {
           "line": 167,
@@ -7796,8 +7604,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4140,
-      "end": 4141,
+      "start": 4144,
+      "end": 4145,
       "loc": {
         "start": {
           "line": 167,
@@ -7822,8 +7630,8 @@
         "binop": null
       },
       "value": "_animation",
-      "start": 4141,
-      "end": 4151,
+      "start": 4145,
+      "end": 4155,
       "loc": {
         "start": {
           "line": 167,
@@ -7849,8 +7657,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4152,
-      "end": 4153,
+      "start": 4156,
+      "end": 4157,
       "loc": {
         "start": {
           "line": 167,
@@ -7875,8 +7683,8 @@
         "binop": null
       },
       "value": "caAnimation",
-      "start": 4154,
-      "end": 4165,
+      "start": 4158,
+      "end": 4169,
       "loc": {
         "start": {
           "line": 167,
@@ -7900,8 +7708,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4168,
-      "end": 4169,
+      "start": 4172,
+      "end": 4173,
       "loc": {
         "start": {
           "line": 168,
@@ -7916,8 +7724,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {string} animationUrl - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866053-init\n   ",
-      "start": 4173,
-      "end": 4363,
+      "start": 4177,
+      "end": 4367,
       "loc": {
         "start": {
           "line": 170,
@@ -7942,8 +7750,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 4366,
-      "end": 4372,
+      "start": 4370,
+      "end": 4376,
       "loc": {
         "start": {
           "line": 177,
@@ -7968,8 +7776,8 @@
         "binop": null
       },
       "value": "animationWithContentsOf",
-      "start": 4373,
-      "end": 4396,
+      "start": 4377,
+      "end": 4400,
       "loc": {
         "start": {
           "line": 177,
@@ -7993,8 +7801,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4396,
-      "end": 4397,
+      "start": 4400,
+      "end": 4401,
       "loc": {
         "start": {
           "line": 177,
@@ -8019,8 +7827,8 @@
         "binop": null
       },
       "value": "animationUrl",
-      "start": 4397,
-      "end": 4409,
+      "start": 4401,
+      "end": 4413,
       "loc": {
         "start": {
           "line": 177,
@@ -8044,8 +7852,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4409,
-      "end": 4410,
+      "start": 4413,
+      "end": 4414,
       "loc": {
         "start": {
           "line": 177,
@@ -8069,8 +7877,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4411,
-      "end": 4412,
+      "start": 4415,
+      "end": 4416,
       "loc": {
         "start": {
           "line": 177,
@@ -8085,8 +7893,8 @@
     {
       "type": "CommentLine",
       "value": " TODO: implement",
-      "start": 4417,
-      "end": 4435,
+      "start": 4421,
+      "end": 4439,
       "loc": {
         "start": {
           "line": 178,
@@ -8110,8 +7918,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4438,
-      "end": 4439,
+      "start": 4442,
+      "end": 4443,
       "loc": {
         "start": {
           "line": 179,
@@ -8126,8 +7934,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {string} animationName - \n   * @returns {SCNAnimation} -\n   * @see https://developer.apple.com/documentation/scenekit/scnanimation/2866042-init\n   ",
-      "start": 4443,
-      "end": 4634,
+      "start": 4447,
+      "end": 4638,
       "loc": {
         "start": {
           "line": 181,
@@ -8152,8 +7960,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 4637,
-      "end": 4643,
+      "start": 4641,
+      "end": 4647,
       "loc": {
         "start": {
           "line": 188,
@@ -8178,8 +7986,8 @@
         "binop": null
       },
       "value": "animationNamed",
-      "start": 4644,
-      "end": 4658,
+      "start": 4648,
+      "end": 4662,
       "loc": {
         "start": {
           "line": 188,
@@ -8203,8 +8011,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4658,
-      "end": 4659,
+      "start": 4662,
+      "end": 4663,
       "loc": {
         "start": {
           "line": 188,
@@ -8229,8 +8037,8 @@
         "binop": null
       },
       "value": "animationName",
-      "start": 4659,
-      "end": 4672,
+      "start": 4663,
+      "end": 4676,
       "loc": {
         "start": {
           "line": 188,
@@ -8254,8 +8062,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4672,
-      "end": 4673,
+      "start": 4676,
+      "end": 4677,
       "loc": {
         "start": {
           "line": 188,
@@ -8279,8 +8087,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4674,
-      "end": 4675,
+      "start": 4678,
+      "end": 4679,
       "loc": {
         "start": {
           "line": 188,
@@ -8295,8 +8103,8 @@
     {
       "type": "CommentLine",
       "value": " TODO: implement",
-      "start": 4680,
-      "end": 4698,
+      "start": 4684,
+      "end": 4702,
       "loc": {
         "start": {
           "line": 189,
@@ -8320,8 +8128,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4701,
-      "end": 4702,
+      "start": 4705,
+      "end": 4706,
       "loc": {
         "start": {
           "line": 190,
@@ -8345,8 +8153,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4703,
-      "end": 4704,
+      "start": 4707,
+      "end": 4708,
       "loc": {
         "start": {
           "line": 191,
@@ -8371,8 +8179,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4705,
-      "end": 4705,
+      "start": 4709,
+      "end": 4709,
       "loc": {
         "start": {
           "line": 192,

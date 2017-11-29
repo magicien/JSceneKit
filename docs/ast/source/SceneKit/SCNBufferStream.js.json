@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 790,
+  "end": 796,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 33,
+      "line": 31,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 790,
+    "end": 796,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 33,
+        "line": 31,
         "column": 0
       }
     },
@@ -30,43 +30,43 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 188,
-        "end": 789,
+        "start": 186,
+        "end": 795,
         "loc": {
           "start": {
-            "line": 10,
+            "line": 8,
             "column": 0
           },
           "end": {
-            "line": 32,
+            "line": 30,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 203,
-          "end": 789,
+          "start": 201,
+          "end": 795,
           "loc": {
             "start": {
-              "line": 10,
+              "line": 8,
               "column": 15
             },
             "end": {
-              "line": 32,
+              "line": 30,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 209,
-            "end": 224,
+            "start": 207,
+            "end": 222,
             "loc": {
               "start": {
-                "line": 10,
+                "line": 8,
                 "column": 21
               },
               "end": {
-                "line": 10,
+                "line": 8,
                 "column": 36
               },
               "identifierName": "SCNBufferStream"
@@ -77,157 +77,45 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 225,
-            "end": 789,
+            "start": 223,
+            "end": 795,
             "loc": {
               "start": {
-                "line": 10,
+                "line": 8,
                 "column": 37
               },
               "end": {
-                "line": 32,
+                "line": 30,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 300,
-                "end": 312,
+                "start": 757,
+                "end": 793,
                 "loc": {
                   "start": {
-                    "line": 17,
+                    "line": 28,
                     "column": 2
                   },
                   "end": {
-                    "line": 18,
+                    "line": 29,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 300,
-                  "end": 304,
+                  "start": 757,
+                  "end": 772,
                   "loc": {
                     "start": {
-                      "line": 17,
+                      "line": 28,
                       "column": 2
                     },
                     "end": {
-                      "line": 17,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 307,
-                  "end": 312,
-                  "loc": {
-                    "start": {
-                      "line": 17,
-                      "column": 9
-                    },
-                    "end": {
-                      "line": 18,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
-                  "directives": [],
-                  "leadingComments": null,
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 230,
-                    "end": 297,
-                    "loc": {
-                      "start": {
-                        "line": 12,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 16,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Writing Data to a Buffer",
-                    "start": 316,
-                    "end": 343,
-                    "loc": {
-                      "start": {
-                        "line": 20,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 20,
-                        "column": 29
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
-                    "start": 347,
-                    "end": 748,
-                    "loc": {
-                      "start": {
-                        "line": 22,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 29,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 751,
-                "end": 787,
-                "loc": {
-                  "start": {
-                    "line": 30,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 31,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 751,
-                  "end": 766,
-                  "loc": {
-                    "start": {
-                      "line": 30,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 30,
+                      "line": 28,
                       "column": 17
                     },
                     "identifierName": "writeBytesCount"
@@ -244,15 +132,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 767,
-                    "end": 772,
+                    "start": 773,
+                    "end": 778,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 28,
                         "column": 18
                       },
                       "end": {
-                        "line": 30,
+                        "line": 28,
                         "column": 23
                       },
                       "identifierName": "bytes"
@@ -261,15 +149,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 774,
-                    "end": 780,
+                    "start": 780,
+                    "end": 786,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 28,
                         "column": 25
                       },
                       "end": {
-                        "line": 30,
+                        "line": 28,
                         "column": 31
                       },
                       "identifierName": "length"
@@ -279,15 +167,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 782,
-                  "end": 787,
+                  "start": 788,
+                  "end": 793,
                   "loc": {
                     "start": {
-                      "line": 30,
+                      "line": 28,
                       "column": 33
                     },
                     "end": {
-                      "line": 31,
+                      "line": 29,
                       "column": 3
                     }
                   },
@@ -296,17 +184,65 @@
                 },
                 "leadingComments": [
                   {
-                    "type": "CommentLine",
-                    "value": " Writing Data to a Buffer",
-                    "start": 316,
-                    "end": 343,
+                    "type": "CommentBlock",
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 228,
+                    "end": 292,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 10,
                         "column": 2
                       },
                       "end": {
-                        "line": 20,
+                        "line": 14,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "constructor() {",
+                    "start": 295,
+                    "end": 312,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 19
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": "}",
+                    "start": 315,
+                    "end": 318,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentLine",
+                    "value": " Writing Data to a Buffer",
+                    "start": 322,
+                    "end": 349,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 18,
                         "column": 29
                       }
                     }
@@ -314,15 +250,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
-                    "start": 347,
-                    "end": 748,
+                    "start": 353,
+                    "end": 754,
                     "loc": {
                       "start": {
-                        "line": 22,
+                        "line": 20,
                         "column": 2
                       },
                       "end": {
-                        "line": 29,
+                        "line": 27,
                         "column": 5
                       }
                     }
@@ -335,15 +271,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
-              "start": 16,
-              "end": 187,
+              "start": 14,
+              "end": 185,
               "loc": {
                 "start": {
-                  "line": 5,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 9,
+                  "line": 7,
                   "column": 3
                 }
               }
@@ -355,15 +291,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
-            "start": 16,
-            "end": 187,
+            "start": 14,
+            "end": 185,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 9,
+                "line": 7,
                 "column": 3
               }
             }
@@ -411,15 +347,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
-            "start": 16,
-            "end": 187,
+            "start": 14,
+            "end": 185,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 9,
+                "line": 7,
                 "column": 3
               }
             }
@@ -432,27 +368,59 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
-      "start": 16,
-      "end": 187,
+      "start": 14,
+      "end": 185,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 7,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 230,
-      "end": 297,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 228,
+      "end": 292,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 10,
+          "column": 2
+        },
+        "end": {
+          "line": 14,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "constructor() {",
+      "start": 295,
+      "end": 312,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 15,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 315,
+      "end": 318,
+      "loc": {
+        "start": {
+          "line": 16,
           "column": 2
         },
         "end": {
@@ -464,15 +432,15 @@
     {
       "type": "CommentLine",
       "value": " Writing Data to a Buffer",
-      "start": 316,
-      "end": 343,
+      "start": 322,
+      "end": 349,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 18,
           "column": 29
         }
       }
@@ -480,15 +448,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
-      "start": 347,
-      "end": 748,
+      "start": 353,
+      "end": 754,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 29,
+          "line": 27,
           "column": 5
         }
       }
@@ -525,15 +493,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
-      "start": 16,
-      "end": 187,
+      "start": 14,
+      "end": 185,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 7,
           "column": 3
         }
       }
@@ -553,15 +521,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 188,
-      "end": 194,
+      "start": 186,
+      "end": 192,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 6
         }
       }
@@ -581,15 +549,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 195,
-      "end": 202,
+      "start": 193,
+      "end": 200,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 7
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 14
         }
       }
@@ -609,15 +577,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 203,
-      "end": 208,
+      "start": 201,
+      "end": 206,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 15
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 20
         }
       }
@@ -635,15 +603,15 @@
         "binop": null
       },
       "value": "SCNBufferStream",
-      "start": 209,
-      "end": 224,
+      "start": 207,
+      "end": 222,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 21
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 36
         }
       }
@@ -660,27 +628,59 @@
         "postfix": false,
         "binop": null
       },
-      "start": 225,
-      "end": 226,
+      "start": 223,
+      "end": 224,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 37
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 38
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 230,
-      "end": 297,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 228,
+      "end": 292,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 10,
+          "column": 2
+        },
+        "end": {
+          "line": 14,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "constructor() {",
+      "start": 295,
+      "end": 312,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 15,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 315,
+      "end": 318,
+      "loc": {
+        "start": {
+          "line": 16,
           "column": 2
         },
         "end": {
@@ -690,143 +690,17 @@
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 300,
-      "end": 304,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 2
-        },
-        "end": {
-          "line": 17,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 304,
-      "end": 305,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 6
-        },
-        "end": {
-          "line": 17,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 305,
-      "end": 306,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 7
-        },
-        "end": {
-          "line": 17,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 307,
-      "end": 308,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 9
-        },
-        "end": {
-          "line": 17,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 311,
-      "end": 312,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 2
-        },
-        "end": {
-          "line": 18,
-          "column": 3
-        }
-      }
-    },
-    {
       "type": "CommentLine",
       "value": " Writing Data to a Buffer",
-      "start": 316,
-      "end": 343,
+      "start": 322,
+      "end": 349,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 18,
           "column": 29
         }
       }
@@ -834,15 +708,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
-      "start": 347,
-      "end": 748,
+      "start": 353,
+      "end": 754,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 29,
+          "line": 27,
           "column": 5
         }
       }
@@ -860,15 +734,15 @@
         "binop": null
       },
       "value": "writeBytesCount",
-      "start": 751,
-      "end": 766,
+      "start": 757,
+      "end": 772,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 28,
           "column": 2
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 17
         }
       }
@@ -885,15 +759,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 766,
-      "end": 767,
+      "start": 772,
+      "end": 773,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 28,
           "column": 17
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 18
         }
       }
@@ -911,15 +785,15 @@
         "binop": null
       },
       "value": "bytes",
-      "start": 767,
-      "end": 772,
+      "start": 773,
+      "end": 778,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 28,
           "column": 18
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 23
         }
       }
@@ -937,15 +811,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 772,
-      "end": 773,
+      "start": 778,
+      "end": 779,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 28,
           "column": 23
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 24
         }
       }
@@ -963,15 +837,15 @@
         "binop": null
       },
       "value": "length",
-      "start": 774,
-      "end": 780,
+      "start": 780,
+      "end": 786,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 28,
           "column": 25
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 31
         }
       }
@@ -988,15 +862,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 780,
-      "end": 781,
+      "start": 786,
+      "end": 787,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 28,
           "column": 31
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 32
         }
       }
@@ -1013,15 +887,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 782,
-      "end": 783,
+      "start": 788,
+      "end": 789,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 28,
           "column": 33
         },
         "end": {
-          "line": 30,
+          "line": 28,
           "column": 34
         }
       }
@@ -1038,15 +912,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 786,
-      "end": 787,
+      "start": 792,
+      "end": 793,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 29,
           "column": 2
         },
         "end": {
-          "line": 31,
+          "line": 29,
           "column": 3
         }
       }
@@ -1063,15 +937,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 788,
-      "end": 789,
+      "start": 794,
+      "end": 795,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 30,
           "column": 0
         },
         "end": {
-          "line": 32,
+          "line": 30,
           "column": 1
         }
       }
@@ -1089,15 +963,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 790,
-      "end": 790,
+      "start": 796,
+      "end": 796,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 31,
           "column": 0
         },
         "end": {
-          "line": 33,
+          "line": 31,
           "column": 0
         }
       }

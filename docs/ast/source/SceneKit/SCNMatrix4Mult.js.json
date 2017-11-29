@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 588,
+  "end": 590,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 588,
+    "end": 590,
     "loc": {
       "start": {
         "line": 1,
@@ -29,98 +29,9 @@
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 51,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 37
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 31,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 17
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 31,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 17
-                },
-                "identifierName": "SCNMatrix4"
-              },
-              "name": "SCNMatrix4"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 37,
-          "end": 51,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 37
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNMatrix4",
-            "raw": "'./SCNMatrix4'"
-          },
-          "value": "./SCNMatrix4",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * Returns the product of two matrices.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {SCNMatrix4} - \n * @desc Matrix multiplication is not commutative. As a transformation, the result of multiplying a matrix A by a matrix B is the transformation represented by B followed by the transformation represented by A.\n * @see https://developer.apple.com/documentation/scenekit/1409697-scnmatrix4mult\n ",
-            "start": 53,
-            "end": 495,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 0
-              },
-              "end": {
-                "line": 13,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "Identifier",
-        "start": 496,
-        "end": 556,
+        "start": 498,
+        "end": 558,
         "loc": {
           "start": {
             "line": 14,
@@ -134,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 502,
-            "end": 556,
+            "start": 504,
+            "end": 558,
             "loc": {
               "start": {
                 "line": 14,
@@ -148,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 502,
-              "end": 516,
+              "start": 504,
+              "end": 518,
               "loc": {
                 "start": {
                   "line": 14,
@@ -166,8 +77,8 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 519,
-              "end": 556,
+              "start": 521,
+              "end": 558,
               "loc": {
                 "start": {
                   "line": 14,
@@ -185,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 528,
-                  "end": 529,
+                  "start": 530,
+                  "end": 531,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -202,8 +113,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 531,
-                  "end": 532,
+                  "start": 533,
+                  "end": 534,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -220,8 +131,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 534,
-                "end": 556,
+                "start": 536,
+                "end": 558,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -235,8 +146,8 @@
                 "body": [
                   {
                     "type": "ReturnStatement",
-                    "start": 538,
-                    "end": 554,
+                    "start": 540,
+                    "end": 556,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -249,8 +160,8 @@
                     },
                     "argument": {
                       "type": "CallExpression",
-                      "start": 545,
-                      "end": 554,
+                      "start": 547,
+                      "end": 556,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -263,8 +174,8 @@
                       },
                       "callee": {
                         "type": "MemberExpression",
-                        "start": 545,
-                        "end": 551,
+                        "start": 547,
+                        "end": 553,
                         "loc": {
                           "start": {
                             "line": 15,
@@ -277,8 +188,8 @@
                         },
                         "object": {
                           "type": "Identifier",
-                          "start": 545,
-                          "end": 546,
+                          "start": 547,
+                          "end": 548,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -294,8 +205,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 547,
-                          "end": 551,
+                          "start": 549,
+                          "end": 553,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -314,8 +225,8 @@
                       "arguments": [
                         {
                           "type": "Identifier",
-                          "start": 552,
-                          "end": 553,
+                          "start": 554,
+                          "end": 555,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -346,8 +257,8 @@
       },
       {
         "type": "Identifier",
-        "start": 558,
-        "end": 587,
+        "start": 560,
+        "end": 589,
         "loc": {
           "start": {
             "line": 18,
@@ -360,8 +271,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 573,
-          "end": 587,
+          "start": 575,
+          "end": 589,
           "loc": {
             "start": {
               "line": 18,
@@ -381,8 +292,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 558,
-        "end": 587,
+        "start": 560,
+        "end": 589,
         "loc": {
           "start": {
             "line": 18,
@@ -395,8 +306,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 496,
-          "end": 556,
+          "start": 498,
+          "end": 558,
           "loc": {
             "start": {
               "line": 14,
@@ -410,8 +321,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 502,
-              "end": 556,
+              "start": 504,
+              "end": 558,
               "loc": {
                 "start": {
                   "line": 14,
@@ -424,8 +335,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 502,
-                "end": 516,
+                "start": 504,
+                "end": 518,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -442,8 +353,8 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 519,
-                "end": 556,
+                "start": 521,
+                "end": 558,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -456,8 +367,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 502,
-                  "end": 516,
+                  "start": 504,
+                  "end": 518,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -478,8 +389,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 528,
-                    "end": 529,
+                    "start": 530,
+                    "end": 531,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -495,8 +406,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 531,
-                    "end": 532,
+                    "start": 533,
+                    "end": 534,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -513,8 +424,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 534,
-                  "end": 556,
+                  "start": 536,
+                  "end": 558,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -528,8 +439,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 538,
-                      "end": 554,
+                      "start": 540,
+                      "end": 556,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -542,8 +453,8 @@
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 545,
-                        "end": 554,
+                        "start": 547,
+                        "end": 556,
                         "loc": {
                           "start": {
                             "line": 15,
@@ -556,8 +467,8 @@
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 545,
-                          "end": 551,
+                          "start": 547,
+                          "end": 553,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -570,8 +481,8 @@
                           },
                           "object": {
                             "type": "Identifier",
-                            "start": 545,
-                            "end": 546,
+                            "start": 547,
+                            "end": 548,
                             "loc": {
                               "start": {
                                 "line": 15,
@@ -587,8 +498,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 547,
-                            "end": 551,
+                            "start": 549,
+                            "end": 553,
                             "loc": {
                               "start": {
                                 "line": 15,
@@ -607,8 +518,8 @@
                         "arguments": [
                           {
                             "type": "Identifier",
-                            "start": 552,
-                            "end": 553,
+                            "start": 554,
+                            "end": 555,
                             "loc": {
                               "start": {
                                 "line": 15,
@@ -635,10 +546,26 @@
           "kind": "const",
           "leadingComments": [
             {
+              "type": "CommentLine",
+              "value": "import SCNMatrix4 from './SCNMatrix4'",
+              "start": 14,
+              "end": 53,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 3,
+                  "column": 39
+                }
+              }
+            },
+            {
               "type": "CommentBlock",
               "value": "*\n * Returns the product of two matrices.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {SCNMatrix4} - \n * @desc Matrix multiplication is not commutative. As a transformation, the result of multiplying a matrix A by a matrix B is the transformation represented by B followed by the transformation represented by A.\n * @see https://developer.apple.com/documentation/scenekit/1409697-scnmatrix4mult\n ",
-              "start": 53,
-              "end": 495,
+              "start": 55,
+              "end": 497,
               "loc": {
                 "start": {
                   "line": 5,
@@ -688,17 +615,68 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNMatrix4 from './SCNMatrix4'",
+            "start": 14,
+            "end": 53,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Returns the product of two matrices.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {SCNMatrix4} - \n * @desc Matrix multiplication is not commutative. As a transformation, the result of multiplying a matrix A by a matrix B is the transformation represented by B followed by the transformation represented by A.\n * @see https://developer.apple.com/documentation/scenekit/1409697-scnmatrix4mult\n ",
+            "start": 55,
+            "end": 497,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 13,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
+      "type": "CommentLine",
+      "value": "import SCNMatrix4 from './SCNMatrix4'",
+      "start": 14,
+      "end": 53,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 39
+        }
+      }
+    },
+    {
       "type": "CommentBlock",
       "value": "*\n * Returns the product of two matrices.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {SCNMatrix4} - \n * @desc Matrix multiplication is not commutative. As a transformation, the result of multiplying a matrix A by a matrix B is the transformation represented by B followed by the transformation represented by A.\n * @see https://developer.apple.com/documentation/scenekit/1409697-scnmatrix4mult\n ",
-      "start": 53,
-      "end": 495,
+      "start": 55,
+      "end": 497,
       "loc": {
         "start": {
           "line": 5,
@@ -740,22 +718,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNMatrix4 from './SCNMatrix4'",
       "start": 14,
-      "end": 20,
+      "end": 53,
       "loc": {
         "start": {
           "line": 3,
@@ -763,94 +729,15 @@
         },
         "end": {
           "line": 3,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNMatrix4",
-      "start": 21,
-      "end": 31,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 32,
-      "end": 36,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 18
-        },
-        "end": {
-          "line": 3,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNMatrix4",
-      "start": 37,
-      "end": 51,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 23
-        },
-        "end": {
-          "line": 3,
-          "column": 37
+          "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * Returns the product of two matrices.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {SCNMatrix4} - \n * @desc Matrix multiplication is not commutative. As a transformation, the result of multiplying a matrix A by a matrix B is the transformation represented by B followed by the transformation represented by A.\n * @see https://developer.apple.com/documentation/scenekit/1409697-scnmatrix4mult\n ",
-      "start": 53,
-      "end": 495,
+      "start": 55,
+      "end": 497,
       "loc": {
         "start": {
           "line": 5,
@@ -877,8 +764,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 496,
-      "end": 501,
+      "start": 498,
+      "end": 503,
       "loc": {
         "start": {
           "line": 14,
@@ -903,8 +790,8 @@
         "binop": null
       },
       "value": "SCNMatrix4Mult",
-      "start": 502,
-      "end": 516,
+      "start": 504,
+      "end": 518,
       "loc": {
         "start": {
           "line": 14,
@@ -930,8 +817,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 517,
-      "end": 518,
+      "start": 519,
+      "end": 520,
       "loc": {
         "start": {
           "line": 14,
@@ -957,8 +844,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 519,
-      "end": 527,
+      "start": 521,
+      "end": 529,
       "loc": {
         "start": {
           "line": 14,
@@ -982,8 +869,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 527,
-      "end": 528,
+      "start": 529,
+      "end": 530,
       "loc": {
         "start": {
           "line": 14,
@@ -1008,8 +895,8 @@
         "binop": null
       },
       "value": "a",
-      "start": 528,
-      "end": 529,
+      "start": 530,
+      "end": 531,
       "loc": {
         "start": {
           "line": 14,
@@ -1034,8 +921,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 529,
-      "end": 530,
+      "start": 531,
+      "end": 532,
       "loc": {
         "start": {
           "line": 14,
@@ -1060,8 +947,8 @@
         "binop": null
       },
       "value": "b",
-      "start": 531,
-      "end": 532,
+      "start": 533,
+      "end": 534,
       "loc": {
         "start": {
           "line": 14,
@@ -1085,8 +972,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 532,
-      "end": 533,
+      "start": 534,
+      "end": 535,
       "loc": {
         "start": {
           "line": 14,
@@ -1110,8 +997,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 534,
-      "end": 535,
+      "start": 536,
+      "end": 537,
       "loc": {
         "start": {
           "line": 14,
@@ -1138,8 +1025,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 538,
-      "end": 544,
+      "start": 540,
+      "end": 546,
       "loc": {
         "start": {
           "line": 15,
@@ -1164,8 +1051,8 @@
         "binop": null
       },
       "value": "a",
-      "start": 545,
-      "end": 546,
+      "start": 547,
+      "end": 548,
       "loc": {
         "start": {
           "line": 15,
@@ -1190,8 +1077,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 546,
-      "end": 547,
+      "start": 548,
+      "end": 549,
       "loc": {
         "start": {
           "line": 15,
@@ -1216,8 +1103,8 @@
         "binop": null
       },
       "value": "mult",
-      "start": 547,
-      "end": 551,
+      "start": 549,
+      "end": 553,
       "loc": {
         "start": {
           "line": 15,
@@ -1241,8 +1128,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 551,
-      "end": 552,
+      "start": 553,
+      "end": 554,
       "loc": {
         "start": {
           "line": 15,
@@ -1267,8 +1154,8 @@
         "binop": null
       },
       "value": "b",
-      "start": 552,
-      "end": 553,
+      "start": 554,
+      "end": 555,
       "loc": {
         "start": {
           "line": 15,
@@ -1292,8 +1179,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 553,
-      "end": 554,
+      "start": 555,
+      "end": 556,
       "loc": {
         "start": {
           "line": 15,
@@ -1317,8 +1204,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 555,
-      "end": 556,
+      "start": 557,
+      "end": 558,
       "loc": {
         "start": {
           "line": 16,
@@ -1345,8 +1232,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 558,
-      "end": 564,
+      "start": 560,
+      "end": 566,
       "loc": {
         "start": {
           "line": 18,
@@ -1373,8 +1260,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 565,
-      "end": 572,
+      "start": 567,
+      "end": 574,
       "loc": {
         "start": {
           "line": 18,
@@ -1399,8 +1286,8 @@
         "binop": null
       },
       "value": "SCNMatrix4Mult",
-      "start": 573,
-      "end": 587,
+      "start": 575,
+      "end": 589,
       "loc": {
         "start": {
           "line": 18,
@@ -1425,8 +1312,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 588,
-      "end": 588,
+      "start": 590,
+      "end": 590,
       "loc": {
         "start": {
           "line": 19,

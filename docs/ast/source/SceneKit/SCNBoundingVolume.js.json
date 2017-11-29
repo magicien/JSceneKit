@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1668,
+  "end": 1674,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1668,
+    "end": 1674,
     "loc": {
       "start": {
         "line": 1,
@@ -29,101 +29,12 @@
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 51,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 37
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 31,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 17
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 31,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 17
-                },
-                "identifierName": "SCNVector3"
-              },
-              "name": "SCNVector3"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 37,
-          "end": 51,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 37
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNVector3",
-            "raw": "'./SCNVector3'"
-          },
-          "value": "./SCNVector3",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
-            "start": 54,
-            "end": 250,
-            "loc": {
-              "start": {
-                "line": 6,
-                "column": 0
-              },
-              "end": {
-                "line": 10,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "ExportDefaultDeclaration",
-        "start": 251,
-        "end": 1667,
+        "start": 252,
+        "end": 1673,
         "loc": {
           "start": {
-            "line": 11,
+            "line": 10,
             "column": 0
           },
           "end": {
@@ -133,11 +44,11 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 266,
-          "end": 1667,
+          "start": 267,
+          "end": 1673,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 15
             },
             "end": {
@@ -147,15 +58,15 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 272,
-            "end": 289,
+            "start": 273,
+            "end": 290,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 21
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 38
               },
               "identifierName": "SCNBoundingVolume"
@@ -166,11 +77,11 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 290,
-            "end": 1667,
+            "start": 291,
+            "end": 1673,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 39
               },
               "end": {
@@ -181,39 +92,39 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 365,
-                "end": 719,
+                "start": 363,
+                "end": 724,
                 "loc": {
                   "start": {
-                    "line": 18,
+                    "line": 17,
                     "column": 2
                   },
                   "end": {
-                    "line": 30,
+                    "line": 29,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 365,
-                  "end": 369,
+                  "start": 363,
+                  "end": 374,
                   "loc": {
                     "start": {
-                      "line": 18,
+                      "line": 17,
                       "column": 2
                     },
                     "end": {
-                      "line": 18,
-                      "column": 6
+                      "line": 17,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -221,73 +132,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 372,
-                  "end": 719,
+                  "start": 377,
+                  "end": 724,
                   "loc": {
                     "start": {
-                      "line": 18,
-                      "column": 9
+                      "line": 17,
+                      "column": 16
                     },
                     "end": {
-                      "line": 30,
+                      "line": 29,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 659,
-                      "end": 682,
+                      "start": 664,
+                      "end": 687,
                       "loc": {
                         "start": {
-                          "line": 27,
+                          "line": 26,
                           "column": 4
                         },
                         "end": {
-                          "line": 27,
+                          "line": 26,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 659,
-                        "end": 682,
+                        "start": 664,
+                        "end": 687,
                         "loc": {
                           "start": {
-                            "line": 27,
+                            "line": 26,
                             "column": 4
                           },
                           "end": {
-                            "line": 27,
+                            "line": 26,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 659,
-                          "end": 675,
+                          "start": 664,
+                          "end": 680,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 26,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 26,
                               "column": 20
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 659,
-                            "end": 663,
+                            "start": 664,
+                            "end": 668,
                             "loc": {
                               "start": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 4
                               },
                               "end": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 8
                               }
                             },
@@ -295,15 +206,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 664,
-                            "end": 675,
+                            "start": 669,
+                            "end": 680,
                             "loc": {
                               "start": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 9
                               },
                               "end": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 20
                               },
                               "identifierName": "boundingBox"
@@ -315,15 +226,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 678,
-                          "end": 682,
+                          "start": 683,
+                          "end": 687,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 26,
                               "column": 23
                             },
                             "end": {
-                              "line": 27,
+                              "line": 26,
                               "column": 27
                             }
                           }
@@ -334,15 +245,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with Bounding Volumes",
-                          "start": 379,
-                          "end": 411,
+                          "start": 384,
+                          "end": 416,
                           "loc": {
                             "start": {
-                              "line": 20,
+                              "line": 19,
                               "column": 4
                             },
                             "end": {
-                              "line": 20,
+                              "line": 19,
                               "column": 36
                             }
                           }
@@ -350,15 +261,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The minimum and maximum corner points of the object’s bounding box.\n     * @type {{min: SCNVector3, max: SCNVector3}}\n     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034705-boundingbox\n     ",
-                          "start": 417,
-                          "end": 654,
+                          "start": 422,
+                          "end": 659,
                           "loc": {
                             "start": {
-                              "line": 22,
+                              "line": 21,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 25,
                               "column": 7
                             }
                           }
@@ -367,73 +278,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 688,
-                      "end": 715,
+                      "start": 693,
+                      "end": 720,
                       "loc": {
                         "start": {
-                          "line": 29,
+                          "line": 28,
                           "column": 4
                         },
                         "end": {
-                          "line": 29,
+                          "line": 28,
                           "column": 31
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 688,
-                        "end": 715,
+                        "start": 693,
+                        "end": 720,
                         "loc": {
                           "start": {
-                            "line": 29,
+                            "line": 28,
                             "column": 4
                           },
                           "end": {
-                            "line": 29,
+                            "line": 28,
                             "column": 31
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 688,
-                          "end": 708,
+                          "start": 693,
+                          "end": 713,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 29,
+                              "line": 28,
                               "column": 24
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 688,
-                            "end": 692,
+                            "start": 693,
+                            "end": 697,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 4
                               },
                               "end": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 693,
-                            "end": 708,
+                            "start": 698,
+                            "end": 713,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 9
                               },
                               "end": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 24
                               },
                               "identifierName": "_boundingSphere"
@@ -444,15 +355,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 711,
-                          "end": 715,
+                          "start": 716,
+                          "end": 720,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 28,
                               "column": 27
                             },
                             "end": {
-                              "line": 29,
+                              "line": 28,
                               "column": 31
                             }
                           }
@@ -466,16 +377,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 295,
-                    "end": 362,
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 296,
+                    "end": 360,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 17,
+                        "line": 16,
                         "column": 5
                       }
                     }
@@ -485,15 +396,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with Bounding Volumes",
-                    "start": 723,
-                    "end": 755,
+                    "start": 728,
+                    "end": 760,
                     "loc": {
                       "start": {
-                        "line": 32,
+                        "line": 31,
                         "column": 2
                       },
                       "end": {
-                        "line": 32,
+                        "line": 31,
                         "column": 34
                       }
                     }
@@ -501,8 +412,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {{center: SCNVector3, radius: number}}\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
-                    "start": 758,
-                    "end": 1604,
+                    "start": 764,
+                    "end": 1610,
                     "loc": {
                       "start": {
                         "line": 33,
@@ -518,8 +429,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1607,
-                "end": 1665,
+                "start": 1613,
+                "end": 1671,
                 "loc": {
                   "start": {
                     "line": 39,
@@ -533,8 +444,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1611,
-                  "end": 1625,
+                  "start": 1617,
+                  "end": 1631,
                   "loc": {
                     "start": {
                       "line": 39,
@@ -557,8 +468,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1628,
-                  "end": 1665,
+                  "start": 1634,
+                  "end": 1671,
                   "loc": {
                     "start": {
                       "line": 39,
@@ -572,8 +483,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1634,
-                      "end": 1661,
+                      "start": 1640,
+                      "end": 1667,
                       "loc": {
                         "start": {
                           "line": 40,
@@ -586,8 +497,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 1641,
-                        "end": 1661,
+                        "start": 1647,
+                        "end": 1667,
                         "loc": {
                           "start": {
                             "line": 40,
@@ -600,8 +511,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1641,
-                          "end": 1645,
+                          "start": 1647,
+                          "end": 1651,
                           "loc": {
                             "start": {
                               "line": 40,
@@ -615,8 +526,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1646,
-                          "end": 1661,
+                          "start": 1652,
+                          "end": 1667,
                           "loc": {
                             "start": {
                               "line": 40,
@@ -640,15 +551,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with Bounding Volumes",
-                    "start": 723,
-                    "end": 755,
+                    "start": 728,
+                    "end": 760,
                     "loc": {
                       "start": {
-                        "line": 32,
+                        "line": 31,
                         "column": 2
                       },
                       "end": {
-                        "line": 32,
+                        "line": 31,
                         "column": 34
                       }
                     }
@@ -656,8 +567,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {{center: SCNVector3, radius: number}}\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
-                    "start": 758,
-                    "end": 1604,
+                    "start": 764,
+                    "end": 1610,
                     "loc": {
                       "start": {
                         "line": 33,
@@ -675,17 +586,33 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
-              "start": 54,
-              "end": 250,
+              "type": "CommentLine",
+              "value": "import SCNVector3 from './SCNVector3'",
+              "start": 14,
+              "end": 53,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 10,
+                  "line": 3,
+                  "column": 39
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
+              "start": 55,
+              "end": 251,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 9,
                   "column": 3
                 }
               }
@@ -695,17 +622,33 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
-            "start": 54,
-            "end": 250,
+            "type": "CommentLine",
+            "value": "import SCNVector3 from './SCNVector3'",
+            "start": 14,
+            "end": 53,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 10,
+                "line": 3,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
+            "start": 55,
+            "end": 251,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
                 "column": 3
               }
             }
@@ -746,40 +689,91 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNVector3 from './SCNVector3'",
+            "start": 14,
+            "end": 53,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
+            "start": 55,
+            "end": 251,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
-      "start": 54,
-      "end": 250,
+      "type": "CommentLine",
+      "value": "import SCNVector3 from './SCNVector3'",
+      "start": 14,
+      "end": 53,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 3,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
+      "start": 55,
+      "end": 251,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 295,
-      "end": 362,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 296,
+      "end": 360,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 5
         }
       }
@@ -787,15 +781,15 @@
     {
       "type": "CommentLine",
       "value": " Working with Bounding Volumes",
-      "start": 379,
-      "end": 411,
+      "start": 384,
+      "end": 416,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 19,
           "column": 4
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 36
         }
       }
@@ -803,15 +797,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The minimum and maximum corner points of the object’s bounding box.\n     * @type {{min: SCNVector3, max: SCNVector3}}\n     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034705-boundingbox\n     ",
-      "start": 417,
-      "end": 654,
+      "start": 422,
+      "end": 659,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 7
         }
       }
@@ -819,15 +813,15 @@
     {
       "type": "CommentLine",
       "value": " Working with Bounding Volumes",
-      "start": 723,
-      "end": 755,
+      "start": 728,
+      "end": 760,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 31,
           "column": 2
         },
         "end": {
-          "line": 32,
+          "line": 31,
           "column": 34
         }
       }
@@ -835,8 +829,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {{center: SCNVector3, radius: number}}\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
-      "start": 758,
-      "end": 1604,
+      "start": 764,
+      "end": 1610,
       "loc": {
         "start": {
           "line": 33,
@@ -878,22 +872,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNVector3 from './SCNVector3'",
       "start": 14,
-      "end": 20,
+      "end": 53,
       "loc": {
         "start": {
           "line": 3,
@@ -901,101 +883,22 @@
         },
         "end": {
           "line": 3,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNVector3",
-      "start": 21,
-      "end": 31,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 32,
-      "end": 36,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 18
-        },
-        "end": {
-          "line": 3,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNVector3",
-      "start": 37,
-      "end": 51,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 23
-        },
-        "end": {
-          "line": 3,
-          "column": 37
+          "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * Properties for measuring an object's location and size, expressed as either a box or a sphere.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume\n ",
-      "start": 54,
-      "end": 250,
+      "start": 55,
+      "end": 251,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 3
         }
       }
@@ -1015,15 +918,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 251,
-      "end": 257,
+      "start": 252,
+      "end": 258,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 6
         }
       }
@@ -1043,15 +946,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 258,
-      "end": 265,
+      "start": 259,
+      "end": 266,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 7
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 14
         }
       }
@@ -1071,15 +974,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 266,
-      "end": 271,
+      "start": 267,
+      "end": 272,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 15
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 20
         }
       }
@@ -1097,15 +1000,15 @@
         "binop": null
       },
       "value": "SCNBoundingVolume",
-      "start": 272,
-      "end": 289,
+      "start": 273,
+      "end": 290,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 21
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 38
         }
       }
@@ -1122,31 +1025,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 290,
-      "end": 291,
+      "start": 291,
+      "end": 292,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 39
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 40
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 295,
-      "end": 362,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 296,
+      "end": 360,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 5
         }
       }
@@ -1163,17 +1066,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 365,
-      "end": 369,
+      "value": "constructor",
+      "start": 363,
+      "end": 374,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 17,
           "column": 2
         },
         "end": {
-          "line": 18,
-          "column": 6
+          "line": 17,
+          "column": 13
         }
       }
     },
@@ -1189,16 +1092,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 369,
-      "end": 370,
+      "start": 374,
+      "end": 375,
       "loc": {
         "start": {
-          "line": 18,
-          "column": 6
+          "line": 17,
+          "column": 13
         },
         "end": {
-          "line": 18,
-          "column": 7
+          "line": 17,
+          "column": 14
         }
       }
     },
@@ -1214,16 +1117,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 370,
-      "end": 371,
+      "start": 375,
+      "end": 376,
       "loc": {
         "start": {
-          "line": 18,
-          "column": 7
+          "line": 17,
+          "column": 14
         },
         "end": {
-          "line": 18,
-          "column": 8
+          "line": 17,
+          "column": 15
         }
       }
     },
@@ -1239,31 +1142,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 372,
-      "end": 373,
+      "start": 377,
+      "end": 378,
       "loc": {
         "start": {
-          "line": 18,
-          "column": 9
+          "line": 17,
+          "column": 16
         },
         "end": {
-          "line": 18,
-          "column": 10
+          "line": 17,
+          "column": 17
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Working with Bounding Volumes",
-      "start": 379,
-      "end": 411,
+      "start": 384,
+      "end": 416,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 19,
           "column": 4
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 36
         }
       }
@@ -1271,15 +1174,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The minimum and maximum corner points of the object’s bounding box.\n     * @type {{min: SCNVector3, max: SCNVector3}}\n     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034705-boundingbox\n     ",
-      "start": 417,
-      "end": 654,
+      "start": 422,
+      "end": 659,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 7
         }
       }
@@ -1299,15 +1202,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 659,
-      "end": 663,
+      "start": 664,
+      "end": 668,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 8
         }
       }
@@ -1325,15 +1228,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 663,
-      "end": 664,
+      "start": 668,
+      "end": 669,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 8
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 9
         }
       }
@@ -1351,15 +1254,15 @@
         "binop": null
       },
       "value": "boundingBox",
-      "start": 664,
-      "end": 675,
+      "start": 669,
+      "end": 680,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 9
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 20
         }
       }
@@ -1378,15 +1281,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 676,
-      "end": 677,
+      "start": 681,
+      "end": 682,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 21
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 22
         }
       }
@@ -1406,15 +1309,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 678,
-      "end": 682,
+      "start": 683,
+      "end": 687,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 23
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 27
         }
       }
@@ -1434,15 +1337,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 688,
-      "end": 692,
+      "start": 693,
+      "end": 697,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 8
         }
       }
@@ -1460,15 +1363,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 692,
-      "end": 693,
+      "start": 697,
+      "end": 698,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 8
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 9
         }
       }
@@ -1486,15 +1389,15 @@
         "binop": null
       },
       "value": "_boundingSphere",
-      "start": 693,
-      "end": 708,
+      "start": 698,
+      "end": 713,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 9
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 24
         }
       }
@@ -1513,15 +1416,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 709,
-      "end": 710,
+      "start": 714,
+      "end": 715,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 25
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 26
         }
       }
@@ -1541,15 +1444,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 711,
-      "end": 715,
+      "start": 716,
+      "end": 720,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 27
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 31
         }
       }
@@ -1566,15 +1469,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 718,
-      "end": 719,
+      "start": 723,
+      "end": 724,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 2
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 3
         }
       }
@@ -1582,15 +1485,15 @@
     {
       "type": "CommentLine",
       "value": " Working with Bounding Volumes",
-      "start": 723,
-      "end": 755,
+      "start": 728,
+      "end": 760,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 31,
           "column": 2
         },
         "end": {
-          "line": 32,
+          "line": 31,
           "column": 34
         }
       }
@@ -1598,8 +1501,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {{center: SCNVector3, radius: number}}\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
-      "start": 758,
-      "end": 1604,
+      "start": 764,
+      "end": 1610,
       "loc": {
         "start": {
           "line": 33,
@@ -1624,8 +1527,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 1607,
-      "end": 1610,
+      "start": 1613,
+      "end": 1616,
       "loc": {
         "start": {
           "line": 39,
@@ -1650,8 +1553,8 @@
         "binop": null
       },
       "value": "boundingSphere",
-      "start": 1611,
-      "end": 1625,
+      "start": 1617,
+      "end": 1631,
       "loc": {
         "start": {
           "line": 39,
@@ -1675,8 +1578,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1625,
-      "end": 1626,
+      "start": 1631,
+      "end": 1632,
       "loc": {
         "start": {
           "line": 39,
@@ -1700,8 +1603,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1626,
-      "end": 1627,
+      "start": 1632,
+      "end": 1633,
       "loc": {
         "start": {
           "line": 39,
@@ -1725,8 +1628,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1628,
-      "end": 1629,
+      "start": 1634,
+      "end": 1635,
       "loc": {
         "start": {
           "line": 39,
@@ -1753,8 +1656,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1634,
-      "end": 1640,
+      "start": 1640,
+      "end": 1646,
       "loc": {
         "start": {
           "line": 40,
@@ -1781,8 +1684,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1641,
-      "end": 1645,
+      "start": 1647,
+      "end": 1651,
       "loc": {
         "start": {
           "line": 40,
@@ -1807,8 +1710,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1645,
-      "end": 1646,
+      "start": 1651,
+      "end": 1652,
       "loc": {
         "start": {
           "line": 40,
@@ -1833,8 +1736,8 @@
         "binop": null
       },
       "value": "_boundingSphere",
-      "start": 1646,
-      "end": 1661,
+      "start": 1652,
+      "end": 1667,
       "loc": {
         "start": {
           "line": 40,
@@ -1858,8 +1761,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1664,
-      "end": 1665,
+      "start": 1670,
+      "end": 1671,
       "loc": {
         "start": {
           "line": 41,
@@ -1883,8 +1786,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1666,
-      "end": 1667,
+      "start": 1672,
+      "end": 1673,
       "loc": {
         "start": {
           "line": 42,
@@ -1909,8 +1812,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1668,
-      "end": 1668,
+      "start": 1674,
+      "end": 1674,
       "loc": {
         "start": {
           "line": 43,

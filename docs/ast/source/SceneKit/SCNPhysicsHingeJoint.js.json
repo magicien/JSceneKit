@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3464,
+  "end": 3467,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 89,
+      "line": 88,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3464,
+    "end": 3467,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 89,
+        "line": 88,
         "column": 0
       }
     },
@@ -94,161 +94,55 @@
             "rawValue": "./SCNPhysicsBehavior",
             "raw": "'./SCNPhysicsBehavior'"
           },
-          "value": "./SCNPhysicsBehavior"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 68,
-        "end": 113,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 45
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 75,
-            "end": 89,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 21
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 75,
-              "end": 89,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 21
-                },
-                "identifierName": "SCNPhysicsBody"
-              },
-              "name": "SCNPhysicsBody"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 95,
-          "end": 113,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 27
-            },
-            "end": {
-              "line": 4,
-              "column": 45
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNPhysicsBody",
-            "raw": "'./SCNPhysicsBody'"
-          },
-          "value": "./SCNPhysicsBody"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 114,
-        "end": 151,
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 0
-          },
-          "end": {
-            "line": 5,
-            "column": 37
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 121,
-            "end": 131,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 7
-              },
-              "end": {
-                "line": 5,
-                "column": 17
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 121,
-              "end": 131,
-              "loc": {
-                "start": {
-                  "line": 5,
-                  "column": 7
-                },
-                "end": {
-                  "line": 5,
-                  "column": 17
-                },
-                "identifierName": "SCNVector3"
-              },
-              "name": "SCNVector3"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 137,
-          "end": 151,
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 23
-            },
-            "end": {
-              "line": 5,
-              "column": 37
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNVector3",
-            "raw": "'./SCNVector3'"
-          },
-          "value": "./SCNVector3",
+          "value": "./SCNPhysicsBehavior",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
-            "start": 154,
-            "end": 400,
+            "type": "CommentLine",
+            "value": "import SCNPhysicsBody from './SCNPhysicsBody'",
+            "start": 68,
+            "end": 115,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 47
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNVector3 from './SCNVector3'",
+            "start": 116,
+            "end": 155,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
+            "start": 157,
+            "end": 403,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -257,43 +151,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 401,
-        "end": 3463,
+        "start": 404,
+        "end": 3466,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 88,
+            "line": 87,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 416,
-          "end": 3463,
+          "start": 419,
+          "end": 3466,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 13,
               "column": 15
             },
             "end": {
-              "line": 88,
+              "line": 87,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 422,
-            "end": 442,
+            "start": 425,
+            "end": 445,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 21
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 41
               },
               "identifierName": "SCNPhysicsHingeJoint"
@@ -303,15 +197,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 451,
-            "end": 469,
+            "start": 454,
+            "end": 472,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 50
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 68
               },
               "identifierName": "SCNPhysicsBehavior"
@@ -320,45 +214,45 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 470,
-            "end": 3463,
+            "start": 473,
+            "end": 3466,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 69
               },
               "end": {
-                "line": 88,
+                "line": 87,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1610,
-                "end": 2824,
+                "start": 1613,
+                "end": 2827,
                 "loc": {
                   "start": {
-                    "line": 30,
+                    "line": 29,
                     "column": 2
                   },
                   "end": {
-                    "line": 65,
+                    "line": 64,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1610,
-                  "end": 1621,
+                  "start": 1613,
+                  "end": 1624,
                   "loc": {
                     "start": {
-                      "line": 30,
+                      "line": 29,
                       "column": 2
                     },
                     "end": {
-                      "line": 30,
+                      "line": 29,
                       "column": 13
                     },
                     "identifierName": "constructor"
@@ -375,15 +269,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1622,
-                    "end": 1627,
+                    "start": 1625,
+                    "end": 1630,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 29,
                         "column": 14
                       },
                       "end": {
-                        "line": 30,
+                        "line": 29,
                         "column": 19
                       },
                       "identifierName": "bodyA"
@@ -392,15 +286,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1629,
-                    "end": 1634,
+                    "start": 1632,
+                    "end": 1637,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 29,
                         "column": 21
                       },
                       "end": {
-                        "line": 30,
+                        "line": 29,
                         "column": 26
                       },
                       "identifierName": "axisA"
@@ -409,15 +303,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1636,
-                    "end": 1643,
+                    "start": 1639,
+                    "end": 1646,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 29,
                         "column": 28
                       },
                       "end": {
-                        "line": 30,
+                        "line": 29,
                         "column": 35
                       },
                       "identifierName": "anchorA"
@@ -426,15 +320,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1645,
-                    "end": 1650,
+                    "start": 1648,
+                    "end": 1653,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 29,
                         "column": 37
                       },
                       "end": {
-                        "line": 30,
+                        "line": 29,
                         "column": 42
                       },
                       "identifierName": "bodyB"
@@ -443,15 +337,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1652,
-                    "end": 1657,
+                    "start": 1655,
+                    "end": 1660,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 29,
                         "column": 44
                       },
                       "end": {
-                        "line": 30,
+                        "line": 29,
                         "column": 49
                       },
                       "identifierName": "axisB"
@@ -460,15 +354,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1659,
-                    "end": 1666,
+                    "start": 1662,
+                    "end": 1669,
                     "loc": {
                       "start": {
-                        "line": 30,
+                        "line": 29,
                         "column": 51
                       },
                       "end": {
-                        "line": 30,
+                        "line": 29,
                         "column": 58
                       },
                       "identifierName": "anchorB"
@@ -478,58 +372,58 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1668,
-                  "end": 2824,
+                  "start": 1671,
+                  "end": 2827,
                   "loc": {
                     "start": {
-                      "line": 30,
+                      "line": 29,
                       "column": 60
                     },
                     "end": {
-                      "line": 65,
+                      "line": 64,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1674,
-                      "end": 1681,
+                      "start": 1677,
+                      "end": 1684,
                       "loc": {
                         "start": {
-                          "line": 31,
+                          "line": 30,
                           "column": 4
                         },
                         "end": {
-                          "line": 31,
+                          "line": 30,
                           "column": 11
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1674,
-                        "end": 1681,
+                        "start": 1677,
+                        "end": 1684,
                         "loc": {
                           "start": {
-                            "line": 31,
+                            "line": 30,
                             "column": 4
                           },
                           "end": {
-                            "line": 31,
+                            "line": 30,
                             "column": 11
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1674,
-                          "end": 1679,
+                          "start": 1677,
+                          "end": 1682,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 30,
                               "column": 4
                             },
                             "end": {
-                              "line": 31,
+                              "line": 30,
                               "column": 9
                             }
                           }
@@ -541,15 +435,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Characteristics of a Hinge Joint",
-                          "start": 1687,
-                          "end": 1735,
+                          "start": 1690,
+                          "end": 1738,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 32,
                               "column": 4
                             },
                             "end": {
-                              "line": 33,
+                              "line": 32,
                               "column": 52
                             }
                           }
@@ -557,15 +451,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387888-axisa\n     ",
-                          "start": 1741,
-                          "end": 1970,
+                          "start": 1744,
+                          "end": 1973,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 39,
+                              "line": 38,
                               "column": 7
                             }
                           }
@@ -574,58 +468,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1975,
-                      "end": 1992,
+                      "start": 1978,
+                      "end": 1995,
                       "loc": {
                         "start": {
-                          "line": 40,
+                          "line": 39,
                           "column": 4
                         },
                         "end": {
-                          "line": 40,
+                          "line": 39,
                           "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1975,
-                        "end": 1992,
+                        "start": 1978,
+                        "end": 1995,
                         "loc": {
                           "start": {
-                            "line": 40,
+                            "line": 39,
                             "column": 4
                           },
                           "end": {
-                            "line": 40,
+                            "line": 39,
                             "column": 21
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1975,
-                          "end": 1985,
+                          "start": 1978,
+                          "end": 1988,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 39,
                               "column": 4
                             },
                             "end": {
-                              "line": 40,
+                              "line": 39,
                               "column": 14
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1975,
-                            "end": 1979,
+                            "start": 1978,
+                            "end": 1982,
                             "loc": {
                               "start": {
-                                "line": 40,
+                                "line": 39,
                                 "column": 4
                               },
                               "end": {
-                                "line": 40,
+                                "line": 39,
                                 "column": 8
                               }
                             },
@@ -633,15 +527,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1980,
-                            "end": 1985,
+                            "start": 1983,
+                            "end": 1988,
                             "loc": {
                               "start": {
-                                "line": 40,
+                                "line": 39,
                                 "column": 9
                               },
                               "end": {
-                                "line": 40,
+                                "line": 39,
                                 "column": 14
                               },
                               "identifierName": "axisA"
@@ -653,15 +547,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1988,
-                          "end": 1992,
+                          "start": 1991,
+                          "end": 1995,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 39,
                               "column": 17
                             },
                             "end": {
-                              "line": 40,
+                              "line": 39,
                               "column": 21
                             }
                           },
@@ -675,15 +569,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Characteristics of a Hinge Joint",
-                          "start": 1687,
-                          "end": 1735,
+                          "start": 1690,
+                          "end": 1738,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 32,
                               "column": 4
                             },
                             "end": {
-                              "line": 33,
+                              "line": 32,
                               "column": 52
                             }
                           }
@@ -691,15 +585,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387888-axisa\n     ",
-                          "start": 1741,
-                          "end": 1970,
+                          "start": 1744,
+                          "end": 1973,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 39,
+                              "line": 38,
                               "column": 7
                             }
                           }
@@ -709,15 +603,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The point at which the hinge connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387936-anchora\n     ",
-                          "start": 1998,
-                          "end": 2229,
+                          "start": 2001,
+                          "end": 2232,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 46,
+                              "line": 45,
                               "column": 7
                             }
                           }
@@ -726,58 +620,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2234,
-                      "end": 2253,
+                      "start": 2237,
+                      "end": 2256,
                       "loc": {
                         "start": {
-                          "line": 47,
+                          "line": 46,
                           "column": 4
                         },
                         "end": {
-                          "line": 47,
+                          "line": 46,
                           "column": 23
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2234,
-                        "end": 2253,
+                        "start": 2237,
+                        "end": 2256,
                         "loc": {
                           "start": {
-                            "line": 47,
+                            "line": 46,
                             "column": 4
                           },
                           "end": {
-                            "line": 47,
+                            "line": 46,
                             "column": 23
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2234,
-                          "end": 2246,
+                          "start": 2237,
+                          "end": 2249,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 47,
+                              "line": 46,
                               "column": 16
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2234,
-                            "end": 2238,
+                            "start": 2237,
+                            "end": 2241,
                             "loc": {
                               "start": {
-                                "line": 47,
+                                "line": 46,
                                 "column": 4
                               },
                               "end": {
-                                "line": 47,
+                                "line": 46,
                                 "column": 8
                               }
                             },
@@ -785,15 +679,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2239,
-                            "end": 2246,
+                            "start": 2242,
+                            "end": 2249,
                             "loc": {
                               "start": {
-                                "line": 47,
+                                "line": 46,
                                 "column": 9
                               },
                               "end": {
-                                "line": 47,
+                                "line": 46,
                                 "column": 16
                               },
                               "identifierName": "anchorA"
@@ -805,15 +699,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2249,
-                          "end": 2253,
+                          "start": 2252,
+                          "end": 2256,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 46,
                               "column": 19
                             },
                             "end": {
-                              "line": 47,
+                              "line": 46,
                               "column": 23
                             }
                           },
@@ -827,15 +721,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The point at which the hinge connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387936-anchora\n     ",
-                          "start": 1998,
-                          "end": 2229,
+                          "start": 2001,
+                          "end": 2232,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 46,
+                              "line": 45,
                               "column": 7
                             }
                           }
@@ -845,15 +739,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387914-axisb\n     ",
-                          "start": 2259,
-                          "end": 2489,
+                          "start": 2262,
+                          "end": 2492,
                           "loc": {
                             "start": {
-                              "line": 49,
+                              "line": 48,
                               "column": 4
                             },
                             "end": {
-                              "line": 53,
+                              "line": 52,
                               "column": 7
                             }
                           }
@@ -862,58 +756,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2494,
-                      "end": 2511,
+                      "start": 2497,
+                      "end": 2514,
                       "loc": {
                         "start": {
-                          "line": 54,
+                          "line": 53,
                           "column": 4
                         },
                         "end": {
-                          "line": 54,
+                          "line": 53,
                           "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2494,
-                        "end": 2511,
+                        "start": 2497,
+                        "end": 2514,
                         "loc": {
                           "start": {
-                            "line": 54,
+                            "line": 53,
                             "column": 4
                           },
                           "end": {
-                            "line": 54,
+                            "line": 53,
                             "column": 21
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2494,
-                          "end": 2504,
+                          "start": 2497,
+                          "end": 2507,
                           "loc": {
                             "start": {
-                              "line": 54,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 54,
+                              "line": 53,
                               "column": 14
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2494,
-                            "end": 2498,
+                            "start": 2497,
+                            "end": 2501,
                             "loc": {
                               "start": {
-                                "line": 54,
+                                "line": 53,
                                 "column": 4
                               },
                               "end": {
-                                "line": 54,
+                                "line": 53,
                                 "column": 8
                               }
                             },
@@ -921,15 +815,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2499,
-                            "end": 2504,
+                            "start": 2502,
+                            "end": 2507,
                             "loc": {
                               "start": {
-                                "line": 54,
+                                "line": 53,
                                 "column": 9
                               },
                               "end": {
-                                "line": 54,
+                                "line": 53,
                                 "column": 14
                               },
                               "identifierName": "axisB"
@@ -941,15 +835,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2507,
-                          "end": 2511,
+                          "start": 2510,
+                          "end": 2514,
                           "loc": {
                             "start": {
-                              "line": 54,
+                              "line": 53,
                               "column": 17
                             },
                             "end": {
-                              "line": 54,
+                              "line": 53,
                               "column": 21
                             }
                           },
@@ -963,15 +857,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387914-axisb\n     ",
-                          "start": 2259,
-                          "end": 2489,
+                          "start": 2262,
+                          "end": 2492,
                           "loc": {
                             "start": {
-                              "line": 49,
+                              "line": 48,
                               "column": 4
                             },
                             "end": {
-                              "line": 53,
+                              "line": 52,
                               "column": 7
                             }
                           }
@@ -981,15 +875,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The point at which the hinge connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387979-anchorb\n     ",
-                          "start": 2517,
-                          "end": 2749,
+                          "start": 2520,
+                          "end": 2752,
                           "loc": {
                             "start": {
-                              "line": 56,
+                              "line": 55,
                               "column": 4
                             },
                             "end": {
-                              "line": 60,
+                              "line": 59,
                               "column": 7
                             }
                           }
@@ -998,58 +892,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2754,
-                      "end": 2773,
+                      "start": 2757,
+                      "end": 2776,
                       "loc": {
                         "start": {
-                          "line": 61,
+                          "line": 60,
                           "column": 4
                         },
                         "end": {
-                          "line": 61,
+                          "line": 60,
                           "column": 23
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2754,
-                        "end": 2773,
+                        "start": 2757,
+                        "end": 2776,
                         "loc": {
                           "start": {
-                            "line": 61,
+                            "line": 60,
                             "column": 4
                           },
                           "end": {
-                            "line": 61,
+                            "line": 60,
                             "column": 23
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2754,
-                          "end": 2766,
+                          "start": 2757,
+                          "end": 2769,
                           "loc": {
                             "start": {
-                              "line": 61,
+                              "line": 60,
                               "column": 4
                             },
                             "end": {
-                              "line": 61,
+                              "line": 60,
                               "column": 16
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2754,
-                            "end": 2758,
+                            "start": 2757,
+                            "end": 2761,
                             "loc": {
                               "start": {
-                                "line": 61,
+                                "line": 60,
                                 "column": 4
                               },
                               "end": {
-                                "line": 61,
+                                "line": 60,
                                 "column": 8
                               }
                             },
@@ -1057,15 +951,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2759,
-                            "end": 2766,
+                            "start": 2762,
+                            "end": 2769,
                             "loc": {
                               "start": {
-                                "line": 61,
+                                "line": 60,
                                 "column": 9
                               },
                               "end": {
-                                "line": 61,
+                                "line": 60,
                                 "column": 16
                               },
                               "identifierName": "anchorB"
@@ -1077,15 +971,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2769,
-                          "end": 2773,
+                          "start": 2772,
+                          "end": 2776,
                           "loc": {
                             "start": {
-                              "line": 61,
+                              "line": 60,
                               "column": 19
                             },
                             "end": {
-                              "line": 61,
+                              "line": 60,
                               "column": 23
                             }
                           }
@@ -1096,15 +990,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The point at which the hinge connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387979-anchorb\n     ",
-                          "start": 2517,
-                          "end": 2749,
+                          "start": 2520,
+                          "end": 2752,
                           "loc": {
                             "start": {
-                              "line": 56,
+                              "line": 55,
                               "column": 4
                             },
                             "end": {
-                              "line": 60,
+                              "line": 59,
                               "column": 7
                             }
                           }
@@ -1113,73 +1007,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2779,
-                      "end": 2797,
+                      "start": 2782,
+                      "end": 2800,
                       "loc": {
                         "start": {
-                          "line": 63,
+                          "line": 62,
                           "column": 4
                         },
                         "end": {
-                          "line": 63,
+                          "line": 62,
                           "column": 22
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2779,
-                        "end": 2797,
+                        "start": 2782,
+                        "end": 2800,
                         "loc": {
                           "start": {
-                            "line": 63,
+                            "line": 62,
                             "column": 4
                           },
                           "end": {
-                            "line": 63,
+                            "line": 62,
                             "column": 22
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2779,
-                          "end": 2790,
+                          "start": 2782,
+                          "end": 2793,
                           "loc": {
                             "start": {
-                              "line": 63,
+                              "line": 62,
                               "column": 4
                             },
                             "end": {
-                              "line": 63,
+                              "line": 62,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2779,
-                            "end": 2783,
+                            "start": 2782,
+                            "end": 2786,
                             "loc": {
                               "start": {
-                                "line": 63,
+                                "line": 62,
                                 "column": 4
                               },
                               "end": {
-                                "line": 63,
+                                "line": 62,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2784,
-                            "end": 2790,
+                            "start": 2787,
+                            "end": 2793,
                             "loc": {
                               "start": {
-                                "line": 63,
+                                "line": 62,
                                 "column": 9
                               },
                               "end": {
-                                "line": 63,
+                                "line": 62,
                                 "column": 15
                               },
                               "identifierName": "_bodyA"
@@ -1190,15 +1084,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2793,
-                          "end": 2797,
+                          "start": 2796,
+                          "end": 2800,
                           "loc": {
                             "start": {
-                              "line": 63,
+                              "line": 62,
                               "column": 18
                             },
                             "end": {
-                              "line": 63,
+                              "line": 62,
                               "column": 22
                             }
                           }
@@ -1207,73 +1101,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2802,
-                      "end": 2820,
+                      "start": 2805,
+                      "end": 2823,
                       "loc": {
                         "start": {
-                          "line": 64,
+                          "line": 63,
                           "column": 4
                         },
                         "end": {
-                          "line": 64,
+                          "line": 63,
                           "column": 22
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2802,
-                        "end": 2820,
+                        "start": 2805,
+                        "end": 2823,
                         "loc": {
                           "start": {
-                            "line": 64,
+                            "line": 63,
                             "column": 4
                           },
                           "end": {
-                            "line": 64,
+                            "line": 63,
                             "column": 22
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2802,
-                          "end": 2813,
+                          "start": 2805,
+                          "end": 2816,
                           "loc": {
                             "start": {
-                              "line": 64,
+                              "line": 63,
                               "column": 4
                             },
                             "end": {
-                              "line": 64,
+                              "line": 63,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2802,
-                            "end": 2806,
+                            "start": 2805,
+                            "end": 2809,
                             "loc": {
                               "start": {
-                                "line": 64,
+                                "line": 63,
                                 "column": 4
                               },
                               "end": {
-                                "line": 64,
+                                "line": 63,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2807,
-                            "end": 2813,
+                            "start": 2810,
+                            "end": 2816,
                             "loc": {
                               "start": {
-                                "line": 64,
+                                "line": 63,
                                 "column": 9
                               },
                               "end": {
-                                "line": 64,
+                                "line": 63,
                                 "column": 15
                               },
                               "identifierName": "_bodyB"
@@ -1284,15 +1178,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2816,
-                          "end": 2820,
+                          "start": 2819,
+                          "end": 2823,
                           "loc": {
                             "start": {
-                              "line": 64,
+                              "line": 63,
                               "column": 18
                             },
                             "end": {
-                              "line": 64,
+                              "line": 63,
                               "column": 22
                             }
                           }
@@ -1307,15 +1201,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Hinge Joint",
-                    "start": 474,
-                    "end": 499,
+                    "start": 477,
+                    "end": 502,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 14,
                         "column": 2
                       },
                       "end": {
-                        "line": 15,
+                        "line": 14,
                         "column": 27
                       }
                     }
@@ -1323,15 +1217,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a hinge joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis that the hinge pivots around, relative to the node containing the first body.\n   * @param {SCNVector3} anchorA - The point at which the hinge connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis that the hinge pivots around, relative to the node containing the second body.\n   * @param {SCNVector3} anchorB - The point at which the hinge connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387898-init\n   ",
-                    "start": 503,
-                    "end": 1607,
+                    "start": 506,
+                    "end": 1610,
                     "loc": {
                       "start": {
-                        "line": 17,
+                        "line": 16,
                         "column": 2
                       },
                       "end": {
-                        "line": 29,
+                        "line": 28,
                         "column": 5
                       }
                     }
@@ -1341,15 +1235,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing the Characteristics of a Hinge Joint",
-                    "start": 2828,
-                    "end": 2876,
+                    "start": 2831,
+                    "end": 2879,
                     "loc": {
                       "start": {
-                        "line": 67,
+                        "line": 66,
                         "column": 2
                       },
                       "end": {
-                        "line": 67,
+                        "line": 66,
                         "column": 50
                       }
                     }
@@ -1357,15 +1251,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387973-bodya\n   ",
-                    "start": 2880,
-                    "end": 3077,
+                    "start": 2883,
+                    "end": 3080,
                     "loc": {
                       "start": {
-                        "line": 69,
+                        "line": 68,
                         "column": 2
                       },
                       "end": {
-                        "line": 74,
+                        "line": 73,
                         "column": 5
                       }
                     }
@@ -1374,30 +1268,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3080,
-                "end": 3120,
+                "start": 3083,
+                "end": 3123,
                 "loc": {
                   "start": {
-                    "line": 75,
+                    "line": 74,
                     "column": 2
                   },
                   "end": {
-                    "line": 77,
+                    "line": 76,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3084,
-                  "end": 3089,
+                  "start": 3087,
+                  "end": 3092,
                   "loc": {
                     "start": {
-                      "line": 75,
+                      "line": 74,
                       "column": 6
                     },
                     "end": {
-                      "line": 75,
+                      "line": 74,
                       "column": 11
                     },
                     "identifierName": "bodyA"
@@ -1413,73 +1307,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3092,
-                  "end": 3120,
+                  "start": 3095,
+                  "end": 3123,
                   "loc": {
                     "start": {
-                      "line": 75,
+                      "line": 74,
                       "column": 14
                     },
                     "end": {
-                      "line": 77,
+                      "line": 76,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3098,
-                      "end": 3116,
+                      "start": 3101,
+                      "end": 3119,
                       "loc": {
                         "start": {
-                          "line": 76,
+                          "line": 75,
                           "column": 4
                         },
                         "end": {
-                          "line": 76,
+                          "line": 75,
                           "column": 22
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3105,
-                        "end": 3116,
+                        "start": 3108,
+                        "end": 3119,
                         "loc": {
                           "start": {
-                            "line": 76,
+                            "line": 75,
                             "column": 11
                           },
                           "end": {
-                            "line": 76,
+                            "line": 75,
                             "column": 22
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3105,
-                          "end": 3109,
+                          "start": 3108,
+                          "end": 3112,
                           "loc": {
                             "start": {
-                              "line": 76,
+                              "line": 75,
                               "column": 11
                             },
                             "end": {
-                              "line": 76,
+                              "line": 75,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3110,
-                          "end": 3116,
+                          "start": 3113,
+                          "end": 3119,
                           "loc": {
                             "start": {
-                              "line": 76,
+                              "line": 75,
                               "column": 16
                             },
                             "end": {
-                              "line": 76,
+                              "line": 75,
                               "column": 22
                             },
                             "identifierName": "_bodyA"
@@ -1497,15 +1391,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing the Characteristics of a Hinge Joint",
-                    "start": 2828,
-                    "end": 2876,
+                    "start": 2831,
+                    "end": 2879,
                     "loc": {
                       "start": {
-                        "line": 67,
+                        "line": 66,
                         "column": 2
                       },
                       "end": {
-                        "line": 67,
+                        "line": 66,
                         "column": 50
                       }
                     }
@@ -1513,15 +1407,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387973-bodya\n   ",
-                    "start": 2880,
-                    "end": 3077,
+                    "start": 2883,
+                    "end": 3080,
                     "loc": {
                       "start": {
-                        "line": 69,
+                        "line": 68,
                         "column": 2
                       },
                       "end": {
-                        "line": 74,
+                        "line": 73,
                         "column": 5
                       }
                     }
@@ -1531,15 +1425,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387918-bodyb\n   ",
-                    "start": 3124,
-                    "end": 3418,
+                    "start": 3127,
+                    "end": 3421,
                     "loc": {
                       "start": {
-                        "line": 79,
+                        "line": 78,
                         "column": 2
                       },
                       "end": {
-                        "line": 84,
+                        "line": 83,
                         "column": 5
                       }
                     }
@@ -1548,30 +1442,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3421,
-                "end": 3461,
+                "start": 3424,
+                "end": 3464,
                 "loc": {
                   "start": {
-                    "line": 85,
+                    "line": 84,
                     "column": 2
                   },
                   "end": {
-                    "line": 87,
+                    "line": 86,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3425,
-                  "end": 3430,
+                  "start": 3428,
+                  "end": 3433,
                   "loc": {
                     "start": {
-                      "line": 85,
+                      "line": 84,
                       "column": 6
                     },
                     "end": {
-                      "line": 85,
+                      "line": 84,
                       "column": 11
                     },
                     "identifierName": "bodyB"
@@ -1587,73 +1481,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3433,
-                  "end": 3461,
+                  "start": 3436,
+                  "end": 3464,
                   "loc": {
                     "start": {
-                      "line": 85,
+                      "line": 84,
                       "column": 14
                     },
                     "end": {
-                      "line": 87,
+                      "line": 86,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3439,
-                      "end": 3457,
+                      "start": 3442,
+                      "end": 3460,
                       "loc": {
                         "start": {
-                          "line": 86,
+                          "line": 85,
                           "column": 4
                         },
                         "end": {
-                          "line": 86,
+                          "line": 85,
                           "column": 22
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3446,
-                        "end": 3457,
+                        "start": 3449,
+                        "end": 3460,
                         "loc": {
                           "start": {
-                            "line": 86,
+                            "line": 85,
                             "column": 11
                           },
                           "end": {
-                            "line": 86,
+                            "line": 85,
                             "column": 22
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3446,
-                          "end": 3450,
+                          "start": 3449,
+                          "end": 3453,
                           "loc": {
                             "start": {
-                              "line": 86,
+                              "line": 85,
                               "column": 11
                             },
                             "end": {
-                              "line": 86,
+                              "line": 85,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3451,
-                          "end": 3457,
+                          "start": 3454,
+                          "end": 3460,
                           "loc": {
                             "start": {
-                              "line": 86,
+                              "line": 85,
                               "column": 16
                             },
                             "end": {
-                              "line": 86,
+                              "line": 85,
                               "column": 22
                             },
                             "identifierName": "_bodyB"
@@ -1670,15 +1564,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387918-bodyb\n   ",
-                    "start": 3124,
-                    "end": 3418,
+                    "start": 3127,
+                    "end": 3421,
                     "loc": {
                       "start": {
-                        "line": 79,
+                        "line": 78,
                         "column": 2
                       },
                       "end": {
-                        "line": 84,
+                        "line": 83,
                         "column": 5
                       }
                     }
@@ -1689,17 +1583,49 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
-              "start": 154,
-              "end": 400,
+              "type": "CommentLine",
+              "value": "import SCNPhysicsBody from './SCNPhysicsBody'",
+              "start": 68,
+              "end": 115,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 13,
+                  "line": 4,
+                  "column": 47
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import SCNVector3 from './SCNVector3'",
+              "start": 116,
+              "end": 155,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 39
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
+              "start": 157,
+              "end": 403,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 0
+                },
+                "end": {
+                  "line": 12,
                   "column": 3
                 }
               }
@@ -1709,17 +1635,49 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
-            "start": 154,
-            "end": 400,
+            "type": "CommentLine",
+            "value": "import SCNPhysicsBody from './SCNPhysicsBody'",
+            "start": 68,
+            "end": 115,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 47
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNVector3 from './SCNVector3'",
+            "start": 116,
+            "end": 155,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
+            "start": 157,
+            "end": 403,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -1767,17 +1725,49 @@
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
-      "start": 154,
-      "end": 400,
+      "type": "CommentLine",
+      "value": "import SCNPhysicsBody from './SCNPhysicsBody'",
+      "start": 68,
+      "end": 115,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 4,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "import SCNVector3 from './SCNVector3'",
+      "start": 116,
+      "end": 155,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
+      "start": 157,
+      "end": 403,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
           "column": 3
         }
       }
@@ -1785,15 +1775,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Hinge Joint",
-      "start": 474,
-      "end": 499,
+      "start": 477,
+      "end": 502,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 27
         }
       }
@@ -1801,15 +1791,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a hinge joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis that the hinge pivots around, relative to the node containing the first body.\n   * @param {SCNVector3} anchorA - The point at which the hinge connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis that the hinge pivots around, relative to the node containing the second body.\n   * @param {SCNVector3} anchorB - The point at which the hinge connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387898-init\n   ",
-      "start": 503,
-      "end": 1607,
+      "start": 506,
+      "end": 1610,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 5
         }
       }
@@ -1817,15 +1807,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Hinge Joint",
-      "start": 1687,
-      "end": 1735,
+      "start": 1690,
+      "end": 1738,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 32,
           "column": 4
         },
         "end": {
-          "line": 33,
+          "line": 32,
           "column": 52
         }
       }
@@ -1833,15 +1823,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387888-axisa\n     ",
-      "start": 1741,
-      "end": 1970,
+      "start": 1744,
+      "end": 1973,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 39,
+          "line": 38,
           "column": 7
         }
       }
@@ -1849,15 +1839,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The point at which the hinge connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387936-anchora\n     ",
-      "start": 1998,
-      "end": 2229,
+      "start": 2001,
+      "end": 2232,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 46,
+          "line": 45,
           "column": 7
         }
       }
@@ -1865,15 +1855,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387914-axisb\n     ",
-      "start": 2259,
-      "end": 2489,
+      "start": 2262,
+      "end": 2492,
       "loc": {
         "start": {
-          "line": 49,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 7
         }
       }
@@ -1881,15 +1871,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The point at which the hinge connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387979-anchorb\n     ",
-      "start": 2517,
-      "end": 2749,
+      "start": 2520,
+      "end": 2752,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 55,
           "column": 4
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 7
         }
       }
@@ -1897,15 +1887,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Hinge Joint",
-      "start": 2828,
-      "end": 2876,
+      "start": 2831,
+      "end": 2879,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 2
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 50
         }
       }
@@ -1913,15 +1903,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387973-bodya\n   ",
-      "start": 2880,
-      "end": 3077,
+      "start": 2883,
+      "end": 3080,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 68,
           "column": 2
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 5
         }
       }
@@ -1929,15 +1919,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387918-bodyb\n   ",
-      "start": 3124,
-      "end": 3418,
+      "start": 3127,
+      "end": 3421,
       "loc": {
         "start": {
-          "line": 79,
+          "line": 78,
           "column": 2
         },
         "end": {
-          "line": 84,
+          "line": 83,
           "column": 5
         }
       }
@@ -2079,22 +2069,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNPhysicsBody from './SCNPhysicsBody'",
       "start": 68,
-      "end": 74,
+      "end": 115,
       "loc": {
         "start": {
           "line": 4,
@@ -2102,106 +2080,15 @@
         },
         "end": {
           "line": 4,
-          "column": 6
+          "column": 47
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNPhysicsBody",
-      "start": 75,
-      "end": 89,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 90,
-      "end": 94,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 22
-        },
-        "end": {
-          "line": 4,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNPhysicsBody",
-      "start": 95,
-      "end": 113,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 27
-        },
-        "end": {
-          "line": 4,
-          "column": 45
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 114,
-      "end": 120,
+      "type": "CommentLine",
+      "value": "import SCNVector3 from './SCNVector3'",
+      "start": 116,
+      "end": 155,
       "loc": {
         "start": {
           "line": 5,
@@ -2209,101 +2096,22 @@
         },
         "end": {
           "line": 5,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNVector3",
-      "start": 121,
-      "end": 131,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 7
-        },
-        "end": {
-          "line": 5,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 132,
-      "end": 136,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 18
-        },
-        "end": {
-          "line": 5,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNVector3",
-      "start": 137,
-      "end": 151,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 23
-        },
-        "end": {
-          "line": 5,
-          "column": 37
+          "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * A physics behavior that connects two bodies and allows them to pivot around each other on a single axis.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint\n ",
-      "start": 154,
-      "end": 400,
+      "start": 157,
+      "end": 403,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 3
         }
       }
@@ -2323,15 +2131,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 401,
-      "end": 407,
+      "start": 404,
+      "end": 410,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 6
         }
       }
@@ -2351,15 +2159,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 408,
-      "end": 415,
+      "start": 411,
+      "end": 418,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 14
         }
       }
@@ -2379,15 +2187,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 416,
-      "end": 421,
+      "start": 419,
+      "end": 424,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 20
         }
       }
@@ -2405,15 +2213,15 @@
         "binop": null
       },
       "value": "SCNPhysicsHingeJoint",
-      "start": 422,
-      "end": 442,
+      "start": 425,
+      "end": 445,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 21
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 41
         }
       }
@@ -2433,15 +2241,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 443,
-      "end": 450,
+      "start": 446,
+      "end": 453,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 42
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 49
         }
       }
@@ -2459,15 +2267,15 @@
         "binop": null
       },
       "value": "SCNPhysicsBehavior",
-      "start": 451,
-      "end": 469,
+      "start": 454,
+      "end": 472,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 50
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 68
         }
       }
@@ -2484,15 +2292,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 470,
-      "end": 471,
+      "start": 473,
+      "end": 474,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 69
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 70
         }
       }
@@ -2500,15 +2308,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Hinge Joint",
-      "start": 474,
-      "end": 499,
+      "start": 477,
+      "end": 502,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 27
         }
       }
@@ -2516,15 +2324,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a hinge joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis that the hinge pivots around, relative to the node containing the first body.\n   * @param {SCNVector3} anchorA - The point at which the hinge connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis that the hinge pivots around, relative to the node containing the second body.\n   * @param {SCNVector3} anchorB - The point at which the hinge connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387898-init\n   ",
-      "start": 503,
-      "end": 1607,
+      "start": 506,
+      "end": 1610,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 5
         }
       }
@@ -2542,15 +2350,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1610,
-      "end": 1621,
+      "start": 1613,
+      "end": 1624,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 2
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 13
         }
       }
@@ -2567,15 +2375,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1621,
-      "end": 1622,
+      "start": 1624,
+      "end": 1625,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 13
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 14
         }
       }
@@ -2593,15 +2401,15 @@
         "binop": null
       },
       "value": "bodyA",
-      "start": 1622,
-      "end": 1627,
+      "start": 1625,
+      "end": 1630,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 14
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 19
         }
       }
@@ -2619,15 +2427,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1627,
-      "end": 1628,
+      "start": 1630,
+      "end": 1631,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 19
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 20
         }
       }
@@ -2645,15 +2453,15 @@
         "binop": null
       },
       "value": "axisA",
-      "start": 1629,
-      "end": 1634,
+      "start": 1632,
+      "end": 1637,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 21
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 26
         }
       }
@@ -2671,15 +2479,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1634,
-      "end": 1635,
+      "start": 1637,
+      "end": 1638,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 26
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 27
         }
       }
@@ -2697,15 +2505,15 @@
         "binop": null
       },
       "value": "anchorA",
-      "start": 1636,
-      "end": 1643,
+      "start": 1639,
+      "end": 1646,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 28
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 35
         }
       }
@@ -2723,15 +2531,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1643,
-      "end": 1644,
+      "start": 1646,
+      "end": 1647,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 35
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 36
         }
       }
@@ -2749,15 +2557,15 @@
         "binop": null
       },
       "value": "bodyB",
-      "start": 1645,
-      "end": 1650,
+      "start": 1648,
+      "end": 1653,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 37
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 42
         }
       }
@@ -2775,15 +2583,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1650,
-      "end": 1651,
+      "start": 1653,
+      "end": 1654,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 42
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 43
         }
       }
@@ -2801,15 +2609,15 @@
         "binop": null
       },
       "value": "axisB",
-      "start": 1652,
-      "end": 1657,
+      "start": 1655,
+      "end": 1660,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 44
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 49
         }
       }
@@ -2827,15 +2635,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1657,
-      "end": 1658,
+      "start": 1660,
+      "end": 1661,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 49
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 50
         }
       }
@@ -2853,15 +2661,15 @@
         "binop": null
       },
       "value": "anchorB",
-      "start": 1659,
-      "end": 1666,
+      "start": 1662,
+      "end": 1669,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 51
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 58
         }
       }
@@ -2878,15 +2686,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1666,
-      "end": 1667,
+      "start": 1669,
+      "end": 1670,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 58
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 59
         }
       }
@@ -2903,15 +2711,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1668,
-      "end": 1669,
+      "start": 1671,
+      "end": 1672,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 60
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 61
         }
       }
@@ -2931,15 +2739,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1674,
-      "end": 1679,
+      "start": 1677,
+      "end": 1682,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 9
         }
       }
@@ -2956,15 +2764,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1679,
-      "end": 1680,
+      "start": 1682,
+      "end": 1683,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 9
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 10
         }
       }
@@ -2981,15 +2789,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1680,
-      "end": 1681,
+      "start": 1683,
+      "end": 1684,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 10
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 11
         }
       }
@@ -2997,15 +2805,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Hinge Joint",
-      "start": 1687,
-      "end": 1735,
+      "start": 1690,
+      "end": 1738,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 32,
           "column": 4
         },
         "end": {
-          "line": 33,
+          "line": 32,
           "column": 52
         }
       }
@@ -3013,15 +2821,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387888-axisa\n     ",
-      "start": 1741,
-      "end": 1970,
+      "start": 1744,
+      "end": 1973,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 39,
+          "line": 38,
           "column": 7
         }
       }
@@ -3041,15 +2849,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1975,
-      "end": 1979,
+      "start": 1978,
+      "end": 1982,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 39,
           "column": 4
         },
         "end": {
-          "line": 40,
+          "line": 39,
           "column": 8
         }
       }
@@ -3067,15 +2875,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1979,
-      "end": 1980,
+      "start": 1982,
+      "end": 1983,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 39,
           "column": 8
         },
         "end": {
-          "line": 40,
+          "line": 39,
           "column": 9
         }
       }
@@ -3093,15 +2901,15 @@
         "binop": null
       },
       "value": "axisA",
-      "start": 1980,
-      "end": 1985,
+      "start": 1983,
+      "end": 1988,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 39,
           "column": 9
         },
         "end": {
-          "line": 40,
+          "line": 39,
           "column": 14
         }
       }
@@ -3120,15 +2928,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1986,
-      "end": 1987,
+      "start": 1989,
+      "end": 1990,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 39,
           "column": 15
         },
         "end": {
-          "line": 40,
+          "line": 39,
           "column": 16
         }
       }
@@ -3148,15 +2956,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1988,
-      "end": 1992,
+      "start": 1991,
+      "end": 1995,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 39,
           "column": 17
         },
         "end": {
-          "line": 40,
+          "line": 39,
           "column": 21
         }
       }
@@ -3164,15 +2972,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The point at which the hinge connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387936-anchora\n     ",
-      "start": 1998,
-      "end": 2229,
+      "start": 2001,
+      "end": 2232,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 46,
+          "line": 45,
           "column": 7
         }
       }
@@ -3192,15 +3000,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2234,
-      "end": 2238,
+      "start": 2237,
+      "end": 2241,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 8
         }
       }
@@ -3218,15 +3026,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2238,
-      "end": 2239,
+      "start": 2241,
+      "end": 2242,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 8
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 9
         }
       }
@@ -3244,15 +3052,15 @@
         "binop": null
       },
       "value": "anchorA",
-      "start": 2239,
-      "end": 2246,
+      "start": 2242,
+      "end": 2249,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 9
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 16
         }
       }
@@ -3271,15 +3079,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2247,
-      "end": 2248,
+      "start": 2250,
+      "end": 2251,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 17
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 18
         }
       }
@@ -3299,15 +3107,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2249,
-      "end": 2253,
+      "start": 2252,
+      "end": 2256,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 19
         },
         "end": {
-          "line": 47,
+          "line": 46,
           "column": 23
         }
       }
@@ -3315,15 +3123,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The axis that the hinge pivots around, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387914-axisb\n     ",
-      "start": 2259,
-      "end": 2489,
+      "start": 2262,
+      "end": 2492,
       "loc": {
         "start": {
-          "line": 49,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 7
         }
       }
@@ -3343,15 +3151,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2494,
-      "end": 2498,
+      "start": 2497,
+      "end": 2501,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 54,
+          "line": 53,
           "column": 8
         }
       }
@@ -3369,15 +3177,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2498,
-      "end": 2499,
+      "start": 2501,
+      "end": 2502,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 8
         },
         "end": {
-          "line": 54,
+          "line": 53,
           "column": 9
         }
       }
@@ -3395,15 +3203,15 @@
         "binop": null
       },
       "value": "axisB",
-      "start": 2499,
-      "end": 2504,
+      "start": 2502,
+      "end": 2507,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 9
         },
         "end": {
-          "line": 54,
+          "line": 53,
           "column": 14
         }
       }
@@ -3422,15 +3230,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2505,
-      "end": 2506,
+      "start": 2508,
+      "end": 2509,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 15
         },
         "end": {
-          "line": 54,
+          "line": 53,
           "column": 16
         }
       }
@@ -3450,15 +3258,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2507,
-      "end": 2511,
+      "start": 2510,
+      "end": 2514,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 17
         },
         "end": {
-          "line": 54,
+          "line": 53,
           "column": 21
         }
       }
@@ -3466,15 +3274,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The point at which the hinge connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387979-anchorb\n     ",
-      "start": 2517,
-      "end": 2749,
+      "start": 2520,
+      "end": 2752,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 55,
           "column": 4
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 7
         }
       }
@@ -3494,15 +3302,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2754,
-      "end": 2758,
+      "start": 2757,
+      "end": 2761,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 4
         },
         "end": {
-          "line": 61,
+          "line": 60,
           "column": 8
         }
       }
@@ -3520,15 +3328,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2758,
-      "end": 2759,
+      "start": 2761,
+      "end": 2762,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 8
         },
         "end": {
-          "line": 61,
+          "line": 60,
           "column": 9
         }
       }
@@ -3546,15 +3354,15 @@
         "binop": null
       },
       "value": "anchorB",
-      "start": 2759,
-      "end": 2766,
+      "start": 2762,
+      "end": 2769,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 9
         },
         "end": {
-          "line": 61,
+          "line": 60,
           "column": 16
         }
       }
@@ -3573,15 +3381,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2767,
-      "end": 2768,
+      "start": 2770,
+      "end": 2771,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 17
         },
         "end": {
-          "line": 61,
+          "line": 60,
           "column": 18
         }
       }
@@ -3601,15 +3409,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2769,
-      "end": 2773,
+      "start": 2772,
+      "end": 2776,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 19
         },
         "end": {
-          "line": 61,
+          "line": 60,
           "column": 23
         }
       }
@@ -3629,15 +3437,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2779,
-      "end": 2783,
+      "start": 2782,
+      "end": 2786,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 4
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 8
         }
       }
@@ -3655,15 +3463,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2783,
-      "end": 2784,
+      "start": 2786,
+      "end": 2787,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 8
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 9
         }
       }
@@ -3681,15 +3489,15 @@
         "binop": null
       },
       "value": "_bodyA",
-      "start": 2784,
-      "end": 2790,
+      "start": 2787,
+      "end": 2793,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 9
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 15
         }
       }
@@ -3708,15 +3516,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2791,
-      "end": 2792,
+      "start": 2794,
+      "end": 2795,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 16
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 17
         }
       }
@@ -3736,15 +3544,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2793,
-      "end": 2797,
+      "start": 2796,
+      "end": 2800,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 18
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 22
         }
       }
@@ -3764,15 +3572,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2802,
-      "end": 2806,
+      "start": 2805,
+      "end": 2809,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 63,
           "column": 4
         },
         "end": {
-          "line": 64,
+          "line": 63,
           "column": 8
         }
       }
@@ -3790,15 +3598,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2806,
-      "end": 2807,
+      "start": 2809,
+      "end": 2810,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 63,
           "column": 8
         },
         "end": {
-          "line": 64,
+          "line": 63,
           "column": 9
         }
       }
@@ -3816,15 +3624,15 @@
         "binop": null
       },
       "value": "_bodyB",
-      "start": 2807,
-      "end": 2813,
+      "start": 2810,
+      "end": 2816,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 63,
           "column": 9
         },
         "end": {
-          "line": 64,
+          "line": 63,
           "column": 15
         }
       }
@@ -3843,15 +3651,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2814,
-      "end": 2815,
+      "start": 2817,
+      "end": 2818,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 63,
           "column": 16
         },
         "end": {
-          "line": 64,
+          "line": 63,
           "column": 17
         }
       }
@@ -3871,15 +3679,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2816,
-      "end": 2820,
+      "start": 2819,
+      "end": 2823,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 63,
           "column": 18
         },
         "end": {
-          "line": 64,
+          "line": 63,
           "column": 22
         }
       }
@@ -3896,15 +3704,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2823,
-      "end": 2824,
+      "start": 2826,
+      "end": 2827,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 64,
           "column": 2
         },
         "end": {
-          "line": 65,
+          "line": 64,
           "column": 3
         }
       }
@@ -3912,15 +3720,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Hinge Joint",
-      "start": 2828,
-      "end": 2876,
+      "start": 2831,
+      "end": 2879,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 2
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 50
         }
       }
@@ -3928,11 +3736,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387973-bodya\n   ",
-      "start": 2880,
-      "end": 3077,
+      "start": 2883,
+      "end": 3080,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 68,
+          "column": 2
+        },
+        "end": {
+          "line": 73,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 3083,
+      "end": 3086,
+      "loc": {
+        "start": {
+          "line": 74,
           "column": 2
         },
         "end": {
@@ -3953,42 +3787,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 3080,
-      "end": 3083,
-      "loc": {
-        "start": {
-          "line": 75,
-          "column": 2
-        },
-        "end": {
-          "line": 75,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "bodyA",
-      "start": 3084,
-      "end": 3089,
+      "start": 3087,
+      "end": 3092,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 6
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 11
         }
       }
@@ -4005,15 +3813,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3089,
-      "end": 3090,
+      "start": 3092,
+      "end": 3093,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 11
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 12
         }
       }
@@ -4030,15 +3838,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3090,
-      "end": 3091,
+      "start": 3093,
+      "end": 3094,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 12
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 13
         }
       }
@@ -4055,15 +3863,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3092,
-      "end": 3093,
+      "start": 3095,
+      "end": 3096,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 74,
           "column": 14
         },
         "end": {
-          "line": 75,
+          "line": 74,
           "column": 15
         }
       }
@@ -4083,15 +3891,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3098,
-      "end": 3104,
+      "start": 3101,
+      "end": 3107,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 4
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 10
         }
       }
@@ -4111,15 +3919,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3105,
-      "end": 3109,
+      "start": 3108,
+      "end": 3112,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 11
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 15
         }
       }
@@ -4137,15 +3945,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3109,
-      "end": 3110,
+      "start": 3112,
+      "end": 3113,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 15
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 16
         }
       }
@@ -4163,15 +3971,15 @@
         "binop": null
       },
       "value": "_bodyA",
-      "start": 3110,
-      "end": 3116,
+      "start": 3113,
+      "end": 3119,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 16
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 22
         }
       }
@@ -4188,15 +3996,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3119,
-      "end": 3120,
+      "start": 3122,
+      "end": 3123,
       "loc": {
         "start": {
-          "line": 77,
+          "line": 76,
           "column": 2
         },
         "end": {
-          "line": 77,
+          "line": 76,
           "column": 3
         }
       }
@@ -4204,11 +4012,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicshingejoint/1387918-bodyb\n   ",
-      "start": 3124,
-      "end": 3418,
+      "start": 3127,
+      "end": 3421,
       "loc": {
         "start": {
-          "line": 79,
+          "line": 78,
+          "column": 2
+        },
+        "end": {
+          "line": 83,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 3424,
+      "end": 3427,
+      "loc": {
+        "start": {
+          "line": 84,
           "column": 2
         },
         "end": {
@@ -4229,42 +4063,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 3421,
-      "end": 3424,
-      "loc": {
-        "start": {
-          "line": 85,
-          "column": 2
-        },
-        "end": {
-          "line": 85,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "bodyB",
-      "start": 3425,
-      "end": 3430,
+      "start": 3428,
+      "end": 3433,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 6
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 11
         }
       }
@@ -4281,15 +4089,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3430,
-      "end": 3431,
+      "start": 3433,
+      "end": 3434,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 11
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 12
         }
       }
@@ -4306,15 +4114,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3431,
-      "end": 3432,
+      "start": 3434,
+      "end": 3435,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 12
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 13
         }
       }
@@ -4331,15 +4139,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3433,
-      "end": 3434,
+      "start": 3436,
+      "end": 3437,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 14
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 15
         }
       }
@@ -4359,15 +4167,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3439,
-      "end": 3445,
+      "start": 3442,
+      "end": 3448,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 85,
           "column": 4
         },
         "end": {
-          "line": 86,
+          "line": 85,
           "column": 10
         }
       }
@@ -4387,15 +4195,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3446,
-      "end": 3450,
+      "start": 3449,
+      "end": 3453,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 85,
           "column": 11
         },
         "end": {
-          "line": 86,
+          "line": 85,
           "column": 15
         }
       }
@@ -4413,15 +4221,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3450,
-      "end": 3451,
+      "start": 3453,
+      "end": 3454,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 85,
           "column": 15
         },
         "end": {
-          "line": 86,
+          "line": 85,
           "column": 16
         }
       }
@@ -4439,15 +4247,15 @@
         "binop": null
       },
       "value": "_bodyB",
-      "start": 3451,
-      "end": 3457,
+      "start": 3454,
+      "end": 3460,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 85,
           "column": 16
         },
         "end": {
-          "line": 86,
+          "line": 85,
           "column": 22
         }
       }
@@ -4464,15 +4272,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3460,
-      "end": 3461,
+      "start": 3463,
+      "end": 3464,
       "loc": {
         "start": {
-          "line": 87,
+          "line": 86,
           "column": 2
         },
         "end": {
-          "line": 87,
+          "line": 86,
           "column": 3
         }
       }
@@ -4489,15 +4297,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3462,
-      "end": 3463,
+      "start": 3465,
+      "end": 3466,
       "loc": {
         "start": {
-          "line": 88,
+          "line": 87,
           "column": 0
         },
         "end": {
-          "line": 88,
+          "line": 87,
           "column": 1
         }
       }
@@ -4515,15 +4323,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3464,
-      "end": 3464,
+      "start": 3467,
+      "end": 3467,
       "loc": {
         "start": {
-          "line": 89,
+          "line": 88,
           "column": 0
         },
         "end": {
-          "line": 89,
+          "line": 88,
           "column": 0
         }
       }

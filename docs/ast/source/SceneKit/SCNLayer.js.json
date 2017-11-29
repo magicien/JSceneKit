@@ -1,161 +1,72 @@
 {
   "type": "File",
   "start": 0,
-  "end": 561,
+  "end": 566,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 31,
+      "line": 30,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 561,
+    "end": 566,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 31,
+        "line": 30,
         "column": 0
       }
     },
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 47,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 33
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 29,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 15
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 29,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 15
-                },
-                "identifierName": "SCNScene"
-              },
-              "name": "SCNScene"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 35,
-          "end": 47,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 21
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNScene",
-            "raw": "'./SCNScene'"
-          },
-          "value": "./SCNScene",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
-            "start": 50,
-            "end": 215,
-            "loc": {
-              "start": {
-                "line": 6,
-                "column": 0
-              },
-              "end": {
-                "line": 10,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "ExportDefaultDeclaration",
-        "start": 216,
-        "end": 560,
+        "start": 217,
+        "end": 565,
         "loc": {
           "start": {
-            "line": 11,
+            "line": 10,
             "column": 0
           },
           "end": {
-            "line": 30,
+            "line": 29,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 231,
-          "end": 560,
+          "start": 232,
+          "end": 565,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 15
             },
             "end": {
-              "line": 30,
+              "line": 29,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 237,
-            "end": 245,
+            "start": 238,
+            "end": 246,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 21
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 29
               },
               "identifierName": "SCNLayer"
@@ -166,54 +77,54 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 246,
-            "end": 560,
+            "start": 247,
+            "end": 565,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 30
               },
               "end": {
-                "line": 30,
+                "line": 29,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 321,
-                "end": 558,
+                "start": 319,
+                "end": 563,
                 "loc": {
                   "start": {
-                    "line": 18,
+                    "line": 17,
                     "column": 2
                   },
                   "end": {
-                    "line": 29,
+                    "line": 28,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 321,
-                  "end": 325,
+                  "start": 319,
+                  "end": 330,
                   "loc": {
                     "start": {
-                      "line": 18,
+                      "line": 17,
                       "column": 2
                     },
                     "end": {
-                      "line": 18,
-                      "column": 6
+                      "line": 17,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -221,73 +132,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 328,
-                  "end": 558,
+                  "start": 333,
+                  "end": 563,
                   "loc": {
                     "start": {
-                      "line": 18,
-                      "column": 9
+                      "line": 17,
+                      "column": 16
                     },
                     "end": {
-                      "line": 29,
+                      "line": 28,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 536,
-                      "end": 553,
+                      "start": 541,
+                      "end": 558,
                       "loc": {
                         "start": {
-                          "line": 27,
+                          "line": 26,
                           "column": 4
                         },
                         "end": {
-                          "line": 27,
+                          "line": 26,
                           "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 536,
-                        "end": 553,
+                        "start": 541,
+                        "end": 558,
                         "loc": {
                           "start": {
-                            "line": 27,
+                            "line": 26,
                             "column": 4
                           },
                           "end": {
-                            "line": 27,
+                            "line": 26,
                             "column": 21
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 536,
-                          "end": 546,
+                          "start": 541,
+                          "end": 551,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 26,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 26,
                               "column": 14
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 536,
-                            "end": 540,
+                            "start": 541,
+                            "end": 545,
                             "loc": {
                               "start": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 4
                               },
                               "end": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 8
                               }
                             },
@@ -295,15 +206,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 541,
-                            "end": 546,
+                            "start": 546,
+                            "end": 551,
                             "loc": {
                               "start": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 9
                               },
                               "end": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 14
                               },
                               "identifierName": "scene"
@@ -315,15 +226,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 549,
-                          "end": 553,
+                          "start": 554,
+                          "end": 558,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 26,
                               "column": 17
                             },
                             "end": {
-                              "line": 27,
+                              "line": 26,
                               "column": 21
                             }
                           }
@@ -334,15 +245,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Specifying a Scene",
-                          "start": 335,
-                          "end": 356,
+                          "start": 340,
+                          "end": 361,
                           "loc": {
                             "start": {
-                              "line": 20,
+                              "line": 19,
                               "column": 4
                             },
                             "end": {
-                              "line": 20,
+                              "line": 19,
                               "column": 25
                             }
                           }
@@ -350,15 +261,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/documentation/scenekit/scnlayer/1393188-scene\n     ",
-                          "start": 362,
-                          "end": 531,
+                          "start": 367,
+                          "end": 536,
                           "loc": {
                             "start": {
-                              "line": 22,
+                              "line": 21,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 25,
                               "column": 7
                             }
                           }
@@ -371,16 +282,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 251,
-                    "end": 318,
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 252,
+                    "end": 316,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 17,
+                        "line": 16,
                         "column": 5
                       }
                     }
@@ -391,17 +302,33 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
-              "start": 50,
-              "end": 215,
+              "type": "CommentLine",
+              "value": "import SCNScene from './SCNScene'",
+              "start": 14,
+              "end": 49,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 10,
+                  "line": 3,
+                  "column": 35
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
+              "start": 51,
+              "end": 216,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 9,
                   "column": 3
                 }
               }
@@ -411,17 +338,33 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
-            "start": 50,
-            "end": 215,
+            "type": "CommentLine",
+            "value": "import SCNScene from './SCNScene'",
+            "start": 14,
+            "end": 49,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 10,
+                "line": 3,
+                "column": 35
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
+            "start": 51,
+            "end": 216,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
                 "column": 3
               }
             }
@@ -462,40 +405,91 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNScene from './SCNScene'",
+            "start": 14,
+            "end": 49,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 35
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
+            "start": 51,
+            "end": 216,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
-      "start": 50,
-      "end": 215,
+      "type": "CommentLine",
+      "value": "import SCNScene from './SCNScene'",
+      "start": 14,
+      "end": 49,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 3,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
+      "start": 51,
+      "end": 216,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 251,
-      "end": 318,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 252,
+      "end": 316,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 5
         }
       }
@@ -503,15 +497,15 @@
     {
       "type": "CommentLine",
       "value": " Specifying a Scene",
-      "start": 335,
-      "end": 356,
+      "start": 340,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 19,
           "column": 4
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 25
         }
       }
@@ -519,15 +513,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/documentation/scenekit/scnlayer/1393188-scene\n     ",
-      "start": 362,
-      "end": 531,
+      "start": 367,
+      "end": 536,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 7
         }
       }
@@ -562,22 +556,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNScene from './SCNScene'",
       "start": 14,
-      "end": 20,
+      "end": 49,
       "loc": {
         "start": {
           "line": 3,
@@ -585,101 +567,22 @@
         },
         "end": {
           "line": 3,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNScene",
-      "start": 21,
-      "end": 29,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 30,
-      "end": 34,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 16
-        },
-        "end": {
-          "line": 3,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNScene",
-      "start": 35,
-      "end": 47,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 21
-        },
-        "end": {
-          "line": 3,
-          "column": 33
+          "column": 35
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
-      "start": 50,
-      "end": 215,
+      "start": 51,
+      "end": 216,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 3
         }
       }
@@ -699,15 +602,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 216,
-      "end": 222,
+      "start": 217,
+      "end": 223,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 6
         }
       }
@@ -727,15 +630,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 223,
-      "end": 230,
+      "start": 224,
+      "end": 231,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 7
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 14
         }
       }
@@ -755,15 +658,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 231,
-      "end": 236,
+      "start": 232,
+      "end": 237,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 15
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 20
         }
       }
@@ -781,15 +684,15 @@
         "binop": null
       },
       "value": "SCNLayer",
-      "start": 237,
-      "end": 245,
+      "start": 238,
+      "end": 246,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 21
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 29
         }
       }
@@ -806,31 +709,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 246,
-      "end": 247,
+      "start": 247,
+      "end": 248,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 30
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 31
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 251,
-      "end": 318,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 252,
+      "end": 316,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 5
         }
       }
@@ -847,17 +750,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 321,
-      "end": 325,
+      "value": "constructor",
+      "start": 319,
+      "end": 330,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 17,
           "column": 2
         },
         "end": {
-          "line": 18,
-          "column": 6
+          "line": 17,
+          "column": 13
         }
       }
     },
@@ -873,16 +776,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 325,
-      "end": 326,
+      "start": 330,
+      "end": 331,
       "loc": {
         "start": {
-          "line": 18,
-          "column": 6
+          "line": 17,
+          "column": 13
         },
         "end": {
-          "line": 18,
-          "column": 7
+          "line": 17,
+          "column": 14
         }
       }
     },
@@ -898,16 +801,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 326,
-      "end": 327,
+      "start": 331,
+      "end": 332,
       "loc": {
         "start": {
-          "line": 18,
-          "column": 7
+          "line": 17,
+          "column": 14
         },
         "end": {
-          "line": 18,
-          "column": 8
+          "line": 17,
+          "column": 15
         }
       }
     },
@@ -923,31 +826,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 328,
-      "end": 329,
+      "start": 333,
+      "end": 334,
       "loc": {
         "start": {
-          "line": 18,
-          "column": 9
+          "line": 17,
+          "column": 16
         },
         "end": {
-          "line": 18,
-          "column": 10
+          "line": 17,
+          "column": 17
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Specifying a Scene",
-      "start": 335,
-      "end": 356,
+      "start": 340,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 19,
           "column": 4
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 25
         }
       }
@@ -955,15 +858,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/documentation/scenekit/scnlayer/1393188-scene\n     ",
-      "start": 362,
-      "end": 531,
+      "start": 367,
+      "end": 536,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 7
         }
       }
@@ -983,15 +886,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 536,
-      "end": 540,
+      "start": 541,
+      "end": 545,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 8
         }
       }
@@ -1009,15 +912,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 540,
-      "end": 541,
+      "start": 545,
+      "end": 546,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 8
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 9
         }
       }
@@ -1035,15 +938,15 @@
         "binop": null
       },
       "value": "scene",
-      "start": 541,
-      "end": 546,
+      "start": 546,
+      "end": 551,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 9
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 14
         }
       }
@@ -1062,15 +965,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 547,
-      "end": 548,
+      "start": 552,
+      "end": 553,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 15
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 16
         }
       }
@@ -1090,15 +993,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 549,
-      "end": 553,
+      "start": 554,
+      "end": 558,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 17
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 21
         }
       }
@@ -1115,15 +1018,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 557,
-      "end": 558,
+      "start": 562,
+      "end": 563,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 2
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 3
         }
       }
@@ -1140,15 +1043,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 559,
-      "end": 560,
+      "start": 564,
+      "end": 565,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 0
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 1
         }
       }
@@ -1166,15 +1069,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 561,
-      "end": 561,
+      "start": 566,
+      "end": 566,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 0
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 0
         }
       }

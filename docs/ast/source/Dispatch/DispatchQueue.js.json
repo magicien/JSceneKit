@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 7175,
+  "end": 7173,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 7175,
+    "end": 7173,
     "loc": {
       "start": {
         "line": 1,
@@ -1009,7 +1009,7 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 962,
-        "end": 7013,
+        "end": 7011,
         "loc": {
           "start": {
             "line": 37,
@@ -1023,7 +1023,7 @@
         "declaration": {
           "type": "ClassDeclaration",
           "start": 977,
-          "end": 7013,
+          "end": 7011,
           "loc": {
             "start": {
               "line": 37,
@@ -1072,7 +1072,7 @@
           "body": {
             "type": "ClassBody",
             "start": 1020,
-            "end": 7013,
+            "end": 7011,
             "loc": {
               "start": {
                 "line": 37,
@@ -2570,24 +2570,24 @@
                   {
                     "type": "CommentLine",
                     "value": " Instance Methods",
-                    "start": 3878,
-                    "end": 3897,
+                    "start": 3876,
+                    "end": 3895,
                     "loc": {
                       "start": {
                         "line": 115,
-                        "column": 4
+                        "column": 2
                       },
                       "end": {
                         "line": 115,
-                        "column": 23
+                        "column": 21
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1452870-sync\n   ",
-                    "start": 3901,
-                    "end": 4088,
+                    "start": 3899,
+                    "end": 4086,
                     "loc": {
                       "start": {
                         "line": 117,
@@ -2603,8 +2603,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4091,
-                "end": 4118,
+                "start": 4089,
+                "end": 4116,
                 "loc": {
                   "start": {
                     "line": 124,
@@ -2618,8 +2618,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4091,
-                  "end": 4102,
+                  "start": 4089,
+                  "end": 4100,
                   "loc": {
                     "start": {
                       "line": 124,
@@ -2643,8 +2643,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4103,
-                    "end": 4111,
+                    "start": 4101,
+                    "end": 4109,
                     "loc": {
                       "start": {
                         "line": 124,
@@ -2661,8 +2661,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4113,
-                  "end": 4118,
+                  "start": 4111,
+                  "end": 4116,
                   "loc": {
                     "start": {
                       "line": 124,
@@ -2682,24 +2682,24 @@
                   {
                     "type": "CommentLine",
                     "value": " Instance Methods",
-                    "start": 3878,
-                    "end": 3897,
+                    "start": 3876,
+                    "end": 3895,
                     "loc": {
                       "start": {
                         "line": 115,
-                        "column": 4
+                        "column": 2
                       },
                       "end": {
                         "line": 115,
-                        "column": 23
+                        "column": 21
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1452870-sync\n   ",
-                    "start": 3901,
-                    "end": 4088,
+                    "start": 3899,
+                    "end": 4086,
                     "loc": {
                       "start": {
                         "line": 117,
@@ -2716,8 +2716,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016103-async\n   ",
-                    "start": 4122,
-                    "end": 4310,
+                    "start": 4120,
+                    "end": 4308,
                     "loc": {
                       "start": {
                         "line": 127,
@@ -2733,8 +2733,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4313,
-                "end": 4341,
+                "start": 4311,
+                "end": 4339,
                 "loc": {
                   "start": {
                     "line": 134,
@@ -2748,8 +2748,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4313,
-                  "end": 4325,
+                  "start": 4311,
+                  "end": 4323,
                   "loc": {
                     "start": {
                       "line": 134,
@@ -2773,8 +2773,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4326,
-                    "end": 4334,
+                    "start": 4324,
+                    "end": 4332,
                     "loc": {
                       "start": {
                         "line": 134,
@@ -2791,8 +2791,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4336,
-                  "end": 4341,
+                  "start": 4334,
+                  "end": 4339,
                   "loc": {
                     "start": {
                       "line": 134,
@@ -2812,8 +2812,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016103-async\n   ",
-                    "start": 4122,
-                    "end": 4310,
+                    "start": 4120,
+                    "end": 4308,
                     "loc": {
                       "start": {
                         "line": 127,
@@ -2830,8 +2830,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchWorkItem} execute - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300020-asyncafter\n   ",
-                    "start": 4345,
-                    "end": 4576,
+                    "start": 4343,
+                    "end": 4574,
                     "loc": {
                       "start": {
                         "line": 137,
@@ -2847,8 +2847,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4579,
-                "end": 4706,
+                "start": 4577,
+                "end": 4704,
                 "loc": {
                   "start": {
                     "line": 145,
@@ -2862,8 +2862,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4579,
-                  "end": 4589,
+                  "start": 4577,
+                  "end": 4587,
                   "loc": {
                     "start": {
                       "line": 145,
@@ -2887,8 +2887,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4590,
-                    "end": 4598,
+                    "start": 4588,
+                    "end": 4596,
                     "loc": {
                       "start": {
                         "line": 145,
@@ -2904,8 +2904,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 4600,
-                    "end": 4607,
+                    "start": 4598,
+                    "end": 4605,
                     "loc": {
                       "start": {
                         "line": 145,
@@ -2922,8 +2922,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4609,
-                  "end": 4706,
+                  "start": 4607,
+                  "end": 4704,
                   "loc": {
                     "start": {
                       "line": 145,
@@ -2937,8 +2937,8 @@
                   "body": [
                     {
                       "type": "VariableDeclaration",
-                      "start": 4615,
-                      "end": 4652,
+                      "start": 4613,
+                      "end": 4650,
                       "loc": {
                         "start": {
                           "line": 146,
@@ -2952,8 +2952,8 @@
                       "declarations": [
                         {
                           "type": "VariableDeclarator",
-                          "start": 4621,
-                          "end": 4652,
+                          "start": 4619,
+                          "end": 4650,
                           "loc": {
                             "start": {
                               "line": 146,
@@ -2966,8 +2966,8 @@
                           },
                           "id": {
                             "type": "Identifier",
-                            "start": 4621,
-                            "end": 4626,
+                            "start": 4619,
+                            "end": 4624,
                             "loc": {
                               "start": {
                                 "line": 146,
@@ -2983,8 +2983,8 @@
                           },
                           "init": {
                             "type": "BinaryExpression",
-                            "start": 4629,
-                            "end": 4652,
+                            "start": 4627,
+                            "end": 4650,
                             "loc": {
                               "start": {
                                 "line": 146,
@@ -2997,8 +2997,8 @@
                             },
                             "left": {
                               "type": "Identifier",
-                              "start": 4629,
-                              "end": 4637,
+                              "start": 4627,
+                              "end": 4635,
                               "loc": {
                                 "start": {
                                   "line": 146,
@@ -3015,8 +3015,8 @@
                             "operator": "-",
                             "right": {
                               "type": "CallExpression",
-                              "start": 4641,
-                              "end": 4651,
+                              "start": 4639,
+                              "end": 4649,
                               "loc": {
                                 "start": {
                                   "line": 146,
@@ -3029,8 +3029,8 @@
                               },
                               "callee": {
                                 "type": "MemberExpression",
-                                "start": 4641,
-                                "end": 4649,
+                                "start": 4639,
+                                "end": 4647,
                                 "loc": {
                                   "start": {
                                     "line": 146,
@@ -3043,8 +3043,8 @@
                                 },
                                 "object": {
                                   "type": "Identifier",
-                                  "start": 4641,
-                                  "end": 4645,
+                                  "start": 4639,
+                                  "end": 4643,
                                   "loc": {
                                     "start": {
                                       "line": 146,
@@ -3060,8 +3060,8 @@
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "start": 4646,
-                                  "end": 4649,
+                                  "start": 4644,
+                                  "end": 4647,
                                   "loc": {
                                     "start": {
                                       "line": 146,
@@ -3080,7 +3080,7 @@
                               "arguments": [],
                               "extra": {
                                 "parenthesized": true,
-                                "parenStart": 4640
+                                "parenStart": 4638
                               }
                             }
                           }
@@ -3090,8 +3090,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4657,
-                      "end": 4702,
+                      "start": 4655,
+                      "end": 4700,
                       "loc": {
                         "start": {
                           "line": 147,
@@ -3104,8 +3104,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 4657,
-                        "end": 4702,
+                        "start": 4655,
+                        "end": 4700,
                         "loc": {
                           "start": {
                             "line": 147,
@@ -3118,8 +3118,8 @@
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 4657,
-                          "end": 4674,
+                          "start": 4655,
+                          "end": 4672,
                           "loc": {
                             "start": {
                               "line": 147,
@@ -3132,8 +3132,8 @@
                           },
                           "object": {
                             "type": "Identifier",
-                            "start": 4657,
-                            "end": 4663,
+                            "start": 4655,
+                            "end": 4661,
                             "loc": {
                               "start": {
                                 "line": 147,
@@ -3149,8 +3149,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4664,
-                            "end": 4674,
+                            "start": 4662,
+                            "end": 4672,
                             "loc": {
                               "start": {
                                 "line": 147,
@@ -3169,8 +3169,8 @@
                         "arguments": [
                           {
                             "type": "ArrowFunctionExpression",
-                            "start": 4675,
-                            "end": 4694,
+                            "start": 4673,
+                            "end": 4692,
                             "loc": {
                               "start": {
                                 "line": 147,
@@ -3188,8 +3188,8 @@
                             "params": [],
                             "body": {
                               "type": "BlockStatement",
-                              "start": 4681,
-                              "end": 4694,
+                              "start": 4679,
+                              "end": 4692,
                               "loc": {
                                 "start": {
                                   "line": 147,
@@ -3203,8 +3203,8 @@
                               "body": [
                                 {
                                   "type": "ExpressionStatement",
-                                  "start": 4683,
-                                  "end": 4692,
+                                  "start": 4681,
+                                  "end": 4690,
                                   "loc": {
                                     "start": {
                                       "line": 147,
@@ -3217,8 +3217,8 @@
                                   },
                                   "expression": {
                                     "type": "CallExpression",
-                                    "start": 4683,
-                                    "end": 4692,
+                                    "start": 4681,
+                                    "end": 4690,
                                     "loc": {
                                       "start": {
                                         "line": 147,
@@ -3231,8 +3231,8 @@
                                     },
                                     "callee": {
                                       "type": "Identifier",
-                                      "start": 4683,
-                                      "end": 4690,
+                                      "start": 4681,
+                                      "end": 4688,
                                       "loc": {
                                         "start": {
                                           "line": 147,
@@ -3255,8 +3255,8 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 4696,
-                            "end": 4701,
+                            "start": 4694,
+                            "end": 4699,
                             "loc": {
                               "start": {
                                 "line": 147,
@@ -3281,8 +3281,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchWorkItem} execute - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300020-asyncafter\n   ",
-                    "start": 4345,
-                    "end": 4576,
+                    "start": 4343,
+                    "end": 4574,
                     "loc": {
                       "start": {
                         "line": 137,
@@ -3299,8 +3299,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchQoS} qos - \n   * @param {DispatchWorkItemFlags} flags - \n   * @param {function(): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300100-asyncafter\n   ",
-                    "start": 4710,
-                    "end": 5016,
+                    "start": 4708,
+                    "end": 5014,
                     "loc": {
                       "start": {
                         "line": 150,
@@ -3316,8 +3316,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5019,
-                "end": 5070,
+                "start": 5017,
+                "end": 5068,
                 "loc": {
                   "start": {
                     "line": 160,
@@ -3331,8 +3331,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5019,
-                  "end": 5036,
+                  "start": 5017,
+                  "end": 5034,
                   "loc": {
                     "start": {
                       "line": 160,
@@ -3356,8 +3356,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5037,
-                    "end": 5045,
+                    "start": 5035,
+                    "end": 5043,
                     "loc": {
                       "start": {
                         "line": 160,
@@ -3373,8 +3373,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5047,
-                    "end": 5050,
+                    "start": 5045,
+                    "end": 5048,
                     "loc": {
                       "start": {
                         "line": 160,
@@ -3390,8 +3390,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5052,
-                    "end": 5057,
+                    "start": 5050,
+                    "end": 5055,
                     "loc": {
                       "start": {
                         "line": 160,
@@ -3407,8 +3407,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5059,
-                    "end": 5063,
+                    "start": 5057,
+                    "end": 5061,
                     "loc": {
                       "start": {
                         "line": 160,
@@ -3425,8 +3425,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5065,
-                  "end": 5070,
+                  "start": 5063,
+                  "end": 5068,
                   "loc": {
                     "start": {
                       "line": 160,
@@ -3446,8 +3446,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchQoS} qos - \n   * @param {DispatchWorkItemFlags} flags - \n   * @param {function(): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300100-asyncafter\n   ",
-                    "start": 4710,
-                    "end": 5016,
+                    "start": 4708,
+                    "end": 5014,
                     "loc": {
                       "start": {
                         "line": 150,
@@ -3464,8 +3464,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @returns {?T} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780751-getspecific\n   ",
-                    "start": 5074,
-                    "end": 5270,
+                    "start": 5072,
+                    "end": 5268,
                     "loc": {
                       "start": {
                         "line": 163,
@@ -3481,8 +3481,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5273,
-                "end": 5311,
+                "start": 5271,
+                "end": 5309,
                 "loc": {
                   "start": {
                     "line": 170,
@@ -3496,8 +3496,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5273,
-                  "end": 5284,
+                  "start": 5271,
+                  "end": 5282,
                   "loc": {
                     "start": {
                       "line": 170,
@@ -3521,8 +3521,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5285,
-                    "end": 5288,
+                    "start": 5283,
+                    "end": 5286,
                     "loc": {
                       "start": {
                         "line": 170,
@@ -3539,8 +3539,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5290,
-                  "end": 5311,
+                  "start": 5288,
+                  "end": 5309,
                   "loc": {
                     "start": {
                       "line": 170,
@@ -3554,8 +3554,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 5296,
-                      "end": 5307,
+                      "start": 5294,
+                      "end": 5305,
                       "loc": {
                         "start": {
                           "line": 171,
@@ -3568,8 +3568,8 @@
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 5303,
-                        "end": 5307,
+                        "start": 5301,
+                        "end": 5305,
                         "loc": {
                           "start": {
                             "line": 171,
@@ -3590,8 +3590,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @returns {?T} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780751-getspecific\n   ",
-                    "start": 5074,
-                    "end": 5270,
+                    "start": 5072,
+                    "end": 5268,
                     "loc": {
                       "start": {
                         "line": 163,
@@ -3608,8 +3608,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @param {T} value - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780629-setspecific\n   ",
-                    "start": 5315,
-                    "end": 5535,
+                    "start": 5313,
+                    "end": 5533,
                     "loc": {
                       "start": {
                         "line": 174,
@@ -3625,8 +3625,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5538,
-                "end": 5567,
+                "start": 5536,
+                "end": 5565,
                 "loc": {
                   "start": {
                     "line": 182,
@@ -3640,8 +3640,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5538,
-                  "end": 5549,
+                  "start": 5536,
+                  "end": 5547,
                   "loc": {
                     "start": {
                       "line": 182,
@@ -3665,8 +3665,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5550,
-                    "end": 5553,
+                    "start": 5548,
+                    "end": 5551,
                     "loc": {
                       "start": {
                         "line": 182,
@@ -3682,8 +3682,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5555,
-                    "end": 5560,
+                    "start": 5553,
+                    "end": 5558,
                     "loc": {
                       "start": {
                         "line": 182,
@@ -3700,8 +3700,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5562,
-                  "end": 5567,
+                  "start": 5560,
+                  "end": 5565,
                   "loc": {
                     "start": {
                       "line": 182,
@@ -3721,8 +3721,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @param {T} value - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780629-setspecific\n   ",
-                    "start": 5315,
-                    "end": 5535,
+                    "start": 5313,
+                    "end": 5533,
                     "loc": {
                       "start": {
                         "line": 174,
@@ -3739,8 +3739,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItemFlags} flags - \n   * @returns {void}\n   * @throws {Error}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016077-sync\n   ",
-                    "start": 5571,
-                    "end": 5781,
+                    "start": 5569,
+                    "end": 5779,
                     "loc": {
                       "start": {
                         "line": 185,
@@ -3756,8 +3756,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5784,
-                "end": 5801,
+                "start": 5782,
+                "end": 5799,
                 "loc": {
                   "start": {
                     "line": 193,
@@ -3771,8 +3771,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5784,
-                  "end": 5788,
+                  "start": 5782,
+                  "end": 5786,
                   "loc": {
                     "start": {
                       "line": 193,
@@ -3796,8 +3796,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5789,
-                    "end": 5794,
+                    "start": 5787,
+                    "end": 5792,
                     "loc": {
                       "start": {
                         "line": 193,
@@ -3814,8 +3814,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5796,
-                  "end": 5801,
+                  "start": 5794,
+                  "end": 5799,
                   "loc": {
                     "start": {
                       "line": 193,
@@ -3835,8 +3835,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItemFlags} flags - \n   * @returns {void}\n   * @throws {Error}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016077-sync\n   ",
-                    "start": 5571,
-                    "end": 5781,
+                    "start": 5569,
+                    "end": 5779,
                     "loc": {
                       "start": {
                         "line": 185,
@@ -3853,8 +3853,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Instance Properties",
-                    "start": 5805,
-                    "end": 5827,
+                    "start": 5803,
+                    "end": 5825,
                     "loc": {
                       "start": {
                         "line": 196,
@@ -3869,8 +3869,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @type {string}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780825-label\n   ",
-                    "start": 5830,
-                    "end": 5966,
+                    "start": 5828,
+                    "end": 5964,
                     "loc": {
                       "start": {
                         "line": 197,
@@ -3886,8 +3886,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5969,
-                "end": 6009,
+                "start": 5967,
+                "end": 6007,
                 "loc": {
                   "start": {
                     "line": 203,
@@ -3901,8 +3901,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5973,
-                  "end": 5978,
+                  "start": 5971,
+                  "end": 5976,
                   "loc": {
                     "start": {
                       "line": 203,
@@ -3925,8 +3925,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5981,
-                  "end": 6009,
+                  "start": 5979,
+                  "end": 6007,
                   "loc": {
                     "start": {
                       "line": 203,
@@ -3940,8 +3940,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 5987,
-                      "end": 6005,
+                      "start": 5985,
+                      "end": 6003,
                       "loc": {
                         "start": {
                           "line": 204,
@@ -3954,8 +3954,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 5994,
-                        "end": 6005,
+                        "start": 5992,
+                        "end": 6003,
                         "loc": {
                           "start": {
                             "line": 204,
@@ -3968,8 +3968,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 5994,
-                          "end": 5998,
+                          "start": 5992,
+                          "end": 5996,
                           "loc": {
                             "start": {
                               "line": 204,
@@ -3983,8 +3983,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 5999,
-                          "end": 6005,
+                          "start": 5997,
+                          "end": 6003,
                           "loc": {
                             "start": {
                               "line": 204,
@@ -4009,8 +4009,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Instance Properties",
-                    "start": 5805,
-                    "end": 5827,
+                    "start": 5803,
+                    "end": 5825,
                     "loc": {
                       "start": {
                         "line": 196,
@@ -4025,8 +4025,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @type {string}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780825-label\n   ",
-                    "start": 5830,
-                    "end": 5966,
+                    "start": 5828,
+                    "end": 5964,
                     "loc": {
                       "start": {
                         "line": 197,
@@ -4043,8 +4043,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @type {DispatchQoS}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781008-qos\n   ",
-                    "start": 6012,
-                    "end": 6151,
+                    "start": 6010,
+                    "end": 6149,
                     "loc": {
                       "start": {
                         "line": 206,
@@ -4060,8 +4060,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6154,
-                "end": 6190,
+                "start": 6152,
+                "end": 6188,
                 "loc": {
                   "start": {
                     "line": 212,
@@ -4075,8 +4075,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6158,
-                  "end": 6161,
+                  "start": 6156,
+                  "end": 6159,
                   "loc": {
                     "start": {
                       "line": 212,
@@ -4099,8 +4099,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6164,
-                  "end": 6190,
+                  "start": 6162,
+                  "end": 6188,
                   "loc": {
                     "start": {
                       "line": 212,
@@ -4114,8 +4114,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 6170,
-                      "end": 6186,
+                      "start": 6168,
+                      "end": 6184,
                       "loc": {
                         "start": {
                           "line": 213,
@@ -4128,8 +4128,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 6177,
-                        "end": 6186,
+                        "start": 6175,
+                        "end": 6184,
                         "loc": {
                           "start": {
                             "line": 213,
@@ -4142,8 +4142,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 6177,
-                          "end": 6181,
+                          "start": 6175,
+                          "end": 6179,
                           "loc": {
                             "start": {
                               "line": 213,
@@ -4157,8 +4157,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 6182,
-                          "end": 6186,
+                          "start": 6180,
+                          "end": 6184,
                           "loc": {
                             "start": {
                               "line": 213,
@@ -4183,8 +4183,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @type {DispatchQoS}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781008-qos\n   ",
-                    "start": 6012,
-                    "end": 6151,
+                    "start": 6010,
+                    "end": 6149,
                     "loc": {
                       "start": {
                         "line": 206,
@@ -4201,8 +4201,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Type Properties",
-                    "start": 6194,
-                    "end": 6212,
+                    "start": 6192,
+                    "end": 6210,
                     "loc": {
                       "start": {
                         "line": 216,
@@ -4217,8 +4217,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @type {DispatchQueue}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781006-main\n   ",
-                    "start": 6215,
-                    "end": 6357,
+                    "start": 6213,
+                    "end": 6355,
                     "loc": {
                       "start": {
                         "line": 217,
@@ -4234,8 +4234,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6360,
-                "end": 6400,
+                "start": 6358,
+                "end": 6398,
                 "loc": {
                   "start": {
                     "line": 223,
@@ -4249,8 +4249,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6371,
-                  "end": 6375,
+                  "start": 6369,
+                  "end": 6373,
                   "loc": {
                     "start": {
                       "line": 223,
@@ -4273,8 +4273,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6378,
-                  "end": 6400,
+                  "start": 6376,
+                  "end": 6398,
                   "loc": {
                     "start": {
                       "line": 223,
@@ -4288,8 +4288,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 6384,
-                      "end": 6396,
+                      "start": 6382,
+                      "end": 6394,
                       "loc": {
                         "start": {
                           "line": 224,
@@ -4302,8 +4302,8 @@
                       },
                       "argument": {
                         "type": "Identifier",
-                        "start": 6391,
-                        "end": 6396,
+                        "start": 6389,
+                        "end": 6394,
                         "loc": {
                           "start": {
                             "line": 224,
@@ -4326,8 +4326,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Type Properties",
-                    "start": 6194,
-                    "end": 6212,
+                    "start": 6192,
+                    "end": 6210,
                     "loc": {
                       "start": {
                         "line": 216,
@@ -4342,8 +4342,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @type {DispatchQueue}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781006-main\n   ",
-                    "start": 6215,
-                    "end": 6357,
+                    "start": 6213,
+                    "end": 6355,
                     "loc": {
                       "start": {
                         "line": 217,
@@ -4360,8 +4360,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Type Methods",
-                    "start": 6404,
-                    "end": 6419,
+                    "start": 6402,
+                    "end": 6417,
                     "loc": {
                       "start": {
                         "line": 227,
@@ -4376,8 +4376,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {number} iterations - \n   * @param {function(arg1: number): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016088-concurrentperform\n   ",
-                    "start": 6423,
-                    "end": 6666,
+                    "start": 6421,
+                    "end": 6664,
                     "loc": {
                       "start": {
                         "line": 229,
@@ -4393,8 +4393,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6669,
-                "end": 6724,
+                "start": 6667,
+                "end": 6722,
                 "loc": {
                   "start": {
                     "line": 237,
@@ -4408,8 +4408,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6676,
-                  "end": 6700,
+                  "start": 6674,
+                  "end": 6698,
                   "loc": {
                     "start": {
                       "line": 237,
@@ -4432,8 +4432,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6701,
-                    "end": 6711,
+                    "start": 6699,
+                    "end": 6709,
                     "loc": {
                       "start": {
                         "line": 237,
@@ -4449,8 +4449,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6713,
-                    "end": 6717,
+                    "start": 6711,
+                    "end": 6715,
                     "loc": {
                       "start": {
                         "line": 237,
@@ -4467,8 +4467,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6719,
-                  "end": 6724,
+                  "start": 6717,
+                  "end": 6722,
                   "loc": {
                     "start": {
                       "line": 237,
@@ -4488,8 +4488,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Type Methods",
-                    "start": 6404,
-                    "end": 6419,
+                    "start": 6402,
+                    "end": 6417,
                     "loc": {
                       "start": {
                         "line": 227,
@@ -4504,8 +4504,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {number} iterations - \n   * @param {function(arg1: number): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016088-concurrentperform\n   ",
-                    "start": 6423,
-                    "end": 6666,
+                    "start": 6421,
+                    "end": 6664,
                     "loc": {
                       "start": {
                         "line": 229,
@@ -4522,8 +4522,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @deprecated\n   * @access public\n   * @param {DispatchQueue.GlobalQueuePriority} priority - \n   * @returns {DispatchQueue} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300070-global\n   ",
-                    "start": 6728,
-                    "end": 6963,
+                    "start": 6726,
+                    "end": 6961,
                     "loc": {
                       "start": {
                         "line": 240,
@@ -4539,8 +4539,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6966,
-                "end": 7011,
+                "start": 6964,
+                "end": 7009,
                 "loc": {
                   "start": {
                     "line": 248,
@@ -4554,8 +4554,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6973,
-                  "end": 6979,
+                  "start": 6971,
+                  "end": 6977,
                   "loc": {
                     "start": {
                       "line": 248,
@@ -4578,8 +4578,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6980,
-                    "end": 6988,
+                    "start": 6978,
+                    "end": 6986,
                     "loc": {
                       "start": {
                         "line": 248,
@@ -4596,8 +4596,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6990,
-                  "end": 7011,
+                  "start": 6988,
+                  "end": 7009,
                   "loc": {
                     "start": {
                       "line": 248,
@@ -4611,8 +4611,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 6996,
-                      "end": 7007,
+                      "start": 6994,
+                      "end": 7005,
                       "loc": {
                         "start": {
                           "line": 249,
@@ -4625,8 +4625,8 @@
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 7003,
-                        "end": 7007,
+                        "start": 7001,
+                        "end": 7005,
                         "loc": {
                           "start": {
                             "line": 249,
@@ -4646,8 +4646,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @deprecated\n   * @access public\n   * @param {DispatchQueue.GlobalQueuePriority} priority - \n   * @returns {DispatchQueue} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300070-global\n   ",
-                    "start": 6728,
-                    "end": 6963,
+                    "start": 6726,
+                    "end": 6961,
                     "loc": {
                       "start": {
                         "line": 240,
@@ -4686,8 +4686,8 @@
             {
               "type": "CommentLine",
               "value": "_main = new DispatchQueue(\"com.apple.main-thread\", new DispatchQoS(DispatchQoS.userInteractive, 0))",
-              "start": 7015,
-              "end": 7116,
+              "start": 7013,
+              "end": 7114,
               "loc": {
                 "start": {
                   "line": 253,
@@ -4723,8 +4723,8 @@
           {
             "type": "CommentLine",
             "value": "_main = new DispatchQueue(\"com.apple.main-thread\", new DispatchQoS(DispatchQoS.userInteractive, 0))",
-            "start": 7015,
-            "end": 7116,
+            "start": 7013,
+            "end": 7114,
             "loc": {
               "start": {
                 "line": 253,
@@ -4740,8 +4740,8 @@
       },
       {
         "type": "ExpressionStatement",
-        "start": 7117,
-        "end": 7173,
+        "start": 7115,
+        "end": 7171,
         "loc": {
           "start": {
             "line": 254,
@@ -4754,8 +4754,8 @@
         },
         "expression": {
           "type": "AssignmentExpression",
-          "start": 7117,
-          "end": 7173,
+          "start": 7115,
+          "end": 7171,
           "loc": {
             "start": {
               "line": 254,
@@ -4769,8 +4769,8 @@
           "operator": "=",
           "left": {
             "type": "Identifier",
-            "start": 7117,
-            "end": 7122,
+            "start": 7115,
+            "end": 7120,
             "loc": {
               "start": {
                 "line": 254,
@@ -4787,8 +4787,8 @@
           },
           "right": {
             "type": "NewExpression",
-            "start": 7125,
-            "end": 7173,
+            "start": 7123,
+            "end": 7171,
             "loc": {
               "start": {
                 "line": 254,
@@ -4801,8 +4801,8 @@
             },
             "callee": {
               "type": "Identifier",
-              "start": 7129,
-              "end": 7142,
+              "start": 7127,
+              "end": 7140,
               "loc": {
                 "start": {
                   "line": 254,
@@ -4819,8 +4819,8 @@
             "arguments": [
               {
                 "type": "StringLiteral",
-                "start": 7143,
-                "end": 7166,
+                "start": 7141,
+                "end": 7164,
                 "loc": {
                   "start": {
                     "line": 254,
@@ -4833,14 +4833,14 @@
                 },
                 "extra": {
                   "rawValue": "com.apple.main-thread",
-                  "raw": "\"com.apple.main-thread\""
+                  "raw": "'com.apple.main-thread'"
                 },
                 "value": "com.apple.main-thread"
               },
               {
                 "type": "NullLiteral",
-                "start": 7168,
-                "end": 7172,
+                "start": 7166,
+                "end": 7170,
                 "loc": {
                   "start": {
                     "line": 254,
@@ -4860,8 +4860,8 @@
           {
             "type": "CommentLine",
             "value": "_main = new DispatchQueue(\"com.apple.main-thread\", new DispatchQoS(DispatchQoS.userInteractive, 0))",
-            "start": 7015,
-            "end": 7116,
+            "start": 7013,
+            "end": 7114,
             "loc": {
               "start": {
                 "line": 253,
@@ -5238,24 +5238,24 @@
     {
       "type": "CommentLine",
       "value": " Instance Methods",
-      "start": 3878,
-      "end": 3897,
+      "start": 3876,
+      "end": 3895,
       "loc": {
         "start": {
           "line": 115,
-          "column": 4
+          "column": 2
         },
         "end": {
           "line": 115,
-          "column": 23
+          "column": 21
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1452870-sync\n   ",
-      "start": 3901,
-      "end": 4088,
+      "start": 3899,
+      "end": 4086,
       "loc": {
         "start": {
           "line": 117,
@@ -5270,8 +5270,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016103-async\n   ",
-      "start": 4122,
-      "end": 4310,
+      "start": 4120,
+      "end": 4308,
       "loc": {
         "start": {
           "line": 127,
@@ -5286,8 +5286,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchWorkItem} execute - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300020-asyncafter\n   ",
-      "start": 4345,
-      "end": 4576,
+      "start": 4343,
+      "end": 4574,
       "loc": {
         "start": {
           "line": 137,
@@ -5302,8 +5302,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchQoS} qos - \n   * @param {DispatchWorkItemFlags} flags - \n   * @param {function(): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300100-asyncafter\n   ",
-      "start": 4710,
-      "end": 5016,
+      "start": 4708,
+      "end": 5014,
       "loc": {
         "start": {
           "line": 150,
@@ -5318,8 +5318,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @returns {?T} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780751-getspecific\n   ",
-      "start": 5074,
-      "end": 5270,
+      "start": 5072,
+      "end": 5268,
       "loc": {
         "start": {
           "line": 163,
@@ -5334,8 +5334,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @param {T} value - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780629-setspecific\n   ",
-      "start": 5315,
-      "end": 5535,
+      "start": 5313,
+      "end": 5533,
       "loc": {
         "start": {
           "line": 174,
@@ -5350,8 +5350,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItemFlags} flags - \n   * @returns {void}\n   * @throws {Error}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016077-sync\n   ",
-      "start": 5571,
-      "end": 5781,
+      "start": 5569,
+      "end": 5779,
       "loc": {
         "start": {
           "line": 185,
@@ -5366,8 +5366,8 @@
     {
       "type": "CommentLine",
       "value": " Instance Properties",
-      "start": 5805,
-      "end": 5827,
+      "start": 5803,
+      "end": 5825,
       "loc": {
         "start": {
           "line": 196,
@@ -5382,8 +5382,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @type {string}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780825-label\n   ",
-      "start": 5830,
-      "end": 5966,
+      "start": 5828,
+      "end": 5964,
       "loc": {
         "start": {
           "line": 197,
@@ -5398,8 +5398,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @type {DispatchQoS}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781008-qos\n   ",
-      "start": 6012,
-      "end": 6151,
+      "start": 6010,
+      "end": 6149,
       "loc": {
         "start": {
           "line": 206,
@@ -5414,8 +5414,8 @@
     {
       "type": "CommentLine",
       "value": " Type Properties",
-      "start": 6194,
-      "end": 6212,
+      "start": 6192,
+      "end": 6210,
       "loc": {
         "start": {
           "line": 216,
@@ -5430,8 +5430,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @type {DispatchQueue}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781006-main\n   ",
-      "start": 6215,
-      "end": 6357,
+      "start": 6213,
+      "end": 6355,
       "loc": {
         "start": {
           "line": 217,
@@ -5446,8 +5446,8 @@
     {
       "type": "CommentLine",
       "value": " Type Methods",
-      "start": 6404,
-      "end": 6419,
+      "start": 6402,
+      "end": 6417,
       "loc": {
         "start": {
           "line": 227,
@@ -5462,8 +5462,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {number} iterations - \n   * @param {function(arg1: number): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016088-concurrentperform\n   ",
-      "start": 6423,
-      "end": 6666,
+      "start": 6421,
+      "end": 6664,
       "loc": {
         "start": {
           "line": 229,
@@ -5478,8 +5478,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @deprecated\n   * @access public\n   * @param {DispatchQueue.GlobalQueuePriority} priority - \n   * @returns {DispatchQueue} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300070-global\n   ",
-      "start": 6728,
-      "end": 6963,
+      "start": 6726,
+      "end": 6961,
       "loc": {
         "start": {
           "line": 240,
@@ -5494,8 +5494,8 @@
     {
       "type": "CommentLine",
       "value": "_main = new DispatchQueue(\"com.apple.main-thread\", new DispatchQoS(DispatchQoS.userInteractive, 0))",
-      "start": 7015,
-      "end": 7116,
+      "start": 7013,
+      "end": 7114,
       "loc": {
         "start": {
           "line": 253,
@@ -9179,24 +9179,24 @@
     {
       "type": "CommentLine",
       "value": " Instance Methods",
-      "start": 3878,
-      "end": 3897,
+      "start": 3876,
+      "end": 3895,
       "loc": {
         "start": {
           "line": 115,
-          "column": 4
+          "column": 2
         },
         "end": {
           "line": 115,
-          "column": 23
+          "column": 21
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1452870-sync\n   ",
-      "start": 3901,
-      "end": 4088,
+      "start": 3899,
+      "end": 4086,
       "loc": {
         "start": {
           "line": 117,
@@ -9221,8 +9221,8 @@
         "binop": null
       },
       "value": "syncExecute",
-      "start": 4091,
-      "end": 4102,
+      "start": 4089,
+      "end": 4100,
       "loc": {
         "start": {
           "line": 124,
@@ -9246,8 +9246,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4102,
-      "end": 4103,
+      "start": 4100,
+      "end": 4101,
       "loc": {
         "start": {
           "line": 124,
@@ -9272,8 +9272,8 @@
         "binop": null
       },
       "value": "workItem",
-      "start": 4103,
-      "end": 4111,
+      "start": 4101,
+      "end": 4109,
       "loc": {
         "start": {
           "line": 124,
@@ -9297,8 +9297,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4111,
-      "end": 4112,
+      "start": 4109,
+      "end": 4110,
       "loc": {
         "start": {
           "line": 124,
@@ -9322,8 +9322,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4113,
-      "end": 4114,
+      "start": 4111,
+      "end": 4112,
       "loc": {
         "start": {
           "line": 124,
@@ -9347,8 +9347,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4117,
-      "end": 4118,
+      "start": 4115,
+      "end": 4116,
       "loc": {
         "start": {
           "line": 125,
@@ -9363,8 +9363,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItem} workItem - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016103-async\n   ",
-      "start": 4122,
-      "end": 4310,
+      "start": 4120,
+      "end": 4308,
       "loc": {
         "start": {
           "line": 127,
@@ -9389,8 +9389,8 @@
         "binop": null
       },
       "value": "asyncExecute",
-      "start": 4313,
-      "end": 4325,
+      "start": 4311,
+      "end": 4323,
       "loc": {
         "start": {
           "line": 134,
@@ -9414,8 +9414,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4325,
-      "end": 4326,
+      "start": 4323,
+      "end": 4324,
       "loc": {
         "start": {
           "line": 134,
@@ -9440,8 +9440,8 @@
         "binop": null
       },
       "value": "workItem",
-      "start": 4326,
-      "end": 4334,
+      "start": 4324,
+      "end": 4332,
       "loc": {
         "start": {
           "line": 134,
@@ -9465,8 +9465,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4334,
-      "end": 4335,
+      "start": 4332,
+      "end": 4333,
       "loc": {
         "start": {
           "line": 134,
@@ -9490,8 +9490,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4336,
-      "end": 4337,
+      "start": 4334,
+      "end": 4335,
       "loc": {
         "start": {
           "line": 134,
@@ -9515,8 +9515,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4340,
-      "end": 4341,
+      "start": 4338,
+      "end": 4339,
       "loc": {
         "start": {
           "line": 135,
@@ -9531,8 +9531,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchWorkItem} execute - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300020-asyncafter\n   ",
-      "start": 4345,
-      "end": 4576,
+      "start": 4343,
+      "end": 4574,
       "loc": {
         "start": {
           "line": 137,
@@ -9557,8 +9557,8 @@
         "binop": null
       },
       "value": "asyncAfter",
-      "start": 4579,
-      "end": 4589,
+      "start": 4577,
+      "end": 4587,
       "loc": {
         "start": {
           "line": 145,
@@ -9582,8 +9582,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4589,
-      "end": 4590,
+      "start": 4587,
+      "end": 4588,
       "loc": {
         "start": {
           "line": 145,
@@ -9608,8 +9608,8 @@
         "binop": null
       },
       "value": "deadline",
-      "start": 4590,
-      "end": 4598,
+      "start": 4588,
+      "end": 4596,
       "loc": {
         "start": {
           "line": 145,
@@ -9634,8 +9634,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4598,
-      "end": 4599,
+      "start": 4596,
+      "end": 4597,
       "loc": {
         "start": {
           "line": 145,
@@ -9660,8 +9660,8 @@
         "binop": null
       },
       "value": "execute",
-      "start": 4600,
-      "end": 4607,
+      "start": 4598,
+      "end": 4605,
       "loc": {
         "start": {
           "line": 145,
@@ -9685,8 +9685,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4607,
-      "end": 4608,
+      "start": 4605,
+      "end": 4606,
       "loc": {
         "start": {
           "line": 145,
@@ -9710,8 +9710,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4609,
-      "end": 4610,
+      "start": 4607,
+      "end": 4608,
       "loc": {
         "start": {
           "line": 145,
@@ -9738,8 +9738,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 4615,
-      "end": 4620,
+      "start": 4613,
+      "end": 4618,
       "loc": {
         "start": {
           "line": 146,
@@ -9764,8 +9764,8 @@
         "binop": null
       },
       "value": "delay",
-      "start": 4621,
-      "end": 4626,
+      "start": 4619,
+      "end": 4624,
       "loc": {
         "start": {
           "line": 146,
@@ -9791,8 +9791,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4627,
-      "end": 4628,
+      "start": 4625,
+      "end": 4626,
       "loc": {
         "start": {
           "line": 146,
@@ -9817,8 +9817,8 @@
         "binop": null
       },
       "value": "deadline",
-      "start": 4629,
-      "end": 4637,
+      "start": 4627,
+      "end": 4635,
       "loc": {
         "start": {
           "line": 146,
@@ -9844,8 +9844,8 @@
         "updateContext": null
       },
       "value": "-",
-      "start": 4638,
-      "end": 4639,
+      "start": 4636,
+      "end": 4637,
       "loc": {
         "start": {
           "line": 146,
@@ -9869,8 +9869,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4640,
-      "end": 4641,
+      "start": 4638,
+      "end": 4639,
       "loc": {
         "start": {
           "line": 146,
@@ -9895,8 +9895,8 @@
         "binop": null
       },
       "value": "Date",
-      "start": 4641,
-      "end": 4645,
+      "start": 4639,
+      "end": 4643,
       "loc": {
         "start": {
           "line": 146,
@@ -9921,8 +9921,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4645,
-      "end": 4646,
+      "start": 4643,
+      "end": 4644,
       "loc": {
         "start": {
           "line": 146,
@@ -9947,8 +9947,8 @@
         "binop": null
       },
       "value": "now",
-      "start": 4646,
-      "end": 4649,
+      "start": 4644,
+      "end": 4647,
       "loc": {
         "start": {
           "line": 146,
@@ -9972,8 +9972,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4649,
-      "end": 4650,
+      "start": 4647,
+      "end": 4648,
       "loc": {
         "start": {
           "line": 146,
@@ -9997,8 +9997,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4650,
-      "end": 4651,
+      "start": 4648,
+      "end": 4649,
       "loc": {
         "start": {
           "line": 146,
@@ -10022,8 +10022,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4651,
-      "end": 4652,
+      "start": 4649,
+      "end": 4650,
       "loc": {
         "start": {
           "line": 146,
@@ -10048,8 +10048,8 @@
         "binop": null
       },
       "value": "window",
-      "start": 4657,
-      "end": 4663,
+      "start": 4655,
+      "end": 4661,
       "loc": {
         "start": {
           "line": 147,
@@ -10074,8 +10074,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4663,
-      "end": 4664,
+      "start": 4661,
+      "end": 4662,
       "loc": {
         "start": {
           "line": 147,
@@ -10100,8 +10100,8 @@
         "binop": null
       },
       "value": "setTimeout",
-      "start": 4664,
-      "end": 4674,
+      "start": 4662,
+      "end": 4672,
       "loc": {
         "start": {
           "line": 147,
@@ -10125,8 +10125,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4674,
-      "end": 4675,
+      "start": 4672,
+      "end": 4673,
       "loc": {
         "start": {
           "line": 147,
@@ -10150,8 +10150,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4675,
-      "end": 4676,
+      "start": 4673,
+      "end": 4674,
       "loc": {
         "start": {
           "line": 147,
@@ -10175,8 +10175,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4676,
-      "end": 4677,
+      "start": 4674,
+      "end": 4675,
       "loc": {
         "start": {
           "line": 147,
@@ -10201,8 +10201,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4678,
-      "end": 4680,
+      "start": 4676,
+      "end": 4678,
       "loc": {
         "start": {
           "line": 147,
@@ -10226,8 +10226,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4681,
-      "end": 4682,
+      "start": 4679,
+      "end": 4680,
       "loc": {
         "start": {
           "line": 147,
@@ -10252,8 +10252,8 @@
         "binop": null
       },
       "value": "execute",
-      "start": 4683,
-      "end": 4690,
+      "start": 4681,
+      "end": 4688,
       "loc": {
         "start": {
           "line": 147,
@@ -10277,8 +10277,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4690,
-      "end": 4691,
+      "start": 4688,
+      "end": 4689,
       "loc": {
         "start": {
           "line": 147,
@@ -10302,8 +10302,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4691,
-      "end": 4692,
+      "start": 4689,
+      "end": 4690,
       "loc": {
         "start": {
           "line": 147,
@@ -10327,8 +10327,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4693,
-      "end": 4694,
+      "start": 4691,
+      "end": 4692,
       "loc": {
         "start": {
           "line": 147,
@@ -10353,8 +10353,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4694,
-      "end": 4695,
+      "start": 4692,
+      "end": 4693,
       "loc": {
         "start": {
           "line": 147,
@@ -10379,8 +10379,8 @@
         "binop": null
       },
       "value": "delay",
-      "start": 4696,
-      "end": 4701,
+      "start": 4694,
+      "end": 4699,
       "loc": {
         "start": {
           "line": 147,
@@ -10404,8 +10404,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4701,
-      "end": 4702,
+      "start": 4699,
+      "end": 4700,
       "loc": {
         "start": {
           "line": 147,
@@ -10429,8 +10429,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4705,
-      "end": 4706,
+      "start": 4703,
+      "end": 4704,
       "loc": {
         "start": {
           "line": 148,
@@ -10445,8 +10445,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchTime} deadline - \n   * @param {DispatchQoS} qos - \n   * @param {DispatchWorkItemFlags} flags - \n   * @param {function(): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300100-asyncafter\n   ",
-      "start": 4710,
-      "end": 5016,
+      "start": 4708,
+      "end": 5014,
       "loc": {
         "start": {
           "line": 150,
@@ -10471,8 +10471,8 @@
         "binop": null
       },
       "value": "asyncAfterExecute",
-      "start": 5019,
-      "end": 5036,
+      "start": 5017,
+      "end": 5034,
       "loc": {
         "start": {
           "line": 160,
@@ -10496,8 +10496,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5036,
-      "end": 5037,
+      "start": 5034,
+      "end": 5035,
       "loc": {
         "start": {
           "line": 160,
@@ -10522,8 +10522,8 @@
         "binop": null
       },
       "value": "deadline",
-      "start": 5037,
-      "end": 5045,
+      "start": 5035,
+      "end": 5043,
       "loc": {
         "start": {
           "line": 160,
@@ -10548,8 +10548,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5045,
-      "end": 5046,
+      "start": 5043,
+      "end": 5044,
       "loc": {
         "start": {
           "line": 160,
@@ -10574,8 +10574,8 @@
         "binop": null
       },
       "value": "qos",
-      "start": 5047,
-      "end": 5050,
+      "start": 5045,
+      "end": 5048,
       "loc": {
         "start": {
           "line": 160,
@@ -10600,8 +10600,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5050,
-      "end": 5051,
+      "start": 5048,
+      "end": 5049,
       "loc": {
         "start": {
           "line": 160,
@@ -10626,8 +10626,8 @@
         "binop": null
       },
       "value": "flags",
-      "start": 5052,
-      "end": 5057,
+      "start": 5050,
+      "end": 5055,
       "loc": {
         "start": {
           "line": 160,
@@ -10652,8 +10652,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5057,
-      "end": 5058,
+      "start": 5055,
+      "end": 5056,
       "loc": {
         "start": {
           "line": 160,
@@ -10678,8 +10678,8 @@
         "binop": null
       },
       "value": "work",
-      "start": 5059,
-      "end": 5063,
+      "start": 5057,
+      "end": 5061,
       "loc": {
         "start": {
           "line": 160,
@@ -10703,8 +10703,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5063,
-      "end": 5064,
+      "start": 5061,
+      "end": 5062,
       "loc": {
         "start": {
           "line": 160,
@@ -10728,8 +10728,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5065,
-      "end": 5066,
+      "start": 5063,
+      "end": 5064,
       "loc": {
         "start": {
           "line": 160,
@@ -10753,8 +10753,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5069,
-      "end": 5070,
+      "start": 5067,
+      "end": 5068,
       "loc": {
         "start": {
           "line": 161,
@@ -10769,8 +10769,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @returns {?T} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780751-getspecific\n   ",
-      "start": 5074,
-      "end": 5270,
+      "start": 5072,
+      "end": 5268,
       "loc": {
         "start": {
           "line": 163,
@@ -10795,8 +10795,8 @@
         "binop": null
       },
       "value": "getSpecific",
-      "start": 5273,
-      "end": 5284,
+      "start": 5271,
+      "end": 5282,
       "loc": {
         "start": {
           "line": 170,
@@ -10820,8 +10820,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5284,
-      "end": 5285,
+      "start": 5282,
+      "end": 5283,
       "loc": {
         "start": {
           "line": 170,
@@ -10846,8 +10846,8 @@
         "binop": null
       },
       "value": "key",
-      "start": 5285,
-      "end": 5288,
+      "start": 5283,
+      "end": 5286,
       "loc": {
         "start": {
           "line": 170,
@@ -10871,8 +10871,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5288,
-      "end": 5289,
+      "start": 5286,
+      "end": 5287,
       "loc": {
         "start": {
           "line": 170,
@@ -10896,8 +10896,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5290,
-      "end": 5291,
+      "start": 5288,
+      "end": 5289,
       "loc": {
         "start": {
           "line": 170,
@@ -10924,8 +10924,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 5296,
-      "end": 5302,
+      "start": 5294,
+      "end": 5300,
       "loc": {
         "start": {
           "line": 171,
@@ -10952,8 +10952,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 5303,
-      "end": 5307,
+      "start": 5301,
+      "end": 5305,
       "loc": {
         "start": {
           "line": 171,
@@ -10977,8 +10977,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5310,
-      "end": 5311,
+      "start": 5308,
+      "end": 5309,
       "loc": {
         "start": {
           "line": 172,
@@ -10993,8 +10993,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchSpecificKey<T>} key - \n   * @param {T} value - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780629-setspecific\n   ",
-      "start": 5315,
-      "end": 5535,
+      "start": 5313,
+      "end": 5533,
       "loc": {
         "start": {
           "line": 174,
@@ -11019,8 +11019,8 @@
         "binop": null
       },
       "value": "setSpecific",
-      "start": 5538,
-      "end": 5549,
+      "start": 5536,
+      "end": 5547,
       "loc": {
         "start": {
           "line": 182,
@@ -11044,8 +11044,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5549,
-      "end": 5550,
+      "start": 5547,
+      "end": 5548,
       "loc": {
         "start": {
           "line": 182,
@@ -11070,8 +11070,8 @@
         "binop": null
       },
       "value": "key",
-      "start": 5550,
-      "end": 5553,
+      "start": 5548,
+      "end": 5551,
       "loc": {
         "start": {
           "line": 182,
@@ -11096,8 +11096,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5553,
-      "end": 5554,
+      "start": 5551,
+      "end": 5552,
       "loc": {
         "start": {
           "line": 182,
@@ -11122,8 +11122,8 @@
         "binop": null
       },
       "value": "value",
-      "start": 5555,
-      "end": 5560,
+      "start": 5553,
+      "end": 5558,
       "loc": {
         "start": {
           "line": 182,
@@ -11147,8 +11147,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5560,
-      "end": 5561,
+      "start": 5558,
+      "end": 5559,
       "loc": {
         "start": {
           "line": 182,
@@ -11172,8 +11172,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5562,
-      "end": 5563,
+      "start": 5560,
+      "end": 5561,
       "loc": {
         "start": {
           "line": 182,
@@ -11197,8 +11197,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5566,
-      "end": 5567,
+      "start": 5564,
+      "end": 5565,
       "loc": {
         "start": {
           "line": 183,
@@ -11213,8 +11213,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {DispatchWorkItemFlags} flags - \n   * @returns {void}\n   * @throws {Error}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016077-sync\n   ",
-      "start": 5571,
-      "end": 5781,
+      "start": 5569,
+      "end": 5779,
       "loc": {
         "start": {
           "line": 185,
@@ -11239,8 +11239,8 @@
         "binop": null
       },
       "value": "sync",
-      "start": 5784,
-      "end": 5788,
+      "start": 5782,
+      "end": 5786,
       "loc": {
         "start": {
           "line": 193,
@@ -11264,8 +11264,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5788,
-      "end": 5789,
+      "start": 5786,
+      "end": 5787,
       "loc": {
         "start": {
           "line": 193,
@@ -11290,8 +11290,8 @@
         "binop": null
       },
       "value": "flags",
-      "start": 5789,
-      "end": 5794,
+      "start": 5787,
+      "end": 5792,
       "loc": {
         "start": {
           "line": 193,
@@ -11315,8 +11315,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5794,
-      "end": 5795,
+      "start": 5792,
+      "end": 5793,
       "loc": {
         "start": {
           "line": 193,
@@ -11340,8 +11340,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5796,
-      "end": 5797,
+      "start": 5794,
+      "end": 5795,
       "loc": {
         "start": {
           "line": 193,
@@ -11365,8 +11365,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5800,
-      "end": 5801,
+      "start": 5798,
+      "end": 5799,
       "loc": {
         "start": {
           "line": 194,
@@ -11381,8 +11381,8 @@
     {
       "type": "CommentLine",
       "value": " Instance Properties",
-      "start": 5805,
-      "end": 5827,
+      "start": 5803,
+      "end": 5825,
       "loc": {
         "start": {
           "line": 196,
@@ -11397,8 +11397,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @type {string}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780825-label\n   ",
-      "start": 5830,
-      "end": 5966,
+      "start": 5828,
+      "end": 5964,
       "loc": {
         "start": {
           "line": 197,
@@ -11423,8 +11423,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 5969,
-      "end": 5972,
+      "start": 5967,
+      "end": 5970,
       "loc": {
         "start": {
           "line": 203,
@@ -11449,8 +11449,8 @@
         "binop": null
       },
       "value": "label",
-      "start": 5973,
-      "end": 5978,
+      "start": 5971,
+      "end": 5976,
       "loc": {
         "start": {
           "line": 203,
@@ -11474,8 +11474,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5978,
-      "end": 5979,
+      "start": 5976,
+      "end": 5977,
       "loc": {
         "start": {
           "line": 203,
@@ -11499,8 +11499,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5979,
-      "end": 5980,
+      "start": 5977,
+      "end": 5978,
       "loc": {
         "start": {
           "line": 203,
@@ -11524,8 +11524,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5981,
-      "end": 5982,
+      "start": 5979,
+      "end": 5980,
       "loc": {
         "start": {
           "line": 203,
@@ -11552,8 +11552,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 5987,
-      "end": 5993,
+      "start": 5985,
+      "end": 5991,
       "loc": {
         "start": {
           "line": 204,
@@ -11580,8 +11580,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 5994,
-      "end": 5998,
+      "start": 5992,
+      "end": 5996,
       "loc": {
         "start": {
           "line": 204,
@@ -11606,8 +11606,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5998,
-      "end": 5999,
+      "start": 5996,
+      "end": 5997,
       "loc": {
         "start": {
           "line": 204,
@@ -11632,8 +11632,8 @@
         "binop": null
       },
       "value": "_label",
-      "start": 5999,
-      "end": 6005,
+      "start": 5997,
+      "end": 6003,
       "loc": {
         "start": {
           "line": 204,
@@ -11657,8 +11657,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6008,
-      "end": 6009,
+      "start": 6006,
+      "end": 6007,
       "loc": {
         "start": {
           "line": 205,
@@ -11673,8 +11673,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @type {DispatchQoS}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781008-qos\n   ",
-      "start": 6012,
-      "end": 6151,
+      "start": 6010,
+      "end": 6149,
       "loc": {
         "start": {
           "line": 206,
@@ -11699,8 +11699,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 6154,
-      "end": 6157,
+      "start": 6152,
+      "end": 6155,
       "loc": {
         "start": {
           "line": 212,
@@ -11725,8 +11725,8 @@
         "binop": null
       },
       "value": "qos",
-      "start": 6158,
-      "end": 6161,
+      "start": 6156,
+      "end": 6159,
       "loc": {
         "start": {
           "line": 212,
@@ -11750,8 +11750,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6161,
-      "end": 6162,
+      "start": 6159,
+      "end": 6160,
       "loc": {
         "start": {
           "line": 212,
@@ -11775,8 +11775,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6162,
-      "end": 6163,
+      "start": 6160,
+      "end": 6161,
       "loc": {
         "start": {
           "line": 212,
@@ -11800,8 +11800,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6164,
-      "end": 6165,
+      "start": 6162,
+      "end": 6163,
       "loc": {
         "start": {
           "line": 212,
@@ -11828,8 +11828,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 6170,
-      "end": 6176,
+      "start": 6168,
+      "end": 6174,
       "loc": {
         "start": {
           "line": 213,
@@ -11856,8 +11856,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 6177,
-      "end": 6181,
+      "start": 6175,
+      "end": 6179,
       "loc": {
         "start": {
           "line": 213,
@@ -11882,8 +11882,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6181,
-      "end": 6182,
+      "start": 6179,
+      "end": 6180,
       "loc": {
         "start": {
           "line": 213,
@@ -11908,8 +11908,8 @@
         "binop": null
       },
       "value": "_qos",
-      "start": 6182,
-      "end": 6186,
+      "start": 6180,
+      "end": 6184,
       "loc": {
         "start": {
           "line": 213,
@@ -11933,8 +11933,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6189,
-      "end": 6190,
+      "start": 6187,
+      "end": 6188,
       "loc": {
         "start": {
           "line": 214,
@@ -11949,8 +11949,8 @@
     {
       "type": "CommentLine",
       "value": " Type Properties",
-      "start": 6194,
-      "end": 6212,
+      "start": 6192,
+      "end": 6210,
       "loc": {
         "start": {
           "line": 216,
@@ -11965,8 +11965,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @type {DispatchQueue}\n   * @desc \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781006-main\n   ",
-      "start": 6215,
-      "end": 6357,
+      "start": 6213,
+      "end": 6355,
       "loc": {
         "start": {
           "line": 217,
@@ -11991,8 +11991,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 6360,
-      "end": 6366,
+      "start": 6358,
+      "end": 6364,
       "loc": {
         "start": {
           "line": 223,
@@ -12017,8 +12017,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 6367,
-      "end": 6370,
+      "start": 6365,
+      "end": 6368,
       "loc": {
         "start": {
           "line": 223,
@@ -12043,8 +12043,8 @@
         "binop": null
       },
       "value": "main",
-      "start": 6371,
-      "end": 6375,
+      "start": 6369,
+      "end": 6373,
       "loc": {
         "start": {
           "line": 223,
@@ -12068,8 +12068,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6375,
-      "end": 6376,
+      "start": 6373,
+      "end": 6374,
       "loc": {
         "start": {
           "line": 223,
@@ -12093,8 +12093,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6376,
-      "end": 6377,
+      "start": 6374,
+      "end": 6375,
       "loc": {
         "start": {
           "line": 223,
@@ -12118,8 +12118,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6378,
-      "end": 6379,
+      "start": 6376,
+      "end": 6377,
       "loc": {
         "start": {
           "line": 223,
@@ -12146,8 +12146,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 6384,
-      "end": 6390,
+      "start": 6382,
+      "end": 6388,
       "loc": {
         "start": {
           "line": 224,
@@ -12172,8 +12172,8 @@
         "binop": null
       },
       "value": "_main",
-      "start": 6391,
-      "end": 6396,
+      "start": 6389,
+      "end": 6394,
       "loc": {
         "start": {
           "line": 224,
@@ -12197,8 +12197,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6399,
-      "end": 6400,
+      "start": 6397,
+      "end": 6398,
       "loc": {
         "start": {
           "line": 225,
@@ -12213,8 +12213,8 @@
     {
       "type": "CommentLine",
       "value": " Type Methods",
-      "start": 6404,
-      "end": 6419,
+      "start": 6402,
+      "end": 6417,
       "loc": {
         "start": {
           "line": 227,
@@ -12229,8 +12229,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {number} iterations - \n   * @param {function(arg1: number): void} work - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016088-concurrentperform\n   ",
-      "start": 6423,
-      "end": 6666,
+      "start": 6421,
+      "end": 6664,
       "loc": {
         "start": {
           "line": 229,
@@ -12255,8 +12255,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 6669,
-      "end": 6675,
+      "start": 6667,
+      "end": 6673,
       "loc": {
         "start": {
           "line": 237,
@@ -12281,8 +12281,8 @@
         "binop": null
       },
       "value": "concurrentPerformExecute",
-      "start": 6676,
-      "end": 6700,
+      "start": 6674,
+      "end": 6698,
       "loc": {
         "start": {
           "line": 237,
@@ -12306,8 +12306,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6700,
-      "end": 6701,
+      "start": 6698,
+      "end": 6699,
       "loc": {
         "start": {
           "line": 237,
@@ -12332,8 +12332,8 @@
         "binop": null
       },
       "value": "iterations",
-      "start": 6701,
-      "end": 6711,
+      "start": 6699,
+      "end": 6709,
       "loc": {
         "start": {
           "line": 237,
@@ -12358,8 +12358,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6711,
-      "end": 6712,
+      "start": 6709,
+      "end": 6710,
       "loc": {
         "start": {
           "line": 237,
@@ -12384,8 +12384,8 @@
         "binop": null
       },
       "value": "work",
-      "start": 6713,
-      "end": 6717,
+      "start": 6711,
+      "end": 6715,
       "loc": {
         "start": {
           "line": 237,
@@ -12409,8 +12409,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6717,
-      "end": 6718,
+      "start": 6715,
+      "end": 6716,
       "loc": {
         "start": {
           "line": 237,
@@ -12434,8 +12434,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6719,
-      "end": 6720,
+      "start": 6717,
+      "end": 6718,
       "loc": {
         "start": {
           "line": 237,
@@ -12459,8 +12459,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6723,
-      "end": 6724,
+      "start": 6721,
+      "end": 6722,
       "loc": {
         "start": {
           "line": 238,
@@ -12475,8 +12475,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @deprecated\n   * @access public\n   * @param {DispatchQueue.GlobalQueuePriority} priority - \n   * @returns {DispatchQueue} - \n   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300070-global\n   ",
-      "start": 6728,
-      "end": 6963,
+      "start": 6726,
+      "end": 6961,
       "loc": {
         "start": {
           "line": 240,
@@ -12501,8 +12501,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 6966,
-      "end": 6972,
+      "start": 6964,
+      "end": 6970,
       "loc": {
         "start": {
           "line": 248,
@@ -12527,8 +12527,8 @@
         "binop": null
       },
       "value": "global",
-      "start": 6973,
-      "end": 6979,
+      "start": 6971,
+      "end": 6977,
       "loc": {
         "start": {
           "line": 248,
@@ -12552,8 +12552,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6979,
-      "end": 6980,
+      "start": 6977,
+      "end": 6978,
       "loc": {
         "start": {
           "line": 248,
@@ -12578,8 +12578,8 @@
         "binop": null
       },
       "value": "priority",
-      "start": 6980,
-      "end": 6988,
+      "start": 6978,
+      "end": 6986,
       "loc": {
         "start": {
           "line": 248,
@@ -12603,8 +12603,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6988,
-      "end": 6989,
+      "start": 6986,
+      "end": 6987,
       "loc": {
         "start": {
           "line": 248,
@@ -12628,8 +12628,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6990,
-      "end": 6991,
+      "start": 6988,
+      "end": 6989,
       "loc": {
         "start": {
           "line": 248,
@@ -12656,8 +12656,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 6996,
-      "end": 7002,
+      "start": 6994,
+      "end": 7000,
       "loc": {
         "start": {
           "line": 249,
@@ -12684,8 +12684,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 7003,
-      "end": 7007,
+      "start": 7001,
+      "end": 7005,
       "loc": {
         "start": {
           "line": 249,
@@ -12709,8 +12709,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7010,
-      "end": 7011,
+      "start": 7008,
+      "end": 7009,
       "loc": {
         "start": {
           "line": 250,
@@ -12734,8 +12734,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7012,
-      "end": 7013,
+      "start": 7010,
+      "end": 7011,
       "loc": {
         "start": {
           "line": 251,
@@ -12750,8 +12750,8 @@
     {
       "type": "CommentLine",
       "value": "_main = new DispatchQueue(\"com.apple.main-thread\", new DispatchQoS(DispatchQoS.userInteractive, 0))",
-      "start": 7015,
-      "end": 7116,
+      "start": 7013,
+      "end": 7114,
       "loc": {
         "start": {
           "line": 253,
@@ -12776,8 +12776,8 @@
         "binop": null
       },
       "value": "_main",
-      "start": 7117,
-      "end": 7122,
+      "start": 7115,
+      "end": 7120,
       "loc": {
         "start": {
           "line": 254,
@@ -12803,8 +12803,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 7123,
-      "end": 7124,
+      "start": 7121,
+      "end": 7122,
       "loc": {
         "start": {
           "line": 254,
@@ -12831,8 +12831,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 7125,
-      "end": 7128,
+      "start": 7123,
+      "end": 7126,
       "loc": {
         "start": {
           "line": 254,
@@ -12857,8 +12857,8 @@
         "binop": null
       },
       "value": "DispatchQueue",
-      "start": 7129,
-      "end": 7142,
+      "start": 7127,
+      "end": 7140,
       "loc": {
         "start": {
           "line": 254,
@@ -12882,8 +12882,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7142,
-      "end": 7143,
+      "start": 7140,
+      "end": 7141,
       "loc": {
         "start": {
           "line": 254,
@@ -12909,8 +12909,8 @@
         "updateContext": null
       },
       "value": "com.apple.main-thread",
-      "start": 7143,
-      "end": 7166,
+      "start": 7141,
+      "end": 7164,
       "loc": {
         "start": {
           "line": 254,
@@ -12935,8 +12935,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 7166,
-      "end": 7167,
+      "start": 7164,
+      "end": 7165,
       "loc": {
         "start": {
           "line": 254,
@@ -12963,8 +12963,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 7168,
-      "end": 7172,
+      "start": 7166,
+      "end": 7170,
       "loc": {
         "start": {
           "line": 254,
@@ -12988,8 +12988,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7172,
-      "end": 7173,
+      "start": 7170,
+      "end": 7171,
       "loc": {
         "start": {
           "line": 254,
@@ -13014,8 +13014,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 7175,
-      "end": 7175,
+      "start": 7173,
+      "end": 7173,
       "loc": {
         "start": {
           "line": 256,

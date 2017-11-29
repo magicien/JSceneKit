@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 821,
+  "end": 838,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 821,
+    "end": 838,
     "loc": {
       "start": {
         "line": 1,
@@ -94,92 +94,39 @@
             "rawValue": "../ObjectiveC/NSObject",
             "raw": "'../ObjectiveC/NSObject'"
           },
-          "value": "../ObjectiveC/NSObject"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 60,
-        "end": 103,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 43
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 67,
-            "end": 80,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 20
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 67,
-              "end": 80,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 20
-                },
-                "identifierName": "SCNAnimatable"
-              },
-              "name": "SCNAnimatable"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 86,
-          "end": 103,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 26
-            },
-            "end": {
-              "line": 4,
-              "column": 43
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNAnimatable",
-            "raw": "'./SCNAnimatable'"
-          },
-          "value": "./SCNAnimatable",
+          "value": "../ObjectiveC/NSObject",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
-            "start": 106,
-            "end": 393,
+            "type": "CommentLine",
+            "value": "import SCNAnimatable from './SCNAnimatable'",
+            "start": 60,
+            "end": 105,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 45
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
+            "start": 107,
+            "end": 394,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -188,11 +135,11 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 394,
-        "end": 820,
+        "start": 395,
+        "end": 837,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 13,
             "column": 0
           },
           "end": {
@@ -202,11 +149,11 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 409,
-          "end": 820,
+          "start": 410,
+          "end": 837,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 13,
               "column": 15
             },
             "end": {
@@ -216,15 +163,15 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 415,
-            "end": 428,
+            "start": 416,
+            "end": 429,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 21
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 34
               },
               "identifierName": "SCNConstraint"
@@ -234,15 +181,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 437,
-            "end": 445,
+            "start": 438,
+            "end": 446,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 43
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 51
               },
               "identifierName": "NSObject"
@@ -251,11 +198,11 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 446,
-            "end": 820,
+            "start": 447,
+            "end": 837,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 52
               },
               "end": {
@@ -266,11 +213,11 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 521,
-                "end": 818,
+                "start": 519,
+                "end": 835,
                 "loc": {
                   "start": {
-                    "line": 21,
+                    "line": 20,
                     "column": 2
                   },
                   "end": {
@@ -281,24 +228,24 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 521,
-                  "end": 525,
+                  "start": 519,
+                  "end": 530,
                   "loc": {
                     "start": {
-                      "line": 21,
+                      "line": 20,
                       "column": 2
                     },
                     "end": {
-                      "line": 21,
-                      "column": 6
+                      "line": 20,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -306,12 +253,12 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 528,
-                  "end": 818,
+                  "start": 533,
+                  "end": 835,
                   "loc": {
                     "start": {
-                      "line": 21,
-                      "column": 9
+                      "line": 20,
+                      "column": 16
                     },
                     "end": {
                       "line": 32,
@@ -321,8 +268,89 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 789,
-                      "end": 813,
+                      "start": 539,
+                      "end": 546,
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 539,
+                        "end": 546,
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 539,
+                          "end": 544,
+                          "loc": {
+                            "start": {
+                              "line": 21,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Tuning a Constraint’s Effect on Nodes",
+                          "start": 552,
+                          "end": 592,
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 44
+                            }
+                          }
+                        },
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The influence of the constraint on the node’s transformation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnconstraint/1468692-influencefactor\n     ",
+                          "start": 598,
+                          "end": 801,
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 29,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 806,
+                      "end": 830,
                       "loc": {
                         "start": {
                           "line": 30,
@@ -335,8 +363,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 789,
-                        "end": 813,
+                        "start": 806,
+                        "end": 830,
                         "loc": {
                           "start": {
                             "line": 30,
@@ -350,8 +378,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 789,
-                          "end": 809,
+                          "start": 806,
+                          "end": 826,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -364,8 +392,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 789,
-                            "end": 793,
+                            "start": 806,
+                            "end": 810,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -380,8 +408,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 794,
-                            "end": 809,
+                            "start": 811,
+                            "end": 826,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -400,8 +428,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 812,
-                          "end": 813,
+                          "start": 829,
+                          "end": 830,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -424,8 +452,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Tuning a Constraint’s Effect on Nodes",
-                          "start": 535,
-                          "end": 575,
+                          "start": 552,
+                          "end": 592,
                           "loc": {
                             "start": {
                               "line": 23,
@@ -440,8 +468,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The influence of the constraint on the node’s transformation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnconstraint/1468692-influencefactor\n     ",
-                          "start": 581,
-                          "end": 784,
+                          "start": 598,
+                          "end": 801,
                           "loc": {
                             "start": {
                               "line": 25,
@@ -461,16 +489,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 451,
-                    "end": 518,
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 452,
+                    "end": 516,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 20,
+                        "line": 19,
                         "column": 5
                       }
                     }
@@ -481,17 +509,33 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
-              "start": 106,
-              "end": 393,
+              "type": "CommentLine",
+              "value": "import SCNAnimatable from './SCNAnimatable'",
+              "start": 60,
+              "end": 105,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 13,
+                  "line": 4,
+                  "column": 45
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
+              "start": 107,
+              "end": 394,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 12,
                   "column": 3
                 }
               }
@@ -501,17 +545,33 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
-            "start": 106,
-            "end": 393,
+            "type": "CommentLine",
+            "value": "import SCNAnimatable from './SCNAnimatable'",
+            "start": 60,
+            "end": 105,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 45
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
+            "start": 107,
+            "end": 394,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -559,33 +619,49 @@
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
-      "start": 106,
-      "end": 393,
+      "type": "CommentLine",
+      "value": "import SCNAnimatable from './SCNAnimatable'",
+      "start": 60,
+      "end": 105,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 4,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
+      "start": 107,
+      "end": 394,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 451,
-      "end": 518,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 452,
+      "end": 516,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 5
         }
       }
@@ -593,8 +669,8 @@
     {
       "type": "CommentLine",
       "value": " Tuning a Constraint’s Effect on Nodes",
-      "start": 535,
-      "end": 575,
+      "start": 552,
+      "end": 592,
       "loc": {
         "start": {
           "line": 23,
@@ -609,8 +685,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The influence of the constraint on the node’s transformation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnconstraint/1468692-influencefactor\n     ",
-      "start": 581,
-      "end": 784,
+      "start": 598,
+      "end": 801,
       "loc": {
         "start": {
           "line": 25,
@@ -759,22 +835,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNAnimatable from './SCNAnimatable'",
       "start": 60,
-      "end": 66,
+      "end": 105,
       "loc": {
         "start": {
           "line": 4,
@@ -782,101 +846,22 @@
         },
         "end": {
           "line": 4,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNAnimatable",
-      "start": 67,
-      "end": 80,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 81,
-      "end": 85,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 21
-        },
-        "end": {
-          "line": 4,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNAnimatable",
-      "start": 86,
-      "end": 103,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 26
-        },
-        "end": {
-          "line": 4,
-          "column": 43
+          "column": 45
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scnconstraint\n ",
-      "start": 106,
-      "end": 393,
+      "start": 107,
+      "end": 394,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 3
         }
       }
@@ -896,15 +881,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 394,
-      "end": 400,
+      "start": 395,
+      "end": 401,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 6
         }
       }
@@ -924,15 +909,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 401,
-      "end": 408,
+      "start": 402,
+      "end": 409,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 14
         }
       }
@@ -952,15 +937,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 409,
-      "end": 414,
+      "start": 410,
+      "end": 415,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 20
         }
       }
@@ -978,15 +963,15 @@
         "binop": null
       },
       "value": "SCNConstraint",
-      "start": 415,
-      "end": 428,
+      "start": 416,
+      "end": 429,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 21
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 34
         }
       }
@@ -1006,15 +991,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 429,
-      "end": 436,
+      "start": 430,
+      "end": 437,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 35
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 42
         }
       }
@@ -1032,15 +1017,15 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 437,
-      "end": 445,
+      "start": 438,
+      "end": 446,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 43
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 51
         }
       }
@@ -1057,31 +1042,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 446,
-      "end": 447,
+      "start": 447,
+      "end": 448,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 52
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 53
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 451,
-      "end": 518,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 452,
+      "end": 516,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 5
         }
       }
@@ -1098,17 +1083,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 521,
-      "end": 525,
+      "value": "constructor",
+      "start": 519,
+      "end": 530,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 21,
-          "column": 6
+          "line": 20,
+          "column": 13
         }
       }
     },
@@ -1124,16 +1109,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 525,
-      "end": 526,
+      "start": 530,
+      "end": 531,
       "loc": {
         "start": {
-          "line": 21,
-          "column": 6
+          "line": 20,
+          "column": 13
         },
         "end": {
-          "line": 21,
-          "column": 7
+          "line": 20,
+          "column": 14
         }
       }
     },
@@ -1149,16 +1134,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 526,
-      "end": 527,
+      "start": 531,
+      "end": 532,
       "loc": {
         "start": {
-          "line": 21,
-          "column": 7
+          "line": 20,
+          "column": 14
         },
         "end": {
-          "line": 21,
-          "column": 8
+          "line": 20,
+          "column": 15
         }
       }
     },
@@ -1174,8 +1159,61 @@
         "postfix": false,
         "binop": null
       },
-      "start": 528,
-      "end": 529,
+      "start": 533,
+      "end": 534,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 16
+        },
+        "end": {
+          "line": 20,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 539,
+      "end": 544,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 544,
+      "end": 545,
       "loc": {
         "start": {
           "line": 21,
@@ -1188,10 +1226,35 @@
       }
     },
     {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 545,
+      "end": 546,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 10
+        },
+        "end": {
+          "line": 21,
+          "column": 11
+        }
+      }
+    },
+    {
       "type": "CommentLine",
       "value": " Tuning a Constraint’s Effect on Nodes",
-      "start": 535,
-      "end": 575,
+      "start": 552,
+      "end": 592,
       "loc": {
         "start": {
           "line": 23,
@@ -1206,8 +1269,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The influence of the constraint on the node’s transformation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnconstraint/1468692-influencefactor\n     ",
-      "start": 581,
-      "end": 784,
+      "start": 598,
+      "end": 801,
       "loc": {
         "start": {
           "line": 25,
@@ -1234,8 +1297,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 789,
-      "end": 793,
+      "start": 806,
+      "end": 810,
       "loc": {
         "start": {
           "line": 30,
@@ -1260,8 +1323,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 793,
-      "end": 794,
+      "start": 810,
+      "end": 811,
       "loc": {
         "start": {
           "line": 30,
@@ -1286,8 +1349,8 @@
         "binop": null
       },
       "value": "influenceFactor",
-      "start": 794,
-      "end": 809,
+      "start": 811,
+      "end": 826,
       "loc": {
         "start": {
           "line": 30,
@@ -1313,8 +1376,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 810,
-      "end": 811,
+      "start": 827,
+      "end": 828,
       "loc": {
         "start": {
           "line": 30,
@@ -1340,8 +1403,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 812,
-      "end": 813,
+      "start": 829,
+      "end": 830,
       "loc": {
         "start": {
           "line": 30,
@@ -1365,8 +1428,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 817,
-      "end": 818,
+      "start": 834,
+      "end": 835,
       "loc": {
         "start": {
           "line": 32,
@@ -1390,8 +1453,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 819,
-      "end": 820,
+      "start": 836,
+      "end": 837,
       "loc": {
         "start": {
           "line": 33,
@@ -1416,8 +1479,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 821,
-      "end": 821,
+      "start": 838,
+      "end": 838,
       "loc": {
         "start": {
           "line": 34,

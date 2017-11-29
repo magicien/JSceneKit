@@ -85,7 +85,7 @@ export default class _SCNObjLoader {
 
   /**
    * @access public
-   * @param {} data -
+   * @param {Buffer} data -
    * @param {?string} [path = null] -
    * @returns {SCNScene} -
    */

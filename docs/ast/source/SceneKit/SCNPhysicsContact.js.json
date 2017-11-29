@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3161,
+  "end": 3164,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 96,
+      "line": 95,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3161,
+    "end": 3164,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 96,
+        "line": 95,
         "column": 0
       }
     },
@@ -94,161 +94,55 @@
             "rawValue": "../ObjectiveC/NSObject",
             "raw": "'../ObjectiveC/NSObject'"
           },
-          "value": "../ObjectiveC/NSObject"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 60,
-        "end": 91,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 31
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 67,
-            "end": 74,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 14
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 67,
-              "end": 74,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 14
-                },
-                "identifierName": "SCNNode"
-              },
-              "name": "SCNNode"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 80,
-          "end": 91,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 20
-            },
-            "end": {
-              "line": 4,
-              "column": 31
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNNode",
-            "raw": "'./SCNNode'"
-          },
-          "value": "./SCNNode"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 92,
-        "end": 129,
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 0
-          },
-          "end": {
-            "line": 5,
-            "column": 37
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 99,
-            "end": 109,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 7
-              },
-              "end": {
-                "line": 5,
-                "column": 17
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 99,
-              "end": 109,
-              "loc": {
-                "start": {
-                  "line": 5,
-                  "column": 7
-                },
-                "end": {
-                  "line": 5,
-                  "column": 17
-                },
-                "identifierName": "SCNVector3"
-              },
-              "name": "SCNVector3"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 115,
-          "end": 129,
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 23
-            },
-            "end": {
-              "line": 5,
-              "column": 37
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNVector3",
-            "raw": "'./SCNVector3'"
-          },
-          "value": "./SCNVector3",
+          "value": "../ObjectiveC/NSObject",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
-            "start": 132,
-            "end": 358,
+            "type": "CommentLine",
+            "value": "import SCNNode from './SCNNode'",
+            "start": 60,
+            "end": 93,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 33
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNVector3 from './SCNVector3'",
+            "start": 94,
+            "end": 133,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
+            "start": 135,
+            "end": 361,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -257,43 +151,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 359,
-        "end": 3160,
+        "start": 362,
+        "end": 3163,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 95,
+            "line": 94,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 374,
-          "end": 3160,
+          "start": 377,
+          "end": 3163,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 13,
               "column": 15
             },
             "end": {
-              "line": 95,
+              "line": 94,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 380,
-            "end": 397,
+            "start": 383,
+            "end": 400,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 21
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 38
               },
               "identifierName": "SCNPhysicsContact"
@@ -303,15 +197,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 406,
-            "end": 414,
+            "start": 409,
+            "end": 417,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 47
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 55
               },
               "identifierName": "NSObject"
@@ -320,45 +214,45 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 415,
-            "end": 3160,
+            "start": 418,
+            "end": 3163,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 56
               },
               "end": {
-                "line": 95,
+                "line": 94,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 487,
-                "end": 733,
+                "start": 490,
+                "end": 736,
                 "loc": {
                   "start": {
-                    "line": 21,
+                    "line": 20,
                     "column": 2
                   },
                   "end": {
-                    "line": 32,
+                    "line": 31,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 487,
-                  "end": 498,
+                  "start": 490,
+                  "end": 501,
                   "loc": {
                     "start": {
-                      "line": 21,
+                      "line": 20,
                       "column": 2
                     },
                     "end": {
-                      "line": 21,
+                      "line": 20,
                       "column": 13
                     },
                     "identifierName": "constructor"
@@ -375,58 +269,58 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 501,
-                  "end": 733,
+                  "start": 504,
+                  "end": 736,
                   "loc": {
                     "start": {
-                      "line": 21,
+                      "line": 20,
                       "column": 16
                     },
                     "end": {
-                      "line": 32,
+                      "line": 31,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 507,
-                      "end": 514,
+                      "start": 510,
+                      "end": 517,
                       "loc": {
                         "start": {
-                          "line": 22,
+                          "line": 21,
                           "column": 4
                         },
                         "end": {
-                          "line": 22,
+                          "line": 21,
                           "column": 11
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 507,
-                        "end": 514,
+                        "start": 510,
+                        "end": 517,
                         "loc": {
                           "start": {
-                            "line": 22,
+                            "line": 21,
                             "column": 4
                           },
                           "end": {
-                            "line": 22,
+                            "line": 21,
                             "column": 11
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 507,
-                          "end": 512,
+                          "start": 510,
+                          "end": 515,
                           "loc": {
                             "start": {
-                              "line": 22,
+                              "line": 21,
                               "column": 4
                             },
                             "end": {
-                              "line": 22,
+                              "line": 21,
                               "column": 9
                             }
                           }
@@ -438,15 +332,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Inspecting the Contact Properties",
-                          "start": 520,
-                          "end": 556,
+                          "start": 523,
+                          "end": 559,
                           "loc": {
                             "start": {
-                              "line": 24,
+                              "line": 23,
                               "column": 4
                             },
                             "end": {
-                              "line": 24,
+                              "line": 23,
                               "column": 40
                             }
                           }
@@ -455,58 +349,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 562,
-                      "end": 580,
+                      "start": 565,
+                      "end": 583,
                       "loc": {
                         "start": {
-                          "line": 26,
+                          "line": 25,
                           "column": 4
                         },
                         "end": {
-                          "line": 26,
+                          "line": 25,
                           "column": 22
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 562,
-                        "end": 580,
+                        "start": 565,
+                        "end": 583,
                         "loc": {
                           "start": {
-                            "line": 26,
+                            "line": 25,
                             "column": 4
                           },
                           "end": {
-                            "line": 26,
+                            "line": 25,
                             "column": 22
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 562,
-                          "end": 573,
+                          "start": 565,
+                          "end": 576,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 25,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 25,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 562,
-                            "end": 566,
+                            "start": 565,
+                            "end": 569,
                             "loc": {
                               "start": {
-                                "line": 26,
+                                "line": 25,
                                 "column": 4
                               },
                               "end": {
-                                "line": 26,
+                                "line": 25,
                                 "column": 8
                               }
                             },
@@ -514,15 +408,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 567,
-                            "end": 573,
+                            "start": 570,
+                            "end": 576,
                             "loc": {
                               "start": {
-                                "line": 26,
+                                "line": 25,
                                 "column": 9
                               },
                               "end": {
-                                "line": 26,
+                                "line": 25,
                                 "column": 15
                               },
                               "identifierName": "_nodeA"
@@ -534,15 +428,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 576,
-                          "end": 580,
+                          "start": 579,
+                          "end": 583,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 25,
                               "column": 18
                             },
                             "end": {
-                              "line": 26,
+                              "line": 25,
                               "column": 22
                             }
                           }
@@ -553,15 +447,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Inspecting the Contact Properties",
-                          "start": 520,
-                          "end": 556,
+                          "start": 523,
+                          "end": 559,
                           "loc": {
                             "start": {
-                              "line": 24,
+                              "line": 23,
                               "column": 4
                             },
                             "end": {
-                              "line": 24,
+                              "line": 23,
                               "column": 40
                             }
                           }
@@ -570,73 +464,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 585,
-                      "end": 603,
+                      "start": 588,
+                      "end": 606,
                       "loc": {
                         "start": {
-                          "line": 27,
+                          "line": 26,
                           "column": 4
                         },
                         "end": {
-                          "line": 27,
+                          "line": 26,
                           "column": 22
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 585,
-                        "end": 603,
+                        "start": 588,
+                        "end": 606,
                         "loc": {
                           "start": {
-                            "line": 27,
+                            "line": 26,
                             "column": 4
                           },
                           "end": {
-                            "line": 27,
+                            "line": 26,
                             "column": 22
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 585,
-                          "end": 596,
+                          "start": 588,
+                          "end": 599,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 26,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 26,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 585,
-                            "end": 589,
+                            "start": 588,
+                            "end": 592,
                             "loc": {
                               "start": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 4
                               },
                               "end": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 590,
-                            "end": 596,
+                            "start": 593,
+                            "end": 599,
                             "loc": {
                               "start": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 9
                               },
                               "end": {
-                                "line": 27,
+                                "line": 26,
                                 "column": 15
                               },
                               "identifierName": "_nodeB"
@@ -647,15 +541,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 599,
-                          "end": 603,
+                          "start": 602,
+                          "end": 606,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 26,
                               "column": 18
                             },
                             "end": {
-                              "line": 27,
+                              "line": 26,
                               "column": 22
                             }
                           }
@@ -664,73 +558,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 608,
-                      "end": 633,
+                      "start": 611,
+                      "end": 636,
                       "loc": {
                         "start": {
-                          "line": 28,
+                          "line": 27,
                           "column": 4
                         },
                         "end": {
-                          "line": 28,
+                          "line": 27,
                           "column": 29
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 608,
-                        "end": 633,
+                        "start": 611,
+                        "end": 636,
                         "loc": {
                           "start": {
-                            "line": 28,
+                            "line": 27,
                             "column": 4
                           },
                           "end": {
-                            "line": 28,
+                            "line": 27,
                             "column": 29
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 608,
-                          "end": 626,
+                          "start": 611,
+                          "end": 629,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 27,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 27,
                               "column": 22
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 608,
-                            "end": 612,
+                            "start": 611,
+                            "end": 615,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 27,
                                 "column": 4
                               },
                               "end": {
-                                "line": 28,
+                                "line": 27,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 613,
-                            "end": 626,
+                            "start": 616,
+                            "end": 629,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 27,
                                 "column": 9
                               },
                               "end": {
-                                "line": 28,
+                                "line": 27,
                                 "column": 22
                               },
                               "identifierName": "_contactPoint"
@@ -741,15 +635,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 629,
-                          "end": 633,
+                          "start": 632,
+                          "end": 636,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 27,
                               "column": 25
                             },
                             "end": {
-                              "line": 28,
+                              "line": 27,
                               "column": 29
                             }
                           }
@@ -758,73 +652,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 638,
-                      "end": 664,
+                      "start": 641,
+                      "end": 667,
                       "loc": {
                         "start": {
-                          "line": 29,
+                          "line": 28,
                           "column": 4
                         },
                         "end": {
-                          "line": 29,
+                          "line": 28,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 638,
-                        "end": 664,
+                        "start": 641,
+                        "end": 667,
                         "loc": {
                           "start": {
-                            "line": 29,
+                            "line": 28,
                             "column": 4
                           },
                           "end": {
-                            "line": 29,
+                            "line": 28,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 638,
-                          "end": 657,
+                          "start": 641,
+                          "end": 660,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 29,
+                              "line": 28,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 638,
-                            "end": 642,
+                            "start": 641,
+                            "end": 645,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 4
                               },
                               "end": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 643,
-                            "end": 657,
+                            "start": 646,
+                            "end": 660,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 9
                               },
                               "end": {
-                                "line": 29,
+                                "line": 28,
                                 "column": 23
                               },
                               "identifierName": "_contactNormal"
@@ -835,15 +729,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 660,
-                          "end": 664,
+                          "start": 663,
+                          "end": 667,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 28,
                               "column": 26
                             },
                             "end": {
-                              "line": 29,
+                              "line": 28,
                               "column": 30
                             }
                           }
@@ -852,73 +746,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 669,
-                      "end": 695,
+                      "start": 672,
+                      "end": 698,
                       "loc": {
                         "start": {
-                          "line": 30,
+                          "line": 29,
                           "column": 4
                         },
                         "end": {
-                          "line": 30,
+                          "line": 29,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 669,
-                        "end": 695,
+                        "start": 672,
+                        "end": 698,
                         "loc": {
                           "start": {
-                            "line": 30,
+                            "line": 29,
                             "column": 4
                           },
                           "end": {
-                            "line": 30,
+                            "line": 29,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 669,
-                          "end": 691,
+                          "start": 672,
+                          "end": 694,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 30,
+                              "line": 29,
                               "column": 26
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 669,
-                            "end": 673,
+                            "start": 672,
+                            "end": 676,
                             "loc": {
                               "start": {
-                                "line": 30,
+                                "line": 29,
                                 "column": 4
                               },
                               "end": {
-                                "line": 30,
+                                "line": 29,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 674,
-                            "end": 691,
+                            "start": 677,
+                            "end": 694,
                             "loc": {
                               "start": {
-                                "line": 30,
+                                "line": 29,
                                 "column": 9
                               },
                               "end": {
-                                "line": 30,
+                                "line": 29,
                                 "column": 26
                               },
                               "identifierName": "_collisionImpulse"
@@ -929,15 +823,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 694,
-                          "end": 695,
+                          "start": 697,
+                          "end": 698,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 29,
                               "column": 29
                             },
                             "end": {
-                              "line": 30,
+                              "line": 29,
                               "column": 30
                             }
                           },
@@ -951,73 +845,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 700,
-                      "end": 729,
+                      "start": 703,
+                      "end": 732,
                       "loc": {
                         "start": {
-                          "line": 31,
+                          "line": 30,
                           "column": 4
                         },
                         "end": {
-                          "line": 31,
+                          "line": 30,
                           "column": 33
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 700,
-                        "end": 729,
+                        "start": 703,
+                        "end": 732,
                         "loc": {
                           "start": {
-                            "line": 31,
+                            "line": 30,
                             "column": 4
                           },
                           "end": {
-                            "line": 31,
+                            "line": 30,
                             "column": 33
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 700,
-                          "end": 725,
+                          "start": 703,
+                          "end": 728,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 30,
                               "column": 4
                             },
                             "end": {
-                              "line": 31,
+                              "line": 30,
                               "column": 29
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 700,
-                            "end": 704,
+                            "start": 703,
+                            "end": 707,
                             "loc": {
                               "start": {
-                                "line": 31,
+                                "line": 30,
                                 "column": 4
                               },
                               "end": {
-                                "line": 31,
+                                "line": 30,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 705,
-                            "end": 725,
+                            "start": 708,
+                            "end": 728,
                             "loc": {
                               "start": {
-                                "line": 31,
+                                "line": 30,
                                 "column": 9
                               },
                               "end": {
-                                "line": 31,
+                                "line": 30,
                                 "column": 29
                               },
                               "identifierName": "_penetrationDistance"
@@ -1028,15 +922,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 728,
-                          "end": 729,
+                          "start": 731,
+                          "end": 732,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 30,
                               "column": 32
                             },
                             "end": {
-                              "line": 31,
+                              "line": 30,
                               "column": 33
                             }
                           },
@@ -1056,15 +950,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-                    "start": 420,
-                    "end": 484,
+                    "start": 423,
+                    "end": 487,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 20,
+                        "line": 19,
                         "column": 5
                       }
                     }
@@ -1074,15 +968,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting the Contact Properties",
-                    "start": 737,
-                    "end": 773,
+                    "start": 740,
+                    "end": 776,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 33,
                         "column": 2
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 38
                       }
                     }
@@ -1090,15 +984,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
-                    "start": 777,
-                    "end": 1051,
+                    "start": 780,
+                    "end": 1054,
                     "loc": {
                       "start": {
-                        "line": 36,
+                        "line": 35,
                         "column": 2
                       },
                       "end": {
-                        "line": 41,
+                        "line": 40,
                         "column": 5
                       }
                     }
@@ -1107,30 +1001,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1054,
-                "end": 1094,
+                "start": 1057,
+                "end": 1097,
                 "loc": {
                   "start": {
-                    "line": 42,
+                    "line": 41,
                     "column": 2
                   },
                   "end": {
-                    "line": 44,
+                    "line": 43,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1058,
-                  "end": 1063,
+                  "start": 1061,
+                  "end": 1066,
                   "loc": {
                     "start": {
-                      "line": 42,
+                      "line": 41,
                       "column": 6
                     },
                     "end": {
-                      "line": 42,
+                      "line": 41,
                       "column": 11
                     },
                     "identifierName": "nodeA"
@@ -1146,73 +1040,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1066,
-                  "end": 1094,
+                  "start": 1069,
+                  "end": 1097,
                   "loc": {
                     "start": {
-                      "line": 42,
+                      "line": 41,
                       "column": 14
                     },
                     "end": {
-                      "line": 44,
+                      "line": 43,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1072,
-                      "end": 1090,
+                      "start": 1075,
+                      "end": 1093,
                       "loc": {
                         "start": {
-                          "line": 43,
+                          "line": 42,
                           "column": 4
                         },
                         "end": {
-                          "line": 43,
+                          "line": 42,
                           "column": 22
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 1079,
-                        "end": 1090,
+                        "start": 1082,
+                        "end": 1093,
                         "loc": {
                           "start": {
-                            "line": 43,
+                            "line": 42,
                             "column": 11
                           },
                           "end": {
-                            "line": 43,
+                            "line": 42,
                             "column": 22
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1079,
-                          "end": 1083,
+                          "start": 1082,
+                          "end": 1086,
                           "loc": {
                             "start": {
-                              "line": 43,
+                              "line": 42,
                               "column": 11
                             },
                             "end": {
-                              "line": 43,
+                              "line": 42,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1084,
-                          "end": 1090,
+                          "start": 1087,
+                          "end": 1093,
                           "loc": {
                             "start": {
-                              "line": 43,
+                              "line": 42,
                               "column": 16
                             },
                             "end": {
-                              "line": 43,
+                              "line": 42,
                               "column": 22
                             },
                             "identifierName": "_nodeA"
@@ -1230,15 +1124,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting the Contact Properties",
-                    "start": 737,
-                    "end": 773,
+                    "start": 740,
+                    "end": 776,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 33,
                         "column": 2
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 38
                       }
                     }
@@ -1246,15 +1140,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
-                    "start": 777,
-                    "end": 1051,
+                    "start": 780,
+                    "end": 1054,
                     "loc": {
                       "start": {
-                        "line": 36,
+                        "line": 35,
                         "column": 2
                       },
                       "end": {
-                        "line": 41,
+                        "line": 40,
                         "column": 5
                       }
                     }
@@ -1264,15 +1158,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-                    "start": 1098,
-                    "end": 1373,
+                    "start": 1101,
+                    "end": 1376,
                     "loc": {
                       "start": {
-                        "line": 46,
+                        "line": 45,
                         "column": 2
                       },
                       "end": {
-                        "line": 51,
+                        "line": 50,
                         "column": 5
                       }
                     }
@@ -1281,30 +1175,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1376,
-                "end": 1416,
+                "start": 1379,
+                "end": 1419,
                 "loc": {
                   "start": {
-                    "line": 52,
+                    "line": 51,
                     "column": 2
                   },
                   "end": {
-                    "line": 54,
+                    "line": 53,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1380,
-                  "end": 1385,
+                  "start": 1383,
+                  "end": 1388,
                   "loc": {
                     "start": {
-                      "line": 52,
+                      "line": 51,
                       "column": 6
                     },
                     "end": {
-                      "line": 52,
+                      "line": 51,
                       "column": 11
                     },
                     "identifierName": "nodeB"
@@ -1320,73 +1214,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1388,
-                  "end": 1416,
+                  "start": 1391,
+                  "end": 1419,
                   "loc": {
                     "start": {
-                      "line": 52,
+                      "line": 51,
                       "column": 14
                     },
                     "end": {
-                      "line": 54,
+                      "line": 53,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1394,
-                      "end": 1412,
+                      "start": 1397,
+                      "end": 1415,
                       "loc": {
                         "start": {
-                          "line": 53,
+                          "line": 52,
                           "column": 4
                         },
                         "end": {
-                          "line": 53,
+                          "line": 52,
                           "column": 22
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 1401,
-                        "end": 1412,
+                        "start": 1404,
+                        "end": 1415,
                         "loc": {
                           "start": {
-                            "line": 53,
+                            "line": 52,
                             "column": 11
                           },
                           "end": {
-                            "line": 53,
+                            "line": 52,
                             "column": 22
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1401,
-                          "end": 1405,
+                          "start": 1404,
+                          "end": 1408,
                           "loc": {
                             "start": {
-                              "line": 53,
+                              "line": 52,
                               "column": 11
                             },
                             "end": {
-                              "line": 53,
+                              "line": 52,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1406,
-                          "end": 1412,
+                          "start": 1409,
+                          "end": 1415,
                           "loc": {
                             "start": {
-                              "line": 53,
+                              "line": 52,
                               "column": 16
                             },
                             "end": {
-                              "line": 53,
+                              "line": 52,
                               "column": 22
                             },
                             "identifierName": "_nodeB"
@@ -1404,15 +1298,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-                    "start": 1098,
-                    "end": 1373,
+                    "start": 1101,
+                    "end": 1376,
                     "loc": {
                       "start": {
-                        "line": 46,
+                        "line": 45,
                         "column": 2
                       },
                       "end": {
-                        "line": 51,
+                        "line": 50,
                         "column": 5
                       }
                     }
@@ -1422,15 +1316,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-                    "start": 1420,
-                    "end": 1642,
+                    "start": 1423,
+                    "end": 1645,
                     "loc": {
                       "start": {
-                        "line": 56,
+                        "line": 55,
                         "column": 2
                       },
                       "end": {
-                        "line": 61,
+                        "line": 60,
                         "column": 5
                       }
                     }
@@ -1439,30 +1333,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1645,
-                "end": 1699,
+                "start": 1648,
+                "end": 1702,
                 "loc": {
                   "start": {
-                    "line": 62,
+                    "line": 61,
                     "column": 2
                   },
                   "end": {
-                    "line": 64,
+                    "line": 63,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1649,
-                  "end": 1661,
+                  "start": 1652,
+                  "end": 1664,
                   "loc": {
                     "start": {
-                      "line": 62,
+                      "line": 61,
                       "column": 6
                     },
                     "end": {
-                      "line": 62,
+                      "line": 61,
                       "column": 18
                     },
                     "identifierName": "contactPoint"
@@ -1478,73 +1372,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1664,
-                  "end": 1699,
+                  "start": 1667,
+                  "end": 1702,
                   "loc": {
                     "start": {
-                      "line": 62,
+                      "line": 61,
                       "column": 21
                     },
                     "end": {
-                      "line": 64,
+                      "line": 63,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1670,
-                      "end": 1695,
+                      "start": 1673,
+                      "end": 1698,
                       "loc": {
                         "start": {
-                          "line": 63,
+                          "line": 62,
                           "column": 4
                         },
                         "end": {
-                          "line": 63,
+                          "line": 62,
                           "column": 29
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 1677,
-                        "end": 1695,
+                        "start": 1680,
+                        "end": 1698,
                         "loc": {
                           "start": {
-                            "line": 63,
+                            "line": 62,
                             "column": 11
                           },
                           "end": {
-                            "line": 63,
+                            "line": 62,
                             "column": 29
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1677,
-                          "end": 1681,
+                          "start": 1680,
+                          "end": 1684,
                           "loc": {
                             "start": {
-                              "line": 63,
+                              "line": 62,
                               "column": 11
                             },
                             "end": {
-                              "line": 63,
+                              "line": 62,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1682,
-                          "end": 1695,
+                          "start": 1685,
+                          "end": 1698,
                           "loc": {
                             "start": {
-                              "line": 63,
+                              "line": 62,
                               "column": 16
                             },
                             "end": {
-                              "line": 63,
+                              "line": 62,
                               "column": 29
                             },
                             "identifierName": "_contactPoint"
@@ -1562,15 +1456,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-                    "start": 1420,
-                    "end": 1642,
+                    "start": 1423,
+                    "end": 1645,
                     "loc": {
                       "start": {
-                        "line": 56,
+                        "line": 55,
                         "column": 2
                       },
                       "end": {
-                        "line": 61,
+                        "line": 60,
                         "column": 5
                       }
                     }
@@ -1580,15 +1474,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-                    "start": 1703,
-                    "end": 2268,
+                    "start": 1706,
+                    "end": 2271,
                     "loc": {
                       "start": {
-                        "line": 66,
+                        "line": 65,
                         "column": 2
                       },
                       "end": {
-                        "line": 71,
+                        "line": 70,
                         "column": 5
                       }
                     }
@@ -1597,30 +1491,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2271,
-                "end": 2327,
+                "start": 2274,
+                "end": 2330,
                 "loc": {
                   "start": {
-                    "line": 72,
+                    "line": 71,
                     "column": 2
                   },
                   "end": {
-                    "line": 74,
+                    "line": 73,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2275,
-                  "end": 2288,
+                  "start": 2278,
+                  "end": 2291,
                   "loc": {
                     "start": {
-                      "line": 72,
+                      "line": 71,
                       "column": 6
                     },
                     "end": {
-                      "line": 72,
+                      "line": 71,
                       "column": 19
                     },
                     "identifierName": "contactNormal"
@@ -1636,73 +1530,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2291,
-                  "end": 2327,
+                  "start": 2294,
+                  "end": 2330,
                   "loc": {
                     "start": {
-                      "line": 72,
+                      "line": 71,
                       "column": 22
                     },
                     "end": {
-                      "line": 74,
+                      "line": 73,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2297,
-                      "end": 2323,
+                      "start": 2300,
+                      "end": 2326,
                       "loc": {
                         "start": {
-                          "line": 73,
+                          "line": 72,
                           "column": 4
                         },
                         "end": {
-                          "line": 73,
+                          "line": 72,
                           "column": 30
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2304,
-                        "end": 2323,
+                        "start": 2307,
+                        "end": 2326,
                         "loc": {
                           "start": {
-                            "line": 73,
+                            "line": 72,
                             "column": 11
                           },
                           "end": {
-                            "line": 73,
+                            "line": 72,
                             "column": 30
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2304,
-                          "end": 2308,
+                          "start": 2307,
+                          "end": 2311,
                           "loc": {
                             "start": {
-                              "line": 73,
+                              "line": 72,
                               "column": 11
                             },
                             "end": {
-                              "line": 73,
+                              "line": 72,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2309,
-                          "end": 2323,
+                          "start": 2312,
+                          "end": 2326,
                           "loc": {
                             "start": {
-                              "line": 73,
+                              "line": 72,
                               "column": 16
                             },
                             "end": {
-                              "line": 73,
+                              "line": 72,
                               "column": 30
                             },
                             "identifierName": "_contactNormal"
@@ -1720,15 +1614,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-                    "start": 1703,
-                    "end": 2268,
+                    "start": 1706,
+                    "end": 2271,
                     "loc": {
                       "start": {
-                        "line": 66,
+                        "line": 65,
                         "column": 2
                       },
                       "end": {
-                        "line": 71,
+                        "line": 70,
                         "column": 5
                       }
                     }
@@ -1738,15 +1632,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-                    "start": 2331,
-                    "end": 2772,
+                    "start": 2334,
+                    "end": 2775,
                     "loc": {
                       "start": {
-                        "line": 76,
+                        "line": 75,
                         "column": 2
                       },
                       "end": {
-                        "line": 81,
+                        "line": 80,
                         "column": 5
                       }
                     }
@@ -1755,30 +1649,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2775,
-                "end": 2837,
+                "start": 2778,
+                "end": 2840,
                 "loc": {
                   "start": {
-                    "line": 82,
+                    "line": 81,
                     "column": 2
                   },
                   "end": {
-                    "line": 84,
+                    "line": 83,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2779,
-                  "end": 2795,
+                  "start": 2782,
+                  "end": 2798,
                   "loc": {
                     "start": {
-                      "line": 82,
+                      "line": 81,
                       "column": 6
                     },
                     "end": {
-                      "line": 82,
+                      "line": 81,
                       "column": 22
                     },
                     "identifierName": "collisionImpulse"
@@ -1794,73 +1688,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2798,
-                  "end": 2837,
+                  "start": 2801,
+                  "end": 2840,
                   "loc": {
                     "start": {
-                      "line": 82,
+                      "line": 81,
                       "column": 25
                     },
                     "end": {
-                      "line": 84,
+                      "line": 83,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2804,
-                      "end": 2833,
+                      "start": 2807,
+                      "end": 2836,
                       "loc": {
                         "start": {
-                          "line": 83,
+                          "line": 82,
                           "column": 4
                         },
                         "end": {
-                          "line": 83,
+                          "line": 82,
                           "column": 33
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2811,
-                        "end": 2833,
+                        "start": 2814,
+                        "end": 2836,
                         "loc": {
                           "start": {
-                            "line": 83,
+                            "line": 82,
                             "column": 11
                           },
                           "end": {
-                            "line": 83,
+                            "line": 82,
                             "column": 33
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2811,
-                          "end": 2815,
+                          "start": 2814,
+                          "end": 2818,
                           "loc": {
                             "start": {
-                              "line": 83,
+                              "line": 82,
                               "column": 11
                             },
                             "end": {
-                              "line": 83,
+                              "line": 82,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2816,
-                          "end": 2833,
+                          "start": 2819,
+                          "end": 2836,
                           "loc": {
                             "start": {
-                              "line": 83,
+                              "line": 82,
                               "column": 16
                             },
                             "end": {
-                              "line": 83,
+                              "line": 82,
                               "column": 33
                             },
                             "identifierName": "_collisionImpulse"
@@ -1878,15 +1772,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-                    "start": 2331,
-                    "end": 2772,
+                    "start": 2334,
+                    "end": 2775,
                     "loc": {
                       "start": {
-                        "line": 76,
+                        "line": 75,
                         "column": 2
                       },
                       "end": {
-                        "line": 81,
+                        "line": 80,
                         "column": 5
                       }
                     }
@@ -1896,15 +1790,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-                    "start": 2841,
-                    "end": 3087,
+                    "start": 2844,
+                    "end": 3090,
                     "loc": {
                       "start": {
-                        "line": 86,
+                        "line": 85,
                         "column": 2
                       },
                       "end": {
-                        "line": 91,
+                        "line": 90,
                         "column": 5
                       }
                     }
@@ -1913,30 +1807,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3090,
-                "end": 3158,
+                "start": 3093,
+                "end": 3161,
                 "loc": {
                   "start": {
-                    "line": 92,
+                    "line": 91,
                     "column": 2
                   },
                   "end": {
-                    "line": 94,
+                    "line": 93,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3094,
-                  "end": 3113,
+                  "start": 3097,
+                  "end": 3116,
                   "loc": {
                     "start": {
-                      "line": 92,
+                      "line": 91,
                       "column": 6
                     },
                     "end": {
-                      "line": 92,
+                      "line": 91,
                       "column": 25
                     },
                     "identifierName": "penetrationDistance"
@@ -1952,73 +1846,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3116,
-                  "end": 3158,
+                  "start": 3119,
+                  "end": 3161,
                   "loc": {
                     "start": {
-                      "line": 92,
+                      "line": 91,
                       "column": 28
                     },
                     "end": {
-                      "line": 94,
+                      "line": 93,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3122,
-                      "end": 3154,
+                      "start": 3125,
+                      "end": 3157,
                       "loc": {
                         "start": {
-                          "line": 93,
+                          "line": 92,
                           "column": 4
                         },
                         "end": {
-                          "line": 93,
+                          "line": 92,
                           "column": 36
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3129,
-                        "end": 3154,
+                        "start": 3132,
+                        "end": 3157,
                         "loc": {
                           "start": {
-                            "line": 93,
+                            "line": 92,
                             "column": 11
                           },
                           "end": {
-                            "line": 93,
+                            "line": 92,
                             "column": 36
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3129,
-                          "end": 3133,
+                          "start": 3132,
+                          "end": 3136,
                           "loc": {
                             "start": {
-                              "line": 93,
+                              "line": 92,
                               "column": 11
                             },
                             "end": {
-                              "line": 93,
+                              "line": 92,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3134,
-                          "end": 3154,
+                          "start": 3137,
+                          "end": 3157,
                           "loc": {
                             "start": {
-                              "line": 93,
+                              "line": 92,
                               "column": 16
                             },
                             "end": {
-                              "line": 93,
+                              "line": 92,
                               "column": 36
                             },
                             "identifierName": "_penetrationDistance"
@@ -2035,15 +1929,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-                    "start": 2841,
-                    "end": 3087,
+                    "start": 2844,
+                    "end": 3090,
                     "loc": {
                       "start": {
-                        "line": 86,
+                        "line": 85,
                         "column": 2
                       },
                       "end": {
-                        "line": 91,
+                        "line": 90,
                         "column": 5
                       }
                     }
@@ -2054,17 +1948,49 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
-              "start": 132,
-              "end": 358,
+              "type": "CommentLine",
+              "value": "import SCNNode from './SCNNode'",
+              "start": 60,
+              "end": 93,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 13,
+                  "line": 4,
+                  "column": 33
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import SCNVector3 from './SCNVector3'",
+              "start": 94,
+              "end": 133,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 39
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
+              "start": 135,
+              "end": 361,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 0
+                },
+                "end": {
+                  "line": 12,
                   "column": 3
                 }
               }
@@ -2074,17 +2000,49 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
-            "start": 132,
-            "end": 358,
+            "type": "CommentLine",
+            "value": "import SCNNode from './SCNNode'",
+            "start": 60,
+            "end": 93,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 33
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNVector3 from './SCNVector3'",
+            "start": 94,
+            "end": 133,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
+            "start": 135,
+            "end": 361,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -2132,17 +2090,49 @@
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
-      "start": 132,
-      "end": 358,
+      "type": "CommentLine",
+      "value": "import SCNNode from './SCNNode'",
+      "start": 60,
+      "end": 93,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 4,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "import SCNVector3 from './SCNVector3'",
+      "start": 94,
+      "end": 133,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
+      "start": 135,
+      "end": 361,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
           "column": 3
         }
       }
@@ -2150,15 +2140,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 420,
-      "end": 484,
+      "start": 423,
+      "end": 487,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 5
         }
       }
@@ -2166,15 +2156,15 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 520,
-      "end": 556,
+      "start": 523,
+      "end": 559,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 23,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 23,
           "column": 40
         }
       }
@@ -2182,15 +2172,15 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 737,
-      "end": 773,
+      "start": 740,
+      "end": 776,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 2
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 38
         }
       }
@@ -2198,15 +2188,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
-      "start": 777,
-      "end": 1051,
+      "start": 780,
+      "end": 1054,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 2
         },
         "end": {
-          "line": 41,
+          "line": 40,
           "column": 5
         }
       }
@@ -2214,15 +2204,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-      "start": 1098,
-      "end": 1373,
+      "start": 1101,
+      "end": 1376,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 45,
           "column": 2
         },
         "end": {
-          "line": 51,
+          "line": 50,
           "column": 5
         }
       }
@@ -2230,15 +2220,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-      "start": 1420,
-      "end": 1642,
+      "start": 1423,
+      "end": 1645,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 55,
           "column": 2
         },
         "end": {
-          "line": 61,
+          "line": 60,
           "column": 5
         }
       }
@@ -2246,15 +2236,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-      "start": 1703,
-      "end": 2268,
+      "start": 1706,
+      "end": 2271,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 65,
           "column": 2
         },
         "end": {
-          "line": 71,
+          "line": 70,
           "column": 5
         }
       }
@@ -2262,15 +2252,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-      "start": 2331,
-      "end": 2772,
+      "start": 2334,
+      "end": 2775,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 2
         },
         "end": {
-          "line": 81,
+          "line": 80,
           "column": 5
         }
       }
@@ -2278,15 +2268,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-      "start": 2841,
-      "end": 3087,
+      "start": 2844,
+      "end": 3090,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 85,
           "column": 2
         },
         "end": {
-          "line": 91,
+          "line": 90,
           "column": 5
         }
       }
@@ -2428,22 +2418,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNNode from './SCNNode'",
       "start": 60,
-      "end": 66,
+      "end": 93,
       "loc": {
         "start": {
           "line": 4,
@@ -2451,106 +2429,15 @@
         },
         "end": {
           "line": 4,
-          "column": 6
+          "column": 33
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNNode",
-      "start": 67,
-      "end": 74,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 75,
-      "end": 79,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 15
-        },
-        "end": {
-          "line": 4,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNNode",
-      "start": 80,
-      "end": 91,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 20
-        },
-        "end": {
-          "line": 4,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 92,
-      "end": 98,
+      "type": "CommentLine",
+      "value": "import SCNVector3 from './SCNVector3'",
+      "start": 94,
+      "end": 133,
       "loc": {
         "start": {
           "line": 5,
@@ -2558,101 +2445,22 @@
         },
         "end": {
           "line": 5,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNVector3",
-      "start": 99,
-      "end": 109,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 7
-        },
-        "end": {
-          "line": 5,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 110,
-      "end": 114,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 18
-        },
-        "end": {
-          "line": 5,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNVector3",
-      "start": 115,
-      "end": 129,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 23
-        },
-        "end": {
-          "line": 5,
-          "column": 37
+          "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
-      "start": 132,
-      "end": 358,
+      "start": 135,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 3
         }
       }
@@ -2672,15 +2480,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 359,
-      "end": 365,
+      "start": 362,
+      "end": 368,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 6
         }
       }
@@ -2700,15 +2508,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 366,
-      "end": 373,
+      "start": 369,
+      "end": 376,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 14
         }
       }
@@ -2728,15 +2536,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 374,
-      "end": 379,
+      "start": 377,
+      "end": 382,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 20
         }
       }
@@ -2754,15 +2562,15 @@
         "binop": null
       },
       "value": "SCNPhysicsContact",
-      "start": 380,
-      "end": 397,
+      "start": 383,
+      "end": 400,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 21
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 38
         }
       }
@@ -2782,15 +2590,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 398,
-      "end": 405,
+      "start": 401,
+      "end": 408,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 39
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 46
         }
       }
@@ -2808,15 +2616,15 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 406,
-      "end": 414,
+      "start": 409,
+      "end": 417,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 47
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 55
         }
       }
@@ -2833,15 +2641,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 415,
-      "end": 416,
+      "start": 418,
+      "end": 419,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 56
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 57
         }
       }
@@ -2849,15 +2657,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 420,
-      "end": 484,
+      "start": 423,
+      "end": 487,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 19,
           "column": 5
         }
       }
@@ -2875,15 +2683,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 487,
-      "end": 498,
+      "start": 490,
+      "end": 501,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 21,
+          "line": 20,
           "column": 13
         }
       }
@@ -2900,15 +2708,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 498,
-      "end": 499,
+      "start": 501,
+      "end": 502,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 20,
           "column": 13
         },
         "end": {
-          "line": 21,
+          "line": 20,
           "column": 14
         }
       }
@@ -2925,15 +2733,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 499,
-      "end": 500,
+      "start": 502,
+      "end": 503,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 20,
           "column": 14
         },
         "end": {
-          "line": 21,
+          "line": 20,
           "column": 15
         }
       }
@@ -2950,15 +2758,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 501,
-      "end": 502,
+      "start": 504,
+      "end": 505,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 20,
           "column": 16
         },
         "end": {
-          "line": 21,
+          "line": 20,
           "column": 17
         }
       }
@@ -2978,15 +2786,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 507,
-      "end": 512,
+      "start": 510,
+      "end": 515,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 9
         }
       }
@@ -3003,15 +2811,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 512,
-      "end": 513,
+      "start": 515,
+      "end": 516,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 9
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 10
         }
       }
@@ -3028,15 +2836,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 513,
-      "end": 514,
+      "start": 516,
+      "end": 517,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 10
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 11
         }
       }
@@ -3044,15 +2852,15 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 520,
-      "end": 556,
+      "start": 523,
+      "end": 559,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 23,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 23,
           "column": 40
         }
       }
@@ -3072,15 +2880,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 562,
-      "end": 566,
+      "start": 565,
+      "end": 569,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 8
         }
       }
@@ -3098,15 +2906,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 566,
-      "end": 567,
+      "start": 569,
+      "end": 570,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 8
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 9
         }
       }
@@ -3124,15 +2932,15 @@
         "binop": null
       },
       "value": "_nodeA",
-      "start": 567,
-      "end": 573,
+      "start": 570,
+      "end": 576,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 9
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 15
         }
       }
@@ -3151,15 +2959,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 574,
-      "end": 575,
+      "start": 577,
+      "end": 578,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 16
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 17
         }
       }
@@ -3179,15 +2987,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 576,
-      "end": 580,
+      "start": 579,
+      "end": 583,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 18
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 22
         }
       }
@@ -3207,15 +3015,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 585,
-      "end": 589,
+      "start": 588,
+      "end": 592,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 8
         }
       }
@@ -3233,15 +3041,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 589,
-      "end": 590,
+      "start": 592,
+      "end": 593,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 8
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 9
         }
       }
@@ -3259,15 +3067,15 @@
         "binop": null
       },
       "value": "_nodeB",
-      "start": 590,
-      "end": 596,
+      "start": 593,
+      "end": 599,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 9
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 15
         }
       }
@@ -3286,15 +3094,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 597,
-      "end": 598,
+      "start": 600,
+      "end": 601,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 16
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 17
         }
       }
@@ -3314,15 +3122,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 599,
-      "end": 603,
+      "start": 602,
+      "end": 606,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 18
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 22
         }
       }
@@ -3342,15 +3150,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 608,
-      "end": 612,
+      "start": 611,
+      "end": 615,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 8
         }
       }
@@ -3368,15 +3176,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 612,
-      "end": 613,
+      "start": 615,
+      "end": 616,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 8
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 9
         }
       }
@@ -3394,15 +3202,15 @@
         "binop": null
       },
       "value": "_contactPoint",
-      "start": 613,
-      "end": 626,
+      "start": 616,
+      "end": 629,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 9
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 22
         }
       }
@@ -3421,15 +3229,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 627,
-      "end": 628,
+      "start": 630,
+      "end": 631,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 23
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 24
         }
       }
@@ -3449,15 +3257,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 629,
-      "end": 633,
+      "start": 632,
+      "end": 636,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 25
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 29
         }
       }
@@ -3477,15 +3285,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 638,
-      "end": 642,
+      "start": 641,
+      "end": 645,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 8
         }
       }
@@ -3503,15 +3311,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 642,
-      "end": 643,
+      "start": 645,
+      "end": 646,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 8
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 9
         }
       }
@@ -3529,15 +3337,15 @@
         "binop": null
       },
       "value": "_contactNormal",
-      "start": 643,
-      "end": 657,
+      "start": 646,
+      "end": 660,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 9
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 23
         }
       }
@@ -3556,15 +3364,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 658,
-      "end": 659,
+      "start": 661,
+      "end": 662,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 24
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 25
         }
       }
@@ -3584,15 +3392,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 660,
-      "end": 664,
+      "start": 663,
+      "end": 667,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 26
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 30
         }
       }
@@ -3612,15 +3420,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 669,
-      "end": 673,
+      "start": 672,
+      "end": 676,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 8
         }
       }
@@ -3638,15 +3446,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 673,
-      "end": 674,
+      "start": 676,
+      "end": 677,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 8
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 9
         }
       }
@@ -3664,15 +3472,15 @@
         "binop": null
       },
       "value": "_collisionImpulse",
-      "start": 674,
-      "end": 691,
+      "start": 677,
+      "end": 694,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 9
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 26
         }
       }
@@ -3691,15 +3499,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 692,
-      "end": 693,
+      "start": 695,
+      "end": 696,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 27
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 28
         }
       }
@@ -3718,15 +3526,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 694,
-      "end": 695,
+      "start": 697,
+      "end": 698,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 29
         },
         "end": {
-          "line": 30,
+          "line": 29,
           "column": 30
         }
       }
@@ -3746,15 +3554,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 700,
-      "end": 704,
+      "start": 703,
+      "end": 707,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 8
         }
       }
@@ -3772,15 +3580,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 704,
-      "end": 705,
+      "start": 707,
+      "end": 708,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 8
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 9
         }
       }
@@ -3798,15 +3606,15 @@
         "binop": null
       },
       "value": "_penetrationDistance",
-      "start": 705,
-      "end": 725,
+      "start": 708,
+      "end": 728,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 9
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 29
         }
       }
@@ -3825,15 +3633,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 726,
-      "end": 727,
+      "start": 729,
+      "end": 730,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 30
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 31
         }
       }
@@ -3852,15 +3660,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 728,
-      "end": 729,
+      "start": 731,
+      "end": 732,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 32
         },
         "end": {
-          "line": 31,
+          "line": 30,
           "column": 33
         }
       }
@@ -3877,15 +3685,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 732,
-      "end": 733,
+      "start": 735,
+      "end": 736,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 31,
           "column": 2
         },
         "end": {
-          "line": 32,
+          "line": 31,
           "column": 3
         }
       }
@@ -3893,15 +3701,15 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 737,
-      "end": 773,
+      "start": 740,
+      "end": 776,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 33,
           "column": 2
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 38
         }
       }
@@ -3909,11 +3717,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
-      "start": 777,
-      "end": 1051,
+      "start": 780,
+      "end": 1054,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
+          "column": 2
+        },
+        "end": {
+          "line": 40,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 1057,
+      "end": 1060,
+      "loc": {
+        "start": {
+          "line": 41,
           "column": 2
         },
         "end": {
@@ -3934,42 +3768,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 1054,
-      "end": 1057,
-      "loc": {
-        "start": {
-          "line": 42,
-          "column": 2
-        },
-        "end": {
-          "line": 42,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "nodeA",
-      "start": 1058,
-      "end": 1063,
+      "start": 1061,
+      "end": 1066,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 6
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 11
         }
       }
@@ -3986,15 +3794,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1063,
-      "end": 1064,
+      "start": 1066,
+      "end": 1067,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 11
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 12
         }
       }
@@ -4011,15 +3819,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1064,
-      "end": 1065,
+      "start": 1067,
+      "end": 1068,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 12
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 13
         }
       }
@@ -4036,15 +3844,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1066,
-      "end": 1067,
+      "start": 1069,
+      "end": 1070,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 14
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 15
         }
       }
@@ -4064,15 +3872,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1072,
-      "end": 1078,
+      "start": 1075,
+      "end": 1081,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 4
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 10
         }
       }
@@ -4092,15 +3900,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1079,
-      "end": 1083,
+      "start": 1082,
+      "end": 1086,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 11
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 15
         }
       }
@@ -4118,15 +3926,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1083,
-      "end": 1084,
+      "start": 1086,
+      "end": 1087,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 15
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 16
         }
       }
@@ -4144,15 +3952,15 @@
         "binop": null
       },
       "value": "_nodeA",
-      "start": 1084,
-      "end": 1090,
+      "start": 1087,
+      "end": 1093,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 16
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 22
         }
       }
@@ -4169,15 +3977,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1093,
-      "end": 1094,
+      "start": 1096,
+      "end": 1097,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 43,
           "column": 2
         },
         "end": {
-          "line": 44,
+          "line": 43,
           "column": 3
         }
       }
@@ -4185,11 +3993,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-      "start": 1098,
-      "end": 1373,
+      "start": 1101,
+      "end": 1376,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 45,
+          "column": 2
+        },
+        "end": {
+          "line": 50,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 1379,
+      "end": 1382,
+      "loc": {
+        "start": {
+          "line": 51,
           "column": 2
         },
         "end": {
@@ -4210,42 +4044,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 1376,
-      "end": 1379,
-      "loc": {
-        "start": {
-          "line": 52,
-          "column": 2
-        },
-        "end": {
-          "line": 52,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "nodeB",
-      "start": 1380,
-      "end": 1385,
+      "start": 1383,
+      "end": 1388,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 6
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 11
         }
       }
@@ -4262,15 +4070,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1385,
-      "end": 1386,
+      "start": 1388,
+      "end": 1389,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 11
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 12
         }
       }
@@ -4287,15 +4095,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1386,
-      "end": 1387,
+      "start": 1389,
+      "end": 1390,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 12
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 13
         }
       }
@@ -4312,15 +4120,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1388,
-      "end": 1389,
+      "start": 1391,
+      "end": 1392,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 14
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 15
         }
       }
@@ -4340,15 +4148,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1394,
-      "end": 1400,
+      "start": 1397,
+      "end": 1403,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 10
         }
       }
@@ -4368,15 +4176,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1401,
-      "end": 1405,
+      "start": 1404,
+      "end": 1408,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 11
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 15
         }
       }
@@ -4394,15 +4202,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1405,
-      "end": 1406,
+      "start": 1408,
+      "end": 1409,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 15
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 16
         }
       }
@@ -4420,15 +4228,15 @@
         "binop": null
       },
       "value": "_nodeB",
-      "start": 1406,
-      "end": 1412,
+      "start": 1409,
+      "end": 1415,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 16
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 22
         }
       }
@@ -4445,15 +4253,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1415,
-      "end": 1416,
+      "start": 1418,
+      "end": 1419,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 2
         },
         "end": {
-          "line": 54,
+          "line": 53,
           "column": 3
         }
       }
@@ -4461,11 +4269,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-      "start": 1420,
-      "end": 1642,
+      "start": 1423,
+      "end": 1645,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 55,
+          "column": 2
+        },
+        "end": {
+          "line": 60,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 1648,
+      "end": 1651,
+      "loc": {
+        "start": {
+          "line": 61,
           "column": 2
         },
         "end": {
@@ -4486,42 +4320,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 1645,
-      "end": 1648,
-      "loc": {
-        "start": {
-          "line": 62,
-          "column": 2
-        },
-        "end": {
-          "line": 62,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "contactPoint",
-      "start": 1649,
-      "end": 1661,
+      "start": 1652,
+      "end": 1664,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 61,
           "column": 6
         },
         "end": {
-          "line": 62,
+          "line": 61,
           "column": 18
         }
       }
@@ -4538,15 +4346,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1661,
-      "end": 1662,
+      "start": 1664,
+      "end": 1665,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 61,
           "column": 18
         },
         "end": {
-          "line": 62,
+          "line": 61,
           "column": 19
         }
       }
@@ -4563,15 +4371,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1662,
-      "end": 1663,
+      "start": 1665,
+      "end": 1666,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 61,
           "column": 19
         },
         "end": {
-          "line": 62,
+          "line": 61,
           "column": 20
         }
       }
@@ -4588,15 +4396,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1664,
-      "end": 1665,
+      "start": 1667,
+      "end": 1668,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 61,
           "column": 21
         },
         "end": {
-          "line": 62,
+          "line": 61,
           "column": 22
         }
       }
@@ -4616,15 +4424,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1670,
-      "end": 1676,
+      "start": 1673,
+      "end": 1679,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 4
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 10
         }
       }
@@ -4644,15 +4452,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1677,
-      "end": 1681,
+      "start": 1680,
+      "end": 1684,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 11
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 15
         }
       }
@@ -4670,15 +4478,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1681,
-      "end": 1682,
+      "start": 1684,
+      "end": 1685,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 15
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 16
         }
       }
@@ -4696,15 +4504,15 @@
         "binop": null
       },
       "value": "_contactPoint",
-      "start": 1682,
-      "end": 1695,
+      "start": 1685,
+      "end": 1698,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 62,
           "column": 16
         },
         "end": {
-          "line": 63,
+          "line": 62,
           "column": 29
         }
       }
@@ -4721,15 +4529,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1698,
-      "end": 1699,
+      "start": 1701,
+      "end": 1702,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 63,
           "column": 2
         },
         "end": {
-          "line": 64,
+          "line": 63,
           "column": 3
         }
       }
@@ -4737,11 +4545,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-      "start": 1703,
-      "end": 2268,
+      "start": 1706,
+      "end": 2271,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 65,
+          "column": 2
+        },
+        "end": {
+          "line": 70,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 2274,
+      "end": 2277,
+      "loc": {
+        "start": {
+          "line": 71,
           "column": 2
         },
         "end": {
@@ -4762,42 +4596,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 2271,
-      "end": 2274,
-      "loc": {
-        "start": {
-          "line": 72,
-          "column": 2
-        },
-        "end": {
-          "line": 72,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "contactNormal",
-      "start": 2275,
-      "end": 2288,
+      "start": 2278,
+      "end": 2291,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 71,
           "column": 6
         },
         "end": {
-          "line": 72,
+          "line": 71,
           "column": 19
         }
       }
@@ -4814,15 +4622,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2288,
-      "end": 2289,
+      "start": 2291,
+      "end": 2292,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 71,
           "column": 19
         },
         "end": {
-          "line": 72,
+          "line": 71,
           "column": 20
         }
       }
@@ -4839,15 +4647,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2289,
-      "end": 2290,
+      "start": 2292,
+      "end": 2293,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 71,
           "column": 20
         },
         "end": {
-          "line": 72,
+          "line": 71,
           "column": 21
         }
       }
@@ -4864,15 +4672,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2291,
-      "end": 2292,
+      "start": 2294,
+      "end": 2295,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 71,
           "column": 22
         },
         "end": {
-          "line": 72,
+          "line": 71,
           "column": 23
         }
       }
@@ -4892,15 +4700,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2297,
-      "end": 2303,
+      "start": 2300,
+      "end": 2306,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 72,
           "column": 4
         },
         "end": {
-          "line": 73,
+          "line": 72,
           "column": 10
         }
       }
@@ -4920,15 +4728,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2304,
-      "end": 2308,
+      "start": 2307,
+      "end": 2311,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 72,
           "column": 11
         },
         "end": {
-          "line": 73,
+          "line": 72,
           "column": 15
         }
       }
@@ -4946,15 +4754,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2308,
-      "end": 2309,
+      "start": 2311,
+      "end": 2312,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 72,
           "column": 15
         },
         "end": {
-          "line": 73,
+          "line": 72,
           "column": 16
         }
       }
@@ -4972,15 +4780,15 @@
         "binop": null
       },
       "value": "_contactNormal",
-      "start": 2309,
-      "end": 2323,
+      "start": 2312,
+      "end": 2326,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 72,
           "column": 16
         },
         "end": {
-          "line": 73,
+          "line": 72,
           "column": 30
         }
       }
@@ -4997,15 +4805,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2326,
-      "end": 2327,
+      "start": 2329,
+      "end": 2330,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 73,
           "column": 2
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 3
         }
       }
@@ -5013,11 +4821,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-      "start": 2331,
-      "end": 2772,
+      "start": 2334,
+      "end": 2775,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
+          "column": 2
+        },
+        "end": {
+          "line": 80,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 2778,
+      "end": 2781,
+      "loc": {
+        "start": {
+          "line": 81,
           "column": 2
         },
         "end": {
@@ -5038,42 +4872,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 2775,
-      "end": 2778,
-      "loc": {
-        "start": {
-          "line": 82,
-          "column": 2
-        },
-        "end": {
-          "line": 82,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "collisionImpulse",
-      "start": 2779,
-      "end": 2795,
+      "start": 2782,
+      "end": 2798,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 81,
           "column": 6
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 22
         }
       }
@@ -5090,15 +4898,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2795,
-      "end": 2796,
+      "start": 2798,
+      "end": 2799,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 81,
           "column": 22
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 23
         }
       }
@@ -5115,15 +4923,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2796,
-      "end": 2797,
+      "start": 2799,
+      "end": 2800,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 81,
           "column": 23
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 24
         }
       }
@@ -5140,15 +4948,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2798,
-      "end": 2799,
+      "start": 2801,
+      "end": 2802,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 81,
           "column": 25
         },
         "end": {
-          "line": 82,
+          "line": 81,
           "column": 26
         }
       }
@@ -5168,15 +4976,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2804,
-      "end": 2810,
+      "start": 2807,
+      "end": 2813,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 82,
           "column": 4
         },
         "end": {
-          "line": 83,
+          "line": 82,
           "column": 10
         }
       }
@@ -5196,15 +5004,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2811,
-      "end": 2815,
+      "start": 2814,
+      "end": 2818,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 82,
           "column": 11
         },
         "end": {
-          "line": 83,
+          "line": 82,
           "column": 15
         }
       }
@@ -5222,15 +5030,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2815,
-      "end": 2816,
+      "start": 2818,
+      "end": 2819,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 82,
           "column": 15
         },
         "end": {
-          "line": 83,
+          "line": 82,
           "column": 16
         }
       }
@@ -5248,15 +5056,15 @@
         "binop": null
       },
       "value": "_collisionImpulse",
-      "start": 2816,
-      "end": 2833,
+      "start": 2819,
+      "end": 2836,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 82,
           "column": 16
         },
         "end": {
-          "line": 83,
+          "line": 82,
           "column": 33
         }
       }
@@ -5273,15 +5081,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2836,
-      "end": 2837,
+      "start": 2839,
+      "end": 2840,
       "loc": {
         "start": {
-          "line": 84,
+          "line": 83,
           "column": 2
         },
         "end": {
-          "line": 84,
+          "line": 83,
           "column": 3
         }
       }
@@ -5289,11 +5097,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-      "start": 2841,
-      "end": 3087,
+      "start": 2844,
+      "end": 3090,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 85,
+          "column": 2
+        },
+        "end": {
+          "line": 90,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 3093,
+      "end": 3096,
+      "loc": {
+        "start": {
+          "line": 91,
           "column": 2
         },
         "end": {
@@ -5314,42 +5148,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 3090,
-      "end": 3093,
-      "loc": {
-        "start": {
-          "line": 92,
-          "column": 2
-        },
-        "end": {
-          "line": 92,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "penetrationDistance",
-      "start": 3094,
-      "end": 3113,
+      "start": 3097,
+      "end": 3116,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 6
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 25
         }
       }
@@ -5366,15 +5174,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3113,
-      "end": 3114,
+      "start": 3116,
+      "end": 3117,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 25
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 26
         }
       }
@@ -5391,15 +5199,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3114,
-      "end": 3115,
+      "start": 3117,
+      "end": 3118,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 26
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 27
         }
       }
@@ -5416,15 +5224,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3116,
-      "end": 3117,
+      "start": 3119,
+      "end": 3120,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 28
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 29
         }
       }
@@ -5444,15 +5252,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3122,
-      "end": 3128,
+      "start": 3125,
+      "end": 3131,
       "loc": {
         "start": {
-          "line": 93,
+          "line": 92,
           "column": 4
         },
         "end": {
-          "line": 93,
+          "line": 92,
           "column": 10
         }
       }
@@ -5472,15 +5280,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3129,
-      "end": 3133,
+      "start": 3132,
+      "end": 3136,
       "loc": {
         "start": {
-          "line": 93,
+          "line": 92,
           "column": 11
         },
         "end": {
-          "line": 93,
+          "line": 92,
           "column": 15
         }
       }
@@ -5498,15 +5306,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3133,
-      "end": 3134,
+      "start": 3136,
+      "end": 3137,
       "loc": {
         "start": {
-          "line": 93,
+          "line": 92,
           "column": 15
         },
         "end": {
-          "line": 93,
+          "line": 92,
           "column": 16
         }
       }
@@ -5524,15 +5332,15 @@
         "binop": null
       },
       "value": "_penetrationDistance",
-      "start": 3134,
-      "end": 3154,
+      "start": 3137,
+      "end": 3157,
       "loc": {
         "start": {
-          "line": 93,
+          "line": 92,
           "column": 16
         },
         "end": {
-          "line": 93,
+          "line": 92,
           "column": 36
         }
       }
@@ -5549,15 +5357,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3157,
-      "end": 3158,
+      "start": 3160,
+      "end": 3161,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 93,
           "column": 2
         },
         "end": {
-          "line": 94,
+          "line": 93,
           "column": 3
         }
       }
@@ -5574,15 +5382,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3159,
-      "end": 3160,
+      "start": 3162,
+      "end": 3163,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 94,
           "column": 0
         },
         "end": {
-          "line": 95,
+          "line": 94,
           "column": 1
         }
       }
@@ -5600,15 +5408,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3161,
-      "end": 3161,
+      "start": 3164,
+      "end": 3164,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 95,
           "column": 0
         },
         "end": {
-          "line": 96,
+          "line": 95,
           "column": 0
         }
       }

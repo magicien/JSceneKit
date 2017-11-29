@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 10138,
+  "end": 10167,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 10138,
+    "end": 10167,
     "loc": {
       "start": {
         "line": 1,
@@ -1019,7 +1019,7 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 815,
-        "end": 10137,
+        "end": 10166,
         "loc": {
           "start": {
             "line": 30,
@@ -1033,7 +1033,7 @@
         "declaration": {
           "type": "ClassDeclaration",
           "start": 830,
-          "end": 10137,
+          "end": 10166,
           "loc": {
             "start": {
               "line": 30,
@@ -1082,7 +1082,7 @@
           "body": {
             "type": "ClassBody",
             "start": 866,
-            "end": 10137,
+            "end": 10166,
             "loc": {
               "start": {
                 "line": 30,
@@ -9959,7 +9959,7 @@
               {
                 "type": "ClassMethod",
                 "start": 6542,
-                "end": 6584,
+                "end": 6613,
                 "loc": {
                   "start": {
                     "line": 220,
@@ -9998,7 +9998,7 @@
                 "body": {
                   "type": "BlockStatement",
                   "start": 6563,
-                  "end": 6584,
+                  "end": 6613,
                   "loc": {
                     "start": {
                       "line": 220,
@@ -10013,7 +10013,7 @@
                     {
                       "type": "ReturnStatement",
                       "start": 6569,
-                      "end": 6580,
+                      "end": 6609,
                       "loc": {
                         "start": {
                           "line": 221,
@@ -10021,13 +10021,13 @@
                         },
                         "end": {
                           "line": 221,
-                          "column": 15
+                          "column": 44
                         }
                       },
                       "argument": {
-                        "type": "NullLiteral",
+                        "type": "CallExpression",
                         "start": 6576,
-                        "end": 6580,
+                        "end": 6609,
                         "loc": {
                           "start": {
                             "line": 221,
@@ -10035,9 +10035,127 @@
                           },
                           "end": {
                             "line": 221,
-                            "column": 15
+                            "column": 44
                           }
-                        }
+                        },
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 6576,
+                          "end": 6586,
+                          "loc": {
+                            "start": {
+                              "line": 221,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 221,
+                              "column": 21
+                            }
+                          },
+                          "object": {
+                            "type": "Identifier",
+                            "start": 6576,
+                            "end": 6581,
+                            "loc": {
+                              "start": {
+                                "line": 221,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 221,
+                                "column": 16
+                              },
+                              "identifierName": "Array"
+                            },
+                            "name": "Array"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 6582,
+                            "end": 6586,
+                            "loc": {
+                              "start": {
+                                "line": 221,
+                                "column": 17
+                              },
+                              "end": {
+                                "line": 221,
+                                "column": 21
+                              },
+                              "identifierName": "from"
+                            },
+                            "name": "from"
+                          },
+                          "computed": false
+                        },
+                        "arguments": [
+                          {
+                            "type": "CallExpression",
+                            "start": 6587,
+                            "end": 6608,
+                            "loc": {
+                              "start": {
+                                "line": 221,
+                                "column": 22
+                              },
+                              "end": {
+                                "line": 221,
+                                "column": 43
+                              }
+                            },
+                            "callee": {
+                              "type": "MemberExpression",
+                              "start": 6587,
+                              "end": 6606,
+                              "loc": {
+                                "start": {
+                                  "line": 221,
+                                  "column": 22
+                                },
+                                "end": {
+                                  "line": 221,
+                                  "column": 41
+                                }
+                              },
+                              "object": {
+                                "type": "Identifier",
+                                "start": 6587,
+                                "end": 6599,
+                                "loc": {
+                                  "start": {
+                                    "line": 221,
+                                    "column": 22
+                                  },
+                                  "end": {
+                                    "line": 221,
+                                    "column": 34
+                                  },
+                                  "identifierName": "_controllers"
+                                },
+                                "name": "_controllers"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "start": 6600,
+                                "end": 6606,
+                                "loc": {
+                                  "start": {
+                                    "line": 221,
+                                    "column": 35
+                                  },
+                                  "end": {
+                                    "line": 221,
+                                    "column": 41
+                                  },
+                                  "identifierName": "values"
+                                },
+                                "name": "values"
+                              },
+                              "computed": false
+                            },
+                            "arguments": []
+                          }
+                        ]
                       }
                     }
                   ],
@@ -10066,8 +10184,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Determining Which Profiles Are Supported by a Controller",
-                    "start": 6588,
-                    "end": 6647,
+                    "start": 6617,
+                    "end": 6676,
                     "loc": {
                       "start": {
                         "line": 224,
@@ -10082,8 +10200,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The gamepad profile.\n   * @type {?GCGamepad}\n   * @desc If the controller supports the gamepad profile, then this property holds a GCGamepad object. You use this object to access the input elements of the controller. If the controller does not support the gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458860-gamepad\n   ",
-                    "start": 6651,
-                    "end": 7059,
+                    "start": 6680,
+                    "end": 7088,
                     "loc": {
                       "start": {
                         "line": 226,
@@ -10099,8 +10217,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 7062,
-                "end": 7106,
+                "start": 7091,
+                "end": 7135,
                 "loc": {
                   "start": {
                     "line": 232,
@@ -10114,8 +10232,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 7066,
-                  "end": 7073,
+                  "start": 7095,
+                  "end": 7102,
                   "loc": {
                     "start": {
                       "line": 232,
@@ -10138,8 +10256,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 7076,
-                  "end": 7106,
+                  "start": 7105,
+                  "end": 7135,
                   "loc": {
                     "start": {
                       "line": 232,
@@ -10153,8 +10271,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 7082,
-                      "end": 7102,
+                      "start": 7111,
+                      "end": 7131,
                       "loc": {
                         "start": {
                           "line": 233,
@@ -10167,8 +10285,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 7089,
-                        "end": 7102,
+                        "start": 7118,
+                        "end": 7131,
                         "loc": {
                           "start": {
                             "line": 233,
@@ -10181,8 +10299,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 7089,
-                          "end": 7093,
+                          "start": 7118,
+                          "end": 7122,
                           "loc": {
                             "start": {
                               "line": 233,
@@ -10196,8 +10314,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 7094,
-                          "end": 7102,
+                          "start": 7123,
+                          "end": 7131,
                           "loc": {
                             "start": {
                               "line": 233,
@@ -10222,8 +10340,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Determining Which Profiles Are Supported by a Controller",
-                    "start": 6588,
-                    "end": 6647,
+                    "start": 6617,
+                    "end": 6676,
                     "loc": {
                       "start": {
                         "line": 224,
@@ -10238,8 +10356,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The gamepad profile.\n   * @type {?GCGamepad}\n   * @desc If the controller supports the gamepad profile, then this property holds a GCGamepad object. You use this object to access the input elements of the controller. If the controller does not support the gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458860-gamepad\n   ",
-                    "start": 6651,
-                    "end": 7059,
+                    "start": 6680,
+                    "end": 7088,
                     "loc": {
                       "start": {
                         "line": 226,
@@ -10256,8 +10374,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The extended gamepad profile.\n   * @type {?GCExtendedGamepad}\n   * @desc If the controller supports the extended gamepad profile, then this property holds a GCExtendedGamepad object. You use this object to access the input elements of the controller. If the controller does not support the extended gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458883-extendedgamepad\n   ",
-                    "start": 7110,
-                    "end": 7569,
+                    "start": 7139,
+                    "end": 7598,
                     "loc": {
                       "start": {
                         "line": 236,
@@ -10273,8 +10391,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 7572,
-                "end": 7632,
+                "start": 7601,
+                "end": 7661,
                 "loc": {
                   "start": {
                     "line": 242,
@@ -10288,8 +10406,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 7576,
-                  "end": 7591,
+                  "start": 7605,
+                  "end": 7620,
                   "loc": {
                     "start": {
                       "line": 242,
@@ -10312,8 +10430,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 7594,
-                  "end": 7632,
+                  "start": 7623,
+                  "end": 7661,
                   "loc": {
                     "start": {
                       "line": 242,
@@ -10327,8 +10445,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 7600,
-                      "end": 7628,
+                      "start": 7629,
+                      "end": 7657,
                       "loc": {
                         "start": {
                           "line": 243,
@@ -10341,8 +10459,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 7607,
-                        "end": 7628,
+                        "start": 7636,
+                        "end": 7657,
                         "loc": {
                           "start": {
                             "line": 243,
@@ -10355,8 +10473,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 7607,
-                          "end": 7611,
+                          "start": 7636,
+                          "end": 7640,
                           "loc": {
                             "start": {
                               "line": 243,
@@ -10370,8 +10488,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 7612,
-                          "end": 7628,
+                          "start": 7641,
+                          "end": 7657,
                           "loc": {
                             "start": {
                               "line": 243,
@@ -10396,8 +10514,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The extended gamepad profile.\n   * @type {?GCExtendedGamepad}\n   * @desc If the controller supports the extended gamepad profile, then this property holds a GCExtendedGamepad object. You use this object to access the input elements of the controller. If the controller does not support the extended gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458883-extendedgamepad\n   ",
-                    "start": 7110,
-                    "end": 7569,
+                    "start": 7139,
+                    "end": 7598,
                     "loc": {
                       "start": {
                         "line": 236,
@@ -10414,8 +10532,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The micro gamepad profile.\n   * @type {?GCMicroGamepad}\n   * @desc If the controller supports the micro gamepad profile, then this property holds a GCMicroGamepad object. You use this object to access the input elements of the controller. If the controller does not support the micro gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1627772-microgamepad\n   ",
-                    "start": 7636,
-                    "end": 8077,
+                    "start": 7665,
+                    "end": 8106,
                     "loc": {
                       "start": {
                         "line": 246,
@@ -10431,8 +10549,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 8080,
-                "end": 8134,
+                "start": 8109,
+                "end": 8163,
                 "loc": {
                   "start": {
                     "line": 252,
@@ -10446,8 +10564,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 8084,
-                  "end": 8096,
+                  "start": 8113,
+                  "end": 8125,
                   "loc": {
                     "start": {
                       "line": 252,
@@ -10470,8 +10588,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 8099,
-                  "end": 8134,
+                  "start": 8128,
+                  "end": 8163,
                   "loc": {
                     "start": {
                       "line": 252,
@@ -10485,8 +10603,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 8105,
-                      "end": 8130,
+                      "start": 8134,
+                      "end": 8159,
                       "loc": {
                         "start": {
                           "line": 253,
@@ -10499,8 +10617,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 8112,
-                        "end": 8130,
+                        "start": 8141,
+                        "end": 8159,
                         "loc": {
                           "start": {
                             "line": 253,
@@ -10513,8 +10631,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 8112,
-                          "end": 8116,
+                          "start": 8141,
+                          "end": 8145,
                           "loc": {
                             "start": {
                               "line": 253,
@@ -10528,8 +10646,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 8117,
-                          "end": 8130,
+                          "start": 8146,
+                          "end": 8159,
                           "loc": {
                             "start": {
                               "line": 253,
@@ -10554,8 +10672,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The micro gamepad profile.\n   * @type {?GCMicroGamepad}\n   * @desc If the controller supports the micro gamepad profile, then this property holds a GCMicroGamepad object. You use this object to access the input elements of the controller. If the controller does not support the micro gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1627772-microgamepad\n   ",
-                    "start": 7636,
-                    "end": 8077,
+                    "start": 7665,
+                    "end": 8106,
                     "loc": {
                       "start": {
                         "line": 246,
@@ -10572,8 +10690,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The motion input profile.\n   * @type {?GCMotion}\n   * @desc If the controller supports the motion profile, then this property holds a GCMotion object. This profile is typically available when the controller is attached to a device that supports motion. You use this object to access the motion data of the controller. If the controller does not support the motion input profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458884-motion\n   ",
-                    "start": 8138,
-                    "end": 8651,
+                    "start": 8167,
+                    "end": 8680,
                     "loc": {
                       "start": {
                         "line": 256,
@@ -10589,8 +10707,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 8654,
-                "end": 8696,
+                "start": 8683,
+                "end": 8725,
                 "loc": {
                   "start": {
                     "line": 262,
@@ -10604,8 +10722,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 8658,
-                  "end": 8664,
+                  "start": 8687,
+                  "end": 8693,
                   "loc": {
                     "start": {
                       "line": 262,
@@ -10628,8 +10746,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 8667,
-                  "end": 8696,
+                  "start": 8696,
+                  "end": 8725,
                   "loc": {
                     "start": {
                       "line": 262,
@@ -10643,8 +10761,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 8673,
-                      "end": 8692,
+                      "start": 8702,
+                      "end": 8721,
                       "loc": {
                         "start": {
                           "line": 263,
@@ -10657,8 +10775,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 8680,
-                        "end": 8692,
+                        "start": 8709,
+                        "end": 8721,
                         "loc": {
                           "start": {
                             "line": 263,
@@ -10671,8 +10789,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 8680,
-                          "end": 8684,
+                          "start": 8709,
+                          "end": 8713,
                           "loc": {
                             "start": {
                               "line": 263,
@@ -10686,8 +10804,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 8685,
-                          "end": 8692,
+                          "start": 8714,
+                          "end": 8721,
                           "loc": {
                             "start": {
                               "line": 263,
@@ -10712,8 +10830,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The motion input profile.\n   * @type {?GCMotion}\n   * @desc If the controller supports the motion profile, then this property holds a GCMotion object. This profile is typically available when the controller is attached to a device that supports motion. You use this object to access the motion data of the controller. If the controller does not support the motion input profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458884-motion\n   ",
-                    "start": 8138,
-                    "end": 8651,
+                    "start": 8167,
+                    "end": 8680,
                     "loc": {
                       "start": {
                         "line": 256,
@@ -10730,8 +10848,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting a Controller",
-                    "start": 8700,
-                    "end": 8726,
+                    "start": 8729,
+                    "end": 8755,
                     "loc": {
                       "start": {
                         "line": 266,
@@ -10746,8 +10864,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * A Boolean property that indicates whether the controller is closely integrated with the device.\n   * @type {boolean}\n   * @desc If true, then the controller is attached to the device or is close enough to it for the player to interact simultaneously with the controller and the device. If false, then the controller is not guaranteed to be near the device.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458868-isattachedtodevice\n   ",
-                    "start": 8730,
-                    "end": 9208,
+                    "start": 8759,
+                    "end": 9237,
                     "loc": {
                       "start": {
                         "line": 268,
@@ -10763,8 +10881,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9211,
-                "end": 9277,
+                "start": 9240,
+                "end": 9306,
                 "loc": {
                   "start": {
                     "line": 274,
@@ -10778,8 +10896,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9215,
-                  "end": 9233,
+                  "start": 9244,
+                  "end": 9262,
                   "loc": {
                     "start": {
                       "line": 274,
@@ -10802,8 +10920,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9236,
-                  "end": 9277,
+                  "start": 9265,
+                  "end": 9306,
                   "loc": {
                     "start": {
                       "line": 274,
@@ -10817,8 +10935,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 9242,
-                      "end": 9273,
+                      "start": 9271,
+                      "end": 9302,
                       "loc": {
                         "start": {
                           "line": 275,
@@ -10831,8 +10949,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 9249,
-                        "end": 9273,
+                        "start": 9278,
+                        "end": 9302,
                         "loc": {
                           "start": {
                             "line": 275,
@@ -10845,8 +10963,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 9249,
-                          "end": 9253,
+                          "start": 9278,
+                          "end": 9282,
                           "loc": {
                             "start": {
                               "line": 275,
@@ -10860,8 +10978,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 9254,
-                          "end": 9273,
+                          "start": 9283,
+                          "end": 9302,
                           "loc": {
                             "start": {
                               "line": 275,
@@ -10886,8 +11004,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting a Controller",
-                    "start": 8700,
-                    "end": 8726,
+                    "start": 8729,
+                    "end": 8755,
                     "loc": {
                       "start": {
                         "line": 266,
@@ -10902,8 +11020,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * A Boolean property that indicates whether the controller is closely integrated with the device.\n   * @type {boolean}\n   * @desc If true, then the controller is attached to the device or is close enough to it for the player to interact simultaneously with the controller and the device. If false, then the controller is not guaranteed to be near the device.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458868-isattachedtodevice\n   ",
-                    "start": 8730,
-                    "end": 9208,
+                    "start": 8759,
+                    "end": 9237,
                     "loc": {
                       "start": {
                         "line": 268,
@@ -10920,8 +11038,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The name of the vendor that manufactured the controller.\n   * @type {?string}\n   * @desc The value of this property may be nil and is not guaranteed to be unique.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458877-vendorname\n   ",
-                    "start": 9281,
-                    "end": 9557,
+                    "start": 9310,
+                    "end": 9586,
                     "loc": {
                       "start": {
                         "line": 278,
@@ -10937,8 +11055,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9560,
-                "end": 9610,
+                "start": 9589,
+                "end": 9639,
                 "loc": {
                   "start": {
                     "line": 284,
@@ -10952,8 +11070,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9564,
-                  "end": 9574,
+                  "start": 9593,
+                  "end": 9603,
                   "loc": {
                     "start": {
                       "line": 284,
@@ -10976,8 +11094,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9577,
-                  "end": 9610,
+                  "start": 9606,
+                  "end": 9639,
                   "loc": {
                     "start": {
                       "line": 284,
@@ -10991,8 +11109,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 9583,
-                      "end": 9606,
+                      "start": 9612,
+                      "end": 9635,
                       "loc": {
                         "start": {
                           "line": 285,
@@ -11005,8 +11123,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 9590,
-                        "end": 9606,
+                        "start": 9619,
+                        "end": 9635,
                         "loc": {
                           "start": {
                             "line": 285,
@@ -11019,8 +11137,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 9590,
-                          "end": 9594,
+                          "start": 9619,
+                          "end": 9623,
                           "loc": {
                             "start": {
                               "line": 285,
@@ -11034,8 +11152,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 9595,
-                          "end": 9606,
+                          "start": 9624,
+                          "end": 9635,
                           "loc": {
                             "start": {
                               "line": 285,
@@ -11059,8 +11177,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The name of the vendor that manufactured the controller.\n   * @type {?string}\n   * @desc The value of this property may be nil and is not guaranteed to be unique.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458877-vendorname\n   ",
-                    "start": 9281,
-                    "end": 9557,
+                    "start": 9310,
+                    "end": 9586,
                     "loc": {
                       "start": {
                         "line": 278,
@@ -11076,8 +11194,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9614,
-                "end": 9693,
+                "start": 9643,
+                "end": 9722,
                 "loc": {
                   "start": {
                     "line": 288,
@@ -11091,8 +11209,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9618,
-                  "end": 9628,
+                  "start": 9647,
+                  "end": 9657,
                   "loc": {
                     "start": {
                       "line": 288,
@@ -11115,8 +11233,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9631,
-                  "end": 9693,
+                  "start": 9660,
+                  "end": 9722,
                   "loc": {
                     "start": {
                       "line": 288,
@@ -11130,8 +11248,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 9637,
-                      "end": 9689,
+                      "start": 9666,
+                      "end": 9718,
                       "loc": {
                         "start": {
                           "line": 289,
@@ -11144,8 +11262,8 @@
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 9644,
-                        "end": 9689,
+                        "start": 9673,
+                        "end": 9718,
                         "loc": {
                           "start": {
                             "line": 289,
@@ -11158,8 +11276,8 @@
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 9644,
-                          "end": 9672,
+                          "start": 9673,
+                          "end": 9701,
                           "loc": {
                             "start": {
                               "line": 289,
@@ -11172,8 +11290,8 @@
                           },
                           "object": {
                             "type": "Identifier",
-                            "start": 9644,
-                            "end": 9656,
+                            "start": 9673,
+                            "end": 9685,
                             "loc": {
                               "start": {
                                 "line": 289,
@@ -11189,8 +11307,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 9657,
-                            "end": 9672,
+                            "start": 9686,
+                            "end": 9701,
                             "loc": {
                               "start": {
                                 "line": 289,
@@ -11209,8 +11327,8 @@
                         "arguments": [
                           {
                             "type": "MemberExpression",
-                            "start": 9673,
-                            "end": 9688,
+                            "start": 9702,
+                            "end": 9717,
                             "loc": {
                               "start": {
                                 "line": 289,
@@ -11223,8 +11341,8 @@
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 9673,
-                              "end": 9677,
+                              "start": 9702,
+                              "end": 9706,
                               "loc": {
                                 "start": {
                                   "line": 289,
@@ -11238,8 +11356,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 9678,
-                              "end": 9688,
+                              "start": 9707,
+                              "end": 9717,
                               "loc": {
                                 "start": {
                                   "line": 289,
@@ -11264,8 +11382,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9697,
-                "end": 9865,
+                "start": 9726,
+                "end": 9894,
                 "loc": {
                   "start": {
                     "line": 292,
@@ -11279,8 +11397,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9704,
-                  "end": 9724,
+                  "start": 9733,
+                  "end": 9753,
                   "loc": {
                     "start": {
                       "line": 292,
@@ -11303,8 +11421,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 9725,
-                    "end": 9730,
+                    "start": 9754,
+                    "end": 9759,
                     "loc": {
                       "start": {
                         "line": 292,
@@ -11320,8 +11438,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 9732,
-                    "end": 9734,
+                    "start": 9761,
+                    "end": 9763,
                     "loc": {
                       "start": {
                         "line": 292,
@@ -11338,8 +11456,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9736,
-                  "end": 9865,
+                  "start": 9765,
+                  "end": 9894,
                   "loc": {
                     "start": {
                       "line": 292,
@@ -11353,8 +11471,8 @@
                   "body": [
                     {
                       "type": "VariableDeclaration",
-                      "start": 9742,
-                      "end": 9792,
+                      "start": 9771,
+                      "end": 9821,
                       "loc": {
                         "start": {
                           "line": 293,
@@ -11368,8 +11486,8 @@
                       "declarations": [
                         {
                           "type": "VariableDeclarator",
-                          "start": 9748,
-                          "end": 9792,
+                          "start": 9777,
+                          "end": 9821,
                           "loc": {
                             "start": {
                               "line": 293,
@@ -11382,8 +11500,8 @@
                           },
                           "id": {
                             "type": "Identifier",
-                            "start": 9748,
-                            "end": 9751,
+                            "start": 9777,
+                            "end": 9780,
                             "loc": {
                               "start": {
                                 "line": 293,
@@ -11399,8 +11517,8 @@
                           },
                           "init": {
                             "type": "CallExpression",
-                            "start": 9754,
-                            "end": 9792,
+                            "start": 9783,
+                            "end": 9821,
                             "loc": {
                               "start": {
                                 "line": 293,
@@ -11413,8 +11531,8 @@
                             },
                             "callee": {
                               "type": "MemberExpression",
-                              "start": 9754,
-                              "end": 9785,
+                              "start": 9783,
+                              "end": 9814,
                               "loc": {
                                 "start": {
                                   "line": 293,
@@ -11427,8 +11545,8 @@
                               },
                               "object": {
                                 "type": "Identifier",
-                                "start": 9754,
-                                "end": 9766,
+                                "start": 9783,
+                                "end": 9795,
                                 "loc": {
                                   "start": {
                                     "line": 293,
@@ -11444,8 +11562,8 @@
                               },
                               "property": {
                                 "type": "Identifier",
-                                "start": 9767,
-                                "end": 9785,
+                                "start": 9796,
+                                "end": 9814,
                                 "loc": {
                                   "start": {
                                     "line": 293,
@@ -11464,8 +11582,8 @@
                             "arguments": [
                               {
                                 "type": "Identifier",
-                                "start": 9786,
-                                "end": 9791,
+                                "start": 9815,
+                                "end": 9820,
                                 "loc": {
                                   "start": {
                                     "line": 293,
@@ -11487,8 +11605,8 @@
                     },
                     {
                       "type": "IfStatement",
-                      "start": 9797,
-                      "end": 9845,
+                      "start": 9826,
+                      "end": 9874,
                       "loc": {
                         "start": {
                           "line": 294,
@@ -11501,8 +11619,8 @@
                       },
                       "test": {
                         "type": "LogicalExpression",
-                        "start": 9800,
-                        "end": 9820,
+                        "start": 9829,
+                        "end": 9849,
                         "loc": {
                           "start": {
                             "line": 294,
@@ -11515,8 +11633,8 @@
                         },
                         "left": {
                           "type": "Identifier",
-                          "start": 9800,
-                          "end": 9803,
+                          "start": 9829,
+                          "end": 9832,
                           "loc": {
                             "start": {
                               "line": 294,
@@ -11533,8 +11651,8 @@
                         "operator": "&&",
                         "right": {
                           "type": "BinaryExpression",
-                          "start": 9807,
-                          "end": 9820,
+                          "start": 9836,
+                          "end": 9849,
                           "loc": {
                             "start": {
                               "line": 294,
@@ -11547,8 +11665,8 @@
                           },
                           "left": {
                             "type": "MemberExpression",
-                            "start": 9807,
-                            "end": 9813,
+                            "start": 9836,
+                            "end": 9842,
                             "loc": {
                               "start": {
                                 "line": 294,
@@ -11561,8 +11679,8 @@
                             },
                             "object": {
                               "type": "Identifier",
-                              "start": 9807,
-                              "end": 9810,
+                              "start": 9836,
+                              "end": 9839,
                               "loc": {
                                 "start": {
                                   "line": 294,
@@ -11578,8 +11696,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 9811,
-                              "end": 9813,
+                              "start": 9840,
+                              "end": 9842,
                               "loc": {
                                 "start": {
                                   "line": 294,
@@ -11598,8 +11716,8 @@
                           "operator": "===",
                           "right": {
                             "type": "Identifier",
-                            "start": 9818,
-                            "end": 9820,
+                            "start": 9847,
+                            "end": 9849,
                             "loc": {
                               "start": {
                                 "line": 294,
@@ -11617,8 +11735,8 @@
                       },
                       "consequent": {
                         "type": "BlockStatement",
-                        "start": 9821,
-                        "end": 9845,
+                        "start": 9850,
+                        "end": 9874,
                         "loc": {
                           "start": {
                             "line": 294,
@@ -11632,8 +11750,8 @@
                         "body": [
                           {
                             "type": "ReturnStatement",
-                            "start": 9829,
-                            "end": 9839,
+                            "start": 9858,
+                            "end": 9868,
                             "loc": {
                               "start": {
                                 "line": 295,
@@ -11646,8 +11764,8 @@
                             },
                             "argument": {
                               "type": "Identifier",
-                              "start": 9836,
-                              "end": 9839,
+                              "start": 9865,
+                              "end": 9868,
                               "loc": {
                                 "start": {
                                   "line": 295,
@@ -11669,8 +11787,8 @@
                     },
                     {
                       "type": "ReturnStatement",
-                      "start": 9850,
-                      "end": 9861,
+                      "start": 9879,
+                      "end": 9890,
                       "loc": {
                         "start": {
                           "line": 297,
@@ -11683,8 +11801,8 @@
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 9857,
-                        "end": 9861,
+                        "start": 9886,
+                        "end": 9890,
                         "loc": {
                           "start": {
                             "line": 297,
@@ -11703,8 +11821,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9869,
-                "end": 9949,
+                "start": 9898,
+                "end": 9978,
                 "loc": {
                   "start": {
                     "line": 300,
@@ -11718,8 +11836,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9876,
-                  "end": 9894,
+                  "start": 9905,
+                  "end": 9923,
                   "loc": {
                     "start": {
                       "line": 300,
@@ -11742,8 +11860,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 9895,
-                    "end": 9900,
+                    "start": 9924,
+                    "end": 9929,
                     "loc": {
                       "start": {
                         "line": 300,
@@ -11760,8 +11878,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9902,
-                  "end": 9949,
+                  "start": 9931,
+                  "end": 9978,
                   "loc": {
                     "start": {
                       "line": 300,
@@ -11775,8 +11893,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 9908,
-                      "end": 9945,
+                      "start": 9937,
+                      "end": 9974,
                       "loc": {
                         "start": {
                           "line": 301,
@@ -11789,8 +11907,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 9915,
-                        "end": 9945,
+                        "start": 9944,
+                        "end": 9974,
                         "loc": {
                           "start": {
                             "line": 301,
@@ -11803,8 +11921,8 @@
                         },
                         "object": {
                           "type": "CallExpression",
-                          "start": 9915,
-                          "end": 9938,
+                          "start": 9944,
+                          "end": 9967,
                           "loc": {
                             "start": {
                               "line": 301,
@@ -11817,8 +11935,8 @@
                           },
                           "callee": {
                             "type": "MemberExpression",
-                            "start": 9915,
-                            "end": 9936,
+                            "start": 9944,
+                            "end": 9965,
                             "loc": {
                               "start": {
                                 "line": 301,
@@ -11831,8 +11949,8 @@
                             },
                             "object": {
                               "type": "Identifier",
-                              "start": 9915,
-                              "end": 9924,
+                              "start": 9944,
+                              "end": 9953,
                               "loc": {
                                 "start": {
                                   "line": 301,
@@ -11848,8 +11966,8 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 9925,
-                              "end": 9936,
+                              "start": 9954,
+                              "end": 9965,
                               "loc": {
                                 "start": {
                                   "line": 301,
@@ -11869,8 +11987,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 9939,
-                          "end": 9944,
+                          "start": 9968,
+                          "end": 9973,
                           "loc": {
                             "start": {
                               "line": 301,
@@ -11893,8 +12011,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 9953,
-                "end": 10135,
+                "start": 9982,
+                "end": 10164,
                 "loc": {
                   "start": {
                     "line": 304,
@@ -11908,8 +12026,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 9960,
-                  "end": 9975,
+                  "start": 9989,
+                  "end": 10004,
                   "loc": {
                     "start": {
                       "line": 304,
@@ -11932,8 +12050,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 9976,
-                    "end": 9978,
+                    "start": 10005,
+                    "end": 10007,
                     "loc": {
                       "start": {
                         "line": 304,
@@ -11950,8 +12068,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 9980,
-                  "end": 10135,
+                  "start": 10009,
+                  "end": 10164,
                   "loc": {
                     "start": {
                       "line": 304,
@@ -11965,8 +12083,8 @@
                   "body": [
                     {
                       "type": "VariableDeclaration",
-                      "start": 9986,
-                      "end": 10022,
+                      "start": 10015,
+                      "end": 10051,
                       "loc": {
                         "start": {
                           "line": 305,
@@ -11980,8 +12098,8 @@
                       "declarations": [
                         {
                           "type": "VariableDeclarator",
-                          "start": 9992,
-                          "end": 10022,
+                          "start": 10021,
+                          "end": 10051,
                           "loc": {
                             "start": {
                               "line": 305,
@@ -11994,8 +12112,8 @@
                           },
                           "id": {
                             "type": "Identifier",
-                            "start": 9992,
-                            "end": 9996,
+                            "start": 10021,
+                            "end": 10025,
                             "loc": {
                               "start": {
                                 "line": 305,
@@ -12011,8 +12129,8 @@
                           },
                           "init": {
                             "type": "CallExpression",
-                            "start": 9999,
-                            "end": 10022,
+                            "start": 10028,
+                            "end": 10051,
                             "loc": {
                               "start": {
                                 "line": 305,
@@ -12025,8 +12143,8 @@
                             },
                             "callee": {
                               "type": "MemberExpression",
-                              "start": 9999,
-                              "end": 10020,
+                              "start": 10028,
+                              "end": 10049,
                               "loc": {
                                 "start": {
                                   "line": 305,
@@ -12039,8 +12157,8 @@
                               },
                               "object": {
                                 "type": "Identifier",
-                                "start": 9999,
-                                "end": 10008,
+                                "start": 10028,
+                                "end": 10037,
                                 "loc": {
                                   "start": {
                                     "line": 305,
@@ -12056,8 +12174,8 @@
                               },
                               "property": {
                                 "type": "Identifier",
-                                "start": 10009,
-                                "end": 10020,
+                                "start": 10038,
+                                "end": 10049,
                                 "loc": {
                                   "start": {
                                     "line": 305,
@@ -12081,8 +12199,8 @@
                     },
                     {
                       "type": "ForOfStatement",
-                      "start": 10027,
-                      "end": 10115,
+                      "start": 10056,
+                      "end": 10144,
                       "loc": {
                         "start": {
                           "line": 306,
@@ -12095,8 +12213,8 @@
                       },
                       "left": {
                         "type": "VariableDeclaration",
-                        "start": 10031,
-                        "end": 10040,
+                        "start": 10060,
+                        "end": 10069,
                         "loc": {
                           "start": {
                             "line": 306,
@@ -12110,8 +12228,8 @@
                         "declarations": [
                           {
                             "type": "VariableDeclarator",
-                            "start": 10037,
-                            "end": 10040,
+                            "start": 10066,
+                            "end": 10069,
                             "loc": {
                               "start": {
                                 "line": 306,
@@ -12124,8 +12242,8 @@
                             },
                             "id": {
                               "type": "Identifier",
-                              "start": 10037,
-                              "end": 10040,
+                              "start": 10066,
+                              "end": 10069,
                               "loc": {
                                 "start": {
                                   "line": 306,
@@ -12146,8 +12264,8 @@
                       },
                       "right": {
                         "type": "Identifier",
-                        "start": 10044,
-                        "end": 10048,
+                        "start": 10073,
+                        "end": 10077,
                         "loc": {
                           "start": {
                             "line": 306,
@@ -12163,8 +12281,8 @@
                       },
                       "body": {
                         "type": "BlockStatement",
-                        "start": 10049,
-                        "end": 10115,
+                        "start": 10078,
+                        "end": 10144,
                         "loc": {
                           "start": {
                             "line": 306,
@@ -12178,8 +12296,8 @@
                         "body": [
                           {
                             "type": "IfStatement",
-                            "start": 10057,
-                            "end": 10109,
+                            "start": 10086,
+                            "end": 10138,
                             "loc": {
                               "start": {
                                 "line": 307,
@@ -12192,8 +12310,8 @@
                             },
                             "test": {
                               "type": "LogicalExpression",
-                              "start": 10060,
-                              "end": 10080,
+                              "start": 10089,
+                              "end": 10109,
                               "loc": {
                                 "start": {
                                   "line": 307,
@@ -12206,8 +12324,8 @@
                               },
                               "left": {
                                 "type": "Identifier",
-                                "start": 10060,
-                                "end": 10063,
+                                "start": 10089,
+                                "end": 10092,
                                 "loc": {
                                   "start": {
                                     "line": 307,
@@ -12224,8 +12342,8 @@
                               "operator": "&&",
                               "right": {
                                 "type": "BinaryExpression",
-                                "start": 10067,
-                                "end": 10080,
+                                "start": 10096,
+                                "end": 10109,
                                 "loc": {
                                   "start": {
                                     "line": 307,
@@ -12238,8 +12356,8 @@
                                 },
                                 "left": {
                                   "type": "MemberExpression",
-                                  "start": 10067,
-                                  "end": 10073,
+                                  "start": 10096,
+                                  "end": 10102,
                                   "loc": {
                                     "start": {
                                       "line": 307,
@@ -12252,8 +12370,8 @@
                                   },
                                   "object": {
                                     "type": "Identifier",
-                                    "start": 10067,
-                                    "end": 10070,
+                                    "start": 10096,
+                                    "end": 10099,
                                     "loc": {
                                       "start": {
                                         "line": 307,
@@ -12269,8 +12387,8 @@
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "start": 10071,
-                                    "end": 10073,
+                                    "start": 10100,
+                                    "end": 10102,
                                     "loc": {
                                       "start": {
                                         "line": 307,
@@ -12289,8 +12407,8 @@
                                 "operator": "===",
                                 "right": {
                                   "type": "Identifier",
-                                  "start": 10078,
-                                  "end": 10080,
+                                  "start": 10107,
+                                  "end": 10109,
                                   "loc": {
                                     "start": {
                                       "line": 307,
@@ -12308,8 +12426,8 @@
                             },
                             "consequent": {
                               "type": "BlockStatement",
-                              "start": 10081,
-                              "end": 10109,
+                              "start": 10110,
+                              "end": 10138,
                               "loc": {
                                 "start": {
                                   "line": 307,
@@ -12323,8 +12441,8 @@
                               "body": [
                                 {
                                   "type": "ReturnStatement",
-                                  "start": 10091,
-                                  "end": 10101,
+                                  "start": 10120,
+                                  "end": 10130,
                                   "loc": {
                                     "start": {
                                       "line": 308,
@@ -12337,8 +12455,8 @@
                                   },
                                   "argument": {
                                     "type": "Identifier",
-                                    "start": 10098,
-                                    "end": 10101,
+                                    "start": 10127,
+                                    "end": 10130,
                                     "loc": {
                                       "start": {
                                         "line": 308,
@@ -12364,8 +12482,8 @@
                     },
                     {
                       "type": "ReturnStatement",
-                      "start": 10120,
-                      "end": 10131,
+                      "start": 10149,
+                      "end": 10160,
                       "loc": {
                         "start": {
                           "line": 311,
@@ -12378,8 +12496,8 @@
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 10127,
-                        "end": 10131,
+                        "start": 10156,
+                        "end": 10160,
                         "loc": {
                           "start": {
                             "line": 311,
@@ -12832,8 +12950,8 @@
     {
       "type": "CommentLine",
       "value": " Determining Which Profiles Are Supported by a Controller",
-      "start": 6588,
-      "end": 6647,
+      "start": 6617,
+      "end": 6676,
       "loc": {
         "start": {
           "line": 224,
@@ -12848,8 +12966,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The gamepad profile.\n   * @type {?GCGamepad}\n   * @desc If the controller supports the gamepad profile, then this property holds a GCGamepad object. You use this object to access the input elements of the controller. If the controller does not support the gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458860-gamepad\n   ",
-      "start": 6651,
-      "end": 7059,
+      "start": 6680,
+      "end": 7088,
       "loc": {
         "start": {
           "line": 226,
@@ -12864,8 +12982,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The extended gamepad profile.\n   * @type {?GCExtendedGamepad}\n   * @desc If the controller supports the extended gamepad profile, then this property holds a GCExtendedGamepad object. You use this object to access the input elements of the controller. If the controller does not support the extended gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458883-extendedgamepad\n   ",
-      "start": 7110,
-      "end": 7569,
+      "start": 7139,
+      "end": 7598,
       "loc": {
         "start": {
           "line": 236,
@@ -12880,8 +12998,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The micro gamepad profile.\n   * @type {?GCMicroGamepad}\n   * @desc If the controller supports the micro gamepad profile, then this property holds a GCMicroGamepad object. You use this object to access the input elements of the controller. If the controller does not support the micro gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1627772-microgamepad\n   ",
-      "start": 7636,
-      "end": 8077,
+      "start": 7665,
+      "end": 8106,
       "loc": {
         "start": {
           "line": 246,
@@ -12896,8 +13014,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The motion input profile.\n   * @type {?GCMotion}\n   * @desc If the controller supports the motion profile, then this property holds a GCMotion object. This profile is typically available when the controller is attached to a device that supports motion. You use this object to access the motion data of the controller. If the controller does not support the motion input profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458884-motion\n   ",
-      "start": 8138,
-      "end": 8651,
+      "start": 8167,
+      "end": 8680,
       "loc": {
         "start": {
           "line": 256,
@@ -12912,8 +13030,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting a Controller",
-      "start": 8700,
-      "end": 8726,
+      "start": 8729,
+      "end": 8755,
       "loc": {
         "start": {
           "line": 266,
@@ -12928,8 +13046,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * A Boolean property that indicates whether the controller is closely integrated with the device.\n   * @type {boolean}\n   * @desc If true, then the controller is attached to the device or is close enough to it for the player to interact simultaneously with the controller and the device. If false, then the controller is not guaranteed to be near the device.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458868-isattachedtodevice\n   ",
-      "start": 8730,
-      "end": 9208,
+      "start": 8759,
+      "end": 9237,
       "loc": {
         "start": {
           "line": 268,
@@ -12944,8 +13062,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The name of the vendor that manufactured the controller.\n   * @type {?string}\n   * @desc The value of this property may be nil and is not guaranteed to be unique.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458877-vendorname\n   ",
-      "start": 9281,
-      "end": 9557,
+      "start": 9310,
+      "end": 9586,
       "loc": {
         "start": {
           "line": 278,
@@ -30130,10 +30248,35 @@
     },
     {
       "type": {
-        "label": "null",
-        "keyword": "null",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Array",
+      "start": 6576,
+      "end": 6581,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 11
+        },
+        "end": {
+          "line": 221,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
@@ -30142,17 +30285,220 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "null",
-      "start": 6576,
-      "end": 6580,
+      "start": 6581,
+      "end": 6582,
       "loc": {
         "start": {
           "line": 221,
-          "column": 11
+          "column": 16
         },
         "end": {
           "line": 221,
-          "column": 15
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 6582,
+      "end": 6586,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 17
+        },
+        "end": {
+          "line": 221,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6586,
+      "end": 6587,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 21
+        },
+        "end": {
+          "line": 221,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_controllers",
+      "start": 6587,
+      "end": 6599,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 22
+        },
+        "end": {
+          "line": 221,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 6599,
+      "end": 6600,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 34
+        },
+        "end": {
+          "line": 221,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "values",
+      "start": 6600,
+      "end": 6606,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 35
+        },
+        "end": {
+          "line": 221,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6606,
+      "end": 6607,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 41
+        },
+        "end": {
+          "line": 221,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6607,
+      "end": 6608,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 42
+        },
+        "end": {
+          "line": 221,
+          "column": 43
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6608,
+      "end": 6609,
+      "loc": {
+        "start": {
+          "line": 221,
+          "column": 43
+        },
+        "end": {
+          "line": 221,
+          "column": 44
         }
       }
     },
@@ -30168,8 +30514,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6583,
-      "end": 6584,
+      "start": 6612,
+      "end": 6613,
       "loc": {
         "start": {
           "line": 222,
@@ -30184,8 +30530,8 @@
     {
       "type": "CommentLine",
       "value": " Determining Which Profiles Are Supported by a Controller",
-      "start": 6588,
-      "end": 6647,
+      "start": 6617,
+      "end": 6676,
       "loc": {
         "start": {
           "line": 224,
@@ -30200,8 +30546,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The gamepad profile.\n   * @type {?GCGamepad}\n   * @desc If the controller supports the gamepad profile, then this property holds a GCGamepad object. You use this object to access the input elements of the controller. If the controller does not support the gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458860-gamepad\n   ",
-      "start": 6651,
-      "end": 7059,
+      "start": 6680,
+      "end": 7088,
       "loc": {
         "start": {
           "line": 226,
@@ -30226,8 +30572,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 7062,
-      "end": 7065,
+      "start": 7091,
+      "end": 7094,
       "loc": {
         "start": {
           "line": 232,
@@ -30252,8 +30598,8 @@
         "binop": null
       },
       "value": "gamepad",
-      "start": 7066,
-      "end": 7073,
+      "start": 7095,
+      "end": 7102,
       "loc": {
         "start": {
           "line": 232,
@@ -30277,8 +30623,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7073,
-      "end": 7074,
+      "start": 7102,
+      "end": 7103,
       "loc": {
         "start": {
           "line": 232,
@@ -30302,8 +30648,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7074,
-      "end": 7075,
+      "start": 7103,
+      "end": 7104,
       "loc": {
         "start": {
           "line": 232,
@@ -30327,8 +30673,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7076,
-      "end": 7077,
+      "start": 7105,
+      "end": 7106,
       "loc": {
         "start": {
           "line": 232,
@@ -30355,8 +30701,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 7082,
-      "end": 7088,
+      "start": 7111,
+      "end": 7117,
       "loc": {
         "start": {
           "line": 233,
@@ -30383,8 +30729,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 7089,
-      "end": 7093,
+      "start": 7118,
+      "end": 7122,
       "loc": {
         "start": {
           "line": 233,
@@ -30409,8 +30755,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 7093,
-      "end": 7094,
+      "start": 7122,
+      "end": 7123,
       "loc": {
         "start": {
           "line": 233,
@@ -30435,8 +30781,8 @@
         "binop": null
       },
       "value": "_gamepad",
-      "start": 7094,
-      "end": 7102,
+      "start": 7123,
+      "end": 7131,
       "loc": {
         "start": {
           "line": 233,
@@ -30460,8 +30806,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7105,
-      "end": 7106,
+      "start": 7134,
+      "end": 7135,
       "loc": {
         "start": {
           "line": 234,
@@ -30476,8 +30822,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The extended gamepad profile.\n   * @type {?GCExtendedGamepad}\n   * @desc If the controller supports the extended gamepad profile, then this property holds a GCExtendedGamepad object. You use this object to access the input elements of the controller. If the controller does not support the extended gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458883-extendedgamepad\n   ",
-      "start": 7110,
-      "end": 7569,
+      "start": 7139,
+      "end": 7598,
       "loc": {
         "start": {
           "line": 236,
@@ -30502,8 +30848,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 7572,
-      "end": 7575,
+      "start": 7601,
+      "end": 7604,
       "loc": {
         "start": {
           "line": 242,
@@ -30528,8 +30874,8 @@
         "binop": null
       },
       "value": "extendedGamepad",
-      "start": 7576,
-      "end": 7591,
+      "start": 7605,
+      "end": 7620,
       "loc": {
         "start": {
           "line": 242,
@@ -30553,8 +30899,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7591,
-      "end": 7592,
+      "start": 7620,
+      "end": 7621,
       "loc": {
         "start": {
           "line": 242,
@@ -30578,8 +30924,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7592,
-      "end": 7593,
+      "start": 7621,
+      "end": 7622,
       "loc": {
         "start": {
           "line": 242,
@@ -30603,8 +30949,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7594,
-      "end": 7595,
+      "start": 7623,
+      "end": 7624,
       "loc": {
         "start": {
           "line": 242,
@@ -30631,8 +30977,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 7600,
-      "end": 7606,
+      "start": 7629,
+      "end": 7635,
       "loc": {
         "start": {
           "line": 243,
@@ -30659,8 +31005,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 7607,
-      "end": 7611,
+      "start": 7636,
+      "end": 7640,
       "loc": {
         "start": {
           "line": 243,
@@ -30685,8 +31031,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 7611,
-      "end": 7612,
+      "start": 7640,
+      "end": 7641,
       "loc": {
         "start": {
           "line": 243,
@@ -30711,8 +31057,8 @@
         "binop": null
       },
       "value": "_extendedGamepad",
-      "start": 7612,
-      "end": 7628,
+      "start": 7641,
+      "end": 7657,
       "loc": {
         "start": {
           "line": 243,
@@ -30736,8 +31082,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7631,
-      "end": 7632,
+      "start": 7660,
+      "end": 7661,
       "loc": {
         "start": {
           "line": 244,
@@ -30752,8 +31098,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The micro gamepad profile.\n   * @type {?GCMicroGamepad}\n   * @desc If the controller supports the micro gamepad profile, then this property holds a GCMicroGamepad object. You use this object to access the input elements of the controller. If the controller does not support the micro gamepad profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1627772-microgamepad\n   ",
-      "start": 7636,
-      "end": 8077,
+      "start": 7665,
+      "end": 8106,
       "loc": {
         "start": {
           "line": 246,
@@ -30778,8 +31124,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 8080,
-      "end": 8083,
+      "start": 8109,
+      "end": 8112,
       "loc": {
         "start": {
           "line": 252,
@@ -30804,8 +31150,8 @@
         "binop": null
       },
       "value": "microGamepad",
-      "start": 8084,
-      "end": 8096,
+      "start": 8113,
+      "end": 8125,
       "loc": {
         "start": {
           "line": 252,
@@ -30829,8 +31175,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8096,
-      "end": 8097,
+      "start": 8125,
+      "end": 8126,
       "loc": {
         "start": {
           "line": 252,
@@ -30854,8 +31200,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8097,
-      "end": 8098,
+      "start": 8126,
+      "end": 8127,
       "loc": {
         "start": {
           "line": 252,
@@ -30879,8 +31225,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8099,
-      "end": 8100,
+      "start": 8128,
+      "end": 8129,
       "loc": {
         "start": {
           "line": 252,
@@ -30907,8 +31253,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 8105,
-      "end": 8111,
+      "start": 8134,
+      "end": 8140,
       "loc": {
         "start": {
           "line": 253,
@@ -30935,8 +31281,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 8112,
-      "end": 8116,
+      "start": 8141,
+      "end": 8145,
       "loc": {
         "start": {
           "line": 253,
@@ -30961,8 +31307,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 8116,
-      "end": 8117,
+      "start": 8145,
+      "end": 8146,
       "loc": {
         "start": {
           "line": 253,
@@ -30987,8 +31333,8 @@
         "binop": null
       },
       "value": "_microGamepad",
-      "start": 8117,
-      "end": 8130,
+      "start": 8146,
+      "end": 8159,
       "loc": {
         "start": {
           "line": 253,
@@ -31012,8 +31358,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8133,
-      "end": 8134,
+      "start": 8162,
+      "end": 8163,
       "loc": {
         "start": {
           "line": 254,
@@ -31028,8 +31374,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The motion input profile.\n   * @type {?GCMotion}\n   * @desc If the controller supports the motion profile, then this property holds a GCMotion object. This profile is typically available when the controller is attached to a device that supports motion. You use this object to access the motion data of the controller. If the controller does not support the motion input profile, this property holds nil.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458884-motion\n   ",
-      "start": 8138,
-      "end": 8651,
+      "start": 8167,
+      "end": 8680,
       "loc": {
         "start": {
           "line": 256,
@@ -31054,8 +31400,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 8654,
-      "end": 8657,
+      "start": 8683,
+      "end": 8686,
       "loc": {
         "start": {
           "line": 262,
@@ -31080,8 +31426,8 @@
         "binop": null
       },
       "value": "motion",
-      "start": 8658,
-      "end": 8664,
+      "start": 8687,
+      "end": 8693,
       "loc": {
         "start": {
           "line": 262,
@@ -31105,8 +31451,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8664,
-      "end": 8665,
+      "start": 8693,
+      "end": 8694,
       "loc": {
         "start": {
           "line": 262,
@@ -31130,8 +31476,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8665,
-      "end": 8666,
+      "start": 8694,
+      "end": 8695,
       "loc": {
         "start": {
           "line": 262,
@@ -31155,8 +31501,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8667,
-      "end": 8668,
+      "start": 8696,
+      "end": 8697,
       "loc": {
         "start": {
           "line": 262,
@@ -31183,8 +31529,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 8673,
-      "end": 8679,
+      "start": 8702,
+      "end": 8708,
       "loc": {
         "start": {
           "line": 263,
@@ -31211,8 +31557,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 8680,
-      "end": 8684,
+      "start": 8709,
+      "end": 8713,
       "loc": {
         "start": {
           "line": 263,
@@ -31237,8 +31583,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 8684,
-      "end": 8685,
+      "start": 8713,
+      "end": 8714,
       "loc": {
         "start": {
           "line": 263,
@@ -31263,8 +31609,8 @@
         "binop": null
       },
       "value": "_motion",
-      "start": 8685,
-      "end": 8692,
+      "start": 8714,
+      "end": 8721,
       "loc": {
         "start": {
           "line": 263,
@@ -31288,8 +31634,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8695,
-      "end": 8696,
+      "start": 8724,
+      "end": 8725,
       "loc": {
         "start": {
           "line": 264,
@@ -31304,8 +31650,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting a Controller",
-      "start": 8700,
-      "end": 8726,
+      "start": 8729,
+      "end": 8755,
       "loc": {
         "start": {
           "line": 266,
@@ -31320,8 +31666,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * A Boolean property that indicates whether the controller is closely integrated with the device.\n   * @type {boolean}\n   * @desc If true, then the controller is attached to the device or is close enough to it for the player to interact simultaneously with the controller and the device. If false, then the controller is not guaranteed to be near the device.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458868-isattachedtodevice\n   ",
-      "start": 8730,
-      "end": 9208,
+      "start": 8759,
+      "end": 9237,
       "loc": {
         "start": {
           "line": 268,
@@ -31346,8 +31692,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 9211,
-      "end": 9214,
+      "start": 9240,
+      "end": 9243,
       "loc": {
         "start": {
           "line": 274,
@@ -31372,8 +31718,8 @@
         "binop": null
       },
       "value": "isAttachedToDevice",
-      "start": 9215,
-      "end": 9233,
+      "start": 9244,
+      "end": 9262,
       "loc": {
         "start": {
           "line": 274,
@@ -31397,8 +31743,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9233,
-      "end": 9234,
+      "start": 9262,
+      "end": 9263,
       "loc": {
         "start": {
           "line": 274,
@@ -31422,8 +31768,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9234,
-      "end": 9235,
+      "start": 9263,
+      "end": 9264,
       "loc": {
         "start": {
           "line": 274,
@@ -31447,8 +31793,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9236,
-      "end": 9237,
+      "start": 9265,
+      "end": 9266,
       "loc": {
         "start": {
           "line": 274,
@@ -31475,8 +31821,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 9242,
-      "end": 9248,
+      "start": 9271,
+      "end": 9277,
       "loc": {
         "start": {
           "line": 275,
@@ -31503,8 +31849,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 9249,
-      "end": 9253,
+      "start": 9278,
+      "end": 9282,
       "loc": {
         "start": {
           "line": 275,
@@ -31529,8 +31875,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9253,
-      "end": 9254,
+      "start": 9282,
+      "end": 9283,
       "loc": {
         "start": {
           "line": 275,
@@ -31555,8 +31901,8 @@
         "binop": null
       },
       "value": "_isAttachedToDevice",
-      "start": 9254,
-      "end": 9273,
+      "start": 9283,
+      "end": 9302,
       "loc": {
         "start": {
           "line": 275,
@@ -31580,8 +31926,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9276,
-      "end": 9277,
+      "start": 9305,
+      "end": 9306,
       "loc": {
         "start": {
           "line": 276,
@@ -31596,8 +31942,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The name of the vendor that manufactured the controller.\n   * @type {?string}\n   * @desc The value of this property may be nil and is not guaranteed to be unique.\n   * @see https://developer.apple.com/documentation/gamecontroller/gccontroller/1458877-vendorname\n   ",
-      "start": 9281,
-      "end": 9557,
+      "start": 9310,
+      "end": 9586,
       "loc": {
         "start": {
           "line": 278,
@@ -31622,8 +31968,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 9560,
-      "end": 9563,
+      "start": 9589,
+      "end": 9592,
       "loc": {
         "start": {
           "line": 284,
@@ -31648,8 +31994,8 @@
         "binop": null
       },
       "value": "vendorName",
-      "start": 9564,
-      "end": 9574,
+      "start": 9593,
+      "end": 9603,
       "loc": {
         "start": {
           "line": 284,
@@ -31673,8 +32019,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9574,
-      "end": 9575,
+      "start": 9603,
+      "end": 9604,
       "loc": {
         "start": {
           "line": 284,
@@ -31698,8 +32044,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9575,
-      "end": 9576,
+      "start": 9604,
+      "end": 9605,
       "loc": {
         "start": {
           "line": 284,
@@ -31723,8 +32069,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9577,
-      "end": 9578,
+      "start": 9606,
+      "end": 9607,
       "loc": {
         "start": {
           "line": 284,
@@ -31751,8 +32097,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 9583,
-      "end": 9589,
+      "start": 9612,
+      "end": 9618,
       "loc": {
         "start": {
           "line": 285,
@@ -31779,8 +32125,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 9590,
-      "end": 9594,
+      "start": 9619,
+      "end": 9623,
       "loc": {
         "start": {
           "line": 285,
@@ -31805,8 +32151,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9594,
-      "end": 9595,
+      "start": 9623,
+      "end": 9624,
       "loc": {
         "start": {
           "line": 285,
@@ -31831,8 +32177,8 @@
         "binop": null
       },
       "value": "_vendorName",
-      "start": 9595,
-      "end": 9606,
+      "start": 9624,
+      "end": 9635,
       "loc": {
         "start": {
           "line": 285,
@@ -31856,8 +32202,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9609,
-      "end": 9610,
+      "start": 9638,
+      "end": 9639,
       "loc": {
         "start": {
           "line": 286,
@@ -31882,8 +32228,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 9614,
-      "end": 9617,
+      "start": 9643,
+      "end": 9646,
       "loc": {
         "start": {
           "line": 288,
@@ -31908,8 +32254,8 @@
         "binop": null
       },
       "value": "gamepadObj",
-      "start": 9618,
-      "end": 9628,
+      "start": 9647,
+      "end": 9657,
       "loc": {
         "start": {
           "line": 288,
@@ -31933,8 +32279,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9628,
-      "end": 9629,
+      "start": 9657,
+      "end": 9658,
       "loc": {
         "start": {
           "line": 288,
@@ -31958,8 +32304,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9629,
-      "end": 9630,
+      "start": 9658,
+      "end": 9659,
       "loc": {
         "start": {
           "line": 288,
@@ -31983,8 +32329,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9631,
-      "end": 9632,
+      "start": 9660,
+      "end": 9661,
       "loc": {
         "start": {
           "line": 288,
@@ -32011,8 +32357,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 9637,
-      "end": 9643,
+      "start": 9666,
+      "end": 9672,
       "loc": {
         "start": {
           "line": 289,
@@ -32037,8 +32383,8 @@
         "binop": null
       },
       "value": "GCController",
-      "start": 9644,
-      "end": 9656,
+      "start": 9673,
+      "end": 9685,
       "loc": {
         "start": {
           "line": 289,
@@ -32063,8 +32409,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9656,
-      "end": 9657,
+      "start": 9685,
+      "end": 9686,
       "loc": {
         "start": {
           "line": 289,
@@ -32089,8 +32435,8 @@
         "binop": null
       },
       "value": "_gamepadObjById",
-      "start": 9657,
-      "end": 9672,
+      "start": 9686,
+      "end": 9701,
       "loc": {
         "start": {
           "line": 289,
@@ -32114,8 +32460,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9672,
-      "end": 9673,
+      "start": 9701,
+      "end": 9702,
       "loc": {
         "start": {
           "line": 289,
@@ -32142,8 +32488,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 9673,
-      "end": 9677,
+      "start": 9702,
+      "end": 9706,
       "loc": {
         "start": {
           "line": 289,
@@ -32168,8 +32514,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9677,
-      "end": 9678,
+      "start": 9706,
+      "end": 9707,
       "loc": {
         "start": {
           "line": 289,
@@ -32194,8 +32540,8 @@
         "binop": null
       },
       "value": "_gamepadId",
-      "start": 9678,
-      "end": 9688,
+      "start": 9707,
+      "end": 9717,
       "loc": {
         "start": {
           "line": 289,
@@ -32219,8 +32565,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9688,
-      "end": 9689,
+      "start": 9717,
+      "end": 9718,
       "loc": {
         "start": {
           "line": 289,
@@ -32244,8 +32590,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9692,
-      "end": 9693,
+      "start": 9721,
+      "end": 9722,
       "loc": {
         "start": {
           "line": 290,
@@ -32270,8 +32616,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 9697,
-      "end": 9703,
+      "start": 9726,
+      "end": 9732,
       "loc": {
         "start": {
           "line": 292,
@@ -32296,8 +32642,8 @@
         "binop": null
       },
       "value": "_gamepadObjByIndexId",
-      "start": 9704,
-      "end": 9724,
+      "start": 9733,
+      "end": 9753,
       "loc": {
         "start": {
           "line": 292,
@@ -32321,8 +32667,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9724,
-      "end": 9725,
+      "start": 9753,
+      "end": 9754,
       "loc": {
         "start": {
           "line": 292,
@@ -32347,8 +32693,8 @@
         "binop": null
       },
       "value": "index",
-      "start": 9725,
-      "end": 9730,
+      "start": 9754,
+      "end": 9759,
       "loc": {
         "start": {
           "line": 292,
@@ -32373,8 +32719,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9730,
-      "end": 9731,
+      "start": 9759,
+      "end": 9760,
       "loc": {
         "start": {
           "line": 292,
@@ -32399,8 +32745,8 @@
         "binop": null
       },
       "value": "id",
-      "start": 9732,
-      "end": 9734,
+      "start": 9761,
+      "end": 9763,
       "loc": {
         "start": {
           "line": 292,
@@ -32424,8 +32770,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9734,
-      "end": 9735,
+      "start": 9763,
+      "end": 9764,
       "loc": {
         "start": {
           "line": 292,
@@ -32449,8 +32795,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9736,
-      "end": 9737,
+      "start": 9765,
+      "end": 9766,
       "loc": {
         "start": {
           "line": 292,
@@ -32477,8 +32823,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 9742,
-      "end": 9747,
+      "start": 9771,
+      "end": 9776,
       "loc": {
         "start": {
           "line": 293,
@@ -32503,8 +32849,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 9748,
-      "end": 9751,
+      "start": 9777,
+      "end": 9780,
       "loc": {
         "start": {
           "line": 293,
@@ -32530,8 +32876,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 9752,
-      "end": 9753,
+      "start": 9781,
+      "end": 9782,
       "loc": {
         "start": {
           "line": 293,
@@ -32556,8 +32902,8 @@
         "binop": null
       },
       "value": "GCController",
-      "start": 9754,
-      "end": 9766,
+      "start": 9783,
+      "end": 9795,
       "loc": {
         "start": {
           "line": 293,
@@ -32582,8 +32928,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9766,
-      "end": 9767,
+      "start": 9795,
+      "end": 9796,
       "loc": {
         "start": {
           "line": 293,
@@ -32608,8 +32954,8 @@
         "binop": null
       },
       "value": "_gamepadObjByIndex",
-      "start": 9767,
-      "end": 9785,
+      "start": 9796,
+      "end": 9814,
       "loc": {
         "start": {
           "line": 293,
@@ -32633,8 +32979,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9785,
-      "end": 9786,
+      "start": 9814,
+      "end": 9815,
       "loc": {
         "start": {
           "line": 293,
@@ -32659,8 +33005,8 @@
         "binop": null
       },
       "value": "index",
-      "start": 9786,
-      "end": 9791,
+      "start": 9815,
+      "end": 9820,
       "loc": {
         "start": {
           "line": 293,
@@ -32684,8 +33030,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9791,
-      "end": 9792,
+      "start": 9820,
+      "end": 9821,
       "loc": {
         "start": {
           "line": 293,
@@ -32712,8 +33058,8 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 9797,
-      "end": 9799,
+      "start": 9826,
+      "end": 9828,
       "loc": {
         "start": {
           "line": 294,
@@ -32737,8 +33083,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9799,
-      "end": 9800,
+      "start": 9828,
+      "end": 9829,
       "loc": {
         "start": {
           "line": 294,
@@ -32763,8 +33109,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 9800,
-      "end": 9803,
+      "start": 9829,
+      "end": 9832,
       "loc": {
         "start": {
           "line": 294,
@@ -32790,8 +33136,8 @@
         "updateContext": null
       },
       "value": "&&",
-      "start": 9804,
-      "end": 9806,
+      "start": 9833,
+      "end": 9835,
       "loc": {
         "start": {
           "line": 294,
@@ -32816,8 +33162,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 9807,
-      "end": 9810,
+      "start": 9836,
+      "end": 9839,
       "loc": {
         "start": {
           "line": 294,
@@ -32842,8 +33188,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9810,
-      "end": 9811,
+      "start": 9839,
+      "end": 9840,
       "loc": {
         "start": {
           "line": 294,
@@ -32868,8 +33214,8 @@
         "binop": null
       },
       "value": "id",
-      "start": 9811,
-      "end": 9813,
+      "start": 9840,
+      "end": 9842,
       "loc": {
         "start": {
           "line": 294,
@@ -32895,8 +33241,8 @@
         "updateContext": null
       },
       "value": "===",
-      "start": 9814,
-      "end": 9817,
+      "start": 9843,
+      "end": 9846,
       "loc": {
         "start": {
           "line": 294,
@@ -32921,8 +33267,8 @@
         "binop": null
       },
       "value": "id",
-      "start": 9818,
-      "end": 9820,
+      "start": 9847,
+      "end": 9849,
       "loc": {
         "start": {
           "line": 294,
@@ -32946,8 +33292,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9820,
-      "end": 9821,
+      "start": 9849,
+      "end": 9850,
       "loc": {
         "start": {
           "line": 294,
@@ -32971,8 +33317,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9821,
-      "end": 9822,
+      "start": 9850,
+      "end": 9851,
       "loc": {
         "start": {
           "line": 294,
@@ -32999,8 +33345,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 9829,
-      "end": 9835,
+      "start": 9858,
+      "end": 9864,
       "loc": {
         "start": {
           "line": 295,
@@ -33025,8 +33371,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 9836,
-      "end": 9839,
+      "start": 9865,
+      "end": 9868,
       "loc": {
         "start": {
           "line": 295,
@@ -33050,8 +33396,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9844,
-      "end": 9845,
+      "start": 9873,
+      "end": 9874,
       "loc": {
         "start": {
           "line": 296,
@@ -33078,8 +33424,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 9850,
-      "end": 9856,
+      "start": 9879,
+      "end": 9885,
       "loc": {
         "start": {
           "line": 297,
@@ -33106,8 +33452,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 9857,
-      "end": 9861,
+      "start": 9886,
+      "end": 9890,
       "loc": {
         "start": {
           "line": 297,
@@ -33131,8 +33477,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9864,
-      "end": 9865,
+      "start": 9893,
+      "end": 9894,
       "loc": {
         "start": {
           "line": 298,
@@ -33157,8 +33503,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 9869,
-      "end": 9875,
+      "start": 9898,
+      "end": 9904,
       "loc": {
         "start": {
           "line": 300,
@@ -33183,8 +33529,8 @@
         "binop": null
       },
       "value": "_gamepadObjByIndex",
-      "start": 9876,
-      "end": 9894,
+      "start": 9905,
+      "end": 9923,
       "loc": {
         "start": {
           "line": 300,
@@ -33208,8 +33554,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9894,
-      "end": 9895,
+      "start": 9923,
+      "end": 9924,
       "loc": {
         "start": {
           "line": 300,
@@ -33234,8 +33580,8 @@
         "binop": null
       },
       "value": "index",
-      "start": 9895,
-      "end": 9900,
+      "start": 9924,
+      "end": 9929,
       "loc": {
         "start": {
           "line": 300,
@@ -33259,8 +33605,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9900,
-      "end": 9901,
+      "start": 9929,
+      "end": 9930,
       "loc": {
         "start": {
           "line": 300,
@@ -33284,8 +33630,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9902,
-      "end": 9903,
+      "start": 9931,
+      "end": 9932,
       "loc": {
         "start": {
           "line": 300,
@@ -33312,8 +33658,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 9908,
-      "end": 9914,
+      "start": 9937,
+      "end": 9943,
       "loc": {
         "start": {
           "line": 301,
@@ -33338,8 +33684,8 @@
         "binop": null
       },
       "value": "navigator",
-      "start": 9915,
-      "end": 9924,
+      "start": 9944,
+      "end": 9953,
       "loc": {
         "start": {
           "line": 301,
@@ -33364,8 +33710,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9924,
-      "end": 9925,
+      "start": 9953,
+      "end": 9954,
       "loc": {
         "start": {
           "line": 301,
@@ -33390,8 +33736,8 @@
         "binop": null
       },
       "value": "getGamepads",
-      "start": 9925,
-      "end": 9936,
+      "start": 9954,
+      "end": 9965,
       "loc": {
         "start": {
           "line": 301,
@@ -33415,8 +33761,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9936,
-      "end": 9937,
+      "start": 9965,
+      "end": 9966,
       "loc": {
         "start": {
           "line": 301,
@@ -33440,8 +33786,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9937,
-      "end": 9938,
+      "start": 9966,
+      "end": 9967,
       "loc": {
         "start": {
           "line": 301,
@@ -33466,8 +33812,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9938,
-      "end": 9939,
+      "start": 9967,
+      "end": 9968,
       "loc": {
         "start": {
           "line": 301,
@@ -33492,8 +33838,8 @@
         "binop": null
       },
       "value": "index",
-      "start": 9939,
-      "end": 9944,
+      "start": 9968,
+      "end": 9973,
       "loc": {
         "start": {
           "line": 301,
@@ -33518,8 +33864,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 9944,
-      "end": 9945,
+      "start": 9973,
+      "end": 9974,
       "loc": {
         "start": {
           "line": 301,
@@ -33543,8 +33889,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9948,
-      "end": 9949,
+      "start": 9977,
+      "end": 9978,
       "loc": {
         "start": {
           "line": 302,
@@ -33569,8 +33915,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 9953,
-      "end": 9959,
+      "start": 9982,
+      "end": 9988,
       "loc": {
         "start": {
           "line": 304,
@@ -33595,8 +33941,8 @@
         "binop": null
       },
       "value": "_gamepadObjById",
-      "start": 9960,
-      "end": 9975,
+      "start": 9989,
+      "end": 10004,
       "loc": {
         "start": {
           "line": 304,
@@ -33620,8 +33966,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9975,
-      "end": 9976,
+      "start": 10004,
+      "end": 10005,
       "loc": {
         "start": {
           "line": 304,
@@ -33646,8 +33992,8 @@
         "binop": null
       },
       "value": "id",
-      "start": 9976,
-      "end": 9978,
+      "start": 10005,
+      "end": 10007,
       "loc": {
         "start": {
           "line": 304,
@@ -33671,8 +34017,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9978,
-      "end": 9979,
+      "start": 10007,
+      "end": 10008,
       "loc": {
         "start": {
           "line": 304,
@@ -33696,8 +34042,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 9980,
-      "end": 9981,
+      "start": 10009,
+      "end": 10010,
       "loc": {
         "start": {
           "line": 304,
@@ -33724,8 +34070,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 9986,
-      "end": 9991,
+      "start": 10015,
+      "end": 10020,
       "loc": {
         "start": {
           "line": 305,
@@ -33750,8 +34096,8 @@
         "binop": null
       },
       "value": "pads",
-      "start": 9992,
-      "end": 9996,
+      "start": 10021,
+      "end": 10025,
       "loc": {
         "start": {
           "line": 305,
@@ -33777,8 +34123,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 9997,
-      "end": 9998,
+      "start": 10026,
+      "end": 10027,
       "loc": {
         "start": {
           "line": 305,
@@ -33803,8 +34149,8 @@
         "binop": null
       },
       "value": "navigator",
-      "start": 9999,
-      "end": 10008,
+      "start": 10028,
+      "end": 10037,
       "loc": {
         "start": {
           "line": 305,
@@ -33829,8 +34175,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 10008,
-      "end": 10009,
+      "start": 10037,
+      "end": 10038,
       "loc": {
         "start": {
           "line": 305,
@@ -33855,8 +34201,8 @@
         "binop": null
       },
       "value": "getGamepads",
-      "start": 10009,
-      "end": 10020,
+      "start": 10038,
+      "end": 10049,
       "loc": {
         "start": {
           "line": 305,
@@ -33880,8 +34226,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10020,
-      "end": 10021,
+      "start": 10049,
+      "end": 10050,
       "loc": {
         "start": {
           "line": 305,
@@ -33905,8 +34251,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10021,
-      "end": 10022,
+      "start": 10050,
+      "end": 10051,
       "loc": {
         "start": {
           "line": 305,
@@ -33933,8 +34279,8 @@
         "updateContext": null
       },
       "value": "for",
-      "start": 10027,
-      "end": 10030,
+      "start": 10056,
+      "end": 10059,
       "loc": {
         "start": {
           "line": 306,
@@ -33958,8 +34304,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10030,
-      "end": 10031,
+      "start": 10059,
+      "end": 10060,
       "loc": {
         "start": {
           "line": 306,
@@ -33986,8 +34332,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 10031,
-      "end": 10036,
+      "start": 10060,
+      "end": 10065,
       "loc": {
         "start": {
           "line": 306,
@@ -34012,8 +34358,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 10037,
-      "end": 10040,
+      "start": 10066,
+      "end": 10069,
       "loc": {
         "start": {
           "line": 306,
@@ -34038,8 +34384,8 @@
         "binop": null
       },
       "value": "of",
-      "start": 10041,
-      "end": 10043,
+      "start": 10070,
+      "end": 10072,
       "loc": {
         "start": {
           "line": 306,
@@ -34064,8 +34410,8 @@
         "binop": null
       },
       "value": "pads",
-      "start": 10044,
-      "end": 10048,
+      "start": 10073,
+      "end": 10077,
       "loc": {
         "start": {
           "line": 306,
@@ -34089,8 +34435,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10048,
-      "end": 10049,
+      "start": 10077,
+      "end": 10078,
       "loc": {
         "start": {
           "line": 306,
@@ -34114,8 +34460,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10049,
-      "end": 10050,
+      "start": 10078,
+      "end": 10079,
       "loc": {
         "start": {
           "line": 306,
@@ -34142,8 +34488,8 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 10057,
-      "end": 10059,
+      "start": 10086,
+      "end": 10088,
       "loc": {
         "start": {
           "line": 307,
@@ -34167,8 +34513,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10059,
-      "end": 10060,
+      "start": 10088,
+      "end": 10089,
       "loc": {
         "start": {
           "line": 307,
@@ -34193,8 +34539,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 10060,
-      "end": 10063,
+      "start": 10089,
+      "end": 10092,
       "loc": {
         "start": {
           "line": 307,
@@ -34220,8 +34566,8 @@
         "updateContext": null
       },
       "value": "&&",
-      "start": 10064,
-      "end": 10066,
+      "start": 10093,
+      "end": 10095,
       "loc": {
         "start": {
           "line": 307,
@@ -34246,8 +34592,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 10067,
-      "end": 10070,
+      "start": 10096,
+      "end": 10099,
       "loc": {
         "start": {
           "line": 307,
@@ -34272,8 +34618,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 10070,
-      "end": 10071,
+      "start": 10099,
+      "end": 10100,
       "loc": {
         "start": {
           "line": 307,
@@ -34298,8 +34644,8 @@
         "binop": null
       },
       "value": "id",
-      "start": 10071,
-      "end": 10073,
+      "start": 10100,
+      "end": 10102,
       "loc": {
         "start": {
           "line": 307,
@@ -34325,8 +34671,8 @@
         "updateContext": null
       },
       "value": "===",
-      "start": 10074,
-      "end": 10077,
+      "start": 10103,
+      "end": 10106,
       "loc": {
         "start": {
           "line": 307,
@@ -34351,8 +34697,8 @@
         "binop": null
       },
       "value": "id",
-      "start": 10078,
-      "end": 10080,
+      "start": 10107,
+      "end": 10109,
       "loc": {
         "start": {
           "line": 307,
@@ -34376,8 +34722,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10080,
-      "end": 10081,
+      "start": 10109,
+      "end": 10110,
       "loc": {
         "start": {
           "line": 307,
@@ -34401,8 +34747,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10081,
-      "end": 10082,
+      "start": 10110,
+      "end": 10111,
       "loc": {
         "start": {
           "line": 307,
@@ -34429,8 +34775,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 10091,
-      "end": 10097,
+      "start": 10120,
+      "end": 10126,
       "loc": {
         "start": {
           "line": 308,
@@ -34455,8 +34801,8 @@
         "binop": null
       },
       "value": "pad",
-      "start": 10098,
-      "end": 10101,
+      "start": 10127,
+      "end": 10130,
       "loc": {
         "start": {
           "line": 308,
@@ -34480,8 +34826,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10108,
-      "end": 10109,
+      "start": 10137,
+      "end": 10138,
       "loc": {
         "start": {
           "line": 309,
@@ -34505,8 +34851,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10114,
-      "end": 10115,
+      "start": 10143,
+      "end": 10144,
       "loc": {
         "start": {
           "line": 310,
@@ -34533,8 +34879,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 10120,
-      "end": 10126,
+      "start": 10149,
+      "end": 10155,
       "loc": {
         "start": {
           "line": 311,
@@ -34561,8 +34907,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 10127,
-      "end": 10131,
+      "start": 10156,
+      "end": 10160,
       "loc": {
         "start": {
           "line": 311,
@@ -34586,8 +34932,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10134,
-      "end": 10135,
+      "start": 10163,
+      "end": 10164,
       "loc": {
         "start": {
           "line": 312,
@@ -34611,8 +34957,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 10136,
-      "end": 10137,
+      "start": 10165,
+      "end": 10166,
       "loc": {
         "start": {
           "line": 313,
@@ -34637,8 +34983,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 10138,
-      "end": 10138,
+      "start": 10167,
+      "end": 10167,
       "loc": {
         "start": {
           "line": 314,

@@ -12899,7 +12899,7 @@
                                         },
                                         "arguments": [
                                           {
-                                            "type": "TemplateLiteral",
+                                            "type": "StringLiteral",
                                             "start": 5082,
                                             "end": 5126,
                                             "loc": {
@@ -12912,29 +12912,11 @@
                                                 "column": 68
                                               }
                                             },
-                                            "expressions": [],
-                                            "quasis": [
-                                              {
-                                                "type": "TemplateElement",
-                                                "start": 5083,
-                                                "end": 5125,
-                                                "loc": {
-                                                  "start": {
-                                                    "line": 180,
-                                                    "column": 25
-                                                  },
-                                                  "end": {
-                                                    "line": 180,
-                                                    "column": 67
-                                                  }
-                                                },
-                                                "value": {
-                                                  "raw": "needs atob() function to convert to base64",
-                                                  "cooked": "needs atob() function to convert to base64"
-                                                },
-                                                "tail": true
-                                              }
-                                            ]
+                                            "extra": {
+                                              "rawValue": "needs atob() function to convert to base64",
+                                              "raw": "'needs atob() function to convert to base64'"
+                                            },
+                                            "value": "needs atob() function to convert to base64"
                                           }
                                         ]
                                       }
@@ -41949,34 +41931,9 @@
     },
     {
       "type": {
-        "label": "`",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 5082,
-      "end": 5083,
-      "loc": {
-        "start": {
-          "line": 180,
-          "column": 24
-        },
-        "end": {
-          "line": 180,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "template",
-        "beforeExpr": false,
-        "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
@@ -41986,37 +41943,12 @@
         "updateContext": null
       },
       "value": "needs atob() function to convert to base64",
-      "start": 5083,
-      "end": 5125,
-      "loc": {
-        "start": {
-          "line": 180,
-          "column": 25
-        },
-        "end": {
-          "line": 180,
-          "column": 67
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "`",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 5125,
+      "start": 5082,
       "end": 5126,
       "loc": {
         "start": {
           "line": 180,
-          "column": 67
+          "column": 24
         },
         "end": {
           "line": 180,

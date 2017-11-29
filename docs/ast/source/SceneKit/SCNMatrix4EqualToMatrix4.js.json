@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 619,
+  "end": 666,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 22,
+      "line": 23,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 619,
+    "end": 666,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 22,
+        "line": 23,
         "column": 0
       }
     },
@@ -94,7 +94,76 @@
             "rawValue": "./SCNMatrix4",
             "raw": "'./SCNMatrix4'"
           },
-          "value": "./SCNMatrix4",
+          "value": "./SCNMatrix4"
+        }
+      },
+      {
+        "type": "ImportDeclaration",
+        "start": 52,
+        "end": 97,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 45
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 59,
+            "end": 70,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 7
+              },
+              "end": {
+                "line": 4,
+                "column": 18
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 59,
+              "end": 70,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 7
+                },
+                "end": {
+                  "line": 4,
+                  "column": 18
+                },
+                "identifierName": "_InstanceOf"
+              },
+              "name": "_InstanceOf"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 76,
+          "end": 97,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 24
+            },
+            "end": {
+              "line": 4,
+              "column": 45
+            }
+          },
+          "extra": {
+            "rawValue": "../util/_InstanceOf",
+            "raw": "'../util/_InstanceOf'"
+          },
+          "value": "../util/_InstanceOf",
           "leadingComments": null,
           "trailingComments": null
         },
@@ -102,15 +171,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {boolean} - \n * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.\n * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4\n ",
-            "start": 53,
-            "end": 448,
+            "start": 99,
+            "end": 494,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 6,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 14,
                 "column": 3
               }
             }
@@ -119,44 +188,44 @@
       },
       {
         "type": "Identifier",
-        "start": 449,
-        "end": 577,
+        "start": 495,
+        "end": 624,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 15,
             "column": 0
           },
           "end": {
-            "line": 19,
+            "line": 20,
             "column": 1
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 455,
-            "end": 577,
+            "start": 501,
+            "end": 624,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 15,
                 "column": 6
               },
               "end": {
-                "line": 19,
+                "line": 20,
                 "column": 1
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 455,
-              "end": 479,
+              "start": 501,
+              "end": 525,
               "loc": {
                 "start": {
-                  "line": 14,
+                  "line": 15,
                   "column": 6
                 },
                 "end": {
-                  "line": 14,
+                  "line": 15,
                   "column": 30
                 },
                 "identifierName": "SCNMatrix4EqualToMatrix4"
@@ -166,15 +235,15 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 482,
-              "end": 577,
+              "start": 528,
+              "end": 624,
               "loc": {
                 "start": {
-                  "line": 14,
+                  "line": 15,
                   "column": 33
                 },
                 "end": {
-                  "line": 19,
+                  "line": 20,
                   "column": 1
                 }
               },
@@ -185,15 +254,15 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 491,
-                  "end": 492,
+                  "start": 537,
+                  "end": 538,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 15,
                       "column": 42
                     },
                     "end": {
-                      "line": 14,
+                      "line": 15,
                       "column": 43
                     },
                     "identifierName": "a"
@@ -202,15 +271,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 494,
-                  "end": 495,
+                  "start": 540,
+                  "end": 541,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 15,
                       "column": 45
                     },
                     "end": {
-                      "line": 14,
+                      "line": 15,
                       "column": 46
                     },
                     "identifierName": "b"
@@ -220,102 +289,116 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 497,
-                "end": 577,
+                "start": 543,
+                "end": 624,
                 "loc": {
                   "start": {
-                    "line": 14,
+                    "line": 15,
                     "column": 48
                   },
                   "end": {
-                    "line": 19,
+                    "line": 20,
                     "column": 1
                   }
                 },
                 "body": [
                   {
                     "type": "IfStatement",
-                    "start": 501,
-                    "end": 553,
+                    "start": 547,
+                    "end": 600,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 16,
                         "column": 2
                       },
                       "end": {
-                        "line": 17,
+                        "line": 18,
                         "column": 3
                       }
                     },
                     "test": {
                       "type": "UnaryExpression",
-                      "start": 504,
-                      "end": 530,
+                      "start": 550,
+                      "end": 577,
                       "loc": {
                         "start": {
-                          "line": 15,
+                          "line": 16,
                           "column": 5
                         },
                         "end": {
-                          "line": 15,
-                          "column": 31
+                          "line": 16,
+                          "column": 32
                         }
                       },
                       "operator": "!",
                       "prefix": true,
                       "argument": {
-                        "type": "BinaryExpression",
-                        "start": 506,
-                        "end": 529,
+                        "type": "CallExpression",
+                        "start": 551,
+                        "end": 577,
                         "loc": {
                           "start": {
-                            "line": 15,
-                            "column": 7
+                            "line": 16,
+                            "column": 6
                           },
                           "end": {
-                            "line": 15,
-                            "column": 30
+                            "line": 16,
+                            "column": 32
                           }
                         },
-                        "left": {
+                        "callee": {
                           "type": "Identifier",
-                          "start": 506,
-                          "end": 507,
+                          "start": 551,
+                          "end": 562,
                           "loc": {
                             "start": {
-                              "line": 15,
-                              "column": 7
+                              "line": 16,
+                              "column": 6
                             },
                             "end": {
-                              "line": 15,
-                              "column": 8
+                              "line": 16,
+                              "column": 17
                             },
-                            "identifierName": "a"
+                            "identifierName": "_InstanceOf"
                           },
-                          "name": "a"
+                          "name": "_InstanceOf"
                         },
-                        "operator": "instanceof",
-                        "right": {
-                          "type": "Identifier",
-                          "start": 519,
-                          "end": 529,
-                          "loc": {
-                            "start": {
-                              "line": 15,
-                              "column": 20
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "start": 563,
+                            "end": 564,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 18
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 19
+                              },
+                              "identifierName": "a"
                             },
-                            "end": {
-                              "line": 15,
-                              "column": 30
-                            },
-                            "identifierName": "SCNMatrix4"
+                            "name": "a"
                           },
-                          "name": "SCNMatrix4"
-                        },
-                        "extra": {
-                          "parenthesized": true,
-                          "parenStart": 505
-                        }
+                          {
+                            "type": "Identifier",
+                            "start": 566,
+                            "end": 576,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 21
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 31
+                              },
+                              "identifierName": "SCNMatrix4"
+                            },
+                            "name": "SCNMatrix4"
+                          }
+                        ]
                       },
                       "extra": {
                         "parenthesizedArgument": false
@@ -323,44 +406,44 @@
                     },
                     "consequent": {
                       "type": "BlockStatement",
-                      "start": 531,
-                      "end": 553,
+                      "start": 578,
+                      "end": 600,
                       "loc": {
                         "start": {
-                          "line": 15,
-                          "column": 32
+                          "line": 16,
+                          "column": 33
                         },
                         "end": {
-                          "line": 17,
+                          "line": 18,
                           "column": 3
                         }
                       },
                       "body": [
                         {
                           "type": "ReturnStatement",
-                          "start": 537,
-                          "end": 549,
+                          "start": 584,
+                          "end": 596,
                           "loc": {
                             "start": {
-                              "line": 16,
+                              "line": 17,
                               "column": 4
                             },
                             "end": {
-                              "line": 16,
+                              "line": 17,
                               "column": 16
                             }
                           },
                           "argument": {
                             "type": "BooleanLiteral",
-                            "start": 544,
-                            "end": 549,
+                            "start": 591,
+                            "end": 596,
                             "loc": {
                               "start": {
-                                "line": 16,
+                                "line": 17,
                                 "column": 11
                               },
                               "end": {
-                                "line": 16,
+                                "line": 17,
                                 "column": 16
                               }
                             },
@@ -374,57 +457,57 @@
                   },
                   {
                     "type": "ReturnStatement",
-                    "start": 556,
-                    "end": 575,
+                    "start": 603,
+                    "end": 622,
                     "loc": {
                       "start": {
-                        "line": 18,
+                        "line": 19,
                         "column": 2
                       },
                       "end": {
-                        "line": 18,
+                        "line": 19,
                         "column": 21
                       }
                     },
                     "argument": {
                       "type": "CallExpression",
-                      "start": 563,
-                      "end": 575,
+                      "start": 610,
+                      "end": 622,
                       "loc": {
                         "start": {
-                          "line": 18,
+                          "line": 19,
                           "column": 9
                         },
                         "end": {
-                          "line": 18,
+                          "line": 19,
                           "column": 21
                         }
                       },
                       "callee": {
                         "type": "MemberExpression",
-                        "start": 563,
-                        "end": 572,
+                        "start": 610,
+                        "end": 619,
                         "loc": {
                           "start": {
-                            "line": 18,
+                            "line": 19,
                             "column": 9
                           },
                           "end": {
-                            "line": 18,
+                            "line": 19,
                             "column": 18
                           }
                         },
                         "object": {
                           "type": "Identifier",
-                          "start": 563,
-                          "end": 564,
+                          "start": 610,
+                          "end": 611,
                           "loc": {
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 9
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 10
                             },
                             "identifierName": "a"
@@ -433,15 +516,15 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 565,
-                          "end": 572,
+                          "start": 612,
+                          "end": 619,
                           "loc": {
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 11
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 18
                             },
                             "identifierName": "equalTo"
@@ -453,15 +536,15 @@
                       "arguments": [
                         {
                           "type": "Identifier",
-                          "start": 573,
-                          "end": 574,
+                          "start": 620,
+                          "end": 621,
                           "loc": {
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 19
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 20
                             },
                             "identifierName": "b"
@@ -485,29 +568,29 @@
       },
       {
         "type": "Identifier",
-        "start": 579,
-        "end": 618,
+        "start": 626,
+        "end": 665,
         "loc": {
           "start": {
-            "line": 21,
+            "line": 22,
             "column": 0
           },
           "end": {
-            "line": 21,
+            "line": 22,
             "column": 39
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 594,
-          "end": 618,
+          "start": 641,
+          "end": 665,
           "loc": {
             "start": {
-              "line": 21,
+              "line": 22,
               "column": 15
             },
             "end": {
-              "line": 21,
+              "line": 22,
               "column": 39
             },
             "identifierName": "SCNMatrix4EqualToMatrix4"
@@ -520,58 +603,58 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 579,
-        "end": 618,
+        "start": 626,
+        "end": 665,
         "loc": {
           "start": {
-            "line": 21,
+            "line": 22,
             "column": 0
           },
           "end": {
-            "line": 21,
+            "line": 22,
             "column": 39
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 449,
-          "end": 577,
+          "start": 495,
+          "end": 624,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 15,
               "column": 0
             },
             "end": {
-              "line": 19,
+              "line": 20,
               "column": 1
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 455,
-              "end": 577,
+              "start": 501,
+              "end": 624,
               "loc": {
                 "start": {
-                  "line": 14,
+                  "line": 15,
                   "column": 6
                 },
                 "end": {
-                  "line": 19,
+                  "line": 20,
                   "column": 1
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 455,
-                "end": 479,
+                "start": 501,
+                "end": 525,
                 "loc": {
                   "start": {
-                    "line": 14,
+                    "line": 15,
                     "column": 6
                   },
                   "end": {
-                    "line": 14,
+                    "line": 15,
                     "column": 30
                   },
                   "identifierName": "SCNMatrix4EqualToMatrix4"
@@ -581,29 +664,29 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 482,
-                "end": 577,
+                "start": 528,
+                "end": 624,
                 "loc": {
                   "start": {
-                    "line": 14,
+                    "line": 15,
                     "column": 33
                   },
                   "end": {
-                    "line": 19,
+                    "line": 20,
                     "column": 1
                   }
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 455,
-                  "end": 479,
+                  "start": 501,
+                  "end": 525,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 15,
                       "column": 6
                     },
                     "end": {
-                      "line": 14,
+                      "line": 15,
                       "column": 30
                     },
                     "identifierName": "SCNMatrix4EqualToMatrix4"
@@ -617,15 +700,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 491,
-                    "end": 492,
+                    "start": 537,
+                    "end": 538,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 15,
                         "column": 42
                       },
                       "end": {
-                        "line": 14,
+                        "line": 15,
                         "column": 43
                       },
                       "identifierName": "a"
@@ -634,15 +717,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 494,
-                    "end": 495,
+                    "start": 540,
+                    "end": 541,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 15,
                         "column": 45
                       },
                       "end": {
-                        "line": 14,
+                        "line": 15,
                         "column": 46
                       },
                       "identifierName": "b"
@@ -652,102 +735,116 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 497,
-                  "end": 577,
+                  "start": 543,
+                  "end": 624,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 15,
                       "column": 48
                     },
                     "end": {
-                      "line": 19,
+                      "line": 20,
                       "column": 1
                     }
                   },
                   "body": [
                     {
                       "type": "IfStatement",
-                      "start": 501,
-                      "end": 553,
+                      "start": 547,
+                      "end": 600,
                       "loc": {
                         "start": {
-                          "line": 15,
+                          "line": 16,
                           "column": 2
                         },
                         "end": {
-                          "line": 17,
+                          "line": 18,
                           "column": 3
                         }
                       },
                       "test": {
                         "type": "UnaryExpression",
-                        "start": 504,
-                        "end": 530,
+                        "start": 550,
+                        "end": 577,
                         "loc": {
                           "start": {
-                            "line": 15,
+                            "line": 16,
                             "column": 5
                           },
                           "end": {
-                            "line": 15,
-                            "column": 31
+                            "line": 16,
+                            "column": 32
                           }
                         },
                         "operator": "!",
                         "prefix": true,
                         "argument": {
-                          "type": "BinaryExpression",
-                          "start": 506,
-                          "end": 529,
+                          "type": "CallExpression",
+                          "start": 551,
+                          "end": 577,
                           "loc": {
                             "start": {
-                              "line": 15,
-                              "column": 7
+                              "line": 16,
+                              "column": 6
                             },
                             "end": {
-                              "line": 15,
-                              "column": 30
+                              "line": 16,
+                              "column": 32
                             }
                           },
-                          "left": {
+                          "callee": {
                             "type": "Identifier",
-                            "start": 506,
-                            "end": 507,
+                            "start": 551,
+                            "end": 562,
                             "loc": {
                               "start": {
-                                "line": 15,
-                                "column": 7
+                                "line": 16,
+                                "column": 6
                               },
                               "end": {
-                                "line": 15,
-                                "column": 8
+                                "line": 16,
+                                "column": 17
                               },
-                              "identifierName": "a"
+                              "identifierName": "_InstanceOf"
                             },
-                            "name": "a"
+                            "name": "_InstanceOf"
                           },
-                          "operator": "instanceof",
-                          "right": {
-                            "type": "Identifier",
-                            "start": 519,
-                            "end": 529,
-                            "loc": {
-                              "start": {
-                                "line": 15,
-                                "column": 20
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "start": 563,
+                              "end": 564,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 18
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 19
+                                },
+                                "identifierName": "a"
                               },
-                              "end": {
-                                "line": 15,
-                                "column": 30
-                              },
-                              "identifierName": "SCNMatrix4"
+                              "name": "a"
                             },
-                            "name": "SCNMatrix4"
-                          },
-                          "extra": {
-                            "parenthesized": true,
-                            "parenStart": 505
-                          }
+                            {
+                              "type": "Identifier",
+                              "start": 566,
+                              "end": 576,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 21
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 31
+                                },
+                                "identifierName": "SCNMatrix4"
+                              },
+                              "name": "SCNMatrix4"
+                            }
+                          ]
                         },
                         "extra": {
                           "parenthesizedArgument": false
@@ -755,44 +852,44 @@
                       },
                       "consequent": {
                         "type": "BlockStatement",
-                        "start": 531,
-                        "end": 553,
+                        "start": 578,
+                        "end": 600,
                         "loc": {
                           "start": {
-                            "line": 15,
-                            "column": 32
+                            "line": 16,
+                            "column": 33
                           },
                           "end": {
-                            "line": 17,
+                            "line": 18,
                             "column": 3
                           }
                         },
                         "body": [
                           {
                             "type": "ReturnStatement",
-                            "start": 537,
-                            "end": 549,
+                            "start": 584,
+                            "end": 596,
                             "loc": {
                               "start": {
-                                "line": 16,
+                                "line": 17,
                                 "column": 4
                               },
                               "end": {
-                                "line": 16,
+                                "line": 17,
                                 "column": 16
                               }
                             },
                             "argument": {
                               "type": "BooleanLiteral",
-                              "start": 544,
-                              "end": 549,
+                              "start": 591,
+                              "end": 596,
                               "loc": {
                                 "start": {
-                                  "line": 16,
+                                  "line": 17,
                                   "column": 11
                                 },
                                 "end": {
-                                  "line": 16,
+                                  "line": 17,
                                   "column": 16
                                 }
                               },
@@ -806,57 +903,57 @@
                     },
                     {
                       "type": "ReturnStatement",
-                      "start": 556,
-                      "end": 575,
+                      "start": 603,
+                      "end": 622,
                       "loc": {
                         "start": {
-                          "line": 18,
+                          "line": 19,
                           "column": 2
                         },
                         "end": {
-                          "line": 18,
+                          "line": 19,
                           "column": 21
                         }
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 563,
-                        "end": 575,
+                        "start": 610,
+                        "end": 622,
                         "loc": {
                           "start": {
-                            "line": 18,
+                            "line": 19,
                             "column": 9
                           },
                           "end": {
-                            "line": 18,
+                            "line": 19,
                             "column": 21
                           }
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 563,
-                          "end": 572,
+                          "start": 610,
+                          "end": 619,
                           "loc": {
                             "start": {
-                              "line": 18,
+                              "line": 19,
                               "column": 9
                             },
                             "end": {
-                              "line": 18,
+                              "line": 19,
                               "column": 18
                             }
                           },
                           "object": {
                             "type": "Identifier",
-                            "start": 563,
-                            "end": 564,
+                            "start": 610,
+                            "end": 611,
                             "loc": {
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 9
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 10
                               },
                               "identifierName": "a"
@@ -865,15 +962,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 565,
-                            "end": 572,
+                            "start": 612,
+                            "end": 619,
                             "loc": {
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 11
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 18
                               },
                               "identifierName": "equalTo"
@@ -885,15 +982,15 @@
                         "arguments": [
                           {
                             "type": "Identifier",
-                            "start": 573,
-                            "end": 574,
+                            "start": 620,
+                            "end": 621,
                             "loc": {
                               "start": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 19
                               },
                               "end": {
-                                "line": 18,
+                                "line": 19,
                                 "column": 20
                               },
                               "identifierName": "b"
@@ -915,15 +1012,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {boolean} - \n * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.\n * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4\n ",
-              "start": 53,
-              "end": 448,
+              "start": 99,
+              "end": 494,
               "loc": {
                 "start": {
-                  "line": 5,
+                  "line": 6,
                   "column": 0
                 },
                 "end": {
-                  "line": 13,
+                  "line": 14,
                   "column": 3
                 }
               }
@@ -975,15 +1072,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {boolean} - \n * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.\n * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4\n ",
-      "start": 53,
-      "end": 448,
+      "start": 99,
+      "end": 494,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 3
         }
       }
@@ -1125,17 +1222,124 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {boolean} - \n * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.\n * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4\n ",
-      "start": 53,
-      "end": 448,
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 52,
+      "end": 58,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 4,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_InstanceOf",
+      "start": 59,
+      "end": 70,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 7
+        },
+        "end": {
+          "line": 4,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 71,
+      "end": 75,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 19
+        },
+        "end": {
+          "line": 4,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "../util/_InstanceOf",
+      "start": 76,
+      "end": 97,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 24
+        },
+        "end": {
+          "line": 4,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.\n * @access public\n * @param {SCNMatrix4} a - \n * @param {SCNMatrix4} b - \n * @returns {boolean} - \n * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.\n * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4\n ",
+      "start": 99,
+      "end": 494,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
           "column": 3
         }
       }
@@ -1155,15 +1359,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 449,
-      "end": 454,
+      "start": 495,
+      "end": 500,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 5
         }
       }
@@ -1181,15 +1385,15 @@
         "binop": null
       },
       "value": "SCNMatrix4EqualToMatrix4",
-      "start": 455,
-      "end": 479,
+      "start": 501,
+      "end": 525,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 6
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 30
         }
       }
@@ -1208,15 +1412,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 480,
-      "end": 481,
+      "start": 526,
+      "end": 527,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 31
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 32
         }
       }
@@ -1235,15 +1439,15 @@
         "binop": null
       },
       "value": "function",
-      "start": 482,
-      "end": 490,
+      "start": 528,
+      "end": 536,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 33
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 41
         }
       }
@@ -1260,15 +1464,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 490,
-      "end": 491,
+      "start": 536,
+      "end": 537,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 41
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 42
         }
       }
@@ -1286,15 +1490,15 @@
         "binop": null
       },
       "value": "a",
-      "start": 491,
-      "end": 492,
+      "start": 537,
+      "end": 538,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 42
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 43
         }
       }
@@ -1312,15 +1516,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 492,
-      "end": 493,
+      "start": 538,
+      "end": 539,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 43
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 44
         }
       }
@@ -1338,15 +1542,15 @@
         "binop": null
       },
       "value": "b",
-      "start": 494,
-      "end": 495,
+      "start": 540,
+      "end": 541,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 45
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 46
         }
       }
@@ -1363,15 +1567,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 495,
-      "end": 496,
+      "start": 541,
+      "end": 542,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 46
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 47
         }
       }
@@ -1388,15 +1592,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 497,
-      "end": 498,
+      "start": 543,
+      "end": 544,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 48
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 49
         }
       }
@@ -1416,15 +1620,15 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 501,
-      "end": 503,
+      "start": 547,
+      "end": 549,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 4
         }
       }
@@ -1441,15 +1645,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 503,
-      "end": 504,
+      "start": 549,
+      "end": 550,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 4
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 5
         }
       }
@@ -1468,16 +1672,42 @@
         "updateContext": null
       },
       "value": "!",
-      "start": 504,
-      "end": 505,
+      "start": 550,
+      "end": 551,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 5
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_InstanceOf",
+      "start": 551,
+      "end": 562,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 17
         }
       }
     },
@@ -1493,280 +1723,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 505,
-      "end": 506,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 6
-        },
-        "end": {
-          "line": 15,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "a",
-      "start": 506,
-      "end": 507,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 7
-        },
-        "end": {
-          "line": 15,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "instanceof",
-        "keyword": "instanceof",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": 7,
-        "updateContext": null
-      },
-      "value": "instanceof",
-      "start": 508,
-      "end": 518,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 9
-        },
-        "end": {
-          "line": 15,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNMatrix4",
-      "start": 519,
-      "end": 529,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 20
-        },
-        "end": {
-          "line": 15,
-          "column": 30
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 529,
-      "end": 530,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 30
-        },
-        "end": {
-          "line": 15,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 530,
-      "end": 531,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 31
-        },
-        "end": {
-          "line": 15,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 531,
-      "end": 532,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 32
-        },
-        "end": {
-          "line": 15,
-          "column": 33
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "return",
-        "keyword": "return",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "return",
-      "start": 537,
-      "end": 543,
+      "start": 562,
+      "end": 563,
       "loc": {
         "start": {
           "line": 16,
-          "column": 4
+          "column": 17
         },
         "end": {
           "line": 16,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "false",
-        "keyword": "false",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "false",
-      "start": 544,
-      "end": 549,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 11
-        },
-        "end": {
-          "line": 16,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 552,
-      "end": 553,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 2
-        },
-        "end": {
-          "line": 17,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "return",
-        "keyword": "return",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "return",
-      "start": 556,
-      "end": 562,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 2
-        },
-        "end": {
-          "line": 18,
-          "column": 8
+          "column": 18
         }
       }
     },
@@ -1787,11 +1753,273 @@
       "end": 564,
       "loc": {
         "start": {
+          "line": 16,
+          "column": 18
+        },
+        "end": {
+          "line": 16,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 564,
+      "end": 565,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 19
+        },
+        "end": {
+          "line": 16,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNMatrix4",
+      "start": 566,
+      "end": 576,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 21
+        },
+        "end": {
+          "line": 16,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 576,
+      "end": 577,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 31
+        },
+        "end": {
+          "line": 16,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 577,
+      "end": 578,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 32
+        },
+        "end": {
+          "line": 16,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 578,
+      "end": 579,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 33
+        },
+        "end": {
+          "line": 16,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 584,
+      "end": 590,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "false",
+        "keyword": "false",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "false",
+      "start": 591,
+      "end": 596,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 11
+        },
+        "end": {
+          "line": 17,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 599,
+      "end": 600,
+      "loc": {
+        "start": {
           "line": 18,
-          "column": 9
+          "column": 2
         },
         "end": {
           "line": 18,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 603,
+      "end": 609,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "a",
+      "start": 610,
+      "end": 611,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 9
+        },
+        "end": {
+          "line": 19,
           "column": 10
         }
       }
@@ -1809,15 +2037,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 564,
-      "end": 565,
+      "start": 611,
+      "end": 612,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 10
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 11
         }
       }
@@ -1835,15 +2063,15 @@
         "binop": null
       },
       "value": "equalTo",
-      "start": 565,
-      "end": 572,
+      "start": 612,
+      "end": 619,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 11
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 18
         }
       }
@@ -1860,15 +2088,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 572,
-      "end": 573,
+      "start": 619,
+      "end": 620,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 18
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 19
         }
       }
@@ -1886,15 +2114,15 @@
         "binop": null
       },
       "value": "b",
-      "start": 573,
-      "end": 574,
+      "start": 620,
+      "end": 621,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 19
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 20
         }
       }
@@ -1911,15 +2139,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 574,
-      "end": 575,
+      "start": 621,
+      "end": 622,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 20
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 21
         }
       }
@@ -1936,15 +2164,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 576,
-      "end": 577,
+      "start": 623,
+      "end": 624,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 20,
           "column": 0
         },
         "end": {
-          "line": 19,
+          "line": 20,
           "column": 1
         }
       }
@@ -1964,15 +2192,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 579,
-      "end": 585,
+      "start": 626,
+      "end": 632,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 22,
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 22,
           "column": 6
         }
       }
@@ -1992,15 +2220,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 586,
-      "end": 593,
+      "start": 633,
+      "end": 640,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 22,
           "column": 7
         },
         "end": {
-          "line": 21,
+          "line": 22,
           "column": 14
         }
       }
@@ -2018,15 +2246,15 @@
         "binop": null
       },
       "value": "SCNMatrix4EqualToMatrix4",
-      "start": 594,
-      "end": 618,
+      "start": 641,
+      "end": 665,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 22,
           "column": 15
         },
         "end": {
-          "line": 21,
+          "line": 22,
           "column": 39
         }
       }
@@ -2044,15 +2272,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 619,
-      "end": 619,
+      "start": 666,
+      "end": 666,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 23,
           "column": 0
         },
         "end": {
-          "line": 22,
+          "line": 23,
           "column": 0
         }
       }

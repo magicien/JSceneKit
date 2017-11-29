@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 8746,
+  "end": 8820,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 292,
+      "line": 295,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 8746,
+    "end": 8820,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 292,
+        "line": 295,
         "column": 0
       }
     },
@@ -492,28 +492,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 667,
-        "end": 8745,
+        "end": 8819,
         "loc": {
           "start": {
             "line": 22,
             "column": 0
           },
           "end": {
-            "line": 291,
+            "line": 294,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 682,
-          "end": 8745,
+          "end": 8819,
           "loc": {
             "start": {
               "line": 22,
               "column": 15
             },
             "end": {
-              "line": 291,
+              "line": 294,
               "column": 1
             }
           },
@@ -555,14 +555,14 @@
           "body": {
             "type": "ClassBody",
             "start": 715,
-            "end": 8745,
+            "end": 8819,
             "loc": {
               "start": {
                 "line": 22,
                 "column": 48
               },
               "end": {
-                "line": 291,
+                "line": 294,
                 "column": 1
               }
             },
@@ -3705,14 +3705,14 @@
               {
                 "type": "ClassMethod",
                 "start": 5655,
-                "end": 5698,
+                "end": 5772,
                 "loc": {
                   "start": {
                     "line": 190,
                     "column": 2
                   },
                   "end": {
-                    "line": 191,
+                    "line": 194,
                     "column": 3
                   }
                 },
@@ -3762,20 +3762,174 @@
                 "body": {
                   "type": "BlockStatement",
                   "start": 5693,
-                  "end": 5698,
+                  "end": 5772,
                   "loc": {
                     "start": {
                       "line": 190,
                       "column": 40
                     },
                     "end": {
-                      "line": 191,
+                      "line": 194,
                       "column": 3
                     }
                   },
-                  "body": [],
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "start": 5699,
+                      "end": 5729,
+                      "loc": {
+                        "start": {
+                          "line": 191,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 191,
+                          "column": 34
+                        }
+                      },
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "start": 5705,
+                          "end": 5729,
+                          "loc": {
+                            "start": {
+                              "line": 191,
+                              "column": 10
+                            },
+                            "end": {
+                              "line": 191,
+                              "column": 34
+                            }
+                          },
+                          "id": {
+                            "type": "Identifier",
+                            "start": 5705,
+                            "end": 5709,
+                            "loc": {
+                              "start": {
+                                "line": 191,
+                                "column": 10
+                              },
+                              "end": {
+                                "line": 191,
+                                "column": 14
+                              },
+                              "identifierName": "node"
+                            },
+                            "name": "node"
+                          },
+                          "init": {
+                            "type": "NewExpression",
+                            "start": 5712,
+                            "end": 5729,
+                            "loc": {
+                              "start": {
+                                "line": 191,
+                                "column": 17
+                              },
+                              "end": {
+                                "line": 191,
+                                "column": 34
+                              }
+                            },
+                            "callee": {
+                              "type": "Identifier",
+                              "start": 5716,
+                              "end": 5727,
+                              "loc": {
+                                "start": {
+                                  "line": 191,
+                                  "column": 21
+                                },
+                                "end": {
+                                  "line": 191,
+                                  "column": 32
+                                },
+                                "identifierName": "SKShapeNode"
+                              },
+                              "name": "SKShapeNode"
+                            },
+                            "arguments": [],
+                            "trailingComments": null
+                          },
+                          "trailingComments": null
+                        }
+                      ],
+                      "kind": "const",
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " TODO: implement",
+                          "start": 5734,
+                          "end": 5752,
+                          "loc": {
+                            "start": {
+                              "line": 192,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 192,
+                              "column": 22
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "start": 5757,
+                      "end": 5768,
+                      "loc": {
+                        "start": {
+                          "line": 193,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 193,
+                          "column": 15
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 5764,
+                        "end": 5768,
+                        "loc": {
+                          "start": {
+                            "line": 193,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 193,
+                            "column": 15
+                          },
+                          "identifierName": "node"
+                        },
+                        "name": "node",
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " TODO: implement",
+                          "start": 5734,
+                          "end": 5752,
+                          "loc": {
+                            "start": {
+                              "line": 192,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 192,
+                              "column": 22
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
                   "directives": [],
-                  "leadingComments": null,
                   "trailingComments": null
                 },
                 "leadingComments": [
@@ -3800,15 +3954,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node with an elliptical path centered on the node’s origin.\n   * @access public\n   * @param {CGSize} size - The height and width of the ellipse.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1519980-init\n   ",
-                    "start": 5702,
-                    "end": 5985,
+                    "start": 5776,
+                    "end": 6059,
                     "loc": {
                       "start": {
-                        "line": 193,
+                        "line": 196,
                         "column": 2
                       },
                       "end": {
-                        "line": 199,
+                        "line": 202,
                         "column": 5
                       }
                     }
@@ -3817,30 +3971,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5988,
-                "end": 6024,
+                "start": 6062,
+                "end": 6098,
                 "loc": {
                   "start": {
-                    "line": 200,
+                    "line": 203,
                     "column": 2
                   },
                   "end": {
-                    "line": 201,
+                    "line": 204,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5995,
-                  "end": 6012,
+                  "start": 6069,
+                  "end": 6086,
                   "loc": {
                     "start": {
-                      "line": 200,
+                      "line": 203,
                       "column": 9
                     },
                     "end": {
-                      "line": 200,
+                      "line": 203,
                       "column": 26
                     },
                     "identifierName": "nodeWithEllipseOf"
@@ -3856,15 +4010,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6013,
-                    "end": 6017,
+                    "start": 6087,
+                    "end": 6091,
                     "loc": {
                       "start": {
-                        "line": 200,
+                        "line": 203,
                         "column": 27
                       },
                       "end": {
-                        "line": 200,
+                        "line": 203,
                         "column": 31
                       },
                       "identifierName": "size"
@@ -3874,15 +4028,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6019,
-                  "end": 6024,
+                  "start": 6093,
+                  "end": 6098,
                   "loc": {
                     "start": {
-                      "line": 200,
+                      "line": 203,
                       "column": 33
                     },
                     "end": {
-                      "line": 201,
+                      "line": 204,
                       "column": 3
                     }
                   },
@@ -3895,15 +4049,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node with an elliptical path centered on the node’s origin.\n   * @access public\n   * @param {CGSize} size - The height and width of the ellipse.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1519980-init\n   ",
-                    "start": 5702,
-                    "end": 5985,
+                    "start": 5776,
+                    "end": 6059,
                     "loc": {
                       "start": {
-                        "line": 193,
+                        "line": 196,
                         "column": 2
                       },
                       "end": {
-                        "line": 199,
+                        "line": 202,
                         "column": 5
                       }
                     }
@@ -3913,15 +4067,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node with an elliptical path that fills the specified rectangle.\n   * @access public\n   * @param {CGRect} rect - A rectangle, relative to the node’s origin.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520412-init\n   ",
-                    "start": 6028,
-                    "end": 6323,
+                    "start": 6102,
+                    "end": 6397,
                     "loc": {
                       "start": {
-                        "line": 203,
+                        "line": 206,
                         "column": 2
                       },
                       "end": {
-                        "line": 209,
+                        "line": 212,
                         "column": 5
                       }
                     }
@@ -3930,30 +4084,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6326,
-                "end": 6362,
+                "start": 6400,
+                "end": 6436,
                 "loc": {
                   "start": {
-                    "line": 210,
+                    "line": 213,
                     "column": 2
                   },
                   "end": {
-                    "line": 211,
+                    "line": 214,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6333,
-                  "end": 6350,
+                  "start": 6407,
+                  "end": 6424,
                   "loc": {
                     "start": {
-                      "line": 210,
+                      "line": 213,
                       "column": 9
                     },
                     "end": {
-                      "line": 210,
+                      "line": 213,
                       "column": 26
                     },
                     "identifierName": "nodeWithEllipseIn"
@@ -3969,15 +4123,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6351,
-                    "end": 6355,
+                    "start": 6425,
+                    "end": 6429,
                     "loc": {
                       "start": {
-                        "line": 210,
+                        "line": 213,
                         "column": 27
                       },
                       "end": {
-                        "line": 210,
+                        "line": 213,
                         "column": 31
                       },
                       "identifierName": "rect"
@@ -3987,15 +4141,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6357,
-                  "end": 6362,
+                  "start": 6431,
+                  "end": 6436,
                   "loc": {
                     "start": {
-                      "line": 210,
+                      "line": 213,
                       "column": 33
                     },
                     "end": {
-                      "line": 211,
+                      "line": 214,
                       "column": 3
                     }
                   },
@@ -4008,15 +4162,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node with an elliptical path that fills the specified rectangle.\n   * @access public\n   * @param {CGRect} rect - A rectangle, relative to the node’s origin.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520412-init\n   ",
-                    "start": 6028,
-                    "end": 6323,
+                    "start": 6102,
+                    "end": 6397,
                     "loc": {
                       "start": {
-                        "line": 203,
+                        "line": 206,
                         "column": 2
                       },
                       "end": {
-                        "line": 209,
+                        "line": 212,
                         "column": 5
                       }
                     }
@@ -4026,15 +4180,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node from a series of points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points. The points are relative to the node’s origin.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520120-init\n   ",
-                    "start": 6366,
-                    "end": 6755,
+                    "start": 6440,
+                    "end": 6829,
                     "loc": {
                       "start": {
-                        "line": 213,
+                        "line": 216,
                         "column": 2
                       },
                       "end": {
-                        "line": 220,
+                        "line": 223,
                         "column": 5
                       }
                     }
@@ -4043,30 +4197,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6758,
-                "end": 6809,
+                "start": 6832,
+                "end": 6883,
                 "loc": {
                   "start": {
-                    "line": 221,
+                    "line": 224,
                     "column": 2
                   },
                   "end": {
-                    "line": 222,
+                    "line": 225,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6765,
-                  "end": 6784,
+                  "start": 6839,
+                  "end": 6858,
                   "loc": {
                     "start": {
-                      "line": 221,
+                      "line": 224,
                       "column": 9
                     },
                     "end": {
-                      "line": 221,
+                      "line": 224,
                       "column": 28
                     },
                     "identifierName": "nodeWithPointsCount"
@@ -4082,15 +4236,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6785,
-                    "end": 6791,
+                    "start": 6859,
+                    "end": 6865,
                     "loc": {
                       "start": {
-                        "line": 221,
+                        "line": 224,
                         "column": 29
                       },
                       "end": {
-                        "line": 221,
+                        "line": 224,
                         "column": 35
                       },
                       "identifierName": "points"
@@ -4099,15 +4253,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6793,
-                    "end": 6802,
+                    "start": 6867,
+                    "end": 6876,
                     "loc": {
                       "start": {
-                        "line": 221,
+                        "line": 224,
                         "column": 37
                       },
                       "end": {
-                        "line": 221,
+                        "line": 224,
                         "column": 46
                       },
                       "identifierName": "numPoints"
@@ -4117,15 +4271,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6804,
-                  "end": 6809,
+                  "start": 6878,
+                  "end": 6883,
                   "loc": {
                     "start": {
-                      "line": 221,
+                      "line": 224,
                       "column": 48
                     },
                     "end": {
-                      "line": 222,
+                      "line": 225,
                       "column": 3
                     }
                   },
@@ -4138,15 +4292,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node from a series of points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points. The points are relative to the node’s origin.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520120-init\n   ",
-                    "start": 6366,
-                    "end": 6755,
+                    "start": 6440,
+                    "end": 6829,
                     "loc": {
                       "start": {
-                        "line": 213,
+                        "line": 216,
                         "column": 2
                       },
                       "end": {
-                        "line": 220,
+                        "line": 223,
                         "column": 5
                       }
                     }
@@ -4156,15 +4310,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node from a series of spline points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520140-init\n   ",
-                    "start": 6813,
-                    "end": 7163,
+                    "start": 6887,
+                    "end": 7237,
                     "loc": {
                       "start": {
-                        "line": 224,
+                        "line": 227,
                         "column": 2
                       },
                       "end": {
-                        "line": 231,
+                        "line": 234,
                         "column": 5
                       }
                     }
@@ -4173,30 +4327,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 7166,
-                "end": 7223,
+                "start": 7240,
+                "end": 7297,
                 "loc": {
                   "start": {
-                    "line": 232,
+                    "line": 235,
                     "column": 2
                   },
                   "end": {
-                    "line": 233,
+                    "line": 236,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 7173,
-                  "end": 7198,
+                  "start": 7247,
+                  "end": 7272,
                   "loc": {
                     "start": {
-                      "line": 232,
+                      "line": 235,
                       "column": 9
                     },
                     "end": {
-                      "line": 232,
+                      "line": 235,
                       "column": 34
                     },
                     "identifierName": "nodeWithSplinePointsCount"
@@ -4212,15 +4366,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 7199,
-                    "end": 7205,
+                    "start": 7273,
+                    "end": 7279,
                     "loc": {
                       "start": {
-                        "line": 232,
+                        "line": 235,
                         "column": 35
                       },
                       "end": {
-                        "line": 232,
+                        "line": 235,
                         "column": 41
                       },
                       "identifierName": "points"
@@ -4229,15 +4383,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 7207,
-                    "end": 7216,
+                    "start": 7281,
+                    "end": 7290,
                     "loc": {
                       "start": {
-                        "line": 232,
+                        "line": 235,
                         "column": 43
                       },
                       "end": {
-                        "line": 232,
+                        "line": 235,
                         "column": 52
                       },
                       "identifierName": "numPoints"
@@ -4247,15 +4401,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 7218,
-                  "end": 7223,
+                  "start": 7292,
+                  "end": 7297,
                   "loc": {
                     "start": {
-                      "line": 232,
+                      "line": 235,
                       "column": 54
                     },
                     "end": {
-                      "line": 233,
+                      "line": 236,
                       "column": 3
                     }
                   },
@@ -4268,15 +4422,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape node from a series of spline points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520140-init\n   ",
-                    "start": 6813,
-                    "end": 7163,
+                    "start": 6887,
+                    "end": 7237,
                     "loc": {
                       "start": {
-                        "line": 224,
+                        "line": 227,
                         "column": 2
                       },
                       "end": {
-                        "line": 231,
+                        "line": 234,
                         "column": 5
                       }
                     }
@@ -4286,15 +4440,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Reading the Shape Node’s Properties",
-                    "start": 7227,
-                    "end": 7265,
+                    "start": 7301,
+                    "end": 7339,
                     "loc": {
                       "start": {
-                        "line": 235,
+                        "line": 238,
                         "column": 2
                       },
                       "end": {
-                        "line": 235,
+                        "line": 238,
                         "column": 40
                       }
                     }
@@ -4302,15 +4456,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The length of the line defined by the shape node.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520398-linelength\n   ",
-                    "start": 7268,
-                    "end": 7457,
+                    "start": 7342,
+                    "end": 7531,
                     "loc": {
                       "start": {
-                        "line": 236,
+                        "line": 239,
                         "column": 2
                       },
                       "end": {
-                        "line": 241,
+                        "line": 244,
                         "column": 5
                       }
                     }
@@ -4319,30 +4473,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 7460,
-                "end": 7548,
+                "start": 7534,
+                "end": 7622,
                 "loc": {
                   "start": {
-                    "line": 242,
+                    "line": 245,
                     "column": 2
                   },
                   "end": {
-                    "line": 246,
+                    "line": 249,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 7464,
-                  "end": 7474,
+                  "start": 7538,
+                  "end": 7548,
                   "loc": {
                     "start": {
-                      "line": 242,
+                      "line": 245,
                       "column": 6
                     },
                     "end": {
-                      "line": 242,
+                      "line": 245,
                       "column": 16
                     },
                     "identifierName": "lineLength"
@@ -4358,44 +4512,44 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 7477,
-                  "end": 7548,
+                  "start": 7551,
+                  "end": 7622,
                   "loc": {
                     "start": {
-                      "line": 242,
+                      "line": 245,
                       "column": 19
                     },
                     "end": {
-                      "line": 246,
+                      "line": 249,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 7536,
-                      "end": 7544,
+                      "start": 7610,
+                      "end": 7618,
                       "loc": {
                         "start": {
-                          "line": 245,
+                          "line": 248,
                           "column": 4
                         },
                         "end": {
-                          "line": 245,
+                          "line": 248,
                           "column": 12
                         }
                       },
                       "argument": {
                         "type": "NumericLiteral",
-                        "start": 7543,
-                        "end": 7544,
+                        "start": 7617,
+                        "end": 7618,
                         "loc": {
                           "start": {
-                            "line": 245,
+                            "line": 248,
                             "column": 11
                           },
                           "end": {
-                            "line": 245,
+                            "line": 248,
                             "column": 12
                           }
                         },
@@ -4410,15 +4564,15 @@
                         {
                           "type": "CommentLine",
                           "value": "return this._lineLength",
-                          "start": 7483,
-                          "end": 7508,
+                          "start": 7557,
+                          "end": 7582,
                           "loc": {
                             "start": {
-                              "line": 243,
+                              "line": 246,
                               "column": 4
                             },
                             "end": {
-                              "line": 243,
+                              "line": 246,
                               "column": 29
                             }
                           }
@@ -4426,15 +4580,15 @@
                         {
                           "type": "CommentLine",
                           "value": " TODO: implement",
-                          "start": 7513,
-                          "end": 7531,
+                          "start": 7587,
+                          "end": 7605,
                           "loc": {
                             "start": {
-                              "line": 244,
+                              "line": 247,
                               "column": 4
                             },
                             "end": {
-                              "line": 244,
+                              "line": 247,
                               "column": 22
                             }
                           }
@@ -4449,15 +4603,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Reading the Shape Node’s Properties",
-                    "start": 7227,
-                    "end": 7265,
+                    "start": 7301,
+                    "end": 7339,
                     "loc": {
                       "start": {
-                        "line": 235,
+                        "line": 238,
                         "column": 2
                       },
                       "end": {
-                        "line": 235,
+                        "line": 238,
                         "column": 40
                       }
                     }
@@ -4465,15 +4619,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The length of the line defined by the shape node.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520398-linelength\n   ",
-                    "start": 7268,
-                    "end": 7457,
+                    "start": 7342,
+                    "end": 7531,
                     "loc": {
                       "start": {
-                        "line": 236,
+                        "line": 239,
                         "column": 2
                       },
                       "end": {
-                        "line": 241,
+                        "line": 244,
                         "column": 5
                       }
                     }
@@ -4483,15 +4637,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with Custom Shaders",
-                    "start": 7552,
-                    "end": 7582,
+                    "start": 7626,
+                    "end": 7656,
                     "loc": {
                       "start": {
-                        "line": 248,
+                        "line": 251,
                         "column": 2
                       },
                       "end": {
-                        "line": 248,
+                        "line": 251,
                         "column": 32
                       }
                     }
@@ -4499,15 +4653,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715855-setvalue\n   ",
-                    "start": 7586,
-                    "end": 7961,
+                    "start": 7660,
+                    "end": 8035,
                     "loc": {
                       "start": {
-                        "line": 250,
+                        "line": 253,
                         "column": 2
                       },
                       "end": {
-                        "line": 257,
+                        "line": 260,
                         "column": 5
                       }
                     }
@@ -4516,30 +4670,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 7964,
-                "end": 8002,
+                "start": 8038,
+                "end": 8076,
                 "loc": {
                   "start": {
-                    "line": 258,
+                    "line": 261,
                     "column": 2
                   },
                   "end": {
-                    "line": 259,
+                    "line": 262,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 7964,
-                  "end": 7984,
+                  "start": 8038,
+                  "end": 8058,
                   "loc": {
                     "start": {
-                      "line": 258,
+                      "line": 261,
                       "column": 2
                     },
                     "end": {
-                      "line": 258,
+                      "line": 261,
                       "column": 22
                     },
                     "identifierName": "setValueForAttribute"
@@ -4556,15 +4710,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 7985,
-                    "end": 7990,
+                    "start": 8059,
+                    "end": 8064,
                     "loc": {
                       "start": {
-                        "line": 258,
+                        "line": 261,
                         "column": 23
                       },
                       "end": {
-                        "line": 258,
+                        "line": 261,
                         "column": 28
                       },
                       "identifierName": "value"
@@ -4573,15 +4727,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 7992,
-                    "end": 7995,
+                    "start": 8066,
+                    "end": 8069,
                     "loc": {
                       "start": {
-                        "line": 258,
+                        "line": 261,
                         "column": 30
                       },
                       "end": {
-                        "line": 258,
+                        "line": 261,
                         "column": 33
                       },
                       "identifierName": "key"
@@ -4591,15 +4745,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 7997,
-                  "end": 8002,
+                  "start": 8071,
+                  "end": 8076,
                   "loc": {
                     "start": {
-                      "line": 258,
+                      "line": 261,
                       "column": 35
                     },
                     "end": {
-                      "line": 259,
+                      "line": 262,
                       "column": 3
                     }
                   },
@@ -4612,15 +4766,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with Custom Shaders",
-                    "start": 7552,
-                    "end": 7582,
+                    "start": 7626,
+                    "end": 7656,
                     "loc": {
                       "start": {
-                        "line": 248,
+                        "line": 251,
                         "column": 2
                       },
                       "end": {
-                        "line": 248,
+                        "line": 251,
                         "column": 32
                       }
                     }
@@ -4628,15 +4782,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715855-setvalue\n   ",
-                    "start": 7586,
-                    "end": 7961,
+                    "start": 7660,
+                    "end": 8035,
                     "loc": {
                       "start": {
-                        "line": 250,
+                        "line": 253,
                         "column": 2
                       },
                       "end": {
-                        "line": 257,
+                        "line": 260,
                         "column": 5
                       }
                     }
@@ -4646,15 +4800,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715843-value\n   ",
-                    "start": 8006,
-                    "end": 8245,
+                    "start": 8080,
+                    "end": 8319,
                     "loc": {
                       "start": {
-                        "line": 261,
+                        "line": 264,
                         "column": 2
                       },
                       "end": {
-                        "line": 267,
+                        "line": 270,
                         "column": 5
                       }
                     }
@@ -4663,30 +4817,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 8248,
-                "end": 8297,
+                "start": 8322,
+                "end": 8371,
                 "loc": {
                   "start": {
-                    "line": 268,
+                    "line": 271,
                     "column": 2
                   },
                   "end": {
-                    "line": 270,
+                    "line": 273,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 8248,
-                  "end": 8270,
+                  "start": 8322,
+                  "end": 8344,
                   "loc": {
                     "start": {
-                      "line": 268,
+                      "line": 271,
                       "column": 2
                     },
                     "end": {
-                      "line": 268,
+                      "line": 271,
                       "column": 24
                     },
                     "identifierName": "valueForAttributeNamed"
@@ -4703,15 +4857,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 8271,
-                    "end": 8274,
+                    "start": 8345,
+                    "end": 8348,
                     "loc": {
                       "start": {
-                        "line": 268,
+                        "line": 271,
                         "column": 25
                       },
                       "end": {
-                        "line": 268,
+                        "line": 271,
                         "column": 28
                       },
                       "identifierName": "key"
@@ -4721,44 +4875,44 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 8276,
-                  "end": 8297,
+                  "start": 8350,
+                  "end": 8371,
                   "loc": {
                     "start": {
-                      "line": 268,
+                      "line": 271,
                       "column": 30
                     },
                     "end": {
-                      "line": 270,
+                      "line": 273,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 8282,
-                      "end": 8293,
+                      "start": 8356,
+                      "end": 8367,
                       "loc": {
                         "start": {
-                          "line": 269,
+                          "line": 272,
                           "column": 4
                         },
                         "end": {
-                          "line": 269,
+                          "line": 272,
                           "column": 15
                         }
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 8289,
-                        "end": 8293,
+                        "start": 8363,
+                        "end": 8367,
                         "loc": {
                           "start": {
-                            "line": 269,
+                            "line": 272,
                             "column": 11
                           },
                           "end": {
-                            "line": 269,
+                            "line": 272,
                             "column": 15
                           }
                         }
@@ -4772,15 +4926,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715843-value\n   ",
-                    "start": 8006,
-                    "end": 8245,
+                    "start": 8080,
+                    "end": 8319,
                     "loc": {
                       "start": {
-                        "line": 261,
+                        "line": 264,
                         "column": 2
                       },
                       "end": {
-                        "line": 267,
+                        "line": 270,
                         "column": 5
                       }
                     }
@@ -4790,15 +4944,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Instance Properties",
-                    "start": 8301,
-                    "end": 8323,
+                    "start": 8375,
+                    "end": 8397,
                     "loc": {
                       "start": {
-                        "line": 272,
+                        "line": 275,
                         "column": 2
                       },
                       "end": {
-                        "line": 272,
+                        "line": 275,
                         "column": 24
                       }
                     }
@@ -4806,15 +4960,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * A custom playground quick look for this instance.\n   * @type {PlaygroundQuickLook}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1645784-customplaygroundquicklook\n   ",
-                    "start": 8326,
-                    "end": 8543,
+                    "start": 8400,
+                    "end": 8617,
                     "loc": {
                       "start": {
-                        "line": 273,
+                        "line": 276,
                         "column": 2
                       },
                       "end": {
-                        "line": 278,
+                        "line": 281,
                         "column": 5
                       }
                     }
@@ -4823,30 +4977,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 8546,
-                "end": 8626,
+                "start": 8620,
+                "end": 8700,
                 "loc": {
                   "start": {
-                    "line": 279,
+                    "line": 282,
                     "column": 2
                   },
                   "end": {
-                    "line": 281,
+                    "line": 284,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 8550,
-                  "end": 8575,
+                  "start": 8624,
+                  "end": 8649,
                   "loc": {
                     "start": {
-                      "line": 279,
+                      "line": 282,
                       "column": 6
                     },
                     "end": {
-                      "line": 279,
+                      "line": 282,
                       "column": 31
                     },
                     "identifierName": "customPlaygroundQuickLook"
@@ -4862,73 +5016,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 8578,
-                  "end": 8626,
+                  "start": 8652,
+                  "end": 8700,
                   "loc": {
                     "start": {
-                      "line": 279,
+                      "line": 282,
                       "column": 34
                     },
                     "end": {
-                      "line": 281,
+                      "line": 284,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 8584,
-                      "end": 8622,
+                      "start": 8658,
+                      "end": 8696,
                       "loc": {
                         "start": {
-                          "line": 280,
+                          "line": 283,
                           "column": 4
                         },
                         "end": {
-                          "line": 280,
+                          "line": 283,
                           "column": 42
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 8591,
-                        "end": 8622,
+                        "start": 8665,
+                        "end": 8696,
                         "loc": {
                           "start": {
-                            "line": 280,
+                            "line": 283,
                             "column": 11
                           },
                           "end": {
-                            "line": 280,
+                            "line": 283,
                             "column": 42
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 8591,
-                          "end": 8595,
+                          "start": 8665,
+                          "end": 8669,
                           "loc": {
                             "start": {
-                              "line": 280,
+                              "line": 283,
                               "column": 11
                             },
                             "end": {
-                              "line": 280,
+                              "line": 283,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 8596,
-                          "end": 8622,
+                          "start": 8670,
+                          "end": 8696,
                           "loc": {
                             "start": {
-                              "line": 280,
+                              "line": 283,
                               "column": 16
                             },
                             "end": {
-                              "line": 280,
+                              "line": 283,
                               "column": 42
                             },
                             "identifierName": "_customPlaygroundQuickLook"
@@ -4946,15 +5100,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Instance Properties",
-                    "start": 8301,
-                    "end": 8323,
+                    "start": 8375,
+                    "end": 8397,
                     "loc": {
                       "start": {
-                        "line": 272,
+                        "line": 275,
                         "column": 2
                       },
                       "end": {
-                        "line": 272,
+                        "line": 275,
                         "column": 24
                       }
                     }
@@ -4962,15 +5116,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * A custom playground quick look for this instance.\n   * @type {PlaygroundQuickLook}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1645784-customplaygroundquicklook\n   ",
-                    "start": 8326,
-                    "end": 8543,
+                    "start": 8400,
+                    "end": 8617,
                     "loc": {
                       "start": {
-                        "line": 273,
+                        "line": 276,
                         "column": 2
                       },
                       "end": {
-                        "line": 278,
+                        "line": 281,
                         "column": 5
                       }
                     }
@@ -4980,15 +5134,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @access private\n   * @param {WebGLRenderingContext} gl -\n   * @returns {void}\n   ",
-                    "start": 8630,
-                    "end": 8722,
+                    "start": 8704,
+                    "end": 8796,
                     "loc": {
                       "start": {
-                        "line": 283,
+                        "line": 286,
                         "column": 2
                       },
                       "end": {
-                        "line": 287,
+                        "line": 290,
                         "column": 5
                       }
                     }
@@ -4997,30 +5151,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 8725,
-                "end": 8742,
+                "start": 8799,
+                "end": 8816,
                 "loc": {
                   "start": {
-                    "line": 288,
+                    "line": 291,
                     "column": 2
                   },
                   "end": {
-                    "line": 289,
+                    "line": 292,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 8725,
-                  "end": 8732,
+                  "start": 8799,
+                  "end": 8806,
                   "loc": {
                     "start": {
-                      "line": 288,
+                      "line": 291,
                       "column": 2
                     },
                     "end": {
-                      "line": 288,
+                      "line": 291,
                       "column": 9
                     },
                     "identifierName": "_render"
@@ -5037,15 +5191,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 8733,
-                    "end": 8735,
+                    "start": 8807,
+                    "end": 8809,
                     "loc": {
                       "start": {
-                        "line": 288,
+                        "line": 291,
                         "column": 10
                       },
                       "end": {
-                        "line": 288,
+                        "line": 291,
                         "column": 12
                       },
                       "identifierName": "gl"
@@ -5055,15 +5209,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 8737,
-                  "end": 8742,
+                  "start": 8811,
+                  "end": 8816,
                   "loc": {
                     "start": {
-                      "line": 288,
+                      "line": 291,
                       "column": 14
                     },
                     "end": {
-                      "line": 289,
+                      "line": 292,
                       "column": 3
                     }
                   },
@@ -5074,15 +5228,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @access private\n   * @param {WebGLRenderingContext} gl -\n   * @returns {void}\n   ",
-                    "start": 8630,
-                    "end": 8722,
+                    "start": 8704,
+                    "end": 8796,
                     "loc": {
                       "start": {
-                        "line": 283,
+                        "line": 286,
                         "column": 2
                       },
                       "end": {
-                        "line": 287,
+                        "line": 290,
                         "column": 5
                       }
                     }
@@ -5923,17 +6077,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a shape node with an elliptical path centered on the node’s origin.\n   * @access public\n   * @param {CGSize} size - The height and width of the ellipse.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1519980-init\n   ",
-      "start": 5702,
-      "end": 5985,
+      "type": "CommentLine",
+      "value": " TODO: implement",
+      "start": 5734,
+      "end": 5752,
       "loc": {
         "start": {
-          "line": 193,
+          "line": 192,
+          "column": 4
+        },
+        "end": {
+          "line": 192,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a shape node with an elliptical path centered on the node’s origin.\n   * @access public\n   * @param {CGSize} size - The height and width of the ellipse.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1519980-init\n   ",
+      "start": 5776,
+      "end": 6059,
+      "loc": {
+        "start": {
+          "line": 196,
           "column": 2
         },
         "end": {
-          "line": 199,
+          "line": 202,
           "column": 5
         }
       }
@@ -5941,15 +6111,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a shape node with an elliptical path that fills the specified rectangle.\n   * @access public\n   * @param {CGRect} rect - A rectangle, relative to the node’s origin.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520412-init\n   ",
-      "start": 6028,
-      "end": 6323,
+      "start": 6102,
+      "end": 6397,
       "loc": {
         "start": {
-          "line": 203,
+          "line": 206,
           "column": 2
         },
         "end": {
-          "line": 209,
+          "line": 212,
           "column": 5
         }
       }
@@ -5957,15 +6127,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a shape node from a series of points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points. The points are relative to the node’s origin.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520120-init\n   ",
-      "start": 6366,
-      "end": 6755,
+      "start": 6440,
+      "end": 6829,
       "loc": {
         "start": {
-          "line": 213,
+          "line": 216,
           "column": 2
         },
         "end": {
-          "line": 220,
+          "line": 223,
           "column": 5
         }
       }
@@ -5973,15 +6143,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a shape node from a series of spline points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520140-init\n   ",
-      "start": 6813,
-      "end": 7163,
+      "start": 6887,
+      "end": 7237,
       "loc": {
         "start": {
-          "line": 224,
+          "line": 227,
           "column": 2
         },
         "end": {
-          "line": 231,
+          "line": 234,
           "column": 5
         }
       }
@@ -5989,15 +6159,15 @@
     {
       "type": "CommentLine",
       "value": " Reading the Shape Node’s Properties",
-      "start": 7227,
-      "end": 7265,
+      "start": 7301,
+      "end": 7339,
       "loc": {
         "start": {
-          "line": 235,
+          "line": 238,
           "column": 2
         },
         "end": {
-          "line": 235,
+          "line": 238,
           "column": 40
         }
       }
@@ -6005,15 +6175,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The length of the line defined by the shape node.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520398-linelength\n   ",
-      "start": 7268,
-      "end": 7457,
+      "start": 7342,
+      "end": 7531,
       "loc": {
         "start": {
-          "line": 236,
+          "line": 239,
           "column": 2
         },
         "end": {
-          "line": 241,
+          "line": 244,
           "column": 5
         }
       }
@@ -6021,15 +6191,15 @@
     {
       "type": "CommentLine",
       "value": "return this._lineLength",
-      "start": 7483,
-      "end": 7508,
+      "start": 7557,
+      "end": 7582,
       "loc": {
         "start": {
-          "line": 243,
+          "line": 246,
           "column": 4
         },
         "end": {
-          "line": 243,
+          "line": 246,
           "column": 29
         }
       }
@@ -6037,15 +6207,15 @@
     {
       "type": "CommentLine",
       "value": " TODO: implement",
-      "start": 7513,
-      "end": 7531,
+      "start": 7587,
+      "end": 7605,
       "loc": {
         "start": {
-          "line": 244,
+          "line": 247,
           "column": 4
         },
         "end": {
-          "line": 244,
+          "line": 247,
           "column": 22
         }
       }
@@ -6053,15 +6223,15 @@
     {
       "type": "CommentLine",
       "value": " Working with Custom Shaders",
-      "start": 7552,
-      "end": 7582,
+      "start": 7626,
+      "end": 7656,
       "loc": {
         "start": {
-          "line": 248,
+          "line": 251,
           "column": 2
         },
         "end": {
-          "line": 248,
+          "line": 251,
           "column": 32
         }
       }
@@ -6069,15 +6239,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715855-setvalue\n   ",
-      "start": 7586,
-      "end": 7961,
+      "start": 7660,
+      "end": 8035,
       "loc": {
         "start": {
-          "line": 250,
+          "line": 253,
           "column": 2
         },
         "end": {
-          "line": 257,
+          "line": 260,
           "column": 5
         }
       }
@@ -6085,15 +6255,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715843-value\n   ",
-      "start": 8006,
-      "end": 8245,
+      "start": 8080,
+      "end": 8319,
       "loc": {
         "start": {
-          "line": 261,
+          "line": 264,
           "column": 2
         },
         "end": {
-          "line": 267,
+          "line": 270,
           "column": 5
         }
       }
@@ -6101,15 +6271,15 @@
     {
       "type": "CommentLine",
       "value": " Instance Properties",
-      "start": 8301,
-      "end": 8323,
+      "start": 8375,
+      "end": 8397,
       "loc": {
         "start": {
-          "line": 272,
+          "line": 275,
           "column": 2
         },
         "end": {
-          "line": 272,
+          "line": 275,
           "column": 24
         }
       }
@@ -6117,15 +6287,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * A custom playground quick look for this instance.\n   * @type {PlaygroundQuickLook}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1645784-customplaygroundquicklook\n   ",
-      "start": 8326,
-      "end": 8543,
+      "start": 8400,
+      "end": 8617,
       "loc": {
         "start": {
-          "line": 273,
+          "line": 276,
           "column": 2
         },
         "end": {
-          "line": 278,
+          "line": 281,
           "column": 5
         }
       }
@@ -6133,15 +6303,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @access private\n   * @param {WebGLRenderingContext} gl -\n   * @returns {void}\n   ",
-      "start": 8630,
-      "end": 8722,
+      "start": 8704,
+      "end": 8796,
       "loc": {
         "start": {
-          "line": 283,
+          "line": 286,
           "column": 2
         },
         "end": {
-          "line": 287,
+          "line": 290,
           "column": 5
         }
       }
@@ -11081,540 +11251,9 @@
     },
     {
       "type": {
-        "label": "}",
+        "label": "const",
+        "keyword": "const",
         "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 5697,
-      "end": 5698,
-      "loc": {
-        "start": {
-          "line": 191,
-          "column": 2
-        },
-        "end": {
-          "line": 191,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a shape node with an elliptical path centered on the node’s origin.\n   * @access public\n   * @param {CGSize} size - The height and width of the ellipse.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1519980-init\n   ",
-      "start": 5702,
-      "end": 5985,
-      "loc": {
-        "start": {
-          "line": 193,
-          "column": 2
-        },
-        "end": {
-          "line": 199,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "static",
-      "start": 5988,
-      "end": 5994,
-      "loc": {
-        "start": {
-          "line": 200,
-          "column": 2
-        },
-        "end": {
-          "line": 200,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "nodeWithEllipseOf",
-      "start": 5995,
-      "end": 6012,
-      "loc": {
-        "start": {
-          "line": 200,
-          "column": 9
-        },
-        "end": {
-          "line": 200,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6012,
-      "end": 6013,
-      "loc": {
-        "start": {
-          "line": 200,
-          "column": 26
-        },
-        "end": {
-          "line": 200,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "size",
-      "start": 6013,
-      "end": 6017,
-      "loc": {
-        "start": {
-          "line": 200,
-          "column": 27
-        },
-        "end": {
-          "line": 200,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6017,
-      "end": 6018,
-      "loc": {
-        "start": {
-          "line": 200,
-          "column": 31
-        },
-        "end": {
-          "line": 200,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6019,
-      "end": 6020,
-      "loc": {
-        "start": {
-          "line": 200,
-          "column": 33
-        },
-        "end": {
-          "line": 200,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6023,
-      "end": 6024,
-      "loc": {
-        "start": {
-          "line": 201,
-          "column": 2
-        },
-        "end": {
-          "line": 201,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a shape node with an elliptical path that fills the specified rectangle.\n   * @access public\n   * @param {CGRect} rect - A rectangle, relative to the node’s origin.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520412-init\n   ",
-      "start": 6028,
-      "end": 6323,
-      "loc": {
-        "start": {
-          "line": 203,
-          "column": 2
-        },
-        "end": {
-          "line": 209,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "static",
-      "start": 6326,
-      "end": 6332,
-      "loc": {
-        "start": {
-          "line": 210,
-          "column": 2
-        },
-        "end": {
-          "line": 210,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "nodeWithEllipseIn",
-      "start": 6333,
-      "end": 6350,
-      "loc": {
-        "start": {
-          "line": 210,
-          "column": 9
-        },
-        "end": {
-          "line": 210,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6350,
-      "end": 6351,
-      "loc": {
-        "start": {
-          "line": 210,
-          "column": 26
-        },
-        "end": {
-          "line": 210,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "rect",
-      "start": 6351,
-      "end": 6355,
-      "loc": {
-        "start": {
-          "line": 210,
-          "column": 27
-        },
-        "end": {
-          "line": 210,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6355,
-      "end": 6356,
-      "loc": {
-        "start": {
-          "line": 210,
-          "column": 31
-        },
-        "end": {
-          "line": 210,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6357,
-      "end": 6358,
-      "loc": {
-        "start": {
-          "line": 210,
-          "column": 33
-        },
-        "end": {
-          "line": 210,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6361,
-      "end": 6362,
-      "loc": {
-        "start": {
-          "line": 211,
-          "column": 2
-        },
-        "end": {
-          "line": 211,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a shape node from a series of points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points. The points are relative to the node’s origin.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520120-init\n   ",
-      "start": 6366,
-      "end": 6755,
-      "loc": {
-        "start": {
-          "line": 213,
-          "column": 2
-        },
-        "end": {
-          "line": 220,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "static",
-      "start": 6758,
-      "end": 6764,
-      "loc": {
-        "start": {
-          "line": 221,
-          "column": 2
-        },
-        "end": {
-          "line": 221,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "nodeWithPointsCount",
-      "start": 6765,
-      "end": 6784,
-      "loc": {
-        "start": {
-          "line": 221,
-          "column": 9
-        },
-        "end": {
-          "line": 221,
-          "column": 28
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6784,
-      "end": 6785,
-      "loc": {
-        "start": {
-          "line": 221,
-          "column": 28
-        },
-        "end": {
-          "line": 221,
-          "column": 29
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "points",
-      "start": 6785,
-      "end": 6791,
-      "loc": {
-        "start": {
-          "line": 221,
-          "column": 29
-        },
-        "end": {
-          "line": 221,
-          "column": 35
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
         "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
@@ -11624,210 +11263,17 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6791,
-      "end": 6792,
+      "value": "const",
+      "start": 5699,
+      "end": 5704,
       "loc": {
         "start": {
-          "line": 221,
-          "column": 35
+          "line": 191,
+          "column": 4
         },
         "end": {
-          "line": 221,
-          "column": 36
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "numPoints",
-      "start": 6793,
-      "end": 6802,
-      "loc": {
-        "start": {
-          "line": 221,
-          "column": 37
-        },
-        "end": {
-          "line": 221,
-          "column": 46
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6802,
-      "end": 6803,
-      "loc": {
-        "start": {
-          "line": 221,
-          "column": 46
-        },
-        "end": {
-          "line": 221,
-          "column": 47
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6804,
-      "end": 6805,
-      "loc": {
-        "start": {
-          "line": 221,
-          "column": 48
-        },
-        "end": {
-          "line": 221,
-          "column": 49
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 6808,
-      "end": 6809,
-      "loc": {
-        "start": {
-          "line": 222,
-          "column": 2
-        },
-        "end": {
-          "line": 222,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a shape node from a series of spline points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520140-init\n   ",
-      "start": 6813,
-      "end": 7163,
-      "loc": {
-        "start": {
-          "line": 224,
-          "column": 2
-        },
-        "end": {
-          "line": 231,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "static",
-      "start": 7166,
-      "end": 7172,
-      "loc": {
-        "start": {
-          "line": 232,
-          "column": 2
-        },
-        "end": {
-          "line": 232,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "nodeWithSplinePointsCount",
-      "start": 7173,
-      "end": 7198,
-      "loc": {
-        "start": {
-          "line": 232,
+          "line": 191,
           "column": 9
-        },
-        "end": {
-          "line": 232,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 7198,
-      "end": 7199,
-      "loc": {
-        "start": {
-          "line": 232,
-          "column": 34
-        },
-        "end": {
-          "line": 232,
-          "column": 35
         }
       }
     },
@@ -11843,25 +11289,53 @@
         "postfix": false,
         "binop": null
       },
-      "value": "points",
-      "start": 7199,
-      "end": 7205,
+      "value": "node",
+      "start": 5705,
+      "end": 5709,
       "loc": {
         "start": {
-          "line": 232,
-          "column": 35
+          "line": 191,
+          "column": 10
         },
         "end": {
-          "line": 232,
-          "column": 41
+          "line": 191,
+          "column": 14
         }
       }
     },
     {
       "type": {
-        "label": ",",
+        "label": "=",
         "beforeExpr": true,
         "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 5710,
+      "end": 5711,
+      "loc": {
+        "start": {
+          "line": 191,
+          "column": 15
+        },
+        "end": {
+          "line": 191,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
@@ -11870,307 +11344,108 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 7205,
-      "end": 7206,
+      "value": "new",
+      "start": 5712,
+      "end": 5715,
       "loc": {
         "start": {
-          "line": 232,
-          "column": 41
-        },
-        "end": {
-          "line": 232,
-          "column": 42
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "numPoints",
-      "start": 7207,
-      "end": 7216,
-      "loc": {
-        "start": {
-          "line": 232,
-          "column": 43
-        },
-        "end": {
-          "line": 232,
-          "column": 52
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 7216,
-      "end": 7217,
-      "loc": {
-        "start": {
-          "line": 232,
-          "column": 52
-        },
-        "end": {
-          "line": 232,
-          "column": 53
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 7218,
-      "end": 7219,
-      "loc": {
-        "start": {
-          "line": 232,
-          "column": 54
-        },
-        "end": {
-          "line": 232,
-          "column": 55
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 7222,
-      "end": 7223,
-      "loc": {
-        "start": {
-          "line": 233,
-          "column": 2
-        },
-        "end": {
-          "line": 233,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Reading the Shape Node’s Properties",
-      "start": 7227,
-      "end": 7265,
-      "loc": {
-        "start": {
-          "line": 235,
-          "column": 2
-        },
-        "end": {
-          "line": 235,
-          "column": 40
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * The length of the line defined by the shape node.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520398-linelength\n   ",
-      "start": 7268,
-      "end": 7457,
-      "loc": {
-        "start": {
-          "line": 236,
-          "column": 2
-        },
-        "end": {
-          "line": 241,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "get",
-      "start": 7460,
-      "end": 7463,
-      "loc": {
-        "start": {
-          "line": 242,
-          "column": 2
-        },
-        "end": {
-          "line": 242,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "lineLength",
-      "start": 7464,
-      "end": 7474,
-      "loc": {
-        "start": {
-          "line": 242,
-          "column": 6
-        },
-        "end": {
-          "line": 242,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 7474,
-      "end": 7475,
-      "loc": {
-        "start": {
-          "line": 242,
-          "column": 16
-        },
-        "end": {
-          "line": 242,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 7475,
-      "end": 7476,
-      "loc": {
-        "start": {
-          "line": 242,
+          "line": 191,
           "column": 17
         },
         "end": {
-          "line": 242,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 7477,
-      "end": 7478,
-      "loc": {
-        "start": {
-          "line": 242,
-          "column": 19
-        },
-        "end": {
-          "line": 242,
+          "line": 191,
           "column": 20
         }
       }
     },
     {
-      "type": "CommentLine",
-      "value": "return this._lineLength",
-      "start": 7483,
-      "end": 7508,
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SKShapeNode",
+      "start": 5716,
+      "end": 5727,
       "loc": {
         "start": {
-          "line": 243,
-          "column": 4
+          "line": 191,
+          "column": 21
         },
         "end": {
-          "line": 243,
-          "column": 29
+          "line": 191,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5727,
+      "end": 5728,
+      "loc": {
+        "start": {
+          "line": 191,
+          "column": 32
+        },
+        "end": {
+          "line": 191,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5728,
+      "end": 5729,
+      "loc": {
+        "start": {
+          "line": 191,
+          "column": 33
+        },
+        "end": {
+          "line": 191,
+          "column": 34
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " TODO: implement",
-      "start": 7513,
-      "end": 7531,
+      "start": 5734,
+      "end": 5752,
       "loc": {
         "start": {
-          "line": 244,
+          "line": 192,
           "column": 4
         },
         "end": {
-          "line": 244,
+          "line": 192,
           "column": 22
         }
       }
@@ -12190,15 +11465,1165 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 7536,
-      "end": 7542,
+      "start": 5757,
+      "end": 5763,
       "loc": {
         "start": {
-          "line": 245,
+          "line": 193,
           "column": 4
         },
         "end": {
+          "line": 193,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "node",
+      "start": 5764,
+      "end": 5768,
+      "loc": {
+        "start": {
+          "line": 193,
+          "column": 11
+        },
+        "end": {
+          "line": 193,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5771,
+      "end": 5772,
+      "loc": {
+        "start": {
+          "line": 194,
+          "column": 2
+        },
+        "end": {
+          "line": 194,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a shape node with an elliptical path centered on the node’s origin.\n   * @access public\n   * @param {CGSize} size - The height and width of the ellipse.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1519980-init\n   ",
+      "start": 5776,
+      "end": 6059,
+      "loc": {
+        "start": {
+          "line": 196,
+          "column": 2
+        },
+        "end": {
+          "line": 202,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "static",
+      "start": 6062,
+      "end": 6068,
+      "loc": {
+        "start": {
+          "line": 203,
+          "column": 2
+        },
+        "end": {
+          "line": 203,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "nodeWithEllipseOf",
+      "start": 6069,
+      "end": 6086,
+      "loc": {
+        "start": {
+          "line": 203,
+          "column": 9
+        },
+        "end": {
+          "line": 203,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6086,
+      "end": 6087,
+      "loc": {
+        "start": {
+          "line": 203,
+          "column": 26
+        },
+        "end": {
+          "line": 203,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "size",
+      "start": 6087,
+      "end": 6091,
+      "loc": {
+        "start": {
+          "line": 203,
+          "column": 27
+        },
+        "end": {
+          "line": 203,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6091,
+      "end": 6092,
+      "loc": {
+        "start": {
+          "line": 203,
+          "column": 31
+        },
+        "end": {
+          "line": 203,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6093,
+      "end": 6094,
+      "loc": {
+        "start": {
+          "line": 203,
+          "column": 33
+        },
+        "end": {
+          "line": 203,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6097,
+      "end": 6098,
+      "loc": {
+        "start": {
+          "line": 204,
+          "column": 2
+        },
+        "end": {
+          "line": 204,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a shape node with an elliptical path that fills the specified rectangle.\n   * @access public\n   * @param {CGRect} rect - A rectangle, relative to the node’s origin.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520412-init\n   ",
+      "start": 6102,
+      "end": 6397,
+      "loc": {
+        "start": {
+          "line": 206,
+          "column": 2
+        },
+        "end": {
+          "line": 212,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "static",
+      "start": 6400,
+      "end": 6406,
+      "loc": {
+        "start": {
+          "line": 213,
+          "column": 2
+        },
+        "end": {
+          "line": 213,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "nodeWithEllipseIn",
+      "start": 6407,
+      "end": 6424,
+      "loc": {
+        "start": {
+          "line": 213,
+          "column": 9
+        },
+        "end": {
+          "line": 213,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6424,
+      "end": 6425,
+      "loc": {
+        "start": {
+          "line": 213,
+          "column": 26
+        },
+        "end": {
+          "line": 213,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "rect",
+      "start": 6425,
+      "end": 6429,
+      "loc": {
+        "start": {
+          "line": 213,
+          "column": 27
+        },
+        "end": {
+          "line": 213,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6429,
+      "end": 6430,
+      "loc": {
+        "start": {
+          "line": 213,
+          "column": 31
+        },
+        "end": {
+          "line": 213,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6431,
+      "end": 6432,
+      "loc": {
+        "start": {
+          "line": 213,
+          "column": 33
+        },
+        "end": {
+          "line": 213,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6435,
+      "end": 6436,
+      "loc": {
+        "start": {
+          "line": 214,
+          "column": 2
+        },
+        "end": {
+          "line": 214,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a shape node from a series of points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points. The points are relative to the node’s origin.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520120-init\n   ",
+      "start": 6440,
+      "end": 6829,
+      "loc": {
+        "start": {
+          "line": 216,
+          "column": 2
+        },
+        "end": {
+          "line": 223,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "static",
+      "start": 6832,
+      "end": 6838,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 2
+        },
+        "end": {
+          "line": 224,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "nodeWithPointsCount",
+      "start": 6839,
+      "end": 6858,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 9
+        },
+        "end": {
+          "line": 224,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6858,
+      "end": 6859,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 28
+        },
+        "end": {
+          "line": 224,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "points",
+      "start": 6859,
+      "end": 6865,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 29
+        },
+        "end": {
+          "line": 224,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 6865,
+      "end": 6866,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 35
+        },
+        "end": {
+          "line": 224,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "numPoints",
+      "start": 6867,
+      "end": 6876,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 37
+        },
+        "end": {
+          "line": 224,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6876,
+      "end": 6877,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 46
+        },
+        "end": {
+          "line": 224,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6878,
+      "end": 6879,
+      "loc": {
+        "start": {
+          "line": 224,
+          "column": 48
+        },
+        "end": {
+          "line": 224,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 6882,
+      "end": 6883,
+      "loc": {
+        "start": {
+          "line": 225,
+          "column": 2
+        },
+        "end": {
+          "line": 225,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a shape node from a series of spline points.\n   * @access public\n   * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points.\n   * @param {number} numPoints - The number of points in the array.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520140-init\n   ",
+      "start": 6887,
+      "end": 7237,
+      "loc": {
+        "start": {
+          "line": 227,
+          "column": 2
+        },
+        "end": {
+          "line": 234,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "static",
+      "start": 7240,
+      "end": 7246,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 2
+        },
+        "end": {
+          "line": 235,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "nodeWithSplinePointsCount",
+      "start": 7247,
+      "end": 7272,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 9
+        },
+        "end": {
+          "line": 235,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7272,
+      "end": 7273,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 34
+        },
+        "end": {
+          "line": 235,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "points",
+      "start": 7273,
+      "end": 7279,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 35
+        },
+        "end": {
+          "line": 235,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 7279,
+      "end": 7280,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 41
+        },
+        "end": {
+          "line": 235,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "numPoints",
+      "start": 7281,
+      "end": 7290,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 43
+        },
+        "end": {
+          "line": 235,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7290,
+      "end": 7291,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 52
+        },
+        "end": {
+          "line": 235,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7292,
+      "end": 7293,
+      "loc": {
+        "start": {
+          "line": 235,
+          "column": 54
+        },
+        "end": {
+          "line": 235,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7296,
+      "end": 7297,
+      "loc": {
+        "start": {
+          "line": 236,
+          "column": 2
+        },
+        "end": {
+          "line": 236,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Reading the Shape Node’s Properties",
+      "start": 7301,
+      "end": 7339,
+      "loc": {
+        "start": {
+          "line": 238,
+          "column": 2
+        },
+        "end": {
+          "line": 238,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * The length of the line defined by the shape node.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1520398-linelength\n   ",
+      "start": 7342,
+      "end": 7531,
+      "loc": {
+        "start": {
+          "line": 239,
+          "column": 2
+        },
+        "end": {
+          "line": 244,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 7534,
+      "end": 7537,
+      "loc": {
+        "start": {
           "line": 245,
+          "column": 2
+        },
+        "end": {
+          "line": 245,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "lineLength",
+      "start": 7538,
+      "end": 7548,
+      "loc": {
+        "start": {
+          "line": 245,
+          "column": 6
+        },
+        "end": {
+          "line": 245,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7548,
+      "end": 7549,
+      "loc": {
+        "start": {
+          "line": 245,
+          "column": 16
+        },
+        "end": {
+          "line": 245,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7549,
+      "end": 7550,
+      "loc": {
+        "start": {
+          "line": 245,
+          "column": 17
+        },
+        "end": {
+          "line": 245,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7551,
+      "end": 7552,
+      "loc": {
+        "start": {
+          "line": 245,
+          "column": 19
+        },
+        "end": {
+          "line": 245,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "return this._lineLength",
+      "start": 7557,
+      "end": 7582,
+      "loc": {
+        "start": {
+          "line": 246,
+          "column": 4
+        },
+        "end": {
+          "line": 246,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " TODO: implement",
+      "start": 7587,
+      "end": 7605,
+      "loc": {
+        "start": {
+          "line": 247,
+          "column": 4
+        },
+        "end": {
+          "line": 247,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 7610,
+      "end": 7616,
+      "loc": {
+        "start": {
+          "line": 248,
+          "column": 4
+        },
+        "end": {
+          "line": 248,
           "column": 10
         }
       }
@@ -12217,15 +12642,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 7543,
-      "end": 7544,
+      "start": 7617,
+      "end": 7618,
       "loc": {
         "start": {
-          "line": 245,
+          "line": 248,
           "column": 11
         },
         "end": {
-          "line": 245,
+          "line": 248,
           "column": 12
         }
       }
@@ -12242,15 +12667,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7547,
-      "end": 7548,
+      "start": 7621,
+      "end": 7622,
       "loc": {
         "start": {
-          "line": 246,
+          "line": 249,
           "column": 2
         },
         "end": {
-          "line": 246,
+          "line": 249,
           "column": 3
         }
       }
@@ -12258,15 +12683,15 @@
     {
       "type": "CommentLine",
       "value": " Working with Custom Shaders",
-      "start": 7552,
-      "end": 7582,
+      "start": 7626,
+      "end": 7656,
       "loc": {
         "start": {
-          "line": 248,
+          "line": 251,
           "column": 2
         },
         "end": {
-          "line": 248,
+          "line": 251,
           "column": 32
         }
       }
@@ -12274,15 +12699,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715855-setvalue\n   ",
-      "start": 7586,
-      "end": 7961,
+      "start": 7660,
+      "end": 8035,
       "loc": {
         "start": {
-          "line": 250,
+          "line": 253,
           "column": 2
         },
         "end": {
-          "line": 257,
+          "line": 260,
           "column": 5
         }
       }
@@ -12300,15 +12725,15 @@
         "binop": null
       },
       "value": "setValueForAttribute",
-      "start": 7964,
-      "end": 7984,
+      "start": 8038,
+      "end": 8058,
       "loc": {
         "start": {
-          "line": 258,
+          "line": 261,
           "column": 2
         },
         "end": {
-          "line": 258,
+          "line": 261,
           "column": 22
         }
       }
@@ -12325,15 +12750,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7984,
-      "end": 7985,
+      "start": 8058,
+      "end": 8059,
       "loc": {
         "start": {
-          "line": 258,
+          "line": 261,
           "column": 22
         },
         "end": {
-          "line": 258,
+          "line": 261,
           "column": 23
         }
       }
@@ -12351,15 +12776,15 @@
         "binop": null
       },
       "value": "value",
-      "start": 7985,
-      "end": 7990,
+      "start": 8059,
+      "end": 8064,
       "loc": {
         "start": {
-          "line": 258,
+          "line": 261,
           "column": 23
         },
         "end": {
-          "line": 258,
+          "line": 261,
           "column": 28
         }
       }
@@ -12377,15 +12802,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 7990,
-      "end": 7991,
+      "start": 8064,
+      "end": 8065,
       "loc": {
         "start": {
-          "line": 258,
+          "line": 261,
           "column": 28
         },
         "end": {
-          "line": 258,
+          "line": 261,
           "column": 29
         }
       }
@@ -12403,15 +12828,15 @@
         "binop": null
       },
       "value": "key",
-      "start": 7992,
-      "end": 7995,
+      "start": 8066,
+      "end": 8069,
       "loc": {
         "start": {
-          "line": 258,
+          "line": 261,
           "column": 30
         },
         "end": {
-          "line": 258,
+          "line": 261,
           "column": 33
         }
       }
@@ -12428,15 +12853,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7995,
-      "end": 7996,
+      "start": 8069,
+      "end": 8070,
       "loc": {
         "start": {
-          "line": 258,
+          "line": 261,
           "column": 33
         },
         "end": {
-          "line": 258,
+          "line": 261,
           "column": 34
         }
       }
@@ -12453,15 +12878,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 7997,
-      "end": 7998,
+      "start": 8071,
+      "end": 8072,
       "loc": {
         "start": {
-          "line": 258,
+          "line": 261,
           "column": 35
         },
         "end": {
-          "line": 258,
+          "line": 261,
           "column": 36
         }
       }
@@ -12478,15 +12903,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8001,
-      "end": 8002,
+      "start": 8075,
+      "end": 8076,
       "loc": {
         "start": {
-          "line": 259,
+          "line": 262,
           "column": 2
         },
         "end": {
-          "line": 259,
+          "line": 262,
           "column": 3
         }
       }
@@ -12494,15 +12919,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/2715843-value\n   ",
-      "start": 8006,
-      "end": 8245,
+      "start": 8080,
+      "end": 8319,
       "loc": {
         "start": {
-          "line": 261,
+          "line": 264,
           "column": 2
         },
         "end": {
-          "line": 267,
+          "line": 270,
           "column": 5
         }
       }
@@ -12520,15 +12945,15 @@
         "binop": null
       },
       "value": "valueForAttributeNamed",
-      "start": 8248,
-      "end": 8270,
+      "start": 8322,
+      "end": 8344,
       "loc": {
         "start": {
-          "line": 268,
+          "line": 271,
           "column": 2
         },
         "end": {
-          "line": 268,
+          "line": 271,
           "column": 24
         }
       }
@@ -12545,15 +12970,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8270,
-      "end": 8271,
+      "start": 8344,
+      "end": 8345,
       "loc": {
         "start": {
-          "line": 268,
+          "line": 271,
           "column": 24
         },
         "end": {
-          "line": 268,
+          "line": 271,
           "column": 25
         }
       }
@@ -12571,15 +12996,15 @@
         "binop": null
       },
       "value": "key",
-      "start": 8271,
-      "end": 8274,
+      "start": 8345,
+      "end": 8348,
       "loc": {
         "start": {
-          "line": 268,
+          "line": 271,
           "column": 25
         },
         "end": {
-          "line": 268,
+          "line": 271,
           "column": 28
         }
       }
@@ -12596,15 +13021,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8274,
-      "end": 8275,
+      "start": 8348,
+      "end": 8349,
       "loc": {
         "start": {
-          "line": 268,
+          "line": 271,
           "column": 28
         },
         "end": {
-          "line": 268,
+          "line": 271,
           "column": 29
         }
       }
@@ -12621,15 +13046,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8276,
-      "end": 8277,
+      "start": 8350,
+      "end": 8351,
       "loc": {
         "start": {
-          "line": 268,
+          "line": 271,
           "column": 30
         },
         "end": {
-          "line": 268,
+          "line": 271,
           "column": 31
         }
       }
@@ -12649,15 +13074,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 8282,
-      "end": 8288,
+      "start": 8356,
+      "end": 8362,
       "loc": {
         "start": {
-          "line": 269,
+          "line": 272,
           "column": 4
         },
         "end": {
-          "line": 269,
+          "line": 272,
           "column": 10
         }
       }
@@ -12677,15 +13102,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 8289,
-      "end": 8293,
+      "start": 8363,
+      "end": 8367,
       "loc": {
         "start": {
-          "line": 269,
+          "line": 272,
           "column": 11
         },
         "end": {
-          "line": 269,
+          "line": 272,
           "column": 15
         }
       }
@@ -12702,15 +13127,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8296,
-      "end": 8297,
+      "start": 8370,
+      "end": 8371,
       "loc": {
         "start": {
-          "line": 270,
+          "line": 273,
           "column": 2
         },
         "end": {
-          "line": 270,
+          "line": 273,
           "column": 3
         }
       }
@@ -12718,15 +13143,15 @@
     {
       "type": "CommentLine",
       "value": " Instance Properties",
-      "start": 8301,
-      "end": 8323,
+      "start": 8375,
+      "end": 8397,
       "loc": {
         "start": {
-          "line": 272,
+          "line": 275,
           "column": 2
         },
         "end": {
-          "line": 272,
+          "line": 275,
           "column": 24
         }
       }
@@ -12734,15 +13159,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * A custom playground quick look for this instance.\n   * @type {PlaygroundQuickLook}\n   * @desc \n   * @see https://developer.apple.com/documentation/spritekit/skshapenode/1645784-customplaygroundquicklook\n   ",
-      "start": 8326,
-      "end": 8543,
+      "start": 8400,
+      "end": 8617,
       "loc": {
         "start": {
-          "line": 273,
+          "line": 276,
           "column": 2
         },
         "end": {
-          "line": 278,
+          "line": 281,
           "column": 5
         }
       }
@@ -12760,15 +13185,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 8546,
-      "end": 8549,
+      "start": 8620,
+      "end": 8623,
       "loc": {
         "start": {
-          "line": 279,
+          "line": 282,
           "column": 2
         },
         "end": {
-          "line": 279,
+          "line": 282,
           "column": 5
         }
       }
@@ -12786,15 +13211,15 @@
         "binop": null
       },
       "value": "customPlaygroundQuickLook",
-      "start": 8550,
-      "end": 8575,
+      "start": 8624,
+      "end": 8649,
       "loc": {
         "start": {
-          "line": 279,
+          "line": 282,
           "column": 6
         },
         "end": {
-          "line": 279,
+          "line": 282,
           "column": 31
         }
       }
@@ -12811,15 +13236,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8575,
-      "end": 8576,
+      "start": 8649,
+      "end": 8650,
       "loc": {
         "start": {
-          "line": 279,
+          "line": 282,
           "column": 31
         },
         "end": {
-          "line": 279,
+          "line": 282,
           "column": 32
         }
       }
@@ -12836,15 +13261,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8576,
-      "end": 8577,
+      "start": 8650,
+      "end": 8651,
       "loc": {
         "start": {
-          "line": 279,
+          "line": 282,
           "column": 32
         },
         "end": {
-          "line": 279,
+          "line": 282,
           "column": 33
         }
       }
@@ -12861,15 +13286,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8578,
-      "end": 8579,
+      "start": 8652,
+      "end": 8653,
       "loc": {
         "start": {
-          "line": 279,
+          "line": 282,
           "column": 34
         },
         "end": {
-          "line": 279,
+          "line": 282,
           "column": 35
         }
       }
@@ -12889,15 +13314,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 8584,
-      "end": 8590,
+      "start": 8658,
+      "end": 8664,
       "loc": {
         "start": {
-          "line": 280,
+          "line": 283,
           "column": 4
         },
         "end": {
-          "line": 280,
+          "line": 283,
           "column": 10
         }
       }
@@ -12917,15 +13342,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 8591,
-      "end": 8595,
+      "start": 8665,
+      "end": 8669,
       "loc": {
         "start": {
-          "line": 280,
+          "line": 283,
           "column": 11
         },
         "end": {
-          "line": 280,
+          "line": 283,
           "column": 15
         }
       }
@@ -12943,15 +13368,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 8595,
-      "end": 8596,
+      "start": 8669,
+      "end": 8670,
       "loc": {
         "start": {
-          "line": 280,
+          "line": 283,
           "column": 15
         },
         "end": {
-          "line": 280,
+          "line": 283,
           "column": 16
         }
       }
@@ -12969,15 +13394,15 @@
         "binop": null
       },
       "value": "_customPlaygroundQuickLook",
-      "start": 8596,
-      "end": 8622,
+      "start": 8670,
+      "end": 8696,
       "loc": {
         "start": {
-          "line": 280,
+          "line": 283,
           "column": 16
         },
         "end": {
-          "line": 280,
+          "line": 283,
           "column": 42
         }
       }
@@ -12994,15 +13419,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8625,
-      "end": 8626,
+      "start": 8699,
+      "end": 8700,
       "loc": {
         "start": {
-          "line": 281,
+          "line": 284,
           "column": 2
         },
         "end": {
-          "line": 281,
+          "line": 284,
           "column": 3
         }
       }
@@ -13010,15 +13435,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @access private\n   * @param {WebGLRenderingContext} gl -\n   * @returns {void}\n   ",
-      "start": 8630,
-      "end": 8722,
+      "start": 8704,
+      "end": 8796,
       "loc": {
         "start": {
-          "line": 283,
+          "line": 286,
           "column": 2
         },
         "end": {
-          "line": 287,
+          "line": 290,
           "column": 5
         }
       }
@@ -13036,15 +13461,15 @@
         "binop": null
       },
       "value": "_render",
-      "start": 8725,
-      "end": 8732,
+      "start": 8799,
+      "end": 8806,
       "loc": {
         "start": {
-          "line": 288,
+          "line": 291,
           "column": 2
         },
         "end": {
-          "line": 288,
+          "line": 291,
           "column": 9
         }
       }
@@ -13061,15 +13486,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8732,
-      "end": 8733,
+      "start": 8806,
+      "end": 8807,
       "loc": {
         "start": {
-          "line": 288,
+          "line": 291,
           "column": 9
         },
         "end": {
-          "line": 288,
+          "line": 291,
           "column": 10
         }
       }
@@ -13087,15 +13512,15 @@
         "binop": null
       },
       "value": "gl",
-      "start": 8733,
-      "end": 8735,
+      "start": 8807,
+      "end": 8809,
       "loc": {
         "start": {
-          "line": 288,
+          "line": 291,
           "column": 10
         },
         "end": {
-          "line": 288,
+          "line": 291,
           "column": 12
         }
       }
@@ -13112,15 +13537,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8735,
-      "end": 8736,
+      "start": 8809,
+      "end": 8810,
       "loc": {
         "start": {
-          "line": 288,
+          "line": 291,
           "column": 12
         },
         "end": {
-          "line": 288,
+          "line": 291,
           "column": 13
         }
       }
@@ -13137,15 +13562,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8737,
-      "end": 8738,
+      "start": 8811,
+      "end": 8812,
       "loc": {
         "start": {
-          "line": 288,
+          "line": 291,
           "column": 14
         },
         "end": {
-          "line": 288,
+          "line": 291,
           "column": 15
         }
       }
@@ -13162,15 +13587,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8741,
-      "end": 8742,
+      "start": 8815,
+      "end": 8816,
       "loc": {
         "start": {
-          "line": 289,
+          "line": 292,
           "column": 2
         },
         "end": {
-          "line": 289,
+          "line": 292,
           "column": 3
         }
       }
@@ -13187,15 +13612,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 8744,
-      "end": 8745,
+      "start": 8818,
+      "end": 8819,
       "loc": {
         "start": {
-          "line": 291,
+          "line": 294,
           "column": 0
         },
         "end": {
-          "line": 291,
+          "line": 294,
           "column": 1
         }
       }
@@ -13213,15 +13638,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 8746,
-      "end": 8746,
+      "start": 8820,
+      "end": 8820,
       "loc": {
         "start": {
-          "line": 292,
+          "line": 295,
           "column": 0
         },
         "end": {
-          "line": 292,
+          "line": 295,
           "column": 0
         }
       }

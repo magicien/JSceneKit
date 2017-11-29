@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1323,
+  "end": 1325,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1323,
+    "end": 1325,
     "loc": {
       "start": {
         "line": 1,
@@ -29,98 +29,9 @@
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 71,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 57
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 41,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 27
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 41,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 27
-                },
-                "identifierName": "SCNSceneSourceStatus"
-              },
-              "name": "SCNSceneSourceStatus"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 47,
-          "end": 71,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 33
-            },
-            "end": {
-              "line": 3,
-              "column": 57
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNSceneSourceStatus",
-            "raw": "'./SCNSceneSourceStatus'"
-          },
-          "value": "./SCNSceneSourceStatus",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * The signature for the block that SceneKit calls periodically to report progress while loading a scene.\n * @type {function(totalProgress: number, status: SCNSceneSourceStatus, error: ?Error, stopLoading: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A floating-point number between 0.0 and 1.0 indicating the overall progress of loading the scene. A value of 0.0 indicates that the loading process has just begun, and a value of 1.0 indicates that the process has completed.\n * @param {SCNSceneSourceStatus} status - A constant identifying one of the distinct phases of SceneKit’s loading procedure. See SCNSceneSourceStatus for possible values.\n * @param {?Error} error - An error object describing any error that has occurred during scene loading, or nil if no errors has been encountered.\n * @param {UnsafeMutablePointer<ObjCBool>} stopLoading - A reference to a Boolean value. Set *stop to true within the block to abort further processing of the scene source’s contents.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnscenesourcestatushandler\n ",
-            "start": 73,
-            "end": 1192,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 0
-              },
-              "end": {
-                "line": 14,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "Identifier",
-        "start": 1193,
-        "end": 1278,
+        "start": 1195,
+        "end": 1280,
         "loc": {
           "start": {
             "line": 15,
@@ -134,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 1199,
-            "end": 1278,
+            "start": 1201,
+            "end": 1280,
             "loc": {
               "start": {
                 "line": 15,
@@ -148,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 1199,
-              "end": 1226,
+              "start": 1201,
+              "end": 1228,
               "loc": {
                 "start": {
                   "line": 15,
@@ -166,8 +77,8 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 1229,
-              "end": 1278,
+              "start": 1231,
+              "end": 1280,
               "loc": {
                 "start": {
                   "line": 15,
@@ -185,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 1230,
-                  "end": 1243,
+                  "start": 1232,
+                  "end": 1245,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -202,8 +113,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 1245,
-                  "end": 1251,
+                  "start": 1247,
+                  "end": 1253,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -219,8 +130,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 1253,
-                  "end": 1258,
+                  "start": 1255,
+                  "end": 1260,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -236,8 +147,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 1260,
-                  "end": 1271,
+                  "start": 1262,
+                  "end": 1273,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -254,8 +165,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 1276,
-                "end": 1278,
+                "start": 1278,
+                "end": 1280,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -280,8 +191,8 @@
       },
       {
         "type": "Identifier",
-        "start": 1280,
-        "end": 1322,
+        "start": 1282,
+        "end": 1324,
         "loc": {
           "start": {
             "line": 17,
@@ -294,8 +205,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 1295,
-          "end": 1322,
+          "start": 1297,
+          "end": 1324,
           "loc": {
             "start": {
               "line": 17,
@@ -315,8 +226,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1280,
-        "end": 1322,
+        "start": 1282,
+        "end": 1324,
         "loc": {
           "start": {
             "line": 17,
@@ -329,8 +240,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 1193,
-          "end": 1278,
+          "start": 1195,
+          "end": 1280,
           "loc": {
             "start": {
               "line": 15,
@@ -344,8 +255,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 1199,
-              "end": 1278,
+              "start": 1201,
+              "end": 1280,
               "loc": {
                 "start": {
                   "line": 15,
@@ -358,8 +269,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 1199,
-                "end": 1226,
+                "start": 1201,
+                "end": 1228,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -376,8 +287,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 1229,
-                "end": 1278,
+                "start": 1231,
+                "end": 1280,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -390,8 +301,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 1199,
-                  "end": 1226,
+                  "start": 1201,
+                  "end": 1228,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -412,8 +323,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1230,
-                    "end": 1243,
+                    "start": 1232,
+                    "end": 1245,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -429,8 +340,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1245,
-                    "end": 1251,
+                    "start": 1247,
+                    "end": 1253,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -446,8 +357,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1253,
-                    "end": 1258,
+                    "start": 1255,
+                    "end": 1260,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -463,8 +374,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1260,
-                    "end": 1271,
+                    "start": 1262,
+                    "end": 1273,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -481,8 +392,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1276,
-                  "end": 1278,
+                  "start": 1278,
+                  "end": 1280,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -503,10 +414,26 @@
           "kind": "const",
           "leadingComments": [
             {
+              "type": "CommentLine",
+              "value": "import SCNSceneSourceStatus from './SCNSceneSourceStatus'",
+              "start": 14,
+              "end": 73,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 3,
+                  "column": 59
+                }
+              }
+            },
+            {
               "type": "CommentBlock",
               "value": "*\n * The signature for the block that SceneKit calls periodically to report progress while loading a scene.\n * @type {function(totalProgress: number, status: SCNSceneSourceStatus, error: ?Error, stopLoading: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A floating-point number between 0.0 and 1.0 indicating the overall progress of loading the scene. A value of 0.0 indicates that the loading process has just begun, and a value of 1.0 indicates that the process has completed.\n * @param {SCNSceneSourceStatus} status - A constant identifying one of the distinct phases of SceneKit’s loading procedure. See SCNSceneSourceStatus for possible values.\n * @param {?Error} error - An error object describing any error that has occurred during scene loading, or nil if no errors has been encountered.\n * @param {UnsafeMutablePointer<ObjCBool>} stopLoading - A reference to a Boolean value. Set *stop to true within the block to abort further processing of the scene source’s contents.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnscenesourcestatushandler\n ",
-              "start": 73,
-              "end": 1192,
+              "start": 75,
+              "end": 1194,
               "loc": {
                 "start": {
                   "line": 5,
@@ -556,17 +483,68 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNSceneSourceStatus from './SCNSceneSourceStatus'",
+            "start": 14,
+            "end": 73,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 59
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The signature for the block that SceneKit calls periodically to report progress while loading a scene.\n * @type {function(totalProgress: number, status: SCNSceneSourceStatus, error: ?Error, stopLoading: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A floating-point number between 0.0 and 1.0 indicating the overall progress of loading the scene. A value of 0.0 indicates that the loading process has just begun, and a value of 1.0 indicates that the process has completed.\n * @param {SCNSceneSourceStatus} status - A constant identifying one of the distinct phases of SceneKit’s loading procedure. See SCNSceneSourceStatus for possible values.\n * @param {?Error} error - An error object describing any error that has occurred during scene loading, or nil if no errors has been encountered.\n * @param {UnsafeMutablePointer<ObjCBool>} stopLoading - A reference to a Boolean value. Set *stop to true within the block to abort further processing of the scene source’s contents.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnscenesourcestatushandler\n ",
+            "start": 75,
+            "end": 1194,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 14,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
+      "type": "CommentLine",
+      "value": "import SCNSceneSourceStatus from './SCNSceneSourceStatus'",
+      "start": 14,
+      "end": 73,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 59
+        }
+      }
+    },
+    {
       "type": "CommentBlock",
       "value": "*\n * The signature for the block that SceneKit calls periodically to report progress while loading a scene.\n * @type {function(totalProgress: number, status: SCNSceneSourceStatus, error: ?Error, stopLoading: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A floating-point number between 0.0 and 1.0 indicating the overall progress of loading the scene. A value of 0.0 indicates that the loading process has just begun, and a value of 1.0 indicates that the process has completed.\n * @param {SCNSceneSourceStatus} status - A constant identifying one of the distinct phases of SceneKit’s loading procedure. See SCNSceneSourceStatus for possible values.\n * @param {?Error} error - An error object describing any error that has occurred during scene loading, or nil if no errors has been encountered.\n * @param {UnsafeMutablePointer<ObjCBool>} stopLoading - A reference to a Boolean value. Set *stop to true within the block to abort further processing of the scene source’s contents.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnscenesourcestatushandler\n ",
-      "start": 73,
-      "end": 1192,
+      "start": 75,
+      "end": 1194,
       "loc": {
         "start": {
           "line": 5,
@@ -608,22 +586,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNSceneSourceStatus from './SCNSceneSourceStatus'",
       "start": 14,
-      "end": 20,
+      "end": 73,
       "loc": {
         "start": {
           "line": 3,
@@ -631,94 +597,15 @@
         },
         "end": {
           "line": 3,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNSceneSourceStatus",
-      "start": 21,
-      "end": 41,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 42,
-      "end": 46,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 28
-        },
-        "end": {
-          "line": 3,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNSceneSourceStatus",
-      "start": 47,
-      "end": 71,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 33
-        },
-        "end": {
-          "line": 3,
-          "column": 57
+          "column": 59
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * The signature for the block that SceneKit calls periodically to report progress while loading a scene.\n * @type {function(totalProgress: number, status: SCNSceneSourceStatus, error: ?Error, stopLoading: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A floating-point number between 0.0 and 1.0 indicating the overall progress of loading the scene. A value of 0.0 indicates that the loading process has just begun, and a value of 1.0 indicates that the process has completed.\n * @param {SCNSceneSourceStatus} status - A constant identifying one of the distinct phases of SceneKit’s loading procedure. See SCNSceneSourceStatus for possible values.\n * @param {?Error} error - An error object describing any error that has occurred during scene loading, or nil if no errors has been encountered.\n * @param {UnsafeMutablePointer<ObjCBool>} stopLoading - A reference to a Boolean value. Set *stop to true within the block to abort further processing of the scene source’s contents.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnscenesourcestatushandler\n ",
-      "start": 73,
-      "end": 1192,
+      "start": 75,
+      "end": 1194,
       "loc": {
         "start": {
           "line": 5,
@@ -745,8 +632,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 1193,
-      "end": 1198,
+      "start": 1195,
+      "end": 1200,
       "loc": {
         "start": {
           "line": 15,
@@ -771,8 +658,8 @@
         "binop": null
       },
       "value": "SCNSceneSourceStatusHandler",
-      "start": 1199,
-      "end": 1226,
+      "start": 1201,
+      "end": 1228,
       "loc": {
         "start": {
           "line": 15,
@@ -798,8 +685,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1227,
-      "end": 1228,
+      "start": 1229,
+      "end": 1230,
       "loc": {
         "start": {
           "line": 15,
@@ -823,8 +710,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1229,
-      "end": 1230,
+      "start": 1231,
+      "end": 1232,
       "loc": {
         "start": {
           "line": 15,
@@ -849,8 +736,8 @@
         "binop": null
       },
       "value": "totalProgress",
-      "start": 1230,
-      "end": 1243,
+      "start": 1232,
+      "end": 1245,
       "loc": {
         "start": {
           "line": 15,
@@ -875,8 +762,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1243,
-      "end": 1244,
+      "start": 1245,
+      "end": 1246,
       "loc": {
         "start": {
           "line": 15,
@@ -901,8 +788,8 @@
         "binop": null
       },
       "value": "status",
-      "start": 1245,
-      "end": 1251,
+      "start": 1247,
+      "end": 1253,
       "loc": {
         "start": {
           "line": 15,
@@ -927,8 +814,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1251,
-      "end": 1252,
+      "start": 1253,
+      "end": 1254,
       "loc": {
         "start": {
           "line": 15,
@@ -953,8 +840,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 1253,
-      "end": 1258,
+      "start": 1255,
+      "end": 1260,
       "loc": {
         "start": {
           "line": 15,
@@ -979,8 +866,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1258,
-      "end": 1259,
+      "start": 1260,
+      "end": 1261,
       "loc": {
         "start": {
           "line": 15,
@@ -1005,8 +892,8 @@
         "binop": null
       },
       "value": "stopLoading",
-      "start": 1260,
-      "end": 1271,
+      "start": 1262,
+      "end": 1273,
       "loc": {
         "start": {
           "line": 15,
@@ -1030,8 +917,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1271,
-      "end": 1272,
+      "start": 1273,
+      "end": 1274,
       "loc": {
         "start": {
           "line": 15,
@@ -1056,8 +943,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1273,
-      "end": 1275,
+      "start": 1275,
+      "end": 1277,
       "loc": {
         "start": {
           "line": 15,
@@ -1081,8 +968,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1276,
-      "end": 1277,
+      "start": 1278,
+      "end": 1279,
       "loc": {
         "start": {
           "line": 15,
@@ -1106,8 +993,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1277,
-      "end": 1278,
+      "start": 1279,
+      "end": 1280,
       "loc": {
         "start": {
           "line": 15,
@@ -1134,8 +1021,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1280,
-      "end": 1286,
+      "start": 1282,
+      "end": 1288,
       "loc": {
         "start": {
           "line": 17,
@@ -1162,8 +1049,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1287,
-      "end": 1294,
+      "start": 1289,
+      "end": 1296,
       "loc": {
         "start": {
           "line": 17,
@@ -1188,8 +1075,8 @@
         "binop": null
       },
       "value": "SCNSceneSourceStatusHandler",
-      "start": 1295,
-      "end": 1322,
+      "start": 1297,
+      "end": 1324,
       "loc": {
         "start": {
           "line": 17,
@@ -1214,8 +1101,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1323,
-      "end": 1323,
+      "start": 1325,
+      "end": 1325,
       "loc": {
         "start": {
           "line": 18,

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4893,
+  "end": 4896,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 121,
+      "line": 120,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4893,
+    "end": 4896,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 121,
+        "line": 120,
         "column": 0
       }
     },
@@ -94,161 +94,55 @@
             "rawValue": "./SCNGeometry",
             "raw": "'./SCNGeometry'"
           },
-          "value": "./SCNGeometry"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 54,
-        "end": 97,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 43
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 61,
-            "end": 67,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 13
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 61,
-              "end": 67,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 13
-                },
-                "identifierName": "CGRect"
-              },
-              "name": "CGRect"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 73,
-          "end": 97,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 19
-            },
-            "end": {
-              "line": 4,
-              "column": 43
-            }
-          },
-          "extra": {
-            "rawValue": "../CoreGraphics/CGRect",
-            "raw": "'../CoreGraphics/CGRect'"
-          },
-          "value": "../CoreGraphics/CGRect"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 98,
-        "end": 141,
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 0
-          },
-          "end": {
-            "line": 5,
-            "column": 43
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 105,
-            "end": 111,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 7
-              },
-              "end": {
-                "line": 5,
-                "column": 13
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 105,
-              "end": 111,
-              "loc": {
-                "start": {
-                  "line": 5,
-                  "column": 7
-                },
-                "end": {
-                  "line": 5,
-                  "column": 13
-                },
-                "identifierName": "CGSize"
-              },
-              "name": "CGSize"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 117,
-          "end": 141,
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 19
-            },
-            "end": {
-              "line": 5,
-              "column": 43
-            }
-          },
-          "extra": {
-            "rawValue": "../CoreGraphics/CGSize",
-            "raw": "'../CoreGraphics/CGSize'"
-          },
-          "value": "../CoreGraphics/CGSize",
+          "value": "./SCNGeometry",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
-            "start": 144,
-            "end": 362,
+            "type": "CommentLine",
+            "value": "import CGRect from '../CoreGraphics/CGRect'",
+            "start": 54,
+            "end": 99,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 45
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import CGSize from '../CoreGraphics/CGSize'",
+            "start": 100,
+            "end": 145,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 45
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
+            "start": 147,
+            "end": 365,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -257,43 +151,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 363,
-        "end": 4892,
+        "start": 366,
+        "end": 4895,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 120,
+            "line": 119,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 378,
-          "end": 4892,
+          "start": 381,
+          "end": 4895,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 13,
               "column": 15
             },
             "end": {
-              "line": 120,
+              "line": 119,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 384,
-            "end": 391,
+            "start": 387,
+            "end": 394,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 21
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 28
               },
               "identifierName": "SCNText"
@@ -303,15 +197,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 400,
-            "end": 411,
+            "start": 403,
+            "end": 414,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 37
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 48
               },
               "identifierName": "SCNGeometry"
@@ -320,45 +214,45 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 412,
-            "end": 4892,
+            "start": 415,
+            "end": 4895,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 49
               },
               "end": {
-                "line": 120,
+                "line": 119,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1646,
-                "end": 4223,
+                "start": 1649,
+                "end": 4226,
                 "loc": {
                   "start": {
-                    "line": 26,
+                    "line": 25,
                     "column": 2
                   },
                   "end": {
-                    "line": 107,
+                    "line": 106,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1646,
-                  "end": 1657,
+                  "start": 1649,
+                  "end": 1660,
                   "loc": {
                     "start": {
-                      "line": 26,
+                      "line": 25,
                       "column": 2
                     },
                     "end": {
-                      "line": 26,
+                      "line": 25,
                       "column": 13
                     },
                     "identifierName": "constructor"
@@ -375,15 +269,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1658,
-                    "end": 1664,
+                    "start": 1661,
+                    "end": 1667,
                     "loc": {
                       "start": {
-                        "line": 26,
+                        "line": 25,
                         "column": 14
                       },
                       "end": {
-                        "line": 26,
+                        "line": 25,
                         "column": 20
                       },
                       "identifierName": "string"
@@ -392,15 +286,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1666,
-                    "end": 1680,
+                    "start": 1669,
+                    "end": 1683,
                     "loc": {
                       "start": {
-                        "line": 26,
+                        "line": 25,
                         "column": 22
                       },
                       "end": {
-                        "line": 26,
+                        "line": 25,
                         "column": 36
                       },
                       "identifierName": "extrusionDepth"
@@ -410,58 +304,58 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1682,
-                  "end": 4223,
+                  "start": 1685,
+                  "end": 4226,
                   "loc": {
                     "start": {
-                      "line": 26,
+                      "line": 25,
                       "column": 38
                     },
                     "end": {
-                      "line": 107,
+                      "line": 106,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1688,
-                      "end": 1695,
+                      "start": 1691,
+                      "end": 1698,
                       "loc": {
                         "start": {
-                          "line": 27,
+                          "line": 26,
                           "column": 4
                         },
                         "end": {
-                          "line": 27,
+                          "line": 26,
                           "column": 11
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1688,
-                        "end": 1695,
+                        "start": 1691,
+                        "end": 1698,
                         "loc": {
                           "start": {
-                            "line": 27,
+                            "line": 26,
                             "column": 4
                           },
                           "end": {
-                            "line": 27,
+                            "line": 26,
                             "column": 11
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1688,
-                          "end": 1693,
+                          "start": 1691,
+                          "end": 1696,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 26,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 26,
                               "column": 9
                             }
                           }
@@ -473,15 +367,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Geometry’s Text Content",
-                          "start": 1701,
-                          "end": 1740,
+                          "start": 1704,
+                          "end": 1743,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 29,
+                              "line": 28,
                               "column": 43
                             }
                           }
@@ -489,15 +383,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The string object whose text the geometry represents.\n     * @type {?Object}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523439-string\n     ",
-                          "start": 1746,
-                          "end": 1927,
+                          "start": 1749,
+                          "end": 1930,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 30,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 34,
                               "column": 7
                             }
                           }
@@ -506,58 +400,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1932,
-                      "end": 1950,
+                      "start": 1935,
+                      "end": 1953,
                       "loc": {
                         "start": {
-                          "line": 36,
+                          "line": 35,
                           "column": 4
                         },
                         "end": {
-                          "line": 36,
+                          "line": 35,
                           "column": 22
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1932,
-                        "end": 1950,
+                        "start": 1935,
+                        "end": 1953,
                         "loc": {
                           "start": {
-                            "line": 36,
+                            "line": 35,
                             "column": 4
                           },
                           "end": {
-                            "line": 36,
+                            "line": 35,
                             "column": 22
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1932,
-                          "end": 1943,
+                          "start": 1935,
+                          "end": 1946,
                           "loc": {
                             "start": {
-                              "line": 36,
+                              "line": 35,
                               "column": 4
                             },
                             "end": {
-                              "line": 36,
+                              "line": 35,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1932,
-                            "end": 1936,
+                            "start": 1935,
+                            "end": 1939,
                             "loc": {
                               "start": {
-                                "line": 36,
+                                "line": 35,
                                 "column": 4
                               },
                               "end": {
-                                "line": 36,
+                                "line": 35,
                                 "column": 8
                               }
                             },
@@ -565,15 +459,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1937,
-                            "end": 1943,
+                            "start": 1940,
+                            "end": 1946,
                             "loc": {
                               "start": {
-                                "line": 36,
+                                "line": 35,
                                 "column": 9
                               },
                               "end": {
-                                "line": 36,
+                                "line": 35,
                                 "column": 15
                               },
                               "identifierName": "string"
@@ -585,15 +479,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1946,
-                          "end": 1950,
+                          "start": 1949,
+                          "end": 1953,
                           "loc": {
                             "start": {
-                              "line": 36,
+                              "line": 35,
                               "column": 18
                             },
                             "end": {
-                              "line": 36,
+                              "line": 35,
                               "column": 22
                             }
                           },
@@ -607,15 +501,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Geometry’s Text Content",
-                          "start": 1701,
-                          "end": 1740,
+                          "start": 1704,
+                          "end": 1743,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 29,
+                              "line": 28,
                               "column": 43
                             }
                           }
@@ -623,15 +517,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The string object whose text the geometry represents.\n     * @type {?Object}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523439-string\n     ",
-                          "start": 1746,
-                          "end": 1927,
+                          "start": 1749,
+                          "end": 1930,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 30,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 34,
                               "column": 7
                             }
                           }
@@ -641,15 +535,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The font that SceneKit uses to create geometry from the text.\n     * @type {!UIFont}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523273-font\n     ",
-                          "start": 1956,
-                          "end": 2143,
+                          "start": 1959,
+                          "end": 2146,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 37,
                               "column": 4
                             },
                             "end": {
-                              "line": 42,
+                              "line": 41,
                               "column": 7
                             }
                           }
@@ -658,58 +552,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2148,
-                      "end": 2164,
+                      "start": 2151,
+                      "end": 2167,
                       "loc": {
                         "start": {
-                          "line": 43,
+                          "line": 42,
                           "column": 4
                         },
                         "end": {
-                          "line": 43,
+                          "line": 42,
                           "column": 20
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2148,
-                        "end": 2164,
+                        "start": 2151,
+                        "end": 2167,
                         "loc": {
                           "start": {
-                            "line": 43,
+                            "line": 42,
                             "column": 4
                           },
                           "end": {
-                            "line": 43,
+                            "line": 42,
                             "column": 20
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2148,
-                          "end": 2157,
+                          "start": 2151,
+                          "end": 2160,
                           "loc": {
                             "start": {
-                              "line": 43,
+                              "line": 42,
                               "column": 4
                             },
                             "end": {
-                              "line": 43,
+                              "line": 42,
                               "column": 13
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2148,
-                            "end": 2152,
+                            "start": 2151,
+                            "end": 2155,
                             "loc": {
                               "start": {
-                                "line": 43,
+                                "line": 42,
                                 "column": 4
                               },
                               "end": {
-                                "line": 43,
+                                "line": 42,
                                 "column": 8
                               }
                             },
@@ -717,15 +611,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2153,
-                            "end": 2157,
+                            "start": 2156,
+                            "end": 2160,
                             "loc": {
                               "start": {
-                                "line": 43,
+                                "line": 42,
                                 "column": 9
                               },
                               "end": {
-                                "line": 43,
+                                "line": 42,
                                 "column": 13
                               },
                               "identifierName": "font"
@@ -737,15 +631,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2160,
-                          "end": 2164,
+                          "start": 2163,
+                          "end": 2167,
                           "loc": {
                             "start": {
-                              "line": 43,
+                              "line": 42,
                               "column": 16
                             },
                             "end": {
-                              "line": 43,
+                              "line": 42,
                               "column": 20
                             }
                           },
@@ -759,15 +653,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The font that SceneKit uses to create geometry from the text.\n     * @type {!UIFont}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523273-font\n     ",
-                          "start": 1956,
-                          "end": 2143,
+                          "start": 1959,
+                          "end": 2146,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 37,
                               "column": 4
                             },
                             "end": {
-                              "line": 42,
+                              "line": 41,
                               "column": 7
                             }
                           }
@@ -777,15 +671,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing Text Layout",
-                          "start": 2171,
-                          "end": 2194,
+                          "start": 2174,
+                          "end": 2197,
                           "loc": {
                             "start": {
-                              "line": 46,
+                              "line": 45,
                               "column": 4
                             },
                             "end": {
-                              "line": 46,
+                              "line": 45,
                               "column": 27
                             }
                           }
@@ -793,15 +687,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A rectangle specifying the area in which SceneKit should lay out the text.\n     * @type {CGRect}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523654-containerframe\n     ",
-                          "start": 2200,
-                          "end": 2409,
+                          "start": 2203,
+                          "end": 2412,
                           "loc": {
                             "start": {
-                              "line": 48,
+                              "line": 47,
                               "column": 4
                             },
                             "end": {
-                              "line": 52,
+                              "line": 51,
                               "column": 7
                             }
                           }
@@ -810,58 +704,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2414,
-                      "end": 2440,
+                      "start": 2417,
+                      "end": 2443,
                       "loc": {
                         "start": {
-                          "line": 53,
+                          "line": 52,
                           "column": 4
                         },
                         "end": {
-                          "line": 53,
+                          "line": 52,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2414,
-                        "end": 2440,
+                        "start": 2417,
+                        "end": 2443,
                         "loc": {
                           "start": {
-                            "line": 53,
+                            "line": 52,
                             "column": 4
                           },
                           "end": {
-                            "line": 53,
+                            "line": 52,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2414,
-                          "end": 2433,
+                          "start": 2417,
+                          "end": 2436,
                           "loc": {
                             "start": {
-                              "line": 53,
+                              "line": 52,
                               "column": 4
                             },
                             "end": {
-                              "line": 53,
+                              "line": 52,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2414,
-                            "end": 2418,
+                            "start": 2417,
+                            "end": 2421,
                             "loc": {
                               "start": {
-                                "line": 53,
+                                "line": 52,
                                 "column": 4
                               },
                               "end": {
-                                "line": 53,
+                                "line": 52,
                                 "column": 8
                               }
                             },
@@ -869,15 +763,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2419,
-                            "end": 2433,
+                            "start": 2422,
+                            "end": 2436,
                             "loc": {
                               "start": {
-                                "line": 53,
+                                "line": 52,
                                 "column": 9
                               },
                               "end": {
-                                "line": 53,
+                                "line": 52,
                                 "column": 23
                               },
                               "identifierName": "containerFrame"
@@ -889,15 +783,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2436,
-                          "end": 2440,
+                          "start": 2439,
+                          "end": 2443,
                           "loc": {
                             "start": {
-                              "line": 53,
+                              "line": 52,
                               "column": 26
                             },
                             "end": {
-                              "line": 53,
+                              "line": 52,
                               "column": 30
                             }
                           },
@@ -911,15 +805,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing Text Layout",
-                          "start": 2171,
-                          "end": 2194,
+                          "start": 2174,
+                          "end": 2197,
                           "loc": {
                             "start": {
-                              "line": 46,
+                              "line": 45,
                               "column": 4
                             },
                             "end": {
-                              "line": 46,
+                              "line": 45,
                               "column": 27
                             }
                           }
@@ -927,15 +821,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A rectangle specifying the area in which SceneKit should lay out the text.\n     * @type {CGRect}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523654-containerframe\n     ",
-                          "start": 2200,
-                          "end": 2409,
+                          "start": 2203,
+                          "end": 2412,
                           "loc": {
                             "start": {
-                              "line": 48,
+                              "line": 47,
                               "column": 4
                             },
                             "end": {
-                              "line": 52,
+                              "line": 51,
                               "column": 7
                             }
                           }
@@ -945,15 +839,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value that specifies whether SceneKit wraps long lines of text.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523585-iswrapped\n     ",
-                          "start": 2446,
-                          "end": 2650,
+                          "start": 2449,
+                          "end": 2653,
                           "loc": {
                             "start": {
-                              "line": 55,
+                              "line": 54,
                               "column": 4
                             },
                             "end": {
-                              "line": 59,
+                              "line": 58,
                               "column": 7
                             }
                           }
@@ -962,58 +856,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2655,
-                      "end": 2677,
+                      "start": 2658,
+                      "end": 2680,
                       "loc": {
                         "start": {
-                          "line": 60,
+                          "line": 59,
                           "column": 4
                         },
                         "end": {
-                          "line": 60,
+                          "line": 59,
                           "column": 26
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2655,
-                        "end": 2677,
+                        "start": 2658,
+                        "end": 2680,
                         "loc": {
                           "start": {
-                            "line": 60,
+                            "line": 59,
                             "column": 4
                           },
                           "end": {
-                            "line": 60,
+                            "line": 59,
                             "column": 26
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2655,
-                          "end": 2669,
+                          "start": 2658,
+                          "end": 2672,
                           "loc": {
                             "start": {
-                              "line": 60,
+                              "line": 59,
                               "column": 4
                             },
                             "end": {
-                              "line": 60,
+                              "line": 59,
                               "column": 18
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2655,
-                            "end": 2659,
+                            "start": 2658,
+                            "end": 2662,
                             "loc": {
                               "start": {
-                                "line": 60,
+                                "line": 59,
                                 "column": 4
                               },
                               "end": {
-                                "line": 60,
+                                "line": 59,
                                 "column": 8
                               }
                             },
@@ -1021,15 +915,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2660,
-                            "end": 2669,
+                            "start": 2663,
+                            "end": 2672,
                             "loc": {
                               "start": {
-                                "line": 60,
+                                "line": 59,
                                 "column": 9
                               },
                               "end": {
-                                "line": 60,
+                                "line": 59,
                                 "column": 18
                               },
                               "identifierName": "isWrapped"
@@ -1041,15 +935,15 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2672,
-                          "end": 2677,
+                          "start": 2675,
+                          "end": 2680,
                           "loc": {
                             "start": {
-                              "line": 60,
+                              "line": 59,
                               "column": 21
                             },
                             "end": {
-                              "line": 60,
+                              "line": 59,
                               "column": 26
                             }
                           },
@@ -1064,15 +958,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value that specifies whether SceneKit wraps long lines of text.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523585-iswrapped\n     ",
-                          "start": 2446,
-                          "end": 2650,
+                          "start": 2449,
+                          "end": 2653,
                           "loc": {
                             "start": {
-                              "line": 55,
+                              "line": 54,
                               "column": 4
                             },
                             "end": {
-                              "line": 59,
+                              "line": 58,
                               "column": 7
                             }
                           }
@@ -1082,15 +976,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A constant that specifies how SceneKit horizontally aligns each line of text within its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523158-alignmentmode\n     ",
-                          "start": 2683,
-                          "end": 2915,
+                          "start": 2686,
+                          "end": 2918,
                           "loc": {
                             "start": {
-                              "line": 62,
+                              "line": 61,
                               "column": 4
                             },
                             "end": {
-                              "line": 66,
+                              "line": 65,
                               "column": 7
                             }
                           }
@@ -1099,58 +993,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2920,
-                      "end": 2943,
+                      "start": 2923,
+                      "end": 2946,
                       "loc": {
                         "start": {
-                          "line": 67,
+                          "line": 66,
                           "column": 4
                         },
                         "end": {
-                          "line": 67,
+                          "line": 66,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2920,
-                        "end": 2943,
+                        "start": 2923,
+                        "end": 2946,
                         "loc": {
                           "start": {
-                            "line": 67,
+                            "line": 66,
                             "column": 4
                           },
                           "end": {
-                            "line": 67,
+                            "line": 66,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2920,
-                          "end": 2938,
+                          "start": 2923,
+                          "end": 2941,
                           "loc": {
                             "start": {
-                              "line": 67,
+                              "line": 66,
                               "column": 4
                             },
                             "end": {
-                              "line": 67,
+                              "line": 66,
                               "column": 22
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2920,
-                            "end": 2924,
+                            "start": 2923,
+                            "end": 2927,
                             "loc": {
                               "start": {
-                                "line": 67,
+                                "line": 66,
                                 "column": 4
                               },
                               "end": {
-                                "line": 67,
+                                "line": 66,
                                 "column": 8
                               }
                             },
@@ -1158,15 +1052,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2925,
-                            "end": 2938,
+                            "start": 2928,
+                            "end": 2941,
                             "loc": {
                               "start": {
-                                "line": 67,
+                                "line": 66,
                                 "column": 9
                               },
                               "end": {
-                                "line": 67,
+                                "line": 66,
                                 "column": 22
                               },
                               "identifierName": "alignmentMode"
@@ -1178,15 +1072,15 @@
                         },
                         "right": {
                           "type": "StringLiteral",
-                          "start": 2941,
-                          "end": 2943,
+                          "start": 2944,
+                          "end": 2946,
                           "loc": {
                             "start": {
-                              "line": 67,
+                              "line": 66,
                               "column": 25
                             },
                             "end": {
-                              "line": 67,
+                              "line": 66,
                               "column": 27
                             }
                           },
@@ -1205,15 +1099,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A constant that specifies how SceneKit horizontally aligns each line of text within its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523158-alignmentmode\n     ",
-                          "start": 2683,
-                          "end": 2915,
+                          "start": 2686,
+                          "end": 2918,
                           "loc": {
                             "start": {
-                              "line": 62,
+                              "line": 61,
                               "column": 4
                             },
                             "end": {
-                              "line": 66,
+                              "line": 65,
                               "column": 7
                             }
                           }
@@ -1223,15 +1117,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A constant that specifies how SceneKit truncates text that is too long to fit its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523414-truncationmode\n     ",
-                          "start": 2949,
-                          "end": 3176,
+                          "start": 2952,
+                          "end": 3179,
                           "loc": {
                             "start": {
-                              "line": 69,
+                              "line": 68,
                               "column": 4
                             },
                             "end": {
-                              "line": 73,
+                              "line": 72,
                               "column": 7
                             }
                           }
@@ -1240,58 +1134,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3181,
-                      "end": 3205,
+                      "start": 3184,
+                      "end": 3208,
                       "loc": {
                         "start": {
-                          "line": 74,
+                          "line": 73,
                           "column": 4
                         },
                         "end": {
-                          "line": 74,
+                          "line": 73,
                           "column": 28
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3181,
-                        "end": 3205,
+                        "start": 3184,
+                        "end": 3208,
                         "loc": {
                           "start": {
-                            "line": 74,
+                            "line": 73,
                             "column": 4
                           },
                           "end": {
-                            "line": 74,
+                            "line": 73,
                             "column": 28
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3181,
-                          "end": 3200,
+                          "start": 3184,
+                          "end": 3203,
                           "loc": {
                             "start": {
-                              "line": 74,
+                              "line": 73,
                               "column": 4
                             },
                             "end": {
-                              "line": 74,
+                              "line": 73,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3181,
-                            "end": 3185,
+                            "start": 3184,
+                            "end": 3188,
                             "loc": {
                               "start": {
-                                "line": 74,
+                                "line": 73,
                                 "column": 4
                               },
                               "end": {
-                                "line": 74,
+                                "line": 73,
                                 "column": 8
                               }
                             },
@@ -1299,15 +1193,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3186,
-                            "end": 3200,
+                            "start": 3189,
+                            "end": 3203,
                             "loc": {
                               "start": {
-                                "line": 74,
+                                "line": 73,
                                 "column": 9
                               },
                               "end": {
-                                "line": 74,
+                                "line": 73,
                                 "column": 23
                               },
                               "identifierName": "truncationMode"
@@ -1319,15 +1213,15 @@
                         },
                         "right": {
                           "type": "StringLiteral",
-                          "start": 3203,
-                          "end": 3205,
+                          "start": 3206,
+                          "end": 3208,
                           "loc": {
                             "start": {
-                              "line": 74,
+                              "line": 73,
                               "column": 26
                             },
                             "end": {
-                              "line": 74,
+                              "line": 73,
                               "column": 28
                             }
                           },
@@ -1343,15 +1237,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A constant that specifies how SceneKit truncates text that is too long to fit its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523414-truncationmode\n     ",
-                          "start": 2949,
-                          "end": 3176,
+                          "start": 2952,
+                          "end": 3179,
                           "loc": {
                             "start": {
-                              "line": 69,
+                              "line": 68,
                               "column": 4
                             },
                             "end": {
-                              "line": 73,
+                              "line": 72,
                               "column": 7
                             }
                           }
@@ -1360,73 +1254,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3211,
-                      "end": 3232,
+                      "start": 3214,
+                      "end": 3235,
                       "loc": {
                         "start": {
-                          "line": 76,
+                          "line": 75,
                           "column": 4
                         },
                         "end": {
-                          "line": 76,
+                          "line": 75,
                           "column": 25
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3211,
-                        "end": 3232,
+                        "start": 3214,
+                        "end": 3235,
                         "loc": {
                           "start": {
-                            "line": 76,
+                            "line": 75,
                             "column": 4
                           },
                           "end": {
-                            "line": 76,
+                            "line": 75,
                             "column": 25
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3211,
-                          "end": 3225,
+                          "start": 3214,
+                          "end": 3228,
                           "loc": {
                             "start": {
-                              "line": 76,
+                              "line": 75,
                               "column": 4
                             },
                             "end": {
-                              "line": 76,
+                              "line": 75,
                               "column": 18
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3211,
-                            "end": 3215,
+                            "start": 3214,
+                            "end": 3218,
                             "loc": {
                               "start": {
-                                "line": 76,
+                                "line": 75,
                                 "column": 4
                               },
                               "end": {
-                                "line": 76,
+                                "line": 75,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3216,
-                            "end": 3225,
+                            "start": 3219,
+                            "end": 3228,
                             "loc": {
                               "start": {
-                                "line": 76,
+                                "line": 75,
                                 "column": 9
                               },
                               "end": {
-                                "line": 76,
+                                "line": 75,
                                 "column": 18
                               },
                               "identifierName": "_textSize"
@@ -1437,15 +1331,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 3228,
-                          "end": 3232,
+                          "start": 3231,
+                          "end": 3235,
                           "loc": {
                             "start": {
-                              "line": 76,
+                              "line": 75,
                               "column": 21
                             },
                             "end": {
-                              "line": 76,
+                              "line": 75,
                               "column": 25
                             }
                           },
@@ -1458,15 +1352,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Text’s 3D Representation",
-                          "start": 3238,
-                          "end": 3278,
+                          "start": 3241,
+                          "end": 3281,
                           "loc": {
                             "start": {
-                              "line": 78,
+                              "line": 77,
                               "column": 4
                             },
                             "end": {
-                              "line": 78,
+                              "line": 77,
                               "column": 44
                             }
                           }
@@ -1474,15 +1368,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A number that determines the accuracy or smoothness of the text geometry.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1524111-flatness\n     ",
-                          "start": 3284,
-                          "end": 3486,
+                          "start": 3287,
+                          "end": 3489,
                           "loc": {
                             "start": {
-                              "line": 80,
+                              "line": 79,
                               "column": 4
                             },
                             "end": {
-                              "line": 84,
+                              "line": 83,
                               "column": 7
                             }
                           }
@@ -1491,58 +1385,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3491,
-                      "end": 3508,
+                      "start": 3494,
+                      "end": 3511,
                       "loc": {
                         "start": {
-                          "line": 85,
+                          "line": 84,
                           "column": 4
                         },
                         "end": {
-                          "line": 85,
+                          "line": 84,
                           "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3491,
-                        "end": 3508,
+                        "start": 3494,
+                        "end": 3511,
                         "loc": {
                           "start": {
-                            "line": 85,
+                            "line": 84,
                             "column": 4
                           },
                           "end": {
-                            "line": 85,
+                            "line": 84,
                             "column": 21
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3491,
-                          "end": 3504,
+                          "start": 3494,
+                          "end": 3507,
                           "loc": {
                             "start": {
-                              "line": 85,
+                              "line": 84,
                               "column": 4
                             },
                             "end": {
-                              "line": 85,
+                              "line": 84,
                               "column": 17
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3491,
-                            "end": 3495,
+                            "start": 3494,
+                            "end": 3498,
                             "loc": {
                               "start": {
-                                "line": 85,
+                                "line": 84,
                                 "column": 4
                               },
                               "end": {
-                                "line": 85,
+                                "line": 84,
                                 "column": 8
                               }
                             },
@@ -1550,15 +1444,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3496,
-                            "end": 3504,
+                            "start": 3499,
+                            "end": 3507,
                             "loc": {
                               "start": {
-                                "line": 85,
+                                "line": 84,
                                 "column": 9
                               },
                               "end": {
-                                "line": 85,
+                                "line": 84,
                                 "column": 17
                               },
                               "identifierName": "flatness"
@@ -1570,15 +1464,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3507,
-                          "end": 3508,
+                          "start": 3510,
+                          "end": 3511,
                           "loc": {
                             "start": {
-                              "line": 85,
+                              "line": 84,
                               "column": 20
                             },
                             "end": {
-                              "line": 85,
+                              "line": 84,
                               "column": 21
                             }
                           },
@@ -1597,15 +1491,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Text’s 3D Representation",
-                          "start": 3238,
-                          "end": 3278,
+                          "start": 3241,
+                          "end": 3281,
                           "loc": {
                             "start": {
-                              "line": 78,
+                              "line": 77,
                               "column": 4
                             },
                             "end": {
-                              "line": 78,
+                              "line": 77,
                               "column": 44
                             }
                           }
@@ -1613,15 +1507,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A number that determines the accuracy or smoothness of the text geometry.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1524111-flatness\n     ",
-                          "start": 3284,
-                          "end": 3486,
+                          "start": 3287,
+                          "end": 3489,
                           "loc": {
                             "start": {
-                              "line": 80,
+                              "line": 79,
                               "column": 4
                             },
                             "end": {
-                              "line": 84,
+                              "line": 83,
                               "column": 7
                             }
                           }
@@ -1631,15 +1525,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The extent of the extruded text in the z-axis direction. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522604-extrusiondepth\n     ",
-                          "start": 3514,
-                          "end": 3717,
+                          "start": 3517,
+                          "end": 3720,
                           "loc": {
                             "start": {
-                              "line": 87,
+                              "line": 86,
                               "column": 4
                             },
                             "end": {
-                              "line": 91,
+                              "line": 90,
                               "column": 7
                             }
                           }
@@ -1648,58 +1542,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3722,
-                      "end": 3745,
+                      "start": 3725,
+                      "end": 3748,
                       "loc": {
                         "start": {
-                          "line": 92,
+                          "line": 91,
                           "column": 4
                         },
                         "end": {
-                          "line": 92,
+                          "line": 91,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3722,
-                        "end": 3745,
+                        "start": 3725,
+                        "end": 3748,
                         "loc": {
                           "start": {
-                            "line": 92,
+                            "line": 91,
                             "column": 4
                           },
                           "end": {
-                            "line": 92,
+                            "line": 91,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3722,
-                          "end": 3741,
+                          "start": 3725,
+                          "end": 3744,
                           "loc": {
                             "start": {
-                              "line": 92,
+                              "line": 91,
                               "column": 4
                             },
                             "end": {
-                              "line": 92,
+                              "line": 91,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3722,
-                            "end": 3726,
+                            "start": 3725,
+                            "end": 3729,
                             "loc": {
                               "start": {
-                                "line": 92,
+                                "line": 91,
                                 "column": 4
                               },
                               "end": {
-                                "line": 92,
+                                "line": 91,
                                 "column": 8
                               }
                             },
@@ -1707,15 +1601,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3727,
-                            "end": 3741,
+                            "start": 3730,
+                            "end": 3744,
                             "loc": {
                               "start": {
-                                "line": 92,
+                                "line": 91,
                                 "column": 9
                               },
                               "end": {
-                                "line": 92,
+                                "line": 91,
                                 "column": 23
                               },
                               "identifierName": "extrusionDepth"
@@ -1727,15 +1621,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3744,
-                          "end": 3745,
+                          "start": 3747,
+                          "end": 3748,
                           "loc": {
                             "start": {
-                              "line": 92,
+                              "line": 91,
                               "column": 26
                             },
                             "end": {
-                              "line": 92,
+                              "line": 91,
                               "column": 27
                             }
                           },
@@ -1754,15 +1648,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The extent of the extruded text in the z-axis direction. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522604-extrusiondepth\n     ",
-                          "start": 3514,
-                          "end": 3717,
+                          "start": 3517,
+                          "end": 3720,
                           "loc": {
                             "start": {
-                              "line": 87,
+                              "line": 86,
                               "column": 4
                             },
                             "end": {
-                              "line": 91,
+                              "line": 90,
                               "column": 7
                             }
                           }
@@ -1772,15 +1666,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522846-chamferradius\n     ",
-                          "start": 3751,
-                          "end": 3939,
+                          "start": 3754,
+                          "end": 3942,
                           "loc": {
                             "start": {
-                              "line": 94,
+                              "line": 93,
                               "column": 4
                             },
                             "end": {
-                              "line": 98,
+                              "line": 97,
                               "column": 7
                             }
                           }
@@ -1789,58 +1683,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3944,
-                      "end": 3966,
+                      "start": 3947,
+                      "end": 3969,
                       "loc": {
                         "start": {
-                          "line": 99,
+                          "line": 98,
                           "column": 4
                         },
                         "end": {
-                          "line": 99,
+                          "line": 98,
                           "column": 26
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3944,
-                        "end": 3966,
+                        "start": 3947,
+                        "end": 3969,
                         "loc": {
                           "start": {
-                            "line": 99,
+                            "line": 98,
                             "column": 4
                           },
                           "end": {
-                            "line": 99,
+                            "line": 98,
                             "column": 26
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3944,
-                          "end": 3962,
+                          "start": 3947,
+                          "end": 3965,
                           "loc": {
                             "start": {
-                              "line": 99,
+                              "line": 98,
                               "column": 4
                             },
                             "end": {
-                              "line": 99,
+                              "line": 98,
                               "column": 22
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3944,
-                            "end": 3948,
+                            "start": 3947,
+                            "end": 3951,
                             "loc": {
                               "start": {
-                                "line": 99,
+                                "line": 98,
                                 "column": 4
                               },
                               "end": {
-                                "line": 99,
+                                "line": 98,
                                 "column": 8
                               }
                             },
@@ -1848,15 +1742,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3949,
-                            "end": 3962,
+                            "start": 3952,
+                            "end": 3965,
                             "loc": {
                               "start": {
-                                "line": 99,
+                                "line": 98,
                                 "column": 9
                               },
                               "end": {
-                                "line": 99,
+                                "line": 98,
                                 "column": 22
                               },
                               "identifierName": "chamferRadius"
@@ -1868,15 +1762,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3965,
-                          "end": 3966,
+                          "start": 3968,
+                          "end": 3969,
                           "loc": {
                             "start": {
-                              "line": 99,
+                              "line": 98,
                               "column": 25
                             },
                             "end": {
-                              "line": 99,
+                              "line": 98,
                               "column": 26
                             }
                           },
@@ -1895,15 +1789,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522846-chamferradius\n     ",
-                          "start": 3751,
-                          "end": 3939,
+                          "start": 3754,
+                          "end": 3942,
                           "loc": {
                             "start": {
-                              "line": 94,
+                              "line": 93,
                               "column": 4
                             },
                             "end": {
-                              "line": 98,
+                              "line": 97,
                               "column": 7
                             }
                           }
@@ -1913,15 +1807,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523334-chamferprofile\n     ",
-                          "start": 3972,
-                          "end": 4188,
+                          "start": 3975,
+                          "end": 4191,
                           "loc": {
                             "start": {
-                              "line": 101,
+                              "line": 100,
                               "column": 4
                             },
                             "end": {
-                              "line": 105,
+                              "line": 104,
                               "column": 7
                             }
                           }
@@ -1930,58 +1824,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4193,
-                      "end": 4219,
+                      "start": 4196,
+                      "end": 4222,
                       "loc": {
                         "start": {
-                          "line": 106,
+                          "line": 105,
                           "column": 4
                         },
                         "end": {
-                          "line": 106,
+                          "line": 105,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4193,
-                        "end": 4219,
+                        "start": 4196,
+                        "end": 4222,
                         "loc": {
                           "start": {
-                            "line": 106,
+                            "line": 105,
                             "column": 4
                           },
                           "end": {
-                            "line": 106,
+                            "line": 105,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4193,
-                          "end": 4212,
+                          "start": 4196,
+                          "end": 4215,
                           "loc": {
                             "start": {
-                              "line": 106,
+                              "line": 105,
                               "column": 4
                             },
                             "end": {
-                              "line": 106,
+                              "line": 105,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4193,
-                            "end": 4197,
+                            "start": 4196,
+                            "end": 4200,
                             "loc": {
                               "start": {
-                                "line": 106,
+                                "line": 105,
                                 "column": 4
                               },
                               "end": {
-                                "line": 106,
+                                "line": 105,
                                 "column": 8
                               }
                             },
@@ -1989,15 +1883,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4198,
-                            "end": 4212,
+                            "start": 4201,
+                            "end": 4215,
                             "loc": {
                               "start": {
-                                "line": 106,
+                                "line": 105,
                                 "column": 9
                               },
                               "end": {
-                                "line": 106,
+                                "line": 105,
                                 "column": 23
                               },
                               "identifierName": "chamferProfile"
@@ -2009,15 +1903,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 4215,
-                          "end": 4219,
+                          "start": 4218,
+                          "end": 4222,
                           "loc": {
                             "start": {
-                              "line": 106,
+                              "line": 105,
                               "column": 26
                             },
                             "end": {
-                              "line": 106,
+                              "line": 105,
                               "column": 30
                             }
                           }
@@ -2028,15 +1922,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523334-chamferprofile\n     ",
-                          "start": 3972,
-                          "end": 4188,
+                          "start": 3975,
+                          "end": 4191,
                           "loc": {
                             "start": {
-                              "line": 101,
+                              "line": 100,
                               "column": 4
                             },
                             "end": {
-                              "line": 105,
+                              "line": 104,
                               "column": 7
                             }
                           }
@@ -2051,15 +1945,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Text Geometry",
-                    "start": 416,
-                    "end": 443,
+                    "start": 419,
+                    "end": 446,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 14,
                         "column": 2
                       },
                       "end": {
-                        "line": 15,
+                        "line": 14,
                         "column": 29
                       }
                     }
@@ -2067,15 +1961,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a text geometry from a specified string, extruded with a specified depth.\n   * @access public\n   * @constructor\n   * @param {?Object} string - An NSString or NSAttributedString object containing text from which to create the geometry.\n   * @param {number} extrusionDepth - The extent of the text geometry in the Z dimension of its local coordinate space. Specify a depth of 0.0 to create 2D text confined to a plane.\n   * @desc In the local coordinate system of the text geometry, the origin corresponds to the lower left corner of the text’s layout rectangle, with the text extending in the x- and y-axis dimensions. (SceneKit computes a layout rectangle automatically, or you can specify one using the containerFrame property.) The geometry is centered along its z-axis. For example, if its extrusionDepth property is 1.0, the geometry extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape—the geometry is confined to the plane whose z-coordinate is 0.0, and viewable only from its front unless its material’s isDoubleSided property is true.\n   * @see https://developer.apple.com/documentation/scenekit/scntext/1522734-init\n   ",
-                    "start": 447,
-                    "end": 1643,
+                    "start": 450,
+                    "end": 1646,
                     "loc": {
                       "start": {
-                        "line": 17,
+                        "line": 16,
                         "column": 2
                       },
                       "end": {
-                        "line": 25,
+                        "line": 24,
                         "column": 5
                       }
                     }
@@ -2085,15 +1979,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing Text Layout",
-                    "start": 4227,
-                    "end": 4250,
+                    "start": 4230,
+                    "end": 4253,
                     "loc": {
                       "start": {
-                        "line": 109,
+                        "line": 108,
                         "column": 2
                       },
                       "end": {
-                        "line": 109,
+                        "line": 108,
                         "column": 25
                       }
                     }
@@ -2101,15 +1995,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The two-dimensional extent of the text after layout.\n   * @type {CGSize}\n   * @desc This property reports the size of the smallest bounding rectangle containing the text. This size does not necessarily match that of the layout rectangle specified by the containerFrame property. A long body of text may overflow the layout rectangle, depending on the values of the isWrapped and truncationMode properties, and a short string of text may fit in an area smaller than the layout rectangle.\n   * @see https://developer.apple.com/documentation/scenekit/scntext/1523680-textsize\n   ",
-                    "start": 4254,
-                    "end": 4841,
+                    "start": 4257,
+                    "end": 4844,
                     "loc": {
                       "start": {
-                        "line": 111,
+                        "line": 110,
                         "column": 2
                       },
                       "end": {
-                        "line": 116,
+                        "line": 115,
                         "column": 5
                       }
                     }
@@ -2118,30 +2012,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4844,
-                "end": 4890,
+                "start": 4847,
+                "end": 4893,
                 "loc": {
                   "start": {
-                    "line": 117,
+                    "line": 116,
                     "column": 2
                   },
                   "end": {
-                    "line": 119,
+                    "line": 118,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4848,
-                  "end": 4856,
+                  "start": 4851,
+                  "end": 4859,
                   "loc": {
                     "start": {
-                      "line": 117,
+                      "line": 116,
                       "column": 6
                     },
                     "end": {
-                      "line": 117,
+                      "line": 116,
                       "column": 14
                     },
                     "identifierName": "textSize"
@@ -2157,73 +2051,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4859,
-                  "end": 4890,
+                  "start": 4862,
+                  "end": 4893,
                   "loc": {
                     "start": {
-                      "line": 117,
+                      "line": 116,
                       "column": 17
                     },
                     "end": {
-                      "line": 119,
+                      "line": 118,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4865,
-                      "end": 4886,
+                      "start": 4868,
+                      "end": 4889,
                       "loc": {
                         "start": {
-                          "line": 118,
+                          "line": 117,
                           "column": 4
                         },
                         "end": {
-                          "line": 118,
+                          "line": 117,
                           "column": 25
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 4872,
-                        "end": 4886,
+                        "start": 4875,
+                        "end": 4889,
                         "loc": {
                           "start": {
-                            "line": 118,
+                            "line": 117,
                             "column": 11
                           },
                           "end": {
-                            "line": 118,
+                            "line": 117,
                             "column": 25
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 4872,
-                          "end": 4876,
+                          "start": 4875,
+                          "end": 4879,
                           "loc": {
                             "start": {
-                              "line": 118,
+                              "line": 117,
                               "column": 11
                             },
                             "end": {
-                              "line": 118,
+                              "line": 117,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 4877,
-                          "end": 4886,
+                          "start": 4880,
+                          "end": 4889,
                           "loc": {
                             "start": {
-                              "line": 118,
+                              "line": 117,
                               "column": 16
                             },
                             "end": {
-                              "line": 118,
+                              "line": 117,
                               "column": 25
                             },
                             "identifierName": "_textSize"
@@ -2240,15 +2134,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing Text Layout",
-                    "start": 4227,
-                    "end": 4250,
+                    "start": 4230,
+                    "end": 4253,
                     "loc": {
                       "start": {
-                        "line": 109,
+                        "line": 108,
                         "column": 2
                       },
                       "end": {
-                        "line": 109,
+                        "line": 108,
                         "column": 25
                       }
                     }
@@ -2256,15 +2150,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The two-dimensional extent of the text after layout.\n   * @type {CGSize}\n   * @desc This property reports the size of the smallest bounding rectangle containing the text. This size does not necessarily match that of the layout rectangle specified by the containerFrame property. A long body of text may overflow the layout rectangle, depending on the values of the isWrapped and truncationMode properties, and a short string of text may fit in an area smaller than the layout rectangle.\n   * @see https://developer.apple.com/documentation/scenekit/scntext/1523680-textsize\n   ",
-                    "start": 4254,
-                    "end": 4841,
+                    "start": 4257,
+                    "end": 4844,
                     "loc": {
                       "start": {
-                        "line": 111,
+                        "line": 110,
                         "column": 2
                       },
                       "end": {
-                        "line": 116,
+                        "line": 115,
                         "column": 5
                       }
                     }
@@ -2275,17 +2169,49 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
-              "start": 144,
-              "end": 362,
+              "type": "CommentLine",
+              "value": "import CGRect from '../CoreGraphics/CGRect'",
+              "start": 54,
+              "end": 99,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 13,
+                  "line": 4,
+                  "column": 45
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import CGSize from '../CoreGraphics/CGSize'",
+              "start": 100,
+              "end": 145,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 45
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
+              "start": 147,
+              "end": 365,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 0
+                },
+                "end": {
+                  "line": 12,
                   "column": 3
                 }
               }
@@ -2295,17 +2221,49 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
-            "start": 144,
-            "end": 362,
+            "type": "CommentLine",
+            "value": "import CGRect from '../CoreGraphics/CGRect'",
+            "start": 54,
+            "end": 99,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 45
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import CGSize from '../CoreGraphics/CGSize'",
+            "start": 100,
+            "end": 145,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 45
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
+            "start": 147,
+            "end": 365,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -2353,17 +2311,49 @@
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
-      "start": 144,
-      "end": 362,
+      "type": "CommentLine",
+      "value": "import CGRect from '../CoreGraphics/CGRect'",
+      "start": 54,
+      "end": 99,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 4,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "import CGSize from '../CoreGraphics/CGSize'",
+      "start": 100,
+      "end": 145,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
+      "start": 147,
+      "end": 365,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
           "column": 3
         }
       }
@@ -2371,15 +2361,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Text Geometry",
-      "start": 416,
-      "end": 443,
+      "start": 419,
+      "end": 446,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 29
         }
       }
@@ -2387,15 +2377,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a text geometry from a specified string, extruded with a specified depth.\n   * @access public\n   * @constructor\n   * @param {?Object} string - An NSString or NSAttributedString object containing text from which to create the geometry.\n   * @param {number} extrusionDepth - The extent of the text geometry in the Z dimension of its local coordinate space. Specify a depth of 0.0 to create 2D text confined to a plane.\n   * @desc In the local coordinate system of the text geometry, the origin corresponds to the lower left corner of the text’s layout rectangle, with the text extending in the x- and y-axis dimensions. (SceneKit computes a layout rectangle automatically, or you can specify one using the containerFrame property.) The geometry is centered along its z-axis. For example, if its extrusionDepth property is 1.0, the geometry extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape—the geometry is confined to the plane whose z-coordinate is 0.0, and viewable only from its front unless its material’s isDoubleSided property is true.\n   * @see https://developer.apple.com/documentation/scenekit/scntext/1522734-init\n   ",
-      "start": 447,
-      "end": 1643,
+      "start": 450,
+      "end": 1646,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 5
         }
       }
@@ -2403,15 +2393,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Geometry’s Text Content",
-      "start": 1701,
-      "end": 1740,
+      "start": 1704,
+      "end": 1743,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 43
         }
       }
@@ -2419,15 +2409,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The string object whose text the geometry represents.\n     * @type {?Object}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523439-string\n     ",
-      "start": 1746,
-      "end": 1927,
+      "start": 1749,
+      "end": 1930,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 7
         }
       }
@@ -2435,15 +2425,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The font that SceneKit uses to create geometry from the text.\n     * @type {!UIFont}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523273-font\n     ",
-      "start": 1956,
-      "end": 2143,
+      "start": 1959,
+      "end": 2146,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 37,
           "column": 4
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 7
         }
       }
@@ -2451,15 +2441,15 @@
     {
       "type": "CommentLine",
       "value": " Managing Text Layout",
-      "start": 2171,
-      "end": 2194,
+      "start": 2174,
+      "end": 2197,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 45,
           "column": 4
         },
         "end": {
-          "line": 46,
+          "line": 45,
           "column": 27
         }
       }
@@ -2467,15 +2457,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A rectangle specifying the area in which SceneKit should lay out the text.\n     * @type {CGRect}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523654-containerframe\n     ",
-      "start": 2200,
-      "end": 2409,
+      "start": 2203,
+      "end": 2412,
       "loc": {
         "start": {
-          "line": 48,
+          "line": 47,
           "column": 4
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 7
         }
       }
@@ -2483,15 +2473,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value that specifies whether SceneKit wraps long lines of text.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523585-iswrapped\n     ",
-      "start": 2446,
-      "end": 2650,
+      "start": 2449,
+      "end": 2653,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 54,
           "column": 4
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 7
         }
       }
@@ -2499,15 +2489,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A constant that specifies how SceneKit horizontally aligns each line of text within its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523158-alignmentmode\n     ",
-      "start": 2683,
-      "end": 2915,
+      "start": 2686,
+      "end": 2918,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 61,
           "column": 4
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 7
         }
       }
@@ -2515,15 +2505,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A constant that specifies how SceneKit truncates text that is too long to fit its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523414-truncationmode\n     ",
-      "start": 2949,
-      "end": 3176,
+      "start": 2952,
+      "end": 3179,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 68,
           "column": 4
         },
         "end": {
-          "line": 73,
+          "line": 72,
           "column": 7
         }
       }
@@ -2531,15 +2521,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Text’s 3D Representation",
-      "start": 3238,
-      "end": 3278,
+      "start": 3241,
+      "end": 3281,
       "loc": {
         "start": {
-          "line": 78,
+          "line": 77,
           "column": 4
         },
         "end": {
-          "line": 78,
+          "line": 77,
           "column": 44
         }
       }
@@ -2547,15 +2537,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A number that determines the accuracy or smoothness of the text geometry.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1524111-flatness\n     ",
-      "start": 3284,
-      "end": 3486,
+      "start": 3287,
+      "end": 3489,
       "loc": {
         "start": {
-          "line": 80,
+          "line": 79,
           "column": 4
         },
         "end": {
-          "line": 84,
+          "line": 83,
           "column": 7
         }
       }
@@ -2563,15 +2553,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The extent of the extruded text in the z-axis direction. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522604-extrusiondepth\n     ",
-      "start": 3514,
-      "end": 3717,
+      "start": 3517,
+      "end": 3720,
       "loc": {
         "start": {
-          "line": 87,
+          "line": 86,
           "column": 4
         },
         "end": {
-          "line": 91,
+          "line": 90,
           "column": 7
         }
       }
@@ -2579,15 +2569,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522846-chamferradius\n     ",
-      "start": 3751,
-      "end": 3939,
+      "start": 3754,
+      "end": 3942,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 93,
           "column": 4
         },
         "end": {
-          "line": 98,
+          "line": 97,
           "column": 7
         }
       }
@@ -2595,15 +2585,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523334-chamferprofile\n     ",
-      "start": 3972,
-      "end": 4188,
+      "start": 3975,
+      "end": 4191,
       "loc": {
         "start": {
-          "line": 101,
+          "line": 100,
           "column": 4
         },
         "end": {
-          "line": 105,
+          "line": 104,
           "column": 7
         }
       }
@@ -2611,15 +2601,15 @@
     {
       "type": "CommentLine",
       "value": " Managing Text Layout",
-      "start": 4227,
-      "end": 4250,
+      "start": 4230,
+      "end": 4253,
       "loc": {
         "start": {
-          "line": 109,
+          "line": 108,
           "column": 2
         },
         "end": {
-          "line": 109,
+          "line": 108,
           "column": 25
         }
       }
@@ -2627,15 +2617,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The two-dimensional extent of the text after layout.\n   * @type {CGSize}\n   * @desc This property reports the size of the smallest bounding rectangle containing the text. This size does not necessarily match that of the layout rectangle specified by the containerFrame property. A long body of text may overflow the layout rectangle, depending on the values of the isWrapped and truncationMode properties, and a short string of text may fit in an area smaller than the layout rectangle.\n   * @see https://developer.apple.com/documentation/scenekit/scntext/1523680-textsize\n   ",
-      "start": 4254,
-      "end": 4841,
+      "start": 4257,
+      "end": 4844,
       "loc": {
         "start": {
-          "line": 111,
+          "line": 110,
           "column": 2
         },
         "end": {
-          "line": 116,
+          "line": 115,
           "column": 5
         }
       }
@@ -2777,22 +2767,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import CGRect from '../CoreGraphics/CGRect'",
       "start": 54,
-      "end": 60,
+      "end": 99,
       "loc": {
         "start": {
           "line": 4,
@@ -2800,106 +2778,15 @@
         },
         "end": {
           "line": 4,
-          "column": 6
+          "column": 45
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "CGRect",
-      "start": 61,
-      "end": 67,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 13
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 68,
-      "end": 72,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 14
-        },
-        "end": {
-          "line": 4,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "../CoreGraphics/CGRect",
-      "start": 73,
-      "end": 97,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 19
-        },
-        "end": {
-          "line": 4,
-          "column": 43
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 98,
-      "end": 104,
+      "type": "CommentLine",
+      "value": "import CGSize from '../CoreGraphics/CGSize'",
+      "start": 100,
+      "end": 145,
       "loc": {
         "start": {
           "line": 5,
@@ -2907,101 +2794,22 @@
         },
         "end": {
           "line": 5,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "CGSize",
-      "start": 105,
-      "end": 111,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 7
-        },
-        "end": {
-          "line": 5,
-          "column": 13
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 112,
-      "end": 116,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 14
-        },
-        "end": {
-          "line": 5,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "../CoreGraphics/CGSize",
-      "start": 117,
-      "end": 141,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 19
-        },
-        "end": {
-          "line": 5,
-          "column": 43
+          "column": 45
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * A geometry based on a string of text, optionally extruded to create a three-dimensional object. \n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scntext\n ",
-      "start": 144,
-      "end": 362,
+      "start": 147,
+      "end": 365,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 3
         }
       }
@@ -3021,15 +2829,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 363,
-      "end": 369,
+      "start": 366,
+      "end": 372,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 6
         }
       }
@@ -3049,15 +2857,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 370,
-      "end": 377,
+      "start": 373,
+      "end": 380,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 14
         }
       }
@@ -3077,15 +2885,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 378,
-      "end": 383,
+      "start": 381,
+      "end": 386,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 20
         }
       }
@@ -3103,15 +2911,15 @@
         "binop": null
       },
       "value": "SCNText",
-      "start": 384,
-      "end": 391,
+      "start": 387,
+      "end": 394,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 21
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 28
         }
       }
@@ -3131,15 +2939,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 392,
-      "end": 399,
+      "start": 395,
+      "end": 402,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 29
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 36
         }
       }
@@ -3157,15 +2965,15 @@
         "binop": null
       },
       "value": "SCNGeometry",
-      "start": 400,
-      "end": 411,
+      "start": 403,
+      "end": 414,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 37
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 48
         }
       }
@@ -3182,15 +2990,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 412,
-      "end": 413,
+      "start": 415,
+      "end": 416,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 49
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 50
         }
       }
@@ -3198,15 +3006,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Text Geometry",
-      "start": 416,
-      "end": 443,
+      "start": 419,
+      "end": 446,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 29
         }
       }
@@ -3214,15 +3022,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a text geometry from a specified string, extruded with a specified depth.\n   * @access public\n   * @constructor\n   * @param {?Object} string - An NSString or NSAttributedString object containing text from which to create the geometry.\n   * @param {number} extrusionDepth - The extent of the text geometry in the Z dimension of its local coordinate space. Specify a depth of 0.0 to create 2D text confined to a plane.\n   * @desc In the local coordinate system of the text geometry, the origin corresponds to the lower left corner of the text’s layout rectangle, with the text extending in the x- and y-axis dimensions. (SceneKit computes a layout rectangle automatically, or you can specify one using the containerFrame property.) The geometry is centered along its z-axis. For example, if its extrusionDepth property is 1.0, the geometry extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape—the geometry is confined to the plane whose z-coordinate is 0.0, and viewable only from its front unless its material’s isDoubleSided property is true.\n   * @see https://developer.apple.com/documentation/scenekit/scntext/1522734-init\n   ",
-      "start": 447,
-      "end": 1643,
+      "start": 450,
+      "end": 1646,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 5
         }
       }
@@ -3240,15 +3048,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1646,
-      "end": 1657,
+      "start": 1649,
+      "end": 1660,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 2
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 13
         }
       }
@@ -3265,15 +3073,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1657,
-      "end": 1658,
+      "start": 1660,
+      "end": 1661,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 13
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 14
         }
       }
@@ -3291,15 +3099,15 @@
         "binop": null
       },
       "value": "string",
-      "start": 1658,
-      "end": 1664,
+      "start": 1661,
+      "end": 1667,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 14
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 20
         }
       }
@@ -3317,15 +3125,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1664,
-      "end": 1665,
+      "start": 1667,
+      "end": 1668,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 20
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 21
         }
       }
@@ -3343,15 +3151,15 @@
         "binop": null
       },
       "value": "extrusionDepth",
-      "start": 1666,
-      "end": 1680,
+      "start": 1669,
+      "end": 1683,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 22
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 36
         }
       }
@@ -3368,15 +3176,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1680,
-      "end": 1681,
+      "start": 1683,
+      "end": 1684,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 36
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 37
         }
       }
@@ -3393,15 +3201,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1682,
-      "end": 1683,
+      "start": 1685,
+      "end": 1686,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 38
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 39
         }
       }
@@ -3421,15 +3229,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1688,
-      "end": 1693,
+      "start": 1691,
+      "end": 1696,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 9
         }
       }
@@ -3446,15 +3254,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1693,
-      "end": 1694,
+      "start": 1696,
+      "end": 1697,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 9
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 10
         }
       }
@@ -3471,15 +3279,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1694,
-      "end": 1695,
+      "start": 1697,
+      "end": 1698,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 26,
           "column": 10
         },
         "end": {
-          "line": 27,
+          "line": 26,
           "column": 11
         }
       }
@@ -3487,15 +3295,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Geometry’s Text Content",
-      "start": 1701,
-      "end": 1740,
+      "start": 1704,
+      "end": 1743,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 29,
+          "line": 28,
           "column": 43
         }
       }
@@ -3503,15 +3311,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The string object whose text the geometry represents.\n     * @type {?Object}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523439-string\n     ",
-      "start": 1746,
-      "end": 1927,
+      "start": 1749,
+      "end": 1930,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 7
         }
       }
@@ -3531,15 +3339,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1932,
-      "end": 1936,
+      "start": 1935,
+      "end": 1939,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 8
         }
       }
@@ -3557,15 +3365,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1936,
-      "end": 1937,
+      "start": 1939,
+      "end": 1940,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 8
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 9
         }
       }
@@ -3583,15 +3391,15 @@
         "binop": null
       },
       "value": "string",
-      "start": 1937,
-      "end": 1943,
+      "start": 1940,
+      "end": 1946,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 9
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 15
         }
       }
@@ -3610,15 +3418,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1944,
-      "end": 1945,
+      "start": 1947,
+      "end": 1948,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 16
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 17
         }
       }
@@ -3638,15 +3446,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1946,
-      "end": 1950,
+      "start": 1949,
+      "end": 1953,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 18
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 22
         }
       }
@@ -3654,15 +3462,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The font that SceneKit uses to create geometry from the text.\n     * @type {!UIFont}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523273-font\n     ",
-      "start": 1956,
-      "end": 2143,
+      "start": 1959,
+      "end": 2146,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 37,
           "column": 4
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 7
         }
       }
@@ -3682,15 +3490,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2148,
-      "end": 2152,
+      "start": 2151,
+      "end": 2155,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 4
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 8
         }
       }
@@ -3708,15 +3516,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2152,
-      "end": 2153,
+      "start": 2155,
+      "end": 2156,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 8
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 9
         }
       }
@@ -3734,15 +3542,15 @@
         "binop": null
       },
       "value": "font",
-      "start": 2153,
-      "end": 2157,
+      "start": 2156,
+      "end": 2160,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 9
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 13
         }
       }
@@ -3761,15 +3569,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2158,
-      "end": 2159,
+      "start": 2161,
+      "end": 2162,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 14
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 15
         }
       }
@@ -3789,15 +3597,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2160,
-      "end": 2164,
+      "start": 2163,
+      "end": 2167,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 42,
           "column": 16
         },
         "end": {
-          "line": 43,
+          "line": 42,
           "column": 20
         }
       }
@@ -3805,15 +3613,15 @@
     {
       "type": "CommentLine",
       "value": " Managing Text Layout",
-      "start": 2171,
-      "end": 2194,
+      "start": 2174,
+      "end": 2197,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 45,
           "column": 4
         },
         "end": {
-          "line": 46,
+          "line": 45,
           "column": 27
         }
       }
@@ -3821,15 +3629,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A rectangle specifying the area in which SceneKit should lay out the text.\n     * @type {CGRect}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523654-containerframe\n     ",
-      "start": 2200,
-      "end": 2409,
+      "start": 2203,
+      "end": 2412,
       "loc": {
         "start": {
-          "line": 48,
+          "line": 47,
           "column": 4
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 7
         }
       }
@@ -3849,15 +3657,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2414,
-      "end": 2418,
+      "start": 2417,
+      "end": 2421,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 8
         }
       }
@@ -3875,15 +3683,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2418,
-      "end": 2419,
+      "start": 2421,
+      "end": 2422,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 8
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 9
         }
       }
@@ -3901,15 +3709,15 @@
         "binop": null
       },
       "value": "containerFrame",
-      "start": 2419,
-      "end": 2433,
+      "start": 2422,
+      "end": 2436,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 9
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 23
         }
       }
@@ -3928,15 +3736,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2434,
-      "end": 2435,
+      "start": 2437,
+      "end": 2438,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 24
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 25
         }
       }
@@ -3956,15 +3764,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2436,
-      "end": 2440,
+      "start": 2439,
+      "end": 2443,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 52,
           "column": 26
         },
         "end": {
-          "line": 53,
+          "line": 52,
           "column": 30
         }
       }
@@ -3972,15 +3780,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value that specifies whether SceneKit wraps long lines of text.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523585-iswrapped\n     ",
-      "start": 2446,
-      "end": 2650,
+      "start": 2449,
+      "end": 2653,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 54,
           "column": 4
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 7
         }
       }
@@ -4000,15 +3808,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2655,
-      "end": 2659,
+      "start": 2658,
+      "end": 2662,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 4
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 8
         }
       }
@@ -4026,15 +3834,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2659,
-      "end": 2660,
+      "start": 2662,
+      "end": 2663,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 8
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 9
         }
       }
@@ -4052,15 +3860,15 @@
         "binop": null
       },
       "value": "isWrapped",
-      "start": 2660,
-      "end": 2669,
+      "start": 2663,
+      "end": 2672,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 9
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 18
         }
       }
@@ -4079,15 +3887,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2670,
-      "end": 2671,
+      "start": 2673,
+      "end": 2674,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 19
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 20
         }
       }
@@ -4107,15 +3915,15 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2672,
-      "end": 2677,
+      "start": 2675,
+      "end": 2680,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 59,
           "column": 21
         },
         "end": {
-          "line": 60,
+          "line": 59,
           "column": 26
         }
       }
@@ -4123,15 +3931,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A constant that specifies how SceneKit horizontally aligns each line of text within its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523158-alignmentmode\n     ",
-      "start": 2683,
-      "end": 2915,
+      "start": 2686,
+      "end": 2918,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 61,
           "column": 4
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 7
         }
       }
@@ -4151,15 +3959,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2920,
-      "end": 2924,
+      "start": 2923,
+      "end": 2927,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 4
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 8
         }
       }
@@ -4177,15 +3985,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2924,
-      "end": 2925,
+      "start": 2927,
+      "end": 2928,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 8
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 9
         }
       }
@@ -4203,15 +4011,15 @@
         "binop": null
       },
       "value": "alignmentMode",
-      "start": 2925,
-      "end": 2938,
+      "start": 2928,
+      "end": 2941,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 9
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 22
         }
       }
@@ -4230,15 +4038,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2939,
-      "end": 2940,
+      "start": 2942,
+      "end": 2943,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 23
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 24
         }
       }
@@ -4257,15 +4065,15 @@
         "updateContext": null
       },
       "value": "",
-      "start": 2941,
-      "end": 2943,
+      "start": 2944,
+      "end": 2946,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 25
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 27
         }
       }
@@ -4273,15 +4081,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A constant that specifies how SceneKit truncates text that is too long to fit its container.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523414-truncationmode\n     ",
-      "start": 2949,
-      "end": 3176,
+      "start": 2952,
+      "end": 3179,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 68,
           "column": 4
         },
         "end": {
-          "line": 73,
+          "line": 72,
           "column": 7
         }
       }
@@ -4301,15 +4109,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3181,
-      "end": 3185,
+      "start": 3184,
+      "end": 3188,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 73,
           "column": 4
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 8
         }
       }
@@ -4327,15 +4135,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3185,
-      "end": 3186,
+      "start": 3188,
+      "end": 3189,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 73,
           "column": 8
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 9
         }
       }
@@ -4353,15 +4161,15 @@
         "binop": null
       },
       "value": "truncationMode",
-      "start": 3186,
-      "end": 3200,
+      "start": 3189,
+      "end": 3203,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 73,
           "column": 9
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 23
         }
       }
@@ -4380,15 +4188,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3201,
-      "end": 3202,
+      "start": 3204,
+      "end": 3205,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 73,
           "column": 24
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 25
         }
       }
@@ -4407,15 +4215,15 @@
         "updateContext": null
       },
       "value": "",
-      "start": 3203,
-      "end": 3205,
+      "start": 3206,
+      "end": 3208,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 73,
           "column": 26
         },
         "end": {
-          "line": 74,
+          "line": 73,
           "column": 28
         }
       }
@@ -4435,15 +4243,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3211,
-      "end": 3215,
+      "start": 3214,
+      "end": 3218,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 4
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 8
         }
       }
@@ -4461,15 +4269,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3215,
-      "end": 3216,
+      "start": 3218,
+      "end": 3219,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 8
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 9
         }
       }
@@ -4487,15 +4295,15 @@
         "binop": null
       },
       "value": "_textSize",
-      "start": 3216,
-      "end": 3225,
+      "start": 3219,
+      "end": 3228,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 9
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 18
         }
       }
@@ -4514,15 +4322,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3226,
-      "end": 3227,
+      "start": 3229,
+      "end": 3230,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 19
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 20
         }
       }
@@ -4542,15 +4350,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3228,
-      "end": 3232,
+      "start": 3231,
+      "end": 3235,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 75,
           "column": 21
         },
         "end": {
-          "line": 76,
+          "line": 75,
           "column": 25
         }
       }
@@ -4558,15 +4366,15 @@
     {
       "type": "CommentLine",
       "value": " Managing the Text’s 3D Representation",
-      "start": 3238,
-      "end": 3278,
+      "start": 3241,
+      "end": 3281,
       "loc": {
         "start": {
-          "line": 78,
+          "line": 77,
           "column": 4
         },
         "end": {
-          "line": 78,
+          "line": 77,
           "column": 44
         }
       }
@@ -4574,15 +4382,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A number that determines the accuracy or smoothness of the text geometry.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1524111-flatness\n     ",
-      "start": 3284,
-      "end": 3486,
+      "start": 3287,
+      "end": 3489,
       "loc": {
         "start": {
-          "line": 80,
+          "line": 79,
           "column": 4
         },
         "end": {
-          "line": 84,
+          "line": 83,
           "column": 7
         }
       }
@@ -4602,15 +4410,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3491,
-      "end": 3495,
+      "start": 3494,
+      "end": 3498,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 4
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 8
         }
       }
@@ -4628,15 +4436,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3495,
-      "end": 3496,
+      "start": 3498,
+      "end": 3499,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 8
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 9
         }
       }
@@ -4654,15 +4462,15 @@
         "binop": null
       },
       "value": "flatness",
-      "start": 3496,
-      "end": 3504,
+      "start": 3499,
+      "end": 3507,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 9
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 17
         }
       }
@@ -4681,15 +4489,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3505,
-      "end": 3506,
+      "start": 3508,
+      "end": 3509,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 18
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 19
         }
       }
@@ -4708,15 +4516,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3507,
-      "end": 3508,
+      "start": 3510,
+      "end": 3511,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 84,
           "column": 20
         },
         "end": {
-          "line": 85,
+          "line": 84,
           "column": 21
         }
       }
@@ -4724,15 +4532,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The extent of the extruded text in the z-axis direction. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522604-extrusiondepth\n     ",
-      "start": 3514,
-      "end": 3717,
+      "start": 3517,
+      "end": 3720,
       "loc": {
         "start": {
-          "line": 87,
+          "line": 86,
           "column": 4
         },
         "end": {
-          "line": 91,
+          "line": 90,
           "column": 7
         }
       }
@@ -4752,15 +4560,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3722,
-      "end": 3726,
+      "start": 3725,
+      "end": 3729,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 4
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 8
         }
       }
@@ -4778,15 +4586,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3726,
-      "end": 3727,
+      "start": 3729,
+      "end": 3730,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 8
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 9
         }
       }
@@ -4804,15 +4612,15 @@
         "binop": null
       },
       "value": "extrusionDepth",
-      "start": 3727,
-      "end": 3741,
+      "start": 3730,
+      "end": 3744,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 9
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 23
         }
       }
@@ -4831,15 +4639,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3742,
-      "end": 3743,
+      "start": 3745,
+      "end": 3746,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 24
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 25
         }
       }
@@ -4858,15 +4666,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3744,
-      "end": 3745,
+      "start": 3747,
+      "end": 3748,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 91,
           "column": 26
         },
         "end": {
-          "line": 92,
+          "line": 91,
           "column": 27
         }
       }
@@ -4874,15 +4682,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1522846-chamferradius\n     ",
-      "start": 3751,
-      "end": 3939,
+      "start": 3754,
+      "end": 3942,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 93,
           "column": 4
         },
         "end": {
-          "line": 98,
+          "line": 97,
           "column": 7
         }
       }
@@ -4902,15 +4710,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3944,
-      "end": 3948,
+      "start": 3947,
+      "end": 3951,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 98,
           "column": 4
         },
         "end": {
-          "line": 99,
+          "line": 98,
           "column": 8
         }
       }
@@ -4928,15 +4736,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3948,
-      "end": 3949,
+      "start": 3951,
+      "end": 3952,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 98,
           "column": 8
         },
         "end": {
-          "line": 99,
+          "line": 98,
           "column": 9
         }
       }
@@ -4954,15 +4762,15 @@
         "binop": null
       },
       "value": "chamferRadius",
-      "start": 3949,
-      "end": 3962,
+      "start": 3952,
+      "end": 3965,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 98,
           "column": 9
         },
         "end": {
-          "line": 99,
+          "line": 98,
           "column": 22
         }
       }
@@ -4981,15 +4789,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3963,
-      "end": 3964,
+      "start": 3966,
+      "end": 3967,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 98,
           "column": 23
         },
         "end": {
-          "line": 99,
+          "line": 98,
           "column": 24
         }
       }
@@ -5008,15 +4816,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3965,
-      "end": 3966,
+      "start": 3968,
+      "end": 3969,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 98,
           "column": 25
         },
         "end": {
-          "line": 99,
+          "line": 98,
           "column": 26
         }
       }
@@ -5024,15 +4832,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scntext/1523334-chamferprofile\n     ",
-      "start": 3972,
-      "end": 4188,
+      "start": 3975,
+      "end": 4191,
       "loc": {
         "start": {
-          "line": 101,
+          "line": 100,
           "column": 4
         },
         "end": {
-          "line": 105,
+          "line": 104,
           "column": 7
         }
       }
@@ -5052,15 +4860,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4193,
-      "end": 4197,
+      "start": 4196,
+      "end": 4200,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 105,
           "column": 4
         },
         "end": {
-          "line": 106,
+          "line": 105,
           "column": 8
         }
       }
@@ -5078,15 +4886,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4197,
-      "end": 4198,
+      "start": 4200,
+      "end": 4201,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 105,
           "column": 8
         },
         "end": {
-          "line": 106,
+          "line": 105,
           "column": 9
         }
       }
@@ -5104,15 +4912,15 @@
         "binop": null
       },
       "value": "chamferProfile",
-      "start": 4198,
-      "end": 4212,
+      "start": 4201,
+      "end": 4215,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 105,
           "column": 9
         },
         "end": {
-          "line": 106,
+          "line": 105,
           "column": 23
         }
       }
@@ -5131,15 +4939,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4213,
-      "end": 4214,
+      "start": 4216,
+      "end": 4217,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 105,
           "column": 24
         },
         "end": {
-          "line": 106,
+          "line": 105,
           "column": 25
         }
       }
@@ -5159,15 +4967,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 4215,
-      "end": 4219,
+      "start": 4218,
+      "end": 4222,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 105,
           "column": 26
         },
         "end": {
-          "line": 106,
+          "line": 105,
           "column": 30
         }
       }
@@ -5184,15 +4992,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4222,
-      "end": 4223,
+      "start": 4225,
+      "end": 4226,
       "loc": {
         "start": {
-          "line": 107,
+          "line": 106,
           "column": 2
         },
         "end": {
-          "line": 107,
+          "line": 106,
           "column": 3
         }
       }
@@ -5200,15 +5008,15 @@
     {
       "type": "CommentLine",
       "value": " Managing Text Layout",
-      "start": 4227,
-      "end": 4250,
+      "start": 4230,
+      "end": 4253,
       "loc": {
         "start": {
-          "line": 109,
+          "line": 108,
           "column": 2
         },
         "end": {
-          "line": 109,
+          "line": 108,
           "column": 25
         }
       }
@@ -5216,11 +5024,37 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The two-dimensional extent of the text after layout.\n   * @type {CGSize}\n   * @desc This property reports the size of the smallest bounding rectangle containing the text. This size does not necessarily match that of the layout rectangle specified by the containerFrame property. A long body of text may overflow the layout rectangle, depending on the values of the isWrapped and truncationMode properties, and a short string of text may fit in an area smaller than the layout rectangle.\n   * @see https://developer.apple.com/documentation/scenekit/scntext/1523680-textsize\n   ",
-      "start": 4254,
-      "end": 4841,
+      "start": 4257,
+      "end": 4844,
       "loc": {
         "start": {
-          "line": 111,
+          "line": 110,
+          "column": 2
+        },
+        "end": {
+          "line": 115,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 4847,
+      "end": 4850,
+      "loc": {
+        "start": {
+          "line": 116,
           "column": 2
         },
         "end": {
@@ -5241,42 +5075,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "get",
-      "start": 4844,
-      "end": 4847,
-      "loc": {
-        "start": {
-          "line": 117,
-          "column": 2
-        },
-        "end": {
-          "line": 117,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
       "value": "textSize",
-      "start": 4848,
-      "end": 4856,
+      "start": 4851,
+      "end": 4859,
       "loc": {
         "start": {
-          "line": 117,
+          "line": 116,
           "column": 6
         },
         "end": {
-          "line": 117,
+          "line": 116,
           "column": 14
         }
       }
@@ -5293,15 +5101,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4856,
-      "end": 4857,
+      "start": 4859,
+      "end": 4860,
       "loc": {
         "start": {
-          "line": 117,
+          "line": 116,
           "column": 14
         },
         "end": {
-          "line": 117,
+          "line": 116,
           "column": 15
         }
       }
@@ -5318,15 +5126,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4857,
-      "end": 4858,
+      "start": 4860,
+      "end": 4861,
       "loc": {
         "start": {
-          "line": 117,
+          "line": 116,
           "column": 15
         },
         "end": {
-          "line": 117,
+          "line": 116,
           "column": 16
         }
       }
@@ -5343,15 +5151,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4859,
-      "end": 4860,
+      "start": 4862,
+      "end": 4863,
       "loc": {
         "start": {
-          "line": 117,
+          "line": 116,
           "column": 17
         },
         "end": {
-          "line": 117,
+          "line": 116,
           "column": 18
         }
       }
@@ -5371,15 +5179,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4865,
-      "end": 4871,
+      "start": 4868,
+      "end": 4874,
       "loc": {
         "start": {
-          "line": 118,
+          "line": 117,
           "column": 4
         },
         "end": {
-          "line": 118,
+          "line": 117,
           "column": 10
         }
       }
@@ -5399,15 +5207,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4872,
-      "end": 4876,
+      "start": 4875,
+      "end": 4879,
       "loc": {
         "start": {
-          "line": 118,
+          "line": 117,
           "column": 11
         },
         "end": {
-          "line": 118,
+          "line": 117,
           "column": 15
         }
       }
@@ -5425,15 +5233,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4876,
-      "end": 4877,
+      "start": 4879,
+      "end": 4880,
       "loc": {
         "start": {
-          "line": 118,
+          "line": 117,
           "column": 15
         },
         "end": {
-          "line": 118,
+          "line": 117,
           "column": 16
         }
       }
@@ -5451,15 +5259,15 @@
         "binop": null
       },
       "value": "_textSize",
-      "start": 4877,
-      "end": 4886,
+      "start": 4880,
+      "end": 4889,
       "loc": {
         "start": {
-          "line": 118,
+          "line": 117,
           "column": 16
         },
         "end": {
-          "line": 118,
+          "line": 117,
           "column": 25
         }
       }
@@ -5476,15 +5284,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4889,
-      "end": 4890,
+      "start": 4892,
+      "end": 4893,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 118,
           "column": 2
         },
         "end": {
-          "line": 119,
+          "line": 118,
           "column": 3
         }
       }
@@ -5501,15 +5309,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4891,
-      "end": 4892,
+      "start": 4894,
+      "end": 4895,
       "loc": {
         "start": {
-          "line": 120,
+          "line": 119,
           "column": 0
         },
         "end": {
-          "line": 120,
+          "line": 119,
           "column": 1
         }
       }
@@ -5527,15 +5335,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4893,
-      "end": 4893,
+      "start": 4896,
+      "end": 4896,
       "loc": {
         "start": {
-          "line": 121,
+          "line": 120,
           "column": 0
         },
         "end": {
-          "line": 121,
+          "line": 120,
           "column": 0
         }
       }

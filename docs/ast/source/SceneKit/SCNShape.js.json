@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2894,
+  "end": 2895,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 69,
+      "line": 68,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2894,
+    "end": 2895,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 69,
+        "line": 68,
         "column": 0
       }
     },
@@ -94,92 +94,39 @@
             "rawValue": "./SCNGeometry",
             "raw": "'./SCNGeometry'"
           },
-          "value": "./SCNGeometry"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 54,
-        "end": 99,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 45
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 61,
-            "end": 75,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 21
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 61,
-              "end": 75,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 21
-                },
-                "identifierName": "SCNChamferMode"
-              },
-              "name": "SCNChamferMode"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 81,
-          "end": 99,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 27
-            },
-            "end": {
-              "line": 4,
-              "column": 45
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNChamferMode",
-            "raw": "'./SCNChamferMode'"
-          },
-          "value": "./SCNChamferMode",
+          "value": "./SCNGeometry",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
-            "start": 102,
-            "end": 326,
+            "type": "CommentLine",
+            "value": "import SCNChamferMode from './SCNChamferMode'",
+            "start": 54,
+            "end": 101,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 12,
+                "line": 4,
+                "column": 47
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
+            "start": 103,
+            "end": 327,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
                 "column": 3
               }
             }
@@ -188,43 +135,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 327,
-        "end": 2893,
+        "start": 328,
+        "end": 2894,
         "loc": {
           "start": {
-            "line": 13,
+            "line": 12,
             "column": 0
           },
           "end": {
-            "line": 68,
+            "line": 67,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 342,
-          "end": 2893,
+          "start": 343,
+          "end": 2894,
           "loc": {
             "start": {
-              "line": 13,
+              "line": 12,
               "column": 15
             },
             "end": {
-              "line": 68,
+              "line": 67,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 348,
-            "end": 356,
+            "start": 349,
+            "end": 357,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 21
               },
               "end": {
-                "line": 13,
+                "line": 12,
                 "column": 29
               },
               "identifierName": "SCNShape"
@@ -234,15 +181,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 365,
-            "end": 376,
+            "start": 366,
+            "end": 377,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 38
               },
               "end": {
-                "line": 13,
+                "line": 12,
                 "column": 49
               },
               "identifierName": "SCNGeometry"
@@ -251,45 +198,45 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 377,
-            "end": 2893,
+            "start": 378,
+            "end": 2894,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 50
               },
               "end": {
-                "line": 68,
+                "line": 67,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1605,
-                "end": 2891,
+                "start": 1606,
+                "end": 2892,
                 "loc": {
                   "start": {
-                    "line": 25,
+                    "line": 24,
                     "column": 2
                   },
                   "end": {
-                    "line": 67,
+                    "line": 66,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1605,
-                  "end": 1616,
+                  "start": 1606,
+                  "end": 1617,
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 24,
                       "column": 2
                     },
                     "end": {
-                      "line": 25,
+                      "line": 24,
                       "column": 13
                     },
                     "identifierName": "constructor"
@@ -306,15 +253,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1617,
-                    "end": 1621,
+                    "start": 1618,
+                    "end": 1622,
                     "loc": {
                       "start": {
-                        "line": 25,
+                        "line": 24,
                         "column": 14
                       },
                       "end": {
-                        "line": 25,
+                        "line": 24,
                         "column": 18
                       },
                       "identifierName": "path"
@@ -323,15 +270,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1623,
-                    "end": 1637,
+                    "start": 1624,
+                    "end": 1638,
                     "loc": {
                       "start": {
-                        "line": 25,
+                        "line": 24,
                         "column": 20
                       },
                       "end": {
-                        "line": 25,
+                        "line": 24,
                         "column": 34
                       },
                       "identifierName": "extrusionDepth"
@@ -341,58 +288,58 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1639,
-                  "end": 2891,
+                  "start": 1640,
+                  "end": 2892,
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 24,
                       "column": 36
                     },
                     "end": {
-                      "line": 67,
+                      "line": 66,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1645,
-                      "end": 1652,
+                      "start": 1646,
+                      "end": 1653,
                       "loc": {
                         "start": {
-                          "line": 26,
+                          "line": 25,
                           "column": 4
                         },
                         "end": {
-                          "line": 26,
+                          "line": 25,
                           "column": 11
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1645,
-                        "end": 1652,
+                        "start": 1646,
+                        "end": 1653,
                         "loc": {
                           "start": {
-                            "line": 26,
+                            "line": 25,
                             "column": 4
                           },
                           "end": {
-                            "line": 26,
+                            "line": 25,
                             "column": 11
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1645,
-                          "end": 1650,
+                          "start": 1646,
+                          "end": 1651,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 25,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 25,
                               "column": 9
                             }
                           }
@@ -404,15 +351,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Modifying a Shape",
-                          "start": 1658,
-                          "end": 1678,
+                          "start": 1659,
+                          "end": 1679,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 27,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 27,
                               "column": 24
                             }
                           }
@@ -420,15 +367,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The thickness of the extruded shape along the z-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523365-extrusiondepth\n     ",
-                          "start": 1684,
-                          "end": 1885,
+                          "start": 1685,
+                          "end": 1886,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 34,
+                              "line": 33,
                               "column": 7
                             }
                           }
@@ -437,58 +384,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1890,
-                      "end": 1913,
+                      "start": 1891,
+                      "end": 1914,
                       "loc": {
                         "start": {
-                          "line": 35,
+                          "line": 34,
                           "column": 4
                         },
                         "end": {
-                          "line": 35,
+                          "line": 34,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1890,
-                        "end": 1913,
+                        "start": 1891,
+                        "end": 1914,
                         "loc": {
                           "start": {
-                            "line": 35,
+                            "line": 34,
                             "column": 4
                           },
                           "end": {
-                            "line": 35,
+                            "line": 34,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1890,
-                          "end": 1909,
+                          "start": 1891,
+                          "end": 1910,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 34,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1890,
-                            "end": 1894,
+                            "start": 1891,
+                            "end": 1895,
                             "loc": {
                               "start": {
-                                "line": 35,
+                                "line": 34,
                                 "column": 4
                               },
                               "end": {
-                                "line": 35,
+                                "line": 34,
                                 "column": 8
                               }
                             },
@@ -496,15 +443,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1895,
-                            "end": 1909,
+                            "start": 1896,
+                            "end": 1910,
                             "loc": {
                               "start": {
-                                "line": 35,
+                                "line": 34,
                                 "column": 9
                               },
                               "end": {
-                                "line": 35,
+                                "line": 34,
                                 "column": 23
                               },
                               "identifierName": "extrusionDepth"
@@ -516,15 +463,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1912,
-                          "end": 1913,
+                          "start": 1913,
+                          "end": 1914,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 34,
                               "column": 26
                             },
                             "end": {
-                              "line": 35,
+                              "line": 34,
                               "column": 27
                             }
                           },
@@ -543,15 +490,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Modifying a Shape",
-                          "start": 1658,
-                          "end": 1678,
+                          "start": 1659,
+                          "end": 1679,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 27,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 27,
                               "column": 24
                             }
                           }
@@ -559,15 +506,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The thickness of the extruded shape along the z-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523365-extrusiondepth\n     ",
-                          "start": 1684,
-                          "end": 1885,
+                          "start": 1685,
+                          "end": 1886,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 34,
+                              "line": 33,
                               "column": 7
                             }
                           }
@@ -577,15 +524,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The two-dimensional path forming the basis of the shape.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523434-path\n     ",
-                          "start": 1919,
-                          "end": 2108,
+                          "start": 1920,
+                          "end": 2109,
                           "loc": {
                             "start": {
-                              "line": 37,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 41,
+                              "line": 40,
                               "column": 7
                             }
                           }
@@ -594,58 +541,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2113,
-                      "end": 2129,
+                      "start": 2114,
+                      "end": 2130,
                       "loc": {
                         "start": {
-                          "line": 42,
+                          "line": 41,
                           "column": 4
                         },
                         "end": {
-                          "line": 42,
+                          "line": 41,
                           "column": 20
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2113,
-                        "end": 2129,
+                        "start": 2114,
+                        "end": 2130,
                         "loc": {
                           "start": {
-                            "line": 42,
+                            "line": 41,
                             "column": 4
                           },
                           "end": {
-                            "line": 42,
+                            "line": 41,
                             "column": 20
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2113,
-                          "end": 2122,
+                          "start": 2114,
+                          "end": 2123,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 42,
+                              "line": 41,
                               "column": 13
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2113,
-                            "end": 2117,
+                            "start": 2114,
+                            "end": 2118,
                             "loc": {
                               "start": {
-                                "line": 42,
+                                "line": 41,
                                 "column": 4
                               },
                               "end": {
-                                "line": 42,
+                                "line": 41,
                                 "column": 8
                               }
                             },
@@ -653,15 +600,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2118,
-                            "end": 2122,
+                            "start": 2119,
+                            "end": 2123,
                             "loc": {
                               "start": {
-                                "line": 42,
+                                "line": 41,
                                 "column": 9
                               },
                               "end": {
-                                "line": 42,
+                                "line": 41,
                                 "column": 13
                               },
                               "identifierName": "path"
@@ -673,15 +620,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2125,
-                          "end": 2129,
+                          "start": 2126,
+                          "end": 2130,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 41,
                               "column": 16
                             },
                             "end": {
-                              "line": 42,
+                              "line": 41,
                               "column": 20
                             }
                           },
@@ -695,15 +642,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The two-dimensional path forming the basis of the shape.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523434-path\n     ",
-                          "start": 1919,
-                          "end": 2108,
+                          "start": 1920,
+                          "end": 2109,
                           "loc": {
                             "start": {
-                              "line": 37,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 41,
+                              "line": 40,
                               "column": 7
                             }
                           }
@@ -713,15 +660,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Chamfering a Shape",
-                          "start": 2136,
-                          "end": 2157,
+                          "start": 2137,
+                          "end": 2158,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 44,
                               "column": 25
                             }
                           }
@@ -729,15 +676,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A constant specifying which ends of the extruded shape’s profile are chamfered.\n     * @type {SCNChamferMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523989-chamfermode\n     ",
-                          "start": 2163,
-                          "end": 2383,
+                          "start": 2164,
+                          "end": 2384,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 50,
                               "column": 7
                             }
                           }
@@ -746,58 +693,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2388,
-                      "end": 2411,
+                      "start": 2389,
+                      "end": 2412,
                       "loc": {
                         "start": {
-                          "line": 52,
+                          "line": 51,
                           "column": 4
                         },
                         "end": {
-                          "line": 52,
+                          "line": 51,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2388,
-                        "end": 2411,
+                        "start": 2389,
+                        "end": 2412,
                         "loc": {
                           "start": {
-                            "line": 52,
+                            "line": 51,
                             "column": 4
                           },
                           "end": {
-                            "line": 52,
+                            "line": 51,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2388,
-                          "end": 2404,
+                          "start": 2389,
+                          "end": 2405,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 51,
                               "column": 4
                             },
                             "end": {
-                              "line": 52,
+                              "line": 51,
                               "column": 20
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2388,
-                            "end": 2392,
+                            "start": 2389,
+                            "end": 2393,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 51,
                                 "column": 4
                               },
                               "end": {
-                                "line": 52,
+                                "line": 51,
                                 "column": 8
                               }
                             },
@@ -805,15 +752,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2393,
-                            "end": 2404,
+                            "start": 2394,
+                            "end": 2405,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 51,
                                 "column": 9
                               },
                               "end": {
-                                "line": 52,
+                                "line": 51,
                                 "column": 20
                               },
                               "identifierName": "chamferMode"
@@ -825,15 +772,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2407,
-                          "end": 2411,
+                          "start": 2408,
+                          "end": 2412,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 51,
                               "column": 23
                             },
                             "end": {
-                              "line": 52,
+                              "line": 51,
                               "column": 27
                             }
                           },
@@ -847,15 +794,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Chamfering a Shape",
-                          "start": 2136,
-                          "end": 2157,
+                          "start": 2137,
+                          "end": 2158,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 44,
                               "column": 25
                             }
                           }
@@ -863,15 +810,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A constant specifying which ends of the extruded shape’s profile are chamfered.\n     * @type {SCNChamferMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523989-chamfermode\n     ",
-                          "start": 2163,
-                          "end": 2383,
+                          "start": 2164,
+                          "end": 2384,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 50,
                               "column": 7
                             }
                           }
@@ -881,15 +828,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1522865-chamferprofile\n     ",
-                          "start": 2417,
-                          "end": 2634,
+                          "start": 2418,
+                          "end": 2635,
                           "loc": {
                             "start": {
-                              "line": 54,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 58,
+                              "line": 57,
                               "column": 7
                             }
                           }
@@ -898,58 +845,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2639,
-                      "end": 2665,
+                      "start": 2640,
+                      "end": 2666,
                       "loc": {
                         "start": {
-                          "line": 59,
+                          "line": 58,
                           "column": 4
                         },
                         "end": {
-                          "line": 59,
+                          "line": 58,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2639,
-                        "end": 2665,
+                        "start": 2640,
+                        "end": 2666,
                         "loc": {
                           "start": {
-                            "line": 59,
+                            "line": 58,
                             "column": 4
                           },
                           "end": {
-                            "line": 59,
+                            "line": 58,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2639,
-                          "end": 2658,
+                          "start": 2640,
+                          "end": 2659,
                           "loc": {
                             "start": {
-                              "line": 59,
+                              "line": 58,
                               "column": 4
                             },
                             "end": {
-                              "line": 59,
+                              "line": 58,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2639,
-                            "end": 2643,
+                            "start": 2640,
+                            "end": 2644,
                             "loc": {
                               "start": {
-                                "line": 59,
+                                "line": 58,
                                 "column": 4
                               },
                               "end": {
-                                "line": 59,
+                                "line": 58,
                                 "column": 8
                               }
                             },
@@ -957,15 +904,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2644,
-                            "end": 2658,
+                            "start": 2645,
+                            "end": 2659,
                             "loc": {
                               "start": {
-                                "line": 59,
+                                "line": 58,
                                 "column": 9
                               },
                               "end": {
-                                "line": 59,
+                                "line": 58,
                                 "column": 23
                               },
                               "identifierName": "chamferProfile"
@@ -977,15 +924,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2661,
-                          "end": 2665,
+                          "start": 2662,
+                          "end": 2666,
                           "loc": {
                             "start": {
-                              "line": 59,
+                              "line": 58,
                               "column": 26
                             },
                             "end": {
-                              "line": 59,
+                              "line": 58,
                               "column": 30
                             }
                           },
@@ -999,15 +946,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1522865-chamferprofile\n     ",
-                          "start": 2417,
-                          "end": 2634,
+                          "start": 2418,
+                          "end": 2635,
                           "loc": {
                             "start": {
-                              "line": 54,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 58,
+                              "line": 57,
                               "column": 7
                             }
                           }
@@ -1017,15 +964,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1524145-chamferradius\n     ",
-                          "start": 2671,
-                          "end": 2860,
+                          "start": 2672,
+                          "end": 2861,
                           "loc": {
                             "start": {
-                              "line": 61,
+                              "line": 60,
                               "column": 4
                             },
                             "end": {
-                              "line": 65,
+                              "line": 64,
                               "column": 7
                             }
                           }
@@ -1034,58 +981,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2865,
-                      "end": 2887,
+                      "start": 2866,
+                      "end": 2888,
                       "loc": {
                         "start": {
-                          "line": 66,
+                          "line": 65,
                           "column": 4
                         },
                         "end": {
-                          "line": 66,
+                          "line": 65,
                           "column": 26
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2865,
-                        "end": 2887,
+                        "start": 2866,
+                        "end": 2888,
                         "loc": {
                           "start": {
-                            "line": 66,
+                            "line": 65,
                             "column": 4
                           },
                           "end": {
-                            "line": 66,
+                            "line": 65,
                             "column": 26
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2865,
-                          "end": 2883,
+                          "start": 2866,
+                          "end": 2884,
                           "loc": {
                             "start": {
-                              "line": 66,
+                              "line": 65,
                               "column": 4
                             },
                             "end": {
-                              "line": 66,
+                              "line": 65,
                               "column": 22
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2865,
-                            "end": 2869,
+                            "start": 2866,
+                            "end": 2870,
                             "loc": {
                               "start": {
-                                "line": 66,
+                                "line": 65,
                                 "column": 4
                               },
                               "end": {
-                                "line": 66,
+                                "line": 65,
                                 "column": 8
                               }
                             },
@@ -1093,15 +1040,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2870,
-                            "end": 2883,
+                            "start": 2871,
+                            "end": 2884,
                             "loc": {
                               "start": {
-                                "line": 66,
+                                "line": 65,
                                 "column": 9
                               },
                               "end": {
-                                "line": 66,
+                                "line": 65,
                                 "column": 22
                               },
                               "identifierName": "chamferRadius"
@@ -1113,15 +1060,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 2886,
-                          "end": 2887,
+                          "start": 2887,
+                          "end": 2888,
                           "loc": {
                             "start": {
-                              "line": 66,
+                              "line": 65,
                               "column": 25
                             },
                             "end": {
-                              "line": 66,
+                              "line": 65,
                               "column": 26
                             }
                           },
@@ -1137,15 +1084,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1524145-chamferradius\n     ",
-                          "start": 2671,
-                          "end": 2860,
+                          "start": 2672,
+                          "end": 2861,
                           "loc": {
                             "start": {
-                              "line": 61,
+                              "line": 60,
                               "column": 4
                             },
                             "end": {
-                              "line": 65,
+                              "line": 64,
                               "column": 7
                             }
                           }
@@ -1159,15 +1106,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Shape",
-                    "start": 381,
-                    "end": 400,
+                    "start": 382,
+                    "end": 401,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 14,
+                        "line": 13,
                         "column": 21
                       }
                     }
@@ -1175,15 +1122,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a shape geometry with the specified path and extrusion depth.\n   * @access public\n   * @constructor\n   * @param {?UIBezierPath} path - The two-dimensional path forming the basis of the shape.\n   * @param {number} extrusionDepth - The thickness of the extruded shape along the z-axis.\n   * @desc SceneKit determines the filled area of the path using the even-odd winding rule (see Winding Rules in Cocoa Drawing Guide) and extrudes this area to create a three-dimensional geometry. The result of extruding a self-intersecting path is undefined.The extruded shape is centered at the zero point of its z-axis. For example, an extrusion depth of 1.0 creates a shape that extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape.The path’s flatness (see flatness in NSBezierPath) determines the level of detail SceneKit uses in building a three-dimensional shape from the path. A larger flatness value results in fewer polygons to render, increasing performance, and a smaller flatness value increases the smoothness of curves at a cost to performance.\n   * @see https://developer.apple.com/documentation/scenekit/scnshape/1523432-init\n   ",
-                    "start": 404,
-                    "end": 1602,
+                    "start": 405,
+                    "end": 1603,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 24,
+                        "line": 23,
                         "column": 5
                       }
                     }
@@ -1194,17 +1141,33 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
-              "start": 102,
-              "end": 326,
+              "type": "CommentLine",
+              "value": "import SCNChamferMode from './SCNChamferMode'",
+              "start": 54,
+              "end": 101,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 12,
+                  "line": 4,
+                  "column": 47
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
+              "start": 103,
+              "end": 327,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 11,
                   "column": 3
                 }
               }
@@ -1214,17 +1177,33 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
-            "start": 102,
-            "end": 326,
+            "type": "CommentLine",
+            "value": "import SCNChamferMode from './SCNChamferMode'",
+            "start": 54,
+            "end": 101,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 12,
+                "line": 4,
+                "column": 47
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
+            "start": 103,
+            "end": 327,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
                 "column": 3
               }
             }
@@ -1272,17 +1251,33 @@
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
-      "start": 102,
-      "end": 326,
+      "type": "CommentLine",
+      "value": "import SCNChamferMode from './SCNChamferMode'",
+      "start": 54,
+      "end": 101,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 4,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
+      "start": 103,
+      "end": 327,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
           "column": 3
         }
       }
@@ -1290,15 +1285,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Shape",
-      "start": 381,
-      "end": 400,
+      "start": 382,
+      "end": 401,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 21
         }
       }
@@ -1306,15 +1301,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a shape geometry with the specified path and extrusion depth.\n   * @access public\n   * @constructor\n   * @param {?UIBezierPath} path - The two-dimensional path forming the basis of the shape.\n   * @param {number} extrusionDepth - The thickness of the extruded shape along the z-axis.\n   * @desc SceneKit determines the filled area of the path using the even-odd winding rule (see Winding Rules in Cocoa Drawing Guide) and extrudes this area to create a three-dimensional geometry. The result of extruding a self-intersecting path is undefined.The extruded shape is centered at the zero point of its z-axis. For example, an extrusion depth of 1.0 creates a shape that extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape.The path’s flatness (see flatness in NSBezierPath) determines the level of detail SceneKit uses in building a three-dimensional shape from the path. A larger flatness value results in fewer polygons to render, increasing performance, and a smaller flatness value increases the smoothness of curves at a cost to performance.\n   * @see https://developer.apple.com/documentation/scenekit/scnshape/1523432-init\n   ",
-      "start": 404,
-      "end": 1602,
+      "start": 405,
+      "end": 1603,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 24,
+          "line": 23,
           "column": 5
         }
       }
@@ -1322,15 +1317,15 @@
     {
       "type": "CommentLine",
       "value": " Modifying a Shape",
-      "start": 1658,
-      "end": 1678,
+      "start": 1659,
+      "end": 1679,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 24
         }
       }
@@ -1338,15 +1333,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The thickness of the extruded shape along the z-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523365-extrusiondepth\n     ",
-      "start": 1684,
-      "end": 1885,
+      "start": 1685,
+      "end": 1886,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 7
         }
       }
@@ -1354,15 +1349,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The two-dimensional path forming the basis of the shape.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523434-path\n     ",
-      "start": 1919,
-      "end": 2108,
+      "start": 1920,
+      "end": 2109,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 41,
+          "line": 40,
           "column": 7
         }
       }
@@ -1370,15 +1365,15 @@
     {
       "type": "CommentLine",
       "value": " Chamfering a Shape",
-      "start": 2136,
-      "end": 2157,
+      "start": 2137,
+      "end": 2158,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 44,
           "column": 25
         }
       }
@@ -1386,15 +1381,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A constant specifying which ends of the extruded shape’s profile are chamfered.\n     * @type {SCNChamferMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523989-chamfermode\n     ",
-      "start": 2163,
-      "end": 2383,
+      "start": 2164,
+      "end": 2384,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 50,
           "column": 7
         }
       }
@@ -1402,15 +1397,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1522865-chamferprofile\n     ",
-      "start": 2417,
-      "end": 2634,
+      "start": 2418,
+      "end": 2635,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 58,
+          "line": 57,
           "column": 7
         }
       }
@@ -1418,15 +1413,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1524145-chamferradius\n     ",
-      "start": 2671,
-      "end": 2860,
+      "start": 2672,
+      "end": 2861,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 4
         },
         "end": {
-          "line": 65,
+          "line": 64,
           "column": 7
         }
       }
@@ -1568,22 +1563,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNChamferMode from './SCNChamferMode'",
       "start": 54,
-      "end": 60,
+      "end": 101,
       "loc": {
         "start": {
           "line": 4,
@@ -1591,101 +1574,22 @@
         },
         "end": {
           "line": 4,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNChamferMode",
-      "start": 61,
-      "end": 75,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 76,
-      "end": 80,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 22
-        },
-        "end": {
-          "line": 4,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNChamferMode",
-      "start": 81,
-      "end": 99,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 27
-        },
-        "end": {
-          "line": 4,
-          "column": 45
+          "column": 47
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/documentation/scenekit/scnshape\n ",
-      "start": 102,
-      "end": 326,
+      "start": 103,
+      "end": 327,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 3
         }
       }
@@ -1705,15 +1609,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 327,
-      "end": 333,
+      "start": 328,
+      "end": 334,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 6
         }
       }
@@ -1733,15 +1637,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 334,
-      "end": 341,
+      "start": 335,
+      "end": 342,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 7
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 14
         }
       }
@@ -1761,15 +1665,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 342,
-      "end": 347,
+      "start": 343,
+      "end": 348,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 15
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 20
         }
       }
@@ -1787,15 +1691,15 @@
         "binop": null
       },
       "value": "SCNShape",
-      "start": 348,
-      "end": 356,
+      "start": 349,
+      "end": 357,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 21
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 29
         }
       }
@@ -1815,15 +1719,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 357,
-      "end": 364,
+      "start": 358,
+      "end": 365,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 30
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 37
         }
       }
@@ -1841,15 +1745,15 @@
         "binop": null
       },
       "value": "SCNGeometry",
-      "start": 365,
-      "end": 376,
+      "start": 366,
+      "end": 377,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 38
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 49
         }
       }
@@ -1866,15 +1770,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 377,
-      "end": 378,
+      "start": 378,
+      "end": 379,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 50
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 51
         }
       }
@@ -1882,15 +1786,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Shape",
-      "start": 381,
-      "end": 400,
+      "start": 382,
+      "end": 401,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 21
         }
       }
@@ -1898,15 +1802,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a shape geometry with the specified path and extrusion depth.\n   * @access public\n   * @constructor\n   * @param {?UIBezierPath} path - The two-dimensional path forming the basis of the shape.\n   * @param {number} extrusionDepth - The thickness of the extruded shape along the z-axis.\n   * @desc SceneKit determines the filled area of the path using the even-odd winding rule (see Winding Rules in Cocoa Drawing Guide) and extrudes this area to create a three-dimensional geometry. The result of extruding a self-intersecting path is undefined.The extruded shape is centered at the zero point of its z-axis. For example, an extrusion depth of 1.0 creates a shape that extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape.The path’s flatness (see flatness in NSBezierPath) determines the level of detail SceneKit uses in building a three-dimensional shape from the path. A larger flatness value results in fewer polygons to render, increasing performance, and a smaller flatness value increases the smoothness of curves at a cost to performance.\n   * @see https://developer.apple.com/documentation/scenekit/scnshape/1523432-init\n   ",
-      "start": 404,
-      "end": 1602,
+      "start": 405,
+      "end": 1603,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 24,
+          "line": 23,
           "column": 5
         }
       }
@@ -1924,15 +1828,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1605,
-      "end": 1616,
+      "start": 1606,
+      "end": 1617,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 2
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 13
         }
       }
@@ -1949,15 +1853,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1616,
-      "end": 1617,
+      "start": 1617,
+      "end": 1618,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 13
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 14
         }
       }
@@ -1975,15 +1879,15 @@
         "binop": null
       },
       "value": "path",
-      "start": 1617,
-      "end": 1621,
+      "start": 1618,
+      "end": 1622,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 14
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 18
         }
       }
@@ -2001,15 +1905,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1621,
-      "end": 1622,
+      "start": 1622,
+      "end": 1623,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 18
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 19
         }
       }
@@ -2027,15 +1931,15 @@
         "binop": null
       },
       "value": "extrusionDepth",
-      "start": 1623,
-      "end": 1637,
+      "start": 1624,
+      "end": 1638,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 20
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 34
         }
       }
@@ -2052,15 +1956,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1637,
-      "end": 1638,
+      "start": 1638,
+      "end": 1639,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 34
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 35
         }
       }
@@ -2077,15 +1981,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1639,
-      "end": 1640,
+      "start": 1640,
+      "end": 1641,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 36
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 37
         }
       }
@@ -2105,15 +2009,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1645,
-      "end": 1650,
+      "start": 1646,
+      "end": 1651,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 9
         }
       }
@@ -2130,15 +2034,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1650,
-      "end": 1651,
+      "start": 1651,
+      "end": 1652,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 9
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 10
         }
       }
@@ -2155,15 +2059,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1651,
-      "end": 1652,
+      "start": 1652,
+      "end": 1653,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 10
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 11
         }
       }
@@ -2171,15 +2075,15 @@
     {
       "type": "CommentLine",
       "value": " Modifying a Shape",
-      "start": 1658,
-      "end": 1678,
+      "start": 1659,
+      "end": 1679,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 27,
           "column": 24
         }
       }
@@ -2187,15 +2091,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The thickness of the extruded shape along the z-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523365-extrusiondepth\n     ",
-      "start": 1684,
-      "end": 1885,
+      "start": 1685,
+      "end": 1886,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 7
         }
       }
@@ -2215,15 +2119,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1890,
-      "end": 1894,
+      "start": 1891,
+      "end": 1895,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 8
         }
       }
@@ -2241,15 +2145,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1894,
-      "end": 1895,
+      "start": 1895,
+      "end": 1896,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 8
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 9
         }
       }
@@ -2267,15 +2171,15 @@
         "binop": null
       },
       "value": "extrusionDepth",
-      "start": 1895,
-      "end": 1909,
+      "start": 1896,
+      "end": 1910,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 9
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 23
         }
       }
@@ -2294,15 +2198,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1910,
-      "end": 1911,
+      "start": 1911,
+      "end": 1912,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 24
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 25
         }
       }
@@ -2321,15 +2225,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1912,
-      "end": 1913,
+      "start": 1913,
+      "end": 1914,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 26
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 27
         }
       }
@@ -2337,15 +2241,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The two-dimensional path forming the basis of the shape.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523434-path\n     ",
-      "start": 1919,
-      "end": 2108,
+      "start": 1920,
+      "end": 2109,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 41,
+          "line": 40,
           "column": 7
         }
       }
@@ -2365,15 +2269,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2113,
-      "end": 2117,
+      "start": 2114,
+      "end": 2118,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 8
         }
       }
@@ -2391,15 +2295,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2117,
-      "end": 2118,
+      "start": 2118,
+      "end": 2119,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 8
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 9
         }
       }
@@ -2417,15 +2321,15 @@
         "binop": null
       },
       "value": "path",
-      "start": 2118,
-      "end": 2122,
+      "start": 2119,
+      "end": 2123,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 9
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 13
         }
       }
@@ -2444,15 +2348,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2123,
-      "end": 2124,
+      "start": 2124,
+      "end": 2125,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 14
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 15
         }
       }
@@ -2472,15 +2376,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2125,
-      "end": 2129,
+      "start": 2126,
+      "end": 2130,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 41,
           "column": 16
         },
         "end": {
-          "line": 42,
+          "line": 41,
           "column": 20
         }
       }
@@ -2488,15 +2392,15 @@
     {
       "type": "CommentLine",
       "value": " Chamfering a Shape",
-      "start": 2136,
-      "end": 2157,
+      "start": 2137,
+      "end": 2158,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 44,
           "column": 25
         }
       }
@@ -2504,15 +2408,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A constant specifying which ends of the extruded shape’s profile are chamfered.\n     * @type {SCNChamferMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1523989-chamfermode\n     ",
-      "start": 2163,
-      "end": 2383,
+      "start": 2164,
+      "end": 2384,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 50,
           "column": 7
         }
       }
@@ -2532,15 +2436,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2388,
-      "end": 2392,
+      "start": 2389,
+      "end": 2393,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 4
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 8
         }
       }
@@ -2558,15 +2462,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2392,
-      "end": 2393,
+      "start": 2393,
+      "end": 2394,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 8
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 9
         }
       }
@@ -2584,15 +2488,15 @@
         "binop": null
       },
       "value": "chamferMode",
-      "start": 2393,
-      "end": 2404,
+      "start": 2394,
+      "end": 2405,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 9
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 20
         }
       }
@@ -2611,15 +2515,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2405,
-      "end": 2406,
+      "start": 2406,
+      "end": 2407,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 21
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 22
         }
       }
@@ -2639,15 +2543,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2407,
-      "end": 2411,
+      "start": 2408,
+      "end": 2412,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 51,
           "column": 23
         },
         "end": {
-          "line": 52,
+          "line": 51,
           "column": 27
         }
       }
@@ -2655,15 +2559,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A path that determines the cross-sectional contour of each chamfered edge.\n     * @type {?UIBezierPath}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1522865-chamferprofile\n     ",
-      "start": 2417,
-      "end": 2634,
+      "start": 2418,
+      "end": 2635,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 58,
+          "line": 57,
           "column": 7
         }
       }
@@ -2683,15 +2587,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2639,
-      "end": 2643,
+      "start": 2640,
+      "end": 2644,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 58,
           "column": 4
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 8
         }
       }
@@ -2709,15 +2613,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2643,
-      "end": 2644,
+      "start": 2644,
+      "end": 2645,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 58,
           "column": 8
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 9
         }
       }
@@ -2735,15 +2639,15 @@
         "binop": null
       },
       "value": "chamferProfile",
-      "start": 2644,
-      "end": 2658,
+      "start": 2645,
+      "end": 2659,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 58,
           "column": 9
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 23
         }
       }
@@ -2762,15 +2666,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2659,
-      "end": 2660,
+      "start": 2660,
+      "end": 2661,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 58,
           "column": 24
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 25
         }
       }
@@ -2790,15 +2694,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2661,
-      "end": 2665,
+      "start": 2662,
+      "end": 2666,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 58,
           "column": 26
         },
         "end": {
-          "line": 59,
+          "line": 58,
           "column": 30
         }
       }
@@ -2806,15 +2710,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The width or depth of each chamfered edge. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnshape/1524145-chamferradius\n     ",
-      "start": 2671,
-      "end": 2860,
+      "start": 2672,
+      "end": 2861,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 60,
           "column": 4
         },
         "end": {
-          "line": 65,
+          "line": 64,
           "column": 7
         }
       }
@@ -2834,15 +2738,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2865,
-      "end": 2869,
+      "start": 2866,
+      "end": 2870,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 65,
           "column": 4
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 8
         }
       }
@@ -2860,15 +2764,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2869,
-      "end": 2870,
+      "start": 2870,
+      "end": 2871,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 65,
           "column": 8
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 9
         }
       }
@@ -2886,15 +2790,15 @@
         "binop": null
       },
       "value": "chamferRadius",
-      "start": 2870,
-      "end": 2883,
+      "start": 2871,
+      "end": 2884,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 65,
           "column": 9
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 22
         }
       }
@@ -2913,15 +2817,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2884,
-      "end": 2885,
+      "start": 2885,
+      "end": 2886,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 65,
           "column": 23
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 24
         }
       }
@@ -2940,15 +2844,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 2886,
-      "end": 2887,
+      "start": 2887,
+      "end": 2888,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 65,
           "column": 25
         },
         "end": {
-          "line": 66,
+          "line": 65,
           "column": 26
         }
       }
@@ -2965,15 +2869,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2890,
-      "end": 2891,
+      "start": 2891,
+      "end": 2892,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 66,
           "column": 2
         },
         "end": {
-          "line": 67,
+          "line": 66,
           "column": 3
         }
       }
@@ -2990,15 +2894,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2892,
-      "end": 2893,
+      "start": 2893,
+      "end": 2894,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 67,
           "column": 0
         },
         "end": {
-          "line": 68,
+          "line": 67,
           "column": 1
         }
       }
@@ -3016,15 +2920,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2894,
-      "end": 2894,
+      "start": 2895,
+      "end": 2895,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 68,
           "column": 0
         },
         "end": {
-          "line": 69,
+          "line": 68,
           "column": 0
         }
       }

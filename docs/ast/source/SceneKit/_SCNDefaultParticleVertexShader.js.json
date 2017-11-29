@@ -1,0 +1,670 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 1743,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 67,
+      "column": 0
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 1743,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 67,
+        "column": 0
+      }
+    },
+    "sourceType": "module",
+    "body": [
+      {
+        "type": "Identifier",
+        "start": 40,
+        "end": 1693,
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 0
+          },
+          "end": {
+            "line": 63,
+            "column": 1
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 46,
+            "end": 1693,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 6
+              },
+              "end": {
+                "line": 63,
+                "column": 1
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 46,
+              "end": 77,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 6
+                },
+                "end": {
+                  "line": 6,
+                  "column": 37
+                },
+                "identifierName": "_SCNDefaultParticleVertexShader"
+              },
+              "name": "_SCNDefaultParticleVertexShader",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "TemplateLiteral",
+              "start": 81,
+              "end": 1693,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 1
+                },
+                "end": {
+                  "line": 63,
+                  "column": 1
+                }
+              },
+              "expressions": [],
+              "quasis": [
+                {
+                  "type": "TemplateElement",
+                  "start": 82,
+                  "end": 1692,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 63,
+                      "column": 0
+                    }
+                  },
+                  "value": {
+                    "raw": "#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n  in vec2 texcoord;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = texcoord;\n    gl_Position = projectionTransform * pos;\n  }\n",
+                    "cooked": "#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n  in vec2 texcoord;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = texcoord;\n    gl_Position = projectionTransform * pos;\n  }\n"
+                  },
+                  "tail": true
+                }
+              ]
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [],
+        "name": "_",
+        "trailingComments": []
+      },
+      {
+        "type": "Identifier",
+        "start": 1695,
+        "end": 1741,
+        "loc": {
+          "start": {
+            "line": 65,
+            "column": 0
+          },
+          "end": {
+            "line": 65,
+            "column": 46
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 1710,
+          "end": 1741,
+          "loc": {
+            "start": {
+              "line": 65,
+              "column": 15
+            },
+            "end": {
+              "line": 65,
+              "column": 46
+            },
+            "identifierName": "_SCNDefaultParticleVertexShader"
+          },
+          "name": "_SCNDefaultParticleVertexShader"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 1695,
+        "end": 1741,
+        "loc": {
+          "start": {
+            "line": 65,
+            "column": 0
+          },
+          "end": {
+            "line": 65,
+            "column": 46
+          }
+        },
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 40,
+          "end": 1693,
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 0
+            },
+            "end": {
+              "line": 63,
+              "column": 1
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 46,
+              "end": 1693,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 6
+                },
+                "end": {
+                  "line": 63,
+                  "column": 1
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 46,
+                "end": 77,
+                "loc": {
+                  "start": {
+                    "line": 6,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 37
+                  },
+                  "identifierName": "_SCNDefaultParticleVertexShader"
+                },
+                "name": "_SCNDefaultParticleVertexShader",
+                "leadingComments": null
+              },
+              "init": {
+                "type": "TemplateLiteral",
+                "start": 81,
+                "end": 1693,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 63,
+                    "column": 1
+                  }
+                },
+                "expressions": [],
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "start": 82,
+                    "end": 1692,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 63,
+                        "column": 0
+                      }
+                    },
+                    "value": {
+                      "raw": "#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n  in vec2 texcoord;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = texcoord;\n    gl_Position = projectionTransform * pos;\n  }\n",
+                      "cooked": "#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n  in vec2 texcoord;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = texcoord;\n    gl_Position = projectionTransform * pos;\n  }\n"
+                    },
+                    "tail": true
+                  }
+                ]
+              },
+              "leadingComments": null
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * @type {string}\n ",
+              "start": 14,
+              "end": 39,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        }
+      }
+    ],
+    "directives": [
+      {
+        "type": "Directive",
+        "start": 0,
+        "end": 12,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12
+          }
+        },
+        "value": {
+          "type": "DirectiveLiteral",
+          "start": 0,
+          "end": 12,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 12
+            }
+          },
+          "value": "use strict",
+          "extra": {
+            "raw": "'use strict'",
+            "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * @type {string}\n ",
+            "start": 14,
+            "end": 39,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 3
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @type {string}\n ",
+      "start": 14,
+      "end": 39,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "use strict",
+      "start": 0,
+      "end": 12,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @type {string}\n ",
+      "start": 14,
+      "end": 39,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 40,
+      "end": 45,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_SCNDefaultParticleVertexShader",
+      "start": 46,
+      "end": 77,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "line": 6,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 78,
+      "end": 79,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 38
+        },
+        "end": {
+          "line": 6,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "`",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 81,
+      "end": 82,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 1
+        },
+        "end": {
+          "line": 7,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "template",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n  in vec2 texcoord;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = texcoord;\n    gl_Position = projectionTransform * pos;\n  }\n",
+      "start": 82,
+      "end": 1692,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 63,
+          "column": 0
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "`",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1692,
+      "end": 1693,
+      "loc": {
+        "start": {
+          "line": 63,
+          "column": 0
+        },
+        "end": {
+          "line": 63,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 1695,
+      "end": 1701,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 0
+        },
+        "end": {
+          "line": 65,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 1702,
+      "end": 1709,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 7
+        },
+        "end": {
+          "line": 65,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_SCNDefaultParticleVertexShader",
+      "start": 1710,
+      "end": 1741,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 15
+        },
+        "end": {
+          "line": 65,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1743,
+      "end": 1743,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 0
+        },
+        "end": {
+          "line": 67,
+          "column": 0
+        }
+      }
+    }
+  ]
+}

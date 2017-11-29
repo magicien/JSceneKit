@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 915,
+  "end": 918,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 39,
+      "line": 38,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 915,
+    "end": 918,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 39,
+        "line": 38,
         "column": 0
       }
     },
@@ -94,161 +94,55 @@
             "rawValue": "../ObjectiveC/NSObject",
             "raw": "'../ObjectiveC/NSObject'"
           },
-          "value": "../ObjectiveC/NSObject"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 60,
-        "end": 131,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 71
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 67,
-            "end": 88,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 28
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 67,
-              "end": 88,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 28
-                },
-                "identifierName": "CAMediaTimingFunction"
-              },
-              "name": "CAMediaTimingFunction"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 94,
-          "end": 131,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 34
-            },
-            "end": {
-              "line": 4,
-              "column": 71
-            }
-          },
-          "extra": {
-            "rawValue": "../QuartzCore/CAMediaTimingFunction",
-            "raw": "'../QuartzCore/CAMediaTimingFunction'"
-          },
-          "value": "../QuartzCore/CAMediaTimingFunction"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 132,
-        "end": 187,
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 0
-          },
-          "end": {
-            "line": 5,
-            "column": 55
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 139,
-            "end": 158,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 7
-              },
-              "end": {
-                "line": 5,
-                "column": 26
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 139,
-              "end": 158,
-              "loc": {
-                "start": {
-                  "line": 5,
-                  "column": 7
-                },
-                "end": {
-                  "line": 5,
-                  "column": 26
-                },
-                "identifierName": "SCNActionTimingMode"
-              },
-              "name": "SCNActionTimingMode"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 164,
-          "end": 187,
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 32
-            },
-            "end": {
-              "line": 5,
-              "column": 55
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNActionTimingMode",
-            "raw": "'./SCNActionTimingMode'"
-          },
-          "value": "./SCNActionTimingMode",
+          "value": "../ObjectiveC/NSObject",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
-            "start": 190,
-            "end": 319,
+            "type": "CommentLine",
+            "value": "import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'",
+            "start": 60,
+            "end": 133,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 73
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNActionTimingMode from './SCNActionTimingMode'",
+            "start": 134,
+            "end": 191,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 57
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
+            "start": 193,
+            "end": 322,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -257,43 +151,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 320,
-        "end": 914,
+        "start": 323,
+        "end": 917,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 38,
+            "line": 37,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 335,
-          "end": 914,
+          "start": 338,
+          "end": 917,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 13,
               "column": 15
             },
             "end": {
-              "line": 38,
+              "line": 37,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 341,
-            "end": 358,
+            "start": 344,
+            "end": 361,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 21
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 38
               },
               "identifierName": "SCNTimingFunction"
@@ -303,15 +197,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 367,
-            "end": 375,
+            "start": 370,
+            "end": 378,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 47
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 55
               },
               "identifierName": "NSObject"
@@ -320,45 +214,45 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 376,
-            "end": 914,
+            "start": 379,
+            "end": 917,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 13,
                 "column": 56
               },
               "end": {
-                "line": 38,
+                "line": 37,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 622,
-                "end": 671,
+                "start": 625,
+                "end": 674,
                 "loc": {
                   "start": {
-                    "line": 25,
+                    "line": 24,
                     "column": 2
                   },
                   "end": {
-                    "line": 26,
+                    "line": 25,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 622,
-                  "end": 647,
+                  "start": 625,
+                  "end": 650,
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 24,
                       "column": 2
                     },
                     "end": {
-                      "line": 25,
+                      "line": 24,
                       "column": 27
                     },
                     "identifierName": "initCaMediaTimingFunction"
@@ -375,15 +269,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 648,
-                    "end": 664,
+                    "start": 651,
+                    "end": 667,
                     "loc": {
                       "start": {
-                        "line": 25,
+                        "line": 24,
                         "column": 28
                       },
                       "end": {
-                        "line": 25,
+                        "line": 24,
                         "column": 44
                       },
                       "identifierName": "caTimingFunction"
@@ -393,15 +287,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 666,
-                  "end": 671,
+                  "start": 669,
+                  "end": 674,
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 24,
                       "column": 46
                     },
                     "end": {
-                      "line": 26,
+                      "line": 25,
                       "column": 3
                     }
                   },
@@ -414,15 +308,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Initializers",
-                    "start": 381,
-                    "end": 396,
+                    "start": 384,
+                    "end": 399,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 16,
+                        "line": 15,
                         "column": 17
                       }
                     }
@@ -430,15 +324,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @param {CAMediaTimingFunction} caTimingFunction - \n   * @returns {SCNTimingFunction} -\n   * @see https://developer.apple.com/documentation/scenekit/scntimingfunction/2866052-init\n   ",
-                    "start": 400,
-                    "end": 619,
+                    "start": 403,
+                    "end": 622,
                     "loc": {
                       "start": {
-                        "line": 18,
+                        "line": 17,
                         "column": 2
                       },
                       "end": {
-                        "line": 24,
+                        "line": 23,
                         "column": 5
                       }
                     }
@@ -448,15 +342,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @constructor\n   * @param {SCNActionTimingMode} timingMode - \n   * @see https://developer.apple.com/documentation/scenekit/scntimingfunction/2866061-init\n   ",
-                    "start": 675,
-                    "end": 868,
+                    "start": 678,
+                    "end": 871,
                     "loc": {
                       "start": {
-                        "line": 28,
+                        "line": 27,
                         "column": 2
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 5
                       }
                     }
@@ -465,30 +359,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 871,
-                "end": 912,
+                "start": 874,
+                "end": 915,
                 "loc": {
                   "start": {
-                    "line": 35,
+                    "line": 34,
                     "column": 2
                   },
                   "end": {
-                    "line": 37,
+                    "line": 36,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 871,
-                  "end": 882,
+                  "start": 874,
+                  "end": 885,
                   "loc": {
                     "start": {
-                      "line": 35,
+                      "line": 34,
                       "column": 2
                     },
                     "end": {
-                      "line": 35,
+                      "line": 34,
                       "column": 13
                     },
                     "identifierName": "constructor"
@@ -505,15 +399,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 883,
-                    "end": 893,
+                    "start": 886,
+                    "end": 896,
                     "loc": {
                       "start": {
-                        "line": 35,
+                        "line": 34,
                         "column": 14
                       },
                       "end": {
-                        "line": 35,
+                        "line": 34,
                         "column": 24
                       },
                       "identifierName": "timingMode"
@@ -523,58 +417,58 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 895,
-                  "end": 912,
+                  "start": 898,
+                  "end": 915,
                   "loc": {
                     "start": {
-                      "line": 35,
+                      "line": 34,
                       "column": 26
                     },
                     "end": {
-                      "line": 37,
+                      "line": 36,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 901,
-                      "end": 908,
+                      "start": 904,
+                      "end": 911,
                       "loc": {
                         "start": {
-                          "line": 36,
+                          "line": 35,
                           "column": 4
                         },
                         "end": {
-                          "line": 36,
+                          "line": 35,
                           "column": 11
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 901,
-                        "end": 908,
+                        "start": 904,
+                        "end": 911,
                         "loc": {
                           "start": {
-                            "line": 36,
+                            "line": 35,
                             "column": 4
                           },
                           "end": {
-                            "line": 36,
+                            "line": 35,
                             "column": 11
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 901,
-                          "end": 906,
+                          "start": 904,
+                          "end": 909,
                           "loc": {
                             "start": {
-                              "line": 36,
+                              "line": 35,
                               "column": 4
                             },
                             "end": {
-                              "line": 36,
+                              "line": 35,
                               "column": 9
                             }
                           }
@@ -589,15 +483,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * \n   * @access public\n   * @constructor\n   * @param {SCNActionTimingMode} timingMode - \n   * @see https://developer.apple.com/documentation/scenekit/scntimingfunction/2866061-init\n   ",
-                    "start": 675,
-                    "end": 868,
+                    "start": 678,
+                    "end": 871,
                     "loc": {
                       "start": {
-                        "line": 28,
+                        "line": 27,
                         "column": 2
                       },
                       "end": {
-                        "line": 34,
+                        "line": 33,
                         "column": 5
                       }
                     }
@@ -608,17 +502,49 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
-              "start": 190,
-              "end": 319,
+              "type": "CommentLine",
+              "value": "import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'",
+              "start": 60,
+              "end": 133,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 13,
+                  "line": 4,
+                  "column": 73
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "import SCNActionTimingMode from './SCNActionTimingMode'",
+              "start": 134,
+              "end": 191,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 57
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
+              "start": 193,
+              "end": 322,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 0
+                },
+                "end": {
+                  "line": 12,
                   "column": 3
                 }
               }
@@ -628,17 +554,49 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
-            "start": 190,
-            "end": 319,
+            "type": "CommentLine",
+            "value": "import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'",
+            "start": 60,
+            "end": 133,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 4,
+                "column": 73
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "import SCNActionTimingMode from './SCNActionTimingMode'",
+            "start": 134,
+            "end": 191,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 57
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
+            "start": 193,
+            "end": 322,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
                 "column": 3
               }
             }
@@ -686,17 +644,49 @@
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
-      "start": 190,
-      "end": 319,
+      "type": "CommentLine",
+      "value": "import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'",
+      "start": 60,
+      "end": 133,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 4,
+          "column": 73
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "import SCNActionTimingMode from './SCNActionTimingMode'",
+      "start": 134,
+      "end": 191,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
+      "start": 193,
+      "end": 322,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
           "column": 3
         }
       }
@@ -704,15 +694,15 @@
     {
       "type": "CommentLine",
       "value": " Initializers",
-      "start": 381,
-      "end": 396,
+      "start": 384,
+      "end": 399,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 16,
+          "line": 15,
           "column": 17
         }
       }
@@ -720,15 +710,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {CAMediaTimingFunction} caTimingFunction - \n   * @returns {SCNTimingFunction} -\n   * @see https://developer.apple.com/documentation/scenekit/scntimingfunction/2866052-init\n   ",
-      "start": 400,
-      "end": 619,
+      "start": 403,
+      "end": 622,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 17,
           "column": 2
         },
         "end": {
-          "line": 24,
+          "line": 23,
           "column": 5
         }
       }
@@ -736,15 +726,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @constructor\n   * @param {SCNActionTimingMode} timingMode - \n   * @see https://developer.apple.com/documentation/scenekit/scntimingfunction/2866061-init\n   ",
-      "start": 675,
-      "end": 868,
+      "start": 678,
+      "end": 871,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 2
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 5
         }
       }
@@ -886,22 +876,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'",
       "start": 60,
-      "end": 66,
+      "end": 133,
       "loc": {
         "start": {
           "line": 4,
@@ -909,106 +887,15 @@
         },
         "end": {
           "line": 4,
-          "column": 6
+          "column": 73
         }
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "CAMediaTimingFunction",
-      "start": 67,
-      "end": 88,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 28
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 89,
-      "end": 93,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 29
-        },
-        "end": {
-          "line": 4,
-          "column": 33
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "../QuartzCore/CAMediaTimingFunction",
-      "start": 94,
-      "end": 131,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 34
-        },
-        "end": {
-          "line": 4,
-          "column": 71
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
-      "start": 132,
-      "end": 138,
+      "type": "CommentLine",
+      "value": "import SCNActionTimingMode from './SCNActionTimingMode'",
+      "start": 134,
+      "end": 191,
       "loc": {
         "start": {
           "line": 5,
@@ -1016,101 +903,22 @@
         },
         "end": {
           "line": 5,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNActionTimingMode",
-      "start": 139,
-      "end": 158,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 7
-        },
-        "end": {
-          "line": 5,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 159,
-      "end": 163,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 27
-        },
-        "end": {
-          "line": 5,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNActionTimingMode",
-      "start": 164,
-      "end": 187,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 32
-        },
-        "end": {
-          "line": 5,
-          "column": 55
+          "column": 57
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scntimingfunction\n ",
-      "start": 190,
-      "end": 319,
+      "start": 193,
+      "end": 322,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 3
         }
       }
@@ -1130,15 +938,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 320,
-      "end": 326,
+      "start": 323,
+      "end": 329,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 6
         }
       }
@@ -1158,15 +966,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 327,
-      "end": 334,
+      "start": 330,
+      "end": 337,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 14
         }
       }
@@ -1186,15 +994,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 335,
-      "end": 340,
+      "start": 338,
+      "end": 343,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 20
         }
       }
@@ -1212,15 +1020,15 @@
         "binop": null
       },
       "value": "SCNTimingFunction",
-      "start": 341,
-      "end": 358,
+      "start": 344,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 21
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 38
         }
       }
@@ -1240,15 +1048,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 359,
-      "end": 366,
+      "start": 362,
+      "end": 369,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 39
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 46
         }
       }
@@ -1266,15 +1074,15 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 367,
-      "end": 375,
+      "start": 370,
+      "end": 378,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 47
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 55
         }
       }
@@ -1291,15 +1099,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 376,
-      "end": 377,
+      "start": 379,
+      "end": 380,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 56
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 57
         }
       }
@@ -1307,15 +1115,15 @@
     {
       "type": "CommentLine",
       "value": " Initializers",
-      "start": 381,
-      "end": 396,
+      "start": 384,
+      "end": 399,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 16,
+          "line": 15,
           "column": 17
         }
       }
@@ -1323,15 +1131,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @param {CAMediaTimingFunction} caTimingFunction - \n   * @returns {SCNTimingFunction} -\n   * @see https://developer.apple.com/documentation/scenekit/scntimingfunction/2866052-init\n   ",
-      "start": 400,
-      "end": 619,
+      "start": 403,
+      "end": 622,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 17,
           "column": 2
         },
         "end": {
-          "line": 24,
+          "line": 23,
           "column": 5
         }
       }
@@ -1349,15 +1157,15 @@
         "binop": null
       },
       "value": "initCaMediaTimingFunction",
-      "start": 622,
-      "end": 647,
+      "start": 625,
+      "end": 650,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 2
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 27
         }
       }
@@ -1374,15 +1182,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 647,
-      "end": 648,
+      "start": 650,
+      "end": 651,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 27
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 28
         }
       }
@@ -1400,15 +1208,15 @@
         "binop": null
       },
       "value": "caTimingFunction",
-      "start": 648,
-      "end": 664,
+      "start": 651,
+      "end": 667,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 28
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 44
         }
       }
@@ -1425,15 +1233,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 664,
-      "end": 665,
+      "start": 667,
+      "end": 668,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 44
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 45
         }
       }
@@ -1450,15 +1258,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 666,
-      "end": 667,
+      "start": 669,
+      "end": 670,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 46
         },
         "end": {
-          "line": 25,
+          "line": 24,
           "column": 47
         }
       }
@@ -1475,15 +1283,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 670,
-      "end": 671,
+      "start": 673,
+      "end": 674,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 2
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 3
         }
       }
@@ -1491,15 +1299,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * \n   * @access public\n   * @constructor\n   * @param {SCNActionTimingMode} timingMode - \n   * @see https://developer.apple.com/documentation/scenekit/scntimingfunction/2866061-init\n   ",
-      "start": 675,
-      "end": 868,
+      "start": 678,
+      "end": 871,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 27,
           "column": 2
         },
         "end": {
-          "line": 34,
+          "line": 33,
           "column": 5
         }
       }
@@ -1517,15 +1325,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 871,
-      "end": 882,
+      "start": 874,
+      "end": 885,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 2
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 13
         }
       }
@@ -1542,15 +1350,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 882,
-      "end": 883,
+      "start": 885,
+      "end": 886,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 13
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 14
         }
       }
@@ -1568,15 +1376,15 @@
         "binop": null
       },
       "value": "timingMode",
-      "start": 883,
-      "end": 893,
+      "start": 886,
+      "end": 896,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 14
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 24
         }
       }
@@ -1593,15 +1401,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 893,
-      "end": 894,
+      "start": 896,
+      "end": 897,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 24
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 25
         }
       }
@@ -1618,15 +1426,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 895,
-      "end": 896,
+      "start": 898,
+      "end": 899,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 34,
           "column": 26
         },
         "end": {
-          "line": 35,
+          "line": 34,
           "column": 27
         }
       }
@@ -1646,15 +1454,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 901,
-      "end": 906,
+      "start": 904,
+      "end": 909,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 9
         }
       }
@@ -1671,15 +1479,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 906,
-      "end": 907,
+      "start": 909,
+      "end": 910,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 9
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 10
         }
       }
@@ -1696,15 +1504,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 907,
-      "end": 908,
+      "start": 910,
+      "end": 911,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 35,
           "column": 10
         },
         "end": {
-          "line": 36,
+          "line": 35,
           "column": 11
         }
       }
@@ -1721,15 +1529,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 911,
-      "end": 912,
+      "start": 914,
+      "end": 915,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 36,
           "column": 2
         },
         "end": {
-          "line": 37,
+          "line": 36,
           "column": 3
         }
       }
@@ -1746,15 +1554,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 913,
-      "end": 914,
+      "start": 916,
+      "end": 917,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 37,
           "column": 0
         },
         "end": {
-          "line": 38,
+          "line": 37,
           "column": 1
         }
       }
@@ -1772,15 +1580,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 915,
-      "end": 915,
+      "start": 918,
+      "end": 918,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 38,
           "column": 0
         },
         "end": {
-          "line": 39,
+          "line": 38,
           "column": 0
         }
       }

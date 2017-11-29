@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 795,
+  "end": 812,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 795,
+    "end": 812,
     "loc": {
       "start": {
         "line": 1,
@@ -94,92 +94,39 @@
             "rawValue": "./SCNConstraint",
             "raw": "'./SCNConstraint'"
           },
-          "value": "./SCNConstraint"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 58,
-        "end": 107,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 49
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 65,
-            "end": 81,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 7
-              },
-              "end": {
-                "line": 4,
-                "column": 23
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 65,
-              "end": 81,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 7
-                },
-                "end": {
-                  "line": 4,
-                  "column": 23
-                },
-                "identifierName": "SCNBillboardAxis"
-              },
-              "name": "SCNBillboardAxis"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 87,
-          "end": 107,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 29
-            },
-            "end": {
-              "line": 4,
-              "column": 49
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNBillboardAxis",
-            "raw": "'./SCNBillboardAxis'"
-          },
-          "value": "./SCNBillboardAxis",
+          "value": "./SCNConstraint",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
-            "start": 110,
-            "end": 324,
+            "type": "CommentLine",
+            "value": "import SCNBillboardAxis from './SCNBillboardAxis'",
+            "start": 58,
+            "end": 109,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 12,
+                "line": 4,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
+            "start": 111,
+            "end": 325,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
                 "column": 3
               }
             }
@@ -188,11 +135,11 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 325,
-        "end": 794,
+        "start": 326,
+        "end": 811,
         "loc": {
           "start": {
-            "line": 13,
+            "line": 12,
             "column": 0
           },
           "end": {
@@ -202,11 +149,11 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 340,
-          "end": 794,
+          "start": 341,
+          "end": 811,
           "loc": {
             "start": {
-              "line": 13,
+              "line": 12,
               "column": 15
             },
             "end": {
@@ -216,15 +163,15 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 346,
-            "end": 368,
+            "start": 347,
+            "end": 369,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 21
               },
               "end": {
-                "line": 13,
+                "line": 12,
                 "column": 43
               },
               "identifierName": "SCNBillboardConstraint"
@@ -234,15 +181,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 377,
-            "end": 390,
+            "start": 378,
+            "end": 391,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 52
               },
               "end": {
-                "line": 13,
+                "line": 12,
                 "column": 65
               },
               "identifierName": "SCNConstraint"
@@ -251,11 +198,11 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 391,
-            "end": 794,
+            "start": 392,
+            "end": 811,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 66
               },
               "end": {
@@ -266,11 +213,11 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 466,
-                "end": 792,
+                "start": 464,
+                "end": 809,
                 "loc": {
                   "start": {
-                    "line": 20,
+                    "line": 19,
                     "column": 2
                   },
                   "end": {
@@ -281,24 +228,24 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 466,
-                  "end": 470,
+                  "start": 464,
+                  "end": 475,
                   "loc": {
                     "start": {
-                      "line": 20,
+                      "line": 19,
                       "column": 2
                     },
                     "end": {
-                      "line": 20,
-                      "column": 6
+                      "line": 19,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -306,12 +253,12 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 473,
-                  "end": 792,
+                  "start": 478,
+                  "end": 809,
                   "loc": {
                     "start": {
-                      "line": 20,
-                      "column": 9
+                      "line": 19,
+                      "column": 16
                     },
                     "end": {
                       "line": 31,
@@ -321,8 +268,89 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 767,
-                      "end": 787,
+                      "start": 484,
+                      "end": 491,
+                      "loc": {
+                        "start": {
+                          "line": 20,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 484,
+                        "end": 491,
+                        "loc": {
+                          "start": {
+                            "line": 20,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 20,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 484,
+                          "end": 489,
+                          "loc": {
+                            "start": {
+                              "line": 20,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 20,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Working with a Constraint’s Degrees of Freedom",
+                          "start": 497,
+                          "end": 546,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 53
+                            }
+                          }
+                        },
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * An option that specifies which degrees of freedom the constraint affects.\n     * @type {SCNBillboardAxis}\n     * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint/1468685-freeaxes\n     ",
+                          "start": 552,
+                          "end": 779,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 28,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 784,
+                      "end": 804,
                       "loc": {
                         "start": {
                           "line": 29,
@@ -335,8 +363,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 767,
-                        "end": 787,
+                        "start": 784,
+                        "end": 804,
                         "loc": {
                           "start": {
                             "line": 29,
@@ -350,8 +378,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 767,
-                          "end": 780,
+                          "start": 784,
+                          "end": 797,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -364,8 +392,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 767,
-                            "end": 771,
+                            "start": 784,
+                            "end": 788,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -380,8 +408,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 772,
-                            "end": 780,
+                            "start": 789,
+                            "end": 797,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -400,8 +428,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 783,
-                          "end": 787,
+                          "start": 800,
+                          "end": 804,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -419,8 +447,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with a Constraint’s Degrees of Freedom",
-                          "start": 480,
-                          "end": 529,
+                          "start": 497,
+                          "end": 546,
                           "loc": {
                             "start": {
                               "line": 22,
@@ -435,8 +463,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * An option that specifies which degrees of freedom the constraint affects.\n     * @type {SCNBillboardAxis}\n     * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint/1468685-freeaxes\n     ",
-                          "start": 535,
-                          "end": 762,
+                          "start": 552,
+                          "end": 779,
                           "loc": {
                             "start": {
                               "line": 24,
@@ -456,16 +484,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 396,
-                    "end": 463,
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 397,
+                    "end": 461,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 14,
                         "column": 2
                       },
                       "end": {
-                        "line": 19,
+                        "line": 18,
                         "column": 5
                       }
                     }
@@ -476,17 +504,33 @@
           },
           "leadingComments": [
             {
-              "type": "CommentBlock",
-              "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
-              "start": 110,
-              "end": 324,
+              "type": "CommentLine",
+              "value": "import SCNBillboardAxis from './SCNBillboardAxis'",
+              "start": 58,
+              "end": 109,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 12,
+                  "line": 4,
+                  "column": 51
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
+              "start": 111,
+              "end": 325,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 11,
                   "column": 3
                 }
               }
@@ -496,17 +540,33 @@
         },
         "leadingComments": [
           {
-            "type": "CommentBlock",
-            "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
-            "start": 110,
-            "end": 324,
+            "type": "CommentLine",
+            "value": "import SCNBillboardAxis from './SCNBillboardAxis'",
+            "start": 58,
+            "end": 109,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 12,
+                "line": 4,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
+            "start": 111,
+            "end": 325,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
                 "column": 3
               }
             }
@@ -554,33 +614,49 @@
   },
   "comments": [
     {
-      "type": "CommentBlock",
-      "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
-      "start": 110,
-      "end": 324,
+      "type": "CommentLine",
+      "value": "import SCNBillboardAxis from './SCNBillboardAxis'",
+      "start": 58,
+      "end": 109,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 4,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
+      "start": 111,
+      "end": 325,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 396,
-      "end": 463,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 397,
+      "end": 461,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 19,
+          "line": 18,
           "column": 5
         }
       }
@@ -588,8 +664,8 @@
     {
       "type": "CommentLine",
       "value": " Working with a Constraint’s Degrees of Freedom",
-      "start": 480,
-      "end": 529,
+      "start": 497,
+      "end": 546,
       "loc": {
         "start": {
           "line": 22,
@@ -604,8 +680,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * An option that specifies which degrees of freedom the constraint affects.\n     * @type {SCNBillboardAxis}\n     * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint/1468685-freeaxes\n     ",
-      "start": 535,
-      "end": 762,
+      "start": 552,
+      "end": 779,
       "loc": {
         "start": {
           "line": 24,
@@ -754,22 +830,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNBillboardAxis from './SCNBillboardAxis'",
       "start": 58,
-      "end": 64,
+      "end": 109,
       "loc": {
         "start": {
           "line": 4,
@@ -777,101 +841,22 @@
         },
         "end": {
           "line": 4,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNBillboardAxis",
-      "start": 65,
-      "end": 81,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 7
-        },
-        "end": {
-          "line": 4,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 82,
-      "end": 86,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 24
-        },
-        "end": {
-          "line": 4,
-          "column": 28
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNBillboardAxis",
-      "start": 87,
-      "end": 107,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 29
-        },
-        "end": {
-          "line": 4,
-          "column": 49
+          "column": 51
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * A constraint that orients a node to always point toward the current camera.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint\n ",
-      "start": 110,
-      "end": 324,
+      "start": 111,
+      "end": 325,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 3
         }
       }
@@ -891,15 +876,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 325,
-      "end": 331,
+      "start": 326,
+      "end": 332,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 6
         }
       }
@@ -919,15 +904,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 332,
-      "end": 339,
+      "start": 333,
+      "end": 340,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 7
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 14
         }
       }
@@ -947,15 +932,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 340,
-      "end": 345,
+      "start": 341,
+      "end": 346,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 15
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 20
         }
       }
@@ -973,15 +958,15 @@
         "binop": null
       },
       "value": "SCNBillboardConstraint",
-      "start": 346,
-      "end": 368,
+      "start": 347,
+      "end": 369,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 21
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 43
         }
       }
@@ -1001,15 +986,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 369,
-      "end": 376,
+      "start": 370,
+      "end": 377,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 44
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 51
         }
       }
@@ -1027,15 +1012,15 @@
         "binop": null
       },
       "value": "SCNConstraint",
-      "start": 377,
-      "end": 390,
+      "start": 378,
+      "end": 391,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 52
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 65
         }
       }
@@ -1052,31 +1037,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 391,
-      "end": 392,
+      "start": 392,
+      "end": 393,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 66
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 67
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 396,
-      "end": 463,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 397,
+      "end": 461,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 19,
+          "line": 18,
           "column": 5
         }
       }
@@ -1093,17 +1078,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 466,
-      "end": 470,
+      "value": "constructor",
+      "start": 464,
+      "end": 475,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 19,
           "column": 2
         },
         "end": {
-          "line": 20,
-          "column": 6
+          "line": 19,
+          "column": 13
         }
       }
     },
@@ -1119,16 +1104,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 470,
-      "end": 471,
+      "start": 475,
+      "end": 476,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 6
+          "line": 19,
+          "column": 13
         },
         "end": {
-          "line": 20,
-          "column": 7
+          "line": 19,
+          "column": 14
         }
       }
     },
@@ -1144,16 +1129,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 471,
-      "end": 472,
+      "start": 476,
+      "end": 477,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 7
+          "line": 19,
+          "column": 14
         },
         "end": {
-          "line": 20,
-          "column": 8
+          "line": 19,
+          "column": 15
         }
       }
     },
@@ -1169,8 +1154,61 @@
         "postfix": false,
         "binop": null
       },
-      "start": 473,
-      "end": 474,
+      "start": 478,
+      "end": 479,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 16
+        },
+        "end": {
+          "line": 19,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 484,
+      "end": 489,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 489,
+      "end": 490,
       "loc": {
         "start": {
           "line": 20,
@@ -1183,10 +1221,35 @@
       }
     },
     {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 490,
+      "end": 491,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 10
+        },
+        "end": {
+          "line": 20,
+          "column": 11
+        }
+      }
+    },
+    {
       "type": "CommentLine",
       "value": " Working with a Constraint’s Degrees of Freedom",
-      "start": 480,
-      "end": 529,
+      "start": 497,
+      "end": 546,
       "loc": {
         "start": {
           "line": 22,
@@ -1201,8 +1264,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * An option that specifies which degrees of freedom the constraint affects.\n     * @type {SCNBillboardAxis}\n     * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint/1468685-freeaxes\n     ",
-      "start": 535,
-      "end": 762,
+      "start": 552,
+      "end": 779,
       "loc": {
         "start": {
           "line": 24,
@@ -1229,8 +1292,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 767,
-      "end": 771,
+      "start": 784,
+      "end": 788,
       "loc": {
         "start": {
           "line": 29,
@@ -1255,8 +1318,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 771,
-      "end": 772,
+      "start": 788,
+      "end": 789,
       "loc": {
         "start": {
           "line": 29,
@@ -1281,8 +1344,8 @@
         "binop": null
       },
       "value": "freeAxes",
-      "start": 772,
-      "end": 780,
+      "start": 789,
+      "end": 797,
       "loc": {
         "start": {
           "line": 29,
@@ -1308,8 +1371,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 781,
-      "end": 782,
+      "start": 798,
+      "end": 799,
       "loc": {
         "start": {
           "line": 29,
@@ -1336,8 +1399,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 783,
-      "end": 787,
+      "start": 800,
+      "end": 804,
       "loc": {
         "start": {
           "line": 29,
@@ -1361,8 +1424,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 791,
-      "end": 792,
+      "start": 808,
+      "end": 809,
       "loc": {
         "start": {
           "line": 31,
@@ -1386,8 +1449,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 793,
-      "end": 794,
+      "start": 810,
+      "end": 811,
       "loc": {
         "start": {
           "line": 32,
@@ -1412,8 +1475,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 795,
-      "end": 795,
+      "start": 812,
+      "end": 812,
       "loc": {
         "start": {
           "line": 33,

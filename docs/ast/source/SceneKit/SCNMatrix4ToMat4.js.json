@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 327,
+  "end": 329,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 327,
+    "end": 329,
     "loc": {
       "start": {
         "line": 1,
@@ -29,98 +29,9 @@
     "sourceType": "module",
     "body": [
       {
-        "type": "ImportDeclaration",
-        "start": 14,
-        "end": 51,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 37
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 21,
-            "end": 31,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 7
-              },
-              "end": {
-                "line": 3,
-                "column": 17
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 21,
-              "end": 31,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 7
-                },
-                "end": {
-                  "line": 3,
-                  "column": 17
-                },
-                "identifierName": "SCNMatrix4"
-              },
-              "name": "SCNMatrix4"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 37,
-          "end": 51,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 37
-            }
-          },
-          "extra": {
-            "rawValue": "./SCNMatrix4",
-            "raw": "'./SCNMatrix4'"
-          },
-          "value": "./SCNMatrix4",
-          "leadingComments": null,
-          "trailingComments": null
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * @access public\n * @type {function}\n * @param {SCNMatrix4} m - \n * @returns {number[][]} - \n * @see https://developer.apple.com/documentation/scenekit/1523928-scnmatrix4tomat4\n ",
-            "start": 53,
-            "end": 238,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 0
-              },
-              "end": {
-                "line": 11,
-                "column": 3
-              }
-            }
-          }
-        ]
-      },
-      {
         "type": "Identifier",
-        "start": 239,
-        "end": 293,
+        "start": 241,
+        "end": 295,
         "loc": {
           "start": {
             "line": 12,
@@ -134,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 245,
-            "end": 293,
+            "start": 247,
+            "end": 295,
             "loc": {
               "start": {
                 "line": 12,
@@ -148,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 245,
-              "end": 261,
+              "start": 247,
+              "end": 263,
               "loc": {
                 "start": {
                   "line": 12,
@@ -166,8 +77,8 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 264,
-              "end": 293,
+              "start": 266,
+              "end": 295,
               "loc": {
                 "start": {
                   "line": 12,
@@ -185,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 273,
-                  "end": 274,
+                  "start": 275,
+                  "end": 276,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -203,8 +114,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 276,
-                "end": 293,
+                "start": 278,
+                "end": 295,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -218,8 +129,8 @@
                 "body": [
                   {
                     "type": "ReturnStatement",
-                    "start": 280,
-                    "end": 291,
+                    "start": 282,
+                    "end": 293,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -232,8 +143,8 @@
                     },
                     "argument": {
                       "type": "NullLiteral",
-                      "start": 287,
-                      "end": 291,
+                      "start": 289,
+                      "end": 293,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -260,8 +171,8 @@
       },
       {
         "type": "Identifier",
-        "start": 295,
-        "end": 326,
+        "start": 297,
+        "end": 328,
         "loc": {
           "start": {
             "line": 16,
@@ -274,8 +185,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 310,
-          "end": 326,
+          "start": 312,
+          "end": 328,
           "loc": {
             "start": {
               "line": 16,
@@ -295,8 +206,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 295,
-        "end": 326,
+        "start": 297,
+        "end": 328,
         "loc": {
           "start": {
             "line": 16,
@@ -309,8 +220,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 239,
-          "end": 293,
+          "start": 241,
+          "end": 295,
           "loc": {
             "start": {
               "line": 12,
@@ -324,8 +235,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 245,
-              "end": 293,
+              "start": 247,
+              "end": 295,
               "loc": {
                 "start": {
                   "line": 12,
@@ -338,8 +249,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 245,
-                "end": 261,
+                "start": 247,
+                "end": 263,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -356,8 +267,8 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 264,
-                "end": 293,
+                "start": 266,
+                "end": 295,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -370,8 +281,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 245,
-                  "end": 261,
+                  "start": 247,
+                  "end": 263,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -392,8 +303,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 273,
-                    "end": 274,
+                    "start": 275,
+                    "end": 276,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -410,8 +321,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 276,
-                  "end": 293,
+                  "start": 278,
+                  "end": 295,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -425,8 +336,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 280,
-                      "end": 291,
+                      "start": 282,
+                      "end": 293,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -439,8 +350,8 @@
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 287,
-                        "end": 291,
+                        "start": 289,
+                        "end": 293,
                         "loc": {
                           "start": {
                             "line": 13,
@@ -463,10 +374,26 @@
           "kind": "const",
           "leadingComments": [
             {
+              "type": "CommentLine",
+              "value": "import SCNMatrix4 from './SCNMatrix4'",
+              "start": 14,
+              "end": 53,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 3,
+                  "column": 39
+                }
+              }
+            },
+            {
               "type": "CommentBlock",
               "value": "*\n * @access public\n * @type {function}\n * @param {SCNMatrix4} m - \n * @returns {number[][]} - \n * @see https://developer.apple.com/documentation/scenekit/1523928-scnmatrix4tomat4\n ",
-              "start": 53,
-              "end": 238,
+              "start": 55,
+              "end": 240,
               "loc": {
                 "start": {
                   "line": 5,
@@ -516,17 +443,68 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "import SCNMatrix4 from './SCNMatrix4'",
+            "start": 14,
+            "end": 53,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 39
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * @access public\n * @type {function}\n * @param {SCNMatrix4} m - \n * @returns {number[][]} - \n * @see https://developer.apple.com/documentation/scenekit/1523928-scnmatrix4tomat4\n ",
+            "start": 55,
+            "end": 240,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
   "comments": [
     {
+      "type": "CommentLine",
+      "value": "import SCNMatrix4 from './SCNMatrix4'",
+      "start": 14,
+      "end": 53,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 39
+        }
+      }
+    },
+    {
       "type": "CommentBlock",
       "value": "*\n * @access public\n * @type {function}\n * @param {SCNMatrix4} m - \n * @returns {number[][]} - \n * @see https://developer.apple.com/documentation/scenekit/1523928-scnmatrix4tomat4\n ",
-      "start": 53,
-      "end": 238,
+      "start": 55,
+      "end": 240,
       "loc": {
         "start": {
           "line": 5,
@@ -568,22 +546,10 @@
       }
     },
     {
-      "type": {
-        "label": "import",
-        "keyword": "import",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "import",
+      "type": "CommentLine",
+      "value": "import SCNMatrix4 from './SCNMatrix4'",
       "start": 14,
-      "end": 20,
+      "end": 53,
       "loc": {
         "start": {
           "line": 3,
@@ -591,94 +557,15 @@
         },
         "end": {
           "line": 3,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SCNMatrix4",
-      "start": 21,
-      "end": 31,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 32,
-      "end": 36,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 18
-        },
-        "end": {
-          "line": 3,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./SCNMatrix4",
-      "start": 37,
-      "end": 51,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 23
-        },
-        "end": {
-          "line": 3,
-          "column": 37
+          "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n * @access public\n * @type {function}\n * @param {SCNMatrix4} m - \n * @returns {number[][]} - \n * @see https://developer.apple.com/documentation/scenekit/1523928-scnmatrix4tomat4\n ",
-      "start": 53,
-      "end": 238,
+      "start": 55,
+      "end": 240,
       "loc": {
         "start": {
           "line": 5,
@@ -705,8 +592,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 239,
-      "end": 244,
+      "start": 241,
+      "end": 246,
       "loc": {
         "start": {
           "line": 12,
@@ -731,8 +618,8 @@
         "binop": null
       },
       "value": "SCNMatrix4ToMat4",
-      "start": 245,
-      "end": 261,
+      "start": 247,
+      "end": 263,
       "loc": {
         "start": {
           "line": 12,
@@ -758,8 +645,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 262,
-      "end": 263,
+      "start": 264,
+      "end": 265,
       "loc": {
         "start": {
           "line": 12,
@@ -785,8 +672,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 264,
-      "end": 272,
+      "start": 266,
+      "end": 274,
       "loc": {
         "start": {
           "line": 12,
@@ -810,8 +697,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 272,
-      "end": 273,
+      "start": 274,
+      "end": 275,
       "loc": {
         "start": {
           "line": 12,
@@ -836,8 +723,8 @@
         "binop": null
       },
       "value": "m",
-      "start": 273,
-      "end": 274,
+      "start": 275,
+      "end": 276,
       "loc": {
         "start": {
           "line": 12,
@@ -861,8 +748,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 274,
-      "end": 275,
+      "start": 276,
+      "end": 277,
       "loc": {
         "start": {
           "line": 12,
@@ -886,8 +773,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 276,
-      "end": 277,
+      "start": 278,
+      "end": 279,
       "loc": {
         "start": {
           "line": 12,
@@ -914,8 +801,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 280,
-      "end": 286,
+      "start": 282,
+      "end": 288,
       "loc": {
         "start": {
           "line": 13,
@@ -942,8 +829,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 287,
-      "end": 291,
+      "start": 289,
+      "end": 293,
       "loc": {
         "start": {
           "line": 13,
@@ -967,8 +854,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 292,
-      "end": 293,
+      "start": 294,
+      "end": 295,
       "loc": {
         "start": {
           "line": 14,
@@ -995,8 +882,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 295,
-      "end": 301,
+      "start": 297,
+      "end": 303,
       "loc": {
         "start": {
           "line": 16,
@@ -1023,8 +910,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 302,
-      "end": 309,
+      "start": 304,
+      "end": 311,
       "loc": {
         "start": {
           "line": 16,
@@ -1049,8 +936,8 @@
         "binop": null
       },
       "value": "SCNMatrix4ToMat4",
-      "start": 310,
-      "end": 326,
+      "start": 312,
+      "end": 328,
       "loc": {
         "start": {
           "line": 16,
@@ -1075,8 +962,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 327,
-      "end": 327,
+      "start": 329,
+      "end": 329,
       "loc": {
         "start": {
           "line": 17,

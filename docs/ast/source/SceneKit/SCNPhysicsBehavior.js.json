@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 469,
+  "end": 475,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 22,
+      "line": 21,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 469,
+    "end": 475,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 22,
+        "line": 21,
         "column": 0
       }
     },
@@ -102,15 +102,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsbehavior\n ",
-            "start": 62,
-            "end": 321,
+            "start": 61,
+            "end": 320,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 3
               }
             }
@@ -119,43 +119,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 322,
-        "end": 468,
+        "start": 321,
+        "end": 474,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 11,
             "column": 0
           },
           "end": {
-            "line": 21,
+            "line": 20,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 337,
-          "end": 468,
+          "start": 336,
+          "end": 474,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 11,
               "column": 15
             },
             "end": {
-              "line": 21,
+              "line": 20,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 343,
-            "end": 361,
+            "start": 342,
+            "end": 360,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 21
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 39
               },
               "identifierName": "SCNPhysicsBehavior"
@@ -165,15 +165,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 370,
-            "end": 378,
+            "start": 369,
+            "end": 377,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 48
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 56
               },
               "identifierName": "NSObject"
@@ -182,94 +182,68 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 379,
-            "end": 468,
+            "start": 378,
+            "end": 474,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 57
               },
               "end": {
-                "line": 21,
+                "line": 20,
                 "column": 1
               }
             },
-            "body": [
+            "body": [],
+            "leadingComments": null,
+            "innerComments": [
               {
-                "type": "ClassMethod",
-                "start": 454,
+                "type": "CommentBlock",
+                "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                "start": 383,
+                "end": 447,
+                "loc": {
+                  "start": {
+                    "line": 13,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 5
+                  }
+                }
+              },
+              {
+                "type": "CommentLine",
+                "value": "construtor() {",
+                "start": 450,
                 "end": 466,
+                "loc": {
+                  "start": {
+                    "line": 18,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 18
+                  }
+                }
+              },
+              {
+                "type": "CommentLine",
+                "value": "}",
+                "start": 469,
+                "end": 472,
                 "loc": {
                   "start": {
                     "line": 19,
                     "column": 2
                   },
                   "end": {
-                    "line": 20,
-                    "column": 3
+                    "line": 19,
+                    "column": 5
                   }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 454,
-                  "end": 458,
-                  "loc": {
-                    "start": {
-                      "line": 19,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 19,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 461,
-                  "end": 466,
-                  "loc": {
-                    "start": {
-                      "line": 19,
-                      "column": 9
-                    },
-                    "end": {
-                      "line": 20,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
-                  "directives": []
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 384,
-                    "end": 451,
-                    "loc": {
-                      "start": {
-                        "line": 14,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 18,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
+                }
               }
             ]
           },
@@ -277,15 +251,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsbehavior\n ",
-              "start": 62,
-              "end": 321,
+              "start": 61,
+              "end": 320,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 5,
                   "column": 0
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 3
                 }
               }
@@ -297,15 +271,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsbehavior\n ",
-            "start": 62,
-            "end": 321,
+            "start": 61,
+            "end": 320,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 3
               }
             }
@@ -355,31 +329,63 @@
     {
       "type": "CommentBlock",
       "value": "*\n * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsbehavior\n ",
-      "start": 62,
-      "end": 321,
+      "start": 61,
+      "end": 320,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 384,
-      "end": 451,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 383,
+      "end": 447,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "construtor() {",
+      "start": 450,
+      "end": 466,
+      "loc": {
+        "start": {
+          "line": 18,
           "column": 2
         },
         "end": {
           "line": 18,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 469,
+      "end": 472,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
           "column": 5
         }
       }
@@ -523,15 +529,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsbehavior\n ",
-      "start": 62,
-      "end": 321,
+      "start": 61,
+      "end": 320,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
@@ -551,15 +557,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 322,
-      "end": 328,
+      "start": 321,
+      "end": 327,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 6
         }
       }
@@ -579,15 +585,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 329,
-      "end": 336,
+      "start": 328,
+      "end": 335,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 14
         }
       }
@@ -607,15 +613,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 337,
-      "end": 342,
+      "start": 336,
+      "end": 341,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 20
         }
       }
@@ -633,15 +639,15 @@
         "binop": null
       },
       "value": "SCNPhysicsBehavior",
-      "start": 343,
-      "end": 361,
+      "start": 342,
+      "end": 360,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 21
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 39
         }
       }
@@ -661,15 +667,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 362,
-      "end": 369,
+      "start": 361,
+      "end": 368,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 40
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 47
         }
       }
@@ -687,15 +693,15 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 370,
-      "end": 378,
+      "start": 369,
+      "end": 377,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 48
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 56
         }
       }
@@ -712,138 +718,69 @@
         "postfix": false,
         "binop": null
       },
-      "start": 379,
-      "end": 380,
+      "start": 378,
+      "end": 379,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 57
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 58
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 384,
-      "end": 451,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 383,
+      "end": 447,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "construtor() {",
+      "start": 450,
+      "end": 466,
+      "loc": {
+        "start": {
+          "line": 18,
           "column": 2
         },
         "end": {
           "line": 18,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "}",
+      "start": 469,
+      "end": 472,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
           "column": 5
         }
       }
     },
     {
       "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 454,
-      "end": 458,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 2
-        },
-        "end": {
-          "line": 19,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 458,
-      "end": 459,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 6
-        },
-        "end": {
-          "line": 19,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 459,
-      "end": 460,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 7
-        },
-        "end": {
-          "line": 19,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 461,
-      "end": 462,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 9
-        },
-        "end": {
-          "line": 19,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
         "label": "}",
         "beforeExpr": false,
         "startsExpr": false,
@@ -854,40 +791,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 465,
-      "end": 466,
+      "start": 473,
+      "end": 474,
       "loc": {
         "start": {
           "line": 20,
-          "column": 2
-        },
-        "end": {
-          "line": 20,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 467,
-      "end": 468,
-      "loc": {
-        "start": {
-          "line": 21,
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 20,
           "column": 1
         }
       }
@@ -905,15 +817,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 469,
-      "end": 469,
+      "start": 475,
+      "end": 475,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 21,
           "column": 0
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 0
         }
       }

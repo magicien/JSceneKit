@@ -1,0 +1,670 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 1416,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 53,
+      "column": 0
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 1416,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 53,
+        "column": 0
+      }
+    },
+    "sourceType": "module",
+    "body": [
+      {
+        "type": "Identifier",
+        "start": 40,
+        "end": 1365,
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 0
+          },
+          "end": {
+            "line": 49,
+            "column": 1
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 46,
+            "end": 1365,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 6
+              },
+              "end": {
+                "line": 49,
+                "column": 1
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 46,
+              "end": 78,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 6
+                },
+                "end": {
+                  "line": 6,
+                  "column": 38
+                },
+                "identifierName": "_SCNDefaultHitTestFragmentShader"
+              },
+              "name": "_SCNDefaultHitTestFragmentShader",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "TemplateLiteral",
+              "start": 82,
+              "end": 1365,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 1
+                },
+                "end": {
+                  "line": 49,
+                  "column": 1
+                }
+              },
+              "expressions": [],
+              "quasis": [
+                {
+                  "type": "TemplateElement",
+                  "start": 83,
+                  "end": 1364,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 49,
+                      "column": 0
+                    }
+                  },
+                  "value": {
+                    "raw": "#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec4 out_position;\n  layout(location = 3) out vec4 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec4((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5, 0);\n    //out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);\n    float r = (v_position.z + 1.0) * 0.5;\n    float g = fract(r * 255.0);\n    float b = fract(g * 255.0);\n    float a = fract(b * 255.0);\n    float coef = 1.0 / 255.0;\n\n    r -= g * coef;\n    g -= b * coef;\n    b -= a * coef;\n    out_position = vec4(r, g, b, a);\n  }\n",
+                    "cooked": "#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec4 out_position;\n  layout(location = 3) out vec4 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec4((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5, 0);\n    //out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);\n    float r = (v_position.z + 1.0) * 0.5;\n    float g = fract(r * 255.0);\n    float b = fract(g * 255.0);\n    float a = fract(b * 255.0);\n    float coef = 1.0 / 255.0;\n\n    r -= g * coef;\n    g -= b * coef;\n    b -= a * coef;\n    out_position = vec4(r, g, b, a);\n  }\n"
+                  },
+                  "tail": true
+                }
+              ]
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [],
+        "name": "_",
+        "trailingComments": []
+      },
+      {
+        "type": "Identifier",
+        "start": 1367,
+        "end": 1414,
+        "loc": {
+          "start": {
+            "line": 51,
+            "column": 0
+          },
+          "end": {
+            "line": 51,
+            "column": 47
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 1382,
+          "end": 1414,
+          "loc": {
+            "start": {
+              "line": 51,
+              "column": 15
+            },
+            "end": {
+              "line": 51,
+              "column": 47
+            },
+            "identifierName": "_SCNDefaultHitTestFragmentShader"
+          },
+          "name": "_SCNDefaultHitTestFragmentShader"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 1367,
+        "end": 1414,
+        "loc": {
+          "start": {
+            "line": 51,
+            "column": 0
+          },
+          "end": {
+            "line": 51,
+            "column": 47
+          }
+        },
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 40,
+          "end": 1365,
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 0
+            },
+            "end": {
+              "line": 49,
+              "column": 1
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 46,
+              "end": 1365,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 6
+                },
+                "end": {
+                  "line": 49,
+                  "column": 1
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 46,
+                "end": 78,
+                "loc": {
+                  "start": {
+                    "line": 6,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 38
+                  },
+                  "identifierName": "_SCNDefaultHitTestFragmentShader"
+                },
+                "name": "_SCNDefaultHitTestFragmentShader",
+                "leadingComments": null
+              },
+              "init": {
+                "type": "TemplateLiteral",
+                "start": 82,
+                "end": 1365,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 49,
+                    "column": 1
+                  }
+                },
+                "expressions": [],
+                "quasis": [
+                  {
+                    "type": "TemplateElement",
+                    "start": 83,
+                    "end": 1364,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 49,
+                        "column": 0
+                      }
+                    },
+                    "value": {
+                      "raw": "#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec4 out_position;\n  layout(location = 3) out vec4 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec4((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5, 0);\n    //out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);\n    float r = (v_position.z + 1.0) * 0.5;\n    float g = fract(r * 255.0);\n    float b = fract(g * 255.0);\n    float a = fract(b * 255.0);\n    float coef = 1.0 / 255.0;\n\n    r -= g * coef;\n    g -= b * coef;\n    b -= a * coef;\n    out_position = vec4(r, g, b, a);\n  }\n",
+                      "cooked": "#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec4 out_position;\n  layout(location = 3) out vec4 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec4((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5, 0);\n    //out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);\n    float r = (v_position.z + 1.0) * 0.5;\n    float g = fract(r * 255.0);\n    float b = fract(g * 255.0);\n    float a = fract(b * 255.0);\n    float coef = 1.0 / 255.0;\n\n    r -= g * coef;\n    g -= b * coef;\n    b -= a * coef;\n    out_position = vec4(r, g, b, a);\n  }\n"
+                    },
+                    "tail": true
+                  }
+                ]
+              },
+              "leadingComments": null
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * @type {string}\n ",
+              "start": 14,
+              "end": 39,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        }
+      }
+    ],
+    "directives": [
+      {
+        "type": "Directive",
+        "start": 0,
+        "end": 12,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12
+          }
+        },
+        "value": {
+          "type": "DirectiveLiteral",
+          "start": 0,
+          "end": 12,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 12
+            }
+          },
+          "value": "use strict",
+          "extra": {
+            "raw": "'use strict'",
+            "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * @type {string}\n ",
+            "start": 14,
+            "end": 39,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 3
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @type {string}\n ",
+      "start": 14,
+      "end": 39,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "use strict",
+      "start": 0,
+      "end": 12,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @type {string}\n ",
+      "start": 14,
+      "end": 39,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 40,
+      "end": 45,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_SCNDefaultHitTestFragmentShader",
+      "start": 46,
+      "end": 78,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "line": 6,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 79,
+      "end": 80,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 39
+        },
+        "end": {
+          "line": 6,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "`",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 82,
+      "end": 83,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 1
+        },
+        "end": {
+          "line": 7,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "template",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec4 out_position;\n  layout(location = 3) out vec4 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec4((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5, 0);\n    //out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);\n    float r = (v_position.z + 1.0) * 0.5;\n    float g = fract(r * 255.0);\n    float b = fract(g * 255.0);\n    float a = fract(b * 255.0);\n    float coef = 1.0 / 255.0;\n\n    r -= g * coef;\n    g -= b * coef;\n    b -= a * coef;\n    out_position = vec4(r, g, b, a);\n  }\n",
+      "start": 83,
+      "end": 1364,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 49,
+          "column": 0
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "`",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1364,
+      "end": 1365,
+      "loc": {
+        "start": {
+          "line": 49,
+          "column": 0
+        },
+        "end": {
+          "line": 49,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 1367,
+      "end": 1373,
+      "loc": {
+        "start": {
+          "line": 51,
+          "column": 0
+        },
+        "end": {
+          "line": 51,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 1374,
+      "end": 1381,
+      "loc": {
+        "start": {
+          "line": 51,
+          "column": 7
+        },
+        "end": {
+          "line": 51,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_SCNDefaultHitTestFragmentShader",
+      "start": 1382,
+      "end": 1414,
+      "loc": {
+        "start": {
+          "line": 51,
+          "column": 15
+        },
+        "end": {
+          "line": 51,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1416,
+      "end": 1416,
+      "loc": {
+        "start": {
+          "line": 53,
+          "column": 0
+        },
+        "end": {
+          "line": 53,
+          "column": 0
+        }
+      }
+    }
+  ]
+}
