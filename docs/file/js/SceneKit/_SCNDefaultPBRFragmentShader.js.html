@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/SceneKit/_SCNDefaultPBRFragmentShader.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">AVFoundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/AVFoundation/AVAudioMixerNode.js~AVAudioMixerNode.html">AVAudioMixerNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/AVFoundation/AVAudioNode.js~AVAudioNode.html">AVAudioNode</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">AppKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/AppKit/NSColor.js~NSColor.html">NSColor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-NSColorSpaceModel">NSColorSpaceModel</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreFoundation</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CFAbsoluteTimeGetCurrent">CFAbsoluteTimeGetCurrent</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CGPathApplierFunction">CGPathApplierFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGBlendMode">CGBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGLineCap">CGLineCap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGLineJoin">CGLineJoin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGPathFillRule">CGPathFillRule</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Dispatch</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Dispatch/DispatchObject.js~DispatchObject.html">DispatchObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Dispatch/DispatchQueue.js~DispatchQueue.html">DispatchQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Dispatch/DispatchTime.js~DispatchTime.html">DispatchTime</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DispatchTimeInterval">DispatchTimeInterval</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSArray.js~NSArray.html">NSArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSCoder.js~NSCoder.html">NSCoder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSColorSpace.js~NSColorSpace.html">NSColorSpace</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSData.js~NSData.html">NSData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSDictionary.js~NSDictionary.html">NSDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html">NSKeyedArchiver</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html">NSKeyedUnarchiver</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSMutableArray.js~NSMutableArray.html">NSMutableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSMutableData.js~NSMutableData.html">NSMutableData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSMutableDictionary.js~NSMutableDictionary.html">NSMutableDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSNotification.js~NSNotification.html">NSNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSURL.js~NSURL.html">NSURL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NotificationCenter.js~NotificationCenter.html">NotificationCenter</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">GameController</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCController.js~GCController.html">GCController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCControllerAxisInput.js~GCControllerAxisInput.html">GCControllerAxisInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCControllerButtonInput.js~GCControllerButtonInput.html">GCControllerButtonInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCControllerDirectionPad.js~GCControllerDirectionPad.html">GCControllerDirectionPad</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCControllerElement.js~GCControllerElement.html">GCControllerElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCExtendedGamepad.js~GCExtendedGamepad.html">GCExtendedGamepad</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCGamepad.js~GCGamepad.html">GCGamepad</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameController/GCMicroGamepad.js~GCMicroGamepad.html">GCMicroGamepad</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">GameplayKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKAgent.js~GKAgent.html">GKAgent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKAgent2D.js~GKAgent2D.html">GKAgent2D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKBehavior.js~GKBehavior.html">GKBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKComponent.js~GKComponent.html">GKComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKEntity.js~GKEntity.html">GKEntity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKGoal.js~GKGoal.html">GKGoal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKPath.js~GKPath.html">GKPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKSCNNodeComponent.js~GKSCNNodeComponent.html">GKSCNNodeComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKScene.js~GKScene.html">GKScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/GameplayKit/GKAgentDelegate.js~GKAgentDelegate.html">GKAgentDelegate</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Metal</div><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MTLTessellationPartitionMode">MTLTessellationPartitionMode</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup.html">CAAnimationGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CABasicAnimation.js~CABasicAnimation.html">CABasicAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html">CAKeyframeAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAPropertyAnimation.js~CAPropertyAnimation.html">CAPropertyAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CACurrentMediaTime">CACurrentMediaTime</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAccelerationConstraint.js~SCNAccelerationConstraint.html">SCNAccelerationConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionCustom.js~SCNActionCustom.html">SCNActionCustom</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionFade.js~SCNActionFade.html">SCNActionFade</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionGroup.js~SCNActionGroup.html">SCNActionGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionHide.js~SCNActionHide.html">SCNActionHide</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionJavaScript.js~SCNActionJavaScript.html">SCNActionJavaScript</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionMove.js~SCNActionMove.html">SCNActionMove</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionPerformSelector.js~SCNActionPerformSelector.html">SCNActionPerformSelector</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound.html">SCNActionPlaySound</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionReference.js~SCNActionReference.html">SCNActionReference</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionRemove.js~SCNActionRemove.html">SCNActionRemove</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.html">SCNActionRepeat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html">SCNActionRotate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionRunAction.js~SCNActionRunAction.html">SCNActionRunAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock.html">SCNActionRunBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionScale.js~SCNActionScale.html">SCNActionScale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionSequence.js~SCNActionSequence.html">SCNActionSequence</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionWait.js~SCNActionWait.html">SCNActionWait</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimation.js~SCNAnimation.html">SCNAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationPlayer.js~SCNAnimationPlayer.html">SCNAnimationPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDistanceConstraint.js~SCNDistanceConstraint.html">SCNDistanceConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryTessellator.js~SCNGeometryTessellator.html">SCNGeometryTessellator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html">SCNOrderedDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsNoiseField.js~SCNPhysicsNoiseField.html">SCNPhysicsNoiseField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsTurbulenceField.js~SCNPhysicsTurbulenceField.html">SCNPhysicsTurbulenceField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadableHelper.js~SCNShadableHelper.html">SCNShadableHelper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTimingFunction.js~SCNTimingFunction.html">SCNTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNActionTimingFunction">SCNActionTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNAnimationEventBlock">SCNAnimationEventBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNBindingBlock">SCNBindingBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNBufferBindingBlock">SCNBufferBindingBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNFieldForceEvaluator">SCNFieldForceEvaluator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4EqualToMatrix4">SCNMatrix4EqualToMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4FromGLKMatrix4">SCNMatrix4FromGLKMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4FromMat4">SCNMatrix4FromMat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Invert">SCNMatrix4Invert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4IsIdentity">SCNMatrix4IsIdentity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeRotation">SCNMatrix4MakeRotation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeScale">SCNMatrix4MakeScale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeTranslation">SCNMatrix4MakeTranslation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Mult">SCNMatrix4Mult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Rotate">SCNMatrix4Rotate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Scale">SCNMatrix4Scale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4ToGLKMatrix4">SCNMatrix4ToGLKMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4ToMat4">SCNMatrix4ToMat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Translate">SCNMatrix4Translate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNParticleEventBlock">SCNParticleEventBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNParticleModifierBlock">SCNParticleModifierBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNSceneExportProgressHandler">SCNSceneExportProgressHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNSceneSourceStatusHandler">SCNSceneSourceStatusHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3EqualToVector3">SCNVector3EqualToVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3FromFloat3">SCNVector3FromFloat3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3FromGLKVector3">SCNVector3FromGLKVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3Make">SCNVector3Make</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3ToFloat3">SCNVector3ToFloat3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3ToGLKVector3">SCNVector3ToGLKVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4EqualToVector4">SCNVector4EqualToVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4FromFloat4">SCNVector4FromFloat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4FromGLKVector4">SCNVector4FromGLKVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4Make">SCNVector4Make</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4ToFloat4">SCNVector4ToFloat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4ToGLKVector4">SCNVector4ToGLKVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SCNQuaternion">SCNQuaternion</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNActionTimingMode">SCNActionTimingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNAntialiasingMode">SCNAntialiasingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNBlendMode">SCNBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNBufferFrequency">SCNBufferFrequency</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNCameraProjectionDirection">SCNCameraProjectionDirection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNChamferMode">SCNChamferMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNColorMask">SCNColorMask</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNCullMode">SCNCullMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNFillMode">SCNFillMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNFilterMode">SCNFilterMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNGeometryPrimitiveType">SCNGeometryPrimitiveType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNHitTestOption">SCNHitTestOption</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNMorpherCalculationMode">SCNMorpherCalculationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNMovabilityHint">SCNMovabilityHint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBirthDirection">SCNParticleBirthDirection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBirthLocation">SCNParticleBirthLocation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBlendMode">SCNParticleBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleEvent">SCNParticleEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleImageSequenceAnimationMode">SCNParticleImageSequenceAnimationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleInputMode">SCNParticleInputMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleModifierStage">SCNParticleModifierStage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleOrientationMode">SCNParticleOrientationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleSortingMode">SCNParticleSortingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNPhysicsBodyType">SCNPhysicsBodyType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNPhysicsFieldScope">SCNPhysicsFieldScope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNReferenceLoadingPolicy">SCNReferenceLoadingPolicy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNRenderingAPI">SCNRenderingAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNSceneSourceStatus">SCNSceneSourceStatus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNShaderModifierEntryPoint">SCNShaderModifierEntryPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNShadowMode">SCNShadowMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNTessellationSmoothingMode">SCNTessellationSmoothingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNTransparencyMode">SCNTransparencyMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNWrapMode">SCNWrapMode</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SpriteKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKAction.js~SKAction.html">SKAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKColor.js~SKColor.html">SKColor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html">SKEffectNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKFade.js~SKFade.html">SKFade</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKGroup.js~SKGroup.html">SKGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html">SKLabelNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKNode.js~SKNode.html">SKNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKRepeat.js~SKRepeat.html">SKRepeat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKScale.js~SKScale.html">SKScale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKScene.js~SKScene.html">SKScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKSequence.js~SKSequence.html">SKSequence</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html">SKShapeNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html">SKSpriteNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKTexture.js~SKTexture.html">SKTexture</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKWait.js~SKWait.html">SKWait</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SKActionTimingMode">SKActionTimingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SKBlendMode">SKBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SKLabelHorizontalAlignmentMode">SKLabelHorizontalAlignmentMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SKLabelVerticalAlignmentMode">SKLabelVerticalAlignmentMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SKSceneScaleMode">SKSceneScaleMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SKTextureFilteringMode">SKTextureFilteringMode</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">third_party</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BinaryParser">BinaryParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeEUCJP">EscapeEUCJP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeJIS7">EscapeJIS7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeJIS8">EscapeJIS8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeSJIS">EscapeSJIS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUTF16LE">EscapeUTF16LE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUTF7">EscapeUTF7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUTF8">EscapeUTF8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUnicode">EscapeUnicode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GetEscapeCodeType">GetEscapeCodeType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeEUCJP">UnescapeEUCJP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeJIS7">UnescapeJIS7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeJIS8">UnescapeJIS8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeSJIS">UnescapeSJIS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUTF16LE">UnescapeUTF16LE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUTF7">UnescapeUTF7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUTF8">UnescapeUTF8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUnicode">UnescapeUnicode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JCT11280">JCT11280</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JCT8836">JCT8836</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">util</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_AjaxRequest.js~AjaxRequest.html">AjaxRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_BinaryReader.js~_BinaryReader.html">_BinaryReader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_BinaryRequest.js~BinaryRequest.html">BinaryRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_File.js~File.html">File</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_FileReader.js~FileReader.html">FileReader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_TextReader.js~TextReader.html">TextReader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CanUseWebGL2">CanUseWebGL2</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/SceneKit/_SCNDefaultPBRFragmentShader.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+/**
+ * @type {string}
+ */
+const _SCNDefaultPBRFragmentShader =
+ `#version 300 es
+  precision mediump float;
+  precision highp sampler2DShadow;
+
+  uniform bool[12] textureFlags;
+  #define TEXTURE_EMISSION_INDEX 0
+  #define TEXTURE_AMBIENT_INDEX 1
+  #define TEXTURE_DIFFUSE_INDEX 2
+  #define TEXTURE_SPECULAR_INDEX 3
+  #define TEXTURE_REFLECTIVE_INDEX 4
+  #define TEXTURE_TRANSPARENT_INDEX 5
+  #define TEXTURE_MULTIPLY_INDEX 6
+  #define TEXTURE_NORMAL_INDEX 7
+  #define TEXTURE_AMBIENT_OCCLUSION_INDEX 8
+  #define TEXTURE_SELF_ILLUMINATION_INDEX 9
+  #define TEXTURE_METALNESS_INDEX 10
+  #define TEXTURE_ROUGHNESS_INDEX 11
+
+  uniform bool selfIllumination;
+
+  uniform sampler2D u_emissionTexture;
+  uniform sampler2D u_ambientTexture;
+  uniform sampler2D u_diffuseTexture;
+  uniform sampler2D u_specularTexture;
+  uniform samplerCube u_reflectiveTexture;
+  uniform sampler2D u_transparentTexture;
+  uniform sampler2D u_multiplyTexture;
+  uniform sampler2D u_normalTexture;
+  uniform sampler2D u_ambientOcclusionTexture;
+  uniform sampler2D u_selfIlluminationTexture;
+  uniform sampler2D u_metalnessTexture;
+  uniform sampler2D u_roughnessTexture;
+
+  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
+  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
+  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__
+  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__
+  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
+  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
+  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
+
+  #define NUM_SHADOW_LIGHTS (NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS)
+  #define NUM_LIGHTS (NUM_AMBIENT_LIGHTS + NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS + NUM_IES_LIGHTS + NUM_PROBE_LIGHTS)
+
+  #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__
+  #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__
+
+  layout (std140) uniform cameraUniform {
+    vec4 position;
+    mat4 viewTransform;
+    mat4 inverseViewTransform;
+    mat4 viewProjectionTransform;
+  } camera;
+
+  layout (std140) uniform materialUniform {
+    vec4 ambient;
+    vec4 diffuse;
+    vec4 specular;
+    vec4 normal;
+    vec4 reflective;
+    vec4 emission;
+    vec4 transparent;
+    vec4 multiply;
+    vec4 ambientOcclusion;
+    vec4 selfIllumination;
+    vec4 metalness;
+    vec4 roughness;
+    float shininess;
+    float fresnelExponent;
+  } material;
+
+  struct AmbientLight {
+    vec4 color;
+  };
+
+  struct SCNShaderLightingContribution {
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+  } _lightingContribution;
+
+  struct DirectionalLight {
+    vec4 color;
+    vec4 direction; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct DirectionalShadowLight {
+    vec4 color;
+    vec4 direction; // should use vec4; vec3 might cause problem for the layout
+    vec4 shadowColor;
+    mat4 viewProjectionTransform;
+    mat4 shadowProjectionTransform;
+  };
+
+  struct OmniLight {
+    vec4 color;
+    vec4 position; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct ProbeLight {
+    // TODO: implement
+    vec4 color;
+  };
+
+  struct SpotLight {
+    // TODO: implement
+    vec4 color;
+  };
+
+  layout (std140) uniform lightUniform {
+    #if NUM_AMBIENT_LIGHTS &gt; 0
+      AmbientLight ambient[NUM_AMBIENT_LIGHTS];
+    #endif
+    #if NUM_DIRECTIONAL_LIGHTS &gt; 0
+      DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];
+    #endif
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS &gt; 0
+      DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    #endif
+    #if NUM_OMNI_LIGHTS &gt; 0
+      OmniLight omni[NUM_OMNI_LIGHTS];
+    #endif
+    #if NUM_SPOT_LIGHTS &gt; 0
+      SpotLight spot[NUM_SPOT_LIGHTS];
+    #endif
+    #if NUM_IES_LIGHTS &gt; 0
+      IESLight ies[NUM_IES_LIGHTS];
+    #endif
+    #if NUM_PROBE_LIGHTS &gt; 0
+      ProbeLight probe[NUM_PROBE_LIGHTS];
+    #endif
+    #if NUM_LIGHTS == 0
+      vec4 dummy;
+    #endif
+  } light;
+  #if NUM_SHADOW_LIGHTS &gt; 0
+    in vec3 v_light[NUM_SHADOW_LIGHTS];
+  #endif
+  #if NUM_DIRECTIONAL_SHADOW_LIGHTS &gt; 0
+    in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS];
+    uniform sampler2D u_shadowTexture0;
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS &gt; 1
+      uniform sampler2D u_shadowTexture1;
+    #endif
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS &gt; 2
+      uniform sampler2D u_shadowTexture2;
+    #endif
+    #if NUM_DIRECTIONAL_SHADOW_LIGHTS &gt; 3
+      uniform sampler2D u_shadowTexture3;
+    #endif
+  #endif
+
+  layout (std140) uniform SCNLightsUniform {
+    vec4 direction0;
+    mat4 shadowMatrix0;
+  } scn_lights;
+
+  layout (std140) uniform fogUniform {
+    vec4 color;
+    float startDistance;
+    float endDistance;
+    float densityExponent;
+  } fog;
+
+  struct SCNShaderSurface {
+    vec3 view;
+    vec3 position;
+    vec3 normal;
+    vec2 normalTexcoord;
+    vec3 geometryNormal;
+    vec3 tangent;
+    vec3 bitangent;
+    vec4 ambient;
+    vec2 ambientTexcoord;
+    vec4 diffuse;
+    vec2 diffuseTexcoord;
+    vec4 specular;
+    vec2 specularTexcoord;
+    vec4 emission;
+    vec2 emissionTexcoord;
+    vec4 multiply;
+    vec2 multiplyTexcoord;
+    vec4 transparent;
+    vec2 transparentTexcoord;
+    vec4 reflective;
+    vec2 metalnessTexcoord;
+    vec2 roughnessTexcoord;
+    float ambientOcclusion;
+    float shininess;
+    float fresnel;
+    float metalness;
+    float roughness;
+    __USER_CUSTOM_SURFACE__
+  } _surface;
+
+  struct SCNShaderOutput {
+    vec4 color;
+  } _output;
+
+  vec2 poissonDisk[4] = vec2[](
+    vec2( -0.94201624, -0.39906216 ),
+    vec2( 0.94558609, -0.76890725 ),
+    vec2( -0.094184101, -0.92938870 ),
+    vec2( 0.34495938, 0.29387760 )
+  );
+
+  //#define kSCNTexcoordCount 2
+  //struct SCNShaderGeometry {
+  //  vec3 position;
+  //  vec3 normal;
+  //  vec4 tangent;
+  //  vec4 color;
+  //  vec2 texcoords[kSCNTexcoordCount];
+  //};
+
+  uniform float u_time;
+
+  in vec3 v_position;
+  in vec3 v_normal;
+  in vec2 v_texcoord0;
+  in vec2 v_texcoord1;
+  //in vec4 v_color;
+  in vec3 v_eye;
+  in vec3 v_tangent;
+  in vec3 v_bitangent;
+  in float v_fogFactor;
+
+  //in SCNShaderGeometry _geometry;
+
+  out vec4 outColor;
+
+  __USER_CUSTOM_UNIFORM__
+
+  float saturate(float value) {
+    return clamp(value, 0.0, 1.0);
+  }
+
+  float convDepth(vec4 color) {
+    const float rMask = 1.0;
+    const float gMask = 1.0 / 255.0;
+    const float bMask = 1.0 / (255.0 * 255.0);
+    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);
+    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));
+    return depth * 2.0 - 1.0;
+  }
+
+  #if USE_SHADER_MODIFIER_SURFACE
+  void shaderModifierSurface() {
+    __SHADER_MODIFIER_SURFACE__
+  }
+  #endif
+
+  #if USE_SHADER_MODIFIER_FRAGMENT
+  void shaderModifierFragment() {
+    __SHADER_MODIFIER_FRAGMENT__
+  }
+  #endif
+
+    
+  void main() {
+    //_output.color = v_color;
+    //_output.color = vec4(0, 0, 0, 1);
+
+    //vec3 viewVec = normalize(v_eye);
+    //vec3 nom = normalize(v_normal);
+    _surface.view = normalize(v_eye);
+    _surface.position = v_position;
+    _surface.normal = normalize(v_normal);
+    _surface.tangent = normalize(v_tangent);
+    _surface.bitangent = normalize(v_bitangent);
+
+    // normal texture
+    if(textureFlags[TEXTURE_NORMAL_INDEX]){
+      mat3 tsInv = mat3(_surface.tangent, _surface.bitangent, _surface.normal);
+      vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.
+      _surface.normal = normalize(tsInv * color);
+    }
+
+    //_surface.ambient = material.ambient;
+    _surface.ambient = vec4(0, 0, 0, 1); // FIXME: check: lock ambient with diffuse
+    _surface.diffuse = material.diffuse;
+    _surface.specular = material.specular;
+    _surface.emission = material.emission;
+    _surface.multiply = material.multiply;
+    _surface.transparent = material.transparent;
+    _surface.reflective = material.reflective;
+    _surface.ambientOcclusion = material.ambientOcclusion.r;
+    _surface.shininess = material.shininess;
+    _surface.fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent); // TODO: calculate coefficient
+    _surface.metalness = material.metalness.r;
+    _surface.roughness = material.roughness.r;
+
+    // TODO: check mapping channel for each material
+    _surface.ambientTexcoord = v_texcoord0;
+    _surface.diffuseTexcoord = v_texcoord0;
+    _surface.specularTexcoord = v_texcoord0;
+    if(selfIllumination){
+      _surface.emissionTexcoord = v_texcoord1;
+    }else{
+      _surface.emissionTexcoord = v_texcoord0;
+    }
+    _surface.multiplyTexcoord = v_texcoord0;
+    _surface.transparentTexcoord = v_texcoord0;
+    _surface.metalnessTexcoord = v_texcoord0;
+    _surface.roughnessTexcoord = v_texcoord0;
+
+    if(textureFlags[TEXTURE_AMBIENT_INDEX]){
+      _surface.ambient = texture(u_ambientTexture, _surface.ambientTexcoord);
+    }
+    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
+      _surface.diffuse = texture(u_diffuseTexture, _surface.diffuseTexcoord);
+      _surface.diffuse.a *= material.diffuse.a;
+    }
+    if(textureFlags[TEXTURE_SPECULAR_INDEX]){
+      _surface.specular = texture(u_specularTexture, _surface.specularTexcoord);
+    }
+    if(textureFlags[TEXTURE_EMISSION_INDEX]){
+      _surface.emission = texture(u_emissionTexture, _surface.emissionTexcoord);
+    }
+    if(textureFlags[TEXTURE_MULTIPLY_INDEX]){
+      _surface.multiply = texture(u_multiplyTexture, _surface.multiplyTexcoord);
+    }
+    if(textureFlags[TEXTURE_TRANSPARENT_INDEX]){
+      _surface.transparent = texture(u_transparentTexture, _surface.transparentTexcoord);
+    }
+    if(textureFlags[TEXTURE_METALNESS_INDEX]){
+      _surface.metalness = texture(u_metalnessTexture, _surface.metalnessTexcoord).r;
+    }
+    if(textureFlags[TEXTURE_ROUGHNESS_INDEX]){
+      _surface.roughness = texture(u_roughnessTexture, _surface.roughnessTexcoord).r;
+    }
+
+    __USER_CUSTOM_TEXCOORD__
+
+    #if USE_SHADER_MODIFIER_SURFACE
+      shaderModifierSurface();
+    #endif
+
+    // Lighting
+    int numLights = 0;
+    _lightingContribution.ambient = vec3(0);
+    _lightingContribution.diffuse = vec3(0);
+    _lightingContribution.specular = vec3(0);
+
+    #if NUM_AMBIENT_LIGHTS &gt; 0
+      for(int i=0; i&lt;NUM_AMBIENT_LIGHTS; i++){
+        _lightingContribution.ambient += light.ambient[i].color.rgb;
+      }
+    #endif
+
+    #if NUM_DIRECTIONAL_LIGHTS &gt; 0
+      for(int i=0; i&lt;NUM_DIRECTIONAL_LIGHTS; i++){
+        // diffuse
+        vec3 lightVec = normalize(v_light[numLights + i]);
+        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+        _lightingContribution.diffuse += light.directional[i].color.rgb * diffuse;
+
+        // specular
+        if(diffuse &gt; 0.0f){
+          vec3 halfVec = normalize(lightVec + _surface.view);
+          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
+          _lightingContribution.specular += vec3(specular);
+        }
+      }
+      numLights += NUM_DIRECTIONAL_LIGHTS;
+    #endif
+
+    #if NUM_OMNI_LIGHTS &gt; 0
+      for(int i=0; i&lt;NUM_OMNI_LIGHTS; i++){
+        // diffuse
+        vec3 lightVec = normalize(v_light[numLights + i]);
+        float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+        //_output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
+        _lightingContribution.diffuse += light.omni[i].color.rgb * diffuse;
+
+        // specular
+        if(diffuse &gt; 0.0f){
+          vec3 halfVec = normalize(lightVec + _surface.view);
+          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
+          // TODO: use intensity
+          _lightingContribution.specular += vec3(1, 1, 1) * specular;
+        }
+      }
+      numLights += NUM_OMNI_LIGHTS;
+    #endif
+
+    #if NUM_SPOT_LIGHTS &gt; 0
+      // TODO: implement
+    #endif
+
+    #if NUM_IES_LIGHTS &gt; 0
+      // TODO: implement
+    #endif
+
+    #if NUM_PROBE_LIGHTS &gt; 0
+      // TODO: implement
+    #endif
+
+    __FS_LIGHTING__
+
+
+    // calculate color
+    _output.color = vec4(0, 0, 0, _surface.diffuse.a);
+
+    //vec3 D = _lightingContribution.diffuse;
+    //// lock ambient with diffuse
+    //D += _lightingContribution.ambient * _surface.ambientOcclusion;
+    //// emission
+    //if(selfIllumination){
+    //  D += _surface.emission.rgb;
+    //}
+    //// diffuse
+    //_output.color.rgb = _surface.diffuse.rgb * D;
+    //vec3 S = _lightingContribution.specular;
+    ////S += _surface.reflective.rgb * _surface.ambientOcclusion;
+    //S *= _surface.specular.rgb;
+    //_output.color.rgb += S;
+    //// ambient
+    //_output.color.rgb += _surface.ambient.rgb * _lightingContribution.ambient;
+    //if(!selfIllumination){
+    //  _output.color.rgb += _surface.emission.rgb;
+    //}
+    //// multiply
+    //_output.color.rgb *= _surface.multiply.rgb;
+    //// fresnel reflection
+    //if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){
+    //  vec3 r = reflect(_surface.view, _surface.normal);
+    //  //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
+    //  //float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
+    //  _output.color.rgb += texture(u_reflectiveTexture, r).rgb * _surface.fresnel;
+    //}
+    //float fogFactor = pow(v_fogFactor, fog.densityExponent);
+    //_output.color = mix(_output.color, fog.color, fogFactor);
+    //_output.color.rgb *= _surface.diffuse.a;
+
+    #define pi 3.14159265
+    vec4 debugColor;
+    float alpha = pow(_surface.roughness, 4.0);
+    float invAlpha = 1.0 - alpha;
+    float nv = clamp(dot(_surface.normal, _surface.view), 0.0, 1.0);
+    float f0 = 0.6;
+    float Gv = 1.0 / (nv + sqrt(alpha + invAlpha * nv * nv));
+    for(int i=0; i&lt;NUM_SHADOW_LIGHTS; i++){
+      vec3 lightVec = normalize(v_light[i]);
+      vec3 halfVec = normalize(lightVec + _surface.view);
+
+      float nh = clamp(dot(_surface.normal, halfVec), 0.0, 1.0);
+      float nl = clamp(dot(_surface.normal, lightVec), 0.0, 1.0);
+      //float vh = clamp(dot(_surface.view, halfVec), 0.0, 1.0);
+
+      float D = alpha / (pi * pow(nh * nh * (alpha - 1.0) + 1.0, 2.0));
+      //float F = f0 + (1.0 - f0) * pow(vh, 5.0);
+      float F = f0 + (1.0 - f0) * pow(1.0 - nh, 5.0);
+      float G = Gv / (nl + sqrt(alpha + invAlpha * nl * nl));
+      float specular = D * F * G;
+      float diffuse = (1.0 - F) * nl / pi;
+      _output.color.rgb += _surface.diffuse.rgb * mix(diffuse, specular, _surface.metalness);
+
+      debugColor = vec4(F, nl, diffuse, 1.0);
+    }
+
+    #if USE_SHADER_MODIFIER_FRAGMENT
+      shaderModifierFragment();
+    #endif
+
+    if(_output.color.a &lt;= 0.0){
+      // avoid overwriting the depth buffer
+      discard;
+    }
+
+    outColor = _output.color;
+
+    // linear To sRGB
+    //outColor.rgb = pow(_output.color.rgb, vec3(1.0/2.2));
+    //outColor.a = _output.color.a;
+
+    //outColor = vec4(1.0, 0.0, 0.0, 1.0);
+    //outColor = debugColor;
+  }
+
+`
+
+export default _SCNDefaultPBRFragmentShader
+
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

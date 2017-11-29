@@ -511,7 +511,7 @@
         ]
       },
       {
-        "type": "Identifier",
+        "type": "ExportDefaultDeclaration",
         "start": 332,
         "end": 366,
         "loc": {
@@ -555,55 +555,7 @@
             },
             "name": "BinaryRequest"
           },
-          "arguments": []
-        },
-        "name": "_",
-        "leadingComments": [],
-        "trailingComments": []
-      },
-      {
-        "type": "ExportDefaultDeclaration",
-        "start": 332,
-        "end": 366,
-        "loc": {
-          "start": {
-            "line": 21,
-            "column": 0
-          },
-          "end": {
-            "line": 21,
-            "column": 34
-          }
-        },
-        "declaration": {
-          "type": "VariableDeclaration",
-          "kind": "let",
-          "loc": {
-            "start": {
-              "line": 21,
-              "column": 0
-            },
-            "end": {
-              "line": 21,
-              "column": 34
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "id": {
-                "type": "Identifier",
-                "name": "binaryRequest"
-              },
-              "init": {
-                "type": "NewExpression",
-                "callee": {
-                  "type": "Identifier",
-                  "name": "BinaryRequest"
-                }
-              }
-            }
-          ],
+          "arguments": [],
           "leadingComments": [],
           "trailingComments": []
         }

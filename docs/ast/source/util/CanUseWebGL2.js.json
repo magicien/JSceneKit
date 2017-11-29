@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2188,
+  "end": 2030,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 97,
+      "line": 91,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2188,
+    "end": 2030,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 97,
+        "line": 91,
         "column": 0
       }
     },
@@ -4009,67 +4009,63 @@
                     }
                   }
                 ],
-                "directives": [],
-                "trailingComments": null
-              },
-              "trailingComments": null
+                "directives": []
+              }
             },
-            "leadingComments": null,
-            "trailingComments": null
+            "leadingComments": null
           }
         ],
         "kind": "const",
-        "leadingComments": [],
-        "trailingComments": [],
-        "name": "_"
-      },
-      {
-        "type": "Identifier",
-        "start": 2159,
-        "end": 2186,
-        "loc": {
-          "start": {
-            "line": 95,
-            "column": 0
-          },
-          "end": {
-            "line": 95,
-            "column": 27
-          }
-        },
-        "declaration": {
-          "type": "Identifier",
-          "start": 2174,
-          "end": 2186,
-          "loc": {
-            "start": {
-              "line": 95,
-              "column": 15
-            },
-            "end": {
-              "line": 95,
-              "column": 27
-            },
-            "identifierName": "CanUseWebGL2"
-          },
-          "name": "CanUseWebGL2",
-          "leadingComments": null
-        },
         "leadingComments": [],
         "name": "_",
         "trailingComments": []
       },
       {
-        "type": "ExportDefaultDeclaration",
-        "start": 2159,
-        "end": 2186,
+        "type": "Identifier",
+        "start": 2001,
+        "end": 2028,
         "loc": {
           "start": {
-            "line": 95,
+            "line": 89,
             "column": 0
           },
           "end": {
-            "line": 95,
+            "line": 89,
+            "column": 27
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 2016,
+          "end": 2028,
+          "loc": {
+            "start": {
+              "line": 89,
+              "column": 15
+            },
+            "end": {
+              "line": 89,
+              "column": 27
+            },
+            "identifierName": "CanUseWebGL2"
+          },
+          "name": "CanUseWebGL2"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 2001,
+        "end": 2028,
+        "loc": {
+          "start": {
+            "line": 89,
+            "column": 0
+          },
+          "end": {
+            "line": 89,
             "column": 27
           }
         },
@@ -7815,13 +7811,10 @@
                       }
                     }
                   ],
-                  "directives": [],
-                  "trailingComments": null
-                },
-                "trailingComments": null
+                  "directives": []
+                }
               },
-              "leadingComments": null,
-              "trailingComments": null
+              "leadingComments": null
             }
           ],
           "kind": "const",
@@ -7841,61 +7834,10 @@
                   "column": 3
                 }
               }
-            },
-            {
-              "type": "CommentBlock",
-              "value": "*\n * Check if the browser can use WebGL2.\n * @access public\n * @type {function(): boolean}\n * @returns {boolean} - true if the browser supports WebGL2.\n ",
-              "start": 2001,
-              "end": 2158,
-              "loc": {
-                "start": {
-                  "line": 89,
-                  "column": 0
-                },
-                "end": {
-                  "line": 94,
-                  "column": 3
-                }
-              }
             }
           ],
-          "trailingComments": [
-            {
-              "type": "CommentBlock",
-              "value": "*\n * Check if the browser can use WebGL2.\n * @access public\n * @type {function(): boolean}\n * @returns {boolean} - true if the browser supports WebGL2.\n ",
-              "start": 2001,
-              "end": 2158,
-              "loc": {
-                "start": {
-                  "line": 89,
-                  "column": 0
-                },
-                "end": {
-                  "line": 94,
-                  "column": 3
-                }
-              }
-            }
-          ]
-        },
-        "leadingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "*\n * Check if the browser can use WebGL2.\n * @access public\n * @type {function(): boolean}\n * @returns {boolean} - true if the browser supports WebGL2.\n ",
-            "start": 2001,
-            "end": 2158,
-            "loc": {
-              "start": {
-                "line": 89,
-                "column": 0
-              },
-              "end": {
-                "line": 94,
-                "column": 3
-              }
-            }
-          }
-        ]
+          "trailingComments": []
+        }
       }
     ],
     "directives": [
@@ -8000,22 +7942,6 @@
         },
         "end": {
           "line": 41,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n * Check if the browser can use WebGL2.\n * @access public\n * @type {function(): boolean}\n * @returns {boolean} - true if the browser supports WebGL2.\n ",
-      "start": 2001,
-      "end": 2158,
-      "loc": {
-        "start": {
-          "line": 89,
-          "column": 0
-        },
-        "end": {
-          "line": 94,
           "column": 3
         }
       }
@@ -15439,22 +15365,6 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n * Check if the browser can use WebGL2.\n * @access public\n * @type {function(): boolean}\n * @returns {boolean} - true if the browser supports WebGL2.\n ",
-      "start": 2001,
-      "end": 2158,
-      "loc": {
-        "start": {
-          "line": 89,
-          "column": 0
-        },
-        "end": {
-          "line": 94,
-          "column": 3
-        }
-      }
-    },
-    {
       "type": {
         "label": "export",
         "keyword": "export",
@@ -15469,15 +15379,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 2159,
-      "end": 2165,
+      "start": 2001,
+      "end": 2007,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 89,
           "column": 0
         },
         "end": {
-          "line": 95,
+          "line": 89,
           "column": 6
         }
       }
@@ -15497,15 +15407,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 2166,
-      "end": 2173,
+      "start": 2008,
+      "end": 2015,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 89,
           "column": 7
         },
         "end": {
-          "line": 95,
+          "line": 89,
           "column": 14
         }
       }
@@ -15523,15 +15433,15 @@
         "binop": null
       },
       "value": "CanUseWebGL2",
-      "start": 2174,
-      "end": 2186,
+      "start": 2016,
+      "end": 2028,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 89,
           "column": 15
         },
         "end": {
-          "line": 95,
+          "line": 89,
           "column": 27
         }
       }
@@ -15549,15 +15459,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2188,
-      "end": 2188,
+      "start": 2030,
+      "end": 2030,
       "loc": {
         "start": {
-          "line": 97,
+          "line": 91,
           "column": 0
         },
         "end": {
-          "line": 97,
+          "line": 91,
           "column": 0
         }
       }

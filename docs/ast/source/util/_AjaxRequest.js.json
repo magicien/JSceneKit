@@ -12816,7 +12816,7 @@
         ]
       },
       {
-        "type": "Identifier",
+        "type": "ExportDefaultDeclaration",
         "start": 4769,
         "end": 4801,
         "loc": {
@@ -12860,55 +12860,7 @@
             },
             "name": "AjaxRequest"
           },
-          "arguments": []
-        },
-        "name": "_",
-        "leadingComments": [],
-        "trailingComments": []
-      },
-      {
-        "type": "ExportDefaultDeclaration",
-        "start": 4769,
-        "end": 4801,
-        "loc": {
-          "start": {
-            "line": 166,
-            "column": 0
-          },
-          "end": {
-            "line": 166,
-            "column": 32
-          }
-        },
-        "declaration": {
-          "type": "VariableDeclaration",
-          "kind": "let",
-          "loc": {
-            "start": {
-              "line": 166,
-              "column": 0
-            },
-            "end": {
-              "line": 166,
-              "column": 32
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "id": {
-                "type": "Identifier",
-                "name": "ajaxRequest"
-              },
-              "init": {
-                "type": "NewExpression",
-                "callee": {
-                  "type": "Identifier",
-                  "name": "AjaxRequest"
-                }
-              }
-            }
-          ],
+          "arguments": [],
           "leadingComments": [],
           "trailingComments": []
         }
