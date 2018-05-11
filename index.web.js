@@ -32957,16 +32957,16 @@ var _BinaryReader = function () {
     }
 
     /**
-     *
+     * 
      * @access private
-     * @param {number[]} data - length of data to convert
+     * @param {number[]} data - data to escape
      * @param {?string} [encoding = null] -
-     * @returns {string} -
+     * @returns {string} - escaped string
      */
 
   }, {
-    key: '_convert',
-    value: function _convert(data, encoding) {
+    key: '_escapeLE',
+    value: function _escapeLE(data, encoding) {
       var length = data.length;
       var escapeString = '';
       for (var i = 0; i < length; i++) {
@@ -32978,6 +32978,67 @@ var _BinaryReader = function () {
         } else {
           escapeString += '%' + charCode.toString(16);
         }
+      }
+      return escapeString;
+    }
+
+    /**
+     * 
+     * @access private
+     * @param {number[]} data - data to escape
+     * @param {?string} [encoding = null] -
+     * @returns {string} - escaped string
+     */
+
+  }, {
+    key: '_escapeBE',
+    value: function _escapeBE(data, encoding) {
+      var length = data.length;
+      var escapeString = '';
+      for (var i = 0; i < length; i++) {
+        var charCode1 = data.charCodeAt(i);
+        if (charCode1 === 0) {
+          break;
+        }
+        var str1 = '';
+        if (charCode1 < 16) {
+          str1 = '%0' + charCode1.toString(16);
+        } else {
+          str1 = '%' + charCode1.toString(16);
+        }
+
+        i++;
+        var charCode2 = data.charCodeAt(i);
+        if (charCode2 === 0) {
+          break;
+        }
+        var str2 = '';
+        if (charCode2 < 16) {
+          str2 = '%0' + charCode2.toString(16);
+        } else {
+          str2 = '%' + charCode2.toString(16);
+        }
+        escapeString += str1 + str2;
+      }
+      return escapeString;
+    }
+
+    /**
+     *
+     * @access private
+     * @param {number[]} data - length of data to convert
+     * @param {?string} [encoding = null] -
+     * @returns {string} -
+     */
+
+  }, {
+    key: '_convert',
+    value: function _convert(data, encoding) {
+      var escapeString = '';
+      if (encoding === 'utf16be') {
+        escapeString = this._escapeBE(data);
+      } else {
+        escapeString = this._escapeLE(data);
       }
 
       if (encoding === 'sjis') {
@@ -32995,6 +33056,8 @@ var _BinaryReader = function () {
       } else if (encoding === 'utf-8') {
         return (0, _ecl.UnescapeUTF8)(escapeString);
       } else if (encoding === 'utf-16') {
+        return (0, _ecl.UnescapeUTF16LE)(escapeString);
+      } else if (encoding === 'utf16be') {
         return (0, _ecl.UnescapeUTF16LE)(escapeString);
       }
 
