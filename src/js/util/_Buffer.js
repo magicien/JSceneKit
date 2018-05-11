@@ -7,6 +7,7 @@ const _supportedEncoding = [
   'ascii',
   'utf8',
   'utf16le',
+  'utf16be',
   'ucs2',
   'base64',
   'latin1',
@@ -180,13 +181,42 @@ if(typeof Buffer !== 'undefined'){
         throw new Error('needs atob() function to convert to base64')
       }
 
-      const str = this._hex(data, true)
+      let str = ''
+      if(encoding === 'utf16be'){
+        str = this._hexBE(data, true)
+      }else{
+        str = this._hex(data, true)
+      }
       if(encoding === 'utf8'){
         return UnescapeUTF8(str)
-      }else if(encoding === 'utf16le' || encoding === 'ucs2'){
+      }else if(encoding === 'utf16le' || encoding === 'utf16be' || encoding === 'ucs2'){
         return UnescapeUTF16LE(str)
       }
       throw new Error(`unsupported encoding: ${encoding}`)
+    }
+
+    _hexBE(data, usePercent) {
+      const length = data.length
+      let hexArray = []
+      for(let i=0; i<length; i+=2){
+        const num1 = data[i+1].toString(16)
+        if(data[i+1]<16){
+          hexArray[i] = '0' + num1
+        }else{
+          hexArray[i] = num1
+        }
+        const num2 = data[i].toString(16)
+        if(data[i]<16){
+          hexArray[i+1] = '0' + num2
+        }else{
+          hexArray[i+1] = num2
+        }
+      }
+      let pad = ''
+      if(usePercent){
+        pad = '%'
+      }
+      return hexArray.join(pad)
     }
 
     _hex(data, usePercent) {

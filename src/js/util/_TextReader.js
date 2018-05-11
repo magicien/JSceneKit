@@ -200,13 +200,13 @@ export default class TextReader {
   }
 
   /**
-   *
+   * 
    * @access private
-   * @param {number[]} data - length of data to convert
+   * @param {number[]} data - data to escape
    * @param {?string} [encoding = null] -
-   * @returns {string} -
+   * @returns {string} - escaped string
    */
-  _convert(data, encoding) {
+  _escapeLE(data, encoding) {
     const length = data.length
     let escapeString = ''
     for(let i=0; i<length; i++){
@@ -220,7 +220,62 @@ export default class TextReader {
         escapeString += '%' + charCode.toString(16)
       }
     }
-      
+    return escapeString
+  }
+
+  /**
+   * 
+   * @access private
+   * @param {number[]} data - data to escape
+   * @param {?string} [encoding = null] -
+   * @returns {string} - escaped string
+   */
+  _escapeBE(data, encoding) {
+    const length = data.length
+    let escapeString = ''
+    for(let i=0; i<length; i++){
+      const charCode1 = data.charCodeAt(i)
+      if(charCode1 === 0){
+        break
+      }
+      let str1 = ''
+      if(charCode1 < 16){
+        str1 = '%0' + charCode1.toString(16)
+      }else{
+        str1 = '%' + charCode1.toString(16)
+      }
+
+      i++
+      const charCode2 = data.charCodeAt(i)
+      if(charCode2 === 0){
+        break
+      }
+      let str2 = ''
+      if(charCode2 < 16){
+        str2 = '%0' + charCode2.toString(16)
+      }else{
+        str2 = '%' + charCode2.toString(16)
+      }
+      escapeString += str1 + str2
+    }
+    return escapeString
+  }
+
+  /**
+   *
+   * @access private
+   * @param {number[]} data - data to convert
+   * @param {?string} [encoding = null] -
+   * @returns {string} -
+   */
+  _convert(data, encoding) {
+    let escapeString = ''
+    if(encoding === 'utf16be'){
+      escapeString = this._escapeBE(data)
+    }else{
+      escapeString = this._escapeLE(data)
+    }
+          
     if(encoding === 'sjis'){
       return UnescapeSJIS(escapeString)
     }else if(encoding === 'euc-jp'){
@@ -236,6 +291,8 @@ export default class TextReader {
     }else if(encoding === 'utf-8'){
       return UnescapeUTF8(escapeString)
     }else if(encoding === 'utf-16'){
+      return UnescapeUTF16LE(escapeString)
+    }else if(encoding === 'utf16be'){
       return UnescapeUTF16LE(escapeString)
     }
 
