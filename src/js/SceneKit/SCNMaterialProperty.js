@@ -50,7 +50,8 @@ export default class SCNMaterialProperty extends NSObject {
       parent: ['SCNMaterial', '_parent'],
       isCommonProfileProperty: ['boolean', null],
       sRGB: ['boolean', null],
-      customSlotName: ['string', null]
+      customSlotName: ['string', null],
+      textureComponents: ['integer', null]
     }
   }
 

@@ -15,6 +15,15 @@ const _weightsPattern = new RegExp(/^weights\[(\d+)\]$/)
  * @see https://developer.apple.com/documentation/scenekit/scnmorpher
  */
 export default class SCNMorpher extends NSObject {
+  static get _propTypes() {
+    return {
+      calculationMode: 'integer',
+      shouldMorphNormals: ['boolean', null],
+      targets: 'NSArray',
+      useSparseTargets: ['boolean', null],
+      weights: ['NSArray', '_weights']
+    }
+  }
 
   /**
    * constructor

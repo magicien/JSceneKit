@@ -3755,6 +3755,7 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
               // wait for loading
             }else if(!(value instanceof classObj)){
               const exception = [
+                'NSObject', // => Super class of NS*
                 'NSData', 'NSMutableData', // => Buffer
                 'NSArray', 'NSMutableArray', // => Array
                 'NSDictionary', 'NSMutableDictionary', // => Object
