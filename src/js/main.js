@@ -268,7 +268,9 @@ import CAPropertyAnimation from './QuartzCore/CAPropertyAnimation'
 import CAKeyframeAnimation from './QuartzCore/CAKeyframeAnimation'
 import CAAnimationDelegate from './QuartzCore/CAAnimationDelegate'
 import CAAnimation from './QuartzCore/CAAnimation'
+import CACodingProxy from './QuartzCore/CACodingProxy'
 import CABasicAnimation from './QuartzCore/CABasicAnimation'
+import LKNSArrayCodingProxy from './QuartzCore/LKNSArrayCodingProxy'
 import CATransform3D from './QuartzCore/CATransform3D'
 import CAAction from './QuartzCore/CAAction'
 import CACurrentMediaTime from './QuartzCore/CACurrentMediaTime'
@@ -536,7 +538,9 @@ _ClassList.registerClass(CAPropertyAnimation, 'CAPropertyAnimation')
 _ClassList.registerClass(CAKeyframeAnimation, 'CAKeyframeAnimation')
 _ClassList.registerClass(CAAnimationDelegate, 'CAAnimationDelegate')
 _ClassList.registerClass(CAAnimation, 'CAAnimation')
+_ClassList.registerClass(CACodingProxy, 'CACodingProxy')
 _ClassList.registerClass(CABasicAnimation, 'CABasicAnimation')
+_ClassList.registerClass(LKNSArrayCodingProxy, 'LKNSArrayCodingProxy')
 _ClassList.registerClass(CATransform3D, 'CATransform3D')
 _ClassList.registerClass(CAAction, 'CAAction')
 _ClassList.registerClass(CACurrentMediaTime, 'CACurrentMediaTime')
@@ -816,7 +820,9 @@ exports.CAPropertyAnimation = CAPropertyAnimation
 exports.CAKeyframeAnimation = CAKeyframeAnimation
 exports.CAAnimationDelegate = CAAnimationDelegate
 exports.CAAnimation = CAAnimation
+exports.CACodingProxy = CACodingProxy
 exports.CABasicAnimation = CABasicAnimation
+exports.LKNSArrayCodingProxy = LKNSArrayCodingProxy
 exports.CATransform3D = CATransform3D
 exports.CAAction = CAAction
 exports.CACurrentMediaTime = CACurrentMediaTime

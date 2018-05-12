@@ -10,6 +10,14 @@ import * as Constants from '../constants'
  * @see https://developer.apple.com/documentation/quartzcore/camediatimingfunction
  */
 export default class CAMediaTimingFunction extends NSObject {
+  static get _propTypes() {
+    return {
+      c1x: ['float', '_c1x'],
+      c1y: ['float', '_c1y'],
+      c2x: ['float', '_c2x'],
+      c2y: ['float', '_c2y']
+    }
+  }
 
   // Creating Timing Functions
 

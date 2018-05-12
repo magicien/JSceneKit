@@ -13,6 +13,20 @@ import * as Constants from '../constants'
  * @see https://developer.apple.com/documentation/quartzcore/cakeyframeanimation
  */
 export default class CAKeyframeAnimation extends CAPropertyAnimation {
+  static get _propTypes() {
+    return {
+      duration: 'integer',
+      fillMode: 'string',
+      keyPath: 'string',
+      keyTimes: 'LKNSArrayCodingProxy',
+      removedOnCompletion: ['boolean', 'isRemovedOnCompletion'],
+      timingFunctions: 'LKNSArrayCodingProxy',
+      values: 'LKNSArrayCodingProxy',
+
+      __CACodingContents: 'NSArray'
+    }
+  }
+
   // Creating an Animation
 
   /**

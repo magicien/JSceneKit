@@ -10,6 +10,15 @@ import CAAnimation from './CAAnimation'
  * @see https://developer.apple.com/documentation/quartzcore/caanimationgroup
  */
 export default class CAAnimationGroup extends CAAnimation {
+  static get _propTypes() {
+    return {
+      animations: 'LKNSArrayCodingProxy',
+      duration: 'integer',
+      fillMode: 'string',
+      removedOnCompletion: ['boolean', 'isRemovedOnCompletion'],
+      __CACodingContents: 'NSArray'
+    }
+  }
 
   /**
    * constructor
