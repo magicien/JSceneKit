@@ -26531,9 +26531,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _SCNGeometry2 = __webpack_require__(11);
 
@@ -26576,17 +26576,38 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var SCNCapsule = function (_SCNGeometry) {
   _inherits(SCNCapsule, _SCNGeometry);
 
-  // Creating a Capsule
+  _createClass(SCNCapsule, null, [{
+    key: '_propTypes',
+    get: function get() {
+      return {
+        capsulecapRadius: ['float', 'capRadius'],
+        capsulecapSegmentCount: ['integer', 'capSegmentCount'],
+        capsuleheight: ['float', null],
+        capsuleheightSegmentCount: ['integer', null],
+        capsuleprimitiveType: ['integer', null],
+        capsuleradialSegmentCount: ['integer', 'radialSegmentCount'],
+        materials: 'NSArray',
+        subdivisionLevel: 'integer',
+        subdivisionSettings: ['bytes', null],
+        tessellator: 'SCNGeometryTessellator',
+        wantsAdaptiveSubdivision: 'boolean'
+      };
+    }
 
-  /**
-   * Creates a capsule geometry with the specified radius and height.
-   * @access public
-   * @constructor
-   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
-   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
-   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
-   * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523790-init
-   */
+    // Creating a Capsule
+
+    /**
+     * Creates a capsule geometry with the specified radius and height.
+     * @access public
+     * @constructor
+     * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
+     * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
+     * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
+     * @see https://developer.apple.com/documentation/scenekit/scncapsule/1523790-init
+     */
+
+  }]);
+
   function SCNCapsule() {
     var capRadius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
     var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2.0;
@@ -27137,7 +27158,12 @@ var SCNPhysicsShape = function (_NSObject) {
           return new SCNPhysicsShape(propValues.referenceObject, propValues.options);
         },
         options: ['NSArray', null],
-        referenceObject: ['NSObject', null]
+        referenceObject: ['NSObject', null],
+        transform0: ['SCNMatrix4', null],
+        transform1: ['SCNMatrix4', null],
+        transform2: ['SCNMatrix4', null],
+        transform3: ['SCNMatrix4', null],
+        transformsCount: ['integer', null]
       };
     }
 

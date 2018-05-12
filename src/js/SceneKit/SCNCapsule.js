@@ -14,6 +14,22 @@ import SCNVector3 from './SCNVector3'
  * @see https://developer.apple.com/documentation/scenekit/scncapsule
  */
 export default class SCNCapsule extends SCNGeometry {
+  static get _propTypes() {
+    return {
+      capsulecapRadius: ['float', 'capRadius'],
+      capsulecapSegmentCount: ['integer', 'capSegmentCount'],
+      capsuleheight: ['float', null],
+      capsuleheightSegmentCount: ['integer', null],
+      capsuleprimitiveType: ['integer', null],
+      capsuleradialSegmentCount: ['integer', 'radialSegmentCount'],
+      materials: 'NSArray',
+      subdivisionLevel: 'integer',
+      subdivisionSettings: ['bytes', null],
+      tessellator: 'SCNGeometryTessellator',
+      wantsAdaptiveSubdivision: 'boolean'
+    }
+  }
+
   // Creating a Capsule
 
   /**

@@ -36,7 +36,12 @@ export default class SCNPhysicsShape extends NSObject {
         return new SCNPhysicsShape(propValues.referenceObject, propValues.options)
       },
       options: ['NSArray', null],
-      referenceObject: ['NSObject', null]
+      referenceObject: ['NSObject', null],
+      transform0: ['SCNMatrix4', null],
+      transform1: ['SCNMatrix4', null],
+      transform2: ['SCNMatrix4', null],
+      transform3: ['SCNMatrix4', null],
+      transformsCount: ['integer', null]
     }
   }
 
