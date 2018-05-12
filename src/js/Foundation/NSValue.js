@@ -1,15 +1,16 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-//import CGPoint from '../CoreGraphics/CGPoint'
+import CGPoint from '../CoreGraphics/CGPoint'
 //import CGVector from '../CoreGraphics/CGVector'
 import CGSize from '../CoreGraphics/CGSize'
-//import CGRect from '../CoreGraphics/CGRect'
+import CGRect from '../CoreGraphics/CGRect'
 //import CATransform3D from '../QuartzCore/CATransform3D'
 //import SCNVector3 from '../SceneKit/SCNVector3'
 //import SCNVector4 from '../SceneKit/SCNVector4'
 //import SCNMatrix4 from '../SceneKit/SCNMatrix4'
 
+const rectPattern = new RegExp(/^\{\{([-.0-9]+),\s*([-.0-9]+)\},\s*\{([-.0-9]+),\s*([-.0-9]+)\}\}$/)
 
 /**
  * An NSValue object is a simple container for a single C or Objective-C data item. It can hold any of the scalar types such as int, float, and char, as well as pointers, structures, and object id references. Use this class to work with such data types in collections (such as NSArray and NSSet), Key-value coding, and other APIs that require Objective-C objects. NSValue objects are always immutable.
@@ -24,15 +25,30 @@ export default class NSValue extends NSObject {
    * @returns {Object} -
    */
   static initWithCoder(coder) {
+    //console.log('NSValue: ' + Object.keys(coder._refObj))
     const special = coder._refObj['NS.special']
     
-    const size = coder._refObj['NS.sizeval'].obj
+    const size = coder._refObj['NS.sizeval']
     if(size){
-      if(size.charAt(0) !== '{' || size.charAt(size.length-1) !== '}'){
-        throw new Error(`unknown NSValue size format: ${size}`)
+      const obj = size.obj
+      if(obj.charAt(0) !== '{' || obj.charAt(size.length-1) !== '}'){
+        throw new Error(`unknown NSValue size format: ${obj}`)
       }
-      const values = size.slice(1, -1).split(',').map(parseFloat)
+      const values = obj.slice(1, -1).split(',').map(parseFloat)
       return new CGSize(values[0], values[1])
+    }
+
+    const rect = coder._refObj['NS.rectval']
+    if(rect){
+      const obj = rect.obj
+      const value = obj.match(rectPattern)
+      if(!value){
+        throw new Error(`unknown NSValue rect format: ${obj}`)
+      }
+      const values = value.slice(1, 5).map(parseFloat)
+      const point = new CGPoint(values[0], values[1])
+      const _size = new CGSize(values[2], values[3])
+      return new CGRect(point, _size)
     }
     throw new Error('unknown NSValue type')
   }

@@ -273,6 +273,7 @@ import CABasicAnimation from './QuartzCore/CABasicAnimation'
 import LKNSArrayCodingProxy from './QuartzCore/LKNSArrayCodingProxy'
 import CATransform3D from './QuartzCore/CATransform3D'
 import CAAction from './QuartzCore/CAAction'
+import LKNSValueCodingProxy from './QuartzCore/LKNSValueCodingProxy'
 import CACurrentMediaTime from './QuartzCore/CACurrentMediaTime'
 import NSColor from './AppKit/NSColor'
 import NSColorSpaceModel from './AppKit/NSColorSpaceModel'
@@ -543,6 +544,7 @@ _ClassList.registerClass(CABasicAnimation, 'CABasicAnimation')
 _ClassList.registerClass(LKNSArrayCodingProxy, 'LKNSArrayCodingProxy')
 _ClassList.registerClass(CATransform3D, 'CATransform3D')
 _ClassList.registerClass(CAAction, 'CAAction')
+_ClassList.registerClass(LKNSValueCodingProxy, 'LKNSValueCodingProxy')
 _ClassList.registerClass(CACurrentMediaTime, 'CACurrentMediaTime')
 _ClassList.registerClass(NSColor, 'NSColor')
 _ClassList.registerClass(NSColorSpaceModel, 'NSColorSpaceModel')
@@ -825,6 +827,7 @@ exports.CABasicAnimation = CABasicAnimation
 exports.LKNSArrayCodingProxy = LKNSArrayCodingProxy
 exports.CATransform3D = CATransform3D
 exports.CAAction = CAAction
+exports.LKNSValueCodingProxy = LKNSValueCodingProxy
 exports.CACurrentMediaTime = CACurrentMediaTime
 exports.NSColor = NSColor
 exports.NSColorSpaceModel = NSColorSpaceModel

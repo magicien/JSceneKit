@@ -74,7 +74,9 @@ export default class SCNNode extends NSObject {
       castsShadow: 'boolean',
       childNodes: ['NSArray', (obj, childNodes) => {
         childNodes.forEach((child) => {
-          obj.addChildNode(child)
+          if(child){
+            obj.addChildNode(child)
+          }
         })
       }],
       physicsBody: ['SCNPhysicsBody', (obj, body) => {
