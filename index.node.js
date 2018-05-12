@@ -69960,7 +69960,7 @@ var LKNSValueCodingProxy = function (_CACodingProxy) {
      *
      */
     value: function initWithCoder(coder) {
-      console.log('LKNSValueCodingProxy: ' + JSON.stringify(Object.keys(coder._refObj), null, 2));
+      //console.log('LKNSValueCodingProxy: ' + JSON.stringify(Object.keys(coder._refObj), null, 2))
       var obj = coder._refObj;
       var kind = obj.kind;
 

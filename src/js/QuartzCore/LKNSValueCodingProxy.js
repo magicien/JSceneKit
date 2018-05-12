@@ -17,7 +17,7 @@ export default class LKNSValueCodingProxy extends CACodingProxy {
    *
    */
   static initWithCoder(coder) {
-    console.log('LKNSValueCodingProxy: ' + JSON.stringify(Object.keys(coder._refObj), null, 2))
+    //console.log('LKNSValueCodingProxy: ' + JSON.stringify(Object.keys(coder._refObj), null, 2))
     const obj = coder._refObj
     const kind = obj.kind
 
