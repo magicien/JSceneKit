@@ -24,11 +24,18 @@ export default class SCNMaterialProperty extends NSObject {
     return {
       color: ['NSColor', '_contents'],
       image: ['NSMutableDictionary', (obj, dict, key, coder) => {
+        if(typeof dict.data !== 'undefined'){
+          obj._loadContentsImageByData(dict.data)
+          return
+        }
         let path = ''
         if(typeof dict.path !== 'undefined'){
           path = dict.path
         }else if(typeof dict.URL !== 'undefined'){
           path = dict.URL
+        }
+        if(coder._urlTranslator){
+          path = coder._urlTranslator(path, coder)
         }
         obj._loadContentsImage(path, coder._directoryPath)
       }],
@@ -499,6 +506,23 @@ export default class SCNMaterialProperty extends NSObject {
     // TODO: check option if it allows cross-domain.
     image.crossOrigin = 'anonymous'
 
+    // TODO: refactoring
+    if(typeof path === 'object' && typeof path.then === 'function'){
+      this._loadedPromise = new Promise((resolve, reject) => {
+        path.then((_path) => {
+          image.onload = () => {
+            this._contents = image
+            resolve()
+          }
+          image.onerror = () => {
+            reject(new Error(`image ${_path} load error.`))
+          }
+          image.src = _path
+        })
+      })
+      return image
+    }
+
     let __path = path
     if(__path.indexOf('file:///') === 0){
       __path = __path.slice(8)
@@ -531,6 +555,32 @@ export default class SCNMaterialProperty extends NSObject {
         }
       }
       image.src = _path
+    })
+    return image
+  }
+
+  /**
+   * @access private
+   * @param {Uint8Array} data - 
+   * @returns {Image} -
+   */
+  _loadContentsImageByData(data) {
+    const image = new Image()
+    // TODO: check option if it allows cross-domain.
+    image.crossOrigin = 'anonymous'
+
+    this._loadedPromise = new Promise((resolve, reject) => {
+      image.onload = () => {
+        this._contents = image
+        resolve()
+      }
+      image.onerror = () => {
+        reject()
+      }
+      // TODO: check file type by magic
+      let blob = new Blob([data], { type: 'image/png' })
+      let url = URL.createObjectURL(blob)
+      image.src = url
     })
     return image
   }

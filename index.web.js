@@ -22360,6 +22360,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -22424,11 +22426,18 @@ var SCNMaterialProperty = function (_NSObject) {
       return {
         color: ['NSColor', '_contents'],
         image: ['NSMutableDictionary', function (obj, dict, key, coder) {
+          if (typeof dict.data !== 'undefined') {
+            obj._loadContentsImageByData(dict.data);
+            return;
+          }
           var path = '';
           if (typeof dict.path !== 'undefined') {
             path = dict.path;
           } else if (typeof dict.URL !== 'undefined') {
             path = dict.URL;
+          }
+          if (coder._urlTranslator) {
+            path = coder._urlTranslator(path, coder);
           }
           obj._loadContentsImage(path, coder._directoryPath);
         }],
@@ -22935,6 +22944,24 @@ var SCNMaterialProperty = function (_NSObject) {
       // TODO: check option if it allows cross-domain.
       image.crossOrigin = 'anonymous';
 
+      // TODO: refactoring
+      if ((typeof path === 'undefined' ? 'undefined' : _typeof(path)) === 'object' && typeof path.then === 'function') {
+        this._loadedPromise = new Promise(function (resolve, reject) {
+          path.then(function (_path) {
+            image.onload = function () {
+              _this2._contents = image;
+              resolve();
+            };
+            image.onerror = function () {
+              throw new Error('image ' + _path + ' load error.');
+              reject();
+            };
+            image.src = _path;
+          });
+        });
+        return image;
+      }
+
       var __path = path;
       if (__path.indexOf('file:///') === 0) {
         __path = __path.slice(8);
@@ -22967,6 +22994,37 @@ var SCNMaterialProperty = function (_NSObject) {
           }
         };
         image.src = _path;
+      });
+      return image;
+    }
+
+    /**
+     * @access private
+     * @param {Uint8Array} data - 
+     * @returns {Image} -
+     */
+
+  }, {
+    key: '_loadContentsImageByData',
+    value: function _loadContentsImageByData(data) {
+      var _this3 = this;
+
+      var image = new Image();
+      // TODO: check option if it allows cross-domain.
+      image.crossOrigin = 'anonymous';
+
+      this._loadedPromise = new Promise(function (resolve, reject) {
+        image.onload = function () {
+          _this3._contents = image;
+          resolve();
+        };
+        image.onerror = function () {
+          reject();
+        };
+        // TODO: check file type by magic
+        var blob = new Blob([data], { type: 'image/png' });
+        var url = URL.createObjectURL(blob);
+        image.src = url;
       });
       return image;
     }
@@ -29990,6 +30048,7 @@ var NSKeyedUnarchiver = function (_NSCoder) {
    */
   function NSKeyedUnarchiver() {
     var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Map();
 
     _classCallCheck(this, NSKeyedUnarchiver);
 
@@ -30077,6 +30136,8 @@ var NSKeyedUnarchiver = function (_NSCoder) {
      * @type {boolean}
      */
     _this._decodingFinished = false;
+
+    _this._options = options;
 
     _this._promises = [];
 
@@ -30517,7 +30578,7 @@ var NSKeyedUnarchiver = function (_NSCoder) {
 
   }, {
     key: 'decodeObjectForKey',
-    value: function decodeObjectForKey(key) {
+    value: function decodeObjectForKey(key, options) {
       if (this._decodingFinished) {
         throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
       }
@@ -30527,7 +30588,7 @@ var NSKeyedUnarchiver = function (_NSCoder) {
       } else if (parsedObj instanceof _UID) {
         var obj = parsedObj.obj;
         if (typeof obj.$class !== 'undefined') {
-          return this._parseClassAt(parsedObj.value);
+          return this._parseClassAt(parsedObj.value, options);
         }
         return obj;
       }
@@ -30545,11 +30606,11 @@ var NSKeyedUnarchiver = function (_NSCoder) {
 
   }, {
     key: 'decodePropertyListForKey',
-    value: function decodePropertyListForKey(key) {
+    value: function decodePropertyListForKey(key, options) {
       if (this._decodingFinished) {
         throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
       }
-      var parsedObj = this.decodeObjectForKey(key);
+      var parsedObj = this.decodeObjectForKey(key, options);
       //console.log(`${key}: ${parsedObj.constructor.name}`)
       if (!(parsedObj instanceof Buffer)) {
         throw new Error('propertylist of key ' + key + ' is not Buffer data');
@@ -30559,7 +30620,7 @@ var NSKeyedUnarchiver = function (_NSCoder) {
       //for(let i=0; i<8; i++){
       //  console.log(`${i}: ${parsedObj.readUIntBE(i, 1)}`)
       //}
-      return NSKeyedUnarchiver.unarchiveObjectWithData(parsedObj, this._filePath);
+      return NSKeyedUnarchiver.unarchiveObjectWithData(parsedObj, this._filePath, options);
     }
   }, {
     key: 'decodeObjectOfTypeForKey',
@@ -30634,15 +30695,16 @@ var NSKeyedUnarchiver = function (_NSCoder) {
     key: 'unarchiveObjectWithData',
     value: function unarchiveObjectWithData(data) {
       var path = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Map();
 
-      var unarchiver = new NSKeyedUnarchiver(data);
+      var unarchiver = new NSKeyedUnarchiver(data, options);
       unarchiver._filePath = path;
       var topObjIndex = unarchiver._parsedObj.$top.root.value;
       return unarchiver._parseClassAt(topObjIndex);
     }
   }, {
     key: '_getBufferOfFile',
-    value: function _getBufferOfFile(path) {
+    value: function _getBufferOfFile(path, options) {
       // TODO: use 'await' to return Buffer instead of Promise
       var promise = new Promise(function (resolve, reject) {
         var file = new _File3.default([], path);
@@ -30661,8 +30723,10 @@ var NSKeyedUnarchiver = function (_NSCoder) {
   }, {
     key: 'unarchiveObjectWithFile',
     value: function unarchiveObjectWithFile(path) {
-      var promise = NSKeyedUnarchiver._getBufferOfFile(path).then(function (data) {
-        return NSKeyedUnarchiver.unarchiveObjectWithData(data, path);
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : new Map();
+
+      var promise = NSKeyedUnarchiver._getBufferOfFile(path, options).then(function (data) {
+        return NSKeyedUnarchiver.unarchiveObjectWithData(data, path, options);
       });
 
       return promise;
@@ -30708,9 +30772,10 @@ var NSKeyedUnarchiver = function (_NSCoder) {
     key: 'unarchiveTopLevelObjectWithData',
     value: function unarchiveTopLevelObjectWithData(data) {
       var path = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Map();
 
       // what's different from unarchiveObjectWithData???
-      return NSKeyedUnarchiver.unarchiveObjectWithData(data, path);
+      return NSKeyedUnarchiver.unarchiveObjectWithData(data, path, options);
     }
   }]);
 
@@ -35133,7 +35198,9 @@ var _LoadingOption = {
   overrideAssetURLs: 'kSceneSourceOverrideAssetURLs',
   preserveOriginalTopology: 'kSceneSourcePreserveOriginalTopology',
   strictConformance: 'kSceneSourceStrictConformanceKey',
-  useSafeMode: 'kSceneSourceUseSafeMode'
+  useSafeMode: 'kSceneSourceUseSafeMode',
+
+  _urlTranslator: 'kSceneSourceURLTranslator'
 
   /**
    * Manages the data-reading tasks associated with loading scene contents from a file or data.
@@ -35233,10 +35300,10 @@ var SCNSceneSource = function (_NSObject) {
 
       if (this._data.match(/\nv -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)?\s*\n/)) {
         // seems obj data
-        return _SCNObjLoader3.default.unarchiveObjectWithData(this._data, url);
+        return _SCNObjLoader3.default.unarchiveObjectWithData(this._data, url, _options);
       }
 
-      return _NSKeyedUnarchiver2.default.unarchiveObjectWithData(this._data, url);
+      return _NSKeyedUnarchiver2.default.unarchiveObjectWithData(this._data, url, _options);
     }
 
     // Loading and Inspecting Scene Elements

@@ -44,7 +44,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @desc When you finish decoding data, you should invoke finishDecoding(). This method throws an exception if data is not a valid archive.
    * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1410862-init
    */
-  constructor(data = null) {
+  constructor(data = null, options = new Map()) {
     super()
 
     // Unarchiving Data
@@ -132,6 +132,8 @@ export default class NSKeyedUnarchiver extends NSCoder {
      */
     this._decodingFinished = false
 
+    this._options = options
+
     this._promises = []
 
     if(data !== null){
@@ -172,8 +174,8 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @desc This method raises an invalidArchiveOperationException if data is not a valid archive.
    * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413894-unarchiveobject
    */
-  static unarchiveObjectWithData(data, path = null) {
-    const unarchiver = new NSKeyedUnarchiver(data)
+  static unarchiveObjectWithData(data, path = null, options = new Map()) {
+    const unarchiver = new NSKeyedUnarchiver(data, options)
     unarchiver._filePath = path
     const topObjIndex = unarchiver._parsedObj.$top.root.value
     return unarchiver._parseClassAt(topObjIndex)
@@ -187,7 +189,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     }
   }
 
-  static _getBufferOfFile(path) {
+  static _getBufferOfFile(path, options) {
     // TODO: use 'await' to return Buffer instead of Promise
     const promise = new Promise((resolve, reject) => {
       const file = new _File([], path)
@@ -416,10 +418,10 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @desc This method raises an invalidArgumentException if the file at path does not contain a valid archive.
    * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1417153-unarchiveobject
    */
-  static unarchiveObjectWithFile(path) {
-    const promise = NSKeyedUnarchiver._getBufferOfFile(path)
+  static unarchiveObjectWithFile(path, options = new Map()) {
+    const promise = NSKeyedUnarchiver._getBufferOfFile(path, options)
       .then((data) => {
-        return NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
+        return NSKeyedUnarchiver.unarchiveObjectWithData(data, path, options)
       })
 
     return promise
@@ -551,7 +553,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @returns {?Object} - 
    * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1409082-decodeobject
    */
-  decodeObjectForKey(key) {
+  decodeObjectForKey(key, options) {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
@@ -561,7 +563,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     }else if(parsedObj instanceof _UID){
       const obj = parsedObj.obj
       if(typeof obj.$class !== 'undefined'){
-        return this._parseClassAt(parsedObj.value)
+        return this._parseClassAt(parsedObj.value, options)
       }
       return obj
     }
@@ -576,11 +578,11 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @desc This method calls decodeObjectOfClasses:forKey: with a set allowing only property list types.
    * @see https://developer.apple.com/documentation/foundation/nscoder/1416284-decodepropertylist
    */
-  decodePropertyListForKey(key) {
+  decodePropertyListForKey(key, options) {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    const parsedObj = this.decodeObjectForKey(key)
+    const parsedObj = this.decodeObjectForKey(key, options)
     //console.log(`${key}: ${parsedObj.constructor.name}`)
     if(!(parsedObj instanceof Buffer)){
       throw new Error(`propertylist of key ${key} is not Buffer data`)
@@ -590,7 +592,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     //for(let i=0; i<8; i++){
     //  console.log(`${i}: ${parsedObj.readUIntBE(i, 1)}`)
     //}
-    return NSKeyedUnarchiver.unarchiveObjectWithData(parsedObj, this._filePath)
+    return NSKeyedUnarchiver.unarchiveObjectWithData(parsedObj, this._filePath, options)
   }
 
   decodeObjectOfTypeForKey(type, key) {
@@ -676,9 +678,9 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @throws {Error}
    * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413622-unarchivetoplevelobjectwithdata
    */
-  static unarchiveTopLevelObjectWithData(data, path = null) {
+  static unarchiveTopLevelObjectWithData(data, path = null, options = new Map()) {
     // what's different from unarchiveObjectWithData???
-    return NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
+    return NSKeyedUnarchiver.unarchiveObjectWithData(data, path, options)
   }
 
   _getValueForKey(key) {

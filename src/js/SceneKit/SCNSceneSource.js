@@ -26,7 +26,9 @@ const _LoadingOption = {
   overrideAssetURLs: 'kSceneSourceOverrideAssetURLs',
   preserveOriginalTopology: 'kSceneSourcePreserveOriginalTopology',
   strictConformance: 'kSceneSourceStrictConformanceKey',
-  useSafeMode: 'kSceneSourceUseSafeMode' 
+  useSafeMode: 'kSceneSourceUseSafeMode',
+
+  _urlTranslator: 'kSceneSourceURLTranslator'
 }
 
 
@@ -145,10 +147,10 @@ export default class SCNSceneSource extends NSObject {
 
     if(this._data.match(/\nv -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)?\s*\n/)){
       // seems obj data
-      return _SCNObjLoader.unarchiveObjectWithData(this._data, url)
+      return _SCNObjLoader.unarchiveObjectWithData(this._data, url, _options)
     }
 
-    return NSKeyedUnarchiver.unarchiveObjectWithData(this._data, url)
+    return NSKeyedUnarchiver.unarchiveObjectWithData(this._data, url, _options)
   }
 
   // Loading and Inspecting Scene Elements
