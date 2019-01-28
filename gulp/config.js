@@ -1,5 +1,5 @@
 const path = require('path');
-const babel = require('babel-core/register');
+const babel = require('@babel/register');
 const webpack = require('webpack');
 
 const src = './src';
@@ -31,6 +31,7 @@ module.exports = {
   webpack: {
     node: {
       target: 'node',
+      mode: 'development',
       entry: src + '/js/main.js',
       output: {
         path: dest,
@@ -45,7 +46,7 @@ module.exports = {
         new webpack.DefinePlugin({'process.env.BROWSER': false})
       ],
       module: {
-        loaders: [
+        rules: [
           {
             test: /ammo.js$/,
             loader: 'script-loader'
@@ -53,9 +54,11 @@ module.exports = {
           {
             test: /\.js$/,
             exclude: [/node_modules/, /ammo.js$/],
-            loader: 'babel-loader',
-            query: {
-              presets: ['env']
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
             }
           }
         ]
@@ -67,6 +70,7 @@ module.exports = {
     },
     web: {
       target: 'web',
+      mode: 'development',
       entry: src + '/js/main.js',
       output: {
         path: dest,
@@ -81,7 +85,7 @@ module.exports = {
         new webpack.DefinePlugin({'process.env.BROWSER': true})
       ],
       module: {
-        loaders: [
+        rules: [
           {
             test: /ammo.js$/,
             loader: 'script-loader'
@@ -89,9 +93,11 @@ module.exports = {
           {
             test: /\.js$/,
             exclude: [/node_modules/, /ammo.js$/],
-            loader: 'babel-loader',
-            query: {
-              presets: ['env']
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
             }
           }
         ]
@@ -107,6 +113,7 @@ module.exports = {
     },
     webmin: {
       target: 'web',
+      mode: 'production',
       entry: src + '/js/main.js',
       output: {
         path: dest,
@@ -118,11 +125,10 @@ module.exports = {
         extensions: ['.js']
       },
       plugins: [
-        new webpack.DefinePlugin({'process.env.BROWSER': true}),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.DefinePlugin({'process.env.BROWSER': true})
       ],
       module: {
-        loaders: [
+        rules: [
           {
             test: /ammo.js$/,
             loader: 'script-loader'
@@ -130,9 +136,11 @@ module.exports = {
           {
             test: /\.js$/,
             exclude: [/node_modules/, /ammo.js$/],
-            loader: 'babel-loader',
-            query: {
-              presets: ['env']
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
             }
           }
         ]

@@ -35,41 +35,40 @@
   "homepage": "https://github.com/magicien/JSceneKit#readme",
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ]
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-loader": "^7.1.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
     "babel-plugin-static-fs": "^1.1.0",
-    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "esdoc": "^1.0.4",
     "gulp": "^4.0.0",
-    "gulp-babel": "^7.0.0",
-    "gulp-eslint": "^4.0.0",
-    "gulp-exec": "^2.1.3",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-exec": "^3.0.2",
     "gulp-if": "^2.0.2",
     "gulp-mocha": "^6.0.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "gulp-watch": "^4.3.11",
-    "mocha": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "mocha": "^5.2.0",
     "mocha-sinon": "^2.0.0",
-    "nyc": "^11.4.0",
+    "nyc": "^13.1.0",
     "path": "^0.12.7",
-    "require-dir": "^0.3.2",
+    "require-dir": "^1.2.0",
     "script-loader": "^0.7.2",
-    "sinon": "^4.1.2",
-    "sinon-chai": "^2.14.0",
+    "sinon": "^7.2.3",
+    "sinon-chai": "^3.3.0",
     "tgaimage": "^1.1.0",
-    "uglifyjs-webpack-plugin": "^1.1.1",
-    "webpack": "^3.8.1",
-    "webpack-stream": "^4.0.0"
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.29.0",
+    "webpack-stream": "^5.2.1"
   },
-  "dependencies": {
-    "babel-register": "^6.26.0"
-  }
+  "dependencies": {}
 }
