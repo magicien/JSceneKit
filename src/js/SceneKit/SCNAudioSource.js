@@ -7,6 +7,8 @@ import NSObject from '../ObjectiveC/NSObject'
 let _AudioContext = () => {}
 if(typeof AudioContext !== 'undefined'){
   _AudioContext = AudioContext
+}else if(typeof webkitAudioContext !== 'undefined'){
+  _AudioContext = webkitAudioContext
 }else{
   console.error('error: AudioContext is not supported')
 }
