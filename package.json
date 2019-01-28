@@ -10,7 +10,7 @@
   },
   "scripts": {
     "lint": "gulp lint",
-    "build": "gulp build",
+    "build": "gulp webpack",
     "test": "gulp test",
     "test-coverage": "nyc --include src npm test",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
