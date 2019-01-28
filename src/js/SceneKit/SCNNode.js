@@ -1047,6 +1047,7 @@ export default class SCNNode extends NSObject {
    * @returns {SCNVector3} -
    */
   get _worldScale() {
+    return this.worldTransform.getScale()
   }
 
   /**

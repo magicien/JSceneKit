@@ -46,7 +46,7 @@ export default class DispatchTime {
    * @see https://developer.apple.com/documentation/dispatch/dispatchtime/1780795-distantfuture
    */
   static get distantFuture() {
-    
+    return new DispatchTime(Infinity)
   }
 
   // Type Methods

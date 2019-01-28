@@ -3,7 +3,7 @@
 import _AjaxRequest from '../util/_AjaxRequest'
 import NSObject from '../ObjectiveC/NSObject'
 
-/*global AudioContext*/
+/*global AudioContext webkitAudioContext*/
 let _AudioContext = () => {}
 if(typeof AudioContext !== 'undefined'){
   _AudioContext = AudioContext
