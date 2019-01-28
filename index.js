@@ -281,6 +281,23 @@ import CFAbsoluteTimeGetCurrent from './src/js/CoreFoundation/CFAbsoluteTimeGetC
 import NSObject from './src/js/ObjectiveC/NSObject'
 import * as constants from './src/js/constants'
 
+const kCAFillModeRemoved = constants.kCAFillModeRemoved
+const kCAFillModeForwards = constants.kCAFillModeForwards
+const kCAFillModeBackwards = constants.kCAFillModeBackwards
+const kCAFillModeBoth = constants.kCAFillModeBoth
+const kCAMediaTimingFunctionLinear = constants.kCAMediaTimingFunctionLinear
+const kCAMediaTimingFunctionEaseIn = constants.kCAMediaTimingFunctionEaseIn
+const kCAMediaTimingFunctionEaseOut = constants.kCAMediaTimingFunctionEaseOut
+const kCAMediaTimingFunctionEaseInEaseOut = constants.kCAMediaTimingFunctionEaseInEaseOut
+const kCAMediaTimingFunctionDefault = constants.kCAMediaTimingFunctionDefault
+const kCAAnimationLinear = constants.kCAAnimationLinear
+const kCAAnimationDiscrete = constants.kCAAnimationDiscrete
+const kCAAnimationPaced = constants.kCAAnimationPaced
+const kCAAnimationCubic = constants.kCAAnimationCubic
+const kCAAnimationCubicPaced = constants.kCAAnimationCubicPaced
+const kCAAnimationRotateAuto = constants.kCAAnimationRotateAuto
+const kCAAnimationRotateAutoReverse = constants.kCAAnimationRotateAutoReverse
+
 _ClassList.registerClass(CGLineCap, 'CGLineCap')
 _ClassList.registerClass(CGLineJoin, 'CGLineJoin')
 _ClassList.registerClass(CGRect, 'CGRect')

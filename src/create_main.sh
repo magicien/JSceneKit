@@ -60,7 +60,12 @@ print_import_es6() {
       echo "import ${CLASS} from '${JS_DIR}${FILE_PATH}'" >> $1
     fi
   done
+
   echo "import * as constants from '${JS_DIR}/constants'" >> $1
+  echo "" >> $1
+  for CONSTANT in "${CONSTANTS[@]}"; do
+    echo "const ${CONSTANT} = constants.${CONSTANT}" >> $1
+  done
 }
 
 
