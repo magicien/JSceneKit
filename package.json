@@ -1,43 +1,47 @@
 {
-  "name": "jscenekit",
-  "version": "0.4.2",
-  "description": "Port of SceneKit framework to JavaScript",
-  "main": "./index.node.js",
-  "browser": {
-    "./index.node.js": "./index.web.js",
-    "./src/js/util/_File.js": "./src/js/util/_File.web.js",
-    "./src/js/util/_FileReader.js": "./src/js/util/_FileReader.web.js"
+  "_from": "jscenekit@^0.4.2",
+  "_id": "jscenekit@0.4.2",
+  "_inBundle": false,
+  "_integrity": "sha512-VQeQZY7xwMSFY2UEczpy5u00lM24+sm6BFslBvO5T8+nDUfFP5zglufHxXBA/1575SCdqBalYXTsrIggWXbuow==",
+  "_location": "/jscenekit",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "jscenekit@^0.4.2",
+    "name": "jscenekit",
+    "escapedName": "jscenekit",
+    "rawSpec": "^0.4.2",
+    "saveSpec": null,
+    "fetchSpec": "^0.4.2"
   },
-  "scripts": {
-    "lint": "gulp lint",
-    "build": "gulp webpack",
-    "test": "gulp test",
-    "test-coverage": "nyc --include src npm test",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "doc": "esdoc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/magicien/JSceneKit.git"
-  },
-  "keywords": [
-    "ECMAScript",
-    "JavaScript",
-    "WebGL",
-    "SceneKit",
-    "JSceneKit"
+  "_requiredBy": [
+    "#DEV:/"
   ],
-  "author": "magicien",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/magicien/JSceneKit/issues"
+  "_resolved": "https://registry.npmjs.org/jscenekit/-/jscenekit-0.4.2.tgz",
+  "_shasum": "06518077ebde5c977dd243b2529725746cbf6c0c",
+  "_spec": "jscenekit@^0.4.2",
+  "_where": "/Users/ohno/Documents/Development/JSceneKitExample",
+  "author": {
+    "name": "magicien"
   },
-  "homepage": "https://github.com/magicien/JSceneKit#readme",
   "babel": {
     "presets": [
       "@babel/preset-env"
     ]
   },
+  "browser": {
+    "./index.node.js": "./index.web.js",
+    "./src/js/util/_File.js": "./src/js/util/_File.web.js",
+    "./src/js/util/_FileReader.js": "./src/js/util/_FileReader.web.js"
+  },
+  "bugs": {
+    "url": "https://github.com/magicien/JSceneKit/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Port of SceneKit framework to JavaScript",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -70,5 +74,30 @@
     "webpack": "^4.29.0",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {}
+  "homepage": "https://github.com/magicien/JSceneKit#readme",
+  "keywords": [
+    "ECMAScript",
+    "JavaScript",
+    "WebGL",
+    "SceneKit",
+    "JSceneKit"
+  ],
+  "license": "MIT",
+  "main": "./index.node.js",
+  "jsnext:main": "./index.js",
+  "module": "./index.js",
+  "name": "jscenekit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicien/JSceneKit.git"
+  },
+  "scripts": {
+    "build": "gulp webpack",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "doc": "esdoc",
+    "lint": "gulp lint",
+    "test": "gulp test",
+    "test-coverage": "nyc --include src npm test"
+  },
+  "version": "0.4.2"
 }
