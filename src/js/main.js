@@ -279,6 +279,7 @@ import NSColor from './AppKit/NSColor'
 import NSColorSpaceModel from './AppKit/NSColorSpaceModel'
 import CFAbsoluteTimeGetCurrent from './CoreFoundation/CFAbsoluteTimeGetCurrent'
 import NSObject from './ObjectiveC/NSObject'
+import * as constants from './constants'
 
 _ClassList.registerClass(CGLineCap, 'CGLineCap')
 _ClassList.registerClass(CGLineJoin, 'CGLineJoin')
@@ -834,30 +835,19 @@ exports.NSColorSpaceModel = NSColorSpaceModel
 exports.CFAbsoluteTimeGetCurrent = CFAbsoluteTimeGetCurrent
 exports.NSObject = NSObject
 
-// constants
-/*global exports*/
-
-// 
-exports.kCAFillModeRemoved = 'removed'
-exports.kCAFillModeForwards = 'forwards'
-exports.kCAFillModeBackwards = 'backwards'
-exports.kCAFillModeBoth = 'both'
-
-// 
-exports.kCAMediaTimingFunctionLinear = 'linear'
-exports.kCAMediaTimingFunctionEaseIn = 'easeIn'
-exports.kCAMediaTimingFunctionEaseOut = 'easeOut'
-exports.kCAMediaTimingFunctionEaseInEaseOut = 'easeInEaseOut'
-exports.kCAMediaTimingFunctionDefault = 'default'
-
-// Value calculation modes
-exports.kCAAnimationLinear = 'linear'
-exports.kCAAnimationDiscrete = 'discrete'
-exports.kCAAnimationPaced = 'paced'
-exports.kCAAnimationCubic = 'cubic'
-exports.kCAAnimationCubicPaced = 'cubicPaced'
-
-// Rotation Mode Values
-exports.kCAAnimationRotateAuto = 'auto'
-exports.kCAAnimationRotateAutoReverse = 'autoReverse'
-
+exports.kCAFillModeRemoved = constants.kCAFillModeRemoved
+exports.kCAFillModeForwards = constants.kCAFillModeForwards
+exports.kCAFillModeBackwards = constants.kCAFillModeBackwards
+exports.kCAFillModeBoth = constants.kCAFillModeBoth
+exports.kCAMediaTimingFunctionLinear = constants.kCAMediaTimingFunctionLinear
+exports.kCAMediaTimingFunctionEaseIn = constants.kCAMediaTimingFunctionEaseIn
+exports.kCAMediaTimingFunctionEaseOut = constants.kCAMediaTimingFunctionEaseOut
+exports.kCAMediaTimingFunctionEaseInEaseOut = constants.kCAMediaTimingFunctionEaseInEaseOut
+exports.kCAMediaTimingFunctionDefault = constants.kCAMediaTimingFunctionDefault
+exports.kCAAnimationLinear = constants.kCAAnimationLinear
+exports.kCAAnimationDiscrete = constants.kCAAnimationDiscrete
+exports.kCAAnimationPaced = constants.kCAAnimationPaced
+exports.kCAAnimationCubic = constants.kCAAnimationCubic
+exports.kCAAnimationCubicPaced = constants.kCAAnimationCubicPaced
+exports.kCAAnimationRotateAuto = constants.kCAAnimationRotateAuto
+exports.kCAAnimationRotateAutoReverse = constants.kCAAnimationRotateAutoReverse
