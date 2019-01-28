@@ -21386,8 +21386,7 @@ var SCNMaterialProperty = function (_NSObject) {
               resolve();
             };
             image.onerror = function () {
-              throw new Error('image ' + _path + ' load error.');
-              reject();
+              reject(new Error('image ' + _path + ' load error.'));
             };
             image.src = _path;
           });
@@ -49799,6 +49798,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var _AudioContext = function _AudioContext() {};
 if (typeof AudioContext !== 'undefined') {
   _AudioContext = AudioContext;
+} else if (typeof webkitAudioContext !== 'undefined') {
+  _AudioContext = webkitAudioContext;
 } else {
   console.error('error: AudioContext is not supported');
 }
