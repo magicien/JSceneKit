@@ -493,13 +493,14 @@ export default class SCNRenderer extends NSObject {
     gl.clearColor(this._backgroundColor.red, this._backgroundColor.green, this._backgroundColor.blue, this._backgroundColor.alpha)
     gl.clearDepth(1.0)
     gl.clearStencil(0)
+    // gl.clear() respects depthMask; the particle pass leaves it false at the end of the previous frame.
+    gl.depthMask(true)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
     //gl.useProgram(glProgram)
     this._useProgram(p)
 
     gl.depthFunc(gl.LEQUAL)
-    gl.depthMask(true)
     gl.enable(gl.BLEND)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
 
