@@ -365,7 +365,7 @@ const _SCNDefaultPBRFragmentShader =
         // specular
         if(diffuse > 0.0f){
           vec3 halfVec = normalize(lightVec + _surface.view);
-          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
+          float specular = pow(max(dot(halfVec, _surface.normal), 0.0), _surface.shininess);
           _lightingContribution.specular += vec3(specular);
         }
       }
@@ -383,7 +383,7 @@ const _SCNDefaultPBRFragmentShader =
         // specular
         if(diffuse > 0.0f){
           vec3 halfVec = normalize(lightVec + _surface.view);
-          float specular = pow(dot(halfVec, _surface.normal), _surface.shininess);
+          float specular = pow(max(dot(halfVec, _surface.normal), 0.0), _surface.shininess);
           // TODO: use intensity
           _lightingContribution.specular += vec3(1, 1, 1) * specular;
         }
