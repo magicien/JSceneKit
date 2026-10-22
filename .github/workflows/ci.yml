@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22, 24]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
+      # "prepare" builds index.node.js, index.web.js and index.web.min.js
+      - run: npm install
+      - run: npm run lint
+      - run: npm test
+      # make sure the built bundles are included in the package
+      - run: npm pack --dry-run
