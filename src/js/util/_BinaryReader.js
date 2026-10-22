@@ -124,6 +124,14 @@ export default class _BinaryReader {
     const start = this._pos
     this._pos += length
 
+    // Buffer.readIntBE/readUIntBE accept 1 to 6 bytes only
+    if(length === 8){
+      if(this.bigEndian){
+        return Number(signed ? this.buffer.readBigInt64BE(start) : this.buffer.readBigUInt64BE(start))
+      }
+      return Number(signed ? this.buffer.readBigInt64LE(start) : this.buffer.readBigUInt64LE(start))
+    }
+
     // big endian
     if(this.bigEndian){
       if(signed){

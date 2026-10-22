@@ -147,7 +147,9 @@ export default class SCNSceneSource extends NSObject {
       }
     }
 
-    if(this._data.match(/\nv -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)?\s*\n/)){
+    // data is a string in browsers and a Buffer in Node.js
+    const text = typeof this._data === 'string' ? this._data : this._data.toString('binary')
+    if(text.match(/\nv -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)? -?[0-9]+(\.[0-9]+)?\s*\n/)){
       // seems obj data
       return _SCNObjLoader.unarchiveObjectWithData(this._data, url, _options)
     }

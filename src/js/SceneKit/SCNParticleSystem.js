@@ -927,6 +927,11 @@ export default class SCNParticleSystem extends NSObject {
    * @returns {Image} -
    */
   _loadParticleImage(path, directoryPath) {
+    if(typeof Image === 'undefined'){
+      // Node.js: images can't be loaded without a browser
+      this._loadedPromise = Promise.resolve()
+      return null
+    }
     const image = new Image()
     // TODO: check option if it allows cross-domain.
     image.crossOrigin = 'anonymous'

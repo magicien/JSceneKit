@@ -526,7 +526,9 @@ export default class _SCNObjLoader {
     for(let i=1; i<tokens.length; i++){
       const path = fileDir + tokens[i]
       const dir = path.substring(0, path.lastIndexOf('/') + 1)
-      const promise = _BinaryRequest.get(path).then((data) => {
+      // Node.js: read the file directly
+      const request = typeof XMLHttpRequest === 'undefined' ? _SCNObjLoader._getBufferOfFile(path) : _BinaryRequest.get(path)
+      const promise = request.then((data) => {
         console.log('mtl data: ' + data)
         return _SCNMtlLoader.unarchiveObjectWithData(data, dir)
       })

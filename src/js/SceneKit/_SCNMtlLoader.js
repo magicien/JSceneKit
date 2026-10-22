@@ -303,6 +303,10 @@ export default class _SCNMtlLoader {
    * @returns {void}
    */
   _DiffuseTexture(tokens) {
+    if(typeof Image === 'undefined'){
+      // Node.js: images can't be loaded without a browser
+      return
+    }
     const material = this._workingMaterial
     this._loadTexture(tokens[1]).then((image) => {
       material.diffuse.contents = image

@@ -199,7 +199,13 @@ You call this method in a try expression and handle any errors in the catch clau
       _options.set(SCNSceneSource.LoadingOption.assetDirectoryURLs, directory)
     }
 
-    if(url instanceof _File){
+    let file = url
+    if(typeof file === 'string' && typeof XMLHttpRequest === 'undefined'){
+      // Node.js: read the file directly
+      file = new _File([], file)
+    }
+
+    if(file instanceof _File){
       return new Promise((resolve, reject) => {
         const reader = new _FileReader()
         reader.onload = () => {
@@ -209,7 +215,7 @@ You call this method in a try expression and handle any errors in the catch clau
         reader.onerror = () => {
           reject(reader.error)
         }
-        reader.readAsBinaryString(url)
+        reader.readAsBinaryString(file)
       })
     }
 

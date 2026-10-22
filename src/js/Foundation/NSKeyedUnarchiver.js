@@ -266,7 +266,8 @@ export default class NSKeyedUnarchiver extends NSCoder {
       // Int
       const len = Math.pow(2, type2)
       //console.log('   type: integer ' + len)
-      return reader.readInteger(len, signed)
+      // 8-byte integers are signed in bplist; shorter ones are unsigned
+      return reader.readInteger(len, signed || len === 8)
     }else if(type1 === 0x20){
       // Float
       const len = Math.pow(2, type2)

@@ -502,6 +502,11 @@ export default class SCNMaterialProperty extends NSObject {
    * @returns {Image} -
    */
   _loadContentsImage(path, dirPath) {
+    if(typeof Image === 'undefined'){
+      // Node.js: images can't be loaded without a browser
+      this._loadedPromise = Promise.resolve()
+      return null
+    }
     const image = new Image()
     // TODO: check option if it allows cross-domain.
     image.crossOrigin = 'anonymous'
@@ -565,6 +570,11 @@ export default class SCNMaterialProperty extends NSObject {
    * @returns {Image} -
    */
   _loadContentsImageByData(data) {
+    if(typeof Image === 'undefined'){
+      // Node.js: images can't be loaded without a browser
+      this._loadedPromise = Promise.resolve()
+      return null
+    }
     const image = new Image()
     // TODO: check option if it allows cross-domain.
     image.crossOrigin = 'anonymous'
