@@ -213,8 +213,6 @@ export default class SCNPhysicsBody extends NSObject {
     this._isResting = false
 
     this._node = null
-    this._btRigidBody = null
-    this._updateRigidBody()
 
     this._position = null
     this._radius = null
@@ -370,50 +368,10 @@ export default class SCNPhysicsBody extends NSObject {
     this._invTransform = this._transform.invert()
   }
 
-  /**
-   * @access private
-   * @returns {void}
-   */
-  _updateRigidBody() {
-    if(this._btRigidBody !== null){
-      //Ammo.destroy(this._btRigidBody)
-    }
-    //this._btRigidBody = this._createRigidBody()
-  }
-
-  /**
-   * @access private
-   * @returns {Ammo.btRigidBody} -
-   * @desc call Ammo.destroy(rigidBody) after using it.
-   */
-  _createRigidBody() {
-    //let btTransform = null
-    //if(this.physicsShape === null){
-    //  return null
-    //}
-    //if(this._node !== null){
-    //  btTransform = this._node._createBtTransform()
-    //}else{
-    //  btTransform = new Ammo.btTransform()
-    //  btTransform.setIdentity()
-    //}
-    //const btShape = this.physicsShape._createBtCollisionShape()
-    //const inertia = this.momentOfInertia._createBtVector3()
-
-    //const info = new Ammo.btRigidBodyConstructionInfo(btTransform, btShape, inertia)
-    //const rigidBody = new Ammo.btRigidBody(info)
-
-    //return rigidBody
-  }
-
   _execDestroy() {
     //if(this.physicsShape !== null){
     //  this.physicsShape._destroy()
     //  this.physicsShape = null
-    //}
-    //if(this._btRigidBody !== null){
-    //  Ammo.destroy(this._btRigidBody)
-    //  this._btRigidBody = null
     //}
   }
 

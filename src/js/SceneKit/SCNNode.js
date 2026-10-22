@@ -2594,30 +2594,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   
-  /**
-   * @access private
-   * @returns {Ammo.btTransform} -
-   * @desc call Ammo.destroy(transform) after using it.
-   */
-  _createBtTransform() {
-    //const transform = new Ammo.btTransform()
-    //const pos = this.position.createBtVector3()
-    //const rot = this.orientation.craeteBtQuaternion()
-    //transform.setIdentity()
-    //transform.setOrigin(pos)
-    //transform.setRotation(rot)
-    //Ammo.destroy(pos)
-    //Ammo.destroy(rot)
-    //return transform
-  }
-
-  _createBtCollisionShape() {
-    //if(this._geometry === null){
-    //  throw new Error('geometry is null')
-    //}
-    //return this._geometry._createBtCollisionShape()
-  }
-
   destory() {
     //if(this.physicsBody !== null){
     //  this.physicsBody.destory()

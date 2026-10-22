@@ -15,7 +15,6 @@ import SCNPhysicsContact from './SCNPhysicsContact'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNSphere from './SCNSphere'
 import SCNVector3 from './SCNVector3'
-//import _Ammo from '../third_party/ammo'
 
 const _TestOption = {
   backfaceCulling: 'backfaceCulling',
@@ -98,14 +97,6 @@ export default class SCNPhysicsWorld extends NSObject {
      * @see https://developer.apple.com/documentation/scenekit/scnphysicsworld/1512843-contactdelegate
      */
     this.contactDelegate = null
-
-    //const collisionConfiguration = new Ammo.btDefaultCollisionConfiguration()
-    //const dispatcher = new Ammo.btCollisionDispatcher(collisionConfiguration)
-    //const overlappingPairCache = new Ammo.btDbvtBroadphase()
-    //const solver = new Ammo.btSequentialImpulseConstraintSolver()
-    //this._world = new Ammo.btDiscreteDynamicsWorld(
-    //  dispatcher, overlappingPairCache, solver, collisionConfiguration
-    //)
 
     this._prevTime = null
 

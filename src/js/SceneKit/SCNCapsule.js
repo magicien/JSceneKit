@@ -218,17 +218,6 @@ export default class SCNCapsule extends SCNGeometry {
   }
 
   /**
-   * @access private
-   * @returns {Ammo.btCollisionShape} -
-   * @desc call Ammo.destroy(shape) after using it.
-   */
-  _createBtCollisionShape() {
-    //const height = (this.height - this.capRadius) * 0.5
-    //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
-    //return shape
-  }
-
-  /**
    * The center point and radius of the object’s bounding sphere.
    * @type {Object}
    * @parameter {SCNVector3} _boundingSphere.center -
