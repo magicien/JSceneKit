@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/jscenekit.svg)](https://www.npmjs.com/package/jscenekit)
-[![codecov](https://codecov.io/gh/magicien/JSceneKit/branch/master/graph/badge.svg)](https://codecov.io/gh/magicien/JSceneKit)
+[![CI](https://github.com/magicien/JSceneKit/actions/workflows/ci.yml/badge.svg)](https://github.com/magicien/JSceneKit/actions/workflows/ci.yml)
 
 # JSceneKit
 Port of SceneKit framework to JavaScript
