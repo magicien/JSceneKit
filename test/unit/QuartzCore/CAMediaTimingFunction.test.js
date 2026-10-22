@@ -2,10 +2,8 @@
 
 import CAMediaTimingFunction from '../../../src/js/QuartzCore/CAMediaTimingFunction'
 import * as Constants from '../../../src/js/constants'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 

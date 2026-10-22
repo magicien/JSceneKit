@@ -1,2 +1,0 @@
-/*global require*/
-require('./registerBabel')

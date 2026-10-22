@@ -1,9 +1,7 @@
 import SCNPlane from '../../../src/js/SceneKit/SCNPlane'
 import _Data from './_SCNPlaneData'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 

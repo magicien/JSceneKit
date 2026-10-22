@@ -1,7 +1,5 @@
 'use strict'
 
-import chai from '../../node_modules/chai/chai'
-const expect = chai.expect
 
 /**
  * UnitTest class

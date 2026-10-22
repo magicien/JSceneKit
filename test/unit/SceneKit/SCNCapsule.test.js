@@ -1,9 +1,7 @@
 import SCNCapsule from '../../../src/js/SceneKit/SCNCapsule'
 import _Data from './_SCNCapsuleData'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 

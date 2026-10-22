@@ -9,6 +9,7 @@ import UnitTest from '../UnitTest'
 //const server = sinon.fakeServer.create()
 
 describe('SCNView class', () => {
+  it.todo('add tests')
 
   /*
   UnitTest.classFunctionsDefined(SCNView, [

@@ -1,9 +1,7 @@
 import SCNPhysicsWorld from '../../../src/js/SceneKit/SCNPhysicsWorld'
 import SCNVector3 from '../../../src/js/SceneKit/SCNVector3'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 
@@ -23,26 +21,30 @@ describe('SCNPhysicsWorld class', () => {
   ])
   */
 
-  describe('constructor function', () => {
-  })
+  describe.todo('constructor function')
 
   describe('_contactTestBetweenBoxes function', () => {
+    it.todo('add tests')
     // boxA, boxB, options
   })
 
   describe('_contactTestBetweenSpheres function', () => {
+    it.todo('add tests')
     // sphereA, sphereB, options
   })
 
   describe('_contactTestBetweenBoxAndSphere function', () => {
+    it.todo('add tests')
     // box, sphere, reverse
   })
 
   describe('_intersectsBoundingBox function', () => {
+    it.todo('add tests')
     // node1, node2
   })
 
   describe('_contactTestCapsuleAndConcave function', () => {
+    it.todo('add tests')
     // capNode, conNode
   })
 
@@ -221,6 +223,7 @@ describe('SCNPhysicsWorld class', () => {
   })
 
   describe('_pointIsInsideTriangle function', () => {
+    it.todo('add tests')
     // p, p0, p1, p2
   })
 

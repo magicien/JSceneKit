@@ -2,10 +2,8 @@ import SCNNode from '../../../src/js/SceneKit/SCNNode'
 import SCNMatrix4 from '../../../src/js/SceneKit/SCNMatrix4'
 import SCNVector3 from '../../../src/js/SceneKit/SCNVector3'
 import SCNVector4 from '../../../src/js/SceneKit/SCNVector4'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 
@@ -74,8 +72,7 @@ describe('SCNNode class', () => {
   })
 
   /** @test {SCNNode#insertChildNodeAt} */
-  describe('insertChildNodeAt', () => {
-  })
+  describe.todo('insertChildNodeAt')
 
   /** @test {SCNNode#removeFromParentNode} */
   describe('removeFromParentNode', () => {

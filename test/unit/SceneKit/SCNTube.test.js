@@ -1,9 +1,7 @@
 import SCNTube from '../../../src/js/SceneKit/SCNTube'
 import _Data from './_SCNTubeData'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 

@@ -1,10 +1,9 @@
 import SCNScene from '../../../src/js/SceneKit/SCNScene'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 describe('SCNScene class', () => {
+  it.todo('add tests')
 
   /*
   UnitTest.classFunctionsDefined(SCNScene, [

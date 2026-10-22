@@ -25,11 +25,10 @@
     "watch": "node scripts/build.mjs --watch",
     "prepare": "npm run build",
     "generate-index": "./src/create_main.sh",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "doc": "esdoc",
-    "lint": "gulp lint",
-    "test": "gulp test",
-    "test-coverage": "nyc --include src npm test"
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test-coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -39,11 +38,6 @@
     "name": "magicien"
   },
   "license": "MIT",
-    "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
   "browser": {
     "./index.node.js": "./index.web.js",
     "./src/js/util/_File.js": "./src/js/util/_File.web.js",
@@ -52,29 +46,19 @@
   "bugs": {
     "url": "https://github.com/magicien/JSceneKit/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "buffer": "^6.0.3",
     "tgaimage": "^1.1.0"
   },
   "deprecated": false,
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/register": "^7.0.0",
-    "babel-eslint": "^10.0.1",
-    "chai": "^4.1.2",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@vitest/coverage-v8": "^5.0.5",
     "esbuild": "^0.28.2",
     "esdoc": "^1.0.4",
-    "gulp": "^4.0.0",
-    "gulp-eslint": "^5.0.0",
-    "gulp-mocha": "^6.0.0",
-    "gulp-util": "^3.0.8",
-    "mocha": "^5.2.0",
-    "mocha-sinon": "^2.0.0",
-    "nyc": "^13.1.0",
-    "require-dir": "^1.2.0",
-    "sinon": "^7.2.3",
-    "sinon-chai": "^3.3.0"
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "vitest": "^5.0.5"
   }
 }

@@ -1,9 +1,7 @@
 import SCNBox from '../../../src/js/SceneKit/SCNBox'
 import _Data from './_SCNBoxData'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 

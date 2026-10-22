@@ -1,9 +1,7 @@
 import SCNFloor from '../../../src/js/SceneKit/SCNFloor'
 import _Data from './_SCNFloorData'
-import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 
-const expect = chai.expect
 
 const epsilon = 0.0001
 
