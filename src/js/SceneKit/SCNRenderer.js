@@ -593,6 +593,10 @@ export default class SCNRenderer extends NSObject {
     lights.spot.forEach((node) => {
       lightData.push(...node.presentation.light.color.float32Array())
     })
+    if(lightData.length === 0){
+      // lightUniform has "vec4 dummy" when there are no lights
+      lightData.push(0, 0, 0, 0)
+    }
 
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
