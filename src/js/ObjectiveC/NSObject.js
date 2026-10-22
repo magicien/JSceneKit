@@ -4,7 +4,7 @@
 //import CGRect from '../CoreGraphics/CGRect'
 import _ClassList from '../util/_ClassList'
 
-/*global Buffer*/
+import { Buffer } from 'buffer'
 
 /**
  * The root class of most Objective-C class hierarchies, from which subclasses inherit a basic interface to the runtime system and the ability to behave as Objective-C objects.

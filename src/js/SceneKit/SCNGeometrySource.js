@@ -6,7 +6,7 @@ import SCNVector4 from './SCNVector4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import CGPoint from '../CoreGraphics/CGPoint'
 import _InstanceOf from '../util/_InstanceOf'
-/*global Buffer*/
+import { Buffer } from 'buffer'
 
 const _Semantic = {
   boneIndices: 'kGeometrySourceSemanticBoneIndices',

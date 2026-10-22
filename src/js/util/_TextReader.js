@@ -2,7 +2,7 @@
 
 import {UnescapeSJIS, UnescapeEUCJP, UnescapeJIS7, UnescapeJIS8, 
         UnescapeUnicode, UnescapeUTF7, UnescapeUTF8, UnescapeUTF16LE} from '../third_party/ecl'
-/*global Buffer*/
+import { Buffer } from 'buffer'
 
 const _integerPattern = new RegExp(/^(-|\+)?\d+;?/)
 const _floatPattern = new RegExp(/^(-|\+)?(\d)*\.(\d)*;?/)

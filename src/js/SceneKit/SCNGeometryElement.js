@@ -2,7 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
-/*global Buffer*/
+import { Buffer } from 'buffer'
 
 /**
  * A container for index data describing how vertices connect to define a three-dimensional object, or geometry.

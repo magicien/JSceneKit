@@ -21,7 +21,10 @@
     "src/js"
   ],
   "scripts": {
-    "build": "gulp webpack",
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "prepare": "npm run build",
+    "generate-index": "./src/create_main.sh",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "doc": "esdoc",
     "lint": "gulp lint",
@@ -51,38 +54,27 @@
   },
   "bundleDependencies": false,
   "dependencies": {
+    "buffer": "^6.0.3",
     "tgaimage": "^1.1.0"
   },
   "deprecated": false,
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-static-fs": "^1.1.0",
     "chai": "^4.1.2",
+    "esbuild": "^0.28.2",
     "esdoc": "^1.0.4",
     "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
     "gulp-eslint": "^5.0.0",
-    "gulp-exec": "^3.0.2",
-    "gulp-if": "^2.0.2",
     "gulp-mocha": "^6.0.0",
-    "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "gulp-watch": "^5.0.1",
     "mocha": "^5.2.0",
     "mocha-sinon": "^2.0.0",
     "nyc": "^13.1.0",
-    "path": "^0.12.7",
     "require-dir": "^1.2.0",
-    "script-loader": "^0.7.2",
     "sinon": "^7.2.3",
-    "sinon-chai": "^3.3.0",
-    "uglifyjs-webpack-plugin": "^2.1.1",
-    "webpack": "^4.29.0",
-    "webpack-stream": "^5.2.1"
+    "sinon-chai": "^3.3.0"
   }
 }

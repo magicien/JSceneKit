@@ -7,7 +7,7 @@ import _FileReader from '../util/_FileReader'
 import _BinaryReader from '../util/_BinaryReader'
 import _ClassList from '../util/_ClassList'
 
-/*global Buffer*/
+import { Buffer } from 'buffer'
 
 const _classForKey = new Map()
 const _loadingSymbol = Symbol('loading')
