@@ -1,6 +1,6 @@
 {
   "name": "jscenekit",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Port of SceneKit framework to JavaScript",
   "homepage": "https://github.com/magicien/JSceneKit#readme",
   "keywords": [
