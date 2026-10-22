@@ -688,6 +688,10 @@ if (contacts.count == 0) {
 
     for(const obj of objects){
       const body = obj.physicsBody
+      if(!body){
+        // the contact delegate may remove a physics body
+        continue
+      }
       body._prevPosition = body._position
     }
   }
