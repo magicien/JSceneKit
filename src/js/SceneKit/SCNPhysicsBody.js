@@ -353,7 +353,7 @@ export default class SCNPhysicsBody extends NSObject {
         this.physicsShape._setSourceObject(this._node)
       }
       if(!this.physicsShape._sourceGeometry){
-        this.physicsShape._setSourceObject(this._sourceObject)
+        this.physicsShape._setSourceObject(this.physicsShape._sourceObject)
       }
       if(!this.physicsShape._shape){
         this.physicsShape._createShape()

@@ -147,9 +147,10 @@ export default class SCNTorus extends SCNGeometry {
 
     this._geometryElements = [element]
     this._geometrySources = [vertexSource, normalSource, texcoordSource]
+    const r = this.ringRadius + this.pipeRadius
     this.boundingBox = {
-      min: new SCNVector3(-this.radius, -this.radius, -this.radius),
-      max: new SCNVector3(this.radius, this.radius, this.radius)
+      min: new SCNVector3(-r, -this.pipeRadius, -r),
+      max: new SCNVector3(r, this.pipeRadius, r)
     }
   }
 }

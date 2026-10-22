@@ -191,7 +191,7 @@ You call this method in a try expression and handle any errors in the catch clau
     if(_options === null){
       _options = new Map()
     }
-    if(typeof _options.get(SCNSceneSource.LoadingOption.assetDirectoryURLs) === 'undefined'){
+    if(typeof url === 'string' && typeof _options.get(SCNSceneSource.LoadingOption.assetDirectoryURLs) === 'undefined'){
       const paths = url.split('/')
       const name = paths.pop()
       const directory = paths.join('/')
@@ -200,7 +200,7 @@ You call this method in a try expression and handle any errors in the catch clau
     }
 
     if(url instanceof _File){
-      return Promise((resolve, reject) => {
+      return new Promise((resolve, reject) => {
         const reader = new _FileReader()
         reader.onload = () => {
           const scene = this._loadSceneWithData(reader.result, _options)
@@ -483,7 +483,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/documentation/scenekit/scnscene/1522787-particlesystems
    */
   get particleSystems() {
-    return this._particleSystems.slice(0)
+    return this._particleSystems ? this._particleSystems.slice(0) : null
   }
 
   /**

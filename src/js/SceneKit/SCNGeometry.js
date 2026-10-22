@@ -1180,11 +1180,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const geometry = new SCNGeometry()
     geometry.name = this.name
     geometry.levelsOfDetail = this.levelsOfDetail
-    geometry.materials = this.materials
+    geometry.materials = this.materials.slice(0)
     geometry._geometryElements = this._geometryElements.slice(0)
     geometry._geometrySources = this._geometrySources.slice(0)
     geometry._vertexArrayObjects = this._vertexArrayObjects ? this._vertexArrayObjects.slice(0) : null
-    geometry.subdivisonLevel = this.subdivisionLevel
+    geometry.subdivisionLevel = this.subdivisionLevel
     geometry.edgeCreasesElement = this.edgeCreasesElement
     geometry.edgeCreasesSource = this.edgeCreasesSource
     geometry.program = this.program
@@ -1226,13 +1226,13 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const sx = [4.0/6.0 + margin, 1.0/6.0 + margin, 5.0/6.0 + margin, 0 + margin, 2.0/6.0 + margin, 3.0/6.0 + margin]
     const imageWidth = image.naturalWidth
     const imageHeight = image.naturalHeight
-    const srcWidth = imageHeight - margin * 2
+    const srcWidth = imageWidth / 6.0 - margin * imageWidth * 2
 
     for(let i=0; i<6; i++){
       const canvas = document.createElement('canvas')
       canvas.width = imageHeight
       canvas.height = imageHeight
-      canvas.getContext('2d').drawImage(image, sx[i], 0, srcWidth, imageHeight, 0, 0, imageHeight, imageHeight)
+      canvas.getContext('2d').drawImage(image, sx[i] * imageWidth, 0, srcWidth, imageHeight, 0, 0, imageHeight, imageHeight)
 
       gl.texImage2D(targets[i], 0, gl.RGBA, imageHeight, imageHeight, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
     }

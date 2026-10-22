@@ -80,6 +80,9 @@ export default class GKScene extends NSObject {
    */
   removeEntity(entity) {
     const index = this._entities.indexOf(entity)
+    if(index < 0){
+      return
+    }
     this._entities.splice(index, 1)
   }
 

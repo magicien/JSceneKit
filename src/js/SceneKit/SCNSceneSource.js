@@ -129,6 +129,8 @@ export default class SCNSceneSource extends NSObject {
     if(!_options){
       if(this._options){
         _options = this._options
+      }else{
+        _options = new Map()
       }
     }
 

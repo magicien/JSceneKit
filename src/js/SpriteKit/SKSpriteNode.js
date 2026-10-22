@@ -469,7 +469,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
     this._texture = src._texture ? src._texture : null
     this.centerRect = src.centerRect.copy()
     this.colorBlendFactor = src.colorBlendFactor
-    this.color = src.color.copy()
+    this.color = src.color._copy()
     this.blendMode = src.blendMode
     this.lightingBitMask = src.lightingBitMask
     this.shadowedBitMask = src.shadowedBitMask
@@ -477,7 +477,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
     this.normalTexture = src.normalTexture ? src.normalTexture : null
     this.shader = src.shader
     this.attributeValues = src.attributeValues
-    this._customerPlaygroundQuickLook = src._customerPlaygroundQuickLook
+    this._customPlaygroundQuickLook = src._customPlaygroundQuickLook
     // this._program
     // this._vertexArrayObject
     // this._vertexBuffer
@@ -497,7 +497,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
         if(this._texture === texture){
           this.size = this._texture.size()
           const x = -this.size.width * this.anchorPoint.x
-          const y = -this.size.height * (1.0 - this.anchorPoint.y)
+          const y = -this.size.height * this.anchorPoint.y
           this._frame = new CGRect(new CGPoint(x, y), this.size)
         }
       })

@@ -76,7 +76,7 @@ export default class SCNGeometryTessellator extends NSObject {
      * @type {MTLTessellationPartitionMode}
      * @see https://developer.apple.com/documentation/scenekit/scngeometrytessellator/2889882-tessellationpartitionmode
      */
-    this.tessellationPartitionMode = MTLTessellationPartitionMode.none
+    this.tessellationPartitionMode = MTLTessellationPartitionMode.pow2
 
   }
 }

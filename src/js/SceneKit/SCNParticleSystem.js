@@ -1345,7 +1345,7 @@ export default class SCNParticleSystem extends NSObject {
           break
         }
         case SCNParticleImageSequenceAnimationMode.clamp: {
-          let fr = Math.floor(frame % this._numImages)
+          let fr = Math.floor(frame)
           if(fr >= this._numImages - 1){
             imageFrame = this._numImages - 1
           }else{
@@ -1364,7 +1364,7 @@ export default class SCNParticleSystem extends NSObject {
         default:
           throw new Error('unknown SCNParticleImageSequenceAnimationMode: ' + this.imageSequenceAnimationMode)
       }
-      const imageY = Math.floor(imageFrame / this.imageSequenceRowCount)
+      const imageY = Math.floor(imageFrame / this.imageSequenceColumnCount)
       const imageX = imageFrame % this.imageSequenceColumnCount
 
       p.texLeft = imageX * this._imageWidth
@@ -1709,7 +1709,6 @@ export default class SCNParticleSystem extends NSObject {
    */
   removeAnimationForKey(key) {
     this._animations.delete(key)
-    this._copyTransformToPresentationRecursive()
   }
 
   /**

@@ -94,6 +94,7 @@ export default class TextReader {
     const str = this._partialText.substring(0, length)
 
     this._moveIndex(str.length)
+    return str
   }
 
   /**

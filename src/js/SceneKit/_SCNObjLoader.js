@@ -147,7 +147,7 @@ export default class _SCNObjLoader {
     this._vertexArray = [new SCNVector3(0, 0, 0)]
     this._normalArray = [new SCNVector3(0, 0, 0)]
     this._texcoordArray = [new CGPoint(0, 0)]
-    this._materialPromise = Promise.resolve()
+    this._materialPromise = Promise.resolve([])
     this._materialMap = {}
     this._skinArray = []
     this._indexArrayMap = {[defaultMtlName]: []}
@@ -521,8 +521,10 @@ export default class _SCNObjLoader {
 
   _MaterialLibrary(tokens) {
     const promises = []
+    const filePath = this._filePath || ''
+    const fileDir = filePath.substring(0, filePath.lastIndexOf('/') + 1)
     for(let i=1; i<tokens.length; i++){
-      const path = this._filePath + tokens[i]
+      const path = fileDir + tokens[i]
       const dir = path.substring(0, path.lastIndexOf('/') + 1)
       const promise = _BinaryRequest.get(path).then((data) => {
         console.log('mtl data: ' + data)

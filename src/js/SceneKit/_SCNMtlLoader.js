@@ -149,7 +149,7 @@ export default class _SCNMtlLoader {
     while(!this._break && line !== null){
       const tokens = this._getTokens(line)
 
-      if(tokens.lengt === 0){
+      if(tokens.length === 0){
         line = this._reader.readLine()
         continue
       }
@@ -177,15 +177,6 @@ export default class _SCNMtlLoader {
     const material = new SCNMaterial()
     this._materials[materialName] = material
     this._workingMaterial = material
-  }
-
-  /**
-   * @access private
-   * @param {string[]} tokens - 
-   * @returns {void}
-   */
-  _Comment(tokens) {
-    return
   }
 
   /**
@@ -267,7 +258,7 @@ export default class _SCNMtlLoader {
    */
   _Dissolve(tokens) {
     const d = parseFloat(tokens[1])
-    this._workingMaterial.multiply.contents = new SKColor(d, d, d, 1.0)
+    this._workingMaterial.transparency = d
   }
 
   /**

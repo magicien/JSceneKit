@@ -45,12 +45,20 @@ export class AjaxRequest {
     if(!options.data){
       options.data = {}
     }
-    options.data[callbackParam] = callbackFuncName
 
     const queryArray = []
-    options.data.forEach((key, value) => {
-      queryArray.push(encodeURI(key) + '=' + encodeURI(value))
-    })
+    if(options.data instanceof Map){
+      options.data.set(callbackParam, callbackFuncName)
+      options.data.forEach((value, key) => {
+        queryArray.push(encodeURI(key) + '=' + encodeURI(value))
+      })
+    }else{
+      options.data[callbackParam] = callbackFuncName
+      Object.keys(options.data).forEach((key) => {
+        const value = options.data[key]
+        queryArray.push(encodeURI(key) + '=' + encodeURI(value))
+      })
+    }
     requestURL += '?' + queryArray.join('&')
 
     const promise = new Promise((resolve, reject) => {
@@ -101,7 +109,7 @@ export class AjaxRequest {
     if(options.data){
       const dataArray = []
       if(options.data instanceof Map){
-        options.data.forEach((key, value) => {
+        options.data.forEach((value, key) => {
           dataArray.push(encodeURIComponent(key) + '=' + encodeURIComponent(value))
         })
       }else{

@@ -181,7 +181,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
     }else if(this._scaleXBy !== null){
       toXValue = baseXValue + this._scaleXBy
     }else if(this._scaleWidthTo !== null){
-      toXValue = this._scaleWidthTo / this._frame.size.width
+      toXValue = this._scaleWidthTo / obj.frame.size.width
     }
 
     const baseYValue = obj.yScale
@@ -191,7 +191,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
     }else if(this._scaleYBy !== null){
       toYValue = baseYValue + this._scaleYBy
     }else if(this._scaleHeightTo !== null){
-      toYValue = this._scaleHeightTo / this._frame.size.height
+      toYValue = this._scaleHeightTo / obj.frame.size.height
     }
 
     if(toXValue === null && toYValue === null){

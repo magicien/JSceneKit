@@ -58,7 +58,7 @@ const _KeyCode = new Map([
   ['BracketRight', 0x1E], // '[' in JIS keyboard
   ['KeyO', 0x1F],
   ['KeyU', 0x20],
-  ['BracietLeft', 0x21], // '@' in JIS keyboard
+  ['BracketLeft', 0x21], // '@' in JIS keyboard
   ['KeyI', 0x22],
   ['KeyP', 0x23],
   ['Enter', 0x24],
@@ -76,7 +76,7 @@ const _KeyCode = new Map([
   ['Tab', 0x30],
   ['Space', 0x31],
   ['Backquote', 0x32],
-  ['Delete', 0x33],
+  ['Backspace', 0x33],
   ['NumpadEnter', 0x34],
   ['Escape', 0x35],
   ['OSRight', 0x36],
@@ -345,8 +345,8 @@ export default class SCNView {
     if(typeof frame === 'undefined'){
       frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
     }
-    this._canvas.style.width = frame.width
-    this._canvas.style.height = frame.height
+    this._canvas.style.width = `${frame.width}px`
+    this._canvas.style.height = `${frame.height}px`
 
     /**
      * @access private
@@ -588,7 +588,7 @@ export default class SCNView {
       this._canvas.style.width = '100%'
       this._canvas.style.height = '100%'
       if(this._canvas.clientHeight <= 0){
-        this._canvas.style.height = 300
+        this._canvas.style.height = '300px'
       }
     }
     this._resizeCanvas()
@@ -614,7 +614,7 @@ export default class SCNView {
    * @see https://developer.apple.com/documentation/scenekit/scnscenerenderer/1523401-isplaying
    */
   get isPlaying() {
-    return this._renderer.isPlaying
+    return Boolean(this._isPlaying)
   }
 
   /**
@@ -1272,7 +1272,7 @@ export default class SCNView {
       }
       if(elapsedTimeMs){
         if(!this._lastFpsCalculationTimeMs){
-          this._lastFpsCalculationTime = time
+          this._lastFpsCalculationTimeMs = time
         }
         this._sumElapsedTimeMs += elapsedTimeMs
         this._sumFrames += 1
@@ -1283,8 +1283,6 @@ export default class SCNView {
           this._sumFrames = 0
           this._sumElapsedTimeMs = 0
           this._lastFpsCalculationTimeMs = time
-
-          console.error('fps: ' + this._fps)
         }
       }
 

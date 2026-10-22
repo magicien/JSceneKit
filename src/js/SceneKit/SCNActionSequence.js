@@ -92,7 +92,10 @@ SCNAction *sequenceReverse = [sequence reversedAction];
   copy() {
     const action = super.copy()
 
-    action._actions = this._actions.slice(0)
+    action._actions = []
+    this._actions.forEach((act) => {
+      action._actions.push(act.copy())
+    })
     action._animIndex = this._animIndex
 
     return action

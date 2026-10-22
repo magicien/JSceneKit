@@ -71,7 +71,7 @@ export default class SCNVector4 {
     this.x = v.x
     this.y = v.y
     this.z = v.z
-    this.w = v.z
+    this.w = v.w
   }
 
   // extensions
@@ -132,7 +132,7 @@ export default class SCNVector4 {
     r.x = this.x * v.x
     r.y = this.y * v.y
     r.z = this.z * v.z
-    r.z = this.w * v.w
+    r.w = this.w * v.w
     return r
   }
 

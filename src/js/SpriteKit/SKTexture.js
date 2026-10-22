@@ -76,7 +76,7 @@ export default class SKTexture extends NSObject {
   static textureWithImage(image) {
     const texture = new SKTexture()
     texture._image = image
-    this._loadingImagePromise = Promise.resolve(this)
+    texture._loadingImagePromise = Promise.resolve(texture)
     return texture
   }
 
@@ -91,7 +91,7 @@ export default class SKTexture extends NSObject {
   static textureWithCgImage(image) {
     const texture = new SKTexture()
     texture._image = image
-    this._loadingImagePromise = Promise.resolve(this)
+    texture._loadingImagePromise = Promise.resolve(texture)
     return texture
   }
 
@@ -413,6 +413,7 @@ for i in 0...2 {
             image.src = _path
           }
         }
+        image.src = _path
       }else{
         image.onload = () => {
           this._image = image

@@ -184,7 +184,7 @@ export default class SCNProgram extends NSObject {
    * @see https://developer.apple.com/documentation/scenekit/scnprogram/1523350-semantic
    */
   semanticForSymbol(symbol) {
-    return this._semantics.set(symbol)
+    return this._semantics.get(symbol)
   }
 
   // Providing Input for Metal Shaders

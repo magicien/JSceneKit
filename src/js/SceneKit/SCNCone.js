@@ -164,6 +164,7 @@ export default class SCNCone extends SCNGeometry {
     const offset1 = (this.radialSegmentCount + 1) * 2
     for(let i=0; i<this.radialSegmentCount; i++){
       const base0 = i * 2
+      indexData0.push(base0, base0 + 3, base0 + 1)
       indexData0.push(base0, base0 + 2, base0 + 3)
       const base1 = offset1 + base0
       indexData1.push(base1, base1 + 2, base1 + 3)
@@ -173,9 +174,10 @@ export default class SCNCone extends SCNGeometry {
 
     this._geometryElements = elements
     this._geometrySources = [vertexSource, normalSource, texcoordSource]
+    const r = Math.max(this.topRadius, this.bottomRadius)
     this.boundingBox = {
-      min: new SCNVector3(-this.radius, bottom, -this.radius),
-      max: new SCNVector3(this.radius, top, this.radius)
+      min: new SCNVector3(-r, bottom, -r),
+      max: new SCNVector3(r, top, r)
     }
   }
 }

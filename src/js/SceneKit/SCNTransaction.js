@@ -73,7 +73,7 @@ export default class SCNTransaction extends NSObject {
    */
   static begin() {
     const newTransaction = new _Transaction()
-    newTransaction._disableActions = this._currentTransaction._disabledActions
+    newTransaction._disableActions = this._currentTransaction._disableActions
     _transactions.push(newTransaction)
   }
 

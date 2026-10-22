@@ -124,7 +124,7 @@ export default class CABasicAnimation extends CAPropertyAnimation {
       }else{
         fromValue = this.toValue - this.byValue
       }
-      toValue = toValue
+      toValue = this.toValue
     }else if(this.fromValue !== null){
       fromValue = this.fromValue
       if(this.isAdditive){

@@ -81,15 +81,15 @@ export default class SCNReferenceNode extends SCNNode {
 
     this._scene = null
 
-    if(referenceURL){
-      this.load()
-    }
-
     /**
      * @access private
      * @type {Promise}
      */
     this._loadedPromise = null
+
+    if(referenceURL){
+      this.load()
+    }
   }
 
   // Loading and Unloading a Reference Node’s Content

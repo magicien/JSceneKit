@@ -215,7 +215,7 @@ export default class SCNMaterialProperty extends NSObject {
     p.wrapS = this.wrapS
     p.wrapT = this.wrapT
     p.minificationFilter = this.minificationFilter
-    p.magnicifactionFilter = this.maginicifactionFilter
+    p.magnificationFilter = this.magnificationFilter
     p.mipFilter = this.mipFilter
     p.maxAnisotropy = this.maxAnisotropy
     p.mappingChannel = this.mappingChannel

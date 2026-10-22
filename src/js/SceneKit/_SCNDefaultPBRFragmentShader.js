@@ -447,6 +447,7 @@ const _SCNDefaultPBRFragmentShader =
     float nv = clamp(dot(_surface.normal, _surface.view), 0.0, 1.0);
     float f0 = 0.6;
     float Gv = 1.0 / (nv + sqrt(alpha + invAlpha * nv * nv));
+    #if NUM_SHADOW_LIGHTS > 0
     for(int i=0; i<NUM_SHADOW_LIGHTS; i++){
       vec3 lightVec = normalize(v_light[i]);
       vec3 halfVec = normalize(lightVec + _surface.view);
@@ -465,6 +466,7 @@ const _SCNDefaultPBRFragmentShader =
 
       debugColor = vec4(F, nl, diffuse, 1.0);
     }
+    #endif
 
     #if USE_SHADER_MODIFIER_FRAGMENT
       shaderModifierFragment();

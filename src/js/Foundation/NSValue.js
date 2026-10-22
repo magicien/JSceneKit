@@ -31,7 +31,7 @@ export default class NSValue extends NSObject {
     const size = coder._refObj['NS.sizeval']
     if(size){
       const obj = size.obj
-      if(obj.charAt(0) !== '{' || obj.charAt(size.length-1) !== '}'){
+      if(obj.charAt(0) !== '{' || obj.charAt(obj.length-1) !== '}'){
         throw new Error(`unknown NSValue size format: ${obj}`)
       }
       const values = obj.slice(1, -1).split(',').map(parseFloat)

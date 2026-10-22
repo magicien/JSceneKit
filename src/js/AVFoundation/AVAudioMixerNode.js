@@ -7,12 +7,19 @@ export default class AVAudioMixerNode extends AVAudioNode {
     super()
 
     this._gainNode = null
+    this._volume = 1.0
   }
 
   get volume() {
-    return this._gainNode.gain.value
+    if(this._gainNode){
+      return this._gainNode.gain.value
+    }
+    return this._volume
   }
   set volume(newValue) {
-    this._gainNode.gain.value = newValue
+    this._volume = newValue
+    if(this._gainNode){
+      this._gainNode.gain.value = newValue
+    }
   }
 }

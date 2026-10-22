@@ -37,7 +37,7 @@ export default class SCNPyramid extends SCNGeometry {
      * @type {number}
      * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1522613-width
      */
-    this.width = 1.0
+    this.width = width
 
     /**
      * The extent of the pyramid along its y-axis. Animatable.

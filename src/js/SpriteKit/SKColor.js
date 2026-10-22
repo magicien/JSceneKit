@@ -452,9 +452,9 @@ export default class SKColor extends NSObject {
    * @type {string}
    */
   get hexColor() {
-    const r = Math.round(this.red * 255).toString(16)
-    const g = Math.round(this.green * 255).toString(16)
-    const b = Math.round(this.blue * 255).toString(16)
+    const r = Math.round(this.red * 255).toString(16).padStart(2, '0')
+    const g = Math.round(this.green * 255).toString(16).padStart(2, '0')
+    const b = Math.round(this.blue * 255).toString(16).padStart(2, '0')
     return `#${r}${g}${b}`
   }
 
@@ -534,7 +534,7 @@ export default class SKColor extends NSObject {
     if(val <= 0.0031308){
       return val * 12.92
     }
-    return 1.055 * Math.pow(val, 1.0 / 2.4)
+    return 1.055 * Math.pow(val, 1.0 / 2.4) - 0.055
   }
 
   /**

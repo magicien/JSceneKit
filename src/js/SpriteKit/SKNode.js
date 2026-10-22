@@ -422,7 +422,7 @@ Displaying the accumulated frame of a shape node
     }
     node.removeFromParent()
     this._insertObjectInChildrenAtIndex(node, index)
-    this._parent = this
+    node._parent = this
   }
 
   /**
@@ -473,7 +473,7 @@ Displaying the accumulated frame of a shape node
    * @see https://developer.apple.com/documentation/spritekit/sknode/1483040-removeallchildren
    */
   removeAllChildren() {
-    for(const child of this._children){
+    for(const child of this._children.slice()){
       child.removeFromParent()
     }
   }

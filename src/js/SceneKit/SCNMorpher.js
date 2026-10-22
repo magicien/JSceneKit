@@ -226,7 +226,7 @@ export default class SCNMorpher extends NSObject {
       const componentCount = source._componentsPerVector
       const vectorCount = source._vectorCount
 
-      if(p.calculationMode === SCNMorpherCalculationMode.normalized){
+      if(pm.calculationMode === SCNMorpherCalculationMode.normalized){
         const weight = 1.0 - totalWeightForSemantic.get(source.semantic) 
         // FIXME: don't access private properties
         for(let i=0; i<vectorCount; i++){

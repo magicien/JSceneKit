@@ -201,7 +201,7 @@ export default class SCNMatrix4 {
   mul(t) {
     const r = new SCNMatrix4()
     r.m11 = this.m11 * t
-    r.m12 = this.mj2 * t
+    r.m12 = this.m12 * t
     r.m13 = this.m13 * t
     r.m14 = this.m14 * t
     r.m21 = this.m21 * t
@@ -253,22 +253,22 @@ export default class SCNMatrix4 {
    */
   lerp(m, rate) {
     const r = new SCNMatrix4()
-    r.m11 = this.m11 + rate * (this.m11 - m.m11)
-    r.m12 = this.m12 + rate * (this.m12 - m.m12)
-    r.m13 = this.m13 + rate * (this.m13 - m.m13)
-    r.m14 = this.m14 + rate * (this.m14 - m.m14)
-    r.m21 = this.m21 + rate * (this.m21 - m.m21)
-    r.m22 = this.m22 + rate * (this.m22 - m.m22)
-    r.m23 = this.m23 + rate * (this.m23 - m.m23)
-    r.m24 = this.m24 + rate * (this.m24 - m.m24)
-    r.m31 = this.m31 + rate * (this.m31 - m.m31)
-    r.m32 = this.m32 + rate * (this.m32 - m.m32)
-    r.m33 = this.m33 + rate * (this.m33 - m.m33)
-    r.m34 = this.m34 + rate * (this.m34 - m.m34)
-    r.m41 = this.m41 + rate * (this.m41 - m.m41)
-    r.m42 = this.m42 + rate * (this.m42 - m.m42)
-    r.m43 = this.m43 + rate * (this.m43 - m.m43)
-    r.m44 = this.m44 + rate * (this.m44 - m.m44)
+    r.m11 = this.m11 + rate * (m.m11 - this.m11)
+    r.m12 = this.m12 + rate * (m.m12 - this.m12)
+    r.m13 = this.m13 + rate * (m.m13 - this.m13)
+    r.m14 = this.m14 + rate * (m.m14 - this.m14)
+    r.m21 = this.m21 + rate * (m.m21 - this.m21)
+    r.m22 = this.m22 + rate * (m.m22 - this.m22)
+    r.m23 = this.m23 + rate * (m.m23 - this.m23)
+    r.m24 = this.m24 + rate * (m.m24 - this.m24)
+    r.m31 = this.m31 + rate * (m.m31 - this.m31)
+    r.m32 = this.m32 + rate * (m.m32 - this.m32)
+    r.m33 = this.m33 + rate * (m.m33 - this.m33)
+    r.m34 = this.m34 + rate * (m.m34 - this.m34)
+    r.m41 = this.m41 + rate * (m.m41 - this.m41)
+    r.m42 = this.m42 + rate * (m.m42 - this.m42)
+    r.m43 = this.m43 + rate * (m.m43 - this.m43)
+    r.m44 = this.m44 + rate * (m.m44 - this.m44)
     return r
   }
 

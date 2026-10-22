@@ -181,7 +181,7 @@ export default class SCNActionRotate extends SCNAction {
     action._lastRotZ = this._lastRotZ
     action._axisRot = this._axisRot
     action._isRelative = this._isRelative
-    action._isReveresed = this._isReversed
+    action._isReversed = this._isReversed
     action._isUnitArc = this._isUnitArc
     action._isAxisAngle = this._isAxisAngle
     action._isRunning = this._isRunning
@@ -213,9 +213,9 @@ export default class SCNActionRotate extends SCNAction {
       const baseValue = obj.rotation
       let toValue = this._axisRot
       if(this._isRelative){
-        const baseQuat = baseValue.rotationToQuat
-        const byQuat = this._axisRot.rotationToQuat
-        toValue = baseQuat.cross(byQuat).quatToRotation
+        const baseQuat = baseValue.rotationToQuat()
+        const byQuat = this._axisRot.rotationToQuat()
+        toValue = baseQuat.cross(byQuat).quatToRotation()
       }
       if(this._isUnitArc){
         const value = this._slerp(baseValue.rotationToQuat(), toValue.rotationToQuat(), t)

@@ -29,10 +29,10 @@ if(typeof Buffer !== 'undefined'){
       this._data = null
     }
 
-    static from(array, byteOffset = 0, length = null) {
+    static from(array, byteOffset = 0, length) {
       const buf = new Buffer()
       if(Array.isArray(array)){
-        const ab = new ArrayBuffer(array)
+        const ab = new Uint8Array(array)
         buf._data = new DataView(ab.buffer, byteOffset, length)
       }else if(array instanceof ArrayBuffer){
         buf._data = new DataView(array, byteOffset, length)
@@ -156,29 +156,37 @@ if(typeof Buffer !== 'undefined'){
       return this._data.getFloat64(offset, true)
     }
 
-    slice(start, end) {
-      return new Buffer(this._data.buffer.slice(start, end))
+    slice(start = 0, end = this.length) {
+      const len = this.length
+      const s = start < 0 ? Math.max(len + start, 0) : Math.min(start, len)
+      const e = end < 0 ? Math.max(len + end, 0) : Math.min(end, len)
+      const buf = new Buffer()
+      buf._data = new DataView(this._data.buffer, this._data.byteOffset + s, Math.max(e - s, 0))
+      return buf
     }
 
     toString(encoding, start, end) {
       if(!Buffer.isEncoding(encoding)){
         throw new Error(`unsupported encoding: ${encoding}`)
       }
-      const data = new Uint8Array(this._data.buffer)
+      const data = new Uint8Array(this._data.buffer, this._data.byteOffset, this._data.byteLength).subarray(start, end)
       if(encoding === 'binary'){
         return String.fromCharCode.apply('', data)
       }else if(encoding === 'ascii' || encoding === 'latin1'){
-        const len = data.indexOf(0)
+        let len = data.indexOf(0)
+        if(len < 0){
+          len = data.length
+        }
         const _data = data.slice(0, len)
         return String.fromCharCode.apply('', _data)
       }else if(encoding === 'hex'){
         return this._hex(data, false)
       }else if(encoding === 'base64'){
         const str = String.fromCharCode.apply('', data)
-        if(typeof atob === 'function'){
-          return atob(str)
+        if(typeof btoa === 'function'){
+          return btoa(str)
         }
-        throw new Error('needs atob() function to convert to base64')
+        throw new Error('needs btoa() function to convert to base64')
       }
 
       let str = ''
@@ -216,11 +224,11 @@ if(typeof Buffer !== 'undefined'){
       if(usePercent){
         pad = '%'
       }
-      return hexArray.join(pad)
+      return hexArray.map((hex) => pad + hex).join('')
     }
 
     _hex(data, usePercent) {
-      const hexArray = data.map((num) => {
+      const hexArray = Array.from(data).map((num) => {
         if(num < 16){
           return '0' + num.toString(16)
         }
@@ -230,7 +238,7 @@ if(typeof Buffer !== 'undefined'){
       if(usePercent){
         pad = '%'
       }
-      return hexArray.join(pad)
+      return hexArray.map((hex) => pad + hex).join('')
     }
 
     get length() {

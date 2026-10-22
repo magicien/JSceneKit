@@ -255,11 +255,11 @@ export default class SKAction extends NSObject {
     //  return from.lerp(to, t)
     //}else if(from instanceof CGSize){
     if(_InstanceOf(from, CGSize)){
-      return from._lerp(to, t)
+      return from.lerp(to, t)
     }else if(_InstanceOf(from, CGPoint)){
-      return from._lerp(to, t)
+      return from.lerp(to, t)
     }else if(_InstanceOf(from, CGRect)){
-      return from._lerp(to, t)
+      return from.lerp(to, t)
     }else if(_InstanceOf(from, SKColor)){
       return from._lerp(to, t)
     }

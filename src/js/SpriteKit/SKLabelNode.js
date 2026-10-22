@@ -249,7 +249,7 @@ export default class SKLabelNode extends SKNode {
 
   _updateCanvas() {
     this._context.font = `${this._fontSize}px ${this._fontName}`
-    const metrics = this._context.measureText(this._text)
+    const metrics = this._context.measureText(this._text || '')
     this._canvas.width = metrics.width
     this._canvas.height = this._fontSize * 3
 
@@ -289,7 +289,7 @@ export default class SKLabelNode extends SKNode {
     this._context.textAlign = 'left'
 
     this._context.clearRect(0, 0, this._canvas.width, this._canvas.height)
-    this._context.fillText(this._text, 0, this._canvas.height * 0.5)
+    this._context.fillText(this._text || '', 0, this._canvas.height * 0.5)
     this._textureUpToDate = false
   }
 

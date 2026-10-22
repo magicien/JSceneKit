@@ -170,6 +170,6 @@ export default class GKPath extends NSObject {
    * @see https://developer.apple.com/documentation/gameplaykit/gkpath/1501071-numpoints
    */
   get numPoints() {
-    return this._points.length()
+    return this._points.length
   }
 }

@@ -410,7 +410,7 @@ export default class SCNPhysicsWorld extends NSObject {
     const contact = new SCNPhysicsContact()
     contact._nodeA = sphereA._node
     contact._nodeB = sphereB._node
-    contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5))
+    contact._contactPoint = l > 0 ? posA.sub(vec.mul((radA - radB + l) * 0.5 / l)) : posA
     contact._contactNormal = vec.mul(-1).normalize()
     contact._penetrationDistance = radA + radB - l
     return [contact]
@@ -421,9 +421,10 @@ export default class SCNPhysicsWorld extends NSObject {
    * @param {SCNPhysicsBody} box -
    * @param {SCNPhysicsBody} sphere -
    * @param {Object} options -
+   * @param {boolean} [reverse = false] -
    * @returns {SCNPhysicsContact[]} -
    */
-  static _contactTestBetweenBoxAndSphere(box, sphere, reverse = false) {
+  static _contactTestBetweenBoxAndSphere(box, sphere, options, reverse = false) {
     const boxShape = box.physicsShape._shape
     const sphereShape = sphere.physicsShape._shape
 
@@ -438,17 +439,17 @@ export default class SCNPhysicsWorld extends NSObject {
     if(Math.abs(spherePos.x) - w <= 0){
       v.x = 0
     }else{
-      v.x = spherePos.x - w
+      v.x = spherePos.x - Math.sign(spherePos.x) * w
     }
     if(Math.abs(spherePos.y) - h <= 0){
       v.y = 0
     }else{
-      v.y = spherePos.y - h
+      v.y = spherePos.y - Math.sign(spherePos.y) * h
     }
     if(Math.abs(spherePos.z) - l <= 0){
       v.z = 0
     }else{
-      v.z = spherePos.z - l
+      v.z = spherePos.z - Math.sign(spherePos.z) * l
     }
 
     const d = v.length()
@@ -559,7 +560,7 @@ if (results.firstObject.node == player) {
           for(const h of hits){
             h._node = child
             h._worldCoordinates = child.convertPositionTo(h._localCoordinates, null)
-            h._worldNormal = child.convertPositionTo(h._localNormal, null)
+            h._worldNormal = h._localNormal.rotate(child._worldTransform).normalize()
             h._localCoordinates = child.convertPositionFrom(h._localCoordinates, child)
             h._localNormal = child.convertPositionFrom(h._localNormal, child)
           }

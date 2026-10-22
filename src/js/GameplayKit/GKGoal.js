@@ -195,7 +195,7 @@ export default class GKGoal extends NSObject {
     const goal = new GKGoal()
 
     goal._type = _GKGoalType.intercept
-    goal._agents.push(...target)
+    goal._agents.push(target)
     goal._time = maxPredictionTime
 
     return goal
@@ -303,7 +303,7 @@ export default class GKGoal extends NSObject {
     goal._type = _GKGoalType.follow
     goal._path = path
     goal._time = maxPredictionTime
-    goal._foward = forward
+    goal._forward = forward
 
     return goal
   }

@@ -22,8 +22,8 @@ export default class CGRect {
   constructor(origin, size) {
 
     // Basic Geometric Properties
-    this.origin = origin.copy()
-    this.size = size.copy()
+    this.origin = origin ? origin.copy() : null
+    this.size = size ? size.copy() : null
   }
 
   // Special Values
@@ -254,13 +254,13 @@ export default class CGRect {
     if(this.isNull){
       return CGRect.zero
     }
-    if(this.width < 0){
-      r.origin.x = this.origin.x + this.width
-      r.size.width = -this.width
+    if(this.size.width < 0){
+      r.origin.x = this.origin.x + this.size.width
+      r.size.width = -this.size.width
     }
-    if(this.height < 0){
-      r.origin.y = this.origin.y + this.height
-      r.size.height = -this.height
+    if(this.size.height < 0){
+      r.origin.y = this.origin.y + this.size.height
+      r.size.height = -this.size.height
     }
     return r
   }
@@ -286,7 +286,7 @@ export default class CGRect {
    */
   intersects(rect2) {
     const r = this.intersection(rect2)
-    return this.width > 0 && this.height > 0
+    return r.width > 0 && r.height > 0
   }
 
   /**
@@ -372,8 +372,8 @@ export default class CGRect {
     if(this.size === null){
       return '{null}'
     }
-    const origin = this.origin ? this.origin.debugDescription() : '{null}'
-    const size = this.size ? this.size.debugDescription() : '{null}'
+    const origin = this.origin ? this.origin.debugDescription : '{null}'
+    const size = this.size ? this.size.debugDescription : '{null}'
 
     return `{origin:${origin}, size:${size}}`
   }
@@ -419,7 +419,7 @@ export default class CGRect {
   }
 
   zero() {
-    return new CGRect(new CGPoint(0, 0), new CGRect(0, 0))
+    return new CGRect(new CGPoint(0, 0), new CGSize(0, 0))
   }
 
   add(rect2) {

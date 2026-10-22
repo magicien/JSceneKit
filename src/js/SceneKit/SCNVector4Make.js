@@ -1,6 +1,6 @@
 'use strict'
 
-//import SCNVector4 from './SCNVector4'
+import SCNVector4 from './SCNVector4'
 
 /**
  * Returns a new four-component vector created from individual component values.
@@ -13,7 +13,7 @@
  * @see https://developer.apple.com/documentation/scenekit/1409677-scnvector4make
  */
 const SCNVector4Make = function(x, y, z, w) {
-  return new SCNVector4Make(x, y, z, w)
+  return new SCNVector4(x, y, z, w)
 }
 
 export default SCNVector4Make

@@ -325,8 +325,8 @@ export default class SCNRenderer extends NSObject {
     const light = new SCNLight()
     light.color = SKColor.white
     light.type = SCNLight.LightType.omni
-    light.position = new SCNVector3(0, 10, 10)
     this._defaultLightNode.light = light
+    this._defaultLightNode.position = new SCNVector3(0, 10, 10)
     this._defaultLightNode._presentation = this._defaultLightNode.copy()
 
     /**
@@ -1604,7 +1604,7 @@ export default class SCNRenderer extends NSObject {
           for(const h of hits){
             h._node = node
             h._worldCoordinates = node.convertPositionTo(h._localCoordinates, null)
-            h._worldNormal = node.convertPositionTo(h._localNormal, null)
+            h._worldNormal = h._localNormal.rotate(node._worldTransform).normalize()
           }
           result.push(...hits)
         }
@@ -1656,7 +1656,7 @@ export default class SCNRenderer extends NSObject {
     if(sy < 0){
       sy = 0
     }else if(sy + 3 > this._viewRect.size.height){
-      sy = this._viewRect.size.width - 3
+      sy = this._viewRect.size.height - 3
     }
 
     gl.scissor(sx, sy, 3, 3)
@@ -1710,7 +1710,7 @@ export default class SCNRenderer extends NSObject {
     gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0)
     //const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
     //const position = screenPos.transform(viewProjectionTransform.invert())
-    const p = (((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0) + positionBuf[0]) / 255.0
+    const p = (((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1]) / 255.0 + positionBuf[0]) / 255.0
     const position = from.lerp(to, p)
 
     const normalBuf = new Uint8Array(4)
@@ -1796,7 +1796,7 @@ export default class SCNRenderer extends NSObject {
     if(sy < 0){
       sy = 0
     }else if(sy + areaSize > this._viewRect.size.height){
-      sy = this._viewRect.size.width - areaSize
+      sy = this._viewRect.size.height - areaSize
     }
 
     gl.scissor(sx, sy, areaSize, areaSize)
@@ -1856,7 +1856,7 @@ export default class SCNRenderer extends NSObject {
     gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0)
     //const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
     //const position = screenPos.transform(viewProjectionTransform.invert())
-    const p = (((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0) + positionBuf[0]) / 255.0
+    const p = (((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1]) / 255.0 + positionBuf[0]) / 255.0
     const screenPos = _from.lerp(_to, p)
     const position = screenPos.transform(viewProjectionTransform.invert())
 
@@ -2618,7 +2618,7 @@ export default class SCNRenderer extends NSObject {
     _text = _text.replace(/u_modelTransform/g, 'modelTransform') // TODO: use u_modelTransform
     _text = _text.replace(/u_viewTransform/g, 'camera.viewTransform') // TODO: use u_viewTransform
     _text = _text.replace(/u_inverseViewTransform/g, 'camera.inverseViewTransform') // TODO: use u_inverseViewTransform
-    _text = _text.replace(/u_viewProjectionTransform/g, 'caemra.viewProjectionTransform') // TODO: use u_viewTransform
+    _text = _text.replace(/u_viewProjectionTransform/g, 'camera.viewProjectionTransform') // TODO: use u_viewTransform
     _text = _text.replace(/\s*uniform[^;]*;/g, '')
 
     // workaround for Badger...

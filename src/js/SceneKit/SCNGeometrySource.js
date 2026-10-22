@@ -93,13 +93,13 @@ export default class SCNGeometrySource extends NSObject {
             loadFunc = (_offset) => { return data.readDoubleLE(_offset) }
             break
           case 1:
-            loadFunc = (_offset) => { return data.readIntLE(_offset, 1) / 255.0 }
+            loadFunc = (_offset) => { return data.readUIntLE(_offset, 1) / 255.0 }
             break
           default:
             throw new Error(`unknown float data size: ${bytesPerComponent}`)
         }
       }else{
-        loadFunc = (_offset) => { return data.readIntLE(_offset, bytesPerComponent) }
+        loadFunc = (_offset) => { return data.readUIntLE(_offset, bytesPerComponent) }
       }
 
       const _data = []

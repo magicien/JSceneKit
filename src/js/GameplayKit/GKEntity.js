@@ -91,13 +91,13 @@ export default class GKEntity extends NSObject {
    * @see https://developer.apple.com/documentation/gameplaykit/gkentity/2300467-removecomponent
    */
   removeComponentOfType(componentClass) {
-    for(const component of this._components){
+    for(const component of this._components.slice()){
       if(_InstanceOf(component, componentClass)){
         component.willRemoveFromEntity()
 
         const index = this._components.indexOf(component)
         if(index >= 0){
-          this._components.splice(index)
+          this._components.splice(index, 1)
           component._entity = null
         }
       }

@@ -321,11 +321,8 @@ export default class CAAnimation extends NSObject {
     if(this.speed === 0){
       return 0
     }
-    let oneLoopDuration = this.duration / Math.abs(this.speed)
+    let oneLoopDuration = (this.duration === 0 ? 0.25 : this.duration) / Math.abs(this.speed)
     let duration = oneLoopDuration
-    if(duration === 0){
-      duration = 0.25
-    }
 
     let repeatCount = this.repeatCount
     if(this.usesSceneTimeBase){
@@ -345,6 +342,7 @@ export default class CAAnimation extends NSObject {
       }
     }
 
+    let isFilled = false
     if(dt > duration){
       // the animation is over.
       if(!this._isFinished){
@@ -356,6 +354,7 @@ export default class CAAnimation extends NSObject {
       if(this.fillMode === Constants.kCAFillModeForwards ||
          this.fillMode === Constants.kCAFillModeBoth){
         dt = duration
+        isFilled = true
       }else{
         return null
       }
@@ -364,6 +363,10 @@ export default class CAAnimation extends NSObject {
     let t = (dt + this.timeOffset) / oneLoopDuration
     if(Math.abs(t) > 1){
       t = t - Math.floor(t)
+      if(isFilled && t === 0){
+        // hold the value at the end of the last loop
+        t = 1
+      }
     }
     if(t < 0){
       t = 1 + t

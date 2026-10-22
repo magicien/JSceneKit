@@ -715,6 +715,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }
 
     const properties = [
+      this._diffuse,
       this._ambient,
       this._specular,
       this._normal,
@@ -723,6 +724,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       this._transparent,
       this._multiply,
       this._ambientOcclusion,
+      this._selfIllumination,
       this._metalness,
       this._roughness
     ]

@@ -1099,7 +1099,7 @@ export default class SCNNode extends NSObject {
     }
     child.removeFromParentNode()
     this._insertObjectInChildNodesAtIndex(child, index)
-    this._parent = this
+    child._parent = this
   }
 
   /**
@@ -1131,12 +1131,17 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/documentation/scenekit/scnnode/1408002-replacechildnode
    */
   replaceChildNodeWith(oldChild, newChild) {
-    const index = this._childNodes.indexOf(oldChild)
-    if(index < 0){
+    if(oldChild === newChild){
       return
     }
+    if(this._childNodes.indexOf(oldChild) < 0){
+      return
+    }
+    newChild.removeFromParentNode()
+    const index = this._childNodes.indexOf(oldChild)
     this._removeObjectFromChildNodesAtIndex(index)
     this._insertObjectInChildNodesAtIndex(newChild, index)
+    newChild._parent = this
   }
 
   /**
@@ -1280,7 +1285,7 @@ export default class SCNNode extends NSObject {
    * @returns {?SCNNode} -
    */
   _childNodeWithNodeID(nodeID) {
-    return this._childNodeWithNodeIDRecursively(name, false)
+    return this._childNodeWithNodeIDRecursively(nodeID, false)
   }
 
   /**
@@ -1377,6 +1382,9 @@ export default class SCNNode extends NSObject {
       return
     }
     const index = this._particleSystems.indexOf(system)
+    if(index < 0){
+      return
+    }
     this._particleSystems.splice(index, 1)
   }
 
@@ -1523,9 +1531,9 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
           for(const h of hits){
             h._node = child
             h._worldCoordinates = child.convertPositionTo(h._localCoordinates, null)
-            h._worldNormal = child.convertPositionTo(h._localNormal, null)
+            h._worldNormal = h._localNormal.rotate(child._worldTransform).normalize()
             h._localCoordinates = this.convertPositionFrom(h._localCoordinates, child)
-            h._localNormal = this.convertPositionFrom(h._localNormal, child)
+            h._localNormal = h._worldNormal.rotate(this._worldTransform.invert()).normalize()
           }
           results.push(...hits)
         }
@@ -2131,7 +2139,11 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
         max: new SCNVector3(-Infinity, -Infinity, -Infinity)
       }
     }
-    const boundingBox = this._geometry.boundingBox
+    const geometryBoundingBox = this._geometry.boundingBox
+    if(geometryBoundingBox === null){
+      return null
+    }
+    const boundingBox = { min: geometryBoundingBox.min._copy(), max: geometryBoundingBox.max._copy() }
     // FIXME: rotate and scale
     if(this.skinner && this.skinner.baseGeometryBindTransform){
       const tx = this.skinner.baseGeometryBindTransform.m41
