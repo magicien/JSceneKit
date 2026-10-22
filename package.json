@@ -13,6 +13,13 @@
   "main": "./index.node.js",
   "jsnext:main": "./index.js",
   "module": "./index.js",
+  "files": [
+    "index.js",
+    "index.node.js",
+    "index.web.js",
+    "index.web.min.js",
+    "src/js"
+  ],
   "scripts": {
     "build": "gulp webpack",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
